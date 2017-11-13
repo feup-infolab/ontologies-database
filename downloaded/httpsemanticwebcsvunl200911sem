@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html content="en">
+<head>
+  <title>The Simple Event Model</title>
+  <meta name="description" content="An Event ontology ">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+          table {
+            border-collapse:collapse;
+          }
+          td, th {
+            border:1px solid black;
+            padding:1em;
+          }  
+          table#namespaces td {
+            font-family: monospace;
+          }
+          table.definition {
+            width:100%;
+          }
+          table.definition td.prop {
+            width:10em;
+          }
+          pre {
+                padding: 1em;
+                border: 1px dashed #2f6fab;
+                color: black;
+                background-color: #f9f9f9;
+                line-height: 1.1em;
+         }
+  </style>
+  <style>
+/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* --- INLINES --- */
+em.rfc2119 { 
+    text-transform:     lowercase;
+    font-variant:       small-caps;
+    font-style:         normal;
+    color:              #900;
+}
+
+h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
+h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
+    border: none;
+}
+
+dfn {
+    font-weight:    bold;
+}
+
+a.internalDFN {
+    color:  inherit;
+    border-bottom:  1px solid #99c;
+    text-decoration:    none;
+}
+
+a.externalDFN {
+    color:  inherit;
+    border-bottom:  1px dotted #ccc;
+    text-decoration:    none;
+}
+
+a.bibref {
+    text-decoration:    none;
+}
+
+cite .bibref {
+    font-style: normal;
+}
+
+code {
+    color:  #ff4500;
+}
+
+/* --- TOC --- */
+ .toc a, .tof a {
+    text-decoration:    none;
+}
+
+a .secno, a .figno {
+    color:  #000;
+}
+
+ul.tof, ol.tof {
+    list-style: none outside none;
+}
+
+ .caption {
+    margin-top: 0.5em;
+    font-style:   italic;
+}
+
+/* --- TABLE --- */
+table.simple {
+    border-spacing: 0;
+    border-collapse:    collapse;
+    border-bottom:  3px solid #005a9c;
+}
+
+ .simple th {
+    background: #005a9c;
+    color:  #fff;
+    padding:    3px 5px;
+    text-align: left;
+}
+
+ .simple th[scope="row"] {
+    background: inherit;
+    color:  inherit;
+    border-top: 1px solid #ddd;
+}
+
+ .simple td {
+    padding:    3px 10px;
+    border-top: 1px solid #ddd;
+}
+
+ .simple tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+/* --- DL --- */
+ .section dd > p:first-child {
+    margin-top: 0;
+}
+
+ .section dd > p:last-child {
+    margin-bottom: 0;
+}
+
+ .section dd {
+    margin-bottom:  1em;
+}
+
+ .section dl.attrs dd, .section dl.eldef dd {
+    margin-bottom:  0;
+}</style>
+  <link href="../semdoc.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
+</head>
+
+<body id="respecDocument" class="h-entry">
+
+<div id="respecHeader" class="head">
+<h1 class="title p-name" id="title">The Simple Event Model Ontology</h1>
+<dl>
+  <dt>This version:</dt>
+    <dd><a class="u-url"
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/">http://semanticweb.cs.vu.nl/2009/11/sem/</a></dd>
+  <dt>Latest published version:</dt>
+    <dd><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/">http://semanticweb.cs.vu.nl/2009/11/sem/</a></dd>
+  <dt>Authors:</dt>
+    <dd class="p-author h-card vcard" rel="bibo:editor"><span><span
+      class="p-name fn">Willem van Hage</span></span></dd>
+    <dd class="p-author h-card vcard" rel="bibo:editor"><span><span
+      class="p-name fn">Véronique Malaisé</span></span></dd>
+    <dd class="p-author h-card vcard" rel="bibo:editor"><span><span
+      class="p-name fn">Roxane Segers</span></span></dd>
+    <dd class="p-author h-card vcard" rel="bibo:editor"><span><span
+      class="p-name fn">Laura Hollink</span></span></dd>
+    <dd class="p-author h-card vcard" rel="bibo:editor"><span><span
+      class="p-name fn">Guus Schreiber</span></span></dd>
+</dl>
+
+<p class="copyright"><a href="http://wm.cs.vu.nl/">Copyright</a> © 2009 <a
+href="http://wm.cs.vu.nl/"><abbr title="The Web &amp; Media group">VU Semantic
+Web group, Web &amp; Media</abbr></a><sup>®</sup> </p>
+<hr>
+</div>
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+datatype=property=dcterms:abstract class=introductory id=abstract>
+<h2 id="h2_abstract">Abstract</h2>
+
+<p>This document describes an ontology for events. The Simple Event Model (SEM)
+is created to model events in various subject domains. </p>
+
+<p>The namespace for all terms in this ontology is: <a
+href="http://semanticweb.cs.vu.nl/2009/11/sem/">http://semanticweb.cs.vu.nl/2009/11/sem/</a>
+</p>
+
+<p>The RDF version of the ontology can be found at <a href="http://semanticweb.cs.vu.nl/2009/11/sem/sem.rdf">http://semanticweb.cs.vu.nl/2009/11/sem.rdf</a> or by looking up <a href="http://semanticweb.cs.vu.nl/2009/11/sem/">http://semanticweb.cs.vu.nl/2009/11/sem/</a> with an HTTP accept header that includes <code>application/rdf+xml</code>.</p>
+
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter id=sotd
+class=introductory>
+<h2 id="h2_sotd">Status of This Document</h2>
+
+<p><em>This section describes the status of this document at the time of its
+publication. Other documents may supersede this document.</em> </p>
+
+<p>This document has been adapted from an academic paper [<cite><a
+href="#bib-SEMDOC" class="bibref">SEMDOC</a></cite>] published by the authors.
+It is a stable document and may be used as reference material or cited from
+another document. </p>
+
+<h2 id="L274676">Introduction</h2>
+<!-- INTRODUCTION -->
+<section class=introductory>
+<p>This document describes an ontology for modelling events. Events are central
+elements in the representation of data from a variety of domains. Examples of
+these domains are history, cultural heritage, geography and multimedia.
+Event-centered modeling captures the time and place aspects of a domain. In
+addition, events provide a way to describe complicated relations between
+people, places, actions and objects.</p>
+
+<h2>Table of Contents</h2>
+
+<div class="toc">
+<ul>
+  <li><a href="#h2_overview-of-ontology"><span class="secno">1. </span>Overview
+    of ontology</a> 
+    <ul>
+      <li><a href="#example"><span class="secno">1.1 </span>Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#h2_description"><span class="secno">2. </span>Description and
+    commentary</a></li>
+  <li><a href="#ns"><span class="secno">3. </span>Namespaces</a></li>
+  <li><a href="#h2_ontology_reference"><span class="secno">4.</span> Ontology
+    Reference</a> 
+    <ul>
+      <li><a href="#h3_ontology_index"><span class="secno">4.1</span> Index of
+        classes and properties</a></li>
+      <li><a href="#h3_core"><span class="secno">4.1</span> SEM Core</a> 
+        <ul>
+          <li><a href="#sem:Core"><span class="secno">4.1.1</span> Class:
+            Core</a></li>
+          <li><a href="#sem:Actor"><span class="secno">4.1.2</span> Class:
+            Actor</a></li>
+          <li><a href="#sem:Object"><span class="secno">4.1.3</span> Class:
+            Object</a> 
+            <ul>
+              <li><a href="#sem:actorType">Property: actorType</a></li>
+              <li><a href="#sem:hasActor">Property: hasActor</a></li>
+            </ul>
+          </li>
+          <li><a href="#sem:Event"><span class="secno">4.1.4</span> Class:
+            Event</a> 
+            <ul>
+              <li><a href="#sem:eventProperty">Property: eventProperty</a></li>
+              <li><a href="#sem:eventType">Property: eventType</a></li>
+              <li><a href="#sem:hasSubEvent">Property: hasSubEvent</a></li>
+              <li><a href="#sem:subEventOf">Property: subEventOf</a></li>
+            </ul>
+          </li>
+          <li><a href="#sem:Place"><span class="secno">4.1.5</span> Class:
+            Place</a> 
+            <ul>
+              <li><a href="#sem:hasPlace">Property: hasPlace</a></li>
+              <li><a href="#sem:placeType">Property: placeType</a></li>
+            </ul>
+          </li>
+          <li><a href="#sem:Time"><span class="secno">4.1.6</span> Class:
+            Time</a> 
+            <ul>
+              <li><a href="#sem:hasTime">Property: hasTime</a></li>
+              <li><a href="#sem:timeType">Property: timeType</a></li>
+              <li><a href="#sem:hasTimeStamp">Property: hasTimeStamp</a></li>
+              <li><a href="#sem:hasBeginTimeStamp">Property:
+                hasBeginTimeStamp</a></li>
+              <li><a href="#sem:hasEarliestBeginTimeStamp">Property:
+                hasEarliestBeginTimeStamp</a></li>
+              <li><a href="#sem:hasLatestBeginTimeStamp">Property:
+                hasLatestBeginTimeStamp</a></li>
+              <li><a href="#sem:hasEndTimeStamp">Property:
+              hasEndTimeStamp</a></li>
+              <li><a href="#sem:hasEarliestEndTimeStamp">Property:
+                hasEarliestEndTimeStamp</a></li>
+              <li><a href="#sem:hasLatestEndTimeStamp">Property:
+                hasLatestEndTimeStamp</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#h3_authorities"><span class="secno">4.2</span>
+        Authorities</a> 
+        <ul>
+          <li><a href="#sem:Authority"><span class="secno">4.2.1</span> Class:
+            Authority</a> 
+            <ul>
+              <li><a href="#sem:accordingTo">Property: accordingTo</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#h3_constraints"><span class="secno">4.3</span>
+        Constraints</a> 
+        <ul>
+          <li><a href="#sem:Constraint"><span class="secno">4.3.1</span> Class:
+            Constraint</a></li>
+          <li><a href="#sem:Role"><span class="secno">4.3.2</span> Class:
+            Role</a> 
+            <ul>
+              <li><a href="#sem:roleType">Property: roleType</a></li>
+            </ul>
+          </li>
+          <li><a href="#sem:Temporary"><span class="secno">4.3.3</span> Class:
+            Temporary</a></li>
+          <li><a href="#sem:View"><span class="secno">4.3.4</span> Class:
+            View</a></li>
+        </ul>
+      </li>
+      <li><a href="#h3_types"><span class="secno">4.4</span> Types</a> 
+        <ul>
+          <li><a href="#sem:Type"><span class="secno">4.4.1</span> Class:
+            Type</a> 
+            <ul>
+              <li><a href="#sem:hasSubType">Property: hasSubType</a></li>
+              <li><a href="#sem:subTypeOf">Property: subTypeOf</a></li>
+              <li><a href="#sem:type">Property: type</a></li>
+            </ul>
+          </li>
+          <li><a href="#sem:ActorType"><span class="secno">4.4.2</span> Class:
+            ActorType</a></li>
+          <li><a href="#sem:EventType"><span class="secno">4.4.3</span> Class:
+            EventType</a></li>
+          <li><a href="#sem:PlaceType"><span class="secno">4.4.4</span> Class:
+            PlaceType</a></li>
+          <li><a href="#sem:RoleType"><span class="secno">4.4.5</span> Class:
+            RoleType</a></li>
+          <li><a href="#sem:TimeType"><span class="secno">4.4.6</span> Class:
+            TimeType</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#h2_acknowledgements"><span class="secno">B.
+    </span>Acknowledgements</a></li>
+  <li><a href="#h2_references"><span class="secno">C. </span>References</a> 
+    <ul>
+      <li><a href="#h3_normative-references"><span class="secno">C.1
+        </span>Normative references</a></li>
+      <li><a href="#h3_informative-references"><span class="secno">C.2
+        </span>Informative references</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+<!-- Overview of ontology -->
+<section id=overview-of-ontology class=informative><!--OddPage-->
+
+<h2 id="h2_overview-of-ontology"><span class="secno">1. </span>Overview of
+ontology</h2>
+
+<p>In this section we list the main elements of the SEM ontology. But first we
+give a simple example of how an event from the historical domain can be modeled
+in SEM. <section id=example-1 rel=bibo:Chapter resource=#ref
+typeof=bibo:Chapter class=informative></p>
+
+<h3 id="example"><span class="secno">1.1 </span>Example</h3>
+
+<p>This example is based on a sentence, that represents a typical situation
+from the historical domain:</p>
+<p><em>The Dutch launched the first police action in the Dutch East Indies in
+1947; the Dutch presented themselves as liberators but were seen as occupiers
+by the Indonesian people.</em></p>
+This example is interesting because: <br>
+
+<ul>
+  <li>it contains conflicting views on the role of the actor: were the Dutch
+    liberators or occupiers? </li>
+  <li>it makes explicit according to which authority the roles hold (the
+    Dutch/Indonesian people)</li>
+  <li>it presents a challenge for modeling the type of the place involved: at
+    that time the Dutch East Indies were an independent Republic according to
+    the Indonesians, but according to the Dutch they were a ‘‘controlled
+    region’’. </li>
+</ul>
+
+
+
+<p>A pictorial illustration of the main classes and relationships in SEM is
+shown below. All terms are within the SEM namespace
+(<code>http://semanticweb.cs.vu.nl/2009/11/sem/</code>, preferred prefix
+<em>sem:</em>) unless an explicit prefix is given. The namespaces for all
+referenced vocabularies are giving in the section on <a
+href="#ns">Namespaces</a>. </p>
+<img src="../img/Fig1.jpg"
+alt="Diagram depicting core SEM classes and relationships"> 
+
+<p><strong>Classes:</strong> | <a href="#sem:Authority">Authority</a> | <a
+href="#sem:Constraint">Constraint</a> | <a href="#sem:Core">Core</a> | <a
+href="#sem:Type">Type</a> | <a href="#sem:Actor">Actor</a> | <a
+href="#sem:Object">Object</a> | <a href="#sem:Role">Role</a> | <a
+href="#sem:Temporary">Temporary</a> | <a href="#sem:View">View</a> | <a
+href="#sem:Event">Event</a> | <a href="#sem:Place">Place</a> | <a
+href="#sem:Time">Time</a> | <a href="#sem:ActorType">ActorType</a> | <a
+href="#sem:EventType">EventType</a> | <a href="#sem:PlaceType">PlaceType</a> |
+<a href="#sem:RoleType">RoleType</a> | <a href="#sem:TimeType">TimeType</a> </p>
+
+<p><strong>Properties:</strong> | <a href="#sem:accordingTo">accordingTo</a> |
+<a href="#sem:actorType">actorType</a> | <a
+href="#sem:eventProperty">eventProperty</a> | <a
+href="#sem:eventType">eventType</a> | <a href="#sem:hasActor">hasActor</a> | <a
+href="#sem:hasPlace">hasPlace</a> | <a href="#sem:hasSubEvent">hasSubEvent</a>
+| <a href="#sem:hasSubType">hasSubType</a> | <a href="#sem:hasTime">hasTime</a>
+| <a href="#sem:placeType">placeType&gt; | </a><a
+href="#sem:roleType">roleType</a> | <a href="#sem:subEventOf">subEventOf</a> |
+<a href="#sem:subTypeOf">subTypeOf</a> | <a href="#sem:timeType">timeType</a> |
+<a href="#sem:type">type</a> | <a
+href="#sem:hasBeginTimeStamp">hasBeginTimeStamp</a> | <a
+href="#sem:hasEarliestBeginTimeStamp">hasEarliestBeginTimeStamp</a> | <a
+href="#sem:hasEarliestEndTimeStamp">hasEarliestEndTimeStamp</a> | <a
+href="#sem:hasEndTimeStamp">hasEndTimeStamp</a> | <a
+href="#sem:hasLatestBeginTimeStamp">hasLatestBeginTimeStamp</a> | <a
+href="#sem:hasLatestEndTimeStamp">hasLatestEndTimeStamp</a> | <a
+href="#sem:hasTimeStamp">hasTimeStamp</a> | </p>
+
+<h2 id="h2_description"><span class="secno">2. </span>Description and
+commentary</h2>
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+id=organizational_structure class=informative>
+<p>SEM has been developed to on the one hand benefit from existing vocabularies
+and data sources that describe events, and on the other hand allowing a user to
+derive useful facts. Events, according to SEM, describe everything that
+happens, even fictional events. Becasue of its design SEM is capable of
+handling different viewpoints. In particular three aspects of viewpoints: (1)
+Event bounded roles, (2) time bounded validity of facts (e.g. time dependent
+type or role), and (3) attribution of the authoritative source of a
+statement.</p>
+<!-- Namespaces -->
+<section id=namespaces-1 rel=bibo:Chapter resource=#ref typeof=bibo:Chapter><!--OddPage-->
+
+<h2 id="ns"><span class="secno">3. </span>Namespaces</h2>
+
+<p>The namespace for SEM is
+<code>http://semanticweb.cs.vu.nl/2009/11/sem/</code>. SEM extends and uses
+terms from other vocabularies. A full set of alphabetically ordered namespaces
+and prefixes used in this document is shown in the table below.</p>
+<!-- Alphabetically ordered-->
+
+<table id="namespaces">
+  <thead>
+    <tr>
+      <th>Prefix</th>
+      <th>Namespace</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rdf</td>
+      <td><a
+        href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td>
+      <td>[<cite><a href="#bib-RDF-CONCEPTS"
+        class="bibref">RDF-CONCEPTS</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>rdfs</td>
+      <td><a
+        href="http://www.w3.org/2000/01/rdf-schema">http://www.w3.org/2000/01/rdf-schema#</a></td>
+      <td>[<cite><a href="#bib-RDF-SCHEMA"
+      class="bibref">RDF-SCHEMA</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>skos</td>
+      <td><a
+        href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core#</a></td>
+      <td>[<cite><a href="#bib-SKOS-REFERENCE"
+        class="bibref">SKOS-REFERENCE</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>foaf</td>
+      <td><a
+      href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td>
+      <td>[<cite><a href="#bib-FOAF" class="bibref">FOAF</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>dcterms</td>
+      <td><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></td>
+      <td>[<cite><a href="#bib-DC11" class="bibref">DC11</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>dctype</td>
+      <td><a
+        href="http://purl.org/dc/dcmitype/">http://purl.org/dc/dcmitype/</a></td>
+      <td>[<cite><a href="#bib-DCTYPE" class="bibref">DCTYPE</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>dolce</td>
+      <td><a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#</a></td>
+      <td>[<cite><a href="#bib-DOLCE" class="bibref">DOLCE</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>cidoc</td>
+      <td><a
+        href="http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_english_label.rdfs">http://www.cidoc-crm.org/rdfs/cidoc_crm_v5.0.4_english_label.rdfs</a> 
+
+        <p></p>
+      </td>
+      <td>[<cite><a href="#bib-CIDOC" class="bibref">CIDOC</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>cyc</td>
+      <td><a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/">http://sw.opencyc.org/2009/04/07/concept/en/</a></td>
+      <td>[<cite><a href="#bib-CYC" class="bibref">CYC</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>sumo</td>
+      <td><a
+        href="http://www.ontologyportal.org/translations/SUMO.owl.txt#">http://www.ontologyportal.org/translations/SUMO.owl.txt#</a></td>
+      <td>[<cite><a href="#bib-SUMO" class="bibref">SUMO</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>eo</td>
+      <td><a
+        href="http://purl.org/NET/c4dm/event.owl#">http://purl.org/NET/c4dm/event.owl#</a></td>
+      <td>[<cite><a href="#bib-EO" class="bibref">EO</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>WGS84</td>
+      <td><a
+        href="http://www.w3.org/2003/01/geo/wgs84_pos#">http://www.w3.org/2003/01/geo/wgs84_pos#</a></td>
+      <td>[<cite><a href="#bib-WGS84" class="bibref">WGS84</a></cite>]</td>
+    </tr>
+    <tr>
+      <td>time</td>
+      <td><a
+      href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a></td>
+      <td>[<cite><a href="#bib-TIME" class="bibref">TIME</a></cite>]</td>
+    </tr>
+  </tbody>
+</table>
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+id=ontology_reference><!--OddPage-->
+
+<h2 id="h2_ontology_reference"><span class="secno">4.</span> Ontology
+Reference</h2>
+
+<p>SEM’s classes are divided in three groups: core classes, types, and
+constraints. The four core classes are: sem:Event (to record what happens),
+sem:Actor (who or what participated in the event), sem:Place (where did it
+happen), sem:Time (when did it happen). Every core class has an associated
+sem:Type class that contains resources that describe the type of a core
+individual. </p>
+
+<p>SEM’s properties are divided in three kinds: sem:eventProperty, sem:type
+properties and a few other properties like sem:accordingTo and
+sem:hasTimeStamp’s subproperties. <br>
+The sem:eventProperty relates sem:Events to other individuals. <br>
+A sem:type relates individuals of the sem:Core class to individuals of
+sem:Type. There are subproperties of sem:type for each of the separate core
+classes to facilitate querying. <br>
+To represent opinions sem:accordingTo relates a sem:View to a sem:Authority.<br>
+</p>
+
+<p>Time is an important part of SEM. There are seven properties that represent
+time stamps. One for single time values, sem:hasTimeStamp; two for time
+intervals, sem:hasBeginTimeStamp and sem:hasEndTimeStamp; and four for
+uncertain time intervals, sem:hasEarliestBeginTimeStamp,
+sem:hasLatestBeginTimeStamp, sem:hasEarliestEndTimeStamp, and
+sem:hasLatestEndTimeStamp. The latter kind of intervals is meant to describe
+any kind of uncertainty about the begin or end of a period. It does not imply a
+fuzzy interpretation of time. Open-ended intervals can be expressed by omitting
+begin or end timestamps.</p>
+
+<h3 id="h3_ontology_index"><span class="secno">4.1</span> Index of classes and
+properties</h3>
+
+<p><strong>Classes:</strong> | <a href="#sem:Authority">Authority</a> | <a
+href="#sem:Constraint">Constraint</a> | <a href="#sem:Core">Core</a> | <a
+href="#sem:Type">Type</a> | <a href="#sem:Actor">Actor</a> | <a
+href="#sem:Object">Object</a> | <a href="#sem:Role">Role</a> | <a
+href="#sem:Temporary">Temporary</a> | <a href="#sem:View">View</a> | <a
+href="#sem:Event">Event</a> | <a href="#sem:Place">Place</a> | <a
+href="#sem:Time">Time</a> | <a href="#sem:ActorType">ActorType</a> | <a
+href="#sem:EventType">EventType</a> | <a href="#sem:PlaceType">PlaceType</a> |
+<a href="#sem:RoleType">RoleType</a> | <a href="#sem:TimeType">TimeType</a> </p>
+
+<p><strong>Properties:</strong> | <a href="#sem:accordingTo">accordingTo</a> |
+<a href="#sem:actorType">actorType</a> | <a
+href="#sem:eventProperty">eventProperty</a> | <a
+href="#sem:eventType">eventType</a> | <a href="#sem:hasActor">hasActor</a> | <a
+href="#sem:hasPlace">hasPlace</a> | <a href="#sem:hasSubEvent">hasSubEvent</a>
+| <a href="#sem:hasSubType">hasSubType</a> | <a href="#sem:hasTime">hasTime</a>
+| <a href="#sem:placeType">placeType | </a><a href="#sem:roleType">roleType</a>
+| <a href="#sem:subEventOf">subEventOf</a> | <a
+href="#sem:subTypeOf">subTypeOf</a> | <a href="#sem:timeType">timeType</a> | <a
+href="#sem:type">type</a> | <a
+href="#sem:hasBeginTimeStamp">hasBeginTimeStamp</a> | <a
+href="#sem:hasEarliestBeginTimeStamp">hasEarliestBeginTimeStamp</a> | <a
+href="#sem:hasEarliestEndTimeStamp">hasEarliestEndTimeStamp</a> | <a
+href="#sem:hasEndTimeStamp">hasEndTimeStamp</a> | <a
+href="#sem:hasLatestBeginTimeStamp">hasLatestBeginTimeStamp</a> | <a
+href="#sem:hasLatestEndTimeStamp">hasLatestEndTimeStamp</a> | <a
+href="#sem:hasTimeStamp">hasTimeStamp</a> | </p>
+<section id=example-1 rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+class=informative><!-- Ontology section -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+id=ontology_reference><!--OddPage-->
+
+<h3 id="h3_core"><span class="secno">4.1</span> SEM Core</h3>
+The four core classes Event, Actor, Place and time record the main variables of
+an Event: what happens, who or what participated, where did it happen and when. 
+
+<h4 id="sem:Core"><span class="secno">4.1.1</span> Class: Core</h4>
+
+<p>The Core class contains all entities that make up the context of an event.
+</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Core">sem:Core</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>The SEM Core class contains all entities that make up the context of
+        an event: Events, Actors, Places, Times. This class is meant to be
+        extended for each application domain. </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Actor"><span class="secno">4.1.2</span> Class: Actor</h4>
+
+<p>The Actor class holds individuals that take part in an event. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Actor">sem:Actor</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Core">sem:Core</a><br>
+        <a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Authority">sem:Authority</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:broadMatch:</td>
+      <td><a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting">cyc:SomethingExisting</a><br>
+        <a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant">dolce:endurant</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:closeMatch:</td>
+      <td><a
+        href="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E39.Actor">cidoc:E39.Actor</a><br>
+        <a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/Agent-Generic">cyc:Agent-Generic</a><br>
+        <a href="http://purl.org/dc/terms/Agent">dcterms:Agent</a><br>
+        <a href="http://purl.org/dc/terms/AgentClass">dcterms:AgentClass</a><br>
+        <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><br>
+        <a
+        href="http://www.ontologyportal.org/translations/SUMO.owl.txt#Agent">sumo:Agent</a><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Actors are entities that take part in an Event, either actively or
+        passively. Actors do not necessarily have to be sentient. They can also
+        be objects. Actors are a thing, animate or inanimate, physical or
+        non-physical. </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Object"><span class="secno">4.1.3</span> Class: Object</h4>
+
+<p>Objects are passive, inanimate Actors. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Object">sem:Object</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Actor">sem:Actor</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">skos:broadMatch:</td>
+      <td><a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/SomethingExisting">cyc:SomethingExisting</a><br>
+        <a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant">dolce:endurant</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:closeMatch:</td>
+      <td><a
+        href="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E19.Physical_Object">cidoc:E19.Physical_Object</a><br>
+        <a
+        href="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E21.Person">E21.Person</a><br>
+        <a
+        href="http://www.ontologyportal.org/translations/SUMO.owl.txt#Object">sumo:Object</a><br>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">skos:narrowMatch:</td>
+      <td><a
+        href="http://purl.org/dc/terms/PhysicalResource">dcterms:PhysicalResource</a><br>
+        <a
+        href="http://purl.org/dc/terms/PhysicalObject">dcterms:PhysicalObject</a><br>
+        <a href="http://purl.org/NET/c4dm/event.owl#Factor">eo:Factor</a><br>
+        <a href="http://purl.org/NET/c4dm/event.owl#Product">eo:Product</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Objects are passive, inanimate Actors. </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property actorType -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:actorType">Property: actorType</h5>
+
+<p>Actor type is used to assign a type to an actor.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/actorType">sem:actorType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Actor">sem:Actor</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/ActorType">sem:ActorType</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasActor -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasActor">Property: hasActor</h5>
+
+<p>Has actor is used to state which Actors or Objects participate in an
+Event.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasActor">sem:hasActor</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Actor">sem:Actor</a></td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/type">sem:type</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Event"><span class="secno">4.1.4</span> Class: Event</h4>
+
+<p>Events are things that happen. This comprises everything from historical
+events to web site sessions and mythical journeys. Event is the central class
+of SEM.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Event">sem:Event</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Core">sem:Core</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">skos:broadMatch:</td>
+      <td><a href="http://purl.org/NET/c4dm/event.owl#Event">eo:Event</a><br>
+        <a href="http://linkedevents.org/ontology/Event">lode:Event</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:closeMatch:</td>
+      <td><a
+        href="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E5.Event">cidoc:E5.Event</a><br>
+        <a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/Situation">cyc:Situation</a><br>
+        <a href="http://purl.org/dc/dcmitype/Event">dctype:Event</a><br>
+        <a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant">dolce:perdurant</a><br>
+        <a
+        href="http://www.ontologyportal.org/translations/SUMO.owl.txt#Process">sumo:Process</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Events are things that happen. This comprises everything from
+        historical events to web site sessions and mythical journeys. Event is
+        the central class of SEM. </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property eventProperty -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:eventProperty">Property: eventProperty</h5>
+
+<p>Event properties connect Events to other SEM Core entities.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty">sem:eventProperty</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td>none </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td>none </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property eventType -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:eventType">Property: eventType</h5>
+
+<p>Has event type is used to assign a type to an event.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/eventType">sem:eventType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Event">sem:Event</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/EventType">sem:EventType</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/type">sem:type</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasSubEvent -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasSubEvent">Property: hasSubEvent</h5>
+
+<p>Has subevent connects an Event to other Events that belong to it. This is a
+very generic property that does not mean the subevents fully define the
+superconcept or that there is any causal relationship.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasSubEvent">sem:hasSubEvent</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Event">sem:Event</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Event">sem:Event</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty">sem:eventProperty</a></td>
+    </tr>
+    <tr>
+      <td class="prop">inverseOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/subEventOf">sem:subEventOf</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property subEventOf -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:subEventOf">Property: subEventOf</h5>
+
+<p>Inverse property of hasSubEvent</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/subEventOf">sem:subEventOf</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Event">sem:Event</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Event">sem:Event</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty">sem:eventProperty</a></td>
+    </tr>
+    <tr>
+      <td class="prop">inverseOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasSubEvent">sem:hasSubEvent</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Place"><span class="secno">4.1.5</span> Class: Place</h4>
+
+<p>Places are locations where an Event happens. They do not need to be physical
+places and hence do not necessarily need coordinates. Neither do they need to
+have any significance apart from them being the location of an Event.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Place">sem:Place</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Core">sem:Core</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">skos:closeMatch:</td>
+      <td><a
+        href="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E53.Place">cidoc:E53.Place</a><br>
+        <a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/EnduringThing-Localized">cyc:EnduringThing-Localized</a><br>
+        <a href="http://purl.org/dc/terms/Location">dcterms:Location</a><br>
+        <a
+        href="http://www.ontologyportal.org/translations/SUMO.owl.txt#GeographicArea">sumo:GeographicArea</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:narrowMatch:</td>
+      <td><a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#PhysicalRegion">dolce:PhysicalRegion</a><br>
+        <a
+        href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">wgs84:SpatialThing</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Places are locations where an Event happens. They do not need to be
+        physical places and hence do not necessarily need coordinates. Neither
+        do they need to have any significance apart from them being the
+        location of an Event. </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasPlace -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasPlace">Property: hasPlace</h5>
+
+<p>hasSubType is used to state that a type falls under another type. This is a
+generic aggregation relation that is used to generalize over various
+hierarchical relations that can exist between types.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasPlace">sem:hasPlace</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Place">sem:Place</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty">sem:eventProperty</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property placeType -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:placeType">Property: placeType</h5>
+
+<p>Has place type is used to assign a type to a place.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/placeType">sem:placeType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Place">sem:Place</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/PlaceType">sem:PlaceType</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/type">sem:type</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Time"><span class="secno">4.1.6</span> Class: Time</h4>
+
+<p>Time contains symbolic representations of when an Event took place. Time
+instances do not necessarily need to have a timestamp associated with them. The
+Time class exists to represent semantics of time, e.g. that one thing happens
+before another, even though the exact timestamps are unknown.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Time">sem:Time</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Core">sem:Core</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">skos:broadMatch:</td>
+      <td><a
+        href="http://www.w3.org/2006/time/TemporalEntity">time:TemporalEntity</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Time contains symbolic representations of when an Event took place.
+        Time instances do not necessarily need to have a timestamp associated
+        with them. The Time class exists to represent semantics of time, e.g.
+        that one thing happens before another, even though the exact timestamps
+        are unknown. </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasTime -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasTime">Property: hasTime</h5>
+
+<p>Has time is used to indicate at which time an Event took place or when a
+property under the Temporary Constraint is valid. Has time points to a symbolic
+representation of time, which allows semantic relations between time resources.
+(see http://www.w3.org/TR/owl-time/)</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasTime">sem:hasTime</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Time">sem:Time</a></td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/eventProperty">sem:eventProperty</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property timeType -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:timeType">Property: timeType</h5>
+
+<p>Has time type is used to assign a type to a time individual.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/timeType">sem:timeType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Time">sem:Time</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/TimeType">sem:TimeType</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/type">sem:type</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasTimeStamp">Property: hasTimeStamp</h5>
+
+<p>Has timestamp is used to put time indicators on any individual. It is the
+most common way to state when an Event took place. There are subproperties of
+hasTimeStamp to represent time intervals and uncertain time intervals. If the
+exact moment is not known, but it is necessary to specify a certain time, use
+hasTime instead. All of these properties are also used to indicate the time at
+which a property under the Temporary Constraint is valid.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp">sem:hasTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td>none </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasBeginTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasBeginTimeStamp">Property: hasBeginTimeStamp</h5>
+
+<p>Has begin timestamp is used to indicate the beginning of a time interval.
+Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted
+as an open ended interval.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp">sem:hasBeginTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp">sem:hasTimeStamp</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasEarliestBeginTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasEarliestBeginTimeStamp">Property: hasEarliestBeginTimeStamp</h5>
+
+<p>Has earliest begin timestamp is used to indicate the earliest possible
+starting time of an uncertain time interval.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasEarliestBeginTimeStamp">sem:hasEarliestBeginTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp">sem:hasBeginTimeStamp</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasLatestBeginTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasLatestBeginTimeStamp">Property: hasLatestBeginTimeStamp</h5>
+
+<p>Has latest begin timestamp is used to indicate the latest possible starting
+time of an uncertain time interval. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasLatestBeginTimeStamp">sem:hasLatestBeginTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasBeginTimeStamp">sem:hasBeginTimeStamp</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasEndTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasEndTimeStamp">Property: hasEndTimeStamp</h5>
+
+<p>Has end timestamp is used to indicate the end of a time interval. Omitting
+the hasEndTimeStamp while stating a hasBeginTimeStamp is interpreted as an open
+ended interval.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp">sem:hasEndTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp">sem:hasTimeStamp</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasEarliestEndTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasEarliestEndTimeStamp">Property: hasEarliestEndTimeStamp</h5>
+
+<p>Has earliest end timestamp is used to indicate the earliest possible ending
+time of an uncertain time interval.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasEarliestEndTimeStamp">sem:hasEarliestEndTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp">sem:hasEndTimeStamp</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasLatestEndTimeStamp -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasLatestEndTimeStamp">Property: hasLatestEndTimeStamp</h5>
+
+<p>Has latest end timestamp is used to indicate the latest possible ending time
+of an uncertain time interval.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasLatestEndTimeStamp">sem:hasLatestEndTimeStamp</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp">sem:hasEndTimeStamp</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="h3_authorities"><span class="secno">4.2</span> Authorities</h3>
+Authorities are used to specify according to whom a statement is valid.
+Individuals of the class sem:Authority can be sem:Actors but do not necessarily
+have to be. They can also symbolize data sources. The sem:Authority class is
+meant as a means for provenance and trust reasoning.
+<!-- Class Authority --><section id=class_authority rel=bibo:Chapter
+resource=#ref typeof=bibo:Chapter>
+
+<h4 id="sem:Authority"><span class="secno">4.2.1</span> Class: Authority</h4>
+
+<p>Authorities are entities that state SEM properties. Their nature is not
+specified, they can symbolize people, organizations, sources of information,
+etc.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Authority">sem:Authority</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Authorities are entities that state SEM properties. Their nature is
+        not specified. They can symbolize people, organizations, sources of
+        information, etc.</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property accordingTo -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:accordingTo">Property: accordingTo</h5>
+
+<p>According to is used to state which Authority says that a property
+constrained by the View Constraint is true.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/accordingTo">sem:accordingTo</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/View">sem:View</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Authority">sem:Authority</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="h3_constraints"><span class="secno">4.3</span> Constraints</h3>
+There are three kinds of Constraints: Role, Temporary and View. sem:Role
+describes the role that an individual of a class is playing in the context of a
+specific event. Roles can be specified for all Core individuals. In the example
+of the Dutch East Indies roles can be specified for Actors (e.g.
+‘‘occupier’’) as well as Places (‘‘capital city’’,
+dbpedia:Colony). 
+
+<p>Temporary defines the temporal boundary within which a property holds, for
+example, the type of the Place ‘‘Indonesia’’ as a ‘‘republic’’
+holds from 1945 on, at least according to the Indonesians. This notion can be
+modeled with sem:View. sem:View is used to record points of view and opinions.
+Indonesia, in 1947, has either the type ‘‘republic’’ or
+‘‘controlled region’’, depending on the source of information. This is
+modeled as a sem:View constraint on the property (sem:placeType in this case)
+that holds sem:accordingTo a sem:Authority (respectively the Indonesian People
+or the Netherlands). <section id=class_authority rel=bibo:Chapter resource=#ref
+typeof=bibo:Chapter></p>
+
+<h4 id="sem:Constraint"><span class="secno">4.3.1</span> Class: Constraint</h4>
+
+<p>The SEM Constraint class contains instances of properties that have a
+constrained validity. This includes time dependent validity (sem:Temporary),
+validity in the guise of a specific role (sem:Role), or validity according to a
+given Authority (sem:View). </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Constraint">sem:Constraint</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>The SEM Constraint class contains instances of properties that have a
+        constrained (i.e. not universal) validity. This includes time dependent
+        validity (Temporary), validity in the guise of a specific role (Role),
+        or validity according to a given Authority (View). </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Role"><span class="secno">4.3.2</span> Class: Role</h4>
+
+<p>Roles are properties with a subspecified function or position indicated by a
+RoleType in the scope of an Event. For example, the sem:hasActor property can
+be subspecified with the RoleType attacker, to denote that the type of
+participation of the Actor in the scope of the Event is "attacker". The
+sem:hasPlace property can be subspecified with the RoleType origin, to denote
+that within the scope of the Event it is the origin. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Role">sem:Role</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Constraint">sem:Constraint</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:relatedMatch:</td>
+      <td><a
+        href="http://sw.opencyc.org/2009/04/07/concept/en/Role">cyc:Role</a><br>
+        <a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#region">dolce:region</a><br>
+        <a
+        href="http://www.ontologyportal.org/translations/SUMO.owl.txt#IntentionalProcess">sumo:IntentionalProcess</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Roles are properties with a subspecified function or position
+        indicated by a RoleType in the scope of an Event. </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property roleType -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:roleType">Property: roleType</h5>
+
+<p>Has role type is used to assign a role type to a Role property constraint.
+This role is a subspecification of the eventProperty which it constrains. For
+example, if an Event hasActor an Actor and this property is given a Role
+Constraint, then roleType can be used to assign a role to the participation of
+the Actor in the Event indicated by hasActor.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/roleType">sem:roleType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Role">sem:Role</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/RoleType">sem:RoleType</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/type">sem:type</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:Temporary"><span class="secno">4.3.3</span> Class: Temporary</h4>
+
+<p>Temporaries are properties that only hold during a certain Time, which is
+either indicated with the sem:hasTime property to an instance of sem:Time, or
+with the sem:hasTimeStamp property to some timestamp(s). </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Temporary">sem:Temporary</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Constraint">sem:Constraint</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Temporaries are properties that only hold during a certain Time,
+        which is either indicated with the sem:hasTime property to an instance
+        of sem:Time, or with the sem:hasTimeStamp property to some
+        timestamp(s). </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:View"><span class="secno">4.3.4</span> Class: View</h4>
+
+<p>Views are properties that only hold according to a certain Authority. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/View">sem:View</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/Constraint">sem:Constraint</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>Views are properties that only hold according to a certain Authority.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="h3_types"><span class="secno">4.4</span> Types</h3>
+For any given application SEM contains a typing system in order to query events at a relevant level of
+abstraction. To be able to reuse any vocabulary on
+the Web to pick our types from, regardless of how the concepts in these
+vocabularies are modeled SEM allows types to be both individuals or classes.
+This way we can borrow type identifiers from any vocabulary.
+<!-- Class Type --><section id=class_authority rel=bibo:Chapter resource=#ref
+typeof=bibo:Chapter>
+
+<h4 id="sem:Type"><span class="secno">4.4.1</span> Class: Type</h4>
+
+<p>The SEM Type class contains all types of Core instances. These can be either
+individuals of classes themselves. This class is meant to be extended for each
+application domain. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td>
+    </tr>
+    <tr>
+      <td class="prop">skos:closeMatch:</td>
+      <td><a
+        href="http://www8.informatik.uni-erlangen.de/IMMD8/Services/cidoc-crm/erlangen-crm_090330_5_0_1.owl#E55.Type">cidoc:E55.Type</a><br>
+        <a
+        href="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#AbstractRegion">dolce:AbstractRegion</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>The SEM Type class contains all types of Core instances. These can be
+        either individuals of classes themselves. This class is meant to be
+        extended for each application domain.</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property hasSubType -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:hasSubType">Property: hasSubType</h5>
+
+<p>Has sub type is used to state that a type falls under another type. This is
+a generic aggregation relation that is used to generalize over various
+hierarchical relations that can exist between types.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasSubType">sem:hasSubType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Domain:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">inverseOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/subTypeOf">sem:subTypeOf</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property subTypeOf -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:subTypeOf">Property: subTypeOf</h5>
+
+<p>The inverse property of hasSubType.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/subTypeOf">sem:subTypeOf</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">inverseOf:</td>
+      <td><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/hasSubType">sem:hasSubType</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- Property type -->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter>
+<h5 id="sem:type">Property: type</h5>
+
+<p>Type is the super property of the properties that are used to indicate the
+type of a Core instance, eventType, actorType, placeType, timeType; and of
+roleType. Types can be both classes and individuals, cf. OWL 2 punning.</p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Property:</th>
+      <th><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/type">sem:type</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">Range:</td>
+      <td><a href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="prop">subPropertyOf:</td>
+      <td><a
+      href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:ActorType"><span class="secno">4.4.2</span> Class: ActorType</h4>
+
+<p>ActorType contains all resources that are used to classify Actors, e.g.
+person </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/ActorType">sem:ActorType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>ActorType contains all resources that are used to classify Actors,
+        e.g. person </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:EventType"><span class="secno">4.4.3</span> Class: EventType</h4>
+
+<p>EventType contains all resources that are used to classify Events, e.g.
+meeting </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/EventType">sem:EventType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>EventType contains all resources that are used to classify Events,
+        e.g. meeting </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:PlaceType"><span class="secno">4.4.4</span> Class: PlaceType</h4>
+
+<p>PlaceType contains all resources that are used to classify Places, e.g.
+river. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/PlaceType">sem:PlaceType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>PlaceType contains all resources that are used to classify Places,
+        e.g. river. </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:RoleType"><span class="secno">4.4.5</span> Class: RoleType</h4>
+
+<p>RoleType contains all resources that are used to classify Roles, e.g.
+receiver. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/RoleType">sem:RoleType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>RoleType contains all resources that are used to classify Roles, e.g.
+        receiver. </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sem:TimeType"><span class="secno">4.4.6</span> Class: TimeType</h4>
+
+<p>TimeType contains all resources that are used to classify Time, e.g.
+century. </p>
+
+<table class="definition">
+  <thead>
+    <tr>
+      <th>OWL Class:</th>
+      <th><a
+        href="http://semanticweb.cs.vu.nl/2009/11/sem/TimeType">sem:TimeType</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="prop">subClassOf:</td>
+      <td><a
+      href="http://semanticweb.cs.vu.nl/2009/11/sem/Type">sem:Type</a></td>
+    </tr>
+    <tr>
+      <td class="prop">Usage note:</td>
+      <td>TimeType contains all resources that are used to classify Time, e.g.
+        century. </td>
+    </tr>
+  </tbody>
+</table>
+<!--Acknowledgements-->
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter><section
+id=acknowledgements class=appendix><!--OddPage-->
+
+<h2 id="h2_acknowledgements"><span class="secno">B. </span>Acknowledgements</h2>
+
+<p>Part of this work has been carried out as a part of the Poseidon project in
+cooperation with Thales Nederland under the responsibilities of the Embedded
+Systems Institute (ESI). This project is partially supported by the Dutch
+Ministry of Economic Affairs under the BSIK03021 program.</p>
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter id=references
+class=appendix><!--OddPage-->
+
+<h2 id="h2_references"><span class="secno">C. </span>References</h2>
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+id=normative-references>
+<h3 id="h3_normative-references"><span class="secno">C.1 </span>Normative
+references</h3>
+<dl class="bibliography">
+  <dt id="bib-RDF-SCHEMA">[RDF-SCHEMA]</dt>
+    <dd rel="dcterms:requires">Dan Brickley; Ramanathan Guha. <a
+      href="http://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>.
+      9 January 2014. W3C Proposed Edited Recommendation. URL: <a
+      href="http://www.w3.org/TR/rdf-schema/">http://www.w3.org/TR/rdf-schema/</a>
+    </dd>
+  <dt id="bib-RDF-SPARQL-QUERY">[RDF-SPARQL-QUERY]</dt>
+    <dd rel="dcterms:requires">Eric Prud'hommeaux; Andy Seaborne. <a
+      href="http://www.w3.org/TR/rdf-sparql-query/"><cite>SPARQL Query Language
+      for RDF</cite></a>. 15 January 2008. W3C Recommendation. URL: <a
+      href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a>
+    </dd>
+  <dt id="bib-SKOS-REFERENCE">[SKOS-REFERENCE]</dt>
+    <dd rel="dcterms:requires">Alistair Miles; Sean Bechhofer. <a
+      href="http://www.w3.org/TR/skos-reference"><cite>SKOS Simple Knowledge
+      Organization System Reference</cite></a>. 18 August 2009. W3C
+      Recommendation. URL: <a
+      href="http://www.w3.org/TR/skos-reference">http://www.w3.org/TR/skos-reference</a>
+    </dd>
+  <dt id="bib-FOAF">[FOAF]</dt>
+    <dd rel="dcterms:requires">Dan Brickley, Libby Miller. <a
+      href="http://xmlns.com/foaf/spec/"><cite>FOAF Vocabulary Specification
+      0.98.</cite></a> 9 August 2010. URL: <a
+      href="http://xmlns.com/foaf/spec/">http://xmlns.com/foaf/spec/</a> </dd>
+  <dt id="bib-OWL2-PRIMER">[OWL2-PRIMER]</dt>
+    <dd rel="dcterms:requires">Pascal Hitzler; Markus Krötzsch; Bijan Parsia;
+      Peter Patel-Schneider; Sebastian Rudolph. <a
+      href="http://www.w3.org/TR/owl2-primer/"><cite>OWL 2 Web Ontology
+      Language Primer (Second Edition)</cite></a>. 11 December 2012. W3C
+      Recommendation. URL: <a
+      href="http://www.w3.org/TR/owl2-primer/">http://www.w3.org/TR/owl2-primer/</a>
+    </dd>
+  <dt id="bib-RDF-CONCEPTS">[RDF-CONCEPTS]</dt>
+    <dd rel="dcterms:requires">Graham Klyne; Jeremy Carroll. <a
+      href="http://www.w3.org/TR/rdf-concepts/"><cite>Resource Description
+      Framework (RDF): Concepts and Abstract Syntax</cite></a>. 10 February
+      2004. W3C Recommendation. URL: <a
+      href="http://www.w3.org/TR/rdf-concepts/">http://www.w3.org/TR/rdf-concepts/</a>
+    </dd>
+  <dt id="bib-DC11">[DC11]</dt>
+    <dd rel="dcterms:references">Dublin Core metadata initiative. <a
+      href="http://dublincore.org/documents/dcmi-terms/"><cite>Dublin Core
+      metadata element set, version 1.1</cite></a>. July 1999. Dublin Core
+      recommendation. URL: <a
+      href="http://dublincore.org/documents/dcmi-terms/">http://dublincore.org/documents/dcmi-terms/</a>
+    </dd>
+  <dt id="bib-DCTYPE">[DCTYPE]</dt>
+    <dd rel="dcterms:references">DCMI Metadata Terms. <a
+      href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype"><cite>DCMI
+      Type Vocabulary </cite></a>. URL: <a
+      href="http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype">http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype</a>
+    </dd>
+  <dt id="bib-CYC">[CYC]</dt>
+    <dd rel="dcterms:references">OpenCyc for the Semantic Web. <a
+      href="http://sw.opencyc.org/"><cite></cite></a>URL: <a
+      href="http://sw.opencyc.org/">http://sw.opencyc.org/</a> </dd>
+  <dt id="bib-DOLCE">[DOLCE]</dt>
+    <dd rel="dcterms:references">DOLCE : a Descriptive Ontology for Linguistic
+      and Cognitive Engineering. <a
+      href="http://www.loa.istc.cnr.it/old/DOLCE.html"><cite></cite></a>URL: <a
+      href="http://www.loa.istc.cnr.it/old/DOLCE.html">http://www.loa.istc.cnr.it/old/DOLCE.html</a>
+    </dd>
+  <dt id="bib-CIDOC">[CIDOC]</dt>
+    <dd rel="dcterms:references">The CIDOC Conceptual Reference Model (CRM)
+      provides definitions and a formal structure for describing the implicit
+      and explicit concepts and relationships used in cultural heritage
+      documentation. <a
+      href="http://www.cidoc-crm.org/index.html"><cite></cite></a>URL: <a
+      href="http://www.cidoc-crm.org/index.html">http://www.cidoc-crm.org/index.html</a>
+    </dd>
+  <dt id="bib-SUMO">[SUMO]</dt>
+    <dd rel="dcterms:references">The Suggested Upper Merged Ontology (SUMO). <a
+      href="http://www.ontologyportal.org/"><cite></cite></a>URL: <a
+      href="http://www.ontologyportal.org/">http://www.ontologyportal.org/</a>
+    </dd>
+  <dt id="bib-EO">[EO]</dt>
+    <dd rel="dcterms:references">The Event Ontology, developed in the <a
+      href="http://c4dm.eecs.qmul.ac.uk/">Centre for Digital Music in Queen
+      Mary</a>, University of London <a
+      href="http://motools.sourceforge.net/event/event.html"><cite></cite></a>URL:
+      <a
+      href="http://motools.sourceforge.net/event/event.html">http://motools.sourceforge.net/event/event.html</a>
+    </dd>
+  <dt id="bib-WGS84">[WGS84]</dt>
+    <dd rel="dcterms:references">W3C Basic Geo (WGS84 lat/long) Vocabulary. <a
+      href="http://www.w3.org/2003/01/geo/"><cite></cite></a>URL: <a
+      href="http://www.w3.org/2003/01/geo/">http://www.w3.org/2003/01/geo/</a>
+    </dd>
+  <dt id="bib-TIME">[TIME]</dt>
+    <dd rel="dcterms:references">W3C Time Ontology. <a
+      href="http://www.w3.org/TR/owl-time/"><cite></cite></a>URL: <a
+      href="http://www.w3.org/TR/owl-time/">http://www.w3.org/TR/owl-time/</a>
+    </dd>
+</dl>
+<section rel=bibo:Chapter resource=#ref typeof=bibo:Chapter
+id=informative-references>
+<h3 id="h3_informative-references"><span class="secno">C.2 </span>Informative
+references</h3>
+<dl class="bibliography">
+  <dt id="bib-turtle">[turtle]</dt>
+    <dd rel="dcterms:references">Eric Prud'hommeaux; Gavin Carothers. <a
+      href="http://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>. 9
+      January 2014. W3C Proposed Recommendation. URL: <a
+      href="http://www.w3.org/TR/turtle/">http://www.w3.org/TR/turtle/</a> </dd>
+  <dt id="bib-SEMDOC">[SEMDOC]</dt>
+    <dd rel="dcterms:references">Willem Robert van Hage, Véronique Malaisé,
+      Roxane Segers, Laura Hollink, Guus Schreiber. <cite>Design and use of the
+      Simple Event Model (SEM)</cite>. Web Semantics: Science, Services and
+      Agents on the World Wide Web 9 (2011) 128–136 URL: <a
+      href="http:/ /www.elsevier.com/ locate/websem">http:/ /www.elsevier.com/
+      locate/websem</a> </dd>
+</dl>
+</body>
+</html>

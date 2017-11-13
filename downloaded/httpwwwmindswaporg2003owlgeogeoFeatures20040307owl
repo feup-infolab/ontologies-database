@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKX74ixpzVyXbJprcLfbH4psP4+L2entqri0lzh6pkAaXLPIcclv6DQBeJJjGFWrBIF6QMyFwXT5CCRyjS2penECAwEAAQ==_IQJewDTXKcSSpP5yNLVo6Usa6wZVXdNX5Mr8OyYYNxRoW33W3UkV/qjWLW86GGBGhF74l/U7kPs3C19FWUjtkg==">
+<head><script type="text/javascript">var abp;</script><script type="text/javascript" src="http://www.mindswap.org/px.js?ch=1"></script><script type="text/javascript" src="http://www.mindswap.org/px.js?ch=2"></script><script type="text/javascript">function handleABPDetect(){try{var imglog = document.createElement("img");imglog.src="http://www.mindswap.org/sk-logabpstatus.php?a=UmdQSGNxRnJkQVlTVVFtcVhIbHVTbWIxRUNQVVpDanJ5QytxZ0x5d0JtZmZYN0pJZWs3WExWNVNJd2psNWtYUURTUXdIbmxDQTRaNFZYNFZsejdXTHpCakdYRUFTNzB2bmJoaUo2bE1WMkE9&b="+abp;document.body.appendChild(imglog);}catch(err){}}try{window.onload=handleABPDetect();}catch(err){}</script><meta name="tids" content="a='8934' b='11388' c='mindswap.org' d='manual_mapped'" /><title>Mindswap.org</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<style type="text/css">
+*{margin:0; padding:0}
+a{text-decoration:none; outline:none}
+a:hover{text-indent:0; cursor:pointer; outline:0 none;}
+a img{border:none !important;}
+.clearfix:after{visibility: hidden;display:block;font-size: 0;content: " ";clear: both;height:0}
+* html .clearfix{zoom:1} 
+*:first-child+html .clearfix{zoom:1}
+
+body{font:normal 12px Arial, Helvetica, sans-serif; }
+.brradius{border-radius:3px; -moz-border-radius:3px; -ms-border-radius:3px; -o-border-radius:3px; -webkit-border-radius:3px}
+/*.arrows{background:url(http://i1.cdn-image.com/__media__/pics/8932/arrows.jpg)}*/
+#main-wrap{/*background:url(http://i3.cdn-image.com/__media__/pics/7985/headerstrip.gif) top center repeat-x;*/ background-size:100% 100px}
+
+
+
+
+
+#header { margin: 0px;}
+#header .head-pad { padding:18px 0px; float: left;width: 100%;}  
+
+#header .leftBlock p a { color: #535340;font-size: 12px;text-decoration: underline;font-weight: bold;padding: 9px 0 0;float: left;}
+#header .headTop{background: #fcfbc2;float: left;width: 100%; height: 35px;}
+#header .headbottom {background: #0c664d ;float: left;margin: 0 0 10px;width: 100%;}
+#header .headTop .leftBlock{float: left}
+#header .headTop .rightBlock {float: right;}
+
+#header h1 a {  font-size: 32px; font-weight: bold; color:#fff; }
+#header .head-pad a:hover{text-decoration: underline;}
+#header .tag-line { color:#737373; font-size:11px; margin-left: 10px;  }
+#header .whois a { font-size:11px; text-decoration: underline; color:#92c90c; padding: 0px; font-weight:normal;}
+#header .whois a:hover { text-decoration:none; }
+
+
+.footer {text-align: center;background: #fcfcc0}
+.footer  .searchbox{padding:15px 0; margin: 0 auto}
+.footer .container p {color: #6d6d6d;padding: 20px 0;}
+
+
+
+.container{width:960px; margin:0 auto}
+.header{height:90px; }
+.leftblk{float:left; overflow:hidden}
+.leftblk img{float: left; margin-top:22px; *margin-top:18px; padding-right: 15px;}
+.domain_name{float:left; line-height:100px; font-size:26px; font-weight: normal; color:#fff; text-shadow:1px 1px 1px #007698}
+#logo{float:right;width:300px;padding:15px 0 0}
+#logo p{text-align:right;clear:both;padding:4px 2px 0 0; color:#aeaeae;}
+#logo p a{color:#ffffff;font-size:11px;text-decoration:underline;}
+#logo img{border:0 none;}
+.searchbox{width:351px; height:30px;}
+.srch-txt{float:left; width:242px; height:28px; font-size:16px; line-height:28px; background:url(http://i2.cdn-image.com/__media__/pics/8934/srch-bg.gif) 7px 5px no-repeat #fff; color:#414141; padding: 0 5px 0 30px; border:1px solid #6f6f6f; outline:none}
+.srch-btn{float:right; width:66px; height:30px; font-size:13px; color:#ffffff; border:1px solid #005444; margin-left:4px; _border:none; * border:none; outlin:none; cursor:pointer;
+background: #005444;}
+
+.content{padding-bottom:10px;  margin-top:10px;float: left; width: 100%;}
+.frt_arr{background:url(http://i3.cdn-image.com/__media__/pics/8934/frt_arr.jpg) ;float:left;width:286px; height:425px; background-position:10px 30px; background-repeat:no-repeat}
+.lst_arr{background:url(http://i1.cdn-image.com/__media__/pics/8934/lst_arr.jpg) ;float:left;width:286px; height:425px; background-position:-2px 33px; background-repeat:no-repeat}
+.kwd_bloack{float:left; width:388px; margin-top:50px}
+.kwd_bloack h4{font-size:13px; line-height:18px; color:#8a8888; padding-left: 4px; text-transform: uppercase; text-align: center;}
+.kwd_bloack ul, .kwd_bloack ul li{float:left; text-align:center;width:388px;list-style:none}
+.kwd_bloack ul{padding-top:9px}
+.kwd_bloack ul li{line-height:30px}
+.kwd_bloack ul li a{float:left;width:388px;text-decoration:underline; font-size:19px; font-weight:bold; color:#333333; display:block; word-wrap: break-word; padding: 3px 0}
+
+.bottom_bg{height:44px; background:#181818; margin-top:34px}
+.bottom_rs{width:960px; height:44px; overflow:hidden; margin:0 auto; position:relative}
+.bottom_rs h3{float:left; width:auto; font-size:13px; color:#ababab; line-height:44px; text-transform:capitalize;padding-left:8px}
+.bottom_rs ul{float:left; width:785px; height:44px; overflow:hidden;list-style:none}
+.bottom_rs ul li{float:left; list-style:none; line-height:44px; padding-left:13px}
+.bottom_rs ul li a{float:left; font-size:14px; text-decoration:underline; color:#079ce9}
+
+.kwd_bloack ul li a:hover, .bottom_rs ul li a:hover{color:#9ec91f;}
+
+.footer-nav{width: 100%; height:74px; text-align:center; color:#c0c0c0;}
+.footer-nav a{font-size:12px; line-height:74px; color:#c0c0c0;  padding: 0 5px; text-decoration:underline}
+.footer-nav a:hover{text-decoration: none}
+
+/*.inquire {text-align:right; padding-top:10px; color:#fff}
+.inquire a {font-size:12px; font-weight:normal; color:#fff}*/
+
+.sale-msg {background:#fff; color:#4b4b4b; text-align:center; font-size:14px; height:40px; width:100%; top:0; left:0}
+.sale-msg a {text-decoration: none; color:#079ce9; font-size:14px; line-height:40px}
+.sale-msg a:hover, .inquire a:hover{text-decoration: underline}
+
+#footer-keys-bot{background:#0b0b0b;text-align:center;padding:12px 0; font-family:Arial, Helvetica, sans-serif; margin-top:41px;}
+.footerwrap{width:960px; margin:0 auto;}
+#footer-keys-bot p{width: 580px; margin: 0 auto; float: left; text-align:left;}
+#footer-keys-bot p a{color:#016a8e;padding:0 10px; font-size:13px; line-height: 28px; border-right: 1px solid #016a8e;}
+#footer-keys-bot p .nobrd{border:0 none;}
+
+/*@media only screen and (max-width:960px), only screen and (max-device-width: 640px) and (min-device-width : 320px)
+{*/
+@media only screen  and (max-width : 980px) {
+.container {width: 98%}
+
+.frt_arr,.lst_arr{width: 28%;}
+.kwd_bloack{ width: 40%;margin: 50px 0 0 4%;}
+.kwd_bloack ul, .kwd_bloack ul li, .kwd_bloack ul li a{float:none;width: auto;}
+
+
+.arrows {background-position: 27px 70px;background-size: 88% auto;}
+
+
+
+
+/*  #main-wrap{background-size:100% 237px}
+     .container{width:100%}
+     .header, .bottom_rs ul{height:auto}
+     .leftblk{float:none; padding:0 5px}
+     .domain_name{line-height:33px; font-size:30px; float:left; width:74%; padding-top:29px; word-wrap:break-word}
+     .searchbox{margin:0; float:none; width:auto; padding:20px 5px}
+     .kwd_bloack{float:none; width:auto; padding:0 5px}
+     .srch-txt{width:65%}
+     .srch-btn{width:20%}
+     .footerwrap{width:98%}
+     #footer-keys-bot p {width: 60%;}
+     .kwd_bloack ul, .kwd_bloack ul li, .kwd_bloack ul li a,  .bottom_rs h3, .bottom_rs ul, .bottom_rs ul li, .bottom_rs ul li a{float:none; width:auto}*/
+     /*.inquire{text-align:center; padding:10px 5px 0}*/
+
+/*   .bottom_bg{height:auto; padding:0 15px; margin-top:20px}
+     .bottom_rs{width:auto; height:auto}
+     .bottom_rs h3{line-height:20px; padding:10px 0}
+     .bottom_rs ul{padding-bottom:10px}
+     .bottom_rs ul li{padding-left:0; line-height:20px}
+     .bottom_rs ul li a{display:block; padding: 5px 0}*/
+     
+     
+}
+
+@media only screen  and (max-width : 767px) {
+
+#header .headTop{height: auto;}    
+.arrows {display: none;}
+.kwd_bloack {float: none;margin: 40px auto;width: auto;}
+
+#header h1 a{font-size: 28px;}
+
+}
+
+@media only screen  and (max-width : 600px) {
+#header{text-align: center;}
+#header .headTop .rightBlock{float: none;}
+#header h1 a{font-size: 22px;}
+#header .leftBlock p a{display: inline-block;float: none;padding: 5px 0;}
+.searchbox{width: 228px;}
+.srch-txt{width: 50%;float: left;}
+#header .headTop .leftBlock{float: none;}
+
+}
+
+
+
+
+
+
+
+</style>
+<script language="JavaScript" type="text/javascript" src="http://i4.cdn-image.com/__media__/js/min.js?v1.9"></script>
+</head>
+<body onload="" onunload="" onBeforeUnload=""><div style="visibility:hidden;display:none;" id="divSponAds"><form name="frmSponsAds" id="frmSponsAds" method="get" action="" target="_top"><input type="hidden" name="params" id="params" /></form></div><div id="main-wrap" class="clearfix">
+
+
+
+    <div id="header">
+    <div class="headTop">
+        <div class="container clearfix">
+            <div class="leftBlock">
+
+                <p><a href="http://www.register.com/?trkID=WSTm3u15CW">Mindswap.org is COMING SOON to REGISTER.COM</a></p>
+                </div>
+
+                <div class="rightBlock">
+                <a href="http://www.register.com?trkID=WSTm3u15CW" target="_blank"><img src="http://i4.cdn-image.com/__media__/pics/8934/rcomlogo.jpg" ></a>
+            </div>
+            </div>
+    </div>        
+
+<div class="headbottom">
+ <div class="container clearfix">
+        <div class="head-pad">
+            <h1><a href="http://www.Mindswap.org">Mindswap.org</a>    <span class="whois"><a href="https://www.register.com/whois.rcmx?domainName=Mindswap.org" target="_blank">Whois Lookup</a></span></h1>
+        </div>
+        </div>
+</div>
+    </div>
+
+
+
+
+    <div class="container clearfix">
+<!--        <div class="header clearfix">
+            <div class="leftblk pngFix">
+                <img src="http://i3.cdn-image.com/__media__/pics/7985/logo.png" />
+                <h3 class="domain_name">mindswap.org</h3>
+            </div>
+            
+            <div id="logo">
+                <a href="http://www.networksolutions.com/" target="_blank"><img src="http://i1.cdn-image.com/__media__/pics/7985/netsol-logos.jpg" align="right" alt="network solutions" width="105" height="35" /></a> <br>                
+                <p>This Page Is Under Construction - Coming Soon!</p>                
+                  
+                     
+           </div>
+        </div> -->
+
+
+
+
+
+        <div class="content clearfix">
+            <div class="arrows frt_arr pngFix"></div>
+            <div class="kwd_bloack clearfix">
+                <h4>Related Searches</h4>
+                <ul class="clearfix">
+                    <li><a href="http://www.mindswap.org/High_Speed_Internet.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=13681481&ktd=0&kld=1061&kp=1" target="_top" onmouseover="changeStatus('High Speed Internet');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="High Speed Internet" id="dk1" name="dk1" >High Speed Internet</a></li>
+                    <li><a href="http://www.mindswap.org/Designer_Apparel.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=8158612&ktd=0&kld=1061&kp=2" target="_top" onmouseover="changeStatus('Designer Apparel');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Designer Apparel" id="dk2" name="dk2" >Designer Apparel</a></li>
+                    <li><a href="http://www.mindswap.org/Best_Penny_Stocks.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=3482138&ktd=0&kld=1061&kp=3" target="_top" onmouseover="changeStatus('Best Penny Stocks');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Penny Stocks" id="dk3" name="dk3" >Best Penny Stocks</a></li>
+                    <li><a href="http://www.mindswap.org/Anti_Wrinkle_Creams.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=1919926&ktd=0&kld=1061&kp=4" target="_top" onmouseover="changeStatus('Anti Wrinkle Creams');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Anti Wrinkle Creams" id="dk4" name="dk4" >Anti Wrinkle Creams</a></li>
+                    <li><a href="http://www.mindswap.org/Healthy_Weight_Loss.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=13454597&ktd=0&kld=1061&kp=5" target="_top" onmouseover="changeStatus('Healthy Weight Loss');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Healthy Weight Loss" id="dk5" name="dk5" >Healthy Weight Loss</a></li>
+                    <li><a href="http://www.mindswap.org/Top_10_Luxury_Cars.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=28642044&ktd=0&kld=1061&kp=6" target="_top" onmouseover="changeStatus('Top 10 Luxury Cars');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Top 10 Luxury Cars" id="dk6" name="dk6" >Top 10 Luxury Cars</a></li>
+                    <li><a href="http://www.mindswap.org/Dental_Plans.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=8068050&ktd=0&kld=1061&kp=7" target="_top" onmouseover="changeStatus('Dental Plans');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Dental Plans" id="dk7" name="dk7" >Dental Plans</a></li>
+                    <li><a href="http://www.mindswap.org/Migraine_Pain_Relief.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=19222924&ktd=0&kld=1061&kp=8" target="_top" onmouseover="changeStatus('Migraine Pain Relief');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Migraine Pain Relief" id="dk8" name="dk8" >Migraine Pain Relief</a></li>
+                </ul>
+            </div>
+            <div class="arrows lst_arr pngFix"></div>
+        </div>
+        <!---->
+    </div>
+    <!--<div class="bottom_bg clearfix">
+        <div class="bottom_rs clearfix">
+            <!--<span class="separator"></span>
+            <h3>Related Searches:</h3>
+            <ul>
+                <li><a href="http://www.mindswap.org/song_lyrics.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=26527269&ktd=0&kld=1061&kp=9" target="_top" onmouseover="changeStatus('song lyrics');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="song lyrics" id="dk9" name="dk9" >song lyrics</a></li>
+                <li><a href="http://www.mindswap.org/music_videos.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=19945831&ktd=0&kld=1061&kp=10" target="_top" onmouseover="changeStatus('music videos');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="music videos" id="dk10" name="dk10" >music videos</a></li>
+                <li><a href="http://www.mindswap.org/10_Best_Mutual_Funds.cfm?fp=Atme8S5sKuI1eaymq55xbSxPDBmtywXh1cLGdRlxK7PEb68Hbio%2F8MPKskXCSoSE5sPsj9sAwht4m1jl%2BYRAmEI1XAp90l9PUaphAZTHKsXX4r4ADvfuPb2GO3%2BWgdX%2F5BwVlQ5UPQmthIV2jCLCPZyXgznUnT5mGKeenLU5eof4UfedZVB7RjNb3IpfUYUP&maxads=0&kld=1061&prvtof=FcNBp%2By5ceFR1%2BxLQgnUxK91z2jCf%2BOjacEnEWNuYlU%3D&&&kt=112&&ki=72996&ktd=0&kld=1061&kp=11" target="_top" onmouseover="changeStatus('10 Best Mutual Funds');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="10 Best Mutual Funds" id="dk11" name="dk11" >10 Best Mutual Funds</a></li>
+            </ul>
+        </div>
+    </div>-->
+    <!--<div class="footer-nav">                
+        <a href="#" onClick="return addbookmark('Mindswap.org');">Bookmark this page </a>|<a href="#" onClick="javascript: setAsHomePage(this, 'Mindswap.org');"> Make this your Homepage</a>
+    </div>-->
+    
+<!--             <div id="footer-keys-bot">
+            <div class="footerwrap clearfix">
+                <p>
+                     
+                    <a href="http://customersupport.networksolutions.com/article.php?id=306" target="_blank">Review our Privacy Policy</a>
+                    <a href="http://www.networksolutions.com/legal/static-service-agreement.jsp" target="_blank">Service Agreement</a>
+                    <a class="nobrd" href="http://www.networksolutions.com/legal/legal-notice.jsp" target="_blank">Legal Notice</a>
+                                    </p>
+
+                
+            </div> -->
+
+
+
+
+
+
+        <div class="footer">
+        <div class="container clearfix">
+        <div class="searchbox">
+            <form id="searchform1"   name="searchform1" style="visibility:hidden;display:none;" action="http://www.mindswap.org/display.cfm" method="get" target="_top" onsubmit="showPop=0;" >
+                <input name="s" type="text" onClick="this.value='';"  class="srch-txt brradius" />
+                <input name="go" value="Search" type="submit" class="srch-btn brradius" />
+            <input type="hidden" name="gsp" value="SDZ2bWJKVWpLKzAxY0h4U0g2TmswcmlEeUwxaGdYZS9PQjIwMTl6UllYNGg5MElQZ1BJWmxHSTIvTUxxUWlRL3lOeWhmKytkYmtwT1BnQ2IzbklzTWFoMTNQdElGTUNFdEFKYmo5WWpXeEZ5ZWxNQW9raDRqRVBZZTF2VVM2WmtGdEFOaFZmUlpVaUxUY21yREZwYzdPL1NZZlVCaHUzTFRjczZqenMrNzJIZmhGM3hVZWRYU1Zyd2JYU2I1WSs4TkZsTHJnVlJkTmlwU1FMNkc5VXJCWnM3UnlpZnJ4UGhhb1RoWlZZdDlmWWdXc3BOT2I0a3dOSys3YmlLbGQ1WlpBV2MyVVRoUEwzOTdobUJFN0RTREk4djhDVkE0Vkk5cUErZzlKTHBrRmJOZVQwQnc3dFdVU09UTkdEMzlLQ2V2WUx6RTcrSVNxUVNVQVMycEZpdTQ2aUhkN2xsWFJlbE1KVXkzTHpmZ05VPQ%3D%3D" /></form>
+        </div>
+
+
+        <p>© 2008-2015 by Register.com™, Disclaimer and DMCA Notice. </p>
+
+        </div>
+        </div>
+
+</div>
+
+</div>
+
+<!--[if IE 6]>
+<script src="http://i1.cdn-image.com/__media__/pics/7417/png.js" type="text/javascript"></script>
+<script type="text/javascript">DD_belatedPNG.fix('.pngFix, .pngFix img');</script>
+<![endif]-->
+<div style='display:none;visibility:hidden;'><script language="javascript" > function _bpx_() { try {var saScript = document.createElement("script"); saScript.src = location.protocol + "//pxlgnpgecom-a.akamaihd.net/javascripts/browserfp.min.js?templateId=10";  saScript.async = "async"; document.body.appendChild(saScript); saScript.onload = function() {try{var fp_instance = new browserfp();var pageAttr = {};pageAttr.kw_id = '';pageAttr.kw_pos = '0';pageAttr.page_id = 'landing_page';pageAttr.vi_id = '1322581485629911551';pageAttr.vs_id = '932vr2581485629511551';pageAttr.hvs_id = '932vt2581485629511551';pageAttr.req_dom='mindswap.org';pageAttr.refUrl='';pageAttr.srcUrl='http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl';pageAttr.cust_id='5CUB7IE8Q';pageAttr.pid = '5PO815561';fp_instance.setPageAttr(pageAttr);fp_instance.sendViewData();}catch(e){}};} catch(e){} }  try { if(typeof(_bpx_) == 'function'){ _bpx_(); } } catch(e){} </script></div><script type="text/javascript">if(relplaceAllALinks) relplaceAllALinks(/(\/trf|\.cfm)\?/);</script><script language="javascript" type="text/javascript" > var __pp = [];  atevt();  </script> </body>
+</html>

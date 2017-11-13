@@ -1,0 +1,639 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gbxml="http://www.gbxml.org/schema#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:fiemser="http://sites.google.com/site/smartappliancesproject/ontologies/fiemser#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:saref="http://ontology.tno.nl/saref#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:ifc="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="Bathroom">
+    <rdfs:isDefinedBy>
+      <voaf:Vocabulary rdf:about="BuildingOntology">
+        <dcterms:contributor>
+          <foaf:Person>
+            <foaf:name>Francisco Silva</foaf:name>
+          </foaf:Person>
+        </dcterms:contributor>
+        <owl:priorVersion rdf:resource="BuildingOntology-0.9"/>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-01-26</dcterms:issued>
+        <owl:versionIRI rdf:resource="BuildingOntology-1.0"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-09-26</dcterms:modified>
+        <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+        <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+        <dcterms:description xml:lang="en">The SEAS Building ontology describes a taxonomy of buildings, building spaces, and rooms.&#xD;
+&#xD;
+Some categorizations are based on the energy efficiency related to their insulation etc., although the actual values for classes depend the country specific regulations and geographical locations.&#xD;
+&#xD;
+Other categorizations are based on occupancy and activities. There is no single accepted categorization available. This taxonomy uses some types selected from:&#xD;
+&#xD;
+- International building occupancy based categories (USA)&#xD;
+- The Classification of Types of Constructions (EU)&#xD;
+- Finnish building categorization VTJ2000 (Finland)&#xD;
+- Wikipedia category page for Rooms: https://en.wikipedia.org/wiki/Category:Rooms&#xD;
+&#xD;
+This ontology should limit the overlap with the following existing specialized ontologies:&#xD;
+&#xD;
+- [FIEMSER ontology](http://sites.google.com/site/smartappliancesproject/ontologies/fiemser#).&#xD;
+- [gbXML ontology](http://www.gbxml.org/).&#xD;
+- [ifcOWL ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4), which is a OWL version of the Building Information Model standard.&#xD;
+- the potential ontology that might be developed in the context of the [Linked Building Data community group](https://www.w3.org/community/lbd/), or its successor Working Group.&#xD;
+</dcterms:description>
+        <dcterms:contributor>
+          <foaf:Person>
+            <foaf:name>Gabriel Santos</foaf:name>
+          </foaf:Person>
+        </dcterms:contributor>
+        <dcterms:contributor>
+          <foaf:Person>
+            <foaf:name>Brigida Teixeira</foaf:name>
+          </foaf:Person>
+        </dcterms:contributor>
+        <dcterms:creator rdf:resource="http://www.vtt.fi/JarmoKalaoja"/>
+        <vann:preferredNamespaceUri rdf:resource=""/>
+        <owl:imports rdf:resource="ZoneOntology"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+        <dcterms:title xml:lang="en">The SEAS Building Ontology</dcterms:title>
+        <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+        <owl:versionInfo>v1.0</owl:versionInfo>
+      </voaf:Vocabulary>
+    </rdfs:isDefinedBy>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Bathroom is mainly used for bathing &amp;amp; washing up related activities.</rdfs:comment>
+    <rdfs:label xml:lang="en">Bathroom</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="OneDwellingBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="SmallHouse"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Detached house.</rdfs:comment>
+    <rdfs:label xml:lang="fi">YhdenAsunnonTalo</rdfs:label>
+    <rdfs:label xml:lang="en">OneDwellingBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="OpenBuildingSpaceConnection">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:disjointWith>
+      <owl:Class rdf:about="OpennableBuildingSpaceConnection"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="ClosedBuildingSpaceConnection"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="BuildingSpaceConnection"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An open building space connection is a connection between two building spaces that is open.&#xD;
+&#xD;
+  This connection may for instance be a hole in a wall, or a virtual separation between two offices in an open space.&#xD;
+&#xD;
+  Instances of `seas:OpenBuildingSpaceConnection` may be typed by classes from specialized building ontologies.</rdfs:comment>
+    <rdfs:label xml:lang="en">Open Building Space Connection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ZeroEnergyBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A net zero-energy building (ZEB) is a building that over a year does not use more energy than it generates. </rdfs:comment>
+    <rdfs:label xml:lang="fi">Nollaenergiatalo</rdfs:label>
+    <rdfs:label xml:lang="en">ZeroEnergyBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="IndustrialBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="NonResidentalBuilding"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Buildings used for industrial production, e.g. factories, workshops, slaughterhouses, breweries, assembly plants, etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">IndustrialBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Corridor">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Lobby"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A gallery or passage connecting parts of a building; hallway.</rdfs:comment>
+    <rdfs:label xml:lang="en">Corridor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Bedroom">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Bedroom is used mainly for sleeping.</rdfs:comment>
+    <rdfs:label xml:lang="en">Bedroom</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PowerplantBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="IndustrialBuilding"/>
+    <rdfs:comment xml:lang="en">Places housing any type of a power plants.</rdfs:comment>
+    <rdfs:label xml:lang="fi">VoimalaRakennus</rdfs:label>
+    <rdfs:label xml:lang="en">PowerplantBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Door">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="BuildingSpaceConnection"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">the large flat piece of wood, glass etc that you move when you go into or out of a building, room, vehicle etc, or when you open a cupboard (Longman Dictionary of Contemporary English Online)</rdfs:comment>
+    <rdfs:label xml:lang="en">Door</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Basement">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A story of a building, partly or wholly underground.</rdfs:comment>
+    <rdfs:label xml:lang="en">Basement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="NonResidentalBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A  non-residential building is a building at least half of which is used for other than residential purposes. </rdfs:comment>
+    <rdfs:label xml:lang="en">NonResidentalBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="HomeOffice">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Office"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A work or office space set up in a person's home and used exclusively for business on a regular basis.</rdfs:comment>
+    <rdfs:label xml:lang="en">Tree house</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="EducationalBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="NonResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">Schools and day care centers.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Opetusrakennus</rdfs:label>
+    <rdfs:label xml:lang="en">EducationalBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ResidentalBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A residential building is a building at least half of which is used for residential purposes. </rdfs:comment>
+    <rdfs:label xml:lang="fi">Asuinrakennus</rdfs:label>
+    <rdfs:label xml:lang="en">ResidentalBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Yard">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="BuildingSpace"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A small usually walled and often paved zone open to the sky and adjacent to a building.</rdfs:comment>
+    <rdfs:label xml:lang="en">Yard</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="DiningRoom">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A room in which meals are eaten, as in a home or hotel, especially the room in which the major or more formal meals are eaten.</rdfs:comment>
+    <rdfs:label xml:lang="en">Dining Room</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="Floor">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="BuildingSpaceFrontier"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A floor is a upwards tilted horzontal surface, could be divided to interior, exposed (outside) or raised floor.</rdfs:comment>
+    <rdfs:label xml:lang="en">Floor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="LowEnergyHouse">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A house typically consuming half the energy than a norm house.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Matalaenergiatalo</rdfs:label>
+    <rdfs:label xml:lang="en">LowEnergyHouse</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Elevator">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Elevator is used to transport people between different floors.</rdfs:comment>
+    <rdfs:label xml:lang="en">Elevator</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ClosedBuildingSpaceConnection">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="BuildingSpaceConnection"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A closed building space connection is a closed connection between two building spaces. &#xD;
+&#xD;
+  This separation may for instance be a wall, i.e., a (tilted more than 60 percent) vertical surface. &#xD;
+&#xD;
+  Instances of `seas:ClosedBuildingSpaceConnection` may be typed by classes from specialized building ontologies.</rdfs:comment>
+    <rdfs:label xml:lang="en">Closed Building Space Connection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="BuildingSpace">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <rdf:seeAlso rdf:resource="http://www.gbxml.org/schema#BuildingSpace"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Zone"/>
+    <rdfs:comment xml:lang="en">A Space is a 3D volume bounded by surfaces. According to the FIEMSER definition, a building space in SAREF defines the physical spaces of the building.</rdfs:comment>
+    <rdfs:label xml:lang="en">BuildingSpace</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="NormHouse">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A building fulfilling the minimal criteria for energy efficiency.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Normitalo</rdfs:label>
+    <rdfs:label xml:lang="en">NormHouse</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="UtilityRoom">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Room for other special utilities and hobbies.</rdfs:comment>
+    <rdfs:label xml:lang="en">Utility Room</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="StorageRoom">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Room for storage.</rdfs:comment>
+    <rdfs:label xml:lang="en">Storage Room</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Greenhouse">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">A building, room, or zone, usually chiefly of glass, in which the temperature is maintained within a desired range, used for cultivating tender plants or growing plants out of season.</rdfs:comment>
+    <rdfs:label xml:lang="en">Greenhouse</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Garage">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Room for garage.</rdfs:comment>
+    <rdfs:label xml:lang="en">Garage</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="OfficeBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="NonResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">Places where services are provided. Examples: banks, insurance agencies.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Toimistorakennus</rdfs:label>
+    <rdfs:label xml:lang="en">BusinessBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PlusEnergyBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A net plus-energy building is a building that over a year does generates more energy than it uses. </rdfs:comment>
+    <rdfs:label xml:lang="fi">Plusenergiatalo</rdfs:label>
+    <rdfs:label xml:lang="en">PlusEnergyBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Sauna">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Sauna is a special type bathroom for enjoying heated steam.</rdfs:comment>
+    <rdfs:label xml:lang="en">Sauna</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PassiveHouse">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Building"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A house typically consuming a quarter of the energy than a norm house.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Passiivitalo</rdfs:label>
+    <rdfs:label xml:lang="en">PassiveHouse</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="BuildingStorey">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <rdf:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#BuildingStorey"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="BuildingSpatialStructure"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The storey represents a (nearly) horizontal aggregation of spaces that are vertically bound.</rdfs:comment>
+    <rdfs:label xml:lang="en">BuildingStorey</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Stairs">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">A construction designed to bridge a large vertical distance by dividing it into smaller vertical distances, called steps.</rdfs:comment>
+    <rdfs:label xml:lang="en">Stairs</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="BuildingSpaceFrontier">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:allValuesFrom>
+        <owl:Class rdf:about="BuildingSpaceConnection"/>
+      </owl:allValuesFrom>
+      <owl:onProperty rdf:resource="connectsSystemThrough"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:allValuesFrom rdf:resource="BuildingSpace"/>
+      <owl:onProperty rdf:resource="connectionPointOf"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="ZoneFrontier"/>
+    <rdfs:comment xml:lang="en">Surface that marks the frontier of a building space, and represents the connection point to other building spaces.</rdfs:comment>
+    <rdfs:label xml:lang="en">Building Space Frontier</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Sunroom">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A structure, either attached or integrated into a building, which allows enjoyment of the surrounding landscape while being sheltered from adverse weather.</rdfs:comment>
+    <rdfs:label xml:lang="en">Swimming Pool</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Ceiling">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpaceFrontier"/>
+    <rdfs:comment xml:lang="en">Ceiling is a downwards tilted horizontal surface.</rdfs:comment>
+    <rdfs:label xml:lang="en">Ceiling</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="BuildingSpaceConnection">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:allValuesFrom rdf:resource="BuildingSpaceFrontier"/>
+      <owl:onProperty rdf:resource="connectsSystemAt"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:allValuesFrom rdf:resource="BuildingSpace"/>
+      <owl:onProperty rdf:resource="connectsSystem"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="ZoneConnection"/>
+    <rdfs:comment xml:lang="en">Connection between two building spaces, where they may potentially exchange heat, humidity, agents.</rdfs:comment>
+    <rdfs:label xml:lang="en">Building Space Connection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MercantileBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="NonResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">Places where goods are displayed and sold. Examples: grocery stores, department stores, and gas stations.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Liikerakennus</rdfs:label>
+    <rdfs:label xml:lang="en">MercantileBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Office">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A room, set of rooms, or building where the business of a commercial or industrial organization or of a professional person is conducted.</rdfs:comment>
+    <rdfs:label xml:lang="en">Office</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Lobby">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">An entrance hall, corridor, or vestibule, as in a public building, often serving as an anteroom; foyer.</rdfs:comment>
+    <rdfs:label xml:lang="en">Lobby</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="CivilEngineeringWork">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:seeAlso rdf:resource="http://sites.google.com/site/smartappliancesproject/ontologies/fiemser#Building"/>
+    <rdf:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#Building"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Construction"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Civil engineering works are all constructions not classified under buildings : railways, roads, bridges, highways, airport runways, dams etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">CivilEngnineeringWork</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Hall">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Lobby"/>
+    <rdfs:comment xml:lang="en">A large entrance room of a house or building.</rdfs:comment>
+    <rdfs:label xml:lang="en">Hall</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Kitchen">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Kitchen is a room used mainly for cooking and possibly eating.</rdfs:comment>
+    <rdfs:label xml:lang="en">Kitchen</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="SiteOfBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#Site"/>
+    <rdfs:subClassOf rdf:resource="Zone"/>
+    <rdfs:comment xml:lang="en">Building site is a locale containing one or more separate buildings. They are zones.</rdfs:comment>
+    <rdfs:label xml:lang="en">SiteOfBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="LivingRoom">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Room"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Living Room is the main room of daytime activity.</rdfs:comment>
+    <rdfs:label xml:lang="en">Living Room</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Construction">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Zone"/>
+    <rdfs:comment xml:lang="en">Constructions are structures connected with the ground which are made of construction materials and components and/or for which construction work is carried out.</rdfs:comment>
+    <rdfs:label xml:lang="en">Construction</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="SmallHouse">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="ResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">A detached small residential building.</rdfs:comment>
+    <rdfs:label xml:lang="en">Pientalo</rdfs:label>
+    <rdfs:label xml:lang="en">SmallHouse</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Window">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpaceConnection"/>
+    <rdfs:comment xml:lang="en">a space or an zone of glass in the wall of a building or vehicle that lets in light (Longman Dictionary of Contemporary English Online)</rdfs:comment>
+    <rdfs:label xml:lang="en">Window</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:Class rdf:about="OpennableBuildingSpaceConnection">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:disjointWith rdf:resource="ClosedBuildingSpaceConnection"/>
+    <rdfs:subClassOf rdf:resource="BuildingSpaceConnection"/>
+    <rdfs:comment xml:lang="en">An opennable building space connection is a connection between two building spaces that has a certain degree of openness.&#xD;
+&#xD;
+  This connection may for instance be a window or a door.&#xD;
+&#xD;
+  Instances of `seas:OpennableBuildingSpaceConnection` may be typed by classes from specialized building ontologies.</rdfs:comment>
+    <rdfs:label xml:lang="en">Opennable Building Space Connection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Room">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">A room in a building space enclosed by surfaces, this could also be modelled as role of space, not subclass of the space itself.</rdfs:comment>
+    <rdfs:label xml:lang="en">Room</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="BuildingSpatialStructure">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <rdf:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#IfcSpatialStructureElementType"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">A man made structure with spatial properties.</rdfs:comment>
+    <rdfs:label xml:lang="en">BuildingSpatialStructure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Roof">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpaceConnection"/>
+    <rdfs:comment xml:lang="en">A (tilted more than 60 percent) vertical surface that separates building spaces.</rdfs:comment>
+    <rdfs:label xml:lang="en">Roof</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Building">
+    <rdf:seeAlso rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC2X3_TC1#Building"/>
+    <rdfs:comment xml:lang="en">Buildings are roofed constructions which can be used separately, have been built for permanent purposes, can be entered by persons and are suitable or intended for protecting persons, animals or objects.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Construction"/>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:label xml:lang="en">Building</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Zone"/>
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <rdf:seeAlso rdf:resource="http://sites.google.com/site/smartappliancesproject/ontologies/fiemser#Building"/>
+  </owl:Class>
+  <owl:Class rdf:about="TreeHouse">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">A small house, especially one for children to play in, built or placed up in the branches of a tree.</rdfs:comment>
+    <rdfs:label xml:lang="en">Tree House</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="HolidayBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="ResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">A secondary residential building used only occasionally during vacations such as a summerhouse or cottage. </rdfs:comment>
+    <rdfs:label xml:lang="fi">VapaaAjanRakennus</rdfs:label>
+    <rdfs:label xml:lang="en">HolidayBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Attic">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Room"/>
+    <rdfs:comment xml:lang="en">the part of a building, especially of a house, directly under a roof; garret.</rdfs:comment>
+    <rdfs:label xml:lang="en">Attic</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Wall">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpaceConnection"/>
+    <rdfs:comment xml:lang="en">A roof upwards tilted surface tilted up part of upper envelope of building.</rdfs:comment>
+    <rdfs:label xml:lang="en">Wall</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="SwimmingPool">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Room"/>
+    <rdfs:comment xml:lang="en">A tank or large artificial basin, as of concrete, for filling with water for swimming.</rdfs:comment>
+    <rdfs:label xml:lang="en">Swimming Pool</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="InstitutionalBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="NonResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">Institutions such as hospitals providing medical and surgical treatment and nursing care for ill or injured people.</rdfs:comment>
+    <rdfs:label xml:lang="fi">HoitoalanRakennus</rdfs:label>
+    <rdfs:label xml:lang="en">InstitutionalBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="AssemblyBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="NonResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">places used for people gathering for entertainment, worship, and eating or drinking. Examples: churches, restaurants.</rdfs:comment>
+    <rdfs:label xml:lang="fi">Kokoontumisrakennus</rdfs:label>
+    <rdfs:label xml:lang="en">AssemblyBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Balcony">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="BuildingSpace"/>
+    <rdfs:comment xml:lang="en">An accessible structure extending from a building, especially outside a window.</rdfs:comment>
+    <rdfs:label xml:lang="en">Balcony</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="StorageBuilding">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="NonResidentalBuilding"/>
+    <rdfs:comment xml:lang="en">Places where items are stored. Examples: warehouses, reservoirs and silos.</rdfs:comment>
+    <rdfs:label xml:lang="fi">VarastoRakennus</rdfs:label>
+    <rdfs:label xml:lang="en">StorageBuilding</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Laundry">
+    <rdfs:isDefinedBy rdf:resource="BuildingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Room"/>
+    <rdfs:comment xml:lang="en">A room or zone, as in a home or apartment building, reserved for doing the family wash.</rdfs:comment>
+    <rdfs:label xml:lang="en">Laundry</rdfs:label>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+</rdf:RDF>

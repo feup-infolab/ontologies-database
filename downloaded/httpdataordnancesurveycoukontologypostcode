@@ -1,0 +1,19 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://data.ordnancesurvey.co.uk/ontology/postcode/>
+        a                 <http://www.w3.org/2002/07/owl#Ontology> ;
+        rdfs:comment      "An ontology describing the postcode geography in Great Britain."@en ;
+        rdfs:isDefinedBy  <http://www.ordnancesurvey.co.uk/ontology/postcode.owl> ;
+        rdfs:label        "Postcode Ontology"@en ;
+        <http://purl.org/dc/elements/1.1/creator>
+                "Ordnance Survey"@en ;
+        dct:creator       <http://data.ordnancesurvey.co.uk/id/ordnancesurvey> ;
+        dct:publisher     <http://data.ordnancesurvey.co.uk/id/ordnancesurvey> ;
+        <http://www.w3.org/2002/07/owl#imports>
+                <http://www.w3.org/2004/02/skos/core> , <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/>
+        rdfs:label  "The administrative geography and civil voting area ontology"@en .

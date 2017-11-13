@@ -1,0 +1,1664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="shortcut icon" href="http://makolab.pl/favicon.ico" type="image/vnd.microsoft.icon" />
+	<title>Used Cars Ontology Language Reference</title>
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="Hepp Research GmbH and Makolab S.A." />
+	<meta name="publisher" content="Martin Hepp" />
+	<meta name="keywords" content="E-Commerce, E-Business, GoodRelations, Ontology, Automotive, Cars, Vehicles, Used Cars" />
+	<meta name="generator" content="specgen" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+	</head>
+	<body>
+<div id="top">
+        <a href="http://www.makolab.com/"><img id="logo" src="../static/makolab-logo.png" alt="Makolab" /></a>
+</div>
+<!-- Ontology -->
+<h1 style="clear:both">Used Cars Ontology Language Reference</h1>
+<div class="box">
+        <h2 id="ontology">Used Cars Ontology Metadata <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a>)</span></h2>
+        <h3>V 1.0:A, Release 2012-12-31</h3>
+        <p><strong>Latest version:</strong> <a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#</p>
+        <p><strong>Author:</strong> Hepp Research GmbH and Makolab S.A.</p>
+        <p>
+                <strong>URI</strong> <a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#<br/>
+                <strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Used Cars Ontology
+        </p>
+        <div class="comment">
+                <p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+                <p>UCO: The The Used Cars Ontology<br/>
+    <br/>
+A Web vocabulary for describing aspects of used cars for e-commerce.<br/>
+<br/>
+Vocabulary:    <a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#<br/>
+Namespace:     <a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#<br/>
+<br/>
+The vocabulary is designed to be used in combination with <br/>
+(1) GoodRelations, a standard vocabulary for the commercial aspects of offers for sale, rental, repair, or disposal; and<br/>
+(2) the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles.<br/>
+	<br/>
+See <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a> and <a href="http://purl.org/vso/ns">http://purl.org/vso/ns</a> for more information.</p>
+        </div>  
+        <p><strong><a href="http://purl.org/dc/terms/subject">dcterms:subject</a></strong> E-Commerce, E-Business, GoodRelations, Ontology, Automotive, Cars, Vehicles, Used Cars</p>
+        <p><strong><a href="http://purl.org/dc/terms/rights">dcterms:rights</a></strong> The Used Cars Ontology is available under the Creative Commons Attribution 3.0 Unported license; see <a href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</a>. 
+In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), 
+as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</p>
+</div>
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="toc">Table of Contents</h2>
+        <ol>
+               <li><a href="#overview">Overview</a></li>
+               <li><a href="#examples">Examples</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#dprops">Datatype Properties</a></li>
+                <li><a href="#oprops">Object Properties</a></li>
+                
+                <li><a href="#individuals">Individuals</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+                <li><a href="#license">License</a></li>
+                <li><a href="#acknowledgements">Acknowledgments</a></li>
+               <li><a href="#references">References</a></li>
+               <li><a href="#changelog">Change Log</a></li>
+        </ol>
+</div>
+    <div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="overview">Overview</h2>
+        <p>
+            This Used Cars Ontology is an extension of <a href="http://purl.org/goodrelations/">GoodRelations</a> and provides the additional vocabulary elements for describing used cars and their history, e.g. ownership record, damages, modifications, features, etc.</p>
+        <h3 id="features">Representation of Vehicle Features</h3> 
+        <p>The general patterns of extending GoodRelations for vertical industries are described <a href="http://wiki.goodrelations-vocabulary.org/Documentation/Extensions">here</a>.</p>      
+        <p>The Used Cars Ontology slightly deviates from this standard pattern, because a global standardization of car features features is not possible without loosing granularity. Many features that look trivial at first sight are impossible to harmonize in a feasible and lossless way.</p>
+        <p>Thus, the Used Cars Ontology follows a radically different approach for Web Ontology Engineering in that it supports the so called <i>Deferred Consensus Principle</i> (Hepp (2012)): Instead of consolidating product features beyond those provided by the Vehicle Sales Ontology (VSO) in the new ontology, it provides a consolidated conceptual model for encoding proprietary feature information in a way that is most useful for the automated, heuristical consolidation at the client side. So instead of defining properties for all possible vehicle features, the ontology provides the class <a href="http://purl.org/uco/ns#PropertValue">uco:PropertValue</a> that can hold feature information in varying degrees of formality.</p>
+        <h3 id="uml">UML Class Diagrams</h3>        
+        <p>There is a UML class diagrams available that illustrates the conceptual structures of the Used Cars Ontology. Note that the following diagram is only an approximation of the real OWL DL model, since it cannot represent all details of the formal model.
+        </p>
+        <ul>
+            <li><a href="uco-uml.pdf">UML Class Diagram:</a> Used Cars Ontology</li>
+        </ul>
+    </div>
+	<div class="box">
+		<p class="top">[<a href="#top">back to top</a>]</p>
+		<h2 id="examples">Examples</h2>
+		<p>
+			This section shows typical examples of using the ontology.
+		</p>
+		<p>We assume the following prefix declarations for all examples:</p>
+		<pre>
+# Prefix Declarations
+@prefix foaf: &lt;<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>&gt; .
+@prefix schema: &lt;<a href="http://schema.org/">http://schema.org/</a>&gt; .
+@prefix xsd: &lt;<a href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>#&gt; .
+@prefix pto: &lt;<a href="http://www.productontology.org/id/">http://www.productontology.org/id/</a>&gt; .
+@prefix gr: &lt;<a href="http://purl.org/goodrelations/v1">http://purl.org/goodrelations/v1</a>#&gt; .
+@prefix rdf: &lt;<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns</a>#&gt; .
+@prefix rdfs: &lt;<a href="http://www.w3.org/2000/01/rdf-schema">http://www.w3.org/2000/01/rdf-schema</a>#&gt; .
+@prefix owl: &lt;<a href="http://www.w3.org/2002/07/owl">http://www.w3.org/2002/07/owl</a>#&gt; .
+@prefix dbpedia: &lt;<a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>&gt; .
+@prefix vso: &lt;<a href="http://purl.org/vso/ns">http://purl.org/vso/ns</a>#&gt; .
+@prefix uco: &lt;<a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#&gt; .
+@prefix foo: &lt;<a href="http://ontologies.makolab.com/uco/examples.rdf">http://ontologies.makolab.com/uco/examples.rdf</a>#&gt; .
+</pre>
+		<h3 id="e1">Examples of Describing a Used Car</h3>
+		<strong>Scenario:</strong> In the following, we describe an offer to sell a used 2002 Chevrolet Camaro	
+		<h4 id="e1_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="e1_n3">Turtle</h4>
+		<h5 id="e1_n3.1">Basic Car Description</h5>
+		<pre>
+# Part 1: Basic Car Description using <a href="http://purl.org/vso/ns">http://purl.org/vso/ns</a>
+# Make and Model: 2002 Chevrolet Camaro
+# VIN: 2G1FP22G522155049
+# Drivetype: RWD
+# Mileage: 42000 km
+# Stock No: 155049
+# Transmission: 6-Speed Manual
+# Engine: 5.7L V8 OHV 16V
+# Exterior Color: red
+#
+# 1.1 Basic Car Specification
+foo:car_155049 a <a href="http://purl.org/vso/ns#Automobile">vso:Automobile</a>, <a href="http://purl.org/goodrelations/v1#Individual">gr:Individual</a> ; # it&#x27; a real car
+    <a href="http://purl.org/goodrelations/v1#hasManufacturer">gr:hasManufacturer</a> <a href="http://dbpedia.org/resource/Chevrolet">dbpedia:Chevrolet</a> ;
+    <a href="http://purl.org/goodrelations/v1#hasMakeAndModel">gr:hasMakeAndModel</a> <a href="http://dbpedia.org/resource/Chevrolet_Camaro">dbpedia:Chevrolet_Camaro</a> ;
+    <a href="http://purl.org/vso/ns#modelDate">vso:modelDate</a> &quot;2002-01-01&quot;^^xsd:date ; # year-only data is not possible in xsd:date and also problematic
+    <a href="http://purl.org/vso/ns#VIN">vso:VIN</a> &quot;2G1FP22G522155049&quot;^^xsd:string ;
+    <a href="http://purl.org/vso/ns#bodyStyle">vso:bodyStyle</a> &lt;<a href="http://dbpedia.org/resource/Coup">http://dbpedia.org/resource/Coup</a>%C3%A9&gt; ; # Coup&eacute;
+    <a href="http://purl.org/vso/ns#color">vso:color</a> &quot;red&quot;@en ;
+    <a href="http://purl.org/vso/ns#engineDisplacement">vso:engineDisplacement</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValueFloat">gr:QuantitativeValueFloat</a> ;
+                             <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;5.7&quot;^^xsd:float ;
+                             <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;LTR&quot;^^xsd:string ] ;
+    <a href="http://purl.org/vso/ns#engineName">vso:engineName</a> &quot;5.7L V8 OHV 16V&quot;@en ;
+    <a href="http://purl.org/vso/ns#mileageFromOdometer">vso:mileageFromOdometer</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValueFloat">gr:QuantitativeValueFloat</a> ;
+                             <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;42000&quot;^^xsd:float ;
+                             <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] ;
+    <a href="http://purl.org/goodrelations/v1#hasStockKeepingUnit">gr:hasStockKeepingUnit</a> &quot;155049&quot;^^xsd:string ;
+    <a href="http://purl.org/vso/ns#gearsTotal">vso:gearsTotal</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValueInteger">gr:QuantitativeValueInteger</a> ;
+                     <a href="http://purl.org/goodrelations/v1#hasValueInteger">gr:hasValueInteger</a> &quot;6&quot;^^xsd:int ;
+                     <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ] ;
+    <a href="http://purl.org/vso/ns#transmission">vso:transmission</a> <a href="http://dbpedia.org/resource/Manual_transmission">dbpedia:Manual_transmission</a> ;
+    <a href="http://purl.org/vso/ns#fuelType">vso:fuelType</a> <a href="http://dbpedia.org/resource/Gasoline">dbpedia:Gasoline</a> ;
+    <a href="http://purl.org/vso/ns#rentalUsage">vso:rentalUsage</a> &quot;false&quot;^^xsd:boolean ;
+    <a href="http://purl.org/vso/ns#feature">vso:feature</a> <a href="http://dbpedia.org/resource/Cup_holder">dbpedia:Cup_holder</a>,
+                <a href="http://dbpedia.org/resource/Power_window">dbpedia:Power_window</a>,
+                <a href="http://dbpedia.org/resource/Air_conditioner">dbpedia:Air_conditioner</a>,
+                <a href="http://dbpedia.org/resource/Anti-lock_braking_system">dbpedia:Anti-lock_braking_system</a> ;  # Add more DBPedia / Wikipedia URIs for additional features
+    <a href="http://xmlns.com/foaf/0.1/depiction">foaf:depiction</a> &lt;<a href="http://www.flickr.com/photos/brickwall316/7081356845/">http://www.flickr.com/photos/brickwall316/7081356845/</a>&gt; ; # URI of a photo
+    <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://www.agautosalesny.com/details.php">http://www.agautosalesny.com/details.php</a>?key=71&gt; . # URI of the web page			
+		</pre>
+		<h5 id="e1_n3.2">Offer</h5>
+		<pre>
+# 1.2 Offer using <a href="http://purl.org/goodrelations/v1">http://purl.org/goodrelations/v1</a>
+# Price: EUR 11990
+
+# 1.2.1 Company / Vendor Data (needed only once for all offers)
+foo:company a <a href="http://schema.org/AutomotiveBusiness">schema:AutomotiveBusiness</a> ;
+    <a href="http://schema.org/name">schema:name</a> &quot;Miller Inc.&quot; ;
+    <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://www.miller.com/">http://www.miller.com/</a>&gt; ;
+# add other properties from <a href="http://schema.org/AutomotiveBusiness">http://schema.org/AutomotiveBusiness</a> here, if data is available
+    <a href="http://purl.org/goodrelations/v1#offers">gr:offers</a> foo:offer1 .
+
+# 1.2.2 Offer: Price, Payment, Conditions
+foo:offer1 a <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a> ;
+    <a href="http://purl.org/goodrelations/v1#includes">gr:includes</a> foo:car_155049 ;
+    <a href="http://purl.org/goodrelations/v1#hasBusinessFunction">gr:hasBusinessFunction</a> <a href="http://purl.org/goodrelations/v1#Sell">gr:Sell</a> ;
+    <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;11990&quot;^^xsd:float ] ;
+    <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://www.agautosalesny.com/details.php">http://www.agautosalesny.com/details.php</a>?key=71&gt; . # URI of the web page			
+		</pre>
+		<h5 id="e1_n3.3">Non-standard Car features using <a href="http://purl.org/uco/ns#Property">uco:Property</a></h5>
+		<pre>
+# Non-standard features using <a href="http://purl.org/uco/ns#PropertyValue">uco:PropertyValue</a>
+# 12V front power outlet
+foo:car_155049 <a href="http://purl.org/uco/ns#feature">uco:feature</a> 
+                    [   a <a href="http://purl.org/uco/ns#PropertyValue">uco:PropertyValue</a> ;   
+                        <a href="http://purl.org/uco/ns#propertyName">uco:propertyName</a> &quot;12V front power outlet&quot;@en ; 
+                        <a href="http://purl.org/uco/ns#propertyValue">uco:propertyValue</a> &quot;yes&quot;@en ] .
+# Rear leg room: 26.8 in.
+foo:car_155049 <a href="http://purl.org/uco/ns#feature">uco:feature</a> 
+                    [   a <a href="http://purl.org/uco/ns#PropertyValue">uco:PropertyValue</a> ;   
+                        <a href="http://purl.org/uco/ns#propertyName">uco:propertyName</a> &quot;Rear leg room&quot;@en ; 
+                        <a href="http://purl.org/uco/ns#propertyValue">uco:propertyValue</a> &quot;26.8&quot; ;
+                        <a href="http://purl.org/uco/ns#unitCode">uco:unitCode</a> &quot;INH&quot;^^xsd:string ;
+                        <a href="http://purl.org/uco/ns#unitText">uco:unitText</a> &quot;inches&quot;@en ] .  			
+		</pre>
+		<h5 id="e1_n3.4">List Price Information</h5>
+		<pre>
+# List price: EUR 13,999
+foo:car_155049 <a href="http://purl.org/uco/ns#listPrice">uco:listPrice</a> [ a <a href="http://purl.org/goodrelations/v1#PriceSpecification">gr:PriceSpecification</a> ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;13999&quot;^^xsd:float ] .			
+		</pre>
+		<h5 id="e1_n3.5">Official Valuation (Blue Book (R) etc.)</h5>
+		<pre>
+# Valuation: Blue Book&reg; Value EUR 12,500
+foo:car_155049 <a href="http://purl.org/uco/ns#valuation">uco:valuation</a> [ a <a href="http://purl.org/goodrelations/v1#PriceSpecification">gr:PriceSpecification</a> ;
+                                <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Kelly Blue Book&reg; Value&quot;@en ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;12500&quot;^^xsd:float ] .			
+		</pre>
+		<h5 id="e1_n3.6">Location of the Car</h5>
+		<pre>
+# Current location: Mountain View, CA 94043, USA
+foo:car_155049 <a href="http://purl.org/uco/ns#currentLocation">uco:currentLocation</a> [    a <a href="http://schema.org/PostalAddress">schema:PostalAddress</a> ;
+                                        <a href="http://schema.org/addressCountry">schema:addressCountry</a> &quot;USA&quot;@en ;
+                                        <a href="http://schema.org/addressLocality">schema:addressLocality</a> &quot;Mountain View&quot;@en ;
+                                        <a href="http://schema.org/addressRegion">schema:addressRegion</a> &quot;CA&quot;@en ;
+                                        <a href="http://schema.org/postalCode">schema:postalCode</a> &quot;94043&quot; ] .			
+		</pre>
+		<h5 id="e1_n3.7">Certified Pre-Owned and Other Certificates</h5>
+		<pre>
+# Certification - Chevrolet Certified Pre-Owned inspected at a odometer mileage of 41750 km
+foo:car_155049 <a href="http://purl.org/uco/ns#inspected">uco:inspected</a> [  a <a href="http://purl.org/uco/ns#Check">uco:Check</a> ;
+                                <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Chevrolet Certified Pre-Owned Vehicle&quot;@en ;
+                                <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://www.edmunds.com/chevrolet/certified-program.html">http://www.edmunds.com/chevrolet/certified-program.html</a>&gt; ;
+                                <a href="http://purl.org/uco/ns#mileage">uco:mileage</a> [   a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                                                <a href="http://purl.org/goodrelations/v1#hasValue">gr:hasValue</a> &quot;41750&quot;^^xsd:float ;
+                                                <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] ;
+                                <a href="http://purl.org/uco/ns#carriedOutBy">uco:carriedOutBy</a>  <a href="http://purl.org/uco/ns#AuthorizedDealer">uco:AuthorizedDealer</a> ] . 
+		</pre>
+		<h5 id="e1_n3.8">Smoking / Non-smoking</h5>		
+		<pre>
+# Non-smoking: Nobody has ever smoked inside the car
+foo:car_155049 <a href="http://purl.org/uco/ns#smoking">uco:smoking</a> false .
+		</pre>
+		<h5 id="e1_n3.9">Pets</h5>
+		<pre>
+# The car has been used to carry dogs (regularly)
+foo:car_155049 <a href="http://purl.org/uco/ns#pets">uco:pets</a> <a href="http://dbpedia.org/resource/Dog">dbpedia:Dog</a> .			
+		</pre>
+		<h5 id="e1_n3.10">Number of Owners</h5>
+		<pre>
+# Two owners: The current owner is the second owner
+foo:car_155049 <a href="http://purl.org/uco/ns#numberOfOwners">uco:numberOfOwners</a> &quot;2&quot;^^xsd:integer .			
+		</pre>
+		<h3 id="e2">Detailed Ownership Records</h3>
+		<strong>Scenario:</strong> In the following, we show how the full ownership and usage record of a car can be modeled.	
+		<h4 id="e2_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="e2_n3">Turtle</h4>
+		<h5 id="e2_n3.1">Periods of Ownership</h5>				
+		<pre>
+# Detailed ownership record
+# The car has been owned by Frank Sample from 2002-02-15 (odometer: 0 km) through 2004-06-15 (odometer 13,000 km)
+# and by Miller Inc from 2004-06-15 (odometer: 13,000 km) through today.
+
+foo:person a <a href="http://schema.org/Person">schema:Person</a> ;
+# add other properties from <a href="http://schema.org/Person">http://schema.org/Person</a>, if data is available
+    <a href="http://schema.org/name">schema:name</a> &quot;Frank Sample&quot; .
+
+foo:car_155049 <a href="http://purl.org/uco/ns#hasOwnershipInfo">uco:hasOwnershipInfo</a> foo:record1, foo:record2 .
+
+foo:record1 a <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> ;
+    <a href="http://purl.org/uco/ns#owner">uco:owner</a> foo:person ;
+    <a href="http://purl.org/uco/ns#from">uco:from</a> &quot;2002-02-15T00:00:00Z&quot;^^xsd:dateTime ;
+    <a href="http://purl.org/uco/ns#to">uco:to</a> &quot;2004-06-15T00:00:00Z&quot;^^xsd:dateTime ;
+    <a href="http://purl.org/uco/ns#mileageInitial">uco:mileageInitial</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                         <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;0&quot;^^xsd:float ;
+                         <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] ;  
+    <a href="http://purl.org/uco/ns#mileageEnd">uco:mileageEnd</a>     [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                         <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;13000&quot;^^xsd:float ;
+                         <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] .
+
+foo:record2 a <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> ;
+# Note that <a href="http://purl.org/uco/ns#currentOwner">uco:currentOwner</a> is a specialization of <a href="http://purl.org/uco/ns#owner">uco:owner</a>
+# Also note that we already defined Miller Inc. above
+    <a href="http://purl.org/uco/ns#currentOwner">uco:currentOwner</a> foo:company ;
+    <a href="http://purl.org/uco/ns#from">uco:from</a> &quot;2004-06-15T00:00:00Z&quot;^^xsd:dateTime ;
+    <a href="http://purl.org/uco/ns#mileageInitial">uco:mileageInitial</a>     [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                         <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;13000&quot;^^xsd:float ;
+                         <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] .
+		</pre>
+		<h5 id="e2_n3.2">Car Details per Period of Ownership</h5>				
+		<p>
+The ownership record could also state additional facts about the ownership period of Frank Sample. 
+		</p>
+<p>The vehicle was used to carry dogs.</p>
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#pets">uco:pets</a> <a href="http://dbpedia.org/resource/Dog">dbpedia:Dog</a> .
+		</pre>
+<p>The vehicle was used for private purposes including commuting.</p>
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#usage">uco:usage</a> <a href="http://purl.org/uco/ns#Private">uco:Private</a> .
+		</pre>
+<p>The vehicle was mainly parked it in a garage.</p>
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#usage">uco:usage</a> <a href="http://purl.org/uco/ns#Garage">uco:Garage</a> .
+		</pre>
+<p>The vehicle's main location was in Tuczon, Arizona.</p>
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#mainLocation">uco:mainLocation</a> [ a <a href="http://schema.org/PostalAddress">schema:PostalAddress</a> ;
+                               <a href="http://schema.org/addressCountry">schema:addressCountry</a> &quot;USA&quot;@en ;
+                               <a href="http://schema.org/addressLocality">schema:addressLocality</a> &quot;Tuczon&quot;@en ;
+                               <a href="http://schema.org/addressRegion">schema:addressRegion</a> &quot;AZ&quot;@en ] .
+		</pre>
+<p>The license plate during that period was "L8 4 KRT".</p>		
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#licensePlate">uco:licensePlate</a> &quot;L8 4 KRT&quot;^^xsd:string .
+		</pre>
+<p>The vehicle was used by two different drivers.</p>		
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#numberOfDrivers">uco:numberOfDrivers</a> &quot;2&quot;^^xsd:integer .
+		</pre>
+<p>Nobody smoked in the car during that period of time.</p>
+		<pre>
+foo:record1 <a href="http://purl.org/uco/ns#smoking">uco:smoking</a> false .
+		</pre>
+		<h5 id="e2_n3.3">Type of Usage per Period of Ownership</h5>				
+<p>The <a href="http://purl.org/vso/ns#rentalUsage">Vehicle Sales Ontology (VSO)</a> already provides a simple means for 
+# indicating usage as a rental car for the entire lifespan of the car via the <a href="http://purl.org/vso/ns#rentalUsage">vso:rentalUsage</a> property:</p>
+<pre>foo:car_155049 <a href="http://purl.org/vso/ns#rentalUsage">vso:rentalUsage</a> true .</pre>
+<p>The Used Car Ontology allows making such statements at a more granular level:</p>
+<ul>
+	<li>The information can be attached to a <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> node. This allows for stating ownership during periods of ownership individually.</li>
+	<li>Instead of a binary yes/no indication, one can specify various types of usage:
+		<ul>
+			<li>uco:Business</li>
+			<li>uco:CarSharing</li>
+			<li>uco:DrivingSchool</li>
+			<li>uco:Private</li>
+			<li>uco:Rental</li>
+			<li>uco:Taxi</li>
+		</ul>
+	</li>
+</ul>	
+		<pre>
+# Usage as a rental car 
+# Example 1: The car was used for rental, business, and private purposes, in total:
+foo:car_155049 <a href="http://purl.org/uco/ns#usage">uco:usage</a> <a href="http://purl.org/uco/ns#Rental">uco:Rental</a>, <a href="http://purl.org/uco/ns#Business">uco:Business</a>, <a href="http://purl.org/uco/ns#Private">uco:Private</a> .
+
+# Example 2: The car was used for rental and business purposes by Miller Inc. (see above)
+foo:record2 <a href="http://purl.org/uco/ns#usage">uco:usage</a> <a href="http://purl.org/uco/ns#Rental">uco:Rental</a>, <a href="http://purl.org/uco/ns#Business">uco:Business</a> .
+		</pre>		
+		<h3 id="e3">Inspections (MOT, ...)</h3>
+		<strong>Scenario:</strong> Often, the date and expiry of mandatory of optional certifications and inspections is important information for advertising a used car.	
+		<h4 id="e3_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="e3_n3">Turtle</h4>	
+		<h5 id="e3_n3.1">MOT Testing</h5>	
+		<pre>
+# MOT Test valid until 2013-06-15
+# Carried out on 2012-06-16 at 35,000 km
+# See <a href="http://en.wikipedia.org/wiki/Vehicle_inspection">http://en.wikipedia.org/wiki/Vehicle_inspection</a> for background information
+# Note: This example is made-up, since a US vehicle will very rarely undergo a UK MOT test ;-)
+foo:car_155049 <a href="http://purl.org/uco/ns#inspected">uco:inspected</a> [ a <a href="http://purl.org/uco/ns#Check">uco:Check</a> ;
+                               <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;MOT Test&quot;@en ;
+                               <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;MOT passed on 2012/06/14&quot;@en ;
+                               <a href="http://purl.org/uco/ns#mileage">uco:mileage</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                                             <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;35000&quot;^^xsd:float ;
+                                             <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] ;
+                               <a href="http://purl.org/uco/ns#validFrom">uco:validFrom</a> &quot;2012-06-16T00:00:00&quot;^^xsd:dateTime ;
+                               <a href="http://purl.org/uco/ns#validThrough">uco:validThrough</a> &quot;2013-06-15T23:59:59&quot;^^xsd:dateTime ] .
+		</pre>
+		<h3 id="e4">Accident Information</h3>
+		<strong>Scenario:</strong>The car was damaged in an accident on 2012-03-01 in Palo Alto, CA at a mileage of 33,546 km. All damages have been repaired by an authorized service center with original parts only. There were no structural damage and none of the airbags were deployed in the accident. The owner was not at fault.	
+		<h4 id="e4_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="e4_n3">Turtle</h4>
+		<h5 id="e4_n3.1">Accident Details</h5>			
+		<pre>                        
+# Accident Information
+foo:car_155049 <a href="http://purl.org/uco/ns#eventInformation">uco:eventInformation</a> foo:Accident1.
+
+foo:Accident1 a <a href="http://purl.org/uco/ns#DamageOrAccident">uco:DamageOrAccident</a> ;
+    <a href="http://schema.org/location">schema:location</a>  [ a <a href="http://schema.org/PostalAddress">schema:PostalAddress</a> ;
+                       <a href="http://schema.org/addressCountry">schema:addressCountry</a> &quot;USA&quot;@en ;
+                       <a href="http://schema.org/addressLocality">schema:addressLocality</a> &quot;Palo Alto&quot;@en ;
+                       <a href="http://schema.org/addressRegion">schema:addressRegion</a> &quot;CA&quot;@en ] ;
+    <a href="http://schema.org/startDate">schema:startDate</a> &quot;2012-03-01&quot;^^xsd:date ;
+    <a href="http://schema.org/endDate">schema:endDate</a> &quot;2012-03-01&quot;^^xsd:date ;
+    <a href="http://purl.org/uco/ns#mileage">uco:mileage</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                  <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;33546&quot;^^xsd:float ;
+                  <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] ;
+    <a href="http://purl.org/uco/ns#repaired">uco:repaired</a> true ;
+    <a href="http://purl.org/uco/ns#carriedOutBy">uco:carriedOutBy</a> <a href="http://purl.org/uco/ns#AuthorizedDealer">uco:AuthorizedDealer</a> ;
+    <a href="http://purl.org/uco/ns#originalPartsOnly">uco:originalPartsOnly</a> true ;
+    <a href="http://purl.org/uco/ns#totalLoss">uco:totalLoss</a> false ;
+    <a href="http://purl.org/uco/ns#structuralDamage">uco:structuralDamage</a> false ;
+    <a href="http://purl.org/uco/ns#airbagDeployed">uco:airbagDeployed</a> false ;
+    <a href="http://purl.org/uco/ns#notAtFaultAccident">uco:notAtFaultAccident</a> true .
+		</pre>
+		<h3 id="e5">Replacement of Core Parts (Engine, ...)</h3>
+		<strong>Scenario:</strong> Often, the replacement of core components of a car is important information for describing a used car.	
+		<h4 id="e5_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="e5_n3">Turtle</h4>
+		<h5 id="e5_n3.1">Engine Replacement</h5>					
+		<pre>
+# Engine Replacement
+# The engine has been replaced at a mileage of 16,000 km on Sept. 15, 2004.
+foo:car_155049 <a href="http://purl.org/uco/ns#eventInformation">uco:eventInformation</a> foo:NewEngine .
+
+foo:NewEngine a <a href="http://purl.org/uco/ns#ModificationOrMaintenance">uco:ModificationOrMaintenance</a> ;
+    <a href="http://purl.org/uco/ns#partReplaced">uco:partReplaced</a> &quot;Engine&quot;@en ;
+    <a href="http://schema.org/startDate">schema:startDate</a> &quot;2004-09-15&quot;^^xsd:date ;
+    <a href="http://schema.org/endDate">schema:endDate</a> &quot;2004-09-15&quot;^^xsd:date ;
+    <a href="http://purl.org/uco/ns#mileage">uco:mileage</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                  <a href="http://purl.org/goodrelations/v1#hasValueFloat">gr:hasValueFloat</a> &quot;16000&quot;^^xsd:float ;
+                  <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KMT&quot;^^xsd:string ] .
+		</pre>
+		<h3 id="sparql">SPARQL Queries</h3>
+		<strong>Scenario:</strong> Find a used car offer
+		<ul>
+			<li>offered by a dealer (no private offers, <a href="http://schema.org/AutomotiveBusiness">schema:AutomotiveBusiness</a>)</li>
+			<li>a mileage lesser or equal to 50,000 miles</li>
+			<li>not more than two previous owners</li>
+			<li>assertion that it is a non-smoking car (i.e. not just the absence of information)</li>
+		</ul>
+<p><strong>Note:</strong> It is relatively easy to make the query compatible with different units of measurement for the quantitative properties, but this is not shown in here. You can try the query against the sample data provided at <a href="http://ontologies.makolab.com/uco/examples.rdf">http://ontologies.makolab.com/uco/examples.rdf</a>.</p>
+		<pre>
+PREFIX foaf: &lt;<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>&gt; 
+PREFIX schema: &lt;<a href="http://schema.org/">http://schema.org/</a>&gt; 
+PREFIX xsd: &lt;<a href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>#&gt; 
+PREFIX pto: &lt;<a href="http://www.productontology.org/id/">http://www.productontology.org/id/</a>&gt; 
+PREFIX gr: &lt;<a href="http://purl.org/goodrelations/v1">http://purl.org/goodrelations/v1</a>#&gt; 
+PREFIX rdf: &lt;<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns</a>#&gt; 
+PREFIX rdfs: &lt;<a href="http://www.w3.org/2000/01/rdf-schema">http://www.w3.org/2000/01/rdf-schema</a>#&gt; 
+PREFIX owl: &lt;<a href="http://www.w3.org/2002/07/owl">http://www.w3.org/2002/07/owl</a>#&gt; 
+PREFIX dbpedia: &lt;<a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>&gt; 
+PREFIX vso: &lt;<a href="http://purl.org/vso/ns">http://purl.org/vso/ns</a>#&gt; 
+PREFIX uco: &lt;<a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#&gt; 
+PREFIX foo: &lt;<a href="http://ontologies.makolab.com/uco/examples.rdf">http://ontologies.makolab.com/uco/examples.rdf</a>#&gt; 
+
+SELECT ?dealername ?dealerwebpage ?offer ?deeplink ?price ?currency ?vin ?mileage
+FROM &lt;<a href="http://ontologies.makolab.com/uco/examples.rdf">http://ontologies.makolab.com/uco/examples.rdf</a>&gt;
+WHERE
+{
+?d a <a href="http://schema.org/AutomotiveBusiness">schema:AutomotiveBusiness</a> .
+OPTIONAL {?d <a href="http://purl.org/goodrelations/v1#legalName">gr:legalName</a> ?dealername } 
+OPTIONAL {?d <a href="http://purl.org/goodrelations/v1#name">gr:name</a> ?dealername } 
+OPTIONAL {?d <a href="http://schema.org/name">schema:name</a> ?dealername } 
+OPTIONAL {?d <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> ?dealerwebpage }
+?d <a href="http://purl.org/goodrelations/v1#offers">gr:offers</a> ?offer .
+?offer <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> ?p .
+?p <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> ?price .
+?p <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> ?currency .
+
+{
+ { ?offer <a href="http://purl.org/goodrelations/v1#includes">gr:includes</a> ?car }
+ UNION
+ {
+  ?offer <a href="http://purl.org/goodrelations/v1#includesObject">gr:includesObject</a> ?bundle .
+  ?bundle <a href="http://purl.org/goodrelations/v1#typeOfGood">gr:typeOfGood</a> ?car .
+ }
+}
+
+?car a <a href="http://purl.org/vso/ns#Automobile">vso:Automobile</a> .
+OPTIONAL { ?car <a href="http://purl.org/vso/ns#VIN">vso:VIN</a> ?vin }
+?car <a href="http://purl.org/vso/ns#mileageFromOdometer">vso:mileageFromOdometer</a> ?m .
+?m <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> ?unit .
+?unit bif:contains &quot;KMT&quot; .
+{
+ { ?m <a href="http://purl.org/goodrelations/v1#hasMaxValue">gr:hasMaxValue</a> ?mileage }
+UNION
+ { ?m <a href="http://purl.org/goodrelations/v1#hasValue">gr:hasValue</a> ?mileage }
+}
+OPTIONAL { ?offer <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> ?deeplink }
+OPTIONAL { ?car <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> ?deeplink }
+?car <a href="http://purl.org/uco/ns#numberOfOwners">uco:numberOfOwners</a> ?o .
+?o <a href="http://purl.org/goodrelations/v1#hasValue">gr:hasValue</a> ?owners .
+?car <a href="http://purl.org/uco/ns#smoking">uco:smoking</a> false .
+
+FILTER (?mileage &lt;= 50000) .
+FILTER (?owners &lt;= 2) .
+} 
+LIMIT 10
+		</pre>						
+	</div>
+		<!-- Classes -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="classes">1. Classes</h2>
+			<ul>
+				<li><a href="#Check">uco:Check</a> </li>
+				<li><a href="#DamageOrAccident">uco:DamageOrAccident</a> </li>
+				<li><a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a> </li>
+				<li><a href="#OwnershipInfo">uco:OwnershipInfo</a> </li>
+				<li><a href="#ParkingType">uco:ParkingType</a> </li>
+				<li><a href="#PropertyValue">uco:PropertyValue</a> </li>
+				<li><a href="#Species">uco:Species</a> </li>
+				<li><a href="#UsageType">uco:UsageType</a> </li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Check">uco:Check <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Check">http://purl.org/uco/ns#Check</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Check
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A mandatory or optional technical inspection, e.g. the MOT, a vendor-specific certification of used cars, etc.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#carriedOutBy">uco:carriedOutBy</a> <a href="#mileage">uco:mileage</a> <a href="#validFrom">uco:validFrom</a> <a href="#validThrough">uco:validThrough</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#inspected">uco:inspected</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="DamageOrAccident">uco:DamageOrAccident <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#DamageOrAccident">http://purl.org/uco/ns#DamageOrAccident</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://schema.org/Event">http://schema.org/Event</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Damage or Accident
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A damage or accident is an event in which the vehicle is being damaged.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#airbagDeployment">uco:airbagDeployment</a> <a href="#carriedOutBy">uco:carriedOutBy</a> <a href="#mileage">uco:mileage</a> <a href="#notAtFaultAccident">uco:notAtFaultAccident</a> <a href="#originalPartsOnly">uco:originalPartsOnly</a> <a href="#repaired">uco:repaired</a> <a href="#structuralDamage">uco:structuralDamage</a> <a href="#totalLoss">uco:totalLoss</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#eventInformation">uco:eventInformation</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="ModificationOrMaintenance">uco:ModificationOrMaintenance <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#ModificationOrMaintenance">http://purl.org/uco/ns#ModificationOrMaintenance</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://schema.org/Event">http://schema.org/Event</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Modification or Maintenance
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A modification or maintenance is an event in which a part of the vehicle is being replaced or removed, or a new part is being added.<br/>
+Typical examples are the replacement of the engine or the installation of a trailor-hitch.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#carriedOutBy">uco:carriedOutBy</a> <a href="#mileage">uco:mileage</a> <a href="#originalPartsOnly">uco:originalPartsOnly</a> <a href="#partAdded">uco:partAdded</a> <a href="#partRemoved">uco:partRemoved</a> <a href="#partReplaced">uco:partReplaced</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#eventInformation">uco:eventInformation</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="OwnershipInfo">uco:OwnershipInfo <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#OwnershipInfo">http://purl.org/uco/ns#OwnershipInfo</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Ownership Info
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An ownership information node is a structured value representing information about the period of ownership of a vehicle by a person or organisation.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#contains">uco:contains</a> <a href="#currentOwner">uco:currentOwner</a> <a href="#driver">uco:driver</a> <a href="#from">uco:from</a> <a href="#licensePlate">uco:licensePlate</a> <a href="#mainLocation">uco:mainLocation</a> <a href="#mileageEnd">uco:mileageEnd</a> <a href="#mileageInitial">uco:mileageInitial</a> <a href="#numberOfDrivers">uco:numberOfDrivers</a> <a href="#owner">uco:owner</a> <a href="#parking">uco:parking</a> <a href="#pets">uco:pets</a> <a href="#smoking">uco:smoking</a> <a href="#to">uco:to</a> <a href="#usage">uco:usage</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#contains">uco:contains</a> <a href="#hasOwnershipInfo">uco:hasOwnershipInfo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="ParkingType">uco:ParkingType <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#ParkingType">http://purl.org/uco/ns#ParkingType</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QualitativeValue">http://purl.org/goodrelations/v1#QualitativeValue</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Parking Type
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A type of parking for a vehicle, e.g. in a garage, on the street (open-sky), or in a carport. You can use DBpedia URIs for additional types.</p>
+			</div>
+			<p><strong>Predefined Individuals</strong></p>
+			<ul>
+				<li><a href="#Carport">uco:Carport</a></li>
+				<li><a href="#Garage">uco:Garage</a></li>
+				<li><a href="#Street">uco:Street</a></li>
+			</ul>
+			<p class="left_align">
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#parking">uco:parking</a></span>
+				
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="PropertyValue">uco:PropertyValue <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#PropertyValue">http://purl.org/uco/ns#PropertyValue</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Property Value
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A property-value is a structured value for representing a feature of a vehicle in a semi-formal way.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#propertyID">uco:propertyID</a> <a href="#propertyName">uco:propertyName</a> <a href="#propertyValue">uco:propertyValue</a> <a href="#unitCode">uco:unitCode</a> <a href="#unitText">uco:unitText</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#feature">uco:feature</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Species">uco:Species <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Species">http://purl.org/uco/ns#Species</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QualitativeValue">http://purl.org/goodrelations/v1#QualitativeValue</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Species
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A species, typically a pet, for indicating the type of animals that were regularly transported in the vehicle. <br/>
+<br/>
+If possible, use DBPedia URIs, e.g. <a href="http://dbpedia.org/resource/Dog">http://dbpedia.org/resource/Dog</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#pets">uco:pets</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="UsageType">uco:UsageType <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#UsageType">http://purl.org/uco/ns#UsageType</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QualitativeValue">http://purl.org/goodrelations/v1#QualitativeValue</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Usage Type
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A type of usage of a vehicle, e.g. rental, taxi, driving school, commuting. It is best to either use one of the predefined individuals or DBpedia URIs whenever possible.</p>
+			</div>
+			<p><strong>Predefined Individuals</strong></p>
+			<ul>
+				<li><a href="#Business">uco:Business</a></li>
+				<li><a href="#CarSharing">uco:CarSharing</a></li>
+				<li><a href="#DrivingSchool">uco:DrivingSchool</a></li>
+				<li><a href="#Private">uco:Private</a></li>
+				<li><a href="#Rental">uco:Rental</a></li>
+				<li><a href="#Taxi">uco:Taxi</a></li>
+			</ul>
+			<p class="left_align">
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#usage">uco:usage</a></span>
+			</p>
+		</div>
+		
+		<!-- Datatype Properties -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="dprops">2. Datatype Properties</h2>
+			<ul>
+				<li><a href="#airbagDeployment">uco:airbagDeployment</a></li>
+				<li><a href="#countryOfOrigin">uco:countryOfOrigin</a></li>
+				<li><a href="#countryOfRegistration">uco:countryOfRegistration</a></li>
+				<li><a href="#from">uco:from</a></li>
+				<li><a href="#indicationOfOdometerRollback">uco:indicationOfOdometerRollback</a></li>
+				<li><a href="#licensePlate">uco:licensePlate</a></li>
+				<li><a href="#notAtFaultAccident">uco:notAtFaultAccident</a></li>
+				<li><a href="#numberOfDrivers">uco:numberOfDrivers</a></li>
+				<li><a href="#numberOfOwners">uco:numberOfOwners</a></li>
+				<li><a href="#originalPartsOnly">uco:originalPartsOnly</a></li>
+				<li><a href="#partAdded">uco:partAdded</a></li>
+				<li><a href="#partRemoved">uco:partRemoved</a></li>
+				<li><a href="#partReplaced">uco:partReplaced</a></li>
+				<li><a href="#propertyID">uco:propertyID</a></li>
+				<li><a href="#propertyName">uco:propertyName</a></li>
+				<li><a href="#propertyValue">uco:propertyValue</a></li>
+				<li><a href="#repaired">uco:repaired</a></li>
+				<li><a href="#smoking">uco:smoking</a></li>
+				<li><a href="#structuralDamage">uco:structuralDamage</a></li>
+				<li><a href="#to">uco:to</a></li>
+				<li><a href="#totalLoss">uco:totalLoss</a></li>
+				<li><a href="#unitCode">uco:unitCode</a></li>
+				<li><a href="#unitText">uco:unitText</a></li>
+				<li><a href="#validFrom">uco:validFrom</a></li>
+				<li><a href="#validThrough">uco:validThrough</a></li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="airbagDeployment">uco:airbagDeployment <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#airbagDeployment">http://purl.org/uco/ns#airbagDeployment</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> airbag deployment (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates whether at least one of the airbags of the vehicle has been deployed in the respective accident (when attached to <a href="http://purl.org/uco/ns#DamageOrAccident">uco:DamageOrAccident</a>) or ever (when directly applied to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>).</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="countryOfOrigin">uco:countryOfOrigin <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#countryOfOrigin">http://purl.org/uco/ns#countryOfOrigin</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> country of origin (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The country or geo-political region in which the vehicle was initially sold officially, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="countryOfRegistration">uco:countryOfRegistration <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#countryOfRegistration">http://purl.org/uco/ns#countryOfRegistration</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> country of registration (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The country or geo-political region in which the vehicle is currently registered, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="from">uco:from <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#from">http://purl.org/uco/ns#from</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> from (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates the beginning of the period of ownership represented by this <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> node.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="indicationOfOdometerRollback">uco:indicationOfOdometerRollback <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#indicationOfOdometerRollback">http://purl.org/uco/ns#indicationOfOdometerRollback</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> indication of odometer rollback (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates whether it is likely or known that the odometer of the vehicle does not properly reflect the total mileage of the vehicle, e.g. because the odometer has been replaced, reset, or tampered with </p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="licensePlate">uco:licensePlate <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#licensePlate">http://purl.org/uco/ns#licensePlate</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> license plate (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The license plate string(s) assigned to the vehicle during the period of ownership</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="notAtFaultAccident">uco:notAtFaultAccident <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#notAtFaultAccident">http://purl.org/uco/ns#notAtFaultAccident</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> total loss (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates whether the accident leading to the damage was a not-at-fault accident from the perspective of the owner.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="numberOfDrivers">uco:numberOfDrivers <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#numberOfDrivers">http://purl.org/uco/ns#numberOfDrivers</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> number of drivers (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The number of people who were/are regularly driving the vehicle in the respective period of time (when attached to <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a>) or in total (when directly applied to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#integer">http://www.w3.org/2001/XMLSchema#integer</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="numberOfOwners">uco:numberOfOwners <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#numberOfOwners">http://purl.org/uco/ns#numberOfOwners</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> number of owners (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The total number of people or organizations who owned the vehicle, including the current owner.<br/>
+<br/>
+Note that this value can be higher (but not lower) than the number of <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> nodes, since those records may be incomplete.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#integer">http://www.w3.org/2001/XMLSchema#integer</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="originalPartsOnly">uco:originalPartsOnly <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#originalPartsOnly">http://purl.org/uco/ns#originalPartsOnly</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> original parts only (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This indicates whether the parts used for repairing a damage, for a maintenance task, or a modification were all original.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="partAdded">uco:partAdded <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#partAdded">http://purl.org/uco/ns#partAdded</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> part added (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A textual description of the part or parts added in the modification (e.g. tuning) or maintenance task</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="partRemoved">uco:partRemoved <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#partRemoved">http://purl.org/uco/ns#partRemoved</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> part removed (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A textual description of the part or parts removed in the modification (e.g. tuning) or maintenance task</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="partReplaced">uco:partReplaced <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#partReplaced">http://purl.org/uco/ns#partReplaced</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> part replaced (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A textual description of the part or parts replaced in the modification (e.g. tuning) or maintenance (e.g. new engine) task</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="propertyID">uco:propertyID <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#propertyID">http://purl.org/uco/ns#propertyID</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> property ID (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A global identifier, e.g. a URI, a prefixed string, or any other identifier that can be used to refer to a standardized property type</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#PropertyValue">uco:PropertyValue</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="propertyName">uco:propertyName <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#propertyName">http://purl.org/uco/ns#propertyName</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> property name (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The name of the property</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#PropertyValue">uco:PropertyValue</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="propertyValue">uco:propertyValue <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#propertyValue">http://purl.org/uco/ns#propertyValue</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> property value (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The value of of the property</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#PropertyValue">uco:PropertyValue</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="repaired">uco:repaired <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#repaired">http://purl.org/uco/ns#repaired</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> repaired (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This indicates whether damages resulting from a certain <a href="http://purl.org/uco/ns#DamageOrAccident">uco:DamageOrAccident</a> (when attached to this type) or all damages (when directly attached to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>) have been properly repaired. Do not use this propery on a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a> if it never had a damage.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="smoking">uco:smoking <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#smoking">http://purl.org/uco/ns#smoking</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> smoking (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates whether it has been smoked inside the car in the respective period of time (when attached to <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a>) or ever (when directly applied to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>).</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="structuralDamage">uco:structuralDamage <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#structuralDamage">http://purl.org/uco/ns#structuralDamage</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> structural damage (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates whether the vehicle has suffered from structural damage in the respective accident (when attached to <a href="http://purl.org/uco/ns#DamageOrAccident">uco:DamageOrAccident</a>) or ever (when directly applied to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>).</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="to">uco:to <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#to">http://purl.org/uco/ns#to</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> to (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates the end of the period of ownership represented by this <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> node.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="totalLoss">uco:totalLoss <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#totalLoss">http://purl.org/uco/ns#totalLoss</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> total loss (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates whether the vehicle is considered a total loss as the result of a damage in the respective accident (when attached to <a href="http://purl.org/uco/ns#DamageOrAccident">uco:DamageOrAccident</a>) or in general (when directly applied to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>).</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="unitCode">uco:unitCode <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#unitCode">http://purl.org/uco/ns#unitCode</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> unit code (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A UN/CEFACT Common Code for indicating the unit of measurement of the value, if available</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#PropertyValue">uco:PropertyValue</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="unitText">uco:unitText <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#unitText">http://purl.org/uco/ns#unitText</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> unit text (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for <a href="http://purl.org/uco/ns#unitCode">uco:unitCode</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#PropertyValue">uco:PropertyValue</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="validFrom">uco:validFrom <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#validFrom">http://purl.org/uco/ns#validFrom</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> valid from (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates the beginning of the validity of the inspection represented by the <a href="http://purl.org/uco/ns#Check">uco:Check</a> node. This is typically the day of the inspection.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Check">uco:Check</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="validThrough">uco:validThrough <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#validThrough">http://purl.org/uco/ns#validThrough</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> valid to (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property indicates the end of the validity of the inspection represented by the <a href="http://purl.org/uco/ns#Check">uco:Check</a> node. This is typically the day of the inspection plus one (UK MOT) or two years (e.g. German TÜV).</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Check">uco:Check</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></span>
+			</p>
+		</div>
+		<!-- Object Properties -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="oprops">3. Object Properties</h2>
+			<ul>
+				<li><a href="#carriedOutBy">uco:carriedOutBy</a></li>
+				<li><a href="#contains">uco:contains</a></li>
+				<li><a href="#currentLocation">uco:currentLocation</a></li>
+				<li><a href="#currentOwner">uco:currentOwner</a></li>
+				<li><a href="#driver">uco:driver</a></li>
+				<li><a href="#eventInformation">uco:eventInformation</a></li>
+				<li><a href="#feature">uco:feature</a></li>
+				<li><a href="#hasOwnershipInfo">uco:hasOwnershipInfo</a></li>
+				<li><a href="#inspected">uco:inspected</a></li>
+				<li><a href="#listPrice">uco:listPrice</a></li>
+				<li><a href="#mainLocation">uco:mainLocation</a></li>
+				<li><a href="#mileage">uco:mileage</a></li>
+				<li><a href="#mileageEnd">uco:mileageEnd</a></li>
+				<li><a href="#mileageInitial">uco:mileageInitial</a></li>
+				<li><a href="#owner">uco:owner</a></li>
+				<li><a href="#parking">uco:parking</a></li>
+				<li><a href="#pets">uco:pets</a></li>
+				<li><a href="#usage">uco:usage</a></li>
+				<li><a href="#valuation">uco:valuation</a></li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="carriedOutBy">uco:carriedOutBy <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#carriedOutBy">http://purl.org/uco/ns#carriedOutBy</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> carried out by (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The business or type of business that carried out the check, repair, maintenance, or modification</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Check">uco:Check</a> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#BusinessEntity">http://purl.org/goodrelations/v1#BusinessEntity</a> <a href="http://purl.org/goodrelations/v1#BusinessEntityType">http://purl.org/goodrelations/v1#BusinessEntityType</a> <a href="http://schema.org/Organization">http://schema.org/Organization</a> <a href="http://schema.org/Person">http://schema.org/Person</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="contains">uco:contains <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#contains">http://purl.org/uco/ns#contains</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> contains (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A naive part-whole relation that allows providing more granular <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> data for a part of the duration of the ownership</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="currentLocation">uco:currentLocation <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#currentLocation">http://purl.org/uco/ns#currentLocation</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> currentLocation (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use <a href="http://purl.org/goodrelations/v1#availableAtOrFrom">gr:availableAtOrFrom</a> attached to the <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a>, since those are aspects of the offer, not of the vehicle.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://schema.org/PostalAddress">http://schema.org/PostalAddress</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="currentOwner">uco:currentOwner <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#currentOwner">http://purl.org/uco/ns#currentOwner</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="#owner">uco:owner</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> currentOwner (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to the current owner of the vehicle.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://schema.org/Person">http://schema.org/Person</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="driver">uco:driver <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#driver">http://purl.org/uco/ns#driver</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> driver (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to the driver or drivers that were regularly driving the vehicle during the respective period of time (when attached to <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a>) or in total (when attached directly to a <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a>).</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://schema.org/Person">http://schema.org/Person</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="eventInformation">uco:eventInformation <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#eventInformation">http://purl.org/uco/ns#eventInformation</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> eventInformation (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a> <a href="http://schema.org/Event">http://schema.org/Event</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="feature">uco:feature <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#feature">http://purl.org/uco/ns#feature</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> feature (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to vehicle features in a semi-structured property-value form.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#PropertyValue">uco:PropertyValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="hasOwnershipInfo">uco:hasOwnershipInfo <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#hasOwnershipInfo">http://purl.org/uco/ns#hasOwnershipInfo</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> hasOwnershipInfo (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to information about the current and previous owners of the vehicle.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="inspected">uco:inspected <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#inspected">http://purl.org/uco/ns#inspected</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> inspected (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to inspections and certifications that the vehicle has undergone.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#Check">uco:Check</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="listPrice">uco:listPrice <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#listPrice">http://purl.org/uco/ns#listPrice</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> listPrice (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The original list price of the new car at the time of production</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#PriceSpecification">http://purl.org/goodrelations/v1#PriceSpecification</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="mainLocation">uco:mainLocation <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#mainLocation">http://purl.org/uco/ns#mainLocation</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> main location (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The main location(s) of the vehicle during the period of ownership</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://schema.org/PostalAddress">http://schema.org/PostalAddress</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="mileage">uco:mileage <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#mileage">http://purl.org/uco/ns#mileage</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> mileage (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The mileage of the vehicle at the event, e.g. at the accident, maintenance, check, or modification. <br/>
+<br/>
+Typical unit code(s): KMT for kilometers, SMI for statute miles</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Check">uco:Check</a> <a href="#DamageOrAccident">uco:DamageOrAccident</a> <a href="#ModificationOrMaintenance">uco:ModificationOrMaintenance</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="mileageEnd">uco:mileageEnd <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#mileageEnd">http://purl.org/uco/ns#mileageEnd</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> mileage end (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The mileage of the vehicle at the end of the period of ownership. <br/>
+<br/>
+Typical unit code(s): KMT for kilometers, SMI for statute miles</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="mileageInitial">uco:mileageInitial <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#mileageInitial">http://purl.org/uco/ns#mileageInitial</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> mileage initial (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The mileage of the vehicle at the beginning of the period of ownership. <br/>
+<br/>
+Typical unit code(s): KMT for kilometers, SMI for statute miles</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="owner">uco:owner <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#owner">http://purl.org/uco/ns#owner</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> owner (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property points to the owner of the vehicle for the respective period of time, as indicated by the <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a> node.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://schema.org/Person">http://schema.org/Person</a></span>
+			</p>
+			<p><strong>Subproperties</strong></p>
+			<ul>
+				<li>
+					<a href="#currentOwner">uco:currentOwner</a>
+				</li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="parking">uco:parking <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#parking">http://purl.org/uco/ns#parking</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> parking (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a>) or in general (if attached to the <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a> directly)</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#ParkingType">uco:ParkingType</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="pets">uco:pets <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#pets">http://purl.org/uco/ns#pets</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> pets (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The type(s) of animals that have been transported in the vehicle during the period of ownership (if attached to <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a>) or in general (if attached to the <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a> directly). <br/>
+	<br/>
+If possible, use DBPedia URIs, e.g. <a href="http://dbpedia.org/resource/Dog">http://dbpedia.org/resource/Dog</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#Species">uco:Species</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="usage">uco:usage <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#usage">http://purl.org/uco/ns#usage</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> usage (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The type(s) of usage during the period of ownership (if attached to <a href="http://purl.org/uco/ns#OwnershipInfo">uco:OwnershipInfo</a>) or in general (if attached to the <a href="http://purl.org/vso/ns#Vehicle">vso:Vehicle</a> directly)</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#OwnershipInfo">uco:OwnershipInfo</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#UsageType">uco:UsageType</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="valuation">uco:valuation <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#valuation">http://purl.org/uco/ns#valuation</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> valuation (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The market price assessment gained by the respective valuation. Use <a href="http://purl.org/goodrelations/v1#name">gr:name</a> to indicate the name of the valuation service.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/vso/ns#Vehicle">http://purl.org/vso/ns#Vehicle</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#PriceSpecification">http://purl.org/goodrelations/v1#PriceSpecification</a></span>
+			</p>
+		</div>
+		
+		<!-- Instances -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="individuals">4. Individuals</h2>
+			<ul>
+				<li><a href="#AuthorizedDealer">uco:AuthorizedDealer</a></li>
+				<li><a href="#Business">uco:Business</a></li>
+				<li><a href="#Carport">uco:Carport</a></li>
+				<li><a href="#CarSharing">uco:CarSharing</a></li>
+				<li><a href="#DrivingSchool">uco:DrivingSchool</a></li>
+				<li><a href="#Garage">uco:Garage</a></li>
+				<li><a href="#IndependentDealer">uco:IndependentDealer</a></li>
+				<li><a href="#MoneyBack">uco:MoneyBack</a></li>
+				<li><a href="#Private">uco:Private</a></li>
+				<li><a href="#Rental">uco:Rental</a></li>
+				<li><a href="#Street">uco:Street</a></li>
+				<li><a href="#Taxi">uco:Taxi</a></li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="AuthorizedDealer">uco:AuthorizedDealer <span class="rdf_type">(rdf:type <a href="http://purl.org/goodrelations/v1#BusinessEntityType">http://purl.org/goodrelations/v1#BusinessEntityType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#AuthorizedDealer">http://purl.org/uco/ns#AuthorizedDealer</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Authorized Dealer (<a href="http://purl.org/goodrelations/v1#BusinessEntityType">gr:BusinessEntityType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An authorized dealer of the manufacturer of the respective vehicle</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Business">uco:Business <span class="rdf_type">(rdf:type <a href="#UsageType">uco:UsageType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Business">http://purl.org/uco/ns#Business</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Business (<a href="http://purl.org/uco/ns#UsageType">uco:UsageType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The usage of a vehicle for general business purposes, i.e. excluding usages like as a taxi, rental car, or driving instructions.</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Carport">uco:Carport <span class="rdf_type">(rdf:type <a href="#ParkingType">uco:ParkingType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Carport">http://purl.org/uco/ns#Carport</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Carport (<a href="http://purl.org/uco/ns#ParkingType">uco:ParkingType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The parking of a vehicle under a protective roof, e.g. in a carport</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="CarSharing">uco:CarSharing <span class="rdf_type">(rdf:type <a href="#UsageType">uco:UsageType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#CarSharing">http://purl.org/uco/ns#CarSharing</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Car Sharing (<a href="http://purl.org/uco/ns#UsageType">uco:UsageType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The usage of a vehicle for car sharing networks</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="DrivingSchool">uco:DrivingSchool <span class="rdf_type">(rdf:type <a href="#UsageType">uco:UsageType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#DrivingSchool">http://purl.org/uco/ns#DrivingSchool</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Driving School (<a href="http://purl.org/uco/ns#UsageType">uco:UsageType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The usage of a vehicle for commercial driver's education</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Garage">uco:Garage <span class="rdf_type">(rdf:type <a href="#ParkingType">uco:ParkingType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Garage">http://purl.org/uco/ns#Garage</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Garage (<a href="http://purl.org/uco/ns#ParkingType">uco:ParkingType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The parking of a vehicle in a closed garage</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="IndependentDealer">uco:IndependentDealer <span class="rdf_type">(rdf:type <a href="http://purl.org/goodrelations/v1#BusinessEntityType">http://purl.org/goodrelations/v1#BusinessEntityType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#IndependentDealer">http://purl.org/uco/ns#IndependentDealer</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Independent Dealer (<a href="http://purl.org/goodrelations/v1#BusinessEntityType">gr:BusinessEntityType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An independent dealer</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="MoneyBack">uco:MoneyBack <span class="rdf_type">(rdf:type <a href="http://purl.org/goodrelations/v1#WarrantyScope">http://purl.org/goodrelations/v1#WarrantyScope</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#MoneyBack">http://purl.org/uco/ns#MoneyBack</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Money-back Guarantee (<a href="http://purl.org/goodrelations/v1#WarrantyScope">gr:WarrantyScope</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The promise to take back the vehicle without any specific reason for a full refund within a certain amount of time</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Private">uco:Private <span class="rdf_type">(rdf:type <a href="#UsageType">uco:UsageType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Private">http://purl.org/uco/ns#Private</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Private (<a href="http://purl.org/uco/ns#UsageType">uco:UsageType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The usage of a vehicle soleley for private purposes</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Rental">uco:Rental <span class="rdf_type">(rdf:type <a href="#UsageType">uco:UsageType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Rental">http://purl.org/uco/ns#Rental</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Rental (<a href="http://purl.org/uco/ns#UsageType">uco:UsageType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The usage of a vehicle as a rental car</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Street">uco:Street <span class="rdf_type">(rdf:type <a href="#ParkingType">uco:ParkingType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Street">http://purl.org/uco/ns#Street</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Street (<a href="http://purl.org/uco/ns#ParkingType">uco:ParkingType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The parking of a vehicle on a public or private street</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Taxi">uco:Taxi <span class="rdf_type">(rdf:type <a href="#UsageType">uco:UsageType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/uco/ns#Taxi">http://purl.org/uco/ns#Taxi</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Taxi (<a href="http://purl.org/uco/ns#UsageType">uco:UsageType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The usage of a vehicle as a taxi</p>
+			</div>
+		</div>
+<!-- Additional static information -->
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="contact">5. Contact Information</h2>
+			<table border="0" cellspacing="5" cellpadding="5">
+				<tr>
+					<td>
+						<p><strong>Dr. Mirek Sopek</strong></p>
+						<p>Makolab S.A.<br/><br/>
+						Demokratyczna 46<br/>
+						Łódź 93-430<br/>
+						Poland<br/></p>
+						<p>					
+						<strong>Phone:</strong> +48 42 6837461<br/>
+						<strong>eMail:</strong> info@makolab.pl<br/>
+						<strong>Web:</strong> <a href="http://makolab.pl/">http://makolab.pl/</a><br/>
+						</p>
+					</td>
+					<td>
+						<p><strong>Univ.-Prof. Dr. Martin Hepp</strong></p>
+						<p>Hepp Research GmbH<br/><br/>
+						Kuppelnaustrasse 5<br/>
+						D-88212 Ravensburg<br/>
+						Germany<br/>
+						</p>
+						<p>
+						<strong>Phone:</strong> +49 751 2708 5256-0<br/>
+						<strong>eMail:</strong> contact@heppresearch.com<br/>
+						<strong>Web:</strong> <a href="http://www.heppresearch.com/">http://www.heppresearch.com/</a><br/>
+						</p>	
+					</td>
+				</tr>
+			</table>		
+
+</div>
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="license">6. License</h2>
+        <p>
+                The Used Cars Ontology is available under the <strong><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a></strong> license. You are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), as long as you attribute the work and link back to <a href="http://purl.org/uco/ns">http://purl.org/uco/ns</a>#.
+        </p>
+</div>
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="acknowledgements">7. Acknowledgements</h2>
+        <p>
+                This documentation has been generated automatically from the most recent ontology specification in OWL using a Python script written by <a href="http://www.stalsoft.com/">Alex Stolz</a> and <a href="http://www.heppnetz.de/">Martin Hepp</a>. Our script uses the <a href="http://code.google.com/p/rdflib/">RDFlib</a> library for parsing and handling RDF and the <a href="http://jinja.pocoo.org/">Jinja</a> template engine for generating the HTML document.
+        </p>
+</div>
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="references">References</h2>
+			<p>
+			<strong>Hepp, Martin:</strong> <em><a href="http://www.heppnetz.de/files/GoodRelationsEKAW2008-crc-final.pdf">GoodRelations: An Ontology for Describing Products and Services Offers on the Web</a></em>, Proceedings of the 16th International Conference on Knowledge Engineering and Knowledge Management (EKAW2008), Acitrezza, Italy, September 29 - October 3, 2008, Springer LNCS, Vol 5268, pp. 332-347.
+			</p>
+			<p>
+			<strong>Hepp, Martin:</strong> <em>From Ontologies to Web Ontologies: Lessons learned from Conceptual Modeling for the WWW</em>, keynote talk at EKAW 2012, video recording available from <a href="http://vimeo.com/51152934">http://vimeo.com/51152934</a>.
+			</p>			
+		</div>
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="changelog">Change Log</h2>
+			<p>2012-12-31: Version 1.0:A release</p>
+			<ul>
+				<li>Added uco:countryOfRegistration property</li>
+				<li>Bugfixes</li>
+			</ul>
+			<p>2012-10-27: First official release</p>
+			<ul>
+				<li>Added examples and queries</li>
+				<li>Bugfixes</li>
+			</ul>
+			<p>2012-10-17: Initial version</p>
+		</div>
+	</body>
+</html>

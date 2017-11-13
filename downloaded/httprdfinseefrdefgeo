@@ -1,0 +1,1222 @@
+@prefix cc:    <http://creativecommons.org/ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix gn:    <http://www.geonames.org/ontology#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo:   <http://id.insee.fr/geo/> .
+@prefix ign:   <http://data.ign.fr/id/geofla/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix igeo:  <http://rdf.insee.fr/def/geo#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+igeo:valeurAvantSuppression
+        a                 rdf:Property ;
+        rdfs:domain       igeo:Suppression ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "ancienne valeur de la propriété"@fr ;
+        rdfs:range        rdf:resource .
+
+igeo:NUTS2  a             owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité territoriale statistique (nomenclature NUTS) de niveau 2"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueEuropeen , igeo:NUTS .
+
+igeo:IRISdivers  a        owl:Class ;
+        rdfs:comment      "Îlot regroupé pour l'information statistique"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "IRIS divers"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais , igeo:IRIS .
+
+igeo:CollectiviteDOutreMer
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Les collectivités dans le cadre de l'article 74-1 de la constitution : Nouvelle Calédonie, Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre et Miquelon, Wallis et Futuna ; Et les territoires dans le cadre de l’article 72-3 de la constitution : « La loi détermine le régime législatif et l'organisation particulière des Terres australes et antarctiques françaises et de Clipperton. »"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "overseas territorial authority or similar"@en , "collectivité d'outre-mer ou assimilé"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1378> , <https://www.insee.fr/fr/metadonnees/definition/c1378> ;
+        rdfs:subClassOf   igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais .
+
+gn:A.ADM3  a        gn:Code ;
+        rdfs:label  "Division administrative de niveau 3"@fr .
+
+igeo:EspaceUrbain  a      owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "urban space"@en , "espace urbain"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1074> , <https://www.insee.fr/fr/metadonnees/definition/c1074> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+igeo:territtoireReceveuseParcelles
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:CessionParcelle ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire recevant des parcelles"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire .
+
+igeo:subdivisionPartitionDe
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Pas utilisé en 2017.  Cette propriété permet des agrégations, de population par exemple"@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "fait partie d'un ensemble de territoires composant une partition d'un autre"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  igeo:subdivisionDe ;
+        owl:inverseOf       igeo:subdivisionPartition .
+
+igeo:CirconscriptionLegislative
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Voir l'article L125 du code électoral et le tableau 1 en annexe du même code."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "circonscription législative"@fr , "legislative district"@en ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1987> , <https://www.insee.fr/en/metadonnees/definition/c1987> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:CirconscriptionElectorale .
+
+igeo:MetropoleOuAssimilee
+        a                 owl:Class ;
+        rdfs:comment      "La métropole de Lyon est assimilée à une métropole à l'instar du III de l'article 1656 du code général des impôts."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "métropole ou assimilée"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais .
+
+igeo:TerritoireAutonomeOuASouveraineteSpeciale
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "autonomous or special sovereignty territory"@en , "territoire autonome ou à souveraineté spéciale"@fr .
+
+igeo:subdivisionDirecteDe
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Plus utilisé en 2017. Le territoire sujet est une subdivision directe du territoire objet. Par exemple, un arrondissement est une subdivision directe d’un département."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "subdivision directe"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  igeo:subdivisionDe ;
+        owl:inverseOf       igeo:subdivisionDirecte .
+
+igeo:IRISactivite  a      owl:Class ;
+        rdfs:comment      "Îlot regroupé pour l'information statistique"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "IRIS d’activité"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais , igeo:IRIS .
+
+igeo:chefLieuCanton  a      owl:ObjectProperty ;
+        rdfs:domain         igeo:Canton_CantonOuVille ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "chef-lieu de canton"@fr ;
+        rdfs:range          igeo:Commune ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:populationCedee  a   owl:DatatypeProperty ;
+        rdfs:domain       igeo:CessionParcelle ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "population cédée lors de l’échange de parcelles"@fr ;
+        rdfs:range        xsd:long .
+
+igeo:SectionCirconscriptionElectionsEuropeennes
+        a                 owl:Class ;
+        rdfs:comment      "Voir l'article 3-1 de la loi 77-729."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "section pour les élections au parlement européen"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:mouvementTerritoire
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:ClasseMouvementBaseModification ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire concerné par le mouvement"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire .
+
+cc:license  a       rdf:Property ;
+        rdfs:label  "licence"@fr .
+
+cc:License  a            owl:Class ;
+        rdfs:label       "Licence"@fr ;
+        rdfs:subClassOf  foaf:Document .
+
+<http://id.insee.fr/codes/geo/typeTexte/C>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Décision du conseil d'état"@fr .
+
+igeo:codeArrondissement
+        a                   owl:DatatypeProperty ;
+        rdfs:domain         igeo:Arrondissement ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code arrondissement"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+<http://purl.org/NET/c4dm/event.owl#place>
+        a             rdf:Property ;
+        rdfs:comment  "Entité spatiale concernée par un événement"@fr ;
+        rdfs:label    "lieu concerné"@fr .
+
+igeo:Canton_CantonOuVille
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton et canton ou ville de 1800 à 2015"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:Canton_CantonOuVille_Canton2015_CantonOuVille2015 .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>
+        a           owl:Class ;
+        rdfs:label  "Entité spatiale"@fr , "Spatial thing"@en .
+
+igeo:subdivisionDirecte
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Plus utilisé en 2017. Inverse de la subdivision directe. Le territoire sujet contient directement le territoire objet ; par exemple le département contient directement l’arrondissement."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "contient directement"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  igeo:subdivision ;
+        owl:inverseOf       igeo:subdivisionDirecteDe .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc7>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'las'. Il a pour charnière 'de las'. "@fr ;
+        rdfs:label    " las - de las"@fr .
+
+igeo:GrandQuartier  a     owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "large district"@en , "grand quartier"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1008> , <https://www.insee.fr/fr/metadonnees/definition/c1008> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+igeo:subdivisionIndirecte
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Plus utilisé en 2017. Inverse de la subdivision indirecte. Le territoire sujet contient indirectement le territoire objet. Par exemple, le département contient indirectement la commune."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "contient indirectement"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  igeo:subdivision ;
+        owl:inverseOf       igeo:subdivisionIndirecteDe .
+
+igeo:LAU2  a              owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité administrative locale de niveau 2"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueEuropeen , igeo:LAU .
+
+igeo:codeRegion  a          owl:DatatypeProperty ;
+        rdfs:domain         igeo:Region ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code région"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+igeo:prefecture  a          owl:ObjectProperty ;
+        rdfs:comment        "La préfecture est le chef-lieu du département."@fr ;
+        rdfs:domain         igeo:Departement ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "préfecture"@fr ;
+        rdfs:range          igeo:Commune ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:CirconscriptionElectorale
+        a                 owl:Class ;
+        rdfs:comment      "Subdivision du territoire français sur laquelle se fonde une ou plusieurs institutions politiques."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire utilisée à des fins électorales"@fr , "circonscription électorale"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt>
+        a           rdf:Property ;
+        rdfs:label  "altitude"@fr .
+
+igeo:ZoneDEmploi  a       owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "employment zone"@en , "zone d’emploi"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1361> , <https://www.insee.fr/fr/metadonnees/definition/c1361> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+skos:ConceptScheme  a  owl:Class ;
+        rdfs:label  "Structure de concepts"@fr .
+
+igeo:subdivisionDe  a       owl:ObjectProperty ;
+        rdfs:comment        "unofficial label translation"@en , "Propriété générique de subdivision."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "subdivision de"@fr , "subdivision of"@en ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  dcterms:isPartOf ;
+        owl:inverseOf       igeo:subdivision .
+
+igeo:CommuneDeleguee  a   owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Les communes déléguées existent dans le cadre des communes nouvelles, dans le cadre créé par l'article 21 de la loi n° 2010-1563 du 16 décembre 2010 de réforme des collectivités territoriales."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "delegated municipality"@en , "commune déléguée"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:CommuneOuAssimilee .
+
+igeo:codeCanton  a          owl:DatatypeProperty ;
+        rdfs:domain         igeo:Canton_CantonOuVille_Canton2015_CantonOuVille2015 ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code canton"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+igeo:typeNomCharniereClair
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "article précédant le nom du territoire sans article"@fr ;
+        rdfs:range        igeo:TypeTNCC .
+
+igeo:subdivisionPartition
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Pas utilisé en 2017."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "inverse de subdivisionPartitionDe"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  igeo:subdivision ;
+        owl:inverseOf       igeo:subdivisionPartitionDe .
+
+igeo:CommunauteUrbaine
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "urban community"@en , "communauté urbaine"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1278> , <https://www.insee.fr/fr/metadonnees/definition/c1278> ;
+        rdfs:subClassOf   igeo:CollectiviteTerritoriale , igeo:CirconscriptionElectorale , igeo:TerritoireFrancais .
+
+igeo:Ilot  a              owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "statistical block"@en , "îlot"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1656> , <https://www.insee.fr/fr/metadonnees/definition/c1656> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc2>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'le'. Il a pour charnière 'du'. "@fr ;
+        rdfs:label    " le  - du    "@fr .
+
+igeo:CommuneFusionnee
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Ces communes n’ont plus d’existences légales."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "absorbed municipality"@en , "commune fusionnée"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:CommuneSupprimee .
+
+igeo:CantonOuVille2015
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Dit aussi 'pseudo-canton', c'est un regroupement d'une ou plusieurs communes entières"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton ou ville à partir de 2015"@fr , "pseudo-canton since 2015"@en ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1725> , <https://www.insee.fr/en/metadonnees/definition/c1725> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais , igeo:Canton2015_CantonOuVille2015 .
+
+igeo:NUTS0  a             owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité territoriale statistique (nomenclature NUTS) de niveau 0"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueEuropeen , igeo:NUTS .
+
+igeo:PaysEtTerritoiresDOutreMer
+        a                 owl:Class ;
+        rdfs:comment      "Au sens de l'article 198 du traité sur l'Union européenne et du traité sur le fonctionnement de l'Union européenne. Il s'agit des collectivités d'outre-mer ou assimilé, sauf Saint-Martin et Saint-Barthélemy, et des TAAF."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "pays ou territoire d’outre-mer"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:CirconscriptionAdministrative , igeo:TerritoireAutonomeOuASouveraineteSpeciale .
+
+igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "collectivité territoriale spécifique à une collectivité d'outre-mer ou assimilée"@fr .
+
+igeo:Canton2015  a        owl:Class ;
+        rdfs:comment      "Canton français à partir de 2015, circonscription d'élection des conseillers généraux"@fr , "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton depuis 2015"@fr , "canton since 2015"@en ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1566> , <https://www.insee.fr/fr/metadonnees/definition/c1566> ;
+        rdfs:subClassOf   igeo:Canton2015_CantonOuVille2015 , igeo:TerritoireFrancais , igeo:CirconscriptionElectorale .
+
+gn:A.ADM1  a        gn:Code ;
+        rdfs:label  "Division administrative de niveau 1"@fr .
+
+igeo:Pays  a              owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "La mention ou l'absence de mention n'ont aucun caractère officiel d'aucune sorte."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "sovereign state and autonomous or special sovereignty territory"@en , "état souverain et territoire autonome ou à souveraineté spéciale"@fr .
+
+igeo:valeurApresChangement
+        a                 rdf:Property ;
+        rdfs:domain       igeo:Changement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "nouvelle valeur de la propriété"@fr ;
+        rdfs:range        rdf:resource .
+
+igeo:codePaysCourt  a     owl:DatatypeProperty ;
+        rdfs:domain       igeo:Pays ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "code pays à 3 chiffres donné par l’INSEE"@fr ;
+        rdfs:range        xsd:token .
+
+igeo:URIApres  a          owl:ObjectProperty ;
+        rdfs:domain       igeo:TransfertURI ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "nouvel URI du territoire"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire .
+
+igeo:CessionParcelle  a   owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de cession de parcelles"@fr ;
+        rdfs:subClassOf   igeo:ClasseMouvementBase .
+
+igeo:codeISO  a                 owl:DatatypeProperty ;
+        rdfs:comment            "Code conforme à la norme ISO 3166-1-alpha-2. Propriété très peu utilisée."@fr ;
+        rdfs:domain             igeo:Pays ;
+        rdfs:isDefinedBy        <http://rdf.insee.fr/def/geo> ;
+        rdfs:label              "code ISO"@fr ;
+        rdfs:range              xsd:token ;
+        owl:equivalentProperty  gn:countryCode .
+
+igeo:referenceMouvement
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "texte de référence du mouvement"@fr ;
+        rdfs:range        igeo:ClasseReferenceMouvement .
+
+dcterms:Location  a  owl:Class ;
+        rdfs:label  "Lieu"@fr .
+
+<http://id.insee.fr/codes/geo/typeTexte/A>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Arrêté"@fr .
+
+igeo:mouvementPropriete
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:ClasseMouvementBaseModification ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "propriété du territoire concerné par le mouvement"@fr ;
+        rdfs:range        rdf:Property .
+
+foaf:Person  a      owl:Class ;
+        rdfs:label  "Personne"@fr .
+
+<http://purl.org/NET/c4dm/event.owl#Event>
+        a             owl:Class ;
+        rdfs:comment  "An arbitrary classification of a space/time region, by a cognitive agent. An event may have actively participating agents, passive factors, products, and a location in space/time."@en ;
+        rdfs:label    "Event"@en , "Événement"@fr .
+
+igeo:ProvinceNouvelleCaledonie
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "New Caledonia province"@en , "province de Nouvelle-Calédonie"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais , igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile .
+
+igeo:Creation  a          owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de création de propriété pour un territoire"@fr ;
+        rdfs:subClassOf   igeo:ClasseMouvementBaseModification .
+
+igeo:FractionCirconscriptionLegislative
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Indique la fraction de commune incluse dans une circonscription législative. Elle est une subdivision de la commune et l’ensemble des fractions d’une commune recouvre toute la commune."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "legislative district fraction"@en , "fraction de circonscription législative"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:vivant  a            owl:DatatypeProperty ;
+        rdfs:comment      "Indicatrice indiquant l’actualité du territoire. La valeur 'true' indique que le territoire existe actuellement. La valeur 'false' indique un territoire mort suite à un événement de modification."@fr ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "code actualité du territoire"@fr ;
+        rdfs:range        xsd:boolean .
+
+igeo:ReferenceMouvement
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "référence à l’origine du mouvement"@fr .
+
+igeo:ArrondissementMunicipal
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Cette classe n'est utilisée que pour les arrondissements de Paris, Lyon et Marseille."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "municipal district"@en , "arrondissement municipal"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1282> , <https://www.insee.fr/fr/metadonnees/definition/c1282> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+<http://id.insee.fr/codes/geo/typeTexte/I>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Modification due à une erreur de l'INSEE"@fr .
+
+igeo:Mouvement  a         owl:Class ;
+        rdfs:comment      "Ensemble de modifications de valeurs de propriétés dans Réfigéo : fusion de communes, changement de nom d’un département, etc. ."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement"@fr .
+
+igeo:codeCommuneDeleguee
+        a                   owl:DatatypeProperty ;
+        rdfs:comment        "Une commune nouvelle prend le code commune de la commune pôle ; si la commune pôle est déléguée, elle garde son code mais dans l’espace des codes de communes déléguées."@fr ;
+        rdfs:domain         igeo:CommuneOuAssimilee ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code commune déléguée et pôle"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+igeo:AutresTerritoiresAssocies
+        a                 owl:Class ;
+        rdfs:comment      "Territoire n'étant ni en métropole, ni une région ultra-périphérique, ni un pays et territoire d'outre-mer, au sens des traités européens. Il s'agit de Clipperton."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "autre territoire associé à la France (Clipperton)"@fr ;
+        rdfs:subClassOf   igeo:CollectiviteTerritoriale , igeo:CirconscriptionAdministrative .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc5>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'l’'. Il a pour charnière 'de l’'. "@fr ;
+        rdfs:label    " l’  - de l’ "@fr .
+
+skos:Concept  a     owl:Class ;
+        rdfs:label  "Concept"@fr .
+
+igeo:CommunauteAgglomeration
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "communauté d’agglomération"@fr , "conurbation community"@en ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c2053> , <https://www.insee.fr/fr/metadonnees/definition/c2053> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale .
+
+igeo:DistrictTAAF  a      owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "district des terres australes et antarctiques françaises."@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionAdministrative , igeo:TerritoireFrancais , igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile .
+
+igeo:Canton_CantonOuVille_Canton2015_CantonOuVille2015
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton et canton ou ville de 1800 à 2015 et canton et canton ou ville à partir de 2015"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:RoyaumeCoutumier
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "Wallis and Futuna kingdom"@en , "royaume coutumier de Wallis et Futuna"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais , igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile .
+
+igeo:CommuneAssociee  a   owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Une commune associée est créée dans le cadre d'une fusion association.\nCe type de fusion a été initié par la loi n° 71-588 du 16 juillet 1971 sur les fusions et regroupements de communes (dite loi Marcellin)."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "associated municipality"@en , "commune associée"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:TerritoireFrancais , igeo:CommuneOuAssimilee .
+
+igeo:SubdivisionPolynesieFrancaise
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "French Polynesia subdivision"@en , "subdivision de Polynésie-française"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais , igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile .
+
+gn:A.ADM4  a        gn:Code ;
+        rdfs:label  "Division administrative de niveau 4"@fr .
+
+igeo:FractionCanton2015
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Indique la fraction de commune incluse dans un canton. Elle est une subdivision de la commune et l’ensemble des fractions d’une commune recouvre toute la commune."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton fraction since 2015"@en , "fraction cantonale à partir de 2015"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:codeINSEE  a         owl:DatatypeProperty ;
+        rdfs:comment      "Propriété générique à utiliser pour les types de territoire pour lesquels un type de code plus spécifique n'est pas défini."@fr ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "code INSEE"@fr ;
+        rdfs:range        xsd:token .
+
+igeo:IRIS  a              owl:Class ;
+        rdfs:comment      "Îlot regroupé pour l'information statistique"@fr , "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "IRIS"@en , "IRIS"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1523> , <https://www.insee.fr/fr/metadonnees/definition/c1523> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:TerritoireStatistiqueFrançais .
+
+dcterms:isPartOf  a  rdf:Property ;
+        rdfs:label  "fait partie de"@fr .
+
+<http://id.insee.fr/codes/geo/typeTexte/D>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Décret"@fr .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc0>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom n’a pas d’article. Il commence par une consonne sauf H muet. Il a pour charnière 'de'. "@fr ;
+        rdfs:label    "     - de    "@fr .
+
+igeo:UniteUrbaine  a      owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "urban unit"@en , "unité urbaine"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1501> , <https://www.insee.fr/fr/metadonnees/definition/c1501> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+igeo:dateEffet  a         owl:DatatypeProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "date d’effet du mouvement"@fr ;
+        rdfs:range        xsd:date .
+
+igeo:Commune  a           owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "municipality"@en , "commune"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1468> , <https://www.insee.fr/en/metadonnees/definition/c1468> ;
+        rdfs:subClassOf   igeo:CollectiviteTerritoriale , igeo:CommuneOuAssimilee , igeo:CirconscriptionElectorale , igeo:TerritoireFrancais .
+
+igeo:URIAvant  a          owl:ObjectProperty ;
+        rdfs:domain       igeo:TransfertURI ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "ancien URI du territoire"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire .
+
+igeo:dateIntroduction
+        a                 owl:DatatypeProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "date d’introduction du mouvement dans Refigéo"@fr ;
+        rdfs:range        xsd:date .
+
+igeo:Etat  a              owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "sovereign state"@en , "état souverain"@fr .
+
+foaf:Document  a    owl:Class ;
+        rdfs:label  "Document"@fr .
+
+igeo:ClasseMouvementBase
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de base"@fr .
+
+igeo:estLieChangement
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire lié au mouvement"@fr ;
+        rdfs:range        igeo:Mouvement .
+
+<http://id.insee.fr/codes/geo/typeTexte/L>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Loi"@fr .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc8>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'los'. Il a pour charnière 'de los'. "@fr ;
+        rdfs:label    " los - de los"@fr .
+
+igeo:codeMouvement  a     owl:DatatypeProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "code du mouvement"@fr ;
+        rdfs:range        xsd:token .
+
+igeo:dateJO  a            owl:DatatypeProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "date de parution du mouvement au journal officiel"@fr ;
+        rdfs:range        xsd:date .
+
+igeo:chefLieuCollectiviteDepartementaleOuCollectiviteTerritorialeEquivalente
+        a                   owl:ObjectProperty ;
+        rdfs:domain         igeo:CollectiviteDepartementaleOuCollectiviteTerritorialeEquivalente ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "Chef-lieu d’une collectivité départementale ou d’une collectivité territoriale équivalente"@fr ;
+        rdfs:range          igeo:Commune ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:mouvementBase  a     owl:ObjectProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de base qui compose le mouvement"@fr ;
+        rdfs:range        igeo:ClasseMouvementBase ;
+        owl:inverseOf     igeo:referenceMouvementBase .
+
+igeo:TransfertURI  a      owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de transfert d’URI"@fr ;
+        rdfs:subClassOf   igeo:ClasseMouvementBase .
+
+igeo:subdivision  a         owl:ObjectProperty ;
+        rdfs:comment        "unofficial label translation"@en , "Propriété générique pour indiquer que le territoire sujet contient le territoire objet."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "includes"@en , "contient"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  dcterms:hasPart ;
+        owl:inverseOf       igeo:subdivisionDe .
+
+igeo:AireUrbaine  a       owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "urban area"@en , "aire urbaine"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c2070> , <https://www.insee.fr/fr/metadonnees/definition/c2070> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat>
+        a           rdf:Property ;
+        rdfs:label  "latitude"@fr .
+
+igeo:nom  a                 owl:DatatypeProperty ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "nom du territoire"@fr ;
+        rdfs:range          rdfs:Literal ;
+        rdfs:subPropertyOf  rdfs:label .
+
+igeo:CirconscriptionWallisFutuna
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "Wallis and Futuna district"@en , "circonscription de Wallis et Futuna"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais , igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile .
+
+igeo:chefLieu  a          owl:ObjectProperty ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "chef-lieu"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire .
+
+igeo:codeIRIS  a            owl:DatatypeProperty ;
+        rdfs:domain         igeo:IRIS ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code IRIS"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+igeo:LAU  a               owl:Class ;
+        rdfs:comment      "Voir par exemple http://ec.europa.eu/eurostat/web/nuts/local-administrative-units"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité administrative locale"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais .
+
+igeo:CommunauteCommunes
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "communauté de communes"@fr , "community of municipalities"@en ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1998> , <https://www.insee.fr/en/metadonnees/definition/c1998> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:CollectiviteTerritoriale , igeo:CirconscriptionElectorale .
+
+igeo:Canton2015_CantonOuVille2015
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton et canton ou ville à partir de 2015"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:Canton_CantonOuVille_Canton2015_CantonOuVille2015 .
+
+igeo:CollectiviteDepartementaleOuCollectiviteTerritorialeEquivalente
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Il s’agit des départements au sens courant, de la métropole de Lyon et du département du Rhône."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "departement"@en , "collectivité départementale ou collectivité territoriale équivalente"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1762> , <https://www.insee.fr/fr/metadonnees/definition/c1762> ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:TerritoireFrancais , igeo:CollectiviteTerritoriale .
+
+gn:Code  a               owl:Class ;
+        rdfs:label       "Code Geonames"@fr ;
+        rdfs:subClassOf  skos:Concept .
+
+igeo:sousPrefecture  a      owl:ObjectProperty ;
+        rdfs:comment        "La sous-préfecture est le chef-lieu de l’arrondissement."@fr ;
+        rdfs:domain         igeo:Arrondissement ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "sous-préfecture"@fr ;
+        rdfs:range          igeo:Commune ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:ZoneUrbaineSensible
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Voir http://sig.ville.gouv.fr/Atlas/ (mars 2017)"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "sensitive urban zone"@en , "zone urbaine sensible"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1679> , <https://www.insee.fr/fr/metadonnees/definition/c1679> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:CollectiviteTerritoriale
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Cette classe recouvre les collectivités territoriales, les EPCI et les conseils d’arrondissements de Paris, Lyon et Marseille. Ces territoires sont soumis au code général des collectivités territoriales."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territorial authority"@en , "collectivité territoriale, et assimilées"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1353> , <https://www.insee.fr/fr/metadonnees/definition/c1353> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc3>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'la'. Il a pour charnière 'de la'. "@fr ;
+        rdfs:label    " la  - de la "@fr .
+
+igeo:IRIShabitat  a       owl:Class ;
+        rdfs:comment      "Îlot regroupé pour l'information statistique"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "IRIS d’habitat"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais , igeo:IRIS .
+
+igeo:TerritoireFrancais
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire ou entité territoriale de toute nature situé sur le territoire de la république française"@fr .
+
+igeo:communePole  a         owl:ObjectProperty ;
+        rdfs:comment        "Commune pôle d'une commune issue d'une fusion-association ou d'une commune nouvelle."@fr ;
+        rdfs:domain         igeo:Commune ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "Commune-pôle"@fr ;
+        rdfs:range          igeo:CommuneOuAssimilee ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:NUTS1  a             owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité territoriale statistique (nomenclature NUTS) de niveau 1"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueEuropeen , igeo:NUTS .
+
+igeo:valeurApresCreation
+        a                 rdf:Property ;
+        rdfs:domain       igeo:Creation ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "nouvelle valeur de la propriété"@fr ;
+        rdfs:range        rdf:resource .
+
+gn:A.ADM2  a        gn:Code ;
+        rdfs:label  "Division administrative de niveau 2"@fr .
+
+<http://id.insee.fr/codes/geo/typeTexte/O>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Ordonnance"@fr .
+
+igeo:NUTS  a              owl:Class ;
+        rdfs:comment      "Voir par exemple http://ec.europa.eu/eurostat/web/nuts/."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité territoriale statistique (nomenclature NUTS)"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais .
+
+dcterms:creator  a  rdf:Property ;
+        rdfs:label  "créateur"@fr .
+
+igeo:territoireCommunAvec
+        a                 owl:ObjectProperty ;
+        rdfs:comment      "unofficial label translation"@en , "Deux territoires partagent un territoire commun, mais aucun des deux n’est inclus dans l’autre."@fr ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "share a common area with"@en , "à un territoire en commun avec"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire ;
+        owl:inverseOf     igeo:territoireCommunAvec .
+
+igeo:ZonePays  a          owl:Class ;
+        rdfs:comment      "Voir la loi n° 95-115 du 4 février 1995."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "pays créé dans le cadre de la loi n° 95-115 du 4 février 1995"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:CirconscriptionAdministrativeRegionale
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Les circonscriptions administratives régionales sont prévues par l’article 4 de la loi n° 92-125 du 6 février 1992, et décrites par le décret n° 2016-1689 du 8 décembre 2016 (https://www.legifrance.gouv.fr/eli/decret/2016/12/8/INTA1628965D/jo/texte)."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "region"@en , "circonscriptions administratives régionales"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1502> , <https://www.insee.fr/fr/metadonnees/definition/c1502> ;
+        rdfs:subClassOf   igeo:CirconscriptionAdministrative .
+
+igeo:PaysOuTerritoire
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire ou entité territoriale de toute nature"@fr .
+
+igeo:CantonOuVille  a     owl:Class ;
+        rdfs:comment      "Dit aussi 'pseudo-canton', c'est un regroupement d'une ou plusieurs communes entières"@fr , "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "pseudo-canton from 1800 to 2015"@en , "canton ou ville de 1800 à 2015"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1725> , <https://www.insee.fr/en/metadonnees/definition/c1725> ;
+        rdfs:subClassOf   igeo:Canton_CantonOuVille , igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+igeo:IRIScommuneNonIrisee
+        a                 owl:Class ;
+        rdfs:comment      "Îlot regroupé pour l'information statistique"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "commune non découpée en IRIS"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais , igeo:IRIS .
+
+igeo:TRIRISpseudoDiffusion
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "pseudo-publication TRIRIS"@en , "TRIRIS de pseudo-diffusion"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+igeo:SubdivisionNouvelleCaledonie
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "New Caledonia subdivision"@en , "subdivision de Nouvelle-Calédonie"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais , igeo:CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile .
+
+dcterms:hasPart  a  rdf:Property ;
+        rdfs:label  "a pour partie"@fr .
+
+igeo:Departement  a       owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Il s’agit du territoire d’une préfecture ; pour le département au sens courant voir les « collectivités départementales ou collectivités territoriales équivalentes ». La circonscriptions administrative départementale est prévue par l’article 4 de la loi n° 92-125 du 6 février 1992. L'article L3611-7 du code général des collectivités territoriales indique que la circonscription administrative départementale du Rhône est constitué de l' «ensemble du territoire du département du Rhône et de la métropole de Lyon»."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "departement"@en , "circonscription administrative départementale"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1762> , <https://www.insee.fr/en/metadonnees/definition/c1762> ;
+        rdfs:subClassOf   igeo:CirconscriptionAdministrative , igeo:TerritoireFrancais .
+
+<http://creativecommons.org/licenses/by/3.0/>
+        a           cc:License ;
+        rdfs:label  "CC BY 3.0"@en .
+
+igeo:typeTexte  a         owl:ObjectProperty ;
+        rdfs:domain       igeo:ReferenceMouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "type de texte de référence"@fr ;
+        rdfs:range        igeo:TypeTexteMouvement .
+
+igeo:ZonePostale  a       owl:Class ;
+        rdfs:comment      "Voir les données laposte_hexasmal du site datanova.legroupe.laposte.fr."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "zone postale (code postal)"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:codeCommune  a         owl:DatatypeProperty ;
+        rdfs:domain         igeo:CommuneOuAssimilee ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code commune"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+igeo:prefectureDeRegion
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "La préfecture de région est le chef-lieu de la région"@fr ;
+        rdfs:domain         igeo:Region ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "préfecture de région"@fr ;
+        rdfs:range          igeo:Commune ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:DepartementRegionOutreMerOuAssimile
+        a                 owl:Class ;
+        rdfs:comment      "Collectivités dans le cadre de l'article 73 de la constitution : Guyane, Guadeloupe, Martinique, Mayotte, La Réunion."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "département ou région d'outre-mer ou assimilé"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point>
+        a                owl:Class ;
+        rdfs:subClassOf  <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+igeo:memeTerritoire  a    owl:ObjectProperty ;
+        rdfs:comment      "unofficial label translation"@en , "Les 2 objets partagent un même territoire, mais ne sont pas identiques."@fr ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "same geographical area"@en , "même territoire"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire ;
+        owl:inverseOf     igeo:memeTerritoire .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc6>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'aux'. Il a pour charnière 'des'. "@fr ;
+        rdfs:label    " aux - des   "@fr .
+
+igeo:TerritoireStatistique
+        a                 owl:Class ;
+        rdfs:comment      "Subdivision du territoire français utilisée pour la production de statistiques"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire statistique français ou européen"@fr , "territoire statistique"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:TRIRISdiffusion  a   owl:Class ;
+        rdfs:comment      "unofficial label translation"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "publication TRIRIS"@en , "TRIRIS de diffusion"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+foaf:Organization  a  owl:Class ;
+        rdfs:label  "Organisation"@fr .
+
+igeo:TerritoireStatistiqueFrançais
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire statistique français"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:TerritoireStatistique .
+
+igeo:RegionUltraPeripherique
+        a                 owl:Class ;
+        rdfs:comment      "Au sens de l'article 349 du traité sur l'Union européenne et du traité sur le fonctionnement de l'Union européenne. Il s'agit des départements et régions d'outre-mer et de Saint-Barthélemy et Saint-Martin."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "région ultra-périphérique"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:CirconscriptionAdministrative , igeo:TerritoireAutonomeOuASouveraineteSpeciale .
+
+igeo:LAU1  a              owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "unité administrative locale de niveau 1"@fr ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueEuropeen , igeo:LAU .
+
+igeo:ConseilDArrondissement
+        a                 owl:Class ;
+        rdfs:comment      "Territoire du conseil d’arrondissement, composé d’un ou plusieurs arrondissements municipaux à Paris, Lyon et Marseille. Il est créé par les articles 2511-5 (Paris) 2511-6 (Marseille) et L2511-7 (Lyon) du code général des collectivités territoriales. Il est le plus souvent appelé secteur municipal à Marseille."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "conseil d'arrondissement"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais .
+
+<http://id.insee.fr/codes/geo/typeTexte/R>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Décision de la commission de révision du nom des communes"@fr .
+
+igeo:valeurAvantChangement
+        a                 rdf:Property ;
+        rdfs:domain       igeo:Changement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "ancienne valeur de la propriété"@fr ;
+        rdfs:range        rdf:resource .
+
+igeo:CommuneEnDouble  a   owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Ancien code commune inutilisée suite à transfert de département"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "duplicated municipality"@en , "code commune inactif"@fr .
+
+<http://dbpedia.org/resource/INSEE>
+        a       foaf:Organization .
+
+igeo:CirconscriptionAdministrative
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire utilisée par une administration déconcentrée de l’état"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+gn:A.PCLI  a        gn:Code ;
+        rdfs:label  "Entité politiquement indépendante"@fr .
+
+igeo:codePays  a            owl:DatatypeProperty ;
+        rdfs:domain         igeo:Pays ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code pays à 5 chiffres donné par l’INSEE"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+igeo:bureauCentralisateurCanton
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Les cantons (après 2015) possèdent un bureau centralisateur."@fr ;
+        rdfs:domain         igeo:Canton2015_CantonOuVille2015 ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "commune siège du bureau centralisateur d’une circonscription électorale départementale."@fr ;
+        rdfs:range          igeo:Commune ;
+        rdfs:subPropertyOf  igeo:chefLieu .
+
+igeo:Arrondissement  a    owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "district"@en , "arrondissement"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1912> , <https://www.insee.fr/fr/metadonnees/definition/c1912> ;
+        rdfs:subClassOf   igeo:CirconscriptionAdministrative , igeo:TerritoireFrancais .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#long>
+        a           rdf:Property ;
+        rdfs:label  "longitude"@fr .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc1>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom n’a pas d’article. Il commence par une voyelle ou un H muet. Il a pour charnière 'd’'. "@fr ;
+        rdfs:label    "     - d’    "@fr .
+
+igeo:Region  a            owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Région française de métropole ou d'outre-mer"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "region"@en , "région"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/fr/metadonnees/definition/c1502> , <https://www.insee.fr/en/metadonnees/definition/c1502> ;
+        rdfs:subClassOf   igeo:CollectiviteTerritoriale , igeo:TerritoireFrancais , igeo:CirconscriptionElectorale .
+
+dcterms:publisher  a  rdf:Property ;
+        rdfs:label  "éditeur"@fr .
+
+<http://rdf.insee.fr/def/geo>
+        a                              voaf:Vocabulary , owl:Ontology ;
+        cc:license                     <http://creativecommons.org/licenses/by/3.0/> , <http://www.data.gouv.fr/Licence-Ouverte-Open-Licence> ;
+        dc:rights                      "Copyright © 2013 INSEE" ;
+        dcterms:contributor            [ a          foaf:Person ;
+                                         foaf:name  "Bernard Vatant"
+                                       ] ;
+        dcterms:creator                [ a          foaf:Person ;
+                                         foaf:name  "Antoine Dreyer"
+                                       ] ;
+        dcterms:creator                [ a          foaf:Person ;
+                                         foaf:name  "Franck Cotton"
+                                       ] ;
+        dcterms:description            "Ontologie des objets géographiques de l'INSEE, en particulier des territoires administratifs de la France"@fr ;
+        dcterms:issued                 "2012-08-13"^^xsd:date ;
+        dcterms:modified               "2017-04-19"^^xsd:date ;
+        dcterms:publisher              <http://dbpedia.org/resource/INSEE> ;
+        dcterms:title                  "Ontologie géographique de l'INSEE"@fr ;
+        vann:preferredNamespacePrefix  "igeo" ;
+        vann:preferredNamespaceUri     igeo: ;
+        voaf:classNumber               48 ;
+        voaf:propertyNumber            44 ;
+        owl:incompatibleWith           <http://rdf.insee.fr/geo/ontologie-geo-2006.rdf> ;
+        owl:versionInfo                "Version 3.0.0 - 2017-04-19" .
+
+igeo:territoireCedanteParcelles
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:CessionParcelle ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire cédant des parcelles"@fr ;
+        rdfs:range        igeo:PaysOuTerritoire .
+
+igeo:ZoneFrancheUrbaine
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Voir http://sig.ville.gouv.fr/Atlas/ (mars 2017)"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "free urban zone"@en , "zone franche urbaine (ZFU)"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c2051> , <https://www.insee.fr/fr/metadonnees/definition/c2051> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+<http://id.insee.fr/codes/geo/typeTexte/M>
+        a           igeo:TypeTexteMouvement ;
+        rdfs:label  "Arrêté municipal"@fr .
+
+igeo:ClasseMouvementBaseModification
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de base de création/changement/suppression"@fr ;
+        rdfs:subClassOf   igeo:ClasseMouvementBase .
+
+igeo:CommuneOuAssimilee
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Il peut s’agir de commune au sens propre, ou de commune associée, ou de commune déléguée, ou de commune fusionnée, ou d’un ancien code commune inutilisée suite à transfert de département, ou d'une commune supprimée par partage de son territoire entre plusieurs autres communes. Des classes spécifiques documentent ces cas sauf le dernier"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "municipality or similar"@en , "commune ou entité assimilée"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:Changement  a        owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement de changement de valeur de propriété d’un territoire"@fr ;
+        rdfs:subClassOf   igeo:ClasseMouvementBaseModification .
+
+igeo:FractionCanton  a    owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Indique la fraction de commune incluse dans un canton. Elle est une subdivision de la commune et l’ensemble des fractions d’une commune recouvre toute la commune."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton fraction from 1800 to 2015"@en , "fraction cantonale de 1800 à 2015"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:Canton  a            owl:Class ;
+        rdfs:comment      "Canton français de 1800 à 2015, circonscription d'élection des conseillers généraux"@fr , "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "canton de 1800 à 2015"@fr , "canton from 1800 to 2015"@en ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1566> , <https://www.insee.fr/fr/metadonnees/definition/c1566> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:Canton_CantonOuVille , igeo:CirconscriptionAdministrative , igeo:CirconscriptionElectorale .
+
+igeo:surfaceCedee  a      owl:DatatypeProperty ;
+        rdfs:domain       igeo:CessionParcelle ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "surface cédée lors de l’échange de parcelles"@fr ;
+        rdfs:range        xsd:long .
+
+igeo:nomCharniereClair
+        a                 owl:DatatypeProperty ;
+        rdfs:domain       igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "nom du territoire sans article"@fr ;
+        rdfs:range        rdfs:Literal .
+
+igeo:Suppression  a       owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "suppression de propriété pour un territoire"@fr ;
+        rdfs:subClassOf   igeo:ClasseMouvementBaseModification .
+
+igeo:codeDepartement  a     owl:DatatypeProperty ;
+        rdfs:domain         igeo:Departement ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "code département"@fr ;
+        rdfs:range          xsd:token ;
+        rdfs:subPropertyOf  igeo:codeINSEE .
+
+dcterms:contributor  a  rdf:Property ;
+        rdfs:label  "contributeur"@fr .
+
+igeo:CirconscriptionElectionsEuropeennes
+        a                 owl:Class ;
+        rdfs:comment      "Voir l'article 3-1 de la loi 77-729, l'article 4, et l'annexe 2 de la même loi."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire pour les élections au parlement européen"@fr ;
+        rdfs:subClassOf   igeo:CirconscriptionElectorale , igeo:TerritoireFrancais .
+
+igeo:TerritoireAdministratif
+        a                 owl:Class ;
+        rdfs:comment      "Subdivision administrative du territoire français"@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire administratif"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:referenceMouvementBase
+        a                 owl:ObjectProperty ;
+        rdfs:domain       igeo:ClasseMouvementBase ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "mouvement auquel est rattaché le mouvement de base"@fr ;
+        rdfs:range        igeo:Mouvement ;
+        owl:inverseOf     igeo:mouvementBase .
+
+igeo:TypeTexteMouvement
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "type de texte pour les mouvements"@fr .
+
+igeo:ZoneDEtudesEtDAmenagementDuTerritoire
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "zone for study and development"@en , "zone d’études et d’aménagement du territoire (ZEAT)"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1910> , <https://www.insee.fr/fr/metadonnees/definition/c1910> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .
+
+igeo:CommuneSupprimee
+        a                 owl:Class ;
+        rdfs:comment      "unofficial label translation"@en , "Par exemple, commune supprimée sans être fusionnée, suite à un partage de son territoire avec d'autres communes."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "former municipality"@en , "commune supprimée"@fr ;
+        rdfs:subClassOf   igeo:CommuneOuAssimilee .
+
+igeo:dateTexte  a         owl:DatatypeProperty ;
+        rdfs:domain       igeo:Mouvement ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "date du texte"@fr ;
+        rdfs:range        xsd:date .
+
+igeo:subdivisionIndirecteDe
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "Plus utilisé en 2017. Le territoire sujet est une subdivision du territoire objet, mais elle n’est pas directe car il existe des objets intermédiaires dans cette relation. Par exemple, une commune est une subdivision indirecte d’un département, car elle est la subdivision directe d’un arrondissement qui est lui-même la subdivision directe d’un département."@fr ;
+        rdfs:domain         igeo:PaysOuTerritoire ;
+        rdfs:isDefinedBy    <http://rdf.insee.fr/def/geo> ;
+        rdfs:label          "subdivision indirecte"@fr ;
+        rdfs:range          igeo:PaysOuTerritoire ;
+        rdfs:subPropertyOf  igeo:subdivisionDe ;
+        owl:inverseOf       igeo:subdivisionIndirecte .
+
+igeo:TerritoireStatistiqueEuropeen
+        a                 owl:Class ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "territoire statistique européen"@fr ;
+        rdfs:subClassOf   igeo:TerritoireFrancais , igeo:TerritoireStatistique .
+
+<http://id.insee.fr/codes/geo/typeNomCharniereClair/typeNomCharniereClair/tncc4>
+        a             igeo:TypeTNCC ;
+        rdfs:comment  "Le nom a pour article 'les'. Il a pour charnière 'des'. "@fr ;
+        rdfs:label    " les - des   "@fr .
+
+igeo:EtablissementPublicDeCooperationIntercommunale
+        a                 owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en , "Voir le livre II de la 3epartie du code général des collectivités territoriales."@fr ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "public inter-municipal cooperation establishment"@en , "établissement public de coopération intercommunale à fiscalité propre (EPCI), ou assimilé (métropole de Lyon)"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c1160> , <https://www.insee.fr/fr/metadonnees/definition/c1160> ;
+        rdfs:subClassOf   igeo:TerritoireFrancais .
+
+igeo:BassinVie  a         owl:Class ;
+        rdfs:comment      "label translation from Insee Website (see : rdfs:seeAlso)"@en ;
+        rdfs:isDefinedBy  <http://rdf.insee.fr/def/geo> ;
+        rdfs:label        "living zone"@en , "bassin de vie"@fr ;
+        rdfs:seeAlso      <https://www.insee.fr/en/metadonnees/definition/c2060> , <https://www.insee.fr/fr/metadonnees/definition/c2060> ;
+        rdfs:subClassOf   igeo:TerritoireStatistiqueFrançais , igeo:TerritoireFrancais .

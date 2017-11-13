@@ -1,0 +1,104 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://purl.org/vso/ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+ns1:Vehicle	rdf:type	owl:Class .
+@prefix ns3:	<http://purl.org/vvo/ns#> .
+ns3:Automobile	rdf:type	owl:Class .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+ns3:Automobile	rdfs:subClassOf	ns1:Vehicle .
+@prefix ns5:	<http://www.ontotext.com/proton-ontology/> .
+ns5:AirplaneModel	rdf:type	owl:Class ;
+	rdfs:subClassOf	ns1:Vehicle .
+ns1:BusOrCoach	rdf:type	owl:Class ;
+	rdfs:subClassOf	ns1:Vehicle .
+@prefix ns6:	<http://linkeddata.finki.ukim.mk/lod/ontology/veo#> .
+ns6:Train	rdf:type	owl:Class ;
+	rdfs:subClassOf	ns1:Vehicle .
+ns6:emissionsPerPassenger	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns1:Vehicle ;
+	rdfs:range	rdfs:Literal .
+ns6:hasElectricEnergyConsumtion	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents the electric energy consumption of a vehicle measured in Wh/km." .
+ns6:hasEmissionsReduction	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents emissions reduction measured in g/km that a vehicle has, through the implemented innovative technologies." .
+ns6:hasEngineCapacity	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property shows the capacity of the engine of a vehicle measured in cm3" .
+ns6:hasFuelMode	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents the fuel mode of a vehicle" .
+ns6:hasInnovativeTechnology	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents an innovation technology that a vehicle has implemented." .
+ns6:hasMSRegManufacturerName	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents a manufacturer name as in the registry of Member States of the European Environment Agency." .
+ns6:hasManufacturerHarmonisedName	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents a manufacturer harmonised name." .
+ns6:hasManufacturerPooling	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents a manufacturers pooling." .
+ns6:hasOtherAxleWidth	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents the width of the other steering axle of a vehicle measured in mm." .
+ns6:hasSteeringAxleWidth	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents the width of the steering axle of a vehicle measured in mm." .
+ns6:hasTotalNewRegistrations	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents the nubmer of total new registration of a vehicle." .
+ns6:hasTypeApprovalNumber	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents an internal type approval number." .
+ns6:numberOfPassengers	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns1:Vehicle .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+ns6:numberOfPassengers	rdfs:range	xsd:int .
+ns6:type	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents an internal type of vehicle." .
+ns6:variant	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents an internal variant code." .
+ns6:vehicleTypeApprovedCategory	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents a category of the approved vehicle type." .
+ns6:version	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Automobile ;
+	rdfs:range	rdfs:Literal ;
+	rdfs:comment	"This property represents an internal version code of a vehicle." .
+ns6:	rdf:type	owl:Ontology .
+@prefix dct:	<http://purl.org/dc/terms/> .
+ns6:	dct:modified	"2016-08-28" ;
+	rdfs:comment	"An ontology for describing vehicles and their emissions." ;
+	owl:versionInfo	"1.1" ;
+	dct:description	"An ontology for describing vehicles and their emissions." ;
+	dct:contributor	<https://plus.google.com/+MilosJovanovik> ;
+	dct:creator	<https://plus.google.com/+BojanNajdenov> ;
+	dct:issued	"2014-09-01" ;
+	dct:publisher	<http://finki.ukim.mk/> ;
+	dct:title	"Vehicle Emissions Ontology" .
+@prefix ns9:	<http://purl.org/vocab/vann/> .
+ns6:	ns9:preferredNamespacePrefix	"veo" ;
+	ns9:preferredNamespaceUri	"http://linkeddata.finki.ukim.mk/lod/ontology/veo#" .
+@prefix ns10:	<http://creativecommons.org/ns#> .
+ns6:	ns10:license	<https://creativecommons.org/licenses/by/3.0/> ;
+	dct:rights	"Copyright 2014, Bojan Najdenov" .

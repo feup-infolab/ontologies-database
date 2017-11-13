@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7"  xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8"  xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html  xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>joshhansen.net</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://joshhansen.net/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://joshhansen.net/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="joshhansen.net &raquo; Feed" href="https://joshhansen.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="joshhansen.net &raquo; Comments Feed" href="https://joshhansen.net/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/joshhansen.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.7"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tp_twitter_plugin_css-css'  href='https://joshhansen.net/wp-content/plugins/recent-tweets-widget/tp_twitter_plugin.css?ver=1.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='https://joshhansen.net/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=4.7.7' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='https://joshhansen.net/wp-content/themes/twentytwelve-jhn/style.css?ver=4.7.7' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='https://joshhansen.net/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='parent-style-css'  href='https://joshhansen.net/wp-content/themes/twentytwelve/style.css?ver=4.7.7' type='text/css' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='https://joshhansen.net/wp-content/themes/twentytwelve-jhn/style.css?ver=4.7.7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-resume-css'  href='https://joshhansen.net/wp-content/plugins/wp-resume/css/front-end/resume-style.css?ver=2.5.7' type='text/css' media='all' />
+<script type='text/javascript' src='https://joshhansen.net/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://joshhansen.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://joshhansen.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://joshhansen.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://joshhansen.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.7" />
+<meta property='og:type' content='blog' />
+<meta property='og:title' content='joshhansen.net' />
+<meta property='og:url' content='https://joshhansen.net' />
+<meta property='og:site_name' content='joshhansen.net' />
+<meta property='fb:app_id' content='336100259838089' />
+<meta property='og:locale' content='en_US' />
+<style type="text/css">
+.sfs-subscriber-count, .sfs-count, .sfs-count span, .sfs-stats { -webkit-box-sizing: initial; -moz-box-sizing: initial; box-sizing: initial; }
+.sfs-subscriber-count { width: 88px; overflow: hidden; height: 26px; color: #424242; font: 9px Verdana, Geneva, sans-serif; letter-spacing: 1px; }
+.sfs-count { width: 86px; height: 17px; line-height: 17px; margin: 0 auto; background: #ccc; border: 1px solid #909090; border-top-color: #fff; border-left-color: #fff; }
+.sfs-count span { display: inline-block; height: 11px; line-height: 12px; margin: 2px 1px 2px 2px; padding: 0 2px 0 3px; background: #e4e4e4; border: 1px solid #a2a2a2; border-bottom-color: #fff; border-right-color: #fff; }
+.sfs-stats { font-size: 6px; line-height: 6px; margin: 1px 0 0 1px; word-spacing: 2px; text-align: center; text-transform: uppercase; }
+</style>
+		<style type="text/css">
+						ol.footnotes li {list-style-type:decimal;}
+						ol.footnotes{font-size:0.8em; color:#666666;}		</style>
+				<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+
+<!-- BEGIN GADWP v4.9.5 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-21267823-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- END GADWP Universal Tracking -->
+
+</head>
+
+<body class="home blog custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="https://joshhansen.net/" title="joshhansen.net" rel="home">joshhansen.net</a></h1>
+			<h2 class="site-description"></h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-menu-container"><ul id="menu-top-menu" class="nav-menu"><li id="menu-item-3479" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3479"><a href="https://joshhansen.net/poetry/">Poetry</a></li>
+<li id="menu-item-3480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3480"><a href="https://joshhansen.net/resume/">Resume</a></li>
+<li id="menu-item-3482" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3482"><a href="https://twitter.com/josh_hansen">Twitter</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+		
+										
+	<article id="post-3500" class="post-3500 post type-post status-publish format-standard hentry category-family category-hiking category-life-as-novel category-my-life">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/" rel="bookmark">Chapter 34: A Time To Mourn</a>
+			</h1>
+										<div class="comments-link">
+					<a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/#comments">7 Replies</a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023.jpg"><img width="2592" height="1944" alt="Doing some hiking up Buckley Draw just south of Slate Canyon in Provo" src="https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023.jpg" title="Hiking Buckley Draw" class="alignnone size-full wp-image-3502" srcset="https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023.jpg 2592w, https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023-430x323.jpg 430w, https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023-768x576.jpg 768w, https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023-1024x768.jpg 1024w, https://joshhansen.net/wp-content/uploads/2017/05/20170416_172023-624x468.jpg 624w" sizes="(max-width: 2592px) 100vw, 2592px" /></a></p>
+<p>The last year has been a hard one for me. I&#8217;ve come to the painful realization that my life in many ways is far from what I wanted. I always wanted to be faithful, but I&#8217;m a doubter. Always wanted to be connected, but in many ways I&#8217;m a loner.</p>
+<p>The dream I sought for years was that I would get past my doubts and finally come to know the truth, come to know that God loves me and that he&#8217;s an active part of our lives. But instead of closer to that dream I&#8217;m farther away than ever.</p>
+<p>My dream was to be firmly ensconced in a loving community, accepted for my contributions, loved in spite of my faults. But I no longer feel I belong where I&#8217;d built my life for so long.</p>
+<p>My dream was to be married to a woman I loved with all my heart, to be surrounded by children in a home filled with love. But I&#8217;m a failure at relationships. I don&#8217;t know how to be close to people. Anyone who tries eventual gets pushed away or put at a distance.</p>
+<p>My dream was to build a better relationship with my father. But he&#8217;s been dead almost three years, and my mom even longer.</p>
+<p>A lot of the time I&#8217;m fine. I can make life work with its ambiguities and disappointments. But ultimately the pain of these broken dreams comes to the fore and I find myself casting about for an anchor to hold on to.</p>
+<p>I&#8217;m in one of those times right now. I&#8217;ll pull through it. The crisis will recede sooner or later. But still these tensions will remain. I don&#8217;t know the long-term answer. I don&#8217;t know how to really make life work as a hypersensitive guy who&#8217;s struggled all his life, struggled to find a foundation, struggled to stay connected to the people that love him. I don&#8217;t know how to finally resolve all the memories, all of the past that I carry around inside of me, the tragedies that still ache for me years removed, for which there is no answer but mourning.</p>
+<p>But I suppose that is the answer. Mourning.</p>
+<p>How do you go about it? How can any mourning ever be sufficient? How can any tears ever make right entire <i>lives </i>of tragedy?</p>
+<p>I don&#8217;t know.</p>
+<p>But maybe that&#8217;s not what tears are for. They don&#8217;t make anything right. But they help us to accept that there is injustice in the world. And they help us to let go of the wrong.</p>
+<p>Anyway, this is the latest chapter in my life story. It&#8217;s not the story I set out to tell. But I guess that&#8217;s because I&#8217;m not the omniscient narrator: I&#8217;m really just a character. And I guess it&#8217;s taken 34 chapters for the character development to really come to a head. What will the next chapter bring? I guess we&#8217;ll all just have to keep reading.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://joshhansen.net/category/my-life/family/" rel="category tag">family</a>, <a href="https://joshhansen.net/category/hiking/" rel="category tag">hiking</a>, <a href="https://joshhansen.net/category/my-life/life-as-novel/" rel="category tag">life as novel</a>, <a href="https://joshhansen.net/category/my-life/" rel="category tag">my life</a> on <a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/" title="2:17 pm" rel="bookmark"><time class="entry-date" datetime="2017-05-06T14:17:22+00:00">May 6, 2017</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://joshhansen.net/author/josh/" title="View all posts by Josh Hansen" rel="author">Josh Hansen</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+							
+	<article id="post-3490" class="post-3490 post type-post status-publish format-standard hentry category-economics category-politics">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="https://joshhansen.net/2017/04/taxation/" rel="bookmark">Taxation</a>
+			</h1>
+										<div class="comments-link">
+					<a href="https://joshhansen.net/2017/04/taxation/#comments">2 Replies</a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div id="attachment_3491" style="width: 966px" class="wp-caption aligncenter"><img class="size-full wp-image-3491" src="https://joshhansen.net/wp-content/uploads/2017/04/Pieter_Brueghel_the_Younger_Paying_the_Tax_The_Tax_Collector_oil_on_panel_1620-1640._USC_Fisher_Museum_of_Art.jpg" alt="" width="956" height="621" srcset="https://joshhansen.net/wp-content/uploads/2017/04/Pieter_Brueghel_the_Younger_Paying_the_Tax_The_Tax_Collector_oil_on_panel_1620-1640._USC_Fisher_Museum_of_Art.jpg 956w, https://joshhansen.net/wp-content/uploads/2017/04/Pieter_Brueghel_the_Younger_Paying_the_Tax_The_Tax_Collector_oil_on_panel_1620-1640._USC_Fisher_Museum_of_Art-430x279.jpg 430w, https://joshhansen.net/wp-content/uploads/2017/04/Pieter_Brueghel_the_Younger_Paying_the_Tax_The_Tax_Collector_oil_on_panel_1620-1640._USC_Fisher_Museum_of_Art-768x499.jpg 768w, https://joshhansen.net/wp-content/uploads/2017/04/Pieter_Brueghel_the_Younger_Paying_the_Tax_The_Tax_Collector_oil_on_panel_1620-1640._USC_Fisher_Museum_of_Art-624x405.jpg 624w" sizes="(max-width: 956px) 100vw, 956px" /><p class="wp-caption-text">An American submits his 2017 tax return to the IRS. Err, nevermind, this is from the Netherlands in 1640. (Pieter Brueghel the Younger, The tax collector&#8217;s office)</p></div>
+<p>There&#8217;s a reason why every year I put off filing my taxes until almost the last possible moment. I usually just chalk it up to my ingrained habit of procrastination, and I&#8217;m sure that&#8217;s at least part of the story. But the real reason is that paying taxes in the United States is a nightmare.</p>
+<p>Repeated TurboTax upsell attempts. Adding up all my Internet purchases so I can pay the Utah state &#8220;use&#8221; tax (a tax on _using_ things). Navigating a maze of credits, deductions, and ridiculous economic situations I&#8217;ve never even heard of but that could land me in hot water if I misunderstand. Did I sell that stock? Was that checkbox checked? Is this box greater than this box plus that box? This is freaking 2017. This whole thing should be automated. An algorithm. You know&#8212;computers doing calculations for us, executing well-defined rules for us _so we don&#8217;t have to._ Instead every American once a year spends hours and/or a bunch of money on this dance, searching for ways of clawing money back from the government. This isn&#8217;t taxation by rule of law&#8212;it&#8217;s taxation by incomprehensible bureaucratic procedure.</p>
+<p>There should be one way to calculate your taxes, something well-defined that a computer can do for you. Something so transparent and straightforward that the IRS just says &#8220;You owe this much and this is why&#8221; and you say &#8220;Yup, that looks right&#8221; and click &#8220;Pay&#8221; or &#8220;Refund&#8221; and bam, you&#8217;re done.</p>
+<p>But instead the tax prep industry and Grover Norquist alike lobby congress to keep the whole thing a mess so the status quo will continue: you&#8217;ll pay exorbitant sums to make somebody do your taxes for you, and you&#8217;ll hate hate hate taxes.</p>
+<p>It doesn&#8217;t have to be this way. What if it was simple, understandable, and easy? What if it was clear that you were paying your fair share, <a href="http://www.econtalk.org/archives/2017/04/vanessa_william.html">and that everybody else was, too,</a> and instead of a manual, form-filling, mind-boggling nightmare that mashes 1950s technology with all the worst of 2010s porkbarrel politics, we had a straightforward, sane, modern tax system we could even say we were proud of?</p>
+<p>2017.</p>
+<p>2017 you guys.</p>
+<p>2017.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://joshhansen.net/category/the-world/economics/" rel="category tag">economics</a>, <a href="https://joshhansen.net/category/the-world/politics/" rel="category tag">politics</a> on <a href="https://joshhansen.net/2017/04/taxation/" title="12:51 am" rel="bookmark"><time class="entry-date" datetime="2017-04-11T00:51:01+00:00">April 11, 2017</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://joshhansen.net/author/josh/" title="View all posts by Josh Hansen" rel="author">Josh Hansen</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+							
+	<article id="post-3487" class="post-3487 post type-post status-publish format-standard hentry category-poetry category-politics">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="https://joshhansen.net/2017/01/fired/" rel="bookmark">Fired</a>
+			</h1>
+										<div class="comments-link">
+					<a href="https://joshhansen.net/2017/01/fired/#comments">1 Reply</a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div style="width: 1034px" class="wp-caption aligncenter"><img width="1024" height="683" alt="" src="https://joshhansen.net/wp-content/uploads/2017/01/wp-1485852299276.jpg" title="A little ember" class="size-full wp-image-3486" srcset="https://joshhansen.net/wp-content/uploads/2017/01/wp-1485852299276.jpg 1024w, https://joshhansen.net/wp-content/uploads/2017/01/wp-1485852299276-430x287.jpg 430w, https://joshhansen.net/wp-content/uploads/2017/01/wp-1485852299276-768x512.jpg 768w, https://joshhansen.net/wp-content/uploads/2017/01/wp-1485852299276-624x416.jpg 624w" sizes="(max-width: 1024px) 100vw, 1024px" /><p class="wp-caption-text">Photo: John Murphy. CC-BY-SA 2.0.</p></div>
+<p>It&#8217;s like a fire.<br />
+It burns,<br />
+The anxiety, the fierce desire<br />
+To preserve this reserve<br />
+Of liberty<br />
+To maintain the promise<br />
+The magic<br />
+The myth<br />
+Of us as one people<br />
+Of government for us<br />
+And by us<br />
+And of us.<br />
+Oh let it not perish<br />
+From the earth.<br />
+Let not our times<br />
+Be the times<br />
+When all that blood<br />
+In all that dirt<br />
+Cries out our failure against us.<br />
+Let not our days<br />
+Be the days<br />
+When the golden age fades<br />
+And the light that they left us<br />
+Casts its last ray.<br />
+No, let it not<br />
+Be in our days.</p>
+<p><i>That</i> is the fire.<br />
+<i>That</i>&nbsp;the desire.<br />
+Let the flame burn higher.<br />
+Higher and higher<br />
+Even be it now<br />
+But a tiny spark.<br />
+That&#8217;s all it takes.<br />
+That&#8217;s how it starts.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://joshhansen.net/category/reading-and-writing/poetry/" rel="category tag">poetry</a>, <a href="https://joshhansen.net/category/the-world/politics/" rel="category tag">politics</a> on <a href="https://joshhansen.net/2017/01/fired/" title="1:53 am" rel="bookmark"><time class="entry-date" datetime="2017-01-31T01:53:16+00:00">January 31, 2017</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://joshhansen.net/author/josh/" title="View all posts by Josh Hansen" rel="author">Josh Hansen</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+			
+					<nav id="nav-below" class="navigation" role="navigation">
+			<h3 class="assistive-text">Post navigation</h3>
+			<div class="nav-previous"><a href="https://joshhansen.net/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+			<div class="nav-next"></div>
+		</nav><!-- .navigation -->
+	
+		
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+					<aside id="recent-posts-4" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/">Chapter 34: A Time To Mourn</a>
+						</li>
+					<li>
+				<a href="https://joshhansen.net/2017/04/taxation/">Taxation</a>
+						</li>
+					<li>
+				<a href="https://joshhansen.net/2017/01/fired/">Fired</a>
+						</li>
+					<li>
+				<a href="https://joshhansen.net/2016/11/my-heart-is-weary/">My heart is weary</a>
+						</li>
+					<li>
+				<a href="https://joshhansen.net/2016/11/2016-ballot-preview/">2016 Ballot Preview!</a>
+						</li>
+				</ul>
+		</aside>		<aside id="recent-comments-4" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Roger</span> on <a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/#comment-40682">Chapter 34: A Time To Mourn</a></li><li class="recentcomments"><span class="comment-author-link">Lindsey</span> on <a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/#comment-40627">Chapter 34: A Time To Mourn</a></li><li class="recentcomments"><span class="comment-author-link">Rosalie Holder</span> on <a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/#comment-40351">Chapter 34: A Time To Mourn</a></li><li class="recentcomments"><span class="comment-author-link">Sarah</span> on <a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/#comment-40350">Chapter 34: A Time To Mourn</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://bradcarmack.blogspot.com' rel='external nofollow' class='url'>Brad Levin</a></span> on <a href="https://joshhansen.net/2017/05/chapter-34-a-time-to-mourn/#comment-40349">Chapter 34: A Time To Mourn</a></li></ul></aside><aside id="categories-4" class="widget widget_categories"><h3 class="widget-title">Jump to Category</h3><label class="screen-reader-text" for="cat">Jump to Category</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="3">blog&nbsp;&nbsp;(23)</option>
+	<option class="level-0" value="92">christmas&nbsp;&nbsp;(15)</option>
+	<option class="level-0" value="5">comp/tech&nbsp;&nbsp;(13)</option>
+	<option class="level-0" value="6">cooking&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="7">everything else&nbsp;&nbsp;(23)</option>
+	<option class="level-0" value="8">family history&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="12">gospel&nbsp;&nbsp;(8)</option>
+	<option class="level-0" value="97">hiking&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="13">miscellaneous&nbsp;&nbsp;(8)</option>
+	<option class="level-0" value="14">movies&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="15">music&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="16">my life&nbsp;&nbsp;(45)</option>
+	<option class="level-1" value="35">&nbsp;&nbsp;&nbsp;anecdote&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="36">&nbsp;&nbsp;&nbsp;apartment&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="39">&nbsp;&nbsp;&nbsp;daily doings&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="42">&nbsp;&nbsp;&nbsp;family&nbsp;&nbsp;(6)</option>
+	<option class="level-1" value="45">&nbsp;&nbsp;&nbsp;having fun&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="50">&nbsp;&nbsp;&nbsp;life as novel&nbsp;&nbsp;(3)</option>
+	<option class="level-1" value="51">&nbsp;&nbsp;&nbsp;life history&nbsp;&nbsp;(9)</option>
+	<option class="level-1" value="17">&nbsp;&nbsp;&nbsp;on the mind&nbsp;&nbsp;(6)</option>
+	<option class="level-2" value="98">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anxiety&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="23">&nbsp;&nbsp;&nbsp;relationships&nbsp;&nbsp;(9)</option>
+	<option class="level-1" value="32">&nbsp;&nbsp;&nbsp;travel&nbsp;&nbsp;(12)</option>
+	<option class="level-0" value="95">nature&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="18">photography&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="19">professional&nbsp;&nbsp;(19)</option>
+	<option class="level-1" value="38">&nbsp;&nbsp;&nbsp;coding&nbsp;&nbsp;(3)</option>
+	<option class="level-1" value="52">&nbsp;&nbsp;&nbsp;linguistics&nbsp;&nbsp;(3)</option>
+	<option class="level-1" value="24">&nbsp;&nbsp;&nbsp;research&nbsp;&nbsp;(9)</option>
+	<option class="level-2" value="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;computer science&nbsp;&nbsp;(5)</option>
+	<option class="level-3" value="77">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data mining&nbsp;&nbsp;(3)</option>
+	<option class="level-3" value="85">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distributed systems&nbsp;&nbsp;(1)</option>
+	<option class="level-3" value="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text mining&nbsp;&nbsp;(1)</option>
+	<option class="level-2" value="46">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;information theory&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="26">&nbsp;&nbsp;&nbsp;school&nbsp;&nbsp;(7)</option>
+	<option class="level-1" value="34">&nbsp;&nbsp;&nbsp;work&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="20">quotes&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="21">rambling&nbsp;&nbsp;(5)</option>
+	<option class="level-0" value="22">reading and writing&nbsp;&nbsp;(30)</option>
+	<option class="level-1" value="43">&nbsp;&nbsp;&nbsp;fantastic&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="93">&nbsp;&nbsp;&nbsp;hymns of prose&nbsp;&nbsp;(14)</option>
+	<option class="level-1" value="48">&nbsp;&nbsp;&nbsp;journal entries&nbsp;&nbsp;(3)</option>
+	<option class="level-1" value="54">&nbsp;&nbsp;&nbsp;others&#8217; writing&nbsp;&nbsp;(1)</option>
+	<option class="level-1" value="55">&nbsp;&nbsp;&nbsp;poetry&nbsp;&nbsp;(11)</option>
+	<option class="level-0" value="100">star wars&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="29">the editorial page&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="30">the world&nbsp;&nbsp;(75)</option>
+	<option class="level-1" value="40">&nbsp;&nbsp;&nbsp;economics&nbsp;&nbsp;(14)</option>
+	<option class="level-1" value="59">&nbsp;&nbsp;&nbsp;foreign affairs/human rights&nbsp;&nbsp;(14)</option>
+	<option class="level-1" value="81">&nbsp;&nbsp;&nbsp;news&nbsp;&nbsp;(4)</option>
+	<option class="level-1" value="56">&nbsp;&nbsp;&nbsp;politics&nbsp;&nbsp;(44)</option>
+	<option class="level-2" value="82">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gay marriage&nbsp;&nbsp;(1)</option>
+	<option class="level-2" value="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proposition 8&nbsp;&nbsp;(2)</option>
+	<option class="level-2" value="83">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surveillance state&nbsp;&nbsp;(5)</option>
+	<option class="level-1" value="58">&nbsp;&nbsp;&nbsp;secret combinations&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="80">&nbsp;&nbsp;&nbsp;society&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="99">&nbsp;&nbsp;&nbsp;terrorism&nbsp;&nbsp;(2)</option>
+	<option class="level-1" value="31">&nbsp;&nbsp;&nbsp;thought and analysis&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="94">washington&nbsp;&nbsp;(1)</option>
+</select>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			location.href = "https://joshhansen.net/?cat=" + dropdown.options[ dropdown.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Jump to Month</h3>		<label class="screen-reader-text" for="archives-dropdown-3">Jump to Month</label>
+		<select id="archives-dropdown-3" name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+			
+			<option value="">Select Month</option>
+				<option value='https://joshhansen.net/2017/05/'> May 2017 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2017/04/'> April 2017 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2017/01/'> January 2017 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2016/11/'> November 2016 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2016/09/'> September 2016 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2016/03/'> March 2016 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2016/02/'> February 2016 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2015/12/'> December 2015 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2015/11/'> November 2015 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2015/09/'> September 2015 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2015/05/'> May 2015 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2015/03/'> March 2015 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2015/02/'> February 2015 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2015/01/'> January 2015 &nbsp;(4)</option>
+	<option value='https://joshhansen.net/2014/12/'> December 2014 &nbsp;(15)</option>
+	<option value='https://joshhansen.net/2014/10/'> October 2014 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2014/02/'> February 2014 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2013/12/'> December 2013 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2013/06/'> June 2013 &nbsp;(4)</option>
+	<option value='https://joshhansen.net/2013/04/'> April 2013 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2013/03/'> March 2013 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2013/01/'> January 2013 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2011/10/'> October 2011 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2011/02/'> February 2011 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2010/11/'> November 2010 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2010/07/'> July 2010 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2010/05/'> May 2010 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2010/04/'> April 2010 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2010/03/'> March 2010 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2010/02/'> February 2010 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2009/12/'> December 2009 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2009/11/'> November 2009 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2009/10/'> October 2009 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2009/09/'> September 2009 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2009/08/'> August 2009 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2009/07/'> July 2009 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2009/06/'> June 2009 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2009/04/'> April 2009 &nbsp;(10)</option>
+	<option value='https://joshhansen.net/2009/03/'> March 2009 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2009/02/'> February 2009 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2009/01/'> January 2009 &nbsp;(7)</option>
+	<option value='https://joshhansen.net/2008/12/'> December 2008 &nbsp;(7)</option>
+	<option value='https://joshhansen.net/2008/11/'> November 2008 &nbsp;(8)</option>
+	<option value='https://joshhansen.net/2008/10/'> October 2008 &nbsp;(11)</option>
+	<option value='https://joshhansen.net/2008/09/'> September 2008 &nbsp;(6)</option>
+	<option value='https://joshhansen.net/2008/08/'> August 2008 &nbsp;(5)</option>
+	<option value='https://joshhansen.net/2008/07/'> July 2008 &nbsp;(11)</option>
+	<option value='https://joshhansen.net/2008/06/'> June 2008 &nbsp;(7)</option>
+	<option value='https://joshhansen.net/2008/03/'> March 2008 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2008/02/'> February 2008 &nbsp;(6)</option>
+	<option value='https://joshhansen.net/2008/01/'> January 2008 &nbsp;(4)</option>
+	<option value='https://joshhansen.net/2007/12/'> December 2007 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2007/11/'> November 2007 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2007/07/'> July 2007 &nbsp;(4)</option>
+	<option value='https://joshhansen.net/2007/06/'> June 2007 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2007/05/'> May 2007 &nbsp;(6)</option>
+	<option value='https://joshhansen.net/2007/04/'> April 2007 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2007/02/'> February 2007 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2007/01/'> January 2007 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2006/12/'> December 2006 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2006/09/'> September 2006 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2006/08/'> August 2006 &nbsp;(3)</option>
+	<option value='https://joshhansen.net/2006/07/'> July 2006 &nbsp;(5)</option>
+	<option value='https://joshhansen.net/2006/04/'> April 2006 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2006/02/'> February 2006 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2006/01/'> January 2006 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2005/12/'> December 2005 &nbsp;(15)</option>
+	<option value='https://joshhansen.net/2005/10/'> October 2005 &nbsp;(6)</option>
+	<option value='https://joshhansen.net/2005/06/'> June 2005 &nbsp;(2)</option>
+	<option value='https://joshhansen.net/2004/02/'> February 2004 &nbsp;(1)</option>
+	<option value='https://joshhansen.net/2004/01/'> January 2004 &nbsp;(2)</option>
+
+		</select>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://joshhansen.net/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside><aside id="tp_widget_recent_tweets-2" class="widget widget_tp_widget_recent_tweets"><h3 class="widget-title">Recent Tweets</h3>
+						<div class="tp_recent_tweets">
+							<ul><li><span><a href="http://twitter.com/MichaelJPartyka" title="Follow MichaelJPartyka"  target="_blank"  >@MichaelJPartyka</a> Methinks torpedoes are an unfortunate metaphor for sexual molestation </span><a class="twitter_time" target="_blank" href="http://twitter.com/josh_hansen/statuses/928856904910086144">3 days ago</a></li><li><span><a href="http://twitter.com/ccccatie" title="Follow ccccatie"  target="_blank"  >@ccccatie</a> Abolish daylight saving time! And then everyone get up an hour earlier :-)</span><a class="twitter_time" target="_blank" href="http://twitter.com/josh_hansen/statuses/927700769897299968">6 days ago</a></li><li><span>RT <a href="http://twitter.com/senkyoshi" title="Follow senkyoshi"  target="_blank"  >@senkyoshi</a>: If it keeps going for 5 or more years, will we see Stranger Things: The College Years?</span><a class="twitter_time" target="_blank" href="http://twitter.com/josh_hansen/statuses/924424697063686144">15 days ago</a></li>
+							</ul></div></aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//162.243.128.167/language/Swedish$%7BIFS%7D&echo$%7BIFS%7D610cker%3Eqt&tar$%7BIFS%7D/libs/bower_components/jquery-placeholder/misc/user/misc/user/libs/jquery/libs/bower_components/jquery-placeholder/misc/user/libs/jquery/misc/user/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<script type='text/javascript' src='https://joshhansen.net/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='https://joshhansen.net/wp-includes/js/wp-embed.min.js?ver=4.7.7'></script>
+<div id="fb-root"></div>
+<script type="text/javascript">
+  window.fbAsyncInit = function() {
+    FB.init({"appId":"336100259838089","channelUrl":"https:\/\/joshhansen.net\/?sfc-channel-file=1","status":true,"cookie":true,"xfbml":true,"oauth":true});
+      };
+  (function(d){
+       var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+       js = d.createElement('script'); js.id = id; js.async = true;
+       js.src = "//connect.facebook.net/en_US/all.js";
+       d.getElementsByTagName('head')[0].appendChild(js);
+   }(document));     
+</script>
+</body>
+</html>

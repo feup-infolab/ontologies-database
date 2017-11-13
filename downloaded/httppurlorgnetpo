@@ -1,0 +1,127 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+<http://purl.org/net/po#>	rdf:type	owl:Ontology .
+@prefix ns2:	<http://purl.org/vocommons/voaf#> .
+<http://purl.org/net/po#>	rdf:type	ns2:Vocabulary ,
+		owl:NamedIndividual .
+@prefix dct:	<http://purl.org/dc/terms/> .
+<http://purl.org/net/po#>	dct:modified	"2016-08-28" .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+<http://purl.org/net/po#>	rdfs:comment	"An ontology for describing playlists, playlist entries and songs." ;
+	owl:versionInfo	"1.1" ;
+	dct:description	"An ontology for describing playlists, playlist entries and songs." ;
+	dct:contributor	<https://plus.google.com/+BojanNajdenov> ,
+		<https://plus.google.com/+MatejPetrov> ;
+	dct:creator	<https://plus.google.com/+MilosJovanovik> ;
+	dct:issued	"2014-07-01" ;
+	dct:publisher	<http://finki.ukim.mk/> ;
+	dct:title	"Playlist Ontology" .
+@prefix ns5:	<http://purl.org/vocab/vann/> .
+<http://purl.org/net/po#>	ns5:preferredNamespacePrefix	"plo" ;
+	ns5:preferredNamespaceUri	"http://purl.org/net/po#" .
+@prefix ns6:	<http://creativecommons.org/ns#> .
+<http://purl.org/net/po#>	ns6:license	<https://creativecommons.org/licenses/by/3.0/> ;
+	dct:rights	"Copyright 2014, Milos Jovanovik" .
+<http://finki.ukim.mk/>	rdf:type	owl:NamedIndividual .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+<http://finki.ukim.mk/>	rdf:type	foaf:Organization .
+ns2:Vocabulary	rdf:type	owl:Class .
+foaf:Person	rdf:type	owl:Class .
+<https://plus.google.com/+MilosJovanovik>	rdf:type	foaf:Person ,
+		owl:NamedIndividual .
+foaf:Organization	rdf:type	owl:Class .
+foaf:name	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Name"@en .
+@prefix ns8:	<http://purl.org/net/po#> .
+foaf:name	rdfs:domain	ns8:Song ;
+	rdfs:range	rdfs:Literal .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+dc:title	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Title"@en ;
+	rdfs:domain	ns8:Song ;
+	rdfs:range	rdfs:Literal .
+@prefix mo:	<http://purl.org/ontology/mo/> .
+mo:MusicArtist	rdf:type	owl:Class .
+mo:Track	rdf:type	owl:Class .
+ns8:Playlist	rdf:type	owl:Class ;
+	rdfs:label	"Playlist"@en ;
+	rdfs:comment	"A class for representing a playlist. One Playlist instance is connected to one or more PlaylistEntry instances. It contains the name of the playlist and the name of the radio station."@en .
+ns8:PlaylistEntry	rdf:type	owl:Class ;
+	rdfs:label	"Playlist Entry"@en ;
+	rdfs:comment	"A class for representing an entry from a playlist. One PlaylistEntry instance is connected to one Song instance and one Playlist instance. It contains information about the 'position' of the Song in the Playlist, for the specific 'week' of the 'year'. It also contains an URL of a 'photo' for the playlist entry."@en ;
+	rdfs:subClassOf	_:b3295321 ,
+		_:b3295322 .
+ns8:Song	rdf:type	owl:Class ;
+	rdfs:label	"Song"@en ;
+	rdfs:comment	"A class for representing a song. One Song instance is connected to one or more PlaylistEntry instances. It contains the name of the song and the name of the artist. It can also contain external links to mo:Track and/or mo:MusicArtist instances, for creating Linked Data."@en .
+ns8:artistInfo	rdf:type	owl:ObjectProperty ;
+	rdfs:label	"Artist Info"@en ;
+	rdfs:domain	ns8:Song ;
+	rdfs:range	mo:MusicArtist .
+ns8:featuredInPlaylistEntry	rdf:type	owl:ObjectProperty ;
+	owl:inverseOf	ns8:playlistEntrySong ;
+	rdfs:label	"Featured in Playlist Entry"@en ;
+	rdfs:domain	ns8:Song ;
+	rdfs:range	ns8:PlaylistEntry .
+ns8:hasPlaylistEntry	rdf:type	owl:ObjectProperty ;
+	owl:inverseOf	ns8:partOfPlaylist ;
+	rdfs:label	"Has Playlist Entry"@en ;
+	rdfs:domain	ns8:Playlist ;
+	rdfs:range	ns8:PlaylistEntry .
+ns8:partOfPlaylist	rdf:type	owl:ObjectProperty ;
+	rdfs:label	"Part of Playlist"@en ;
+	rdfs:domain	ns8:PlaylistEntry ;
+	rdfs:range	ns8:Playlist .
+ns8:photoURL	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Photo URL"@en ;
+	rdfs:domain	ns8:PlaylistEntry ;
+	rdfs:range	rdfs:Literal .
+ns8:playlistEntrySong	rdf:type	owl:ObjectProperty ;
+	rdfs:label	"Playlist Entry Song"@en ;
+	rdfs:domain	ns8:PlaylistEntry ;
+	rdfs:range	ns8:Song .
+ns8:playlistName	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Playlist Name"@en ;
+	rdfs:domain	ns8:Playlist ;
+	rdfs:range	rdfs:Literal .
+ns8:position	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Position"@en ;
+	rdfs:domain	ns8:PlaylistEntry .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+ns8:position	rdfs:range	xsd:nonNegativeInteger .
+ns8:songInfo	rdf:type	owl:ObjectProperty ;
+	rdfs:label	"Song Info"@en ;
+	rdfs:domain	ns8:Song ;
+	rdfs:range	mo:Track .
+ns8:stationName	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Station Name"@en ;
+	rdfs:domain	ns8:Playlist ;
+	rdfs:range	rdfs:Literal .
+ns8:week	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Week"@en ;
+	rdfs:domain	ns8:PlaylistEntry ;
+	rdfs:range	xsd:nonNegativeInteger .
+ns8:year	rdf:type	owl:DatatypeProperty ;
+	rdfs:label	"Year"@en ;
+	rdfs:domain	ns8:PlaylistEntry ;
+	rdfs:range	xsd:nonNegativeInteger .
+<https://plus.google.com/+BojanNajdenov>	rdf:type	owl:NamedIndividual ,
+		foaf:Person .
+<https://plus.google.com/+MatejPetrov>	rdf:type	owl:NamedIndividual ,
+		foaf:Person .
+_:b3295321	rdf:type	owl:Restriction ;
+	owl:onProperty	ns8:partOfPlaylist ;
+	owl:onClass	ns8:Playlist ;
+	owl:qualifiedCardinality	"1"^^xsd:nonNegativeInteger .
+_:b3295322	rdf:type	owl:Restriction ;
+	owl:onProperty	ns8:playlistEntrySong ;
+	owl:onClass	ns8:Song ;
+	owl:qualifiedCardinality	"1"^^xsd:nonNegativeInteger .
+_:b3295323	rdf:type	owl:AllDisjointClasses ;
+	owl:members	_:b3295326 .
+_:b3295324	rdf:first	ns8:Song ;
+	rdf:rest	rdf:nil .
+_:b3295325	rdf:first	ns8:PlaylistEntry ;
+	rdf:rest	_:b3295324 .
+_:b3295326	rdf:first	ns8:Playlist ;
+	rdf:rest	_:b3295325 .

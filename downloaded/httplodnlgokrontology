@@ -1,0 +1,50 @@
+<rdf:RDF
+    xmlns:nlfloc="http://lod.nl.go.kr/foreignLocation/"
+    xmlns:nlloc="http://lod.nl.go.kr/location/"
+    xmlns:schema="http://schema.org/"
+    xmlns:nla="http://lod.nl.go.kr/author/"
+    xmlns:nllib="http://lod.nl.go.kr/library/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:nlon="http://lod.nl.go.kr/ontology/"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:nlk="http://lod.nl.go.kr/resource/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:bibframe="http://bibframe.org/vocab/"
+    xmlns:nluv="http://lod.nl.go.kr/university/"
+    xmlns:kdata="http://data.kdata.kr/resource/"
+    xmlns:countries="http://data.kdata.kr/countries/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:nlkdc="http://lod.nl.go.kr/kdc/"
+    xmlns:units="http://lod.nl.go.kr/units/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:nlgov="http://lod.nl.go.kr/government/"
+    xmlns:nlsc="http://lod.nl.go.kr/scheme/"
+    xmlns:nlddc="http://lod.nl.go.kr/ddc/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:nlcon="http://lod.nl.go.kr/countries/"
+    xmlns:adsec="http://data.kdata.kr/administrative_section/"
+    xmlns:nls="http://lod.nl.go.kr/subject/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://lod.nl.go.kr/ontology/">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NLK 2015</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This specification describes National Library of Korea Ontology vocaburaries using W3C's RDF and OWL technology.</rdfs:comment>
+    <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Library of Korea, LiST Co., Ltd.</dc:contributor>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JoyHong (joyhong</dc:creator>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wonseok Oh (wonseok.oh</dc:creator>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-09-08</dc:date>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://schema.rdfs.org/all.rdf"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Library of Korea Ontology</dc:title>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">이 자료는 국립중앙도서관이 관리, 보존하고 있는 서지 정보와 주제명, 저자명 데이터를 대상으로 기존의 (KOR)MARC 형태 또는 DBMS 형태의 데이터를 RDF로 형식으로 변환하여 웹상에 Linked Open Data 형식으로 발행하고 있는 &lt;a href="http://lod.nl.go.kr/home"&gt;국립중앙도서관 LOD&lt;/a&gt;에서 사용하고 있는 명세서입니다. </dc:description>
+    <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">박설희 (sulhui</dc:contributor>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lod.nl.go.kr/data/ontology/?output=rdfxml">
+    <rdfs:label>RDF description of National Library of Korea Ontology</rdfs:label>
+    <foaf:primaryTopic rdf:resource="http://lod.nl.go.kr/ontology/"/>
+  </rdf:Description>
+</rdf:RDF>

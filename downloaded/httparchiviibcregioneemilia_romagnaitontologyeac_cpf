@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--utlimo aggiornamento 28 gennaio 2011 -->
+<rdf:RDF xmlns="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:base="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/" xmlns:eac-cpf="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:bio="http://purl.org/vocab/bio/0.1/" xmlns:gn="http://www.geonames.org/ontology#">
+	<owl:Ontology rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/eac-cpf.rdf">
+		<owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+		<owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+		<skos:historyNote rdf:nodeID="vers1_2mod120130218"/>
+		<skos:historyNote rdf:nodeID="vers1_2mod220130218"/>
+		<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</owl:versionInfo>
+		<dc:creator>Istituto per i beni artistici culturali e naturali della Regione Emilia-Romagna and Regesta.exe</dc:creator>
+		<dcterms:isReferencedBy rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/semanticEnvironment/index.html"/>
+	</owl:Ontology>
+	<rdf:Description rdf:nodeID="vers1_2mod120130218">
+		<rdf:value>Creata la Object Property eac-cpf:hasPlace</rdf:value>
+		<dc:date>2013-02-18</dc:date>
+		<dc:creator>Silvia Mazzini</dc:creator>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="vers1_2mod220130218">
+		<rdf:value>Creata la Datatype Property eac-cpf:placeRole</rdf:value>
+		<dc:date>2013-02-18</dc:date>
+		<dc:creator>Silvia Mazzini</dc:creator>
+	</rdf:Description>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2773"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">entity</rdfs:label>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/person">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2773"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/corporateBody">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2773"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corporate body</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/family">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2773"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">family</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/controlArea">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e1944"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">control area</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/recordID"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceStatus"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/publicationStatus"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceAgency"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/conventionDeclaration"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/localTypeDeclaration"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceHistory"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/source"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/descriptionArea">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2138"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">description area</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/nameEntry"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/existDates"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.org/vocab/bio/0.1/Birth"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.org/vocab/bio/0.1/Death"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/biogHist"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/cpfRelation"/>
+				<owl:someValuesFrom rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/resourceRelation"/>
+				<owl:someValuesFrom rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e6439"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/cpfRelationType"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/language">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e3737"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
+		<owl:Restriction>
+			<owl:allValuesFrom>
+				<owl:Class rdf:resource="http://id.loc.gov/vocabulary/iso639-1"/>
+			</owl:allValuesFrom>
+		</owl:Restriction>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/nameArea">
+		<rdfs:isDefinedBy rdf:resource="dainserire"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name area</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/givenName"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/depiction"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+				<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/place">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e5921"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place</rdfs:label>
+		<owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature"/>
+	</owl:Class>
+	<!-- local description ????? cosa fare?????-->
+	<!-- ========================== Object Property ============================ -->
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/cpfRelation">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2216"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate Body, Person, or Family Relation</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/resourceRelation">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e6491"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource Relation</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/nameEntry">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e5077"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name Entry</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/nameArea"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/description">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e2138"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/descriptionArea"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/control">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e1944"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/controlArea"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/languageDeclaration">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e3791"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language Declaration</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/language"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/hasMultipleIdentities">
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e4966"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple Identities</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+	</owl:ObjectProperty>
+	<owl:ObjectProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/hasPlace">
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Questa proprietà è stata inserita nella versione del 18 febbraio 2013</owl:versionInfo>
+		<rdfs:isDefinedBy rdf:resource="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html#d1e5820"/>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/place"/>
+	</owl:ObjectProperty>
+	<!-- ==================  Datatype Property   ==================== -->
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/recordID">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Record Identifier</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceStatus">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Status</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/publicationStatus">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publication Status</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceAgency">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Agency</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/conventionDeclaration">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convention Declaration</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/localTypeDeclaration">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local Type Declaration</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/cpfRelationType">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate Body, Person, or Family Relation Type</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/resourceRelationType">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource Relation Type</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/localControl">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local Control</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceHistory">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance History</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/source">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/existDates">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dates of Existence</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/legalStatus">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legal Status</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/corporateBody"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/function">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/languageUsed">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Languages Used</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/occupation">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/mandate">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandate</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/corporateBody"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/structureOrGenealogy">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structure or Genealogy</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/generalContext">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Context</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/biogHist">
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biographical or Historical Note</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/entity"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+	<owl:DatatypeProperty rdf:about="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/placeRole">
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Questa proprietà è stata inserita nella versione del 18 febbraio 2013</owl:versionInfo>
+		<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place Role</rdfs:label>
+		<rdfs:domain rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/place"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:DatatypeProperty>
+</rdf:RDF>

@@ -1,0 +1,1786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xml:lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:dct="http://purl.org/dc/terms/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:wot="http://xmlns.com/wot/0.1/"
+      xmlns:prv="http://purl.org/net/provenance/ns#"
+      xmlns:opmv="http://purl.org/net/opmv/ns#"
+      xmlns:tisc="http://observedchange.com/tisc/ns#"
+>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="alternate" type="application/rdf+xml" href="index.rdf" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <title>Open Time and Space Core Vocabulary Specification</title>
+</head>
+
+<body>
+<h1 about="" property="dcterms:title" xml:lang="en">Open Time and Space Core Vocabulary Specification</h1>
+<div about="" typeof="foaf:Document">
+
+<div property="rdfs:label" content="Document that defines the core ontology of the Open Time and Space Core Vocabulary" xml:lang="en"></div>
+  <div rel="foaf:primaryTopic">
+    <div about="http://www.observedchange.com/tisc/ns#">
+      <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataItem"></div>
+      <div rel="rdf:type" resource="http://www.w3.org/2002/07/owl#Ontology"></div>
+      <div property="dcterms:title" content="Open Time and Space Core Vocabulary namespace" xml:lang="en"></div>
+      <div rel="prv:createdBy">
+	    <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataCreation"></div>
+	    <div rel="prv:performedBy" resource="http://kauppinen.net/tomi#me"></div>
+	    <div property="prv:performedAt" content="2013-10-06T17:30:00Z" datatype="xsd:dateTime"></div>
+      </div>
+      <div rel="dcterms:creator" resource="http://kauppinen.net/tomi#me"></div>
+      <div property="dcterms:created" content="2013-10-06T17:30:00Z" datatype="xsd:dateTime"></div>
+     </div>
+   </div>
+</div>
+
+<h2>06 October 2013</h2>
+
+<dl>
+  <dt>This version:</dt>
+  <dd><a href="http://observedchange.com/tisc/ns-20131006">http://observedchange.com/tisc/ns-20131006</a></dd>
+  <dt>Latest version:</dt>
+  <dd><a href="http://observedchange.com/tisc/ns">http://observedchange.com/tisc/ns</a></dd>
+
+  <dt>Previous version:</dt>
+  <dd><a href="http://observedchange.com/tisc/ns-20120502">http://observedchange.com/tisc/ns-20120502</a></dd>
+  <dt>Revision:</dt>
+  <dd>Revision: 1.04</dd>
+  <dt>Authors:</dt>
+  <dd about="http://kauppinen.net/tomi#me" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://kauppinen.net/tomi" property="foaf:name">Tomi Kauppinen</a>
+    (Aalto University, Finland)
+    </dd>
+
+  <dt>Contributors:</dt>
+ <dd>
+ <a>Alber Sanchez </a>(<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>
+
+  <dd about="http://ifgi.uni-muenster.de/~j_jone02/" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://ifgi.uni-muenster.de/~j_jone02/" property="foaf:name">Jim Jones</a>
+    (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+
+      <dd>See also <a href="#sec-ack">acknowledgements</a>.</dd>  
+</dl>
+
+<p class="copyright">Copyright &copy; 2011 - 2013 Tomi Kauppinen.</p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by/1.0/"><img alt="Creative Commons License" style="border: 0pt none; float: right;" src="img/somerights.gif" /></a>
+This work is licensed under a <a href="http://creativecommons.org/licenses/by/1.0/">Creative Commons License</a>. This copyright applies to the <em>Open Time and Space Core Vocabulary</em> and accompanying documentation.</p>
+
+<p about="" resource="http://www.w3.org/TR/rdfa-syntax" rel="dcterms:conformsTo">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml-rdfa.png" style="border: 0pt none; float: right" alt="Valid XHTML + RDFa" /> </a>
+  Regarding underlying technology, the Open Time and Space Core Vocabulary relies heavily on W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology, an open Web standard that can be freely used by anyone.</p>
+
+  <p>This visual layout and structure of the specification was adapted from the <a href="http://rdfs.org/sioc/spec/">SIOC Core Ontology Specification</a> edited by Uldis Bojars and John G. Breslin and the <a href="http://trdf.sourceforge.net/provenance/ns.html">Provenance Vocabulary Core Ontology Specification</a> edited by Olaf Hartig and Jun Zhao, and <a href="http://open-biomed.sourceforge.net/opmv/ns.html">Open Provenance Model Vocabulary</a> edited by Jun Zhao.</p>
+
+<hr />
+
+<div>
+<h2 id="sec-abstract">Abstract</h2>
+
+<p>
+  <span about="http://observedchange.com/tisc/ns#" property="dcterms:description">TISC, the Open Time and Space Core Vocabulary, 
+is a lightweight spatiotemporal vocabulary aiming to provide spatial and temporal terms such as "happensAt", "locatedAt", "rightOf"  to enable practitioners to relate their data to time and space. 
+The Open Time and Space Core Vocabulary is based on research about spatial and temporal properties.
+</span>
+</p>
+  
+</span>
+  <span about="" property="dcterms:description">This documents specifies the classes and properties introduced by the TISC core vocabulary.</span>
+</p>
+</div>
+<hr />
+
+<div class="status">
+<h2 id="sec-status">Status of this document</h2>
+
+<p><strong>NOTE:</strong> <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document.</em></p>
+
+<p>This specification is an evolving document. This document may be updated or added to based on implementation experience, but no commitment is made by the authors regarding future updates. This document is generated by combining a machine-readable <a href="http://observedchange.com/tisc/ns#">Open Time and Space Core Vocabulary Namespace</a> expressed in RDF/XML with a specification template and a set of per-term documents.</p>
+</div>
+
+<h2 id="sec-toc">Table of contents</h2>
+<ul>
+  <li><a href="#sec-intro">1. Introduction</a></li>
+  <li><a href="#sec-glance">2. The Open Time and Space Core Vocabulary at a glance</a></li>
+  <li><a href="#sec-desc">3. Description about TISC core vocabulary</a></li>
+  <ul>
+      <li><a href="#sec-extension">3.1. Evolution and extension of TISC</a></li>
+ 
+  </ul>
+  <li><a href="#sec-specification">4. Cross-reference for core TISC classes and properties</a></li>
+  <!--li><a href="#sec-decisions">4. Design Decisions</a></li-->
+  <li><a href="#sec-ack">5. Acknowledgements</a></li>
+  <li><a href="#sec-reference">6. References</a></li>
+  <li><a href="#sec-changes">7. Change log</a></li>
+</ul>
+
+<hr />
+
+<h2 id="sec-intro">1. Introduction</h2>
+  <p>The Open Time and Space Core Vocabulary is defined as a set of classes and properties.</p>
+  <p>You may browse the also using Sindice Inspector as a graph or as a <a href="http://inspector.sindice.com/inspect?url=http%3A%2F%2Fobservedchange.com%2Ftisc%2Fns%2F&content=#HTML">list</a>.</p>
+
+
+<p>The XML Namespace URIs that must be used by implementations of this specification are:</p>
+
+<ul>
+  <li><a href="http://observedchange.com/tisc/ns#">http://observedchange.com/tisc/ns#</a> - The Namespace of the 
+Open Time and Space Core Vocabulary
+</li>
+</ul>
+
+<div class="glance">
+<h2 id="sec-glance">2. The Open Time and Space Core Vocabulary at a glance</h2>
+
+<p>An alphabetical index of terms from the  Open Time and Space Core Vocabulary, by class and by property, are given below. All the terms are hyperlinked to their detailed description for quick reference.</p>
+
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+
+<p>Classes: |
+  <a href="#Object">Object</a> |
+  <a href="#PartialOverlap">PartialOverlap</a> |
+</p>
+
+<p>Spatial properties: |
+  <a href="#here">here</a> |
+  <a href="#nearest">nearest</a> |
+<!--  <a href="#quiteNear">quiteNear</a> |-->
+  <a href="#near">near</a> |
+<!--  <a href="#quiteFar">quiteFar</a> |-->
+  <a href="#far">far</a> |
+
+<a href="#next">next</a> |
+  
+<a href="#northOf">northOf</a> |
+<a href="#northWestOf">northWestOf</a> |
+<a href="#westOf">westOf</a> |
+<a href="#southWestOf">southWestOf</a> |
+<a href="#southOf">southOf</a> |
+<a href="#southEastOf">southEastOf</a> |
+<a href="#eastOf">eastOf</a> |
+<a href="#northEastOf">northEastOf</a> |
+
+<a href="#nextTo">nextTo</a> |
+<a href="#leftOf">leftOf</a> |
+<a href="#rightOf">rightOf</a> |
+
+<a href="#inFrontOf">atFrontOf</a> |
+<a href="#insideOf">insideOf</a> |
+<a href="#outsideOf">outsideOf</a> |
+<a href="#behind">behind</a> |
+
+<a href="#along">along</a> |
+
+<a href="#locatedAt">locatedAt</a> |
+<a href="#address">address</a> |
+
+<a href="#areasize">areasize</a> |
+<a href="#sizeOfLandArea">sizeOfLandArea</a>
+
+<a href="#sharesPathWith">sharesPathWith</a> |
+
+<a href="#hasLength">hasLength</a> |
+<a href="#hasWidth">hasWidth</a> |
+<a href="#hasHeight">hasHeight</a> |
+
+<a href="#geometry">geometry</a> |
+
+<a href="#touches">touches</a>
+
+<a href="#unionOf">unionOf</a>
+<a href="#hasUnionOf">hasUnionOf</a>
+
+<a href="#equal">equal</a> |
+<a href="#disconnected">disconnected</a> |
+<a href="#externallyConnected">externallyConnected</a> |
+<a href="#partiallyOverlapping">partiallyOverlapping</a> |
+<a href="#tangentialProperPart">tangentialProperPart</a> |
+<a href="#nonTangentialProperPart">nonTangentialProperPart</a> |
+
+<a href="#partialOverlapFrom">partialOverlapFrom</a> |
+<a href="#partialOverlapTo">partialOverlapTo</a> |
+<a href="#partialOverlapArea">partialOverlapArea</a> |
+<a href="#partialOverlapUnit">partialOverlapUnit</a> |
+<a href="#partialOverlapRatio">partialOverlapRatio</a> |
+<a href="#hasCentroid">hasCentroid</a> |
+
+
+</p>
+
+<p>Temporal properties: |
+<!-- 
+<a href="#before">before</a> |
+<a href="#after">after</a> |
+<a href="#overlaps">overlaps</a> |
+<a href="#overlappedBy">overlappedBy</a> |
+<a href="#starts">starts</a> |
+<a href="#finishes">finishes</a> |
+<a href="#contains">contains</a> |
+<a href="#during">during</a> |
+ -->
+ 
+<a href="#inPastOf">happensAt</a> | 
+ 
+<a href="#existenceBeginsAt">existenceBeginsAt</a> |
+<a href="#existenceEndsAt">existenceEndsAt</a> | 
+
+<a href="#isForecastFor">isForecastFor</a> |
+<a href="#forecastMadeAt">forecastMadeAt</a> |
+
+
+<a href="#inFutureOf">inFutureOf</a> |
+<a href="#inPastOf">inPastOf</a> |
+
+
+<p>Temporal properties for modeling fuzzy time intervals: |
+
+<a href="#fuzzybegin">fuzzybegin</a> |
+<a href="#begin">begin</a> |
+<a href="#end">end</a> |    
+<a href="#fuzzyend">fuzzyend</a> |
+
+  
+  
+</p>
+</div>
+</div>
+
+<div class="description">
+  <h2 id="sec-desc">3. Descriptions about TISC</h2>
+</div>
+
+  <p>The Core TISC definitions presented here are written using a computer language (RDF/OWL) that makes it easy for software to process some basic facts about the terms in the Open Time and Space Core Vocabulary, and consequently about the things described using TISC.</p>
+
+
+<h3 id="sec-extension">3.1. Evolution and extension of TISC</h3>
+
+<p>The Open Time and Space Vocabulary is identified by the namespace URI "http://observedchange.com/tisc/ns#".</p>
+
+<p>Revisions and extensions of TISC are conducted through edits to the namespace document, which by convention is published on the Web at the namespace URI.</p>
+
+  <p>The properties and types defined here provide some basic concepts for describing spatio-temporal information. Other vocabularies (e.g. the Dublin Core metadata terms, FOAF, <a href="http://www.w3.org/TR/owl-time/">the Time Ontology in OWL</a>, the Open Provenance Model Vocabulary, etc.) can also be mixed in with TISC terms, as can local extensions. TISC is designed to be extended.</p>
+
+
+<div class="overview">
+  <h2 id="sec-specification">4. Cross-reference for core TISC classes and properties</h2>
+</div>
+
+
+<div class="specterm" id="Object"
+     about="http://observedchange.com/tisc/ns#Object" typeof="owl:Class">
+  <h3>Class: Object</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns"></div>
+  <div property="rdfs:label" content="Object" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Object is (some)thing located in space and time.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/tisc/ns#Object">http://observedchange.com/tisc/ns#Object</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<!--*******************************************************-->
+<!-- ADED BY JIM JONES AND ALBER SANCHEZ ON 2012-05-09 -->
+<!-- Last update on 2012-05-15-->
+<!--*******************************************************-->
+<div class="specterm" id="PartialOverlap"
+     about="http://observedchange.com/tisc/ns#PartialOverlap" typeof="owl:Class">
+  <h3>Class: PartialOverlap</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns"></div>
+  <div property="rdfs:label" content="PartialOverlap" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">PartialOverlap is a class which allows instantiating characteristics of a partial overlap. 
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/tisc/ns#PartialOverlap">http://observedchange.com/tisc/ns#PartialOverlap</a></td></tr>
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<!--******************************************-->
+
+
+<div class="specterm" id="here"
+     about="http://observedchange.com/tisc/ns#here" typeof="owl:ObjectProperty">
+
+  <h3>Property: here</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#here"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">here is an abstract property to express that an object is at the same place as another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#here">http://observedchange.com/tisc/ns#here</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="nearest"
+     about="http://observedchange.com/tisc/ns#nearest" typeof="owl:ObjectProperty">
+
+  <h3>Property: nearest</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#nearest"></div>
+  <div property="rdfs:label" content="nearest" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">nearest is an abstract property to express that an object is nearest to another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#nearest">http://observedchange.com/tisc/ns#nearest</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="near"
+     about="http://observedchange.com/tisc/ns#near" typeof="owl:ObjectProperty">
+
+  <h3>Property: near</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#near"></div>
+  <div property="rdfs:label" content="near" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">near is an abstract property to express that an object is near to another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#near">http://observedchange.com/tisc/ns#near</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="far"
+     about="http://observedchange.com/tisc/ns#far" typeof="owl:ObjectProperty">
+
+  <h3>Property: far</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#far"></div>
+  <div property="rdfs:label" content="far" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">far is an abstract property to express that an object is far from another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#far">http://observedchange.com/tisc/ns#far</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="next"
+     about="http://observedchange.com/tisc/ns#next" typeof="owl:ObjectProperty">
+
+  <h3>Property: next</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#next"></div>
+  <div property="rdfs:label" content="next" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">next is an abstract property to express that an object is a next object in the order, for example to state the 
+logical ordering of metro stations or bus stops, i.e. like in "next metro station from Victoria is Sloane Square". However, as such next is ambiguous as also "next metro station from Victoria is St James's Park" would be valid. This can be solved by e.g. having two instances of Victoria station for each direction, or using some similar type of mechanism. Note also that next is different from nextTo. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#next">http://observedchange.com/tisc/ns#next</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="northOf"
+     about="http://observedchange.com/tisc/ns#northOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: northOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#northOf"></div>
+  <div property="rdfs:label" content="northOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">northOf is an abstract property to express that an object is North of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#northOf">http://observedchange.com/tisc/ns#northOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="northWestOf"
+     about="http://observedchange.com/tisc/ns#northWestOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: northWestOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#northWestOf"></div>
+  <div property="rdfs:label" content="northWestOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">northWestOf is an abstract property to express that an object is Northwest of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#northWestOf">http://observedchange.com/tisc/ns#northWestOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="westOf"
+     about="http://observedchange.com/tisc/ns#westOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: westOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#westOf"></div>
+  <div property="rdfs:label" content="westOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">westOf is an abstract property to express that an object is West of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#westOf">http://observedchange.com/tisc/ns#westOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="southWestOf"
+     about="http://observedchange.com/tisc/ns#southWestOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: southWestOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#southWestOf"></div>
+  <div property="rdfs:label" content="southWestOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">southWestOf is an abstract property to express that an object is Southwest of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#southWestOf">http://observedchange.com/tisc/ns#southWestOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="southOf"
+     about="http://observedchange.com/tisc/ns#southOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: southOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#southOf"></div>
+  <div property="rdfs:label" content="southOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">southOf is an abstract property to express that an object is South of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#southOf">http://observedchange.com/tisc/ns#southOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="southEastOf"
+     about="http://observedchange.com/tisc/ns#southEastOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: southEastOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#southEastOf"></div>
+  <div property="rdfs:label" content="southEastOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">southEastOf is an abstract property to express that an object is Southeast of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#southEastOf">http://observedchange.com/tisc/ns#southEastOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="eastOf"
+     about="http://observedchange.com/tisc/ns#eastOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: eastOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#eastOf"></div>
+  <div property="rdfs:label" content="eastOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">eastOf is an abstract property to express that an object is East of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#eastOf">http://observedchange.com/tisc/ns#eastOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+  
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="northEastOf"
+     about="http://observedchange.com/tisc/ns#northEastOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: northEastOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#northEastOf"></div>
+  <div property="rdfs:label" content="northEastOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">northEastOf is an abstract property to express that an object is Northeast of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#northEastOf">http://observedchange.com/tisc/ns#northEastOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="nextTo"
+     about="http://observedchange.com/tisc/ns#nextTo" typeof="owl:ObjectProperty">
+
+  <h3>Property: nextTo</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#nextTo"></div>
+  <div property="rdfs:label" content="nextTo" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">nextTo is an abstract property to express that an object is next to another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#nextTo">http://observedchange.com/tisc/ns#nextTo</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+  
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="leftOf"
+     about="http://observedchange.com/tisc/ns#leftOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: leftOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#leftOf"></div>
+  
+  <div rel="owl:inverseOf" resource="http://observedchange.com/tisc/ns#rightOf"></div>
+  
+  <div property="rdfs:label" content="leftOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">leftOf is an abstract property to express that an object is to the left from another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#leftOf">http://observedchange.com/tisc/ns#leftOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+   
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="rightOf"
+     about="http://observedchange.com/tisc/ns#rightOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: rightOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#rightOf"></div>
+  
+    <div rel="owl:inverseOf" resource="http://observedchange.com/tisc/ns#leftOf"></div>
+  
+  <div property="rdfs:label" content="rightOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">rightOf is an abstract property to express that an object is to the right from another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#rightOf">http://observedchange.com/tisc/ns#rightOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="atFrontOf"
+     about="http://observedchange.com/tisc/ns#atFrontOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: atFrontOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#atFrontOf"></div>
+  <div property="rdfs:label" content="atFrontOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">atFrontOf is an abstract property to express that an object is at front of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#atFrontOf">http://observedchange.com/tisc/ns#atFrontOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="insideOf"
+     about="http://observedchange.com/tisc/ns#insideOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: insideOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#insideOf"></div>
+  <div property="rdfs:label" content="insideOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">insideOf is an abstract property to express that an object is inside of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#insideOf">http://observedchange.com/tisc/ns#insideOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="outsideOf"
+     about="http://observedchange.com/tisc/ns#outsideOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: outsideOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#outsideOf"></div>
+  <div property="rdfs:label" content="outsideOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">outsideOf is an abstract property to express that an object is outside of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#outsideOf">http://observedchange.com/tisc/ns#outsideOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="behind"
+     about="http://observedchange.com/tisc/ns#behind" typeof="owl:ObjectProperty">
+
+  <h3>Property: behind</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#behind"></div>
+  <div property="rdfs:label" content="behind" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">behind is an abstract property to express that an object is behind another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#behind">http://observedchange.com/tisc/ns#behind</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="along"
+     about="http://observedchange.com/tisc/ns#along" typeof="owl:ObjectProperty">
+
+  <h3>Property: along</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#along"></div>
+  <div property="rdfs:label" content="along" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">along is an abstract property to express that an object is along another, for example "a group of houses along by the river".</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#along">http://observedchange.com/tisc/ns#along</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="locatedAt"
+     about="http://observedchange.com/tisc/ns#locatedAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: locatedAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#locatedAt"></div>
+  <div property="rdfs:label" content="locatedAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">locatedAt is an abstract property to express that an object is located at somewhere.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#locatedAt">http://observedchange.com/tisc/ns#locatedAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="address"
+     about="http://observedchange.com/tisc/ns#address" typeof="owl:ObjectProperty">
+
+  <h3>Property: address</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#address"></div>
+  <div property="rdfs:label" content="address" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">address is an abstract property to express that an object has some address.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#address">http://observedchange.com/tisc/ns#address</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="xsd:string">xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="areasize"
+     about="http://observedchange.com/tisc/ns#areasize" typeof="owl:ObjectProperty">
+
+  <h3>Property: areasize</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#areasize"></div>
+  <div property="rdfs:label" content="areasize" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">areasize is an abstract property to express the size of the area of an object.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#areasize">http://observedchange.com/tisc/ns#areasize</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="xsd:float">xsd:float</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#float"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="sharesPathWith"
+     about="http://observedchange.com/tisc/ns#sharesPathWith" typeof="owl:ObjectProperty">
+
+  <h3>Property: sharesPathWith</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#sharesPathWith"></div>
+  <div property="rdfs:label" content="sharesPathWith" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">sharesPathWith is an abstract property to express that an object shares a path with another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#sharesPathWith">http://observedchange.com/tisc/ns#sharesPathWith</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="sizeOfLandArea"
+     about="http://observedchange.com/tisc/ns#sizeOfLandArea" typeof="owl:ObjectProperty">
+
+  <h3>Property: sizeOfLandArea</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#sizeOfLandArea"></div>
+  <div property="rdfs:label" content="sizeOfLandArea" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">sizeOfLandArea is an abstract property to express the size of the land area of a region.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#sizeOfLandArea">http://observedchange.com/tisc/ns#sizeOfLandArea</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="hasLength"
+     about="http://observedchange.com/tisc/ns#hasLength" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasLength</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#hasLength"></div>
+  <div property="rdfs:label" content="hasLength" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasLength is an abstract property to express that an object has certain length.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#hasLength">http://observedchange.com/tisc/ns#hasLength</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="hasWidth"
+     about="http://observedchange.com/tisc/ns#hasWidth" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasWidth</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#hasWidth"></div>
+  <div property="rdfs:label" content="hasWidth" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasWidth is an abstract property to express that an object has certain width.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#hasWidth">http://observedchange.com/tisc/ns#hasWidth</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="hasHeight"
+     about="http://observedchange.com/tisc/ns#hasHeight" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasHeight</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#hasHeight"></div>
+  <div property="rdfs:label" content="hasHeight" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasHeight is an abstract property to express that an object has certain height.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#hasHeight">http://observedchange.com/tisc/ns#hasHeight</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+   
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="touches"
+     about="http://observedchange.com/tisc/ns#touches" typeof="owl:ObjectProperty">
+
+  <h3>Property: touches</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#touches"></div>
+  <div property="rdfs:label" content="touches" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">touches is an abstract property to express that a region touches another region.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#touches">http://observedchange.com/tisc/ns#touches</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="unionOf"
+     about="http://observedchange.com/tisc/ns#unionOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasUnionOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#unionOf"></div>
+  <div property="rdfs:label" content="unionOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">unionOf is an abstract property to express which union a spatiotemporal region forms.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#unionOf">http://observedchange.com/tisc/ns#unionOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="hasUnionOf"
+     about="http://observedchange.com/tisc/ns#hasUnionOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasUnionOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#hasUnionOf"></div>
+  <div property="rdfs:label" content="hasUnionOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasUnionOf is an abstract property to express which union an object (or region) belongs to.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#hasUnionOf">http://observedchange.com/tisc/ns#hasUnionOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="geometry"
+     about="http://observedchange.com/tisc/ns#geometry" typeof="owl:ObjectProperty">
+
+  <h3>Property: geometry</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#geometry"></div>
+  <div property="rdfs:label" content="geometry" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">geometry is an abstract property to express that an object has certain geometry.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#geometry">http://observedchange.com/tisc/ns#geometry</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="equal"
+     about="http://observedchange.com/tisc/ns#equal" typeof="owl:ObjectProperty">
+
+  <h3>Property: equal</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#equal"></div>
+  <div property="rdfs:label" content="equal" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">equal is an abstract property to express that an object is equal with another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#equal">http://observedchange.com/tisc/ns#equal</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="disconnected"
+     about="http://observedchange.com/tisc/ns#disconnected" typeof="owl:ObjectProperty">
+
+  <h3>Property: disconnected</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#disconnected"></div>
+  <div property="rdfs:label" content="disconnected" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">disconnected is an abstract property to express that an object is disconnected from another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#disconnected">http://observedchange.com/tisc/ns#disconnected</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="externallyConnected"
+     about="http://observedchange.com/tisc/ns#externallyConnected" typeof="owl:ObjectProperty">
+
+  <h3>Property: externallyConnected</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#externallyConnected"></div>
+  <div property="rdfs:label" content="externallyConnected" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">externallyConnected is an abstract property to express that an object is externally connected with another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#externallyConnected">http://observedchange.com/tisc/ns#externallyConnected</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="partiallyOverlapping"
+     about="http://observedchange.com/tisc/ns#partiallyOverlapping" typeof="owl:ObjectProperty">
+
+  <h3>Property: partiallyOverlapping</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#partiallyOverlapping"></div>
+  <div property="rdfs:label" content="partiallyOverlapping" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">partiallyOverlapping is an abstract property to express that an object is partially overlapping with another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#partiallyOverlapping">http://observedchange.com/tisc/ns#partiallyOverlapping</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+   
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="tangentialProperPart"
+     about="http://observedchange.com/tisc/ns#tangentialProperPart" typeof="owl:ObjectProperty">
+
+  <h3>Property: tangentialProperPart</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#tangentialProperPart"></div>
+  <div property="rdfs:label" content="tangentialProperPart" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">tangentialProperPart is an abstract property to express that an object is tangential proper part of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#tangentialProperPart">http://observedchange.com/tisc/ns#tangentialProperPart</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="nonTangentialProperPart"
+     about="http://observedchange.com/tisc/ns#nonTangentialProperPart" typeof="owl:ObjectProperty">
+
+  <h3>Property: nonTangentialProperPart</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#nonTangentialProperPart"></div>
+  <div property="rdfs:label" content="nonTangentialProperPart" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">nonTangentialProperPart is an abstract property to express that an object is non tangential proper part of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#nonTangentialProperPart">http://observedchange.com/tisc/ns#nonTangentialProperPart</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<!--*******************************************************-->
+<!-- ADED BY JIM JONES AND ALBER SANCHEZ ON 2012-05-09 -->
+<!--*******************************************************-->
+<div class="specterm" id="partialOverlapFrom"
+     about="http://observedchange.com/tisc/ns#partialOverlapFrom" typeof="owl:ObjectProperty">
+
+  <h3>Property: partialOverlapFrom</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#partialOverlapFrom"></div>
+  <div property="rdfs:label" content="partialOverlapFrom" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">partialOverlapFrom is an abstract property to express the first object that takes part in a <a href="#PartialOverlap">PartialOverlap</a>.
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#partialOverlapFrom">http://observedchange.com/tisc/ns#partialOverlapFrom</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+        <td><a href="#PartialOverlap">tisc:PartialOverlap</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#PartialOverlap"></div></td>
+	  </tr>
+      <tr>
+        <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	    </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="partialOverlapTo"
+     about="http://observedchange.com/tisc/ns#partialOverlapTo" typeof="owl:ObjectProperty">
+
+  <h3>Property: partialOverlapTo</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#partialOverlapTo"></div>
+  <div property="rdfs:label" content="partialOverlapTo" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">partialOverlapTo is an abstract property to express the second object that takes part in a <a href="#PartialOverlap">PartialOverlap</a>.
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#partialOverlapTo">http://observedchange.com/tisc/ns#partialOverlapTo</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+        <td><a href="#PartialOverlap">tisc:PartialOverlap</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#PartialOverlap"></div></td>
+	  </tr>
+      <tr>
+        <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	    </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="partialOverlapArea"
+     about="http://observedchange.com/tisc/ns#partialOverlapArea" typeof="owl:ObjectProperty">
+
+  <h3>Property: partialOverlapArea</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#partialOverlapArea"></div>
+  <div property="rdfs:label" content="partialOverlapArea" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">partialOverlapArea is an abstract property to express the overlaping area of two things in a <a href="#PartialOverlap">PartialOverlap</a>. The area units can be stated with <a href="#partialOverlapUnit">partialOverlapUnit</a>.
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#partialOverlapArea">http://observedchange.com/tisc/ns#partialOverlapArea</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+        <td><a href="#PartialOverlap">tisc:PartialOverlap</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#PartialOverlap"></div></td>
+	  </tr>
+      <tr>
+        <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	    </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="partialOverlapUnit"
+     about="http://observedchange.com/tisc/ns#partialOverlapUnit" typeof="owl:ObjectProperty">
+
+  <h3>Property: partialOverlapUnit</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#partialOverlapUnit"></div>
+  <div property="rdfs:label" content="partialOverlapUnit" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">partialOverlapUnit is an abstract property to express the units of <a href="#partialOverlapUnit">partialOverlapArea</a> of two things in a <a href="#PartialOverlap">PartialOverlap</a>. 
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#partialOverlapUnit">http://observedchange.com/tisc/ns#partialOverlapUnit</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+        <td><a href="#PartialOverlap">tisc:PartialOverlap</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#PartialOverlap"></div></td>
+	  </tr>
+      <tr>
+        <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema">xsd:double</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#double"></div></td>
+	    </tr>
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="partialOverlapRatio"
+     about="http://observedchange.com/tisc/ns#partialOverlapRatio" typeof="owl:ObjectProperty">
+
+  <h3>Property: partialOverlapRatio</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#partialOverlapRatio"></div>
+  <div property="rdfs:label" content="partialOverlapRatio" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">partialOverlapRatio is an abstract property to express the ratio of dividing the <a href="#partialOverlapArea">partialOverlapArea</a> by the area of the object pointed by <a href="#partialOverlapFrom">partialOverlapFrom</a>. 
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#partialOverlapRatio">http://observedchange.com/tisc/ns#partialOverlapRatio</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+        <td><a href="#PartialOverlap">tisc:PartialOverlap</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#PartialOverlap"></div></td>
+	  </tr>
+      <tr>
+        <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema">xsd:double</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#double"></div></td>
+	    </tr>
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="hasCentroid"
+     about="http://observedchange.com/tisc/ns#hasCentroid" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasCentroid</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#hasCentroid"></div>
+  <div property="rdfs:label" content="hasCentroid" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasCentroid is an abstract property to express the location of the centroid of an area feature.
+  </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#hasCentroid">http://observedchange.com/tisc/ns#hasCentroid</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+        <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+        <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	    </tr>
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<!-- 
+<div class="specterm" id="before"
+     about="http://observedchange.com/tisc/ns#before" typeof="owl:ObjectProperty">
+
+  <h3>Property: before</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#before"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">before is an abstract property to express that an object is before another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#before">http://observedchange.com/tisc/ns#before</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="after"
+     about="http://observedchange.com/tisc/ns#after" typeof="owl:ObjectProperty">
+
+  <h3>Property: after</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#after"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">after is an abstract property to express that an object is after another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#after">http://observedchange.com/tisc/ns#after</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="overlaps"
+     about="http://observedchange.com/tisc/ns#overlaps" typeof="owl:ObjectProperty">
+
+  <h3>Property: overlaps</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#overlaps"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">overlaps is an abstract property to express that an object overlaps another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#overlaps">http://observedchange.com/tisc/ns#overlaps</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="overlappedBy"
+     about="http://observedchange.com/tisc/ns#overlappedBy" typeof="owl:ObjectProperty">
+
+  <h3>Property: overlappedBy</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#overlappedBy"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">overlappedBy is an abstract property to express that an object is overlappedBy another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#overlappedBy">http://observedchange.com/tisc/ns#overlappedBy</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="starts"
+     about="http://observedchange.com/tisc/ns#starts" typeof="owl:ObjectProperty">
+
+  <h3>Property: starts</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#starts"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">starts is an abstract property to express that an object starts another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#starts">http://observedchange.com/tisc/ns#starts</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="finishes"
+     about="http://observedchange.com/tisc/ns#finishes" typeof="owl:ObjectProperty">
+
+  <h3>Property: finishes</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#finishes"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">finishes is an abstract property to express that an object finishes another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#finishes">http://observedchange.com/tisc/ns#finishes</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="contains"
+     about="http://observedchange.com/tisc/ns#contains" typeof="owl:ObjectProperty">
+
+  <h3>Property: contains</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#contains"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">contains is an abstract property to express that an object contains another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#contains">http://observedchange.com/tisc/ns#contains</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="during"
+     about="http://observedchange.com/tisc/ns#during" typeof="owl:ObjectProperty">
+
+  <h3>Property: during</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#during"></div>
+  <div property="rdfs:label" content="here" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">during is an abstract property to express that an object is during another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#during">http://observedchange.com/tisc/ns#during</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:domain" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">tisc:Object</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Object"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+ -->
+<div class="specterm" id="isForecastFor"
+     about="http://observedchange.com/tisc/ns#isForecastFor" typeof="owl:ObjectProperty">
+
+  <h3>Property: isForecastFor</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#isForecastFor"></div>
+  <div property="rdfs:label" content="isForecastFor" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">isForecastFor is an abstract property to express that an object is a forecast for a certain time.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#isForecastFor">http://observedchange.com/tisc/ns#isForecastFor</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+
+<div class="specterm" id="forecastMadeAt"
+     about="http://observedchange.com/tisc/ns#forecastMadeAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: forecastMadeAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#forecastMadeAt"></div>
+  <div property="rdfs:label" content="forecastMadeAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">forecastMadeAt is an abstract property to express that an object is forecast made at certain time.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#forecastMadeAt">http://observedchange.com/tisc/ns#forecastMadeAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+      <tr>
+	  <th>Range:</th>
+	   <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="happensAt"
+     about="http://observedchange.com/tisc/ns#happensAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: happensAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#happensAt"></div>
+  <div property="rdfs:label" content="happensAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">happensAt is a predicate to state when something happens (for example an event such as a concert).</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#happensAt">http://observedchange.com/tisc/ns#happensAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+      <tr>
+	  <th>Range:</th>
+	   <td><a href="http://www.w3.org/2006/time#Instant">time:Interval</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#Interval"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="existenceBeginsAt"
+     about="http://observedchange.com/tisc/ns#existenceBeginsAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: existenceBeginsAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#existenceBeginsAt"></div>
+  <div property="rdfs:label" content="existenceBeginsAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">existenceBeginsAt is an abstract property to express that the existence of an object begins at a given time instant.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#existenceBeginsAt">http://observedchange.com/tisc/ns#existenceBeginsAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+      <tr>
+	  <th>Range:</th>
+	   <td><a href="http://www.w3.org/2006/time#Instant">time:Instant</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#Instant"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="existenceEndsAt"
+     about="http://observedchange.com/tisc/ns#existenceEndsAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: existenceEndsAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#existenceEndsAt"></div>
+  <div property="rdfs:label" content="existenceEndsAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">existenceEndsAt is an abstract property to express that the existence of an object ends at a given time instant.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#existenceEndsAt">http://observedchange.com/tisc/ns#existenceEndsAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      
+      <tr>
+	  <th>Range:</th>
+	    <td><a href="http://www.w3.org/2006/time#Instant">time:Instant</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#Instant"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+
+<div class="specterm" id="inFutureOf"
+     about="http://observedchange.com/tisc/ns#inFutureOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: inFutureOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#inFutureOf"></div>
+  <div property="rdfs:label" content="inFutureOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">inFutureOf is an abstract property to express that an object is in future of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#inFutureOf">http://observedchange.com/tisc/ns#inFutureOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+      <tr>
+	  <th>Range:</th>
+	   <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="inPastOf"
+     about="http://observedchange.com/tisc/ns#inPastOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: inPastOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/tisc/ns#inPastOf"></div>
+  <div property="rdfs:label" content="inPastOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">inPastOf is an abstract property to express that an object is in past of another.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/tisc/ns#inPastOf">http://observedchange.com/tisc/ns#inPastOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+    
+      <tr>
+	  <th>Range:</th>
+	   <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="fuzzybegin"
+     about="http://linkedscience.org/lsc/ns#fuzzybegin" typeof="owl:ObjectProperty">
+
+  <h3>Property: fuzzybegin</h3>
+   
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#fuzzybegin"></div>
+  <div property="rdfs:label" content="fuzzybegin" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">This predicate can be used to express a fuzzybegin of an imprecise time period.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#fuzzybegin">http://linkedscience.org/lsc/ns#fuzzybegin</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="begin"
+     about="http://linkedscience.org/lsc/ns#begin" typeof="owl:ObjectProperty">
+
+  <h3>Property: begin</h3>
+   
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#begin"></div>
+  <div property="rdfs:label" content="begin" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">This predicate can be used to express a begin of a time period.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#begin">http://linkedscience.org/lsc/ns#begin</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="end"
+     about="http://linkedscience.org/lsc/ns#end" typeof="owl:ObjectProperty">
+
+  <h3>Property: end</h3>
+   
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#end"></div>
+  <div property="rdfs:label" content="end" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">This predicate can be used to express an end of a time period.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#end">http://linkedscience.org/lsc/ns#end</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="fuzzyend"
+     about="http://linkedscience.org/lsc/ns#fuzzyend" typeof="owl:ObjectProperty">
+
+  <h3>Property: fuzzyend</h3>
+   
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#fuzzyend"></div>
+  <div property="rdfs:label" content="fuzzyend" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">This predicate can be used to express a fuzzyend of an imprecise time period.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#fuzzyend">http://linkedscience.org/lsc/ns#fuzzyend</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<h2 id="sec-ack">5. Acknowledgement</h2>
+
+We would like to acknowledge the participants of the <a href="http://vocamp.org/wiki/GeoVoCampSouthampton2011">GeoVoCampSouthampton2011</a> and students of the Linked Open Data---(R)Evolution -seminar at the Institute for Geoinformatics, University of Muenster for all the fruitful discussions, ideas and comments.
+
+
+
+<h2 id="sec-reference">6. References</h2>
+<ul>
+<li>TISC includes RCC8 relations. About RCC8 see Randell, D. A., Cui, Z. and Cohn, A. G.: A spatial logic based on regions and connection, Proc. 3rd Int. Conf. on Knowledge Representation and Reasoning, Morgan Kaufmann, San Mateo, pp. 165–176, 1992.</li>
+<li>TISC includes relations for expressing fuzzy time periods, see the following publication for use of them: Tomi Kauppinen, Glauco Mantegari, Panu Paakkarinen, Heini Kuittinen, Eero Hyvönen, and Stefania Bandini. Determining Relevance of Imprecise Temporal Intervals for Cultural Heritage Information Retrieval. International Journal of Human-Computer Studies, Volume 68, Issue 9, September 2010 (2010-09), pp. 549-560 , Elsevier.  <a href="http://kauppinen.net/tomi/temporal-relevance-ijhcs2010.pdf">[Preprint PDF]</a>  <a href="http://kauppinen.net/tomi/publications-tomi-kauppinen.bib">[BibTeX]</a></li></ul>
+<h2 id="sec-changes">7. Change log</h2>
+
+<ul>
+
+  <li>2011-04-18: Initial version of the TISC core vocabulary.</li>
+  <li>2011-04-26: Extended version of the TISC core vocabulary to include spatial and temporal properties needed at the LOD seminar.</li>
+  <li>2011-05-11: Extended version of the TISC core vocabulary to include "next" as required by students at the LOD seminar.</li>
+  <li>2011-08-16: Added the predicate "happensAt". Removed the "Object" class, and according domain/range restrictions.</li>
+  <li>2012-05-02: Added predicates (fuzzybegin, begin, end, fuzzyend) for modeling fuzzy time intervals.</li>  
+  <li>2013-10-06: Added predicates and classes for expressing partial overlap.</li>
+</ul>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8367411-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,1540 @@
+
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>DomRaider - Decentralized Blockchain Auction</title>
+
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:{profile:false},oracle:0,paths:{cloudflare:"https://ajax.cloudflare.com/cdn-cgi/nexp/dok3v=9eecb7db59/","cloudflare-static": "https://ajax.cloudflare.com/cdn-cgi/scripts/84a23a00/"},atok:"eaa9a9227e415375f4aa402d585d51be",petok:"2b2c188c2a5b8a069767e2c0653c24d58044d583-1510602668-1800",zone:"domraider.io"}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="https://ajax.cloudflare.com/cdn-cgi/nexp/dok3v=c37cbdadf2/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="canonical" href="https://www.domraider.io/en/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DomRaider - Decentralized Blockchain Auction" />
+<meta property="og:description" content="DomRaider is developing a technological solution dedicated to the real-time management of auctions worldwide." />
+<meta property="og:url" content="https://www.domraider.io/en/" />
+<meta property="og:site_name" content="DomRaider / ICO" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DomRaider - Decentralized Blockchain Auction" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.domraider.io\/en\/","name":"DomRaider \/ ICO","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.domraider.io\/en\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.domraider.io\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.1"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.domraider.io/app/plugins/js_composer/assets/css/js_composer.min.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://www.domraider.io/app/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sccss_style-css' href='https://www.domraider.io/?sccss=1&#038;ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='domraider/ico.css-css' href='https://www.domraider.io/app/themes/theme/dist/styles/ico.css' type='text/css' media='all' />
+<link rel='stylesheet' id='timeline-front-css-css' href='//www.domraider.io/app/plugins/victheme_timeline/assets/timeline-front/css/timeline-front.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='timeline-skins-css-css' href='//www.domraider.io/app/plugins/victheme_timeline/assets/timeline-skins/css/timeline-skins.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-visualcomposer-extra-css-css' href='//www.domraider.io/app/plugins/victheme_core/wordpress/assets/wp-visualcomposer-extra/css/wp-visualcomposer-extra.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-min-css-css' href='//www.domraider.io/app/plugins/victheme_core/vtcore/assets/font-awesome/css/font-awesome.min.css?ver=4.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-plus-css-css' href='//www.domraider.io/app/plugins/victheme_core/vtcore/assets/font-awesome/css/fontawesome-plus.css?ver=4.8.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.domraider.io/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.domraider.io/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var FlowFlowOpts = {"streams":{},"open_in_new":"yep","filter_all":"All","filter_search":"Search","expand_text":"Expand","collapse_text":"Collapse","posted_on":"Posted on","show_more":"Show more","date_style":"agoStyleDate","dates":{"Yesterday":"Yesterday","s":"s","m":"m","h":"h","ago":"ago","months":["Jan","Feb","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec"]},"lightbox_navigate":"Navigate with arrow keys","server_time":"1510524661","forceHTTPS":"nope","isAdmin":"","ajaxurl":"https:\/\/www.domraider.io\/wp\/wp-admin\/admin-ajax.php","isLog":"","plugin_base":"https:\/\/www.domraider.io\/app\/plugins\/flow-flow","plugin_ver":"3.0.13"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.domraider.io/app/plugins/flow-flow/js/require-utils.js?ver=3.0.13'></script>
+<link rel='https://api.w.org/' href='https://www.domraider.io/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.domraider.io/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.domraider.io/wp/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.8.1" />
+<link rel='shortlink' href='https://www.domraider.io/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.domraider.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.domraider.io%2Fen%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.domraider.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.domraider.io%2Fen%2F&#038;format=xml" />
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.domraider.io/app/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><link rel="alternate" href="https://www.domraider.io/en/" hreflang="en" />
+<link rel="alternate" href="https://www.domraider.io/zh/" hreflang="zh" />
+<link rel="alternate" href="https://www.domraider.io/ru/" hreflang="ru" />
+<link rel="alternate" href="https://www.domraider.io/fr/" hreflang="fr" />
+<link rel="alternate" href="https://www.domraider.io/" hreflang="x-default" />
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1507541795223{background-image: url(https://www.domraider.io/app/uploads/2017/10/BACKICO2.png?id=1629) !important;}.vc_custom_1504707062214{background-color: #2e2447 !important;}.vc_custom_1504706318605{background-color: #ffffff !important;}.vc_custom_1503316776789{background-color: #f5f5f5 !important;}.vc_custom_1503319216954{background-color: #f5f5f5 !important;}.vc_custom_1504808258221{background-color: #e3e3e3 !important;}.vc_custom_1508401249351{background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1508422477201{margin-top: -20px !important;}.vc_custom_1508402055063{padding-top: 40px !important;padding-bottom: 40px !important;}.vc_custom_1504620442009{margin-top: 0px !important;margin-bottom: 0px !important;border-top-width: 0px !important;border-bottom-width: 0px !important;padding-top: 0px !important;padding-bottom: 0px !important;}.vc_custom_1507291858535{background-color: #f5f5f5 !important;}.vc_custom_1504684166624{padding-right: 60px !important;padding-left: 60px !important;}.vc_custom_1503393470221{margin-bottom: 10px !important;}.vc_custom_1503393904814{margin-bottom: 10px !important;}.vc_custom_1503394273772{margin-bottom: 10px !important;}.vc_custom_1503393053266{border-top-width: 20px !important;padding-top: 20px !important;}.vc_custom_1503040583039{margin-bottom: 0px !important;}.vc_custom_1503395839043{margin-bottom: 0px !important;}.vc_custom_1503309957164{padding-right: 40px !important;padding-left: 40px !important;}.vc_custom_1503309963453{padding-right: 40px !important;padding-left: 40px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript> <link rel="icon" type="image/x-icon" href="https://www.domraider.io/app/themes/theme/dist/images/favicon.ico" />
+</head>
+<body class="home page-template page-template-template-page-without-header template-page-without-header page page-id-1817 wpb-js-composer js-comp-ver-5.0.1 vc_responsive app-data singular-data page-data page-1817-data page-v5_landing_us-data template-page-without-header-data front-page-data" data-theme="ico">
+<div class="site-header-placeholder"></div>
+<div class="pre-header">
+<div class="container">
+<ul class="portal-nav">
+<li class="">
+<a href="//www.domraider.com">Drop catching</a>
+</li>
+<li class="">
+<a href="//blog.domraider.com">Blog</a>
+</li>
+<li class="">
+<a href="//corporate.domraider.com">Corporate site</a>
+</li>
+<li class="active">
+<a href="//www.domraider.io">ICO</a>
+</li>
+</ul>
+<ul class="social-nav">
+<li>
+<a href="//www.facebook.com/Domraider-1432606216988548" target="_blank" class="fa fa-facebook"></a>
+</li>
+<li>
+<a href="//twitter.com/domraider" target="_blank" class="fa fa-twitter"></a>
+</li>
+<li>
+<a href="//www.linkedin.com/company-beta/10805751/" target="_blank" class="fa fa-linkedin"></a>
+</li>
+<li>
+<a href="//www.youtube.com/domraider" target="_blank" class="fa fa-youtube"></a>
+</li>
+<li>
+<a href="//t.me/Domraider_ICO" target="_blank" class="fa fa-location-arrow"></a>
+</li>
+<li>
+<a href="//join.slack.com/t/domraiderico/shared_invite/MjM1MDg0MTY2MDE4LTE1MDQyNzQ4MDYtNTU0NDg5YzgyNQ" target="_blank" class="fa fa-slack"></a>
+</li>
+<li>
+<a href="//bitcointalk.org/index.php?topic=2132588.msg21314814#msg21314814" target="_blank" class="fa fa-bitcoin"></a>
+</li>
+<li>
+<a href="//medium.com/@domraider" target="_blank" class="fa fa-medium"></a>
+</li>
+</ul>
+</div>
+</div>
+<header class="site-header">
+<div class="container">
+<button class="site-header-burger fa-bars" type="button"></button>
+<a class="site-header-brand dr-brand" href="https://www.domraider.io/">
+<svg xmlns="http://www.w3.org/2000/svg" class="dr-maze" viewBox="0 0 40 40">
+<title>Domraider — maze</title>
+<defs>
+<linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="gradient-coral-pink">
+<stop stop-color="rgb(235, 94, 87)" offset="0%" />
+<stop stop-color="rgb(234, 82, 144)" offset="100%" />
+</linearGradient>
+</defs>
+<path fill="url(#gradient-coral-pink)" fill-rule="evenodd" d="M20.22 17.08h-.08c-.1 0-.16-.02-.23 0h-.07c-.83.03-1.6.4-2.16 1v.02c-.3.3-.5.66-.64 1.05-.12.34-.2.7-.2 1.06 0 1.44 1 2.7 2.38 3.05l.15.03c.2.05.42.07.64.07.2 0 .4-.02.6-.06.27-.06.53-.15.77-.27l.1-.06c.03 0 .05-.02.08-.04l.07-.04.06-.05h.03l.08-.07c.84-.58 1.35-1.55 1.35-2.57 0-1.62-1.28-3-2.9-3.12zm11.53 9.9c-1.8 3.14-4.74 5.38-8.23 6.32-.1.02-.18.04-.27.04-.48 0-.9-.32-1.02-.78-.15-.56.18-1.14.74-1.3h.06c.52-.18.82-.73.68-1.26-.1-.45-.52-.76-1-.76-.06 0-.13 0-.2.02l-.07.02c-.1.02-.17.03-.26.03-.48 0-.9-.3-1.02-.77-.07-.27-.03-.56.1-.8.15-.24.38-.42.65-.5 1.34-.35 2.54-1.08 3.47-2.1.9-.98 1.52-2.2 1.8-3.5v-.04-.06-.04c.08-.54-.28-1.05-.82-1.15l-.2-.02c-.44 0-.85.3-.98.73l-.03.1v.06l-.02.03c0 .04 0 .1-.02.13 0 0 0 .04-.02.06v.03s0 .02-.02.03v.06l-.02.02c-.63 2.26-2.7 3.83-5.05 3.83-.47 0-.93-.06-1.37-.17l-.17-.04h-.1c-.46 0-.87.3-1 .76-.13.52.16 1.07.67 1.24h.04c0 .02.02.02.04.02.56.16.9.73.75 1.3-.13.45-.54.77-1.02.77-.1 0-.18 0-.27-.03-2.02-.55-3.76-1.7-5.03-3.37-1.22-1.6-1.9-3.6-1.93-5.6v-.03-.06c-.03-.56-.48-1-1.03-1-.58 0-1.04.47-1.04 1.04.03 5.15 3.52 9.68 8.5 11 .26.08.5.26.63.5.14.24.18.53.1.8-.12.46-.53.78-1 .78-.1 0-.2 0-.28-.04-3.5-.93-6.42-3.18-8.23-6.32-1.8-3.14-2.3-6.8-1.36-10.28.1-.46.53-.78 1-.78.1 0 .2 0 .28.03.55.15.9.72.75 1.28l-.02.07c-.1.53.22 1.06.75 1.2.1.03.18.04.27.04.45 0 .85-.28.98-.7l.02-.08c.13-.45.54-.76 1-.76.1 0 .2 0 .3.03.55.15.88.73.73 1.3-.36 1.33-.33 2.73.1 4.05.4 1.28 1.13 2.42 2.14 3.3v.02l.06.04.02.02c.18.14.4.22.63.22.3 0 .6-.13.8-.36.32-.38.33-.93.02-1.32l-.03-.03-.03-.03c-1.23-1-1.93-2.48-1.93-4.06 0-1.4.54-2.7 1.53-3.7l.16-.16c.26-.4.2-.95-.14-1.3-.2-.2-.46-.3-.74-.3-.25 0-.5.1-.67.25h-.03c0 .02-.03.03-.04.04-.2.2-.46.3-.74.3-.3 0-.55-.1-.75-.3-.2-.2-.3-.46-.3-.74 0-.28.1-.55.3-.75 1.77-1.77 4.12-2.74 6.63-2.74 1.62 0 3.22.42 4.6 1.2l.04.03h.02l.03.02c.16.1.32.13.48.13.37 0 .7-.2.9-.53.28-.5.1-1.12-.4-1.4-1.7-1-3.67-1.5-5.66-1.5-3.08 0-5.95 1.18-8.1 3.34-.2.2-.48.3-.76.3s-.54-.1-.74-.3c-.2-.2-.3-.47-.3-.75s.1-.54.3-.74c2.55-2.55 5.96-3.96 9.6-3.96 3.6 0 7.02 1.4 9.57 3.97.2.2.3.47.3.75s-.1.55-.3.74c-.2.2-.46.3-.74.3-.28 0-.54-.1-.74-.3l-.06-.05c-.2-.17-.43-.26-.7-.26-.26 0-.52.1-.72.3-.4.38-.4 1-.03 1.42l.03.04c.4.4.4 1.08 0 1.48-.2.2-.47.3-.75.3s-.54-.1-.74-.3c-1.38-1.37-3.2-2.13-5.15-2.13-.82 0-1.6.14-2.36.4h-.03l-.04.02-.04.02c-.5.2-.76.77-.58 1.3.15.4.54.68.98.68h.17l.02-.02h.03c.6-.23 1.2-.34 1.84-.34 1.15 0 2.25.38 3.17 1.08.9.7 1.56 1.66 1.86 2.73l.02.04v.05l.04.1c.15.4.53.67.95.67.1 0 .18 0 .27-.04.52-.14.85-.66.75-1.2l-.02-.06c-.15-.56.18-1.14.74-1.3l.27-.03c.47 0 .9.3 1 .77.55 2.02.4 4.1-.4 6.04-.77 1.86-2.14 3.45-3.85 4.47l-.05.03h-.02c0 .02-.02.02-.02.03h-.02c-.46.3-.6.92-.32 1.4.18.3.52.5.9.5.17 0 .35-.04.5-.14 4.45-2.6 6.63-7.9 5.3-12.86-.08-.27-.04-.56.1-.8s.37-.42.64-.5c.1 0 .18-.03.27-.03.47 0 .9.34 1 .8.94 3.5.46 7.14-1.35 10.28M5.85 5.86c-7.8 7.8-7.8 20.47 0 28.28 7.82 7.8 20.48 7.8 28.3 0 7.8-7.8 7.8-20.47 0-28.28-7.82-7.8-20.48-7.8-28.3 0" />
+</svg> <svg xmlns="http://www.w3.org/2000/svg" class="dr-logo" viewBox="0 0 375 36">
+<path fill="#000" d="M363.76 15.73H349.7V7.5h14.06c1.16 0 2.15.4 2.96 1.23.82.8 1.22 1.77 1.22 2.87 0 1.13-.4 2.1-1.22 2.9-.8.83-1.8 1.23-2.96 1.23zm3.4 5.74c2.15-.76 3.88-2.04 5.18-3.84 1.3-1.8 1.94-3.8 1.94-6.03 0-2.86-1.02-5.32-3.07-7.36-2.03-2.05-4.52-3.07-7.44-3.07h-20.4V34.6h6.33V22.06H360l7.37 12.52h7.38l-7.63-13.13zM305.54 20.08h11.72v-6.5h-11.72V7.52h20.25V1.18h-26.6V34.6h27.1v-6.35h-20.76M278.47 25.2c-2 2.04-4.44 3.05-7.3 3.05h-8.33V7.5h8.33c2.86 0 5.3 1.02 7.3 3.05 2.02 2.03 3.02 4.45 3.02 7.28 0 2.9-1 5.35-3.03 7.38m-7.3-24.03H256.5V34.6h14.67c4.62 0 8.57-1.65 11.84-4.92 3.3-3.28 4.93-7.23 4.93-11.85 0-4.6-1.64-8.5-4.92-11.77-3.26-3.26-7.2-4.9-11.83-4.9M232.82 34.6h6.33V1.16h-6.33M198.05 20.87l5.53-11.62 5.5 11.62h-11.03zm2.34-19.7L184.57 34.6h7.03l3.5-7.3h17l3.4 7.3h7.04l-15.8-33.43h-6.35zM163.04 15.73h-14.06V7.5h14.06c1.17 0 2.15.4 2.97 1.23.82.8 1.23 1.77 1.23 2.87 0 1.13-.4 2.1-1.22 2.9-.8.83-1.8 1.23-2.96 1.23m8.58 1.9c1.3-1.8 1.94-3.8 1.94-6.03 0-2.86-1.02-5.32-3.07-7.36-2.05-2.05-4.54-3.07-7.46-3.07h-20.4V34.6h6.34V22.06h10.32l7.38 12.52h7.38l-7.63-13.13c2.16-.76 3.9-2.04 5.2-3.84M107.1 22.22L94.88 1.17h-5.84V34.6h6.23V14.8l11.83 19.8 11.72-19.8v19.8h6.33V1.16h-6M68.34 25.5c-2.18 2.15-4.8 3.23-7.85 3.23-3.07 0-5.7-1.08-7.87-3.24-2.18-2.17-3.27-4.77-3.27-7.8 0-3 1.1-5.5 3.27-7.57 2.18-2.07 4.8-3.1 7.86-3.1 3.05 0 5.66 1.05 7.84 3.15 2.18 2.1 3.27 4.6 3.27 7.53 0 3.03-1.08 5.63-3.26 7.8M60.5.6c-4.93 0-9.07 1.65-12.43 4.96-3.36 3.3-5.04 7.4-5.04 12.25 0 4.73 1.72 8.8 5.16 12.22 3.44 3.43 7.53 5.14 12.3 5.14 4.74 0 8.84-1.7 12.28-5.14 3.44-3.42 5.16-7.53 5.16-12.3 0-4.63-1.74-8.64-5.23-12.03C69.2 2.3 65.15.6 60.5.6M22.62 25.2c-2 2.04-4.44 3.05-7.3 3.05H7V7.5h8.32c2.86 0 5.3 1.02 7.3 3.05s3.02 4.45 3.02 7.28c0 2.9-1 5.35-3.02 7.38m-7.3-24.03H.65V34.6h14.67c4.62 0 8.57-1.65 11.84-4.92 3.27-3.28 4.9-7.23 4.9-11.85 0-4.6-1.63-8.5-4.9-11.77-3.27-3.26-7.22-4.9-11.84-4.9" />
+</svg>
+<div class="suffix">
+<svg xmlns="http://www.w3.org/2000/svg" class="dr-slash" viewBox="0 0 13 37">
+<defs>
+<linearGradient id="a" x1="0%" y1="0%" y2="100%">
+<stop stop-color="#EA5C37" offset="0%" />
+<stop stop-color="#EA518F" offset="100%" />
+</linearGradient>
+</defs>
+<path fill="url(#a)" fill-rule="evenodd" d="M236.06 51.53h4.62l7.38-36h-4.6" transform="translate(-236 -15)" />
+</svg> <span>ICO</span>
+</div>
+</a>
+<nav class="site-header-menu">
+<div class="menu-menu-principal-en-container"><ul id="menu-menu-principal-en" class="nav"><li id="menu-item-772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-772"><a href="#domraider">DomRaider</a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-773"><a href="#ico">Blockchain</a></li>
+<li id="menu-item-775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-775"><a href="#roadmap">Roadmap</a></li>
+<li id="menu-item-777" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-777"><a href="#team">Team</a></li>
+<li id="menu-item-1572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1572"><a href="https://support.domraider.com/hc/en-us/categories/115000055373-DomRaider-ICO">Helpcenter</a></li>
+<li id="menu-item-1857" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1857"><a href="http://ww2.domraider.io">My account</a></li>
+</ul></div>
+</nav>
+<nav class="nav-lang site-header-langs">
+<button type="button">
+<span>En</span>
+<i class="dr-icon fa-globe"></i>
+</button>
+<ul> <li class="lang-item lang-item-14 lang-item-en lang-item-first current-lang"><a lang="en-US" hreflang="en-US" href="https://www.domraider.io/en/">En</a></li>
+<li class="lang-item lang-item-35 lang-item-zh"><a lang="zh-CN" hreflang="zh-CN" href="https://www.domraider.io/zh/">中文</a></li>
+<li class="lang-item lang-item-31 lang-item-ru"><a lang="ru-RU" hreflang="ru-RU" href="https://www.domraider.io/ru/">РУС</a></li>
+<li class="lang-item lang-item-7 lang-item-fr"><a lang="fr-FR" hreflang="fr-FR" href="https://www.domraider.io/fr/">Fr</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="wrap" role="document">
+<div class="content">
+<main class="main">
+<div class="main-container ">
+<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section dr-bg-purple-dark vc_custom_1507541795223 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1 style="text-align: center;">DOMRAIDER DECENTRALIZED AUCTIONS BLOCKCHAIN NETWORK</h1>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element  vc_custom_1508422477201">
+<div class="wpb_wrapper">
+<p style="text-align: center; color: #fff;"><strong>DomRaider is currently developing a technological solution dedicated to the real-time management of auctions worldwide, whether they are carried out online or in the auction room.Any type of commodity, whether physical or virtual, can be sold on the Blockchain.</strong></p>
+</div>
+</div>
+<div class="vc_empty_space" style="height: 35px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid ico-landing vc_custom_1508401249351 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1508402055063"><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h2 style="color: #eb5e57;">100% OF THE TOKENS HAVE BEEN ALLOCATED</h2>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p><span style="color: #fff;"><br />
+<strong>Number of DRT&#8217;s sold</strong>: 560 Million<br />
+<strong>Smart Contract Address</strong>: 0x9af4f26941677c706cfecf6d3379ff01bb85d5ab<br />
+<strong>Symbol </strong>: DRT<br />
+<strong>Decimals</strong>: 8<br />
+</span></p>
+</div>
+</div>
+<div class="wpb_video_widget wpb_content_element vc_clearfix   vc_video-aspect-ratio-169 vc_video-el-width-100 vc_video-align-left">
+<div class="wpb_wrapper">
+<div class="wpb_video_wrapper"><iframe width="500" height="281" src="https://www.youtube.com/embed/W_HnRS-Wmi4?feature=oembed" frameborder="0" allowfullscreen></iframe></div>
+</div>
+</div>
+</div></div></div><div class="hero wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h2 style="color: #eb5e57; text-align: center;">THE DRT&#8217;S ARE EXCHANGEABLE ON:</h2>
+</div>
+</div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="40" data-cfsrc="https://www.domraider.io/app/uploads/2017/10/hitbtc-1-1.png" class="vc_single_image-img attachment-full" alt="" style="display:none;visibility:hidden;" /><noscript><img width="150" height="40" src="https://www.domraider.io/app/uploads/2017/10/hitbtc-1-1.png" class="vc_single_image-img attachment-full" alt="" /></noscript></div>
+</figure>
+</div>
+<a class="dr-btn-white" href="https://hitbtc.com/exchange/DRT-to-ETH">Buy on HitBTC</a></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="40" data-cfsrc="https://www.domraider.io/app/uploads/2017/10/etherdelta-1.png" class="vc_single_image-img attachment-full" alt="" style="display:none;visibility:hidden;" /><noscript><img width="150" height="40" src="https://www.domraider.io/app/uploads/2017/10/etherdelta-1.png" class="vc_single_image-img attachment-full" alt="" /></noscript></div>
+</figure>
+</div>
+<a class="dr-btn-white" href="https://etherdelta.com/#0x9af4f26941677c706cfecf6d3379ff01bb85d5ab-ETH">Buy on EtherDelta</a></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h3>KEEP UPDATED ON THE PROGRESS OF THE PROJECT</h3>
+</div>
+</div>
+<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+<div class="wpb_wrapper">
+<form id="email_signup" class=" klaviyo_bare_embed_Lwu79L klaviyo_horizontal_form newsletter-form" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate">
+<input type="hidden" name="g" value="Lwu79L">
+<div class="klaviyo_field_group">
+<input class="newsletter-input" type="email" value="" name="email" id="k_id_email" placeholder="Votre email" />
+<input class="submit klaviyo_submit_button newsletter-submit" type="submit" value="Inscription" />
+</div>
+<div class="klaviyo_messages">
+<div class="success_message" style="display:none;"></div>
+<div class="error_message" style="display:none;"></div>
+</div>
+</form>
+<style type="text/css">
+.klaviyo_bare_embed_Lwu79L {
+  color: #FFF;
+  font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: none;
+}
+</style>
+<script>
+  var _learnq = _learnq || [];
+  _learnq.push(['account', 'PNnMFV']);
+  (function () {
+  var b = document.createElement('script'); b.type = 'text/javascript'; b.async = true;
+  b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'a.klaviyo.com/media/js/analytics/analytics.js';
+  var a = document.getElementsByTagName('script')[0]; a.parentNode.insertBefore(b, a);
+  })();
+</script>
+<script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script>
+<script type="text/javascript">
+  KlaviyoSubscribe.attachToForms('#email_signup', {
+    hide_form_on_success: true,
+    success_message: "<strong>Pour valider votre inscription, veuillez cliquer sur le lien contenu dans l'e-mail de confirmation qui vous a été adressé.</strong> Si vous ne l'avez pas reçu, vérifiez votre dossier <em>Spam</em> ou <em>Courrier indésirable</em>.",
+    success: function($form) {
+       var email = $form.find('[name="email"]').val();
+      _learnq.push(['identify', { $email: email, Lang: 'FR' }]);
+      _learnq.push(['track', 'Registered on website']);
+      track_newsletter_registration();
+    },
+    extra_properties: {
+      $source: 'domraider.io',
+      Lang: 'EN'
+    }
+  });
+</script>
+<style type="text/css">
+.klaviyo_messages .success_message {
+ font-size: 18px;
+}
+</style>
+</div>
+</div>
+</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 50px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+</div>
+</div>
+</section><div class="vc_row-full-width vc_clearfix"></div><section id="ico" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section"><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1504620442009 vc_row-has-fill vc_row-o-content-middle vc_row-flex"><div class="key-factor wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1504684166624"><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>KEY FACTORS</h1>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element  key-factor-text">
+<div class="wpb_wrapper">
+<p>1 Innovation of ground-breaking technology by blockchain experts</p>
+<p>2 Maturity of an already well-established company and an experienced team</p>
+<p>3 Not just a concept, but a solid roadmap and set-up plan</p>
+<p>4 A company in compliance with French legislation whose accounts are audited</p>
+</div>
+</div>
+<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+<div class="wpb_wrapper">
+<div style="text-align:center;margin-left:auto; margin-right:auto;margin-top:-10px;">
+<a class="dr-btn-primary" id="download-whitepaper" target="_blank" href="https://s3-eu-west-1.amazonaws.com/domraider/domraider/DomRaider+ICO+Whitepaper+EN.pdf">Whitepaper</a>
+<a class="dr-btn-primary" id="download-presentation" target="_blank" href="https://s3-eu-west-1.amazonaws.com/domraider/domraider/DomRaider+ICO+Presentation+EN.pdf">Presentation</a>
+</div>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_video_widget wpb_content_element vc_clearfix   vc_video-aspect-ratio-169 vc_video-el-width-100 vc_video-align-left">
+<div class="wpb_wrapper">
+<div class="wpb_video_wrapper"><iframe width="500" height="281" src="https://www.youtube.com/embed/Ztn3-qhSpxo?feature=oembed" frameborder="0" allowfullscreen></iframe></div>
+</div>
+</div>
+<div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><section id="ico" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section vc_custom_1507291858535 vc_section-has-fill"></section><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+</div>
+</div>
+<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>THE CREATION OF A NEW ECOSYSTEM DEDICATED TO AUCTIONS</h1>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1000" height="1000" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-150x150.png 150w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-380x380.png 380w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-500x500.png 500w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-300x300@2x.png 600w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-660x660.png 660w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-380x380@2x.png 760w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-768x768.png 768w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-800x800.png 800w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1.png 1000w" sizes="(max-width: 380px) 38vw,(max-width: 500px) 50vw,(max-width: 660px) 66vw,(max-width: 800px) 80vw,1000px" style="display:none;visibility:hidden;" /><noscript><img width="1000" height="1000" src="https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-150x150.png 150w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-380x380.png 380w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-500x500.png 500w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-300x300@2x.png 600w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-660x660.png 660w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-380x380@2x.png 760w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-768x768.png 768w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1-800x800.png 800w, https://www.domraider.io/app/uploads/2017/07/schema_en_1_v1.png 1000w" sizes="(max-width: 380px) 38vw,(max-width: 500px) 50vw,(max-width: 660px) 66vw,(max-width: 800px) 80vw,1000px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>This is an open-source blockchain dedicated to the decentralization of auctions in real time. It will be transparent, reliable, adaptable and interoperable, without compromising on speed.</p>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>The DomRaider network is not only aimed to register auctions and bids. It is the core of a complete new auctioning ecosystem aimed to provide an innovative solution for all worldwide auctioning players.</p>
+<p>Live auctioneers, escrow, appraisal experts, delivery services and online auctions providers will all be able to join the network, provide their services and add value to the blockchain.</p>
+</div>
+</div>
+<div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  vc_custom_1503393470221 dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<p>The core of the network</p>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Logging of bids and registration of transactions</p>
+<p>Application of common rules</p>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  vc_custom_1503393904814 dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<p>Advanced features</p>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Addition of advanced rules specific to organizers in order to adapt to different types of sales</p>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  vc_custom_1503394273772 dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<p>Additional services</p>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Advanced service providers enhancing the functionning of the network</p>
+</div>
+</div>
+</div></div></div></div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+</div>
+</div>
+</section><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.25" data-vc-parallax-image="https://www.domraider.io/app/uploads/2017/09/quote-bg.jpg" class="vc_row wpb_row vc_row-fluid vc_custom_1504707062214 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><h2 style="color: #ffffff;text-align: center" class="vc_custom_heading vc_custom_1503393053266">"The DomRaider ICO combines two key factors for success: innovation of ground-breaking technology by blockchain experts and the maturity of an already well-established company and an experienced team."</h2><h3 style="color: #ffffff;text-align: center" class="vc_custom_heading">TRISTAN COLOMBET, CEO</h3></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div><div class="vc_empty_space" style="height: 70px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="roadmap" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.3" data-vc-parallax-image="https://www.domraider.io/app/uploads/2017/07/background-roadmap.png" class="vc_row wpb_row vc_row-fluid vc_custom_1504706318605 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>ROADMAP</h1>
+</div>
+</div>
+<div class=" timeline-simple timeline-main-wrapper timeline-skin" data-align="center" data-layout="vertical" data-timeline="wrapper"><div class="timeline-bar" data-timeline="bar"></div><ul class="timeline clearfix" data-timeline="element"><li class="timeline-items" data-timeline="items" data-direction="center" data-type="major"><div class="timeline-major"><div class="timeline-major-wrapper">July 2013
+Creation of DomRaider</div></div></li><li class="timeline-items" data-timeline="items" data-direction="right" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">October</span><span class="timeline-year">2016</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-right"></i></span></div><h2 class="timeline-title">$2 million raised</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="left" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">May</span><span class="timeline-year">2017</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-left"></i></span></div><h2 class="timeline-title">$2 million in supplementary financing</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="right" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">June</span><span class="timeline-year">2017</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-right"></i></span></div><h2 class="timeline-title">Conception of the DomRaider blockchain</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="center" data-type="major"><div class="timeline-major"><div class="timeline-major-wrapper">We are here</div></div></li><li class="timeline-items" data-timeline="items" data-direction="left" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">September</span><span class="timeline-year">2017</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-left"></i></span></div><h2 class="timeline-title">Start of the sale + registration of deposits in cryptocurrency</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="right" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">October</span><span class="timeline-year">2017</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-right"></i></span></div><h2 class="timeline-title">Issue of DRT tokens </h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="left" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">December</span><span class="timeline-year">2017</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-left"></i></span></div><h2 class="timeline-title">Management of the auction process, bidding and allocations on our private infrastructure.</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="right" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">February</span><span class="timeline-year">2018</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-right"></i></span></div><h2 class="timeline-title">Moving DomRaider auctions on to the blockchain</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="left" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">April</span><span class="timeline-year">2018</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-left"></i></span></div><h2 class="timeline-title">Launching of the DomRaider partners program with auction professionals</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="right" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">June</span><span class="timeline-year">2018</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-right"></i></span></div><h2 class="timeline-title">First implementation with a third-party</h2><div class="timeline-content"></div></div></li><li class="timeline-items" data-timeline="items" data-direction="left" data-type="event"><div class="timeline-events" data-timeline-content="normal"><time class="timeline-time clearfix"><span class="timeline-month">September</span><span class="timeline-year">2018</span></time><div class="timeline-icon faplus clearfix fa" data-timeline="icon"><span class="fa faplus-shape-circle"><i class="fa fa-angle-left"></i></span></div><h2 class="timeline-title">First nodes operated by non-affiliated partners at DomRaider</h2><div class="timeline-content"></div></div></li></ul></div><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="advisors" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1503316776789 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503040583039 dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>ADVISORS</h1>
+</div>
+</div>
+<div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/Eddy_Travia_photo_IUM_small.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Eddy</span>
+<span class="last-name">Travia</span>
+</h3>
+<p class="position">Pionner investor in Blockchain</p>
+<nav class="social">
+<a href="https://www.facebook.com/StartupEddy" target="_blank" class="dr-btn-icon fa-facebook"></a>
+<a href="https://twitter.com/startupeddy" target="_blank" class="dr-btn-icon fa-twitter"></a>
+<a href="https://uk.linkedin.com/in/startupeddy" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">CEO and Co-founder of Coinsilium</p>
+<p>Co-founder at Block Chain Space</p>
+<p>Eddy Travia is a pioneer investor in blockchain technology startups and the CEO of Coinsilium, a London-based investment company that finances and manages the development of early-stage blockchain technology ventures. Coinsilium shares are quoted on NEX Exchange in London (NEX: COIN).</p>
+<p>In July 2013, Eddy co-founded Seedcoin, the world’s first global incubator of Bitcoin startups and, in May 2014, is named among the ‘Top three Most Influential Investors’ at the Blockchain Awards along with Marc Andreessen and Roger Ver.</p>
+<p>Eddy has led early-stage investments in 17 blockchain companies around the world, including Factom, RSK, SatoshiPay, CoinDash and Indorse.</p>
+<p>An early believer in the impact of blockchain technologies, Eddy delivers keynote speeches around the world, advises corporates, and helps blockchain entrepreneurs to fund and grow their ventures.</p>
+<p>https://uk.linkedin.com/in/startupeddy</p>
+<p>https://www.facebook.com/StartupEddy/</p>
+<p><a class="twitter-timeline" data-width="500" data-height="750" href="https://twitter.com/startupeddy?ref_src=twsrc%5Etfw">Tweets by startupeddy</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>https://uk.linkedin.com/in/startupeddy</p>
+<p>https://www.facebook.com/StartupEddy/</p>
+<p>https://twitter.com/startupeddy</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/About_William_Mougayar_bio_et_photos__Lecture_seule___Mode_de_compatibilité_.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">William</span>
+<span class="last-name">Mougayar</span>
+</h3>
+<p class="position">Author at The Business Blockchain</p>
+<nav class="social">
+<a href="https://www.twitter.com/wmougayar" target="_blank" class="dr-btn-icon fa-twitter"></a>
+</nav>
+</header>
+<div class="bio">Former advisor board member, Ethereum Foundation</p>
+<p>As a long time industry insider, William Mougayar is a prolific researcher, writer and theorist who has been described as the most sophisticated blockchain business thinker. His views and insights are well respected worldwide.</p>
+<p>William is a direct participant in the crypto-technology market, working alongside startups, entrepreneurs, pioneers, leaders, innovators, creators, enterprise executives and practitioners; in addition to being an investor, advisor, and Board member in some of the leading organizations in this space.</p>
+<p>William is the General Partner at Virtual Capital Ventures, an early stage venture capital fund, and currently on the Board of Directors of OB1, the OpenBazaar open source protocol that is pioneering decentralized peer-to-peer commerce, a Board Advisor to the Ethereum Foundation, a member of OMERS Ventures Board of Advisors, an Advisory Board member to the Coin Center and Bloq, and founder of Startup Management.</p>
+<p>Previously, he held senior level positions at Hewlett-Packard, Cognizant and Aberdeen Group, and he founded 3 startups, CYBERManagement, Eqentia, and Engagio.</p>
+<p>William is a graduate of the University of Washington, the University of Western Ontario Ivey School of Business, and attended the University of British Columbia Graduate Commerce School.</p>
+<p>Contact: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c4b5153495b5d455d4e7c5b515d5550125f5351">[email&#160;protected]</a>       |      Twitter: @wmougayar</p>
+<p>Blog: http://startupmanagement.org/blog/    |  Book site: http://thebusinessblockchain.com/</p>
+<p></div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/Fabrice-CROISEAUX_photo.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Fabrice</span>
+<span class="last-name">Croiseaux</span>
+</h3>
+<p class="position">CEO - InTech SA</p>
+<nav class="social">
+<a href="https://twitter.com/fxzo" target="_blank" class="dr-btn-icon fa-twitter"></a>
+<a href="https://www.linkedin.com/in/fcroiseaux" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Chairman of the Board of Directors &#8211; Infrachain</p>
+<p>A graduate of the prestigious Centrale Lyon engineering school and the HEC business school, Fabrice CROISEAUX is the CEO of InTech, a subsidiary of POST Luxembourg specializing in Information Systems and specific development consulting.</p>
+<p>Passionate about digital culture and innovation, he advises his customers on how to use innovative technologies to create breakthrough innovations. He is the facilitator of the blockchain working group of the Federation of Trusted Third Parties (FNTC) and the Chairman of the Infrachain Board of Directors in Luxembourg. With InTech, Fabrice has participated in several large-scale blockchain technology projects in France and in Luxembourg, including FundsDLT which executed the first true purchase of financial assets using blockchain technology. </div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/Dominik-ZYNIS-photo500.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Dominik</span>
+<span class="last-name">Zynis</span>
+</h3>
+<p class="position">WINGS Cofounder</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio">Dominik leads the public relations and communications effort for the WINGS Foundation, a Swiss non-profit organization focused on decentralized finance and governance systems. Previously, he worked with Omni (MastercoinFfoundation) as Head of Communications and Business Development. Prior to his focus on decentralized systems Dominik was responsible for channel sales at eMeter (Siemens), and sales at Oracle. He was Co-Founder and Chief Evangelist at State Software which marketed the first JSON libraries.</p>
+<p>Dominik has a B.A. (Economics) from Middlebury College, and unfinished MSc (Industrial Management) from the Blekinge Institute of Technology. He is driven by the idea that access to markets and financial inclusion are a corner-stone of democracy.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/Laurent-LELOUP_photo.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Laurent</span>
+<span class="last-name">Leloup</span>
+</h3>
+<p class="position">Serial blockchain entrepreneur</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio">Laurent LELOUP<br />
+In 2006, after a 25-year career in corporate finance, Laurent founded Finyear (media &amp; events Finance &amp; Innovation) then Blockchain Daily News (media &amp; events Blockchains &amp; Distributed Ledgers) in 2016.<br />
+In 2016, he founded Chaineum SAS (ICO advise &amp; blockchain Strategy), Blockness SAS (Blockchain Consulting), the BeAchain (Blockchain Oriented Objects) project and France Blocktech (blockchain ecosystem organization).<br />
+In 2017, he launched the Blockchain Valley (blockchain campus &amp; startup incubator) project, co-founded the Voxchain (social choice and universal Proof-of-Stake algorithm for blockchains) project with Voxcracyet and wrote &#8220;Blockchain, la révolution de la confiance&#8221; [Blockchain, the trust revolution](Eyrolles, February 2017), a new book &#8220;Trustnomics, ou comment la confiance va changer le monde&#8221; [Trustnomics, or how trust is going to change the world] will be published by Eyrolles in February 2018.<br />
+He is also a keynote speaker (blockchain technology &amp; ecosystems), participates in various blockchain working groups (AFNOR, FNTC, EU DLT Task Force, FuturICT 2.0, France Stratégie, etc.), is a DLT (Distributed Ledger Technology) expert consultant for the French Tax Collection Agency and the Legal High Committee for Financial Markets of Paris (HCJP) and is an honorary member of Cercle Turgot, a French financial think tank.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/Richard_KASTELEIN_Bio_and_photo__Lecture_seule_.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Richard</span>
+<span class="last-name">G.Kastelein</span>
+</h3>
+<p class="position">Publisher and Founder at The Blockchain News</p>
+<nav class="social">
+<a href="https://www.linkedin.com/in/expathos" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Publisher and Founder at The Blockchain News</p>
+<p>Partner at CryptoAssets Design Group</p>
+<p>Director at Blockchain Partners</p>
+<p>Founder of Blockchain News, partner at CryptoAsset Design Group, director of Blockchain Partners and event founder at CryptoFinancing &#8211; Richard Kastelein is an award-winning publisher, innovation executive and entrepreneur. He has written over 1200 articles on Blockchain technology and startups at Blockchain News and has also published pioneering articles on ICOs in Harvard Business Review and Venturebeat.</p>
+<p>Kastelein has spoken (keynotes &amp; panels) on Blockchain in Amsterdam, Antwerp, Barcelona, Beijing, Brussels, Bucharest, Dubai, Eindhoven, Gdansk, Groningen, The Hague, Helsinki, London, Manchester, Minsk, Nairobi, Nanchang, San Mateo, Shanghai, and Tel Aviv.</p>
+<p>He is a Canadian (Dutch/Irish/English/Métis) whose writing career has ranged from the Canadian Native Press (Arctic) to the Caribbean &amp; Europe. He has written occasionally for Harvard Business Review, Wired Insights, Guardian and Virgin.com and his work and ideas have been translated into Dutch, Greek, Polish, German and French.</p>
+<p>In his 20s, he sailed around the world on small yachts and wrote, &#8220;The Hitchhiker&#8217;s Guide to the Seas&#8217; travelling by hitching rides on yachts (1989).</div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/08/simon-polrot.jpg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Simon</span>
+<span class="last-name">Polrot</span>
+</h3>
+<p class="position">Lawyer at Fieldfisher</p>
+<nav class="social">
+ <a href="https://www.linkedin.com/in/simonpolrot" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Lawyer at Fieldfisher, blockchain specialist, Ethereum France co-founder &amp; VP</p>
+<p>Simon Polrot is a senior associate in the tax team in the Paris office, mainly focusing on corporate and international tax.</p>
+<p>Simon is also a leading expert in Blockchain and a Key Contact at the firm for all related topics. He advises on its legal implications and potential impact &#8211; not just on the financial sector &#8211; but also real estate, energy, healthcare and beyond.</p>
+<p>Simon has assisted clients on issues such as the legal status and tax regime of cryptocurrencies and crypto-assets amid EU financial regulations; Initial Coin Offering (ICO); opposability or inscriptions and rule of evidence using blockchain technology and smart-contract use-cases (agreements, DAOs, dApps, etc).</p>
+<p>He is regularly quoted on blockchain in the French national press, notably Les Echos and La Tribune, and in specialist technology publications.</p>
+<p>Within the blockchain community, he is founder of the information website ethereum-france.com and co-founder of AssEth and ChainTech.</p>
+<p>Simon holds a degree in Tax Law from the Paris-I Sorbonne University and was admitted to the Paris Bar in 2014. Before joining the firm, he worked for three years in the international tax department of a Big Four.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/monp221.jpg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Nicolas</span>
+<span class="last-name">Courtois</span>
+</h3>
+<p class="position">Cryptologist, Senior Lecturer at University College London</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio"></p>
+<p>Nicolas Courtois is a Senior Lecturer at University College London where he teaches about applied cryptography GA12 and cryptanalysis GA18. His research focuses on the security analysis of cryptographic systems with particular focus on realistic attack scenarios and systems used by millions of users every day. His Google scholar profile lists more than 100 papers with 7100 citations in cryptography and his H-index is 36. A university team lead by Nicolas Courtois was given the UK University Cipher Champion in March 2013. Founding member of the group Code Breakers at LinkedIn. Member of Editorial board of Cryptologia. Previously he was a crypto research engineer at Gemalto, the world&#8217;s largest manufacturer of smart cards and secure hardware. He has filed more than 10 patents on practical applications of cryptography. He is an expert on security engineering, electronic payment and crypto currency. His blog is blog.bettercrypto.com.</p>
+<p></div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/bradpicture.jpg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Brad</span>
+<span class="last-name">Yasar</span>
+</h3>
+<p class="position">Co-Founder Blockchain Investors Consortium (BIC)</p>
+<nav class="social">
+<a href="https://www.linkedin.com/in/bradyasar/" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Blockchain &amp; Cryptocurrency Strategist, Advisor, Architect, Entrepreneur, Angel Investor</p>
+<p>Brad is an entrepreneur, investor, mentor, and advisor who has started and bootstrapped several companies from inception to maturity over the past 20 years.</p>
+<p>Currently, Brad is the co-founder and Managing Partner of KrowdMentor, a strategic crowdfunding advisory firm focusing on ICOs, cryptocurrencies, blockchain, and token powered organizations.</p>
+<p>Previously, as the co-founder and COO of CrowdfundX, Brad ran all campaign delivery operations for more than a dozen successful equity crowdfunding campaigns, which received over $80 million in reservations resulting in $20 million raised from over 10,000 investors in 15 months.</p>
+<p>Brad also serves as Board Member of Yasar Corporation where he mentored, advised and invested in more than 30 companies. Passionate about where the worlds of technology and marketing collide, Brad is frequently invited to speak at events related to entrepreneurship, angel investing and business strategy. Most recently, he presented at Global Crowdfunding Convention, Digital Hollywood, and ITU Gate Accelerator Program. A big believer in coaching younger generations of entrepreneurs, Brad serves as a mentor for the Pepperdine University Alumni Association.</p>
+<p>Brad holds a Bachelor of Arts degree in Economics and a Bachelor of Science degree in International Business Management (1999) from Pepperdine University (Malibu, California) and a Bachelor of Science degree in Applied Sciences Math (1996) from Académie de Grenoble (France).</p>
+<p>His charitable efforts focus on Goodwill Industries, the LA County Museum of Art, the Los Angeles Philharmonic and St. Jude Children’s Research Hospital, to name a few.</p>
+<p>Born in Turkey in 1976, Brad lived and traveled throughout Europe; England, France, and Greece to name a few and migrated to the United States in 1996. Brad is fluent in English, French, Turkish and has basic knowledge of German, Spanish, and Klingon. Brad currently lives in Los Angeles with his wife, Nadine, and son, Max.</p>
+<p>“I’m all about empowering people. Team members. Our clients. You name it. It’s my job to clear a path for success.”</p>
+<p></div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/08/Capture-d’écran-2017-08-21-à-18.24.44.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Jeremy</span>
+<span class="last-name">Epstein</span>
+</h3>
+<p class="position">CEO @ Never Stop Marketing</p>
+<nav class="social">
+<a href="https://twitter.com/jer979" target="_blank" class="dr-btn-icon fa-twitter"></a>
+<a href="https://www.linkedin.com/in/jer979/" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Jeremy Epstein, CEO of Never Stop Marketing, has 20 years of international marketing experience in helping to bring innovative technologies into the mainstream. Most recently, Jeremy was VP, Marketing at Sprinklr which grew from a $20 million valuation and 30 people to $1.3 billion valuation and 900 people in 3 years.</p>
+<p>Previous work experience includes Microsoft and consulting to startups, mid-market firms, and enterprises, including JNJ, Yes To Carrots, and two NY Times best-selling authors (Dan Pink and</p>
+<p>Gretchen Rubin). Jeremy also spent 3 years living and working in Frankfurt, Germany and Tokyo, Japan.</p>
+<p>Jeremy is the author of numerous whitepapers and a book, appropriately titled, “It’s ALL on the Blog, DON’T Buy the Book,” and has presented to hundreds of audiences in 15 countries. Jeremy has been the top-ranked speaker at multiple conferences including Microsoft Worldwide Partner Conferences and Microsoft CIO summit, among others.</p>
+<p>Jeremy currently works with some of the leading and most innovative companies in the blockchain/decentralization space including OB1, OpenBazaar, and Storj. He also facilitates the Decentralized Marketing Network, a peer-to-peer network for startups looking to disrupt major industries. In December of 2016, he edited and published a collaborative eBook with 33 of the biggest influencers and thought-leaders called “Blockchains in the Mainstream: When Will Everyone Else Know?”</p>
+<p>Jeremy takes great joy in being an early adopter of new technologies, celebrating the victories (like buying Bitcoin at $80) and the defeats (too many to list) equally.</p>
+<p>Described by more than one client as a “shot of marketing espresso,” Jeremy discovered his calling for marketing while living in Tokyo in 1997 after reading Peppers and Rodgers &#8220;The 1:1 Future&#8221; and hasn&#8217;t looked back since.</p>
+<p>Jeremy was a History major at Johns Hopkins, a skill which he wholeheartedly believes prepared him for the marketing profession.</p>
+<p>By far, the toughest and most rewarding job he has is to be a kind, thoughtful, and sensitive husband to his wife of 16 years and a patient father of 3 kids on the precipice of being teenagers.</p>
+<p>You can connect with him on LinkedIn or Twitter.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/vidal.jpg); background-position: 50% 50%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Vidal</span>
+<span class="last-name">Chriqui</span>
+</h3>
+<p class="position">Blockchain Technical Expert</p>
+<nav class="social">
+<a href="https://twitter.com/vidal007" target="_blank" class="dr-btn-icon fa-twitter"></a>
+<a href=" https://fr.linkedin.com/in/vidal-chriqui" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Vidal Chriqui is a Big Data (Hadoop) and distributed systems technical expert which led him to become interested very early on in decentralized networks, and in particular Bitcoin, then Ethereum.</p>
+<p>He launched the first free French-speaking web series (10 hours of exclusive lessons and interviews) called Blockchain Révolution.</p>
+<p>Vidal has participated in a lot of ‘blockchain’ experiments with both large corporations and startups and has developed expertise in micropayment channels.</p>
+<p>He regularly speaks in public conferences in order to evangelize Bitcoin and more generally open distributed registry protocols.</p>
+<p>Finally, Vidal is passionate about the innovation and development mechanisms of startups. This is what pushed him to teach himself and broaden his knowledge of the Lean Startup methodology in order to coach startup companies both in France and abroad.</p>
+<p>You can follow his news on:</p>
+<p><a class="twitter-timeline" data-width="500" data-height="750" href="https://twitter.com/vidal007?ref_src=twsrc%5Etfw">Tweets by vidal007</a><script src="/cdn-cgi/scripts/84a23a00/cloudflare-static/email-decode.min.js"></script><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>https://fr.linkedin.com/in/vidal-chriqui</p>
+<p>https://www.slideshare.net/vchriqui/presentations</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/07/photo-Hubert-de-Vauplane_KLNF.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Hubert</span>
+<span class="last-name">de Vauplane</span>
+</h3>
+<p class="position">Partner at Kramer-Levin</p>
+<nav class="social">
+<a href="https://www.linkedin.com/in/hubert-de-vauplane-18297621/" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Partner at Kramer-Levin (Financial and Banking law, Alternative Financing, Asset Management, Digital Payment), former Group General Counsel, Legal and Compliance, at Credit Agricole Bank</p>
+<p>A partner at an American law firm, Hubert de Vauplane has worked for more than 30 years in the banking and financial sector, both as counsel and as a trader. Before becoming a member of the Paris Bar in September 2011, he was the Legal Manager of the financing and investment business at BNP Paribas, then the Legal and Compliance Manager at Crédit Agricole.</p>
+<p>He was an associate lecturer at the University of Panthéon &#8211; Assas for 18 years, and today teaches at the Sciences Po Paris Law School. He is or has been an expert for the AMF [The French Financial Markets Regulator], the European Commission, the Bank of England and the European Central Bank.</p>
+<p>A regular writer for the Banque journal, he is also co-authored with Jean-Pierre Bornet in the Droit des marchés financiers, [Financial markets law] tract which, in 1999, was awarded a prize by the French Academy of Moral and Political Sciences.</div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/JeanJacquesQuisquater.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Jean-Jacques</span>
+<span class="last-name">QUISQUATER</span>
+</h3>
+<p class="position">Cryptography Expert</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio">Jean-Jacques Quisquater is an invited professor of cryptography, multimedia security and secure circuits at  the Ecole Polytechnique de Louvain, Catholic University of Louvain (UCL), Louvain-la-Neuve,  Belgium, where he was responsible (at least at the scientific level) of many projects  related to smart cards, to secure protocols for communications, digital signatures,  payTV, protection of copyrights and security tools for electronic commerce.  He was responsible for the well-known group &#8220;UCL Crypto Group&#8221; (composed of 8 PhD students and 8 postdocs in 2011, 2 professors).  He is now scientific advisor for this group.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/david_teruzzi_square.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">David</span>
+<span class="last-name">TERUZZI</span>
+</h3>
+<p class="position">Expert blockchain</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio">Consultant and software developer with 15 years’ experience in finding and building applied maths based high-tech solutions for industry and services.</p>
+<p>He worked as a R&amp;D director, and high-tech freelance consultant. Always pushing boundaries to learn and combine new technologies. Deep knowledge of the blockchain technology built trough practice as full-time engineer/expert.</p>
+<p>His AREAS of EXPERTISE are blockchain, bitcoin, applied maths, artificial intelligence, statistics and data mining, software modeling, signal processing. Founder at blockchain-conseil.fr In the last two years: advisor for several Blockchain startups, Blockchain french Blogger at blogchaincafe.com. Blockchain evangelizer in Paris area.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/Digous-Cor-gde.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Diego</span>
+<span class="last-name">PEREZ</span>
+</h3>
+<p class="position">Attorney, Cyber and Tech Law Expert</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio">Attorney at Law with broad experience on cyber and tech law and a strong background on international arbitration and litigations related to intellectual property protection and domain names disputes. Diego is also a member of the Blockchain Hub Global Community, playing a key role on the advocacy on the theme before the Latin American regulators and law makers.</div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/SÃ©bastien-Bourguigno_photo.jpg.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Sébastien</span>
+<span class="last-name">BOURGUIGNON</span>
+</h3>
+<p class="position">Manager Conseil IT</p>
+<nav class="social">
+<a href="https://twitter.com/sebbourguignon" target="_blank" class="dr-btn-icon fa-twitter"></a>
+<a href="https://www.linkedin.com/in/sebastienbourguignon/" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio"></p>
+<p>Sébastien Bourguignon est manager au sein d&#8217;un cabinet de conseil en IT et il est expert du numérique et de la blockchain. Passionné par le digital, l’innovation et les startups, il a créé un blog pour y partager l’actualité autour de ces thématiques et il a développé le projet #PortraitDeStartuper dans lequel il fait intervenir des startupers qui présentent leur retour d’expérience dans leur aventure entrepreneuriale. Auteur du livre blanc &#8220;#80PortraitDeStartuper&#8221; et du livre &#8220;Portraits de startupers &#8211; édition 2017&#8221; publié aux éditions Maxima, il publie régulièrement de nombreux articles sur des plateformes comme Le Cercle Les Echos, Siècle Digital ou encore Le Journal Du Net.</p>
+<p></div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/mike-costache_pict.jpg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Mike</span>
+<span class="last-name">Costache</span>
+</h3>
+<p class="position">Co-Founder &amp; Managing Partner</p>
+ <nav class="social">
+<a href="https://www.linkedin.com/in/mikecostache/ " target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Mike never liked being put in a box so he spent the last 20 years as an entrepreneur, investment banker, author, professor, speaker, angel investor and fundraiser for various charities.</p>
+<p>Currently, Mike is a Managing Partner at KrowdMentor, a strategic investment and advisory firm empowering blockchain startups, funds and entrepreneurs to reach their funding and liquidity goals. Mike is also the founder of the Blockchain Investors Consortium (BIC) and serves on the Advisory Board of Token-as-a-Service (TaaS), the first ever tokenized closed-end fund dedicated to investments in blockchain assets.</p>
+<p>Since 2011, Mike is a member of Tech Coast Angels (TCA), a network of 330 angel investors in Southern California who have invested $185 million in 300+ deals and raised over $1.5 billion from VCs.</p>
+<p>From 2006 to 2011, Mike was the President of Leo &amp; Leo, which represented brands such as Maserati, Segway, NetJets, PrivatSea, Sunseeker Yachts, NetSuite, Marsh, Orgil Greenhouses, Miss Universe, and Rockstar Energy Drink. Total sales amounted to €60 million.</p>
+<p>From 2000 to 2006, Mike served as founding CEO of Pioneer TeleCare, an e-commerce firm with total revenues of $4 million. From 1998 to 2003, Mike was an Associate at WestPark Capital, The Interlink Group, Millennium Capital Partners, all LA-based i-banks.</p>
+<p>Mike holds a degree in Economics (1999) from Pepperdine University (Malibu, California), a Certificate in Negotiations, Arbitration, and Mediation (2003) from Pepperdine’s School of Law and has completed the Program on Negotiations for Senior Executives (2008) at Harvard.</p>
+<p>Born in Romania in 1977, Mike migrated to Israel in 1988 and in 1992 to the United States. Mike is fluent in English, Hebrew, Romanian and has basic knowledge of French. Mike was featured in USA Today, Wall Street Journal, Inc., Entrepreneur, CCTV, Business Week, Men&#8217;s Health, Top Gear and numerous other media outlets.</p>
+<p>&#8220;Fridays always become Mondays and Mondays will always become Fridays&#8230;I am a TNT person (Today Not Tomorrow) so don&#8217;t complain if I push our limits once we join forces for the greater good of many.&#8221;</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/Erci_Gu_Introduction_CEO_pdf__page_1_sur_5_.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Eric</span>
+<span class="last-name">Gu</span>
+</h3>
+<p class="position">Founder and CEO of Metaverse</p>
+<nav class="social">
+<a href="https://www.linkedin.com/in/theericgu/" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio"></p>
+<p>Chairman of Metaverse Foundation<br />
+Vice President of Shanghai Informatization Association</p>
+<p>Mr. Gu brings with him more than 20 years of transational work experience and has served as the head of many projects. In 2006 Mr. Gu worked as the senior project manager for the Ontario Provincial Government . In his spare time he enjoys learning about finance, religion, legislation and quantum physics. In 2012 he returned to China and decided to join bitcoin and blockchain reseach groups. Together with these research groups he has launched transnational state-of-the-art-blockchain-based projecs. In the meantime, Mr. Gu has translated many articles and books relaed to blockchain technology, such as Blockchain – Blueprint for a New Economy.</p>
+<p></div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/Brian-Hoffmann.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Brian</span>
+<span class="last-name">HOFFMAN</span>
+</h3>
+<p class="position">CEO at OB1</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio"></p>
+<p>Brian&#8217;s background in Computer Science from James Madison University has led him to head several successful government and commercial projects during his career. Brian is currently the project maintainer for his newest venture, OpenBazaar and the CEO of OB1. Brian began OpenBazaar when he forked the open source code from the 2014 Toronto Hackathon award winning &#8220;proof of concept&#8221;, DarkMarket, a decentralized Bitcoin marketplace, and has gone on to raise $4.25M from notable VCs Union Square Ventures, a16z, BlueYard and Digital Currency Group. He recently spoke at conferences around the world and guest lectured at Berkeley on Bitcoin and OpenBazaar.</p>
+<p></div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/David-PEYRONNIN_pict-1.jpeg); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">David</span>
+<span class="last-name">PEYRONNIN</span>
+</h3>
+<p class="position">Business Blockchain Consultant</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio">David is a technologist with over 20 years of experience. He got involved in the blockchain space in 2013 and has been advising corporates and startups ever since. David is a public speaker, business introducer, chairman and co-organiser of global events in the crypto sphere.</div>
+</div>
+</article>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/CHRISTOPHE_OZCAN_PROFIL_2_.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Christophe</span>
+<span class="last-name">OZCAN</span>
+</h3>
+<p class="position">Blockchain entrepreneur</p>
+<nav class="social">
+</nav>
+</header>
+<div class="bio"></p>
+<p>Christophe is an experienced advisor and entrepreneur on Blockchain Ecosystem.</p>
+<p>He is an active participant of Blockchain community by promoting the technology through his interventions. CEO of Crypto4All a Blockchain consulting company and also an expert member of ISO/TC-307 committee for standardization of Blockchain and distributed ledger technologies.</p>
+<p>His interest in Blockchain technology began back in 2013 when he discovered Bitcoin and started to become a miner of cryptocurrencies with his own mining rig.</div>
+</div>
+</article>
+</div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-35"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper"><article class="member-card ">
+<div class="avatar" style="background-image: url(https://www.domraider.io/app/uploads/2017/09/Anthony-di-Lorio-.png); background-position: 50% 0%"></div>
+<button class="plus-btn" type="button"><i class="fa fa-plus"></i></button>
+<div class="scroll-container">
+<header>
+<h3>
+<span class="first-name">Anthony</span>
+<span class="last-name">Di I orio </span>
+</h3>
+<p class="position">CEO of Jaxx, Co-founder of Ethereum</p>
+<nav class="social">
+<a href="https://www.twitter.com/diiorioanthony" target="_blank" class="dr-btn-icon fa-twitter"></a>
+<a href="https://ca.linkedin.com/in/anthonydiiorio1" target="_blank" class="dr-btn-icon fa-linkedin"></a>
+</nav>
+</header>
+<div class="bio">Anthony Di Iorio is a serial entrepreneur, venture capitalist, community organizer, and thought leader in the field of digital currencies, blockchain and decentralized technologies . Born and raised in Toronto, co-founded Ethereum, and is the founder and CEO of Decentral ; Decentral Consulting; makers of Jaxx , Rushwallet and EthereumWallet.com . At Decentral Consulting, Anthony and his team provide guidance to financial institutions and enterprise clients on fintech, digital transformation, and blockchain technologies.</p>
+<p>Since 2012, Anthony has hosted over one hundred community events, including the first Canadian Bitcoin Expo in 2014, and DEC_TECH . In 2015, Anthony became a lecturer for the University of Nicosia&#8217;s Master&#8217;s program in Digital Currency. He is an Influencer for Deloitte’s Exponentials.xyz initiative and a member of the Bitcoin Speakers Bureau for the Bitcoin Foundation . In 2016, he served part-time as the Chief Digital Officer at the TMX Group/Toronto Stock Exchange.</p>
+<p>Please feel free to reach out to Anthony at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c1d1208141312053c18191f1912080e1d10521f1d">[email&#160;protected]</a> .</div>
+</div>
+</article>
+</div></div></div></div><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="team" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid team"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  vc_custom_1503395839043 dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<p><H1>THE DOMRAIDER TEAM</H1></p>
+</div>
+</div>
+<div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1503309957164"><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>An international team</p>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Our team of 33 people is spread over 3 countries, soon increasing to 5.<br />
+7 different nationalities are represented, natively speaking as many languages:<br />
+Chinese , Japanese , Russian , English , Spanish , Italian , French .</p>
+</div>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1273" height="622" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-380x186.png 380w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-500x244.png 500w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-300x147@2x.png 600w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-660x322.png 660w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-380x186@2x.png 760w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-768x375.png 768w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-800x391.png 800w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-500x244@2x.png 1000w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-1024x500.png 1024w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider.png 1273w" sizes="(max-width: 380px) 29.850746268657vw,(max-width: 500px) 39.277297721917vw,(max-width: 660px) 51.84603299293vw,(max-width: 800px) 62.843676355067vw,1273px" style="display:none;visibility:hidden;" /><noscript><img width="1273" height="622" src="https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-380x186.png 380w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-500x244.png 500w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-300x147@2x.png 600w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-660x322.png 660w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-380x186@2x.png 760w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-768x375.png 768w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-800x391.png 800w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-500x244@2x.png 1000w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider-1024x500.png 1024w, https://www.domraider.io/app/uploads/2017/07/Map-Office-DomRaider.png 1273w" sizes="(max-width: 380px) 29.850746268657vw,(max-width: 500px) 39.277297721917vw,(max-width: 660px) 51.84603299293vw,(max-width: 800px) 62.843676355067vw,1273px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1503309963453"><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Meet the team</p>
+</div>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>Both experts and enthusiasts, we aim for excellency by leveraging teamwork. Although our team has tripled in a year, we are focused on preserving our values of sharing and personal development. They are the pillars of our company culture.</p>
+</div>
+</div>
+<div class="wpb_video_widget wpb_content_element vc_clearfix   vc_video-aspect-ratio-169 vc_video-el-width-100 vc_video-align-left">
+<div class="wpb_wrapper">
+<div class="wpb_video_wrapper"><iframe width="500" height="281" src="https://www.youtube.com/embed/Gv7l0_wUF0I?feature=oembed" frameborder="0" allowfullscreen></iframe></div>
+</div>
+</div>
+</div></div></div></div><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_empty_space" style="height: 60px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>PARTNERS</h1>
+</div>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-french-tech.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-french-tech-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-french-tech-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-french-tech.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-french-tech.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-french-tech-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-french-tech-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-french-tech.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-busicorp.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-busicorp-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-busicorp-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-busicorp.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-busicorp.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-busicorp-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-busicorp-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-busicorp.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-crypto-4-all.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-banque-populaire.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-cic.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-cic-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-cic-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-cic.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-cic.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-cic-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-cic-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-cic.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-credit-agricole.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/scmb.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/scmb-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/scmb-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/scmb.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/09/scmb.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/scmb-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/scmb-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/scmb.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/wings.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/wings-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/wings-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/wings.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/09/wings.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/wings-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/wings-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/wings.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/ark.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/ark-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/ark-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/ark.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/09/ark.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/ark-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/ark-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/ark.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/dms.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/dms-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/dms-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/dms.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/09/dms.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/dms-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/dms-380x285.png 380w, https://www.domraider.io/app/uploads/2017/09/dms.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="2476" height="962" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/jaxx.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/jaxx-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/jaxx-380x148.png 380w, https://www.domraider.io/app/uploads/2017/09/jaxx-500x194.png 500w, https://www.domraider.io/app/uploads/2017/09/jaxx-300x117@2x.png 600w, https://www.domraider.io/app/uploads/2017/09/jaxx-660x256.png 660w, https://www.domraider.io/app/uploads/2017/09/jaxx-380x148@2x.png 760w, https://www.domraider.io/app/uploads/2017/09/jaxx-768x298.png 768w, https://www.domraider.io/app/uploads/2017/09/jaxx-800x311.png 800w, https://www.domraider.io/app/uploads/2017/09/jaxx-500x194@2x.png 1000w, https://www.domraider.io/app/uploads/2017/09/jaxx-1024x398.png 1024w, https://www.domraider.io/app/uploads/2017/09/jaxx-660x256@2x.png 1318w, https://www.domraider.io/app/uploads/2017/09/jaxx-768x298@2x.png 1534w, https://www.domraider.io/app/uploads/2017/09/jaxx-800x311@2x.png 1600w, https://www.domraider.io/app/uploads/2017/09/jaxx.png 2476w" sizes="(max-width: 380px) 15.347334410339vw,(max-width: 500px) 20.193861066236vw,(max-width: 660px) 26.655896607431vw,(max-width: 800px) 32.310177705977vw,2476px" style="display:none;visibility:hidden;" /><noscript><img width="2476" height="962" src="https://www.domraider.io/app/uploads/2017/09/jaxx.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/jaxx-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/jaxx-380x148.png 380w, https://www.domraider.io/app/uploads/2017/09/jaxx-500x194.png 500w, https://www.domraider.io/app/uploads/2017/09/jaxx-300x117@2x.png 600w, https://www.domraider.io/app/uploads/2017/09/jaxx-660x256.png 660w, https://www.domraider.io/app/uploads/2017/09/jaxx-380x148@2x.png 760w, https://www.domraider.io/app/uploads/2017/09/jaxx-768x298.png 768w, https://www.domraider.io/app/uploads/2017/09/jaxx-800x311.png 800w, https://www.domraider.io/app/uploads/2017/09/jaxx-500x194@2x.png 1000w, https://www.domraider.io/app/uploads/2017/09/jaxx-1024x398.png 1024w, https://www.domraider.io/app/uploads/2017/09/jaxx-660x256@2x.png 1318w, https://www.domraider.io/app/uploads/2017/09/jaxx-768x298@2x.png 1534w, https://www.domraider.io/app/uploads/2017/09/jaxx-800x311@2x.png 1600w, https://www.domraider.io/app/uploads/2017/09/jaxx.png 2476w" sizes="(max-width: 380px) 15.347334410339vw,(max-width: 500px) 20.193861066236vw,(max-width: 660px) 26.655896607431vw,(max-width: 800px) 32.310177705977vw,2476px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/logo-undeveloped-gray-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" style="display:none;visibility:hidden;" /><noscript><img width="150" height="150" src="https://www.domraider.io/app/uploads/2017/09/logo-undeveloped-gray-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" /></noscript></div>
+</figure>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-french-accelerator.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-ministere-enseign-ment-superieur.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-business-france.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-business-france-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-business-france-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-business-france.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-business-france.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-business-france-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-business-france-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-business-france.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-bitcoin-pr-buzz.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-bpi-france.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-bpi-france-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-bpi-france-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-bpi-france.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-bpi-france.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-bpi-france-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-bpi-france-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-bpi-france.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-bronzes-de-mohon.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-cci-france-chine.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-agence-louise.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-agence-louise-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-agence-louise-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-agence-louise.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-agence-louise.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-agence-louise-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-agence-louise-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-agence-louise.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-ballou-pr.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-clickoo.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-clickoo-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-clickoo-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-clickoo.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-clickoo.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-clickoo-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-clickoo-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-clickoo.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-tip-ru.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-tip-ru-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-tip-ru-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-tip-ru.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-tip-ru.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-tip-ru-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-tip-ru-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-tip-ru.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-mediafix-agence-communication.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-melting-trad.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-melting-trad-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-melting-trad-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-melting-trad.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-melting-trad.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-melting-trad-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-melting-trad-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-melting-trad.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-riot-house-prod.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-SAS.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-SAS-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-SAS-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-SAS.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-SAS.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-SAS-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-SAS-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-SAS.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-eefficiency.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-eefficiency-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-eefficiency-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-eefficiency.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-eefficiency.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-eefficiency-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-eefficiency-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-eefficiency.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-inovaa.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-inovaa-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-inovaa-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-inovaa.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-inovaa.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-inovaa-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-inovaa-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-inovaa.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/logo-turing-22.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-turing-22-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-turing-22-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-turing-22.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" style="display:none;visibility:hidden;" /><noscript><img width="400" height="300" src="https://www.domraider.io/app/uploads/2017/07/logo-turing-22.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/07/logo-turing-22-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/07/logo-turing-22-380x285.png 380w, https://www.domraider.io/app/uploads/2017/07/logo-turing-22.png 400w" sizes="(max-width: 380px) 95vw,(max-width: 500px) 125vw,(max-width: 660px) 165vw,(max-width: 800px) 200vw,400px" /></noscript></div>
+</figure>
+</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1000" height="250" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-300x75.png 300w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-380x95.png 380w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-500x125.png 500w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-300x75@2x.png 600w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-660x165.png 660w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-380x95@2x.png 760w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-768x192.png 768w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-800x200.png 800w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark.png 1000w" sizes="(max-width: 380px) 38vw,(max-width: 500px) 50vw,(max-width: 660px) 66vw,(max-width: 800px) 80vw,1000px" style="display:none;visibility:hidden;" /><noscript><img width="1000" height="250" src="https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-300x75.png 300w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-380x95.png 380w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-500x125.png 500w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-300x75@2x.png 600w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-660x165.png 660w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-380x95@2x.png 760w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-768x192.png 768w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark-800x200.png 800w, https://www.domraider.io/app/uploads/2017/09/bancor_logo_dark.png 1000w" sizes="(max-width: 380px) 38vw,(max-width: 500px) 50vw,(max-width: 660px) 66vw,(max-width: 800px) 80vw,1000px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-parallax="1.5" data-vc-parallax-image="https://www.domraider.io/app/uploads/2017/07/background-roadmap-2.png" class="vc_row wpb_row vc_row-fluid vc_custom_1503319216954 vc_row-has-fill vc_general vc_parallax vc_parallax-content-moving"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>COME AND MEET US</h1>
+</div>
+</div>
+<article class="event-card">
+<p class="date"> Friday July 7 2017</p>
+<div class="content">
+<h3 class="name"> Crypto Financing</h3>
+<p class="location">
+<span class="country">UNITED KINGDOM</span>
+<span class="city">London</span>
+</p>
+<a class="website-btn fa-external-link" href="https://www.crypto-financing.com/" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Monday July 17 2017</p>
+<div class="content">
+<h3 class="name"> Coinagenda</h3>
+<p class="location">
+<span class="country">SPAIN</span>
+<span class="city">Barcelona</span>
+</p>
+<a class="website-btn fa-external-link" href="http://coinagenda.com/" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Sunday July 30 2017</p>
+<div class="content">
+<h3 class="name"> Finwise Global Summit</h3>
+<p class="location">
+<span class="country">China</span>
+<span class="city">Shanghai</span>
+</p>
+<a class="website-btn fa-external-link" href="http://www.finwisesummit.com/appc-index-en.html" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Thursday September 7 2017</p>
+<div class="content">
+<h3 class="name"> BLOCKCHAIN &amp; BITCOIN Conference</h3>
+<p class="location">
+<span class="country">Sweden</span>
+<span class="city">Stockholm</span>
+</p>
+<a class="website-btn fa-external-link" href="https://stockholm.blockchainconf.world/en" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Sunday September 10 2017</p>
+<div class="content">
+<h3 class="name"> Blockchain &amp; Global Summit</h3>
+<p class="location">
+<span class="country">China</span>
+<span class="city">Peking</span>
+</p>
+<a class="website-btn fa-external-link" href="http://bitkan.com/event?from=bitkanen" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Tuesday September 12 2017</p>
+<div class="content">
+<h3 class="name"> Coinscrum</h3>
+<p class="location">
+<span class="country">UK</span>
+<span class="city">London</span>
+</p>
+<a class="website-btn fa-external-link" href="https://www.meetup.com/coinscrum/events/242709545/" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Thursday September 14 2017</p>
+<div class="content">
+<h3 class="name"> RSK Meetup</h3>
+<p class="location">
+<span class="country">France</span>
+<span class="city">Paris</span>
+</p>
+<a class="website-btn fa-external-link" href="https://www.meetup.com/fr-FR/Blockchain-education-economy/events/242087176/?eventId=242087176" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Friday September 15 2017</p>
+<div class="content">
+<h3 class="name"> ICO Summit</h3>
+<p class="location">
+<span class="country">Switzerland</span>
+<span class="city">Zurich</span>
+</p>
+<a class="website-btn fa-external-link" href="https://icosummit.ch/zurich-2017/" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Monday &amp; Tuesday September 18-19 2017</p>
+<div class="content">
+<h3 class="name"> D10e</h3>
+<p class="location">
+<span class="country">Ukraine</span>
+<span class="city">Kiev</span>
+</p>
+<a class="website-btn fa-external-link" href="http://d10e.biz/" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Wednesday September 20 2017</p>
+<div class="content">
+<h3 class="name"> ICO Event</h3>
+<p class="location">
+<span class="country">Russia</span>
+<span class="city">Moscow</span>
+</p>
+ <a class="website-btn fa-external-link" href="https://icoevent.ru/en" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Friday 22 September 2017</p>
+<div class="content">
+<h3 class="name"> GENESIS Moscow</h3>
+<p class="location">
+<span class="country">Russia</span>
+<span class="city">Moscow</span>
+</p>
+<a class="website-btn fa-external-link" href="http://genesismoscow.com/#section-5" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Monday September 25 2017</p>
+<div class="content">
+<h3 class="name"> World Blockchain Forum</h3>
+<p class="location">
+<span class="country">United Kingdom</span>
+<span class="city">London</span>
+</p>
+<a class="website-btn fa-external-link" href="https://london.keynote.ae/" target="_blank"></a>
+</div>
+</article>
+<article class="event-card">
+<p class="date"> Tuesday October 3 2017</p>
+<div class="content">
+<h3 class="name"> Blockchain Solutions Forum</h3>
+<p class="location">
+<span class="country">Spain</span>
+<span class="city">Barcelona</span>
+</p>
+<a class="website-btn fa-external-link" href="http://www.blockchainsolutionsforum.com/" target="_blank"></a>
+</div>
+</article>
+<div class="vc_empty_space" style="height: 60px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>FOLLOW US</h1>
+</div>
+</div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid rs-section"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-facebook"></span><a class="vc_icon_element-link" href="https://www.facebook.com/Domraider-1432606216988548" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-twitter"></span><a class="vc_icon_element-link" href="https://twitter.com/domraider" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-instagram"></span><a class="vc_icon_element-link" href="https://www.instagram.com/domraider/" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-linkedin"></span><a class="vc_icon_element-link" href="https://www.linkedin.com/company-beta/10805751/" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-location-arrow"></span><a class="vc_icon_element-link" href="https://t.me/Domraider_ICO" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-youtube"></span><a class="vc_icon_element-link" href="https://www.youtube.com/domraider" title="" target=" _blank"></a></div>
+</div>
+</div></div></div></div><div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid rs-section"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-github"></span><a class="vc_icon_element-link" href="https://github.com/Domraider/dr-token" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-weixin"></span><a class="vc_icon_element-link" href="https://i.imgur.com/sebrFVv.png" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-vk"></span><a class="vc_icon_element-link" href="https://vk.com/domraider" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-medium"></span><a class="vc_icon_element-link" href="https://medium.com/@domraider" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-slack"></span><a class="vc_icon_element-link" href="https://join.slack.com/t/domraiderico/shared_invite/MjM1MDg0MTY2MDE4LTE1MDQyNzQ4MDYtNTU0NDg5YzgyNQ" title="" target=" _blank"></a></div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_icon_element vc_icon_element-outer vc_icon_element-align-center vc_icon_element-have-style">
+<div class="vc_icon_element-inner vc_icon_element-color-white vc_icon_element-have-style-inner vc_icon_element-size-md vc_icon_element-style-rounded vc_icon_element-background vc_icon_element-background-color-pink">
+<span class="vc_icon_element-icon fa fa-reddit"></span><a class="vc_icon_element-link" href="https://www.reddit.com/r/DomRaider/" title="" target=" _blank"></a></div>
+</div>
+</div></div></div></div><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="contact" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1504808258221 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>CONTACT US</h1>
+</div>
+</div>
+<div class="vc_empty_space" style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="100" height="66" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/034-china.jpg" class="vc_single_image-img attachment-full" alt="" style="display:none;visibility:hidden;" /><noscript><img width="100" height="66" src="https://www.domraider.io/app/uploads/2017/07/034-china.jpg" class="vc_single_image-img attachment-full" alt="" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>+86 1087833202<br />
+4:30 AM until 4:00 PM UTC</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4d2e2223392c2e39602e230d2922203f2c2429283f632e2220">[email&#160;protected]</a></p>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="100" height="66" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/248-russia.jpg" class="vc_single_image-img attachment-full" alt="" style="display:none;visibility:hidden;" /><noscript><img width="100" height="66" src="https://www.domraider.io/app/uploads/2017/07/248-russia.jpg" class="vc_single_image-img attachment-full" alt="" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>+7 499 609 41 80<br />
+6:30 AM until 4:00 PM UTC</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="77141819031614035a05023713181a05161e1312055914181a">[email&#160;protected]</a></p>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="100" height="66" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/UK.jpg" class="vc_single_image-img attachment-full" alt="" style="display:none;visibility:hidden;" /><noscript><img width="100" height="66" src="https://www.domraider.io/app/uploads/2017/07/UK.jpg" class="vc_single_image-img attachment-full" alt="" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>+44 20 3893 3222<br />
+6:30 AM until 8:00 PM UTC</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d1b2bebfa5b0b2a5fcb4bf91b5bebca3b0b8b5b4a3ffb2bebc">[email&#160;protected]</a></p>
+</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="100" height="66" data-cfsrc="https://www.domraider.io/app/uploads/2017/07/195-france.jpg" class="vc_single_image-img attachment-full" alt="" style="display:none;visibility:hidden;" /><noscript><img width="100" height="66" src="https://www.domraider.io/app/uploads/2017/07/195-france.jpg" class="vc_single_image-img attachment-full" alt="" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<p>+33 1 86 76 71 77<br />
+6:30 AM until 4:00 PM UTC</p>
+<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84e7ebeaf0e5e7f0a9e2f6c4e0ebe9f6e5ede0e1f6aae7ebe9">[email&#160;protected]</a></p>
+</div>
+</div>
+</div></div></div></div><div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid center"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
+<div class="wpb_text_column wpb_content_element  dr-text-gradient-coral-pink">
+<div class="wpb_wrapper">
+<h1>COVERAGES</h1>
+</div>
+</div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2 vc_col-lg-offset-1 vc_col-md-offset-1 vc_col-sm-offset-1"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/maddyness.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/maddyness-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/maddyness-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/maddyness-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/maddyness.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/maddyness.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/maddyness-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/maddyness-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/maddyness-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/maddyness.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/blockchaindailynews.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/blockchaindailynews-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/blockchaindailynews-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/blockchaindailynews-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/blockchaindailynews.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/blockchaindailynews.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/blockchaindailynews-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/blockchaindailynews-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/blockchaindailynews-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/blockchaindailynews.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/TheBitcoinNews-1030x394.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/lopinion.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/lopinion-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/lopinion-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/lopinion-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/lopinion.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/lopinion.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/lopinion-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/lopinion-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/lopinion-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/lopinion.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/cointelegraph-1.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/cointelegraph-1-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/cointelegraph-1-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/cointelegraph-1-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/cointelegraph-1.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/cointelegraph-1.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/cointelegraph-1-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/cointelegraph-1-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/cointelegraph-1-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/cointelegraph-1.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/yahoo.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/yahoo-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/yahoo-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/yahoo-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/yahoo.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/yahoo.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/yahoo-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/yahoo-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/yahoo-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/yahoo.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/forbes.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/forbes-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/forbes-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/forbes-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/forbes.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/forbes.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/forbes-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/forbes-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/forbes-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/forbes.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/la-tribune-1.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/la-tribune-1-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/la-tribune-1-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/la-tribune-1-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/la-tribune-1.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/la-tribune-1.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/la-tribune-1-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/la-tribune-1-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/la-tribune-1-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/la-tribune-1.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/NewsBTC-Logo.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/challenges.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/challenges-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/challenges-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/challenges-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/challenges.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/challenges.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/challenges-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/challenges-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/challenges-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/challenges.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/msn.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/msn-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/msn-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/msn-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/msn.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/msn.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/msn-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/msn-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/msn-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/msn.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/merkle.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/merkle-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/merkle-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/merkle-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/merkle.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/merkle.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/merkle-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/merkle-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/merkle-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/merkle.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_left">
+<figure class="wpb_wrapper vc_figure">
+<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="300" data-cfsrc="https://www.domraider.io/app/uploads/2017/09/buisness-insider.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/buisness-insider-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/buisness-insider-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/buisness-insider-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/buisness-insider.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" style="display:none;visibility:hidden;" /><noscript><img width="600" height="300" src="https://www.domraider.io/app/uploads/2017/09/buisness-insider.png" class="vc_single_image-img attachment-full" alt="" srcset="https://www.domraider.io/app/uploads/2017/09/buisness-insider-150x150@2x.png 300w, https://www.domraider.io/app/uploads/2017/09/buisness-insider-380x190.png 380w, https://www.domraider.io/app/uploads/2017/09/buisness-insider-500x250.png 500w, https://www.domraider.io/app/uploads/2017/09/buisness-insider.png 600w" sizes="(max-width: 380px) 63.333333333333vw,(max-width: 500px) 83.333333333333vw,(max-width: 660px) 110vw,(max-width: 800px) 133.33333333333vw,600px" /></noscript></div>
+</figure>
+</div>
+</div></div></div></div><a class="dr-btn-primary" href="https://www.domraider.io/coverages/" target=" _blank">See all coverages</a><div class="vc_empty_space" style="height: 60px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div>
+</div>
+</main>
+</div>
+</div>
+<footer class="site-footer">
+<div class="container">
+<div class="site-footer-brand">
+<svg xmlns="http://www.w3.org/2000/svg" class="dr-maze" viewBox="0 0 40 40">
+<title>Domraider — maze</title>
+<defs>
+<linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="gradient-coral-pink">
+<stop stop-color="rgb(235, 94, 87)" offset="0%" />
+<stop stop-color="rgb(234, 82, 144)" offset="100%" />
+</linearGradient>
+</defs>
+<path fill="url(#gradient-coral-pink)" fill-rule="evenodd" d="M20.22 17.08h-.08c-.1 0-.16-.02-.23 0h-.07c-.83.03-1.6.4-2.16 1v.02c-.3.3-.5.66-.64 1.05-.12.34-.2.7-.2 1.06 0 1.44 1 2.7 2.38 3.05l.15.03c.2.05.42.07.64.07.2 0 .4-.02.6-.06.27-.06.53-.15.77-.27l.1-.06c.03 0 .05-.02.08-.04l.07-.04.06-.05h.03l.08-.07c.84-.58 1.35-1.55 1.35-2.57 0-1.62-1.28-3-2.9-3.12zm11.53 9.9c-1.8 3.14-4.74 5.38-8.23 6.32-.1.02-.18.04-.27.04-.48 0-.9-.32-1.02-.78-.15-.56.18-1.14.74-1.3h.06c.52-.18.82-.73.68-1.26-.1-.45-.52-.76-1-.76-.06 0-.13 0-.2.02l-.07.02c-.1.02-.17.03-.26.03-.48 0-.9-.3-1.02-.77-.07-.27-.03-.56.1-.8.15-.24.38-.42.65-.5 1.34-.35 2.54-1.08 3.47-2.1.9-.98 1.52-2.2 1.8-3.5v-.04-.06-.04c.08-.54-.28-1.05-.82-1.15l-.2-.02c-.44 0-.85.3-.98.73l-.03.1v.06l-.02.03c0 .04 0 .1-.02.13 0 0 0 .04-.02.06v.03s0 .02-.02.03v.06l-.02.02c-.63 2.26-2.7 3.83-5.05 3.83-.47 0-.93-.06-1.37-.17l-.17-.04h-.1c-.46 0-.87.3-1 .76-.13.52.16 1.07.67 1.24h.04c0 .02.02.02.04.02.56.16.9.73.75 1.3-.13.45-.54.77-1.02.77-.1 0-.18 0-.27-.03-2.02-.55-3.76-1.7-5.03-3.37-1.22-1.6-1.9-3.6-1.93-5.6v-.03-.06c-.03-.56-.48-1-1.03-1-.58 0-1.04.47-1.04 1.04.03 5.15 3.52 9.68 8.5 11 .26.08.5.26.63.5.14.24.18.53.1.8-.12.46-.53.78-1 .78-.1 0-.2 0-.28-.04-3.5-.93-6.42-3.18-8.23-6.32-1.8-3.14-2.3-6.8-1.36-10.28.1-.46.53-.78 1-.78.1 0 .2 0 .28.03.55.15.9.72.75 1.28l-.02.07c-.1.53.22 1.06.75 1.2.1.03.18.04.27.04.45 0 .85-.28.98-.7l.02-.08c.13-.45.54-.76 1-.76.1 0 .2 0 .3.03.55.15.88.73.73 1.3-.36 1.33-.33 2.73.1 4.05.4 1.28 1.13 2.42 2.14 3.3v.02l.06.04.02.02c.18.14.4.22.63.22.3 0 .6-.13.8-.36.32-.38.33-.93.02-1.32l-.03-.03-.03-.03c-1.23-1-1.93-2.48-1.93-4.06 0-1.4.54-2.7 1.53-3.7l.16-.16c.26-.4.2-.95-.14-1.3-.2-.2-.46-.3-.74-.3-.25 0-.5.1-.67.25h-.03c0 .02-.03.03-.04.04-.2.2-.46.3-.74.3-.3 0-.55-.1-.75-.3-.2-.2-.3-.46-.3-.74 0-.28.1-.55.3-.75 1.77-1.77 4.12-2.74 6.63-2.74 1.62 0 3.22.42 4.6 1.2l.04.03h.02l.03.02c.16.1.32.13.48.13.37 0 .7-.2.9-.53.28-.5.1-1.12-.4-1.4-1.7-1-3.67-1.5-5.66-1.5-3.08 0-5.95 1.18-8.1 3.34-.2.2-.48.3-.76.3s-.54-.1-.74-.3c-.2-.2-.3-.47-.3-.75s.1-.54.3-.74c2.55-2.55 5.96-3.96 9.6-3.96 3.6 0 7.02 1.4 9.57 3.97.2.2.3.47.3.75s-.1.55-.3.74c-.2.2-.46.3-.74.3-.28 0-.54-.1-.74-.3l-.06-.05c-.2-.17-.43-.26-.7-.26-.26 0-.52.1-.72.3-.4.38-.4 1-.03 1.42l.03.04c.4.4.4 1.08 0 1.48-.2.2-.47.3-.75.3s-.54-.1-.74-.3c-1.38-1.37-3.2-2.13-5.15-2.13-.82 0-1.6.14-2.36.4h-.03l-.04.02-.04.02c-.5.2-.76.77-.58 1.3.15.4.54.68.98.68h.17l.02-.02h.03c.6-.23 1.2-.34 1.84-.34 1.15 0 2.25.38 3.17 1.08.9.7 1.56 1.66 1.86 2.73l.02.04v.05l.04.1c.15.4.53.67.95.67.1 0 .18 0 .27-.04.52-.14.85-.66.75-1.2l-.02-.06c-.15-.56.18-1.14.74-1.3l.27-.03c.47 0 .9.3 1 .77.55 2.02.4 4.1-.4 6.04-.77 1.86-2.14 3.45-3.85 4.47l-.05.03h-.02c0 .02-.02.02-.02.03h-.02c-.46.3-.6.92-.32 1.4.18.3.52.5.9.5.17 0 .35-.04.5-.14 4.45-2.6 6.63-7.9 5.3-12.86-.08-.27-.04-.56.1-.8s.37-.42.64-.5c.1 0 .18-.03.27-.03.47 0 .9.34 1 .8.94 3.5.46 7.14-1.35 10.28M5.85 5.86c-7.8 7.8-7.8 20.47 0 28.28 7.82 7.8 20.48 7.8 28.3 0 7.8-7.8 7.8-20.47 0-28.28-7.82-7.8-20.48-7.8-28.3 0" />
+</svg>
+<p>
+With DomRaider, snapping up a domain name has never been simpler. Our platform is the best solution to snap up and develop awesome domain names.
+<br />
+<br />
+© 2017 DomRaider
+</p>
+</div>
+<div class="nav-container">
+<nav>
+<h4>Our network</h4>
+<ul>
+<li><a href="https://www.domraider.com">Drop catching</a></li>
+<li><a href="https://blog.domraider.com">Blog</a></li>
+<li><a href="https://corporate.domraider.com">Corporate site</a></li>
+</ul>
+</nav>
+<nav>
+<h4>Follow us</h4>
+<ul>
+<li><a href="https://facebook.com/Domraider-1432606216988548" target="_blank">Facebook</a></li>
+<li><a href="https://twitter.com/domraider" target="_blank">Twitter</a></li>
+<li><a href="https://instagram.com/domraider" target="_blank">Instagram</a></li>
+<li><a href="https://www.linkedin.com/company-beta/10805751/" target="_blank">LinkedIn</a></li>
+<li><a href="https://t.me/Domraider_ICO" target="_blank">Telegram</a></li>
+<li><a href="https://www.youtube.com/domraider" target="_blank">Youtube</a></li>
+</ul>
+</nav>
+<nav>
+<h4>Find out more</h4>
+<div class="menu-footer-menu-en-container"><ul id="menu-footer-menu-en" class="nav"><li id="menu-item-736" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-736"><a href="https://t.me/DomraiderICO">Telegram</a></li>
+<li id="menu-item-737" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-737"><a href="https://medium.com/@domraider">Medium</a></li>
+<li id="menu-item-1144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1144"><a href="https://join.slack.com/t/domraiderico/shared_invite/MjM1MDg0MTY2MDE4LTE1MDQyNzQ4MDYtNTU0NDg5YzgyNQ">Slack</a></li>
+</ul></div>
+</nav>
+</div>
+</div>
+</footer>
+<script src="/cdn-cgi/scripts/84a23a00/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+      window.ajaxUrl = 'https://www.domraider.io/wp/wp-admin/admin-ajax.php';
+    </script>
+<script type='text/javascript' src='https://www.domraider.io/app/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.0.1'></script>
+<script type='text/javascript' src='https://www.domraider.io/app/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min.js?ver=5.0.1'></script>
+<script type='text/javascript' src='https://www.domraider.io/app/themes/theme/dist/scripts/main.js'></script>
+<script type='text/javascript' src='//www.domraider.io/app/plugins/victheme_timeline/assets/timeline-front/js/timeline-front.js?ver=4.8.1'></script>
+<script type='text/javascript' src='https://www.domraider.io/wp/wp-includes/js/wp-embed.min.js?ver=4.8.1'></script>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-103561319-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+</body>
+</html>

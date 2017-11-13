@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/" >
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 1.1</owl:versionInfo>
+    <dc:title>SAN Ontologia</dc:title>
+    <dc:creator>ICAR - Centro MAAS</dc:creator>
+    <dc:date>2015-03-02</dc:date>
+    <dc:rights>Per l&#39;ontologia ed il thesaurus SAN, si applica una licenza Creative Commons 2.5 BY di attribuzione. Per tipologie di uso e riutilizzo non consentite dalla licenza adottata, è necessario richiedere esplicita autorizzazione all&#39;ICAR</dc:rights>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_CSI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha contesto storico istituzionale</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11479" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/contestoStoricoIstituzionale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/contestoStoricoIstituzionale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contesto storico istituzionale</rdfs:label>
+    <rdfs:comment>Organizzazione istituzionale entro cui ha operato il soggetto produttore. Può trattarsi di uno Stato o di articolazioni territoriali o amministrative di esso. L&#39;entità  statale può essere individuata con la denominazione propria di un determinato periodo storico (per es. “Repubblica di Siena”, “Granducato di Toscana””) o con le denominazioni assunte in un più lungo arco cronologico (es. &quot;Regno d&#39;Italia poi Repubblica italiana&quot;).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/profiloIstituzionale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilo istituzionale</rdfs:label>
+    <rdfs:comment>Istituzioni, preunitarie o unitarie, descritte una volta per tutte, con riferimento al periodo in cui hanno operato e al contesto storico istituzionale o statuale di appartenenza.
+Descrive una volta per tutte un particolare soggetto produttore, e costituisce una chiave di ricerca per tutti i soggetti produttori che appartengono al profilo descritto.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:subClassOf rdf:nodeID="vb11570" />
+    <rdfs:subClassOf rdf:nodeID="vb11571" />
+    <rdfs:subClassOf rdf:nodeID="vb11574" />
+    <rdfs:subClassOf rdf:nodeID="vb11575" />
+    <rdfs:subClassOf rdf:nodeID="vb11572" />
+    <rdfs:subClassOf rdf:nodeID="vb11573" />
+    <rdfs:subClassOf rdf:nodeID="vb11576" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/produttore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soggetto produttore</rdfs:label>
+    <rdfs:comment>Soggetto (ente, famiglia o persona) che ha prodotto o acquisito per finalità  amministrative, familiari o personali il complesso archivistico oggetto di descrizione. Può essere collegato ad altri soggetti produttori con relazioni gerarchiche o temporali.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:subClassOf rdf:nodeID="vb11568" />
+    <rdfs:subClassOf rdf:nodeID="vb11569" />
+    <rdfs:subClassOf rdf:nodeID="vb11566" />
+    <rdfs:subClassOf rdf:nodeID="vb11567" />
+    <rdfs:subClassOf rdf:nodeID="vb11564" />
+    <rdfs:subClassOf rdf:nodeID="vb11565" />
+    <rdfs:subClassOf rdf:nodeID="vb11563" />
+    <owl:equivalentClass rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#entity" />
+    <owl:equivalentClass rdf:nodeID="vb11559" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_relazionePI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha relazione con Profilo Istituzionale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/qualificazioniRelazioniCpf" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/profiloIstituzionale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/qualificazioniRelazioniCpf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qualificazioni relazioni Cpf</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:subClassOf rdf:nodeID="vb11544" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_conservatore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha conservatore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/complessoArchivistico">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">complesso archivistico</rdfs:label>
+    <rdfs:comment>Locuzione generica per indicare un corpus documentale oggetto di descrizione.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:subClassOf rdf:nodeID="vb11526" />
+    <rdfs:subClassOf rdf:nodeID="vb11527" />
+    <rdfs:subClassOf rdf:nodeID="vb11534" />
+    <rdfs:subClassOf rdf:nodeID="vb11535" />
+    <rdfs:subClassOf rdf:nodeID="vb11532" />
+    <rdfs:subClassOf rdf:nodeID="vb11533" />
+    <rdfs:subClassOf rdf:nodeID="vb11530" />
+    <rdfs:subClassOf rdf:nodeID="vb11531" />
+    <rdfs:subClassOf rdf:nodeID="vb11528" />
+    <rdfs:subClassOf rdf:nodeID="vb11529" />
+    <owl:equivalentClass rdf:resource="http://lod.xdams.org/reload/oad/uod" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/conservatore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soggetto conservatore</rdfs:label>
+    <rdfs:comment>Il soggetto sul quale ricade la responsabilità  della conservazione e valorizzazione dell&#39;archivio</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:subClassOf rdf:nodeID="vb11538" />
+    <rdfs:subClassOf rdf:nodeID="vb11539" />
+    <rdfs:subClassOf rdf:nodeID="vb11536" />
+    <rdfs:subClassOf rdf:nodeID="vb11537" />
+    <rdfs:subClassOf rdf:nodeID="vb11542" />
+    <rdfs:subClassOf rdf:nodeID="vb11543" />
+    <rdfs:subClassOf rdf:nodeID="vb11540" />
+    <rdfs:subClassOf rdf:nodeID="vb11541" />
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/org#Organization" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/isConservatoreOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">è conservatore di</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <owl:inverseOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_conservatore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_cpf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha cpf</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/contestoStoricoIstituzionale" />
+    <rdfs:range rdf:nodeID="vb11482" />
+    <owl:inverseOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_CSI" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_qualificazioniRelazioniCpf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha qualificazioni relazioni Cpf</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11485" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/qualificazioniRelazioniCpf" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_dateCSI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha date contesto storico istituzionale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/contestoStoricoIstituzionale" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/dateCSI" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateCSI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date contesto storico istituzionale</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/date" />
+    <rdfs:subClassOf rdf:nodeID="vb11547" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateComplarc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date complesso archivistico</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/date" />
+    <rdfs:subClassOf rdf:nodeID="vb11548" />
+    <rdfs:subClassOf rdf:nodeID="vb11549" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_dateEsistenza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha date esistenza</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11488" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/dateEsistenza" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateEsistenza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date esistenza</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/date" />
+    <rdfs:subClassOf rdf:nodeID="vb11550" />
+    <rdfs:subClassOf rdf:nodeID="vb11551" />
+    <rdfs:subClassOf rdf:nodeID="vb11552" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_dateEsistenzaTipo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha tipo date di esistenza</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateEsistenza" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/Tipo_data_esistenza_CPF" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateStrumento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date strumento</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/date" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/estensioneDateComplarc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estensione date complesso archivistico</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/date" />
+    <rdfs:subClassOf rdf:nodeID="vb11553" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_estensioneDateTipo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha estensione date tipo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/estensioneDateComplarc" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/Estensione_data_complesso" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/altraDenominazioneProfiloIstituzionale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altra denominazione profilo istituzionale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/profiloIstituzionale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/titolo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">titolo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/titlestmt/titleproper</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/famiglia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">famiglia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <owl:equivalentClass rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#family" />
+    <owl:disjointWith rdf:resource="http://dati.san.beniculturali.it/SAN/persona" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_dateComplarc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha date complesso archivistico</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/dateComplarc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/Tipo_data_esistenza_CPF">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">Tipologia della data di esistenza del soggetto produttore</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_dateStrumento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha date strumento</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/dateStrumento" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_estensioneDateComplarc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha estensione date complesso archivistico</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/estensioneDateComplarc" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoAmbitoTerritoriale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogo Ambito Territoriale</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_luogoProduttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_natura_giuridica_ente">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha natura giuridica ente</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11491" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/natura_giuridica_ente" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/natura_giuridica_ente">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">natura giuridica</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/ente">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ente</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <owl:equivalentClass rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#corporateBoby" />
+    <owl:disjointWith rdf:resource="http://dati.san.beniculturali.it/SAN/famiglia" />
+    <owl:disjointWith rdf:resource="http://dati.san.beniculturali.it/SAN/persona" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_statusProvenienza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha statusProvenienza</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11497" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/Status_scheda_provenienza" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/Status_scheda_provenienza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">Status della scheda nel sistema di provenienza</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_strumentoDiRicerca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha strumento di ricerca</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <owl:equivalentProperty rdf:resource="http://lod.xdams.org/reload/oad/has_findingAid" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/isStrumentoDiRicercaOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">è strumento di ricerca di</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <owl:inverseOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_strumentoDiRicerca" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_tematismo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha tematismo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/Tematismo" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/Tematismo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">Tematismo</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_tipologia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha tipologia</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/tipologia_Conservatore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_strumentoDigitale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha strumento digitale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/strumentoDigitale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/strumentoDigitale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strumento digitale</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="vb11546" />
+    <rdfs:subClassOf rdf:nodeID="vb11545" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/abstract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstract</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11501" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/description/biogHist/abstract</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/abstract[@langcode]</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/acronimo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acronimo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/acronimo</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/codice_ISIL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">codice ISIL</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/indirizzo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">indirizzo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/altraDenominazioneComplarc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altra denominazione complesso archivistico</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unittitle</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/altraDenominazioneProduttore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altra denominazione produttore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/identity/nameEntry[@localType=&#39;altradenominazione&#39;]/part</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/altroAccesso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altro accesso</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/altroaccesso</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/schedaProvenienzaHref">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scheda provenienza href</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11511" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unitid/@identifier</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/control/sources/source/@xlink:href</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/eadid/@URL</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/schedaSAN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scheda SAN</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11516" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/sitoWebHref">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sito web href</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/sitoWeb" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/sitoweb/@href</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/homepage" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/sitoWebTesto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sito web testo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/sitoWeb" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/sitoweb</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/strumentoDigitaleTitolo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strumento digitale titolo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumentoDigitale" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/editionstmt/edition/extptr/@title</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/titolo_nobiliare">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">titolo nobiliare</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/persona" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/description/descriptiveEntries/descriptiveEntry/term</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/strumento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strumento di ricerca</rdfs:label>
+    <rdfs:comment>Repertorio - in forma di inventario analitico o sommario, elenco, elenco di versamento, elenco di consistenza, elenco numerico o altro - che descrive in maniera più o meno dettagliata un fondo o parte di esso.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="vb11578" />
+    <rdfs:subClassOf rdf:nodeID="vb11579" />
+    <rdfs:subClassOf rdf:nodeID="vb11577" />
+    <rdfs:subClassOf rdf:nodeID="vb11582" />
+    <rdfs:subClassOf rdf:nodeID="vb11583" />
+    <rdfs:subClassOf rdf:nodeID="vb11580" />
+    <rdfs:subClassOf rdf:nodeID="vb11581" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <owl:equivalentClass rdf:resource="http://lod.xdams.org/reload/oad/findingAid" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/Estensione_data_complesso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">Estensione alla data del complesso archivistico</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_livelloSuperiore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha livelloSuperiore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoProduttore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogoProduttore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/luogo" />
+    <owl:equivalentProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#hasPlace" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoConservatore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogoConservatore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/luogoConservatore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoConservatore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo conservatore</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="vb11558" />
+    <rdfs:subClassOf rdf:nodeID="vb11556" />
+    <rdfs:subClassOf rdf:nodeID="vb11557" />
+    <rdfs:subClassOf rdf:nodeID="vb11555" />
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/luogo" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoGiurisdizione">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogo Giurisdizione</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_luogoProduttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoMorte">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogo morte</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_luogoProduttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoNascita">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogo nascita</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_luogoProduttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdfs:subClassOf rdf:nodeID="vb11554" />
+    <owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature" />
+    <owl:equivalentClass rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#place" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoResidenza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogo Residenza</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_luogoProduttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_luogoSede">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha luogo Sede</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_luogoProduttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_produttore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha produttore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/isProduttoreOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">è produttore di</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <owl:inverseOf rdf:resource="http://dati.san.beniculturali.it/SAN/has_produttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_relazioneProduttore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha relazione con Soggetto Produttore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/qualificazioniRelazioniCpf" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_sitoWeb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha sito web</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/sitoWeb" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/sitoWeb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sito web</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <owl:equivalentClass rdf:resource="http://lod.xdams.org/reload/ocsa/contactArea" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/has_sottotipologia_ente">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha sottotipologia ente</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11494" />
+    <rdfs:range rdf:resource="http://dati.san.beniculturali.it/SAN/TesauroSAN/sottotipologia_ente" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/sottotipologia_ente">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">Sottotipologie del Soggetto produttore Ente</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/autore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/titlestmt/author</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/casaEditrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">casa editrice</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/publicationstm/publisher</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/consistenza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consistenza</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/physdesc/extent</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://lod.xdams.org/reload/oad/extentAndMedium" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/consultazione">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consultazione</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/consultazione</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateCSITesto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label>date contesto storico istituzionale testo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateCSI" />
+    <dcterms:description>Date contesto storico istituzionale testuali</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateComplarcNormal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date complesso archivistico normal</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateComplarc" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unitdate[@datechar=&#39;principale&#39;]/@normal</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://lod.xdams.org/reload/oad/date" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateComplarcTesto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date complesso archivistico testo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateComplarc" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unitdate[@datechar=&#39;principale&#39;]</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateQualificazioniRelCpf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date qualificazioni relazioni Cpf</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/qualificazioniRelazioniCpf" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/relations/cpfRelation/date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateEsistenzaNormal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date esistenza normal</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateEsistenza" />
+    <owl:equivalentProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#existDates" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateEsistenzaTesto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date esistenza testo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateEsistenza" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/description/existDates/dateSet/date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/dateStrumentoTesto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date strumento testo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/dateStrumento" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/publicationstm/date</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/denominazioneCSI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denominazione contesto storico istituzionale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/contestoStoricoIstituzionale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/descrizione">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">descrizione</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11504" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/notestmt/note</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/descrizione</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/descrizioneCSI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">descrizione contesto storico istituzionale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/contestoStoricoIstituzionale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/edito">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edito</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/notestmt/note/@type</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/estensioneDateNormal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estensione date normal</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/estensioneDateComplarc" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unitdate/@normal</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/formaAutorizzataComplarc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forma autorizzata complesso archivistico</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unittitle</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://lod.xdams.org/reload/oad/title" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/formaAutorizzataConservatore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forma autorizzata conservatore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/formaautorizzata</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/formeparallele</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/formaAutorizzataProduttore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forma autorizzata produttore</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/identity/nameEntry/part</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/identity/nameEntryParallel/nameEntry/part[@langcode]</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#authorizedForm" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/formaAutorizzataProfiloIstituzionale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forma autorizzata profilo istituzionale</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/profiloIstituzionale" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoCAP">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo CAP</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/luogoConservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/localizzazione/@cap</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoComune">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo comune</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/luogoConservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/localizzazione/@comune</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoPaese">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo paese</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/luogoConservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/localizzazione/@paese</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoProvincia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo provincia</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/luogoConservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/localizzazione/@provincia</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoPubblicazione">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo pubblicazione</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumento" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/publicationstm/address</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/luogoTesto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luogo testo</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/luogo" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/placeDates/placeDate/place</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/localizzazione</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/orario">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orario</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/orario</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/ordinamento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ordinamento</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/professione">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professione</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/persona" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/description/descriptiveEntries/descriptiveEntry/term</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/persona">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">persona</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://dati.san.beniculturali.it/SAN/produttore" />
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/person" />
+    <owl:equivalentClass rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#person" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/tipoQualificazioniRelCpf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tipo qualificazioni relazioni Cpf</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/qualificazioniRelazioniCpf" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/cpfDescription/relations/cpfRelation/@localType</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf#cpfRelationType" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/recordProvenienzaId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record provenienza id</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11507" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unitid</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/control/otherRecordId</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/eadid</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/servizi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">servizi</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/conservatore" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/scons.xsd//scons/servizi</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/sistemaProvenienza">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sistema provenienza</rdfs:label>
+    <rdfs:domain rdf:nodeID="vb11522" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/eadid/@identifier</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc/did/unitid/@type</rdfs:comment>
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaeac.xsd//eac-cpf/control/otherRecordId/@localtype</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/strumentoDigitaleLink">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strumento digitale link</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/strumentoDigitale" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/strumenti.xsd//ead/eadheader/filedesc/editionstmt/edition/extptr/@href</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/tipologiaComplesso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tipologia complesso</rdfs:label>
+    <rdfs:domain rdf:resource="http://dati.san.beniculturali.it/SAN/complessoArchivistico" />
+    <rdfs:comment>Tracciato schema SAN: http://www.san.beniculturali.it/tracciato/schemaead.xsd//ead/archdesc[@level=&#39;otherlevel&#39;]/@otherlevel</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dati.san.beniculturali.it/SAN/TesauroSAN/tipologia_Conservatore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <skos:prefLabel xml:lang="it">Tipologia del soggetto conservatore</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11479">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11481" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11482">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11484" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11485">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11487" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11488">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11490" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11491">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11493" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11494">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11496" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11497">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11500" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11501">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11503" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11504">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11506" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11507">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11510" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11511">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11515" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11516">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11521" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11522">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11525" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="vb11559">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <owl:unionOf rdf:nodeID="vb11562" />
+  </rdf:Description>
+</rdf:RDF>

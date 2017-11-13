@@ -1,0 +1,83 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+rdfs:label	rdf:type	owl:DatatypeProperty .
+@prefix ns3:	<http://purl.org/net/hifm/ontology#> .
+rdfs:label	rdfs:domain	ns3:Drug .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+rdfs:label	rdfs:range	xsd:string .
+rdfs:seeAlso	rdf:type	owl:ObjectProperty ;
+	rdfs:domain	ns3:Drug .
+@prefix ns5:	<http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/> .
+rdfs:seeAlso	rdfs:range	ns5:drugs .
+ns5:genericName	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string .
+ns5:brandName	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string .
+ns5:atcCode	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string .
+ns5:drugs	rdf:type	owl:Class ;
+	rdfs:label	"drugs" .
+ns3:similarTo	rdf:type	owl:TransitiveProperty ,
+		owl:SymmetricProperty ,
+		owl:ObjectProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	ns3:Drug ;
+	rdfs:comment	"This property represents a similarity that is known between two drugs." .
+ns3:Drug	rdf:type	owl:Class ;
+	rdfs:label	"Drug" ;
+	rdfs:comment	"This class represents a brand-name drug." .
+ns3:dosageForm	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string ;
+	rdfs:comment	"This property represents the dosage form of the medicine." .
+ns3:id	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string ;
+	rdfs:comment	"This is the ID that the medicine has in the local system of the Health Insurance Fund of Macedonia" .
+ns3:manufacturer	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string ;
+	rdfs:comment	"This property represents a manufacturer of a drug." .
+ns3:notes	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string ;
+	rdfs:comment	"This property represents additional notes related to a medicine." .
+ns3:packaging	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:nonNegativeInteger ;
+	rdfs:comment	"This property represents the number of units per drug package." .
+ns3:refPriceNoVAT	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:float ;
+	rdfs:comment	"This property represents the referent price of the medicine in macedonian denars (MKD), with NO VAT calculated" .
+ns3:refPriceWithVAT	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:float ;
+	rdfs:comment	"This property represents the referent value of the medicine in macedonian denars (MKD), with VAT calculated" .
+ns3:strength	rdf:type	owl:DatatypeProperty ;
+	rdfs:domain	ns3:Drug ;
+	rdfs:range	xsd:string ;
+	rdfs:comment	"This property represents the strength of the drug, in milligrams." .
+ns3:	rdf:type	owl:Ontology .
+@prefix dct:	<http://purl.org/dc/terms/> .
+ns3:	dct:modified	"2016-08-28" ;
+	rdfs:label	"DBM Ontology" ;
+	rdfs:isDefinedBy	ns3: ;
+	rdfs:comment	"An ontology for the Health Insurance Fund of Macedonia (HIFM)." ;
+	owl:versionInfo	"1.1" ;
+	dct:description	"An ontology for describing brand-name drugs." ;
+	dct:contributor	<https://plus.google.com/+BojanNajdenov> ;
+	dct:creator	<https://plus.google.com/+MilosJovanovik> ;
+	dct:issued	"2014-04-01" ;
+	dct:publisher	<http://finki.ukim.mk/> ;
+	dct:title	"HIFM Ontology" .
+@prefix ns7:	<http://purl.org/vocab/vann/> .
+ns3:	ns7:preferredNamespacePrefix	"hifm" ;
+	ns7:preferredNamespaceUri	"http://purl.org/net/hifm/ontology#" .
+@prefix ns8:	<http://creativecommons.org/ns#> .
+ns3:	ns8:license	<https://creativecommons.org/licenses/by/3.0/> ;
+	dct:rights	"Copyright 2014, Milos Jovanovik" .

@@ -1,0 +1,1578 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+      <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>AgRelOn, an Agent Relationship Ontology</title>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<link rel="stylesheet" href="http://files.dnb.de/standards/css/dnb_ont.css"/>
+<style type="text/css">
+dt {
+	font-weight:bold;
+}
+dl {
+	font-family: Verdana, Arial, sans-serif;
+    margin-right: 1.5em;
+}
+dt + dd {
+	margin-top:1em;
+}
+dd + dt {
+	margin-top:1em;
+}
+</style>
+</head>
+<body>
+<h1>AgRelOn, an Agent Relationship Ontology</h1>
+<h2>Namespace Document 2017-01-17</h2>
+<p>
+            <img
+                src="http://www.voclink.org/img/logo-1.gif"
+                alt="German National Library logo"/>
+</p>
+<dl>
+<dt>This version:</dt>
+<dd><a
+                href="http://d-nb.info/standards/elementset/agrelon2017-01-17"
+                >http://d-nb.info/standards/elementset/agrelon2017-01-17</a> (<a
+                href="http://d-nb.info/standards/elementset/agrelon2017-01-17.rdf"
+            >rdf</a>)</dd>
+        <dt>Latest version:</dt>
+        <dd><a href="http://d-nb.info/standards/elementset/agrelon"
+                >http://d-nb.info/standards/elementset/agrelon</a> (<a
+                href="http://d-nb.info/standards/elementset/agrelon.rdf">rdf</a>)</dd>
+                <dt>Previous version:</dt>
+                <dd><a
+                href="http://d-nb.info/standards/elementset/agrelon2013-06-30"
+                >http://d-nb.info/standards/elementset/agrelon2013-06-30</a> (<a
+                href="http://d-nb.info/standards/elementset/agrelon2013-06-30.rdf"
+            >rdf</a>)</dd>
+        </dl>
+<p class="bold">Authors:</p>
+        <p class="indent2em">Aenne L&ouml;hden (<a
+                href="http://www.dnb.de/">Deutsche Nationalbibliothek</a>)</p>
+        <p class="bold">Contributors:</p>
+        <ul>
+            <li>Berenike Litz (<a
+                href="http://www.dnb.de/">Deutsche Nationalbibliothek</a>)</li>
+            <li>Lars G. Svensson (<a
+                href="http://www.dnb.de/">Deutsche Nationalbibliothek</a>)</p></li>
+        </ul>
+		<p>Copyright &copy; 2012-2016 <a href="http://www.dnb.de">Deutsche Nationalbibliothek</a></p>
+        <p>This work is licensed under a <a href="http://creativecommons.org/publicdomain/zero/1.0/"
+                >Creative Commons - CC0 1.0 Universal License</a>. This copyright applies to the AgRelon
+            documentation and the accompanying RDF specification. Regarding underlying
+            technology, AgRelon uses W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology, an open
+            Web standard that can be freely used by anyone.</p>
+        <h2>Abstract</h2>
+        <p>The ontology of agent relationships (AgRelOn) defines relations of persons to other persons
+		and to organisations, since agents (persons, organisations) and their interconnections are important 
+		in the cultural heritage domain. AgRelOn is developed to foster uniform cataloging as well as 
+		semantic searchability of and via relations between agents. Therefore, a general set of nearly 
+		70 relationhip types is provided. AgRelOn discerns private acquaintanceship, group affiliation, 
+		correspondence, occupational contact,  kinship, spiritual contact, and vital/lethal contact. 
+		For these kinds of relations more specific sub-relations are formulated.
+	Meta statements are supported to obtain transparency of reliability and provenance as well as validity 
+	period of facts.
+	The modelled relations are determined on the one hand by exemplary knowledge base searches, on the other 
+	hand by available data sources. Hence, the model consciously is incomplete and pertinent to a cultural 
+	area and period.</p>
+        <h2>The Ontology of Agent Relationships</h2>
+        <p>Vocabulary elements (properties and concepts) are conceived gender neutral.
+The identifiers of properties are preferably hasProperty and invers isPropertyOf or hasInverseProperty. 
+Domains and ranges of properties are mostly not fixed.
+Instance relations (object properties) are mostly specified bidirectionally.
+Implicit, deducable instance relations are explicitly formulated.
+Properties partly allow imperfect information (e.g. fragmentary dates, names instead of object URIs).
+Correlations between instance relations, like inversity, transitivity, symmetry, hierarchie, are marked.
+Meta statements are exhibited by modelling person relations as n-ary concepts as well as as properties, corresponding n-ary concepts and properties are correlated.</p>
+        <p>AgRelon is identified by the namespace URI <a
+                href="http://d-nb.info/standards/elementset/agrelon#"
+                >http://d-nb.info/standards/elementset/agrelon#</a>. Revisions and extensions of AgRelOn
+                are conducted through edits to this document, which by convention is accessible
+            in the Web via the namespace URI. For practical and deployment reasons, note that we do
+            not update the namespace URI as the vocabulary matures</p>
+<h3>Classes overview</h3>
+<p>
+    <a href="#HasAcquaintance">has acquaintance</a>,     <a href="#HasAdoptiveChildParent">has adoptive child / adoptive parent</a>,     <a href="#HasAdoptiveSibling">has adoptive sibling</a>,     <a href="#HasAssociate">has group affiliation</a>,     <a href="#HasBiologicalChildParent">has biological child / parent</a>,     <a href="#HasBiologicalSibling">has biological sibling</a>,     <a href="#HasChildParent">has child / parent</a>,     <a href="#HasChildParentInlaw">has child/parent-in-law</a>,     <a href="#HasCohabitee">has cohabitee</a>,     <a href="#HasColleague">has colleague</a>,     <a href="#HasCooperator">has collaborator</a>,     <a href="#HasCorrespondent">has correspondent</a>,     <a href="#HasCousin">has cousin</a>,     <a href="#HasEmployeeEmployer">has employee / employer</a>,     <a href="#HasFianceeFiance">has fiancee  or fiance</a>,     <a href="#HasFosterChildParent">has foster child / parent</a>,     <a href="#HasFosterSibling">has foster sibling</a>,     <a href="#HasFriend">has friend</a>,     <a href="#HasGodChildParent">has godchild / godparent</a>,     <a href="#HasGrandChildParent">has grandchild / grandparent</a>,     <a href="#HasHalfSibling">has half sibling</a>,     <a href="#HasIllegitimateChildParent">has illegitimate child / parent</a>,     <a href="#HasInfluenceDoneeDonor">has influence on / is influenced by</a>,     <a href="#HasInlaw">has in-law</a>,     <a href="#HasIsChannel">has channel / is channel of</a>,     <a href="#HasIsChief">has chief / is chief of</a>,     <a href="#HasIsFounder">has founder / is founder of</a>,     <a href="#HasIsMember">has member / is member of</a>,     <a href="#HasIsMuse">has muse / is muse of</a>,     <a href="#HasLover">has lover</a>,     <a href="#HasMultipleBirthSibling">has multiple birth sibling</a>,     <a href="#HasMurdereeMurderer">has murder victim / murderer</a>,     <a href="#HasNieceNephewAuntUncle">has aunt or uncle / niece or nephew</a>,     <a href="#HasOffspringAncestor">has ancestor / offspring</a>,     <a href="#HasProfessionalContact">has professional contact</a>,     <a href="#HasRelative">has relative</a>,     <a href="#HasSibling">has sibling</a>,     <a href="#HasSiblingInlaw">has sibling-in-law</a>,     <a href="#HasSpiritualContact">has spiritual contact</a>,     <a href="#HasSpouse">has spouse</a>,     <a href="#HasStepChildParent">has stepchild / stepparent</a>,     <a href="#HasStepSibling">has stepsibling</a>,     <a href="#HasStudentTeacher">has Student / teacher</a>,     <a href="#HasVitalLethalContact">has vital or lethal contact</a>,     <a href="#IsHasPatron">has patron / is patron of</a>,     <a href="#IsHasPhysician">has physician / is physician of</a>,     <a href="#NAries">n-ary classes</a>,     <a href="#RelatedAgent">related Agent</a></p>
+<h3>Object Properties Overview</h3>
+<p>
+    <a href="#correspondsTo">corresponds to</a>,     <a href="#correspondsToInverse">corresponds to inverse</a>,     <a href="#hasAcquaintance">has acquaintance</a>,     <a href="#hasAdoptiveChild">has adoptive child</a>,     <a href="#hasAdoptiveParent">has adoptive parent</a>,     <a href="#hasAdoptiveSibling">has adoptive sibling</a>,     <a href="#hasAncestor">has ancestor</a>,     <a href="#hasAssociate">has group affiliation</a>,     <a href="#hasAuntUncle">has aunt or uncle</a>,     <a href="#hasBiologicalChild">has biological child</a>,     <a href="#hasBiologicalParent">has biological parent</a>,     <a href="#hasBiologicalSibling">has biological sibling</a>,     <a href="#hasChannel">has channel</a>,     <a href="#hasChief">has chief</a>,     <a href="#hasChild">has child</a>,     <a href="#hasChildInlaw">has child-in-law</a>,     <a href="#hasCohabitee">has cohabitee</a>,     <a href="#hasColleague">has colleague</a>,     <a href="#hasCooperator">has collaborator</a>,     <a href="#hasCorrespondent">has correspondent</a>,     <a href="#hasCousin">has cousin</a>,     <a href="#hasEmployee">has employee</a>,     <a href="#hasEmployer">has employer</a>,     <a href="#hasFianceeFiance">has fiancee  or fiance</a>,     <a href="#hasFosterChild">has foster child</a>,     <a href="#hasFosterParent">has foster parent</a>,     <a href="#hasFosterSibling">has foster sibling</a>,     <a href="#hasFounder">has founder</a>,     <a href="#hasFriend">has friend</a>,     <a href="#hasGodChild">has godchild</a>,     <a href="#hasGodParent">has godparent</a>,     <a href="#hasGrandChild">has grandchild</a>,     <a href="#hasGrandParent">has grandparent</a>,     <a href="#hasHalfSibling">has half sibling</a>,     <a href="#hasIllegitimateChild">has illegitimate child</a>,     <a href="#hasIllegitimateParent">has illegitimate parent</a>,     <a href="#hasInfluenceDonee">has influence on</a>,     <a href="#hasInfluenceDonor">is influenced by</a>,     <a href="#hasInlaw">has in-law</a>,     <a href="#hasLover">has lover</a>,     <a href="#hasMember">has member</a>,     <a href="#hasMultipleBirthSibling">has multiple birth sibling</a>,     <a href="#hasMurderee">has murder victim</a>,     <a href="#hasMurderer">has murderer</a>,     <a href="#hasMuse">has muse</a>,     <a href="#hasNieceNephew">has niece or nephew</a>,     <a href="#hasObject">has object</a>,     <a href="#hasOffspring">has offspring</a>,     <a href="#hasParent">has parent</a>,     <a href="#hasParentInlaw">has parent-in-law</a>,     <a href="#hasPatron">has patron</a>,     <a href="#hasPhysician">has physician</a>,     <a href="#hasProfessionalContact">has professional contact</a>,     <a href="#hasRelative">has relative</a>,     <a href="#hasSibling">has sibling</a>,     <a href="#hasSiblingInlaw">has sibling-in-law</a>,     <a href="#hasSpiritualContact">has spiritual contact</a>,     <a href="#hasSpouse">has spouse</a>,     <a href="#hasStepChild">has stepchild</a>,     <a href="#hasStepParent">has stepparent</a>,     <a href="#hasStepSibling">has stepsibling</a>,     <a href="#hasStudent">has Student</a>,     <a href="#hasSubject">has subject</a>,     <a href="#hasSubjectObject">has subject or object</a>,     <a href="#hasTeacher">has teacher</a>,     <a href="#hasVitalLethalContact">has vital or lethal contact</a>,     <a href="#isChannelOf">is channel of</a>,     <a href="#isChiefOf">is chief of</a>,     <a href="#isFounderOf">is founder of</a>,     <a href="#isMemberOf">is member of</a>,     <a href="#isMuseOf">is muse of</a>,     <a href="#isObject">is object</a>,     <a href="#isPatronOf">is patron of</a>,     <a href="#isPhysicianOf">is physician of</a>,     <a href="#isSubject">is subject</a>,     <a href="#isSubjectObject">is subject or object</a>,     <a href="#metadataPeriod">has validity period</a>,     <a href="#relatedAgent">related Agent</a></p>
+<h3>Datatype Properties Overview</h3>
+<p>
+    <a href="#hasBeginDate">has begin date</a>,     <a href="#hasEndDate">has end date</a>,     <a href="#metadataConfidence">has confidence value</a>,     <a href="#metadataProvenance">has provenance</a></p>
+<h3>Annotation Properties Overview</h3>
+<p>
+    <a href="#hasGndCode">has GND code</a></p>
+<h3>Property Chains</h3>
+<p>
+    <a href="#hasGrandParentPropertyChain">has grandparent</a></p>
+<h2>Detailed Information</h2>
+
+<h3>Classes</h3>
+<h4><a name="HasAcquaintance" id="HasAcquaintance">has acquaintance</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasAcquaintance">http://d-nb.info/standards/elementset/agrelon#HasAcquaintance</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Bekannte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene conocido(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has acquaintance</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha conoscente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasAcquaintance</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasCohabitee">has cohabitee</a>, <a href="#HasFriend">has friend</a>, <a href="#HasLover">has lover</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="HasAdoptiveChildParent" id="HasAdoptiveChildParent">has adoptive child / adoptive parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasAdoptiveChildParent">http://d-nb.info/standards/elementset/agrelon#HasAdoptiveChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Adoptivkind / Adoptivelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) / padre / madre adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has adoptive child / adoptive parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) / genitore adottivo(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasAdoptiveChild and hasAdoptiveParent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasChildParent">has child / parent</a></td></tr>
+			</table>
+<h4><a name="HasAdoptiveSibling" id="HasAdoptiveSibling">has adoptive sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasAdoptiveSibling">http://d-nb.info/standards/elementset/agrelon#HasAdoptiveSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Adoptivgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has adoptive sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello adottato o sorella adottata</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasAdoptiveSibling</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSibling">has sibling</a></td></tr>
+			</table>
+<h4><a name="HasAssociate" id="HasAssociate">has group affiliation</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasAssociate">http://d-nb.info/standards/elementset/agrelon#HasAssociate</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Gruppenzugehörigkeit</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene grupo de afiliación</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has group affiliation</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha gruppo di appartenenza</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasAssociate</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasIsChief">has chief / is chief of</a>, <a href="#HasIsFounder">has founder / is founder of</a>, <a href="#HasIsMember">has member / is member of</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="HasBiologicalChildParent" id="HasBiologicalChildParent">has biological child / parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasBiologicalChildParent">http://d-nb.info/standards/elementset/agrelon#HasBiologicalChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat biologisches Kind / biologischen Elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) / padre / madre biológico(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has biological child / parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) / genitore biologico(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasBiologicalChild and hasBiologicalParent</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasIllegitimateChildParent">has illegitimate child / parent</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasChildParent">has child / parent</a></td></tr>
+			</table>
+<h4><a name="HasBiologicalSibling" id="HasBiologicalSibling">has biological sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasBiologicalSibling">http://d-nb.info/standards/elementset/agrelon#HasBiologicalSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat biologisches Geschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) biológico(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has biological sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello biologico o sorella biologica</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasBiologicalSibling</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSibling">has sibling</a></td></tr>
+			</table>
+<h4><a name="HasChildParent" id="HasChildParent">has child / parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasChildParent">http://d-nb.info/standards/elementset/agrelon#HasChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Kind /Elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) / padre o madre</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has child / parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) / genitore</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasChild and hasParent</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasAdoptiveChildParent">has adoptive child / adoptive parent</a>, <a href="#HasBiologicalChildParent">has biological child / parent</a>, <a href="#HasFosterChildParent">has foster child / parent</a>, <a href="#HasStepChildParent">has stepchild / stepparent</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasOffspringAncestor">has ancestor / offspring</a></td></tr>
+			</table>
+<h4><a name="HasChildParentInlaw" id="HasChildParentInlaw">has child/parent-in-law</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasChildParentInlaw">http://d-nb.info/standards/elementset/agrelon#HasChildParentInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schwiegerkind / -elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene yerno o nuera / suegro(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has child/parent-in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha genero o nuora / suocero(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasChildInlaw and hasParentInlaw</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasInlaw">has in-law</a></td></tr>
+			</table>
+<h4><a name="HasCohabitee" id="HasCohabitee">has cohabitee</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasCohabitee">http://d-nb.info/standards/elementset/agrelon#HasCohabitee</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Lebensgefährte</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene cohabitante</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has cohabitee</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha compagno(a) di vita</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasCohabitee</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasAcquaintance">has acquaintance</a></td></tr>
+			</table>
+<h4><a name="HasColleague" id="HasColleague">has colleague</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasColleague">http://d-nb.info/standards/elementset/agrelon#HasColleague</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Kollege</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene colega</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has colleague</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha collega</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasColleague</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="HasCooperator" id="HasCooperator">has collaborator</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasCooperator">http://d-nb.info/standards/elementset/agrelon#HasCooperator</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Kollaborator</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene colaborador(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has collaborator</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha collaboratore o collaboratrice</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasCooperator</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="HasCorrespondent" id="HasCorrespondent">has correspondent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasCorrespondent">http://d-nb.info/standards/elementset/agrelon#HasCorrespondent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Korrespondent</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene correspondente</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has correspondent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha corrispondente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasCorrespondent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="HasCousin" id="HasCousin">has cousin</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasCousin">http://d-nb.info/standards/elementset/agrelon#HasCousin</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Cousin</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene primo o prima</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has cousin</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha cugino(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasCousin</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasRelative">has relative</a></td></tr>
+			</table>
+<h4><a name="HasEmployeeEmployer" id="HasEmployeeEmployer">has employee / employer</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasEmployeeEmployer">http://d-nb.info/standards/elementset/agrelon#HasEmployeeEmployer</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Arbeitnehmer / Arbeitgeber</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene empleado(a) / empleador(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has employee / employer</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha impiegato(a) / datore di lavoro</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasEmployee and hasEmployer</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="HasFianceeFiance" id="HasFianceeFiance">has fiancee  or fiance</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasFianceeFiance">http://d-nb.info/standards/elementset/agrelon#HasFianceeFiance</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Verlobte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene prometido(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has fiancee  or fiance</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fidanzato(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasFianceeFiance</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasInlaw">has in-law</a></td></tr>
+			</table>
+<h4><a name="HasFosterChildParent" id="HasFosterChildParent">has foster child / parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasFosterChildParent">http://d-nb.info/standards/elementset/agrelon#HasFosterChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Pflegekind / -elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) / padre o madre de crianza</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has foster child / parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha pupillo(a) / genitore</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasFosterChild and hasFosterParent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasChildParent">has child / parent</a></td></tr>
+			</table>
+<h4><a name="HasFosterSibling" id="HasFosterSibling">has foster sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasFosterSibling">http://d-nb.info/standards/elementset/agrelon#HasFosterSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">has Pflegegeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) de crianza</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has foster sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello o sorella di latte</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasFosterSibling</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSibling">has sibling</a></td></tr>
+			</table>
+<h4><a name="HasFriend" id="HasFriend">has friend</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasFriend">http://d-nb.info/standards/elementset/agrelon#HasFriend</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Freund</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene amigo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has friend</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha amico(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasFriend</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasAcquaintance">has acquaintance</a></td></tr>
+			</table>
+<h4><a name="HasGodChildParent" id="HasGodChildParent">has godchild / godparent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasGodChildParent">http://d-nb.info/standards/elementset/agrelon#HasGodChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Patenkind / Pate</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene ahijado(a) / padrino o madrina</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has godchild / godparent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlioccio o figlioccia / padrino o padrina</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasGodChild and hasGodParent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasNieceNephewAuntUncle">has aunt or uncle / niece or nephew</a></td></tr>
+			</table>
+<h4><a name="HasGrandChildParent" id="HasGrandChildParent">has grandchild / grandparent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasGrandChildParent">http://d-nb.info/standards/elementset/agrelon#HasGrandChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Enkel / Großelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene nieto(a) / abuelo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has grandchild / grandparent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha nipote (di nonni) / nonno(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasGrandChild and hasGrandParent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasOffspringAncestor">has ancestor / offspring</a></td></tr>
+			</table>
+<h4><a name="HasHalfSibling" id="HasHalfSibling">has half sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasHalfSibling">http://d-nb.info/standards/elementset/agrelon#HasHalfSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Halbgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene medio hermano(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has half sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratellastro a sorellastra</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasHalfSibling</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSibling">has sibling</a></td></tr>
+			</table>
+<h4><a name="HasIllegitimateChildParent" id="HasIllegitimateChildParent">has illegitimate child / parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIllegitimateChildParent">http://d-nb.info/standards/elementset/agrelon#HasIllegitimateChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat illegitimes Kind / illegitimen Elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) / padre o madre illegítimo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has illegitimate child / parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) / genitore illegittimo(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasIllegitimateChild / hasIllegitimateParent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasBiologicalChildParent">has biological child / parent</a></td></tr>
+			</table>
+<h4><a name="HasInfluenceDoneeDonor" id="HasInfluenceDoneeDonor">has influence on / is influenced by</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasInfluenceDoneeDonor">http://d-nb.info/standards/elementset/agrelon#HasInfluenceDoneeDonor</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Einfluss auf / ist beeinflusst durch</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene influencia sobre / es influenciado(a) por</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has influence on / is influenced by</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha influenza su / è influenzato(a) da</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasInfluenceDonee / hasInfluenceDonor</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="HasInlaw" id="HasInlaw">has in-law</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasInlaw">http://d-nb.info/standards/elementset/agrelon#HasInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat angeheiratete(n) Verwandte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene pariente político</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha parente per matrimonio</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasInlaw</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasChildParentInlaw">has child/parent-in-law</a>, <a href="#HasFianceeFiance">has fiancee  or fiance</a>, <a href="#HasSiblingInlaw">has sibling-in-law</a>, <a href="#HasSpouse">has spouse</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasRelative">has relative</a></td></tr>
+			</table>
+<h4><a name="HasIsChannel" id="HasIsChannel">has channel / is channel of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsChannel">http://d-nb.info/standards/elementset/agrelon#HasIsChannel</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Medium / ist Medium von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene médium / es médium de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has channel / is channel of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha sensitivo(a) / è sensitivo(a) di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasChannel / isChannelOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSpiritualContact">has spiritual contact</a></td></tr>
+			</table>
+<h4><a name="HasIsChief" id="HasIsChief">has chief / is chief of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsChief">http://d-nb.info/standards/elementset/agrelon#HasIsChief</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Chef / ist Chef von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene jefe / es jefe de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has chief / is chief of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha capo / è capo di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasChief / isChiefOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasAssociate">has group affiliation</a></td></tr>
+			</table>
+<h4><a name="HasIsFounder" id="HasIsFounder">has founder / is founder of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsFounder">http://d-nb.info/standards/elementset/agrelon#HasIsFounder</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Gründer / ist Gründer von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene fundador(a) / es fundador(a) de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has founder / is founder of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fondatore o fondatrice / è fondatore o fondatrice di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasFounder / isFounderOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasAssociate">has group affiliation</a></td></tr>
+			</table>
+<h4><a name="HasIsMember" id="HasIsMember">has member / is member of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMember">http://d-nb.info/standards/elementset/agrelon#HasIsMember</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mitglied / ist Mitglied von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene membrio / es miembro de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has member / is member of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha membro / è membro di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasMember / isMemberOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasAssociate">has group affiliation</a></td></tr>
+			</table>
+<h4><a name="HasIsMuse" id="HasIsMuse">has muse / is muse of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">http://d-nb.info/standards/elementset/agrelon#HasIsMuse</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Muse / ist Muse von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene musa / es musa de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has muse / is muse of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha musa / è musa di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasMuse / isMuseOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="HasLover" id="HasLover">has lover</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasLover">http://d-nb.info/standards/elementset/agrelon#HasLover</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Geliebte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene amante</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has lover</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha amante</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasLover</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasAcquaintance">has acquaintance</a></td></tr>
+			</table>
+<h4><a name="HasMultipleBirthSibling" id="HasMultipleBirthSibling">has multiple birth sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasMultipleBirthSibling">http://d-nb.info/standards/elementset/agrelon#HasMultipleBirthSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mehrlingsgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) gemelo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has multiple birth sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello o sorella plurigemellare</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasMultipleBirthSibling</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSibling">has sibling</a></td></tr>
+			</table>
+<h4><a name="HasMurdereeMurderer" id="HasMurdereeMurderer">has murder victim / murderer</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasMurdereeMurderer">http://d-nb.info/standards/elementset/agrelon#HasMurdereeMurderer</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mordopfer / Mörder</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene víctima / asesino(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has murder victim / murderer</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha vittima domicidio / assassino(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasMurderee / hasMurderer</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasVitalLethalContact">has vital or lethal contact</a></td></tr>
+			</table>
+<h4><a name="HasNieceNephewAuntUncle" id="HasNieceNephewAuntUncle">has aunt or uncle / niece or nephew</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasNieceNephewAuntUncle">http://d-nb.info/standards/elementset/agrelon#HasNieceNephewAuntUncle</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Tante oder Onkel / Nichte oder Neffe</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene tío o tía / sobrino(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has aunt or uncle / niece or nephew</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha zia o zio / nipote (di zii)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasAuntUncle / hasNieceNephew</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasGodChildParent">has godchild / godparent</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasRelative">has relative</a></td></tr>
+			</table>
+<h4><a name="HasOffspringAncestor" id="HasOffspringAncestor">has ancestor / offspring</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasOffspringAncestor">http://d-nb.info/standards/elementset/agrelon#HasOffspringAncestor</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Vorfahr / Nachkomme</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene ancestro / heredero(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has ancestor / offspring</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha antenato / discendente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasAncestor / hasOffspring</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasChildParent">has child / parent</a>, <a href="#HasGrandChildParent">has grandchild / grandparent</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasRelative">has relative</a></td></tr>
+			</table>
+<h4><a name="HasProfessionalContact" id="HasProfessionalContact">has professional contact</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasProfessionalContact">http://d-nb.info/standards/elementset/agrelon#HasProfessionalContact</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Berufskontakt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene relación profesional</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has professional contact</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha contatto professionale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasProfessionalContact</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasColleague">has colleague</a>, <a href="#HasCooperator">has collaborator</a>, <a href="#HasEmployeeEmployer">has employee / employer</a>, <a href="#HasInfluenceDoneeDonor">has influence on / is influenced by</a>, <a href="#HasIsMuse">has muse / is muse of</a>, <a href="#HasStudentTeacher">has Student / teacher</a>, <a href="#IsHasPatron">has patron / is patron of</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="HasRelative" id="HasRelative">has relative</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasRelative">http://d-nb.info/standards/elementset/agrelon#HasRelative</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Verwandte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene pariente</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has relative</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha parente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasRelative</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasCousin">has cousin</a>, <a href="#HasInlaw">has in-law</a>, <a href="#HasNieceNephewAuntUncle">has aunt or uncle / niece or nephew</a>, <a href="#HasOffspringAncestor">has ancestor / offspring</a>, <a href="#HasSibling">has sibling</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="HasSibling" id="HasSibling">has sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasSibling">http://d-nb.info/standards/elementset/agrelon#HasSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Geschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello o sorella</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasSibling</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasAdoptiveSibling">has adoptive sibling</a>, <a href="#HasBiologicalSibling">has biological sibling</a>, <a href="#HasFosterSibling">has foster sibling</a>, <a href="#HasHalfSibling">has half sibling</a>, <a href="#HasMultipleBirthSibling">has multiple birth sibling</a>, <a href="#HasStepSibling">has stepsibling</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasRelative">has relative</a></td></tr>
+			</table>
+<h4><a name="HasSiblingInlaw" id="HasSiblingInlaw">has sibling-in-law</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasSiblingInlaw">http://d-nb.info/standards/elementset/agrelon#HasSiblingInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schwager oder Schwägerin</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene cuñado(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has sibling-in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha cognato(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasSiblingInlaw</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasInlaw">has in-law</a></td></tr>
+			</table>
+<h4><a name="HasSpiritualContact" id="HasSpiritualContact">has spiritual contact</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasSpiritualContact">http://d-nb.info/standards/elementset/agrelon#HasSpiritualContact</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat spirituellen Kontakt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene guía espiritual</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has spiritual contact</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha contatto spirituale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasSpiritualContact</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasIsChannel">has channel / is channel of</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="HasSpouse" id="HasSpouse">has spouse</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasSpouse">http://d-nb.info/standards/elementset/agrelon#HasSpouse</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Ehepartner</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene esposo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has spouse</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha coniuge</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasSpouse</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasInlaw">has in-law</a></td></tr>
+			</table>
+<h4><a name="HasStepChildParent" id="HasStepChildParent">has stepchild / stepparent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasStepChildParent">http://d-nb.info/standards/elementset/agrelon#HasStepChildParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Stiefkind / Stiefelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) / padre o madre adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has stepchild / stepparent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figliastro(a) / padrigno o madrigna</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasStepChild / hasStepParent</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasChildParent">has child / parent</a></td></tr>
+			</table>
+<h4><a name="HasStepSibling" id="HasStepSibling">has stepsibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasStepSibling">http://d-nb.info/standards/elementset/agrelon#HasStepSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Stiefgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has stepsibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratellastro o sorellastra</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasStepSibling</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasSibling">has sibling</a></td></tr>
+			</table>
+<h4><a name="HasStudentTeacher" id="HasStudentTeacher">has Student / teacher</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasStudentTeacher">http://d-nb.info/standards/elementset/agrelon#HasStudentTeacher</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schüler / Lehrer</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene estudiante / maestro(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has Student / teacher</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha scolaro(a) / insegnante</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasStudent / hasTeacher</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="HasVitalLethalContact" id="HasVitalLethalContact">has vital or lethal contact</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasVitalLethalContact">http://d-nb.info/standards/elementset/agrelon#HasVitalLethalContact</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat vitalen oder letalen Kontakt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene contacto vital o letal</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has vital or lethal contact</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha contatto vitale o letale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property hasVitalLethalContact</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasMurdereeMurderer">has murder victim / murderer</a>, <a href="#IsHasPhysician">has physician / is physician of</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+			</table>
+<h4><a name="IsHasPatron" id="IsHasPatron">has patron / is patron of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#IsHasPatron">http://d-nb.info/standards/elementset/agrelon#IsHasPatron</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mäzen / ist Mäzen von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene mecenas / es mecenas de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has patron / is patron of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha mecenateè mecenate di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasPatron / isPatronOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasProfessionalContact">has professional contact</a></td></tr>
+			</table>
+<h4><a name="IsHasPhysician" id="IsHasPhysician">has physician / is physician of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#IsHasPhysician">http://d-nb.info/standards/elementset/agrelon#IsHasPhysician</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Arzt / ist Arzt von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene médico / es médico de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has physician / is physician of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha medico / è medico di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the properties hasPhysician / isPhysicianOf</td></tr>
+						<tr><td class="width30">Has superclass</td><td class="width70"><a href="#HasVitalLethalContact">has vital or lethal contact</a></td></tr>
+			</table>
+<h4><a name="NAries" id="NAries">n-ary classes</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#NAries">http://d-nb.info/standards/elementset/agrelon#NAries</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">n-ary Klassen</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">n-ary classes</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the top class for all n-ary classes</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#RelatedAgent">related Agent</a></td></tr>
+					</table>
+<h4><a name="RelatedAgent" id="RelatedAgent">related Agent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#RelatedAgent">http://d-nb.info/standards/elementset/agrelon#RelatedAgent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">verknüpfter Agens</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">agente relacionado</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">related Agent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">agente connesso</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">This is the n-ary concept for the property relatedAgent</td></tr>
+				<tr><td class="width30">Has subclass</td><td class="width70"><a href="#HasAcquaintance">has acquaintance</a>, <a href="#HasAssociate">has group affiliation</a>, <a href="#HasCorrespondent">has correspondent</a>, <a href="#HasProfessionalContact">has professional contact</a>, <a href="#HasRelative">has relative</a>, <a href="#HasSpiritualContact">has spiritual contact</a>, <a href="#HasVitalLethalContact">has vital or lethal contact</a></td></tr>
+				<tr><td class="width30">Has superclass</td><td class="width70"><a href="#NAries">n-ary classes</a></td></tr>
+			</table>
+<h3>Object Properties</h3>
+<h4><a name="correspondsTo" id="correspondsTo">corresponds to (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#correspondsTo">http://d-nb.info/standards/elementset/agrelon#correspondsTo</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">korrespondiert mit</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">corresponde con</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">corresponds to</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">corrisponde a</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A normal property's (type rdf:Property) to-direction matches an n-ary concept (type rdfs:Class). 
+2 mutually inverse normal properties match only 1 n-ary concept, because the meta statements must be identical for both 'to-direction' and 'fro-direction' of the relationship. 
+The normal property's fro-direction is related to the n-ary concept via correspondsToInverse.</td></tr>
+												<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="correspondsToInverse" id="correspondsToInverse">corresponds to inverse (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#correspondsToInverse">http://d-nb.info/standards/elementset/agrelon#correspondsToInverse</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">korrespondiert invers mit</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">corresponde inversamente con</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">corresponds to inverse</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">corrisponde inversamente a</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A normal property's (type rdf:Property) fro-direction matches an n-ary concept (type rdfs:Class). 
+2 mutually inverse normal properties match only 1 n-ary concept, because the meta statements must be identical for both 'to-direction' and 'fro-direction' of the relationship. 
+The normal property's to-direction is related to the n-ary concept via correspondsTo.</td></tr>
+												<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAcquaintance" id="hasAcquaintance">has acquaintance (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAcquaintance">http://d-nb.info/standards/elementset/agrelon#hasAcquaintance</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Bekannte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene conocido(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has acquaintance</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha conoscente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) privately knows a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasCohabitee">has cohabitee</a>, <a href="#hasFriend">has friend</a>, <a href="#hasLover">has lover</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAdoptiveChild" id="hasAdoptiveChild">has adoptive child</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAdoptiveChild">http://d-nb.info/standards/elementset/agrelon#hasAdoptiveChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Adoptivkind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has adoptive child</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) adottivo(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) adopted a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasChild">has child</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasAdoptiveParent">has adoptive parent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAdoptiveParent" id="hasAdoptiveParent">has adoptive parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAdoptiveParent">http://d-nb.info/standards/elementset/agrelon#hasAdoptiveParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Adoptivelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padre o madre adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has adoptive parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha genitore adottivo</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) was adopted by a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasParent">has parent</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasAdoptiveChild">has adoptive child</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAdoptiveSibling" id="hasAdoptiveSibling">has adoptive sibling (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAdoptiveSibling">http://d-nb.info/standards/elementset/agrelon#hasAdoptiveSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Adoptivgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has adoptive sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello adottato o sorella adottata</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as sibling a person (object), where at least one of the two siblings is adoptive child of a joint parent.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSibling">has sibling</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAncestor" id="hasAncestor">has ancestor (transitive)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAncestor">http://d-nb.info/standards/elementset/agrelon#hasAncestor</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Vorfahr</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene ancestro</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has ancestor</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha antenato</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has an ancestor (object), where the chain of parent-relations might include adoptive, foster, illegitimate, step relations.</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasGrandParent">has grandparent</a>, <a href="#hasParent">has parent</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasOffspring">has offspring</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAssociate" id="hasAssociate">has group affiliation</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAssociate">http://d-nb.info/standards/elementset/agrelon#hasAssociate</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Gruppenzugehörigkeit</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene grupo de afiliación</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has group affiliation</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha gruppo di appartenenza</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is associated with a group (object), or a group (subject) is associated with a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasChief">has chief</a>, <a href="#hasFounder">has founder</a>, <a href="#hasMember">has member</a>, <a href="#isChiefOf">is chief of</a>, <a href="#isFounderOf">is founder of</a>, <a href="#isMemberOf">is member of</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasAuntUncle" id="hasAuntUncle">has aunt or uncle</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasAuntUncle">http://d-nb.info/standards/elementset/agrelon#hasAuntUncle</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Tante oder Onkel</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene tío o tía</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has aunt or uncle</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha zia o zio</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has an aunt or uncle (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasGodParent">has godparent</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasNieceNephew">has niece or nephew</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasBiologicalChild" id="hasBiologicalChild">has biological child</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasBiologicalChild">http://d-nb.info/standards/elementset/agrelon#hasBiologicalChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat biologisches Kind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) biológico(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has biological child</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) biologico(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) begot/conceived a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasIllegitimateChild">has illegitimate child</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasChild">has child</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasBiologicalParent" id="hasBiologicalParent">has biological parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasBiologicalParent">http://d-nb.info/standards/elementset/agrelon#hasBiologicalParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat biologischen Elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padre o madre biológico(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has biological parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha genitore biologico</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) was begotten/conceived by a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasIllegitimateParent">has illegitimate parent</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasParent">has parent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasBiologicalSibling" id="hasBiologicalSibling">has biological sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasBiologicalSibling">http://d-nb.info/standards/elementset/agrelon#hasBiologicalSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat biologisches Geschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) biológico(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has biological sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello biologico o sorella biologica</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as sibling a person (object), where the two siblings share both biological parents.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSibling">has sibling</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasChannel" id="hasChannel">has channel</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasChannel">http://d-nb.info/standards/elementset/agrelon#hasChannel</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Medium</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene médium</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has channel</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha sensitivo(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or spiritual entity (subject), e.g. a dead person, spirit, angel etc. has as a channel or medium a person or spiritual entity (object). I.e. the subject transmits messages to the object.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSpiritualContact">has spiritual contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isChannelOf">is channel of</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasChief" id="hasChief">has chief</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasChief">http://d-nb.info/standards/elementset/agrelon#hasChief</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Chef</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene jefe</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has chief</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha capo</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A group (subject) has as a chief a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAssociate">has group affiliation</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasChild" id="hasChild">has child</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasChild">http://d-nb.info/standards/elementset/agrelon#hasChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Kind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has child</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person has as some kind of child a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasAdoptiveChild">has adoptive child</a>, <a href="#hasBiologicalChild">has biological child</a>, <a href="#hasFosterChild">has foster child</a>, <a href="#hasStepChild">has stepchild</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasOffspring">has offspring</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasParent">has parent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasChildInlaw" id="hasChildInlaw">has child-in-law</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasChildInlaw">http://d-nb.info/standards/elementset/agrelon#hasChildInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schwiegerkind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene yerno o nuera</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has child-in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha genero o nuora</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person's (subject) child is married with a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasInlaw">has in-law</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasParentInlaw">has parent-in-law</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasCohabitee" id="hasCohabitee">has cohabitee (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasCohabitee">http://d-nb.info/standards/elementset/agrelon#hasCohabitee</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Lebensgefährte</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene cohabitante</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has cohabitee</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha compagno(a) di vita</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) lives together with and/or is companion of a person (object), without being married.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAcquaintance">has acquaintance</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasColleague" id="hasColleague">has colleague (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasColleague">http://d-nb.info/standards/elementset/agrelon#hasColleague</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Kollege</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene colega</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has colleague</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha collega</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) works together with a person (object) at the same corporation.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasCooperator" id="hasCooperator">has collaborator (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasCooperator">http://d-nb.info/standards/elementset/agrelon#hasCooperator</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Kollaborator</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene colaborador(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has collaborator</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha collaboratore o collaboratrice</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) works together with a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasCorrespondent" id="hasCorrespondent">has correspondent (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasCorrespondent">http://d-nb.info/standards/elementset/agrelon#hasCorrespondent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Korrespondent</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene correspondente</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has correspondent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha corrispondente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) exchanges letters with a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasCousin" id="hasCousin">has cousin (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasCousin">http://d-nb.info/standards/elementset/agrelon#hasCousin</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Cousin</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene primo o prima</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has cousin</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha cugino(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has a cousin (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasEmployee" id="hasEmployee">has employee</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasEmployee">http://d-nb.info/standards/elementset/agrelon#hasEmployee</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Arbeitnehmer</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene empleado(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has employee</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha impiegato(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) for whom/which a person (object) works.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasEmployer">has employer</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasEmployer" id="hasEmployer">has employer</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasEmployer">http://d-nb.info/standards/elementset/agrelon#hasEmployer</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Arbeitgeber</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene empleador(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has employer</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha datore di lavoro</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) works for a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasEmployee">has employee</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasFianceeFiance" id="hasFianceeFiance">has fiancee  or fiance</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasFianceeFiance">http://d-nb.info/standards/elementset/agrelon#hasFianceeFiance</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Verlobte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene prometido(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has fiancee  or fiance</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fidanzato(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is engaged with a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasInlaw">has in-law</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasFosterChild" id="hasFosterChild">has foster child</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasFosterChild">http://d-nb.info/standards/elementset/agrelon#hasFosterChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Pflegekind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) de crianza</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has foster child</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha pupillo(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) fostered a person (object), without being a biological parent.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasChild">has child</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasFosterParent">has foster parent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasFosterParent" id="hasFosterParent">has foster parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasFosterParent">http://d-nb.info/standards/elementset/agrelon#hasFosterParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Pflegeelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padre o madre de crianza</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has foster parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha foster genitore</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) was fostered by a person (object), without being a biological child.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasParent">has parent</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasFosterChild">has foster child</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasFosterSibling" id="hasFosterSibling">has foster sibling (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasFosterSibling">http://d-nb.info/standards/elementset/agrelon#hasFosterSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">has Pflegegeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) de crianza</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has foster sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello o sorella di latte</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as sibling a person (object), where at least one of the two siblings is foster child of a joint parent.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSibling">has sibling</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasFounder" id="hasFounder">has founder</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasFounder">http://d-nb.info/standards/elementset/agrelon#hasFounder</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Gründer</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene fundador(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has founder</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fondatore o fondatrice</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A group (subject) has as a founder a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAssociate">has group affiliation</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasFriend" id="hasFriend">has friend (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasFriend">http://d-nb.info/standards/elementset/agrelon#hasFriend</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Freund</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene amigo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has friend</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha amico(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is friends with a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAcquaintance">has acquaintance</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasGodChild" id="hasGodChild">has godchild</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasGodChild">http://d-nb.info/standards/elementset/agrelon#hasGodChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Patenkind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene ahijado(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has godchild</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlioccio o figlioccia</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) obtains as godchild a person (object) at the godchild's christening.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasNieceNephew">has niece or nephew</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasGodParent">has godparent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasGodParent" id="hasGodParent">has godparent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasGodParent">http://d-nb.info/standards/elementset/agrelon#hasGodParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Pate</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padrino o madrina</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has godparent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha padrino o padrina</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) obtains as godparent a person (object) at the godchild's christening.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAuntUncle">has aunt or uncle</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasGodChild">has godchild</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasGrandChild" id="hasGrandChild">has grandchild</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasGrandChild">http://d-nb.info/standards/elementset/agrelon#hasGrandChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Enkel</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene nieto(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has grandchild</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha nipote (di nonni)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person's (subject) child has a child (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasOffspring">has offspring</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasGrandParent">has grandparent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasGrandParent" id="hasGrandParent">has grandparent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasGrandParent">http://d-nb.info/standards/elementset/agrelon#hasGrandParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Großelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene abuelo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has grandparent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha nonno(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as grandparent a person (object), where the two parent-relations might include adoptive, foster, illegitimate, step relations.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAncestor">has ancestor</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasGrandChild">has grandchild</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+											<tr><td class="width30">Property chain</td><td class="width70"><a href="#hasParent">http://d-nb.info/standards/elementset/agrelon#hasParent</a> / <a href="$property.property2URI">http://d-nb.info/standards/elementset/agrelon#hasParent</a></td></tr>
+	</table>
+<h4><a name="hasHalfSibling" id="hasHalfSibling">has half sibling</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasHalfSibling">http://d-nb.info/standards/elementset/agrelon#hasHalfSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Halbgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene medio hermano(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has half sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratellastro a sorellastra</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as sibling a person (object), where the two siblings share only one biological parent.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSibling">has sibling</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasIllegitimateChild" id="hasIllegitimateChild">has illegitimate child</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasIllegitimateChild">http://d-nb.info/standards/elementset/agrelon#hasIllegitimateChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat illegitimes Kind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) illegítimo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has illegitimate child</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figlio(a) illegittimo(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) begot/conceived a person (object), without the two biological parents being married at the child's day of birth.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasBiologicalChild">has biological child</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasIllegitimateParent">has illegitimate parent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasIllegitimateParent" id="hasIllegitimateParent">has illegitimate parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasIllegitimateParent">http://d-nb.info/standards/elementset/agrelon#hasIllegitimateParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat illegitimen Elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padre o madre ilegítimo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has illegitimate parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha genitore illegittimo</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) was begotten/conceived by a person (object), without the two biological parents being married at the child's day of birth.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasBiologicalParent">has biological parent</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasIllegitimateChild">has illegitimate child</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasInfluenceDonee" id="hasInfluenceDonee">has influence on</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasInfluenceDonee">http://d-nb.info/standards/elementset/agrelon#hasInfluenceDonee</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Einfluss auf</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene influencia sobre</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has influence on</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha influenza su</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) who influences a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasInfluenceDonor">is influenced by</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasInfluenceDonor" id="hasInfluenceDonor">is influenced by</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasInfluenceDonor">http://d-nb.info/standards/elementset/agrelon#hasInfluenceDonor</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist beeinflusst durch</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es influenciado(a) por</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is influenced by</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è influenzato(a) da</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) who is influenced by a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasInfluenceDonee">has influence on</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasInlaw" id="hasInlaw">has in-law (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasInlaw">http://d-nb.info/standards/elementset/agrelon#hasInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat angeheiratete(n) Verwandte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene pariente político</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha parente per matrimonio</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is related with a person (object) by a marriage between themselves or between relatives.</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasChildInlaw">has child-in-law</a>, <a href="#hasFianceeFiance">has fiancee  or fiance</a>, <a href="#hasParentInlaw">has parent-in-law</a>, <a href="#hasSiblingInlaw">has sibling-in-law</a>, <a href="#hasSpouse">has spouse</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasLover" id="hasLover">has lover (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasLover">http://d-nb.info/standards/elementset/agrelon#hasLover</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Geliebte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene amante</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has lover</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha amante</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has a liaison with a person (object), without being married.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAcquaintance">has acquaintance</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasMember" id="hasMember">has member</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasMember">http://d-nb.info/standards/elementset/agrelon#hasMember</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mitglied</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene membrio</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has member</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha membro</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A goup (subject) has as a member a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAssociate">has group affiliation</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasMultipleBirthSibling" id="hasMultipleBirthSibling">has multiple birth sibling (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling">http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mehrlingsgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) gemelo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has multiple birth sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello o sorella plurigemellare</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as sibling a person (object), where both siblings where carried together in a joint pregnancy. This denotes not only twins, but also triplets etc.. Mostly, multiple birth siblings are biolological siblings, i.e. share both biological parents, but this doesn't have to be the case.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSibling">has sibling</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasMurderee" id="hasMurderee">has murder victim</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasMurderee">http://d-nb.info/standards/elementset/agrelon#hasMurderee</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mordopfer</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene víctima</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has murder victim</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha vittima domicidio</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporate body (subject) murders a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasVitalLethalContact">has vital or lethal contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasMurderer">has murderer</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasMurderer" id="hasMurderer">has murderer</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasMurderer">http://d-nb.info/standards/elementset/agrelon#hasMurderer</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mörder</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene asesino(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has murderer</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha assassino(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is murdered by a person or corporate body (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasVitalLethalContact">has vital or lethal contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasMurderee">has murder victim</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasMuse" id="hasMuse">has muse</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasMuse">http://d-nb.info/standards/elementset/agrelon#hasMuse</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Muse</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene musa</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has muse</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha musa</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject; e.g. an artist or group of artists) who is inspired by a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isMuseOf">is muse of</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasNieceNephew" id="hasNieceNephew">has niece or nephew</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasNieceNephew">http://d-nb.info/standards/elementset/agrelon#hasNieceNephew</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Nichte oder Neffe</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene sobrino(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has niece or nephew</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha nipote (di zii)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has a niece or nephew (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasGodChild">has godchild</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasAuntUncle">has aunt or uncle</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasObject" id="hasObject">has object</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasObject">http://d-nb.info/standards/elementset/agrelon#hasObject</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Objekt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene objeto</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has object</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha oggetto</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">At an n-ary concept's instance (subject), something (object) takes the object role of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name.</td></tr>
+				<tr><td class="width30">Has Domain</td><td class="width70"><a href="#NAries">n-ary classes</a></td></tr> 
+								<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isObject">is object</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasOffspring" id="hasOffspring">has offspring</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasOffspring">http://d-nb.info/standards/elementset/agrelon#hasOffspring</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Nachkomme</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene heredero(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has offspring</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha discendente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has an offspring (object), where the chain of child-relations might include adoptive, foster, illegitimate, step relations.</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasChild">has child</a>, <a href="#hasGrandChild">has grandchild</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasAncestor">has ancestor</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasParent" id="hasParent">has parent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasParent">http://d-nb.info/standards/elementset/agrelon#hasParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Elter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padre o madre</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has parent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha genitore</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person has as some kind of parent a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasAdoptiveParent">has adoptive parent</a>, <a href="#hasBiologicalParent">has biological parent</a>, <a href="#hasFosterParent">has foster parent</a>, <a href="#hasStepParent">has stepparent</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAncestor">has ancestor</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasChild">has child</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasParentInlaw" id="hasParentInlaw">has parent-in-law</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasParentInlaw">http://d-nb.info/standards/elementset/agrelon#hasParentInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schwiegerelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene suegro(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has parent-in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha suocero(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person's (subject) spouse has a parent (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasInlaw">has in-law</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasChildInlaw">has child-in-law</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasPatron" id="hasPatron">has patron</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasPatron">http://d-nb.info/standards/elementset/agrelon#hasPatron</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Mäzen</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene mecenas</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has patron</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha mecenate</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject; e.g. an artist or group of artists) who is sponsored/favoured by a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isPatronOf">is patron of</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasPhysician" id="hasPhysician">has physician</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasPhysician">http://d-nb.info/standards/elementset/agrelon#hasPhysician</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Arzt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene médico</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has physician</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha medico</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporate body (subject) has as physician a person or corporate body (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasVitalLethalContact">has vital or lethal contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isPhysicianOf">is physician of</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasProfessionalContact" id="hasProfessionalContact">has professional contact (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasProfessionalContact">http://d-nb.info/standards/elementset/agrelon#hasProfessionalContact</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Berufskontakt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene relación profesional</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has professional contact</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha contatto professionale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) has some business/profession/occupation related relation with a person or corporation (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasColleague">has colleague</a>, <a href="#hasCooperator">has collaborator</a>, <a href="#hasEmployee">has employee</a>, <a href="#hasEmployer">has employer</a>, <a href="#hasInfluenceDonee">has influence on</a>, <a href="#hasInfluenceDonor">is influenced by</a>, <a href="#hasMuse">has muse</a>, <a href="#hasPatron">has patron</a>, <a href="#hasStudent">has Student</a>, <a href="#hasTeacher">has teacher</a>, <a href="#isMuseOf">is muse of</a>, <a href="#isPatronOf">is patron of</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasRelative" id="hasRelative">has relative (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasRelative">http://d-nb.info/standards/elementset/agrelon#hasRelative</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Verwandte(n)</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene pariente</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has relative</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha parente</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is kin to a person (object). This denotes not only biological kinship, but also inlaw, adoptive, step, foster relationships.</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasAncestor">has ancestor</a>, <a href="#hasAuntUncle">has aunt or uncle</a>, <a href="#hasCousin">has cousin</a>, <a href="#hasInlaw">has in-law</a>, <a href="#hasNieceNephew">has niece or nephew</a>, <a href="#hasOffspring">has offspring</a>, <a href="#hasSibling">has sibling</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasSibling" id="hasSibling">has sibling (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasSibling">http://d-nb.info/standards/elementset/agrelon#hasSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Geschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has sibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratello o sorella</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person has as some kind of sibling a person (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasAdoptiveSibling">has adoptive sibling</a>, <a href="#hasBiologicalSibling">has biological sibling</a>, <a href="#hasFosterSibling">has foster sibling</a>, <a href="#hasHalfSibling">has half sibling</a>, <a href="#hasMultipleBirthSibling">has multiple birth sibling</a>, <a href="#hasStepSibling">has stepsibling</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasRelative">has relative</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasSiblingInlaw" id="hasSiblingInlaw">has sibling-in-law (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasSiblingInlaw">http://d-nb.info/standards/elementset/agrelon#hasSiblingInlaw</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schwager oder Schwägerin</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene cuñado(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has sibling-in-law</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha cognato(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person's (subject) spouse has a sibling (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasInlaw">has in-law</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasSpiritualContact" id="hasSpiritualContact">has spiritual contact (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasSpiritualContact">http://d-nb.info/standards/elementset/agrelon#hasSpiritualContact</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat spirituellen Kontakt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene guía espiritual</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has spiritual contact</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha contatto spirituale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or spiritual entity (subject) has some kind of spiritual relation with a person or spiritual entity (object). The relationship may e.g. be channelling, guru-devotee, or a psychoanalyst-patient.</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasChannel">has channel</a>, <a href="#isChannelOf">is channel of</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasSpouse" id="hasSpouse">has spouse (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasSpouse">http://d-nb.info/standards/elementset/agrelon#hasSpouse</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Ehepartner</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene esposo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has spouse</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha coniuge</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) is married with a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasInlaw">has in-law</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasStepChild" id="hasStepChild">has stepchild</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasStepChild">http://d-nb.info/standards/elementset/agrelon#hasStepChild</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Stiefkind</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hijo(a) adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has stepchild</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha figliastro(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person's (subject) spouse has a child (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasChild">has child</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasStepParent">has stepparent</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasStepParent" id="hasStepParent">has stepparent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasStepParent">http://d-nb.info/standards/elementset/agrelon#hasStepParent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Stiefelter</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene padre o madre adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has stepparent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha padrigno o madrigna</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person's (subject) biological parent is married with or cohabits with a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasParent">has parent</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasStepChild">has stepchild</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasStepSibling" id="hasStepSibling">has stepsibling (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasStepSibling">http://d-nb.info/standards/elementset/agrelon#hasStepSibling</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Stiefgeschwister</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene hermano(a) adoptivo(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has stepsibling</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha fratellastro o sorellastra</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) has as sibling a person (object), where at least one of the two siblings is step child of a joint parent.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSibling">has sibling</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasStudent" id="hasStudent">has Student</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasStudent">http://d-nb.info/standards/elementset/agrelon#hasStudent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Schüler</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene estudiante</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has Student</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha scolaro(a)</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) trains a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasTeacher">has teacher</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasSubject" id="hasSubject">has subject</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasSubject">http://d-nb.info/standards/elementset/agrelon#hasSubject</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Subjekt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene sujeto</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has subject</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha soggetto</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">At an n-ary concept's instance (subject), something (object) takes the subject role of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name.</td></tr>
+				<tr><td class="width30">Has Domain</td><td class="width70"><a href="#NAries">n-ary classes</a></td></tr> 
+								<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isSubject">is subject</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasSubjectObject" id="hasSubjectObject">has subject or object</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasSubjectObject">http://d-nb.info/standards/elementset/agrelon#hasSubjectObject</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Subjekt oder Objekt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene sujeto u objeto</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has subject or object</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha soggetto o oggetto</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">At an n-ary concept's instance (subject), something (object) takes the subject or object role of the symmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name.</td></tr>
+										<tr><td class="width30">Has inverse</td><td class="width70"><a href="#isSubjectObject">is subject or object</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasTeacher" id="hasTeacher">has teacher</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasTeacher">http://d-nb.info/standards/elementset/agrelon#hasTeacher</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Lehrer</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene maestro(a)</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has teacher</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha insegnante</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) who is trained by a person (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasStudent">has Student</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="hasVitalLethalContact" id="hasVitalLethalContact">has vital or lethal contact (symmetric)</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasVitalLethalContact">http://d-nb.info/standards/elementset/agrelon#hasVitalLethalContact</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat vitalen oder letalen Kontakt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene contacto vital o letal</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has vital or lethal contact</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha contatto vitale o letale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporate body (subject) has som kind of vital or lethal relation with a person or corporate body (object). The relationship may e.g. include healing, mutilating, life saving, killing.</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasMurderee">has murder victim</a>, <a href="#hasMurderer">has murderer</a>, <a href="#hasPhysician">has physician</a>, <a href="#isPhysicianOf">is physician of</a></td></tr>
+				<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#relatedAgent">related Agent</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isChannelOf" id="isChannelOf">is channel of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isChannelOf">http://d-nb.info/standards/elementset/agrelon#isChannelOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Medium von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es médium de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is channel of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è sensitivo(a) di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or spiritual entity (subject) is a channel or medium of a person or spiritual entity (object), e.g. a dead person, spirit, angel etc. I.e. the subject receives messages from the object.</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasSpiritualContact">has spiritual contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasChannel">has channel</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isChiefOf" id="isChiefOf">is chief of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isChiefOf">http://d-nb.info/standards/elementset/agrelon#isChiefOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Chef von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es jefe de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is chief of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è capo di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) ist chief of a group (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAssociate">has group affiliation</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isFounderOf" id="isFounderOf">is founder of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isFounderOf">http://d-nb.info/standards/elementset/agrelon#isFounderOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Gründer von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es fundador(a) de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is founder of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è fondatore o fondatrice di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) ist founder of a group (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAssociate">has group affiliation</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isMemberOf" id="isMemberOf">is member of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isMemberOf">http://d-nb.info/standards/elementset/agrelon#isMemberOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Mitglied von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es miembro de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is member of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è membro di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) ist member of a group (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasAssociate">has group affiliation</a></td></tr>
+						<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isMuseOf" id="isMuseOf">is muse of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isMuseOf">http://d-nb.info/standards/elementset/agrelon#isMuseOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Muse von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es musa de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is muse of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è musa di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person (subject) inspires a person or corporation (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasMuse">has muse</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isObject" id="isObject">is object</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isObject">http://d-nb.info/standards/elementset/agrelon#isObject</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Objekt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es objeto</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is object</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è oggetto</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">Something (subject) takes the object role at an n-ary concept's instance (object) of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name.</td></tr>
+										<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasObject">has object</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isPatronOf" id="isPatronOf">is patron of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isPatronOf">http://d-nb.info/standards/elementset/agrelon#isPatronOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Mäzen von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es mecenas de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is patron of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è mecenate di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) sponsors/favours a person or corporation (object; e.g. an artist or group of artists).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasProfessionalContact">has professional contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasPatron">has patron</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isPhysicianOf" id="isPhysicianOf">is physician of</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isPhysicianOf">http://d-nb.info/standards/elementset/agrelon#isPhysicianOf</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Arzt von</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es médico de</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is physician of</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è medico di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporate body (subject) is physician of a person or corporate body (object).</td></tr>
+								<tr><td class="width30">Has superproperty</td><td class="width70"><a href="#hasVitalLethalContact">has vital or lethal contact</a></td></tr>
+				<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasPhysician">has physician</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isSubject" id="isSubject">is subject</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isSubject">http://d-nb.info/standards/elementset/agrelon#isSubject</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Subjekt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es sujeto</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is subject</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è soggetto di</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">Something (subject) takes the subject role at an n-ary concept's instance (object) of the asymmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name.</td></tr>
+										<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasSubject">has subject</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="isSubjectObject" id="isSubjectObject">is subject or object</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#isSubjectObject">http://d-nb.info/standards/elementset/agrelon#isSubjectObject</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">ist Subjekt oder Objekt</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">es sujeto u objeto</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">is subject or object</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">è soggetto o oggetto</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">Something (subject) takes the subject or object role at an n-ary concept's instance (object) of the symmetric relationship meant by the n-ary concept. 
+For inverse relationsships, the subject and object role follow the naming of the n-ary concept when reading quasi just the first part of the n-ary concept name.</td></tr>
+										<tr><td class="width30">Has inverse</td><td class="width70"><a href="#hasSubjectObject">has subject or object</a></td></tr>
+				<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="metadataPeriod" id="metadataPeriod">has validity period</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#metadataPeriod">http://d-nb.info/standards/elementset/agrelon#metadataPeriod</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Gültigkeitszeitraum</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene periodo de validez</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has validity period</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha tempo di validità</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">An n−ary instance (subject) is valid/true in a period (object). The period should be manifested in a blank node, with data properties hasBeginDate or/and hasEndDate set.</td></tr>
+												<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h4><a name="relatedAgent" id="relatedAgent">related Agent</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#relatedAgent">http://d-nb.info/standards/elementset/agrelon#relatedAgent</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">verknüpfter Agens</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">agente relacionado</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">related Agent</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">agente connesso</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A person or corporation (subject) has some kind of relation with a person or corporation (object).</td></tr>
+						<tr><td class="width30">Has subproperty</td><td class="width70"><a href="#hasAcquaintance">has acquaintance</a>, <a href="#hasAssociate">has group affiliation</a>, <a href="#hasCorrespondent">has correspondent</a>, <a href="#hasProfessionalContact">has professional contact</a>, <a href="#hasRelative">has relative</a>, <a href="#hasSpiritualContact">has spiritual contact</a>, <a href="#hasVitalLethalContact">has vital or lethal contact</a></td></tr>
+								<tr><td class="width30">Corresponds to</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#HasIsMuse">has muse / is muse of</a></td></tr>
+		</table>
+<h3>Datatype Properties</h3>
+<h4><a name="hasBeginDate" id="hasBeginDate">has begin date</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasBeginDate">http://d-nb.info/standards/elementset/agrelon#hasBeginDate</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Anfangsdatum</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene fecha inicial</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has begin date</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha data dinizio</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A metadata period or phase (subject) has a temporal start (date). The phase might e.g. concern a relationship between agents.</td></tr>
+										</table>
+<h4><a name="hasEndDate" id="hasEndDate">has end date</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasEndDate">http://d-nb.info/standards/elementset/agrelon#hasEndDate</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Enddatum</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene fecha final</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has end date</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha data finale</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A metadata period or phase (subject) has a temporal end (date). The phase might e.g. concern a relationship between agents.</td></tr>
+										</table>
+<h4><a name="metadataConfidence" id="metadataConfidence">has confidence value</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#metadataConfidence">http://d-nb.info/standards/elementset/agrelon#metadataConfidence</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Konfidenzwert</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">valor de confianza</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has confidence value</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha valore di fiducia</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A statement or fact (subject) has a value indicating the statement's confidence or trustworthiness.</td></tr>
+										</table>
+<h4><a name="metadataProvenance" id="metadataProvenance">has provenance</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#metadataProvenance">http://d-nb.info/standards/elementset/agrelon#metadataProvenance</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat Herkunft</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene origen</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has provenance</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha provenienza</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A statement or fact (subject) originates from a source.</td></tr>
+										</table>
+<h3>Annotation Properties</h3>
+<h4><a name="hasGndCode" id="hasGndCode">has GND code</a></h4>
+<table>
+	<tr><td class="width30">URI</td><td class="width70"><a href="http://d-nb.info/standards/elementset/agrelon#hasGndCode">http://d-nb.info/standards/elementset/agrelon#hasGndCode</a></td></tr>
+		<tr><td class="width30">Label (German)</td><td class="width70" lang="de" xml:lang="de">hat GND Code</td></tr>
+		<tr><td class="width30">Label (Spanish)</td><td class="width70" lang="es" xml:lang="es">tiene código de GND</td></tr>
+		<tr><td class="width30">Label (English)</td><td class="width70" lang="en" xml:lang="en">has GND code</td></tr>
+		<tr><td class="width30">Label (Italian)</td><td class="width70" lang="it" xml:lang="it">ha chiave di accesso GND</td></tr>
+			<tr><td class="width30">Comment (English)</td><td class="width70" lang="en" xml:lang="en">A relationship type (subject) has a correlating GND code (literal). In the context of the project GND (Gemeinsame Normdatei), codes for agent relations correlating to AgRelOn are successively determined in cooperation with the Library of Congress or rather NDMSO (Network Development and MARC Standards Office) to supplement MARC. The codes will be indicated in AgRelOn when they are available.</td></tr>
+					<tr><td class="width30">Has Range</td><td class="width70"><a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></td></tr> 
+					</table>
+<h3>Property Chains</h3>
+<table>
+	<tr><td class="width30"><a id="#hasGrandParentPropertyChain"/><a href="#hasGrandParent">has grandparent</a></td><td class="width70"><a href="#hasParent">has parent</a> / <a href="#hasParent">has parent</a></td></tr>
+</table>
+</body>
+</html>

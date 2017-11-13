@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://data.ign.fr/def/ignf">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dc:description xml:lang="fr">Codes pour la description de systèmes de coordonnées de référence conforme ISO TC/211. Les traductions françaises des termes et leurs définitions sont pour la plupart issues du glossaire multilingue ISO/TC 211 disponible ici: http://www.isotc211.org/Terminology.htm</dc:description>
+    <dc:description xml:lang="en">Codes for describing coordinates reference systems consistently with ISO TC/211. French translations of terms and definitions are mainly taken from the multilingual glossary of ISO/TC 211 available online: http://www.isotc211.org/Terminology.htm</dc:description>
+    <dc:title xml:lang="fr">Ontologie des systèmes de coordonnées de référence</dc:title>
+    <dc:title xml:lang="en">Ontology of coordinates reference systems</dc:title>
+    <dc:creator>
+      <foaf:Person rdf:about="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&amp;nom=Abadie">
+      </foaf:Person>
+    </dc:creator>
+
+    <dc:creator>
+      <foaf:Person rdf:about="http://www.eurecom.fr/~atemezin/">
+      </foaf:Person>
+    </dc:creator>
+
+    <dc:contributor>
+      <foaf:Person rdf:about="http://www.eurecom.fr/~troncy/">
+      </foaf:Person>
+    </dc:contributor>
+
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-06-11</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-04-09</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-05</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-28</dc:modified>
+    <dc:publisher rdf:resource="http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re"/>
+    <dc:rights>Copyright 2014, IGN</dc:rights>
+    <ns0:preferredNamespacePrefix>ignf</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:resource="http://data.ign.fr/def/ignf#"/>
+    <cc:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+    <cc:license rdf:resource="http://opendatacommons.org/licenses/by/"/>
+    <rdfs:seeAlso rdf:resource="http://librairies.ignf.fr/geoportail/resources/IGNF.xml"/>
+    <owl:priorVersion rdf:resource="http://data.ign.fr/def/ignf/20150505.ttl"/>
+    <owl:versionInfo>Version 3.0 - 2016-06-28</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#CRS">
+    <rdfs:label xml:lang="en">Coordinate reference system (CRS)</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées de référence</rdfs:label>
+    <rdfs:comment xml:lang="fr">Métadonnées permettant de préciser, selon la dimension spatiale des coordonnées 1D, 2D ou 3D, les éléments de définition associés au jeu de coordonnées: le système de référence terrestre, l'ellipsoïde géodésique, le méridien origine, le type de coordonnées (cartésiennes géocentriques, planes, géographiques,...), les unités dans lesquelles sont exprimées les coordonnées, la projection cartographique, le référentiel altimétrique(http://geodesie.ign.fr/index.php?page=glossaire). Cf. ISO 19111:2007:2007-07, partie 8.2, tableau 4 et annexe B.1.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Depending on the spatial dimension of coordinates (1D, 2D, 3D), this piece of metadata is used for specifying the elements of definition associated to a given set of coordinates: its datum, its ellipsoid, its prime meridian, the type of coordinates (geocentric, geographic, projected,...), the coordinates units of measure, when appropriate the cartographic projection used, the vertical coordinate reference system. Definition translated from: http://geodesie.ign.fr/index.php?page=glossaire. Cf. ISO 19111:2007:2007-07, part 8.2, table 4 and annex B.1.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="http://data.ign.fr/def/ignf#Extent"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#domainOfValidity">
+            <rdfs:label xml:lang="en">domain of validity</rdfs:label>
+            <rdfs:label xml:lang="fr">domaine de validité</rdfs:label>
+            <rdfs:comment xml:lang="fr">Zone ou intervalle de temps dans lequel l'objet de référence est valide. Cf. ISO 19111:2007:2007-07, tableaux 4, 33 et 42, attribut domainOfValidity.</rdfs:comment>
+            <rdfs:comment xml:lang="en">Geographic area or time interval in which the referring object is valid. Cf. ISO 19111:2007:2007-07, tables 4, 33 and 42, attribute domainOfValidity.</rdfs:comment>
+            <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#Extent"/>
+            <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+          </owl:ObjectProperty>
+        </owl:onProperty>
+
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <owl:disjointWith rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#CoordinateSystem">
+    <rdfs:label xml:lang="en">Coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées</rdfs:label>
+    <rdfs:comment xml:lang="fr">Ensemble d'axes couvrant un espace de coordonnées, et de règles mathématiques permettant l'affectation de coordonnées à un point. Cf. ISO 19111:2007:2007-07, partie 9.2, tableau 17 et annexe B.2.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Set of axes that spans a given coordinate space and of mathematical rules for specifying how coordinates are to be assigned to points. Cf. ISO 19111:2007:2007-07, part 9.2, table 17 and annex B.2.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="http://data.ign.fr/def/ignf#AxesList"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#axis">
+            <rdfs:label xml:lang="en">uses axis</rdfs:label>
+            <rdfs:label xml:lang="fr">utilise l'axe</rdfs:label>
+            <rdfs:comment xml:lang="fr">Désigne un axe utilisé par un système de coordonnées ellipsoïdal ou cartésien. Cf. ISO 19111:2007:2007-07, tableau 17, rôle d'association axis.</rdfs:comment>
+            <rdfs:comment xml:lang="en">An axis used by some ellipsoidal or cartesian coordinate system. Cf. ISO 19111:2007:2007-07, table 17, association role axis.</rdfs:comment>
+            <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+            <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#AxesList"/>
+            <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+          </owl:ObjectProperty>
+        </owl:onProperty>
+
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#SingleCRS">
+    <rdfs:label xml:lang="en">Single coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées de référence simple</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées de référence composé d'un système de coordonnées et d'un référentiel. Cf. ISO 19111:2007:2007-07 tableau 5.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate reference system consisting of one coordinate system and one datum. Cf. ISO 19111:2007:2007-07, table 5.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#CRS"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:onClass rdf:resource="http://data.ign.fr/def/ignf#Datum"/>
+                <owl:onProperty rdf:resource="http://data.ign.fr/def/ignf#datum"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:onClass rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+                    <owl:onProperty rdf:resource="http://data.ign.fr/def/ignf#coordinateSystem"/>
+                    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#GeodeticCRS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Geodetic coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées de référence geodésique</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées de référence associé à un référentiel géodésique. Cf. ISO 19111:2007:2007-07, partie 8.2.2.a, tableau 10 et annexe B.1.2.1.a.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate reference system associated with a geodetic datum. Cf. ISO 19111:2007:2007-07, part 8.2.2.a, table 10 and annex B.1.2.1.a.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#SingleCRS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#GeodeticDatum"/>
+        <owl:onProperty rdf:resource="http://data.ign.fr/def/ignf#datum"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#ProjectedCRS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Projected coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées de référence projeté</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées de référence dérivé par projection cartographique d'un système de coordonnées de référence bidimentionnel. Cf. ISO 19111:2007:2007-07, partie 8.2.3.b, tableau 11 et annexe B.1.2.3.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate reference system derived from a two-dimensional geodetic coordinate reference system by applying a map projection. Cf. ISO 19111:2007:2007-07, part 8.2.3.b, table 11 and annex B.1.2.3.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#SingleCRS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#baseCRS">
+            <rdfs:label xml:lang="en">base coordinate reference system</rdfs:label>
+            <rdfs:label xml:lang="fr">système de coordonnées de référence de base</rdfs:label>
+            <rdfs:comment xml:lang="fr">Désigne le système de coordonnées de référence géodésique sur lequel repose un système de coordonnées de référence projeté. Cf. ISO 19111:2007:2007-07, tableau 11, rôle d'association baseCRS.</rdfs:comment>
+            <rdfs:comment xml:lang="en">The geodetic coordinate reference system on which a projected coordinate reference system is based. Cf. ISO 19111:2007:2007-07, table 11, association role baseCRS.</rdfs:comment>
+            <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#ProjectedCRS"/>
+            <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+            <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+          </owl:ObjectProperty>
+        </owl:onProperty>
+
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#CompoundCRS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Compound coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées de référence combiné</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées de référence utilisant au moins deux systèmes de coordonnées de référence simples indépendants. Cf. ISO 19111:2007:2007-07, parties 8.2.3.c, 8.2.4, tableau 6 et annexe B.1.2.4.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate reference system using at least two independent single coordinate reference systems. Cf. ISO 19111:2007:2007-07, parts 8.2.3.c, 8.2.4, table 6 and annex B.1.2.4.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#CRS"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://data.ign.fr/def/ignf#SingleCRSList"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:onClass rdf:resource="http://data.ign.fr/def/ignf#SingleCRSList"/>
+                        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                      </owl:Restriction>
+                    </rdf:first>
+
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </owl:intersectionOf>
+
+          </owl:Class>
+        </owl:someValuesFrom>
+
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#includesSingleCRS">
+            <rdfs:label xml:lang="en">includes some single coordinate reference systems</rdfs:label>
+            <rdfs:label xml:lang="fr">inclut des systèmes de coordonnées de référence simples</rdfs:label>
+            <rdfs:comment xml:lang="fr">Désigne les systèmes de coordonnées de référence simples qui composent un système de coordonnées de référence composé. Cf. ISO 19111:2007:2007-07, tableau 6, rôle d'association componentReferenceSystem.</rdfs:comment>
+            <rdfs:comment xml:lang="en">Indicates the single coordinate reference systems used by a compound coordinate reference system. Cf. ISO 19111:2007:2007-07, table 6, association role componentReferenceSystem.</rdfs:comment>
+            <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CompoundCRS"/>
+            <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#SingleCRSList"/>
+            <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+          </owl:ObjectProperty>
+        </owl:onProperty>
+
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <owl:disjointWith rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#VerticalCRS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Vertical coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées de référence vertical</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées de référence à une dimension, associé à un référentiel vertical, et utilisé pour enregistrer des hauteurs ou des profondeurs. Les hauteurs ellipsoïdales ne sont pas enregistrées à l'aide d'un système de coordonnées de référence vertical, mais au sein d'un tuple de coordonnées 3D défini dans un système de coordonnées de référence géodésique 3D. Cf. ISO 19111:2007:2007-07, parties 8.2.2.b, tableau 14 et annexe B.1.2.1.b.</rdfs:comment>
+    <rdfs:comment xml:lang="en">One-dimensional coordinate reference system associated with a vertical datum and used for recording heights or depths.Ellipsoidal heights are not captured in a vertical coordinate reference system but as part of a 3D coordinates tuple defined in a geodetic 3D coordinate reference system. Cf. ISO 19111:2007:2007-07, parts 8.2.2.b, table 14 and annex B.1.2.1.b.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#SingleCRS"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#VerticalDatum"/>
+                <owl:onProperty rdf:resource="http://data.ign.fr/def/ignf#datum"/>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#VerticalCS"/>
+                    <owl:onProperty rdf:resource="http://data.ign.fr/def/ignf#coordinateSystem"/>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#Extent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Extent</rdfs:label>
+    <rdfs:label xml:lang="fr">Étendue</rdfs:label>
+    <rdfs:comment xml:lang="fr">Zone géographique ou intervalle de temps dans lequel la référence est valide. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15 ligne 335.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Geographic area or time interval in which the referring object is valid. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15 line 335.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#Datum">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Datum</rdfs:label>
+    <rdfs:label xml:lang="fr">Référentiel</rdfs:label>
+    <rdfs:comment xml:lang="fr">Paramètre ou ensemble de paramètres définissant la position de l'origine, l'échelle et l'orientation d'un système de coordonnées. Cf. ISO 19111:2007:2007-07, partie 10.1, tableau 33 et annexe B.3.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Parameter or set of parameters that define the position of the origin, the scale and the orientation of a coordinate system. Cf. ISO 19111:2007:2007-07, part 10.1, table 33 and annex B.3.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#GeodeticDatum">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Geodetic datum</rdfs:label>
+    <rdfs:label xml:lang="fr">Référentiel géodésique</rdfs:label>
+    <rdfs:comment xml:lang="fr">Référentiel décrivant la relation entre un système de coordonnées à deux ou trois dimensions et la Terre. Cf. ISO 19111:2007:2007-07, partie 10.2, tableau 34 et annexe B.3.2.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Datum describing the relation of a two- or three-dimensional coordinate system to the Earth. Cf. ISO 19111:2007:2007-07, part 10.2, table 34 and annex B.3.2.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#Datum"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:onClass rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#ellipsoid">
+                    <rdfs:label xml:lang="en">uses ellipsoid</rdfs:label>
+                    <rdfs:label xml:lang="fr">utilise l'ellipsoïde</rdfs:label>
+                    <rdfs:comment xml:lang="fr">Désigne l'ellipsoïde utilisé par un référentiel géodésique. Cf. ISO 19111:2007:2007-07, tableau 34, rôle d'association ellipsoid.</rdfs:comment>
+                    <rdfs:comment xml:lang="en">The ellipsoid used by a geodetic datum. Cf. ISO 19111:2007:2007-07, table 34, association role ellipsoid.</rdfs:comment>
+                    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeodeticDatum"/>
+                    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+                    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                  </owl:ObjectProperty>
+                </owl:onProperty>
+
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:onClass rdf:resource="http://data.ign.fr/def/ignf#PrimeMeridian"/>
+                    <owl:onProperty>
+                      <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#primeMeridian">
+                        <rdfs:label xml:lang="en">uses prime meridian</rdfs:label>
+                        <rdfs:label xml:lang="fr">utilise le méridien origine</rdfs:label>
+                        <rdfs:comment xml:lang="fr">Désigne le méridien origine d'un référentiel géodésique. Cf. ISO 19111:2007:2007-07, tableau 34, rôle d'association primeMeridian.</rdfs:comment>
+                        <rdfs:comment xml:lang="en">The prime meridian used by a geodetic datum. Cf. ISO 19111:2007:2007-07, table 34, association role primeMeridian.</rdfs:comment>
+                        <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeodeticDatum"/>
+                        <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#PrimeMeridian"/>
+                        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                      </owl:ObjectProperty>
+                    </owl:onProperty>
+
+                    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#VerticalDatum">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Vertical datum</rdfs:label>
+    <rdfs:label xml:lang="fr">Référentiel vertical</rdfs:label>
+    <rdfs:comment xml:lang="fr">Référentiel décrivant la relation entre les hauteurs ou les profondeurs relatives à la gravité et la Terre. Cf. ISO 19111:2007:2007-07, tableau 41 et annexe B.3.3.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Datum describing the relation of gravity-related heights or depths to the Earth. Cf. ISO 19111:2007:2007-07, table 41 and annex B.3.3.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#Datum"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#VerticalCS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Vertical coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées vertical</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées à une dimension utilisé pour les mesures de hauteur ou de profondeur relatives à la gravité. Cf. ISO 19111:2007:2007-07, tableaux 15 et 25.</rdfs:comment>
+    <rdfs:comment xml:lang="en">One-dimensional coordinate system used for gravity related height or depth measurements. Cf. ISO 19111:2007:2007-07, tables 15 and 25.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <owl:disjointWith rdf:resource="http://data.ign.fr/def/ignf#VerticalCRS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#CartesianCS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Cartesian coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système cartésien de coordonnées</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées donnant la position des points relativement à n axes perpendiculaires deux à deux. Cf. ISO 19111:2007:2007-07, tableaux 15 et 18.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate system which gives the position of points relative to n mutually perpendicular axes. Cf. ISO 19111:2007:2007-07, tables 15 and 18.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <owl:disjointWith rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#EllipsoidalCS">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Ellipsoidal coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">Système de coordonnées ellipsoïdal</rdfs:label>
+    <rdfs:comment xml:lang="fr">Système de coordonnées dans lequel la position est spécifiée par la latitude géodésique, la longitude géodésique et (dans le cas tridimensionnel) la hauteur ellipsoïdale. Cf. ISO 19111:2007:2007-07, tableaux 15 et 20.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate system which gives the position is specified by geodetic latitude, geodetic longitude and (in the three-dimensional case) ellipsoidal height. Cf. ISO 19111:2007:2007-07, tables 15 and 20.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <owl:disjointWith rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#CoordinateSystemAxis">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Axis</rdfs:label>
+    <rdfs:label xml:lang="fr">Axe</rdfs:label>
+    <rdfs:comment xml:lang="fr">Axe par rapport auquel une coordonnée d'un point est spécifiée dans un système de coordonnées. Cf. ISO 19111:2007:2007-07, partie 9.3, tableau 27 et annexe B.2.2.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Axis composing a coordinate system and used to specify one given coordinate in a coordinate tuple describing the position of a point. Cf. ISO 19111:2007:2007-07, part 9.3, table 27 and annex B.2.2.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#Ellipsoid">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Ellipsoid</rdfs:label>
+    <rdfs:label xml:lang="fr">Ellipsoïde</rdfs:label>
+    <rdfs:comment xml:lang="fr">Surface de révolution engendrée par une ellipse tournant autour de son petit axe, définie par le rayon équatorial et un paramètre d'aplatissement, et sensiblement géocentrique. Note : Il s'agit d'un modèle mathématique du géoïde, c'est-à-dire de la Terre débarrassée de son relief. Il existe de nombreux ellipsoïdes géodésiques. Cf. ISO 19111:2007:2007-07, partie 10.2.2, tableau 36 et annexe B.3.2.3.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Surface formed by the rotation of an ellipse about its minor axis, defined by a semi-major axis and a flattening parameter and fairly geocentric. NB : It is a mathematical model of the geoid, i.e. the Earth without its relief. Many geodetic ellipsoids exist. Cf. ISO 19111:2007:2007-07, part 10.2.2, table 36 and annex B.3.2.3.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:onClass rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+                <owl:onProperty>
+                  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#semiMajorAxis">
+                    <rdfs:label xml:lang="en">semi major axis</rdfs:label>
+                    <rdfs:label xml:lang="fr">demi grand axe</rdfs:label>
+                    <rdfs:comment xml:lang="fr">Désigne la longueur du demi grand axe d'un ellipsoïde. Cf. ISO 19111:2007:2007-07, tableau 36, attribut longueur du demi-grand axe.</rdfs:comment>
+                    <rdfs:comment xml:lang="en">Indicates the length of the semi major axis of an ellipsoid. Cf. ISO 19111:2007:2007-07, table 36, attribute length of semi-major axis.</rdfs:comment>
+                    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+                    <rdfs:range>
+                      <owl:Class>
+                        <owl:intersectionOf>
+                          <rdf:Description>
+                            <rdf:first rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first>
+                                  <owl:Restriction>
+                                    <owl:allValuesFrom rdf:resource="http://qudt.org/1.1/schema/qudt#LengthUnit"/>
+                                    <owl:onProperty rdf:resource="http://qudt.org/1.1/schema/qudt#unit"/>
+                                  </owl:Restriction>
+                                </rdf:first>
+
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </owl:intersectionOf>
+
+                      </owl:Class>
+                    </rdfs:range>
+
+                    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                  </owl:ObjectProperty>
+                </owl:onProperty>
+
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Class>
+                    <owl:unionOf>
+                      <rdf:Description>
+                        <rdf:first>
+                          <owl:Restriction>
+                            <owl:onClass rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+                            <owl:onProperty>
+                              <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#semiMinorAxis">
+                                <rdfs:label xml:lang="en">semi minor axis</rdfs:label>
+                                <rdfs:label xml:lang="fr">demi petit axe</rdfs:label>
+                                <rdfs:comment xml:lang="fr">Désigne la longueur du demi petit axe d'un ellipsoïde. Cf. ISO 19111:2007:2007-07, tableau 37, attribut longueur du demi-petit axe.</rdfs:comment>
+                                <rdfs:comment xml:lang="en">Indicates the length of the semi minor axis of an ellipsoid. Cf. ISO 19111:2007:2007-07, table 37, attribute length of semi-minor axis.</rdfs:comment>
+                                <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+                                <rdfs:range>
+                                  <owl:Class>
+                                    <owl:intersectionOf>
+                                      <rdf:Description>
+                                        <rdf:first rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+                                        <rdf:rest>
+                                          <rdf:Description>
+                                            <rdf:first>
+                                              <owl:Restriction>
+                                                <owl:allValuesFrom rdf:resource="http://qudt.org/1.1/schema/qudt#LengthUnit"/>
+                                                <owl:onProperty rdf:resource="http://qudt.org/1.1/schema/qudt#unit"/>
+                                              </owl:Restriction>
+                                            </rdf:first>
+
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:Description>
+                                        </rdf:rest>
+
+                                      </rdf:Description>
+                                    </owl:intersectionOf>
+
+                                  </owl:Class>
+                                </rdfs:range>
+
+                                <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                              </owl:ObjectProperty>
+                            </owl:onProperty>
+
+                            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                          </owl:Restriction>
+                        </rdf:first>
+
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first>
+                              <owl:Restriction>
+                                <owl:onClass rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+                                <owl:onProperty>
+                                  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#inverseFlattening">
+                                    <rdfs:label xml:lang="en">inverse flattening</rdfs:label>
+                                    <rdfs:label xml:lang="fr">aplatissement inverse</rdfs:label>
+                                    <rdfs:comment xml:lang="fr">Désigne la valeur d'aplatissement inverse d'un ellipsoïde, exprimée sous la forme d'un nombre ou d'un ratio (pourcentage, parties par million, etc.). Cf. ISO 19111:2007:2007-07, tableau 37, attribut aplatissement inverse.</rdfs:comment>
+                                    <rdfs:comment xml:lang="en">Indicates the inverse flattening value of an ellipsoid, expressed as a number or a ratio (percentage rate, parts per million, etc.). Cf. ISO 19111:2007:2007-07, table 37, attribute inverse flattening</rdfs:comment>
+                                    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+                                    <rdfs:range>
+                                      <owl:Class>
+                                        <owl:intersectionOf>
+                                          <rdf:Description>
+                                            <rdf:first rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+                                            <rdf:rest>
+                                              <rdf:Description>
+                                                <rdf:first>
+                                                  <owl:Restriction>
+                                                    <owl:allValuesFrom rdf:resource="http://qudt.org/1.1/schema/qudt#CountingUnit"/>
+                                                    <owl:onProperty rdf:resource="http://qudt.org/1.1/schema/qudt#unit"/>
+                                                  </owl:Restriction>
+                                                </rdf:first>
+
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                              </rdf:Description>
+                                            </rdf:rest>
+
+                                          </rdf:Description>
+                                        </owl:intersectionOf>
+
+                                      </owl:Class>
+                                    </rdfs:range>
+
+                                    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                                  </owl:ObjectProperty>
+                                </owl:onProperty>
+
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                              </owl:Restriction>
+                            </rdf:first>
+
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first>
+                                  <owl:Restriction>
+                                    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                                    <owl:onProperty>
+                                      <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#isSphere">
+                                        <rdfs:label xml:lang="en">is sphere</rdfs:label>
+                                        <rdfs:label xml:lang="fr">est une sphère</rdfs:label>
+                                        <rdfs:comment xml:lang="fr">Indique si l'ellipsoïde est une sphère. Cf. ISO 19111:2007:2007-07, tableau 37, attribut indicateur ellipsoïde=sphère.</rdfs:comment>
+                                        <rdfs:comment xml:lang="en">Indicates whether the ellipsoid is a sphere. Cf. ISO 19111:2007:2007-07, table 37, attribute ellipsoid=sphere indicator.</rdfs:comment>
+                                        <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+                                        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                                        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                                      </owl:DatatypeProperty>
+                                    </owl:onProperty>
+
+                                    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                  </owl:Restriction>
+                                </rdf:first>
+
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </owl:unionOf>
+
+                  </owl:Class>
+                </rdf:first>
+
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#PrimeMeridian">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Prime meridian</rdfs:label>
+    <rdfs:label xml:lang="fr">Méridien origine</rdfs:label>
+    <rdfs:comment xml:lang="fr">Méridien à partir duquel les longitudes d'autres méridiens sont mesurées. Cf. ISO 19111:2007:2007-07, partie 10.2.1, tableau 35 et annexe B.3.2.2.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Meridian from which the longitudes of other meridians are quantified. Cf. ISO 19111:2007:2007-07, part 10.2.1, table 35 and annex B.3.2.2.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <owl:disjointWith rdf:resource="http://data.ign.fr/def/ignf#Ellipsoid"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#GeographicBoundingBox">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Geographic bounding box</rdfs:label>
+    <rdfs:label xml:lang="fr">Cadre englobant géographique</rdfs:label>
+    <rdfs:comment xml:lang="fr">Cadre délimitant une zone d'intérêt. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15.1 ligne 344.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Box bounding an area of interest. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15.1 line 344.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#westBoundLongitude">
+                    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeographicBoundingBox"/>
+                    <rdfs:label xml:lang="en">west bound longitude</rdfs:label>
+                    <rdfs:label xml:lang="fr">longitude ouest minimale</rdfs:label>
+                    <rdfs:comment xml:lang="fr">Désigne la longitude ouest minimale du cadre englobant. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15.1 ligne 345.</rdfs:comment>
+                    <rdfs:comment xml:lang="en">Indicates the west bound longitude of a bounding box. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15.1 line 345.</rdfs:comment>
+                    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                  </owl:DatatypeProperty>
+                </owl:onProperty>
+
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    <owl:onProperty>
+                      <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#eastBoundLongitude">
+                        <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeographicBoundingBox"/>
+                        <rdfs:label xml:lang="en">east bound longitude</rdfs:label>
+                        <rdfs:label xml:lang="fr">longitude est maximale</rdfs:label>
+                        <rdfs:comment xml:lang="fr">Désigne la longitude est maximale du cadre englobant. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15.1 ligne 346.</rdfs:comment>
+                        <rdfs:comment xml:lang="en">Indicates the east bound longitude of a bounding box. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15.1 line 346.</rdfs:comment>
+                        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                      </owl:DatatypeProperty>
+                    </owl:onProperty>
+
+                    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:onProperty>
+                          <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#southBoundLatitude">
+                            <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeographicBoundingBox"/>
+                            <rdfs:label xml:lang="en">south bound latitude</rdfs:label>
+                            <rdfs:label xml:lang="fr">latitude sud minimale</rdfs:label>
+                            <rdfs:comment xml:lang="fr">Désigne la latitude sud minimale du cadre englobant. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15.1 ligne 347.</rdfs:comment>
+                            <rdfs:comment xml:lang="en">Indicates the south bound latitude of a bounding box. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15.1 line 347.</rdfs:comment>
+                            <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                            <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                          </owl:DatatypeProperty>
+                        </owl:onProperty>
+
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                      </owl:Restriction>
+                    </rdf:first>
+
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first>
+                          <owl:Restriction>
+                            <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                            <owl:onProperty>
+                              <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#northBoundLatitude">
+                                <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeographicBoundingBox"/>
+                                <rdfs:label xml:lang="en">north bound longitude</rdfs:label>
+                                <rdfs:label xml:lang="fr">latitude nord maximale</rdfs:label>
+                                <rdfs:comment xml:lang="fr">Désigne la latitude nord maximale du cadre englobant. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15.1 ligne 348.</rdfs:comment>
+                                <rdfs:comment xml:lang="en">Indicates the north bound longitude of a bounding box. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15.1 line 348.</rdfs:comment>
+                                <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+                              </owl:DatatypeProperty>
+                            </owl:onProperty>
+
+                            <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                          </owl:Restriction>
+                        </rdf:first>
+
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#CoordinateOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Coordinate operation</rdfs:label>
+    <rdfs:label xml:lang="fr">Opération sur les coordonnées</rdfs:label>
+    <rdfs:comment xml:lang="fr">Opération mathématique sur des coordonnées, basée sur une relation 1:1, qui change ces coordonnées d'une système de coordonnées de référence à un autre. Cf. ISO 19111:2007:2007-07, partie 11.1, tableau 42 et annexe B.4.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Mathematical operation on coordinates, based on one-to-one relationship, that changes coordinates from one coordinate reference system to another. Cf. ISO 19111:2007:2007-07, part 11.1, table 42 and annex B.4.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#SingleOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Single coordinate operation</rdfs:label>
+    <rdfs:label xml:lang="fr">Opération simple sur les coordonnées</rdfs:label>
+    <rdfs:comment xml:lang="fr">Opération non concaténée sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 43.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A non concatenated coordinate operation. Cf. ISO 19111:2007:2007-07, table 43.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#Transformation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Transformation</rdfs:label>
+    <rdfs:label xml:lang="fr">Transformation</rdfs:label>
+    <rdfs:comment xml:lang="fr">Opération sur les coordonnées dans laquelle les deux systèmes de coordonnées de référence sont basés sur des référentiels distincts. Cf. ISO 19111:2007:2007-07, tableau 44.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate operation in which the two coordinate reference systems are based on different datums. Cf. ISO 19111:2007:2007-07, table 44.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#SingleOperation"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#Conversion">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Conversion</rdfs:label>
+    <rdfs:label xml:lang="fr">Conversion</rdfs:label>
+    <rdfs:comment xml:lang="fr">Opération sur les coordonnées dans laquelle les deux systèmes de coordonnées de référence sont basés sur le même référentiel (ex: projection cartographique). Cf. ISO 19111:2007:2007-07, tableau 45 et annexe B.4.2.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Coordinate operation in which both coordinate reference systems are based on the same datum. Cf. ISO 19111:2007:2007-07, table 45 and annex B.4.2.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/ignf#SingleOperation"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#OperationMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Operation method</rdfs:label>
+    <rdfs:label xml:lang="fr">Méthode</rdfs:label>
+    <rdfs:comment xml:lang="fr">Méthode utilisée pour faire une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 48 et annexe B.4.5.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The method (algorithm or procedure) used to perform the coordinate operation. Cf. ISO 19111:2007:2007-07, table 48 and annex B.4.5.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#OperationParameter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Operation parameter</rdfs:label>
+    <rdfs:label xml:lang="fr">Paramètre</rdfs:label>
+    <rdfs:comment xml:lang="fr">Paramètre utilisé par une méthode pour faire une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 52 et annexe B.4.5.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Parameter used by a method to perform some coordinate operation. Cf. ISO 19111:2007:2007-07, table 52 and annex B.4.5.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#OperationParameterValue">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Operation parameter value</rdfs:label>
+    <rdfs:label xml:lang="fr">Valeur de paramètre</rdfs:label>
+    <rdfs:comment xml:lang="fr">Valeur d'un paramètre utilisé par une méthode pour faire une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 55.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Value of a parameter used by a method to perform some coordinate operation. Cf. ISO 19111:2007:2007-07, table 55.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#AxesList">
+    <rdfs:comment xml:lang="fr">Liste ordonnée d'axes de systèmes de coordonnées.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Ordered list of coordinates system axes.</rdfs:comment>
+    <rdfs:label xml:lang="en">List of axes</rdfs:label>
+    <rdfs:label xml:lang="fr">Liste d'axes</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystemAxis"/>
+                    <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#AxesList"/>
+                        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
+                      </owl:Restriction>
+                    </rdf:first>
+
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="http://data.ign.fr/def/ignf#SingleCRSList">
+    <rdfs:comment xml:lang="fr">Liste ordonnée de systèmes de coordonnées de référence simples.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Ordered list of single coordinate reference systems.</rdfs:comment>
+    <rdfs:label xml:lang="en">List of single coordinate reference systems</rdfs:label>
+    <rdfs:label xml:lang="fr">Liste de systèmes de coordonnées de référence simples</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#SingleCRS"/>
+                    <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:allValuesFrom rdf:resource="http://data.ign.fr/def/ignf#SingleCRSList"/>
+                        <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
+                      </owl:Restriction>
+                    </rdf:first>
+
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#coordinateSystem">
+    <rdfs:label xml:lang="en">uses coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le système de coordonnées</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le système de coordonnées utilisé par un système de coordonnées de référence. Cf. ISO 19111:2007:2007-07, tableau 5, association nommée CoordinateSystem.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The coordinate system used by a coordinate reference system. Cf. ISO 19111:2007:2007-07, table 5, named association CoordinateSystem.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#SingleCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystem"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#ellipsoidalCS">
+    <rdfs:label xml:lang="en">uses ellipsoidal coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le système de coordonnées ellipsoïdal</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le système de coordonnées ellipsoïdal utilisé par un système de coordonnées de référence géodésique. Cf. ISO 19111:2007:2007-07, tableau 10, association nommée CoordinateSystem.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The ellipsoidal coordinate system used by a geodetic coordinate reference system. Cf. ISO 19111:2007:2007-07, table 10, named association CoordinateSystem.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://data.ign.fr/def/ignf#coordinateSystem"/>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#EllipsoidalCS"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#cartesianCS">
+    <rdfs:label xml:lang="en">uses cartesian coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le système de coordonnées cartesien</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le système de coordonnées cartésien utilisé par un système de coordonnées de référence géodésique ou projeté. Cf. ISO 19111:2007:2007-07, tableaux 10 et 11, association nommée CoordinateSystem.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The cartesian coordinate system used by some geodetic or projected coordinate reference system. Cf. ISO 19111:2007:2007-07, tables 10 et 11, association roles coordinateSystem.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://data.ign.fr/def/ignf#coordinateSystem"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://data.ign.fr/def/ignf#ProjectedCRS"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#CartesianCS"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#verticalCS">
+    <rdfs:label xml:lang="en">uses vertical coordinate system</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le système vertical de coordonnées</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le système de coordonnées vertical utilisé par un système de coordonnées de référence vertical. Cf. ISO 19111:2007:2007-07, tableau 14, association nommée CoordinateSystem.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The vertical coordinate system used by a vertical coordinate reference system. Cf. ISO 19111:2007:2007-07, table 14, named association CoordinateSystem.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://data.ign.fr/def/ignf#coordinateSystem"/>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#VerticalCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#VerticalCS"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#datum">
+    <rdfs:label xml:lang="en">uses datum</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le référentiel</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le référentiel utilisé par un système de coordonnées de référence simple. Cf. ISO 19111:2007:2007-07, tableau 5, association nommée DefiningDatum.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The datum used by a single coordinate reference system. Cf. ISO 19111:2007:2007-07, table 5, named association DefiningDatum.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#SingleCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#Datum"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#geodeticDatum">
+    <rdfs:label xml:lang="en">uses geodetic datum</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le référentiel géodésique</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le référentiel géodésique utilisé par un système de coordonnées de référence géodésique. Cf. ISO 19111:2007:2007-07, tableau 10, association nommée DefiningDatum.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The geodetic datum used by a geodetic coordinate reference system. Cf. ISO 19111:2007:2007-07, table 10, named association DefiningDatum.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://data.ign.fr/def/ignf#datum"/>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#GeodeticCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#GeodeticDatum"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#verticalDatum">
+    <rdfs:label xml:lang="en">uses vertical datum</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le référentiel vertical</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le référentiel vertical utilisé par un système de coordonnées de référence vertical. Cf. ISO 19111:2007:2007-07, tableau 14, association nommée DefiningDatum.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The vertical datum used by a vertical coordinate reference system. Cf. ISO 19111:2007:2007-07, table 14, named association DefiningDatum.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://data.ign.fr/def/ignf#datum"/>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#VerticalCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#VerticalDatum"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#geographicElement">
+    <rdfs:label xml:lang="en">geographic element</rdfs:label>
+    <rdfs:label xml:lang="fr">élément géographique</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le cadre englobant géographique d'une région de validité. Cf. ISO 19115-1:2014:2014-04, partie 6.6.1 et tableau B.15 ligne 337.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The geographic bounding box used for defining a domain of validity. Cf. ISO 19115-1:2014:2014-04, part 6.6.1 and table B.15 line 337.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#Extent"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#GeographicBoundingBox"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#greenwichLongitude">
+    <rdfs:label xml:lang="en">greenwich longitude</rdfs:label>
+    <rdfs:label xml:lang="fr">longitude par rapport à Greenwich</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne la longitude par rapport au méridien de Greenwich. Cf. ISO 19111:2007:2007-07, tableau 35, attribut longitude du méridien d'origine.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates the longitude from Greenwich meridian. Cf. ISO 19111:2007:2007-07, table 35, attribute prime meridian Greenwich longitude.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#PrimeMeridian"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:allValuesFrom rdf:resource="http://qudt.org/1.1/schema/qudt#AngleUnit"/>
+                    <owl:onProperty rdf:resource="http://qudt.org/1.1/schema/qudt#unit"/>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#usesMethod">
+    <rdfs:label xml:lang="en">uses method</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise la méthode</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne la méthode utilisée par une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 43, rôle d'association method.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The method used by an operation on coordinates. Cf. ISO 19111:2007:2007-07, table 43, association role method.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#OperationMethod"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#usesValue">
+    <rdfs:label xml:lang="en">uses value</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise la valeur</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne une valeur utilisée par une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 43, rôle d'association parameterValue.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A value used by an operation on coordinates. Cf. ISO 19111:2007:2007-07, table 43, association role parameterValue.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#OperationParameterValue"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#usesParameter">
+    <rdfs:label xml:lang="en">uses parameter</rdfs:label>
+    <rdfs:label xml:lang="fr">utilise le paramètre</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne un paramètre utilisé par une méthode pour faire une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 48, rôle d'association parameter.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A parameter used by a method to perform an operation on coordinates. Cf. ISO 19111:2007:2007-07, table 48, association role parameter.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#OperationMethod"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#OperationParameter"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#parameter">
+    <rdfs:label xml:lang="en">parameter</rdfs:label>
+    <rdfs:label xml:lang="fr">paramètre</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le paramètre auquel est associée une valeur. Cf. ISO 19111:2007:2007-07, tableau 55, rôle d'association parameter.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The parameter associated to a given value. Cf. ISO 19111:2007:2007-07, table 55, association role parameter.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#OperationParameterValue"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#OperationParameter"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#sourceCRS">
+    <rdfs:label xml:lang="en">source coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">système de coordonnées de référence source</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le système de coordonnées de référence des données en entrée d'une opération. Cf. ISO 19111:2007:2007-07, tableau 42, association nommée Source.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The coordinate reference system associated to the data used as input of a given operation. Cf. ISO 19111:2007:2007-07, table 42, named association Source.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#CRS"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#targetCRS">
+    <rdfs:label xml:lang="en">target coordinate reference system</rdfs:label>
+    <rdfs:label xml:lang="fr">système de coordonnées de référence cible</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne le système de coordonnées de référence des données en sortie d'une opération. Cf. ISO 19111:2007:2007-07, tableau 42, association nommée Target.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The coordinate reference system associated to the data obtained as output of a given operation. Cf. ISO 19111:2007:2007-07, table 42, named association Target.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#CRS"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://data.ign.fr/def/ignf#conversion">
+    <rdfs:label xml:lang="en">defined by conversion</rdfs:label>
+    <rdfs:label xml:lang="fr">défini par conversion</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne la conversion utilisée pour définir un système de coordonnées de référence projeté. Cf. ISO 19111:2007:2007-07, tableau 7, association nommée Definition.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The conversion used to define a projected coordinate reference system. Cf. ISO 19111:2007:2007-07, table 7, named association Definition.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#ProjectedCRS"/>
+    <rdfs:range rdf:resource="http://data.ign.fr/def/ignf#Conversion"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#scope">
+    <rdfs:label xml:lang="en">scope</rdfs:label>
+    <rdfs:label xml:lang="fr">portée</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne la portée de la référence. Cf. ISO 19111:2007:2007-07, tableaux 4, 33 et 42, attribut scope.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The scope of the referring object. Cf. ISO 19111:2007:2007-07, tables 4, 33 et 42, attribute scope.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#codeSpace">
+    <rdfs:label xml:lang="en">code space</rdfs:label>
+    <rdfs:label xml:lang="fr">espace de codage</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne la règle ou l'autorité dont résulte la valeur de la référence.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Rule or authority for a code, name, term or category.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#axisAbbrev">
+    <rdfs:label xml:lang="en">axis abbreviation</rdfs:label>
+    <rdfs:label xml:lang="fr">abréviation utilisée pour désigner l'axe</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne l'abréviation utilisée pour désigner l'axe. Cf. ISO 19111:2007:2007-07, tableau 27, attribut abréviation de l'axe du système de coordonnées.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The abbreviation used to identify an axis. Cf. ISO 19111:2007:2007-07, table 27, attribute coordinate system axis abbreviation.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystemAxis"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#axisDirection">
+    <rdfs:label xml:lang="en">axis direction</rdfs:label>
+    <rdfs:label xml:lang="fr">direction de l'axe</rdfs:label>
+    <rdfs:comment xml:lang="fr">Désigne la direction de l'axe. Cf. ISO 19111:2007:2007-07, tableau 27, attribut direction de l'axe du système de coordonnées.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The direction of an axis. Cf. ISO 19111:2007:2007-07, table 27, attribute coordinate system axis direction.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateSystemAxis"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#epsgID">
+    <rdfs:label xml:lang="en">espg identifier</rdfs:label>
+    <rdfs:label xml:lang="fr">identifiant epsg</rdfs:label>
+    <rdfs:comment xml:lang="fr">Indique l'identifiant EPSG de la ressource.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The EPSG identifier of the resource.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#operationVersion">
+    <rdfs:label xml:lang="en">operation version</rdfs:label>
+    <rdfs:label xml:lang="fr">version de l'opération</rdfs:label>
+    <rdfs:comment xml:lang="fr">Indique la version d'une opération appliquée sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 42, attribut version de l'opération sur les coordonnées.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The version of an operation performed on coordinates. Cf. ISO 19111:2007:2007-07, table 42, attribute coordinate operation version.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#CoordinateOperation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#methodFormula">
+    <rdfs:label xml:lang="en">method formula</rdfs:label>
+    <rdfs:label xml:lang="fr">formule de la méthode</rdfs:label>
+    <rdfs:comment xml:lang="fr">Indique la formule utilisée par une méthode pour faire opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 48, attribut référence de formule de la méthode d'opération sur les coordonnées.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The formula used by a method to perform an operation on coordinates. Cf. ISO 19111:2007:2007-07, table 48, attribute coordinate operation method formula reference.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#OperationMethod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#sourceDimension">
+    <rdfs:label xml:lang="en">source coordinate reference system dimension</rdfs:label>
+    <rdfs:label xml:lang="fr">dimension du système de coordonnées de référence source</rdfs:label>
+    <rdfs:comment xml:lang="fr">Indique la dimension du système de coordonnées de référence des données en entrée d'une opération. Cf. ISO 19111:2007:2007-07, tableau 48, attribut dimension du système de coordonnées de référence source.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The dimension of the coordinate reference system associated with the data used as input of an operation. Cf. ISO 19111:2007:2007-07, table 48, attribute dimension of source CRS.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#OperationMethod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/ignf#targetDimension">
+    <rdfs:label xml:lang="en">target coordinate reference system dimension</rdfs:label>
+    <rdfs:label xml:lang="fr">dimension du système de coordonnées de référence cible</rdfs:label>
+    <rdfs:comment xml:lang="fr">Indique la dimension du système de coordonnées de référence des données en sortie d'une opération. Cf. ISO 19111:2007:2007-07, tableau 48, attribut dimension du système de coordonnées de référence cible.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The dimension of the coordinate reference system associated with the data obtained as output of an operation. Cf. ISO 19111:2007:2007-07, table 48, attribute dimension of target CRS.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.ign.fr/def/ignf#OperationMethod"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/ignf"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#first">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest">
+  </owl:ObjectProperty>
+
+</rdf:RDF>

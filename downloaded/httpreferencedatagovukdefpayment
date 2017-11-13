@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:interval="http://reference.data.gov.uk/def/intervals/"
+   xmlns:org="http://www.w3.org/ns/org#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:payment="http://reference.data.gov.uk/def/payment#"
+   xmlns:qb="http://purl.org/linked-data/cube#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:scovo="http://purl.org/NET/scovo#"
+   xmlns:sdmx-concept="http://purl.org/linked-data/sdmx/2009/concept#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+   xmlns:void="http://rdfs.org/ns/void#"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://reference.data.gov.uk/def/payment#">
+    <dcterms:contributor>
+      <rdf:Description>
+        <foaf:mbox>jeni@jenitennison.com</foaf:mbox>
+        <foaf:name>Jeni Tennison</foaf:name>
+      </rdf:Description>
+    </dcterms:contributor>
+    <dcterms:contributor>
+      <rdf:Description>
+        <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+        <foaf:name>Dave Reynolds</foaf:name>
+      </rdf:Description>
+    </dcterms:contributor>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-08-06</dcterms:created>
+    <dcterms:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-11-16</dcterms:modified>
+    <rdfs:comment xml:lang="en">Vocabulary for representing payments, such as government expenditures, using the data cube representation.</rdfs:comment>
+    <rdfs:label xml:lang="en">Payments ontology</rdfs:label>
+    <owl:versionInfo>0.7</owl:versionInfo>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/payment#ExpenditureCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The set of expenditure categories in the expenditure-category scheme for capital/revenue.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Expenditure categories</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.hmrc.gov.uk/manuals/bimmanual/bim35010.htm"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/payment#ExpenditureLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An item of expenditure that can be classified or assigned to a cost centre</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Expenditure Line</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/payment#Payment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A payment to a supplier for some goods or services, may correspond to one or more expenditure lines</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Payment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#Slice"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://reference.data.gov.uk/def/payment#payer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://reference.data.gov.uk/def/payment#payee"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://reference.data.gov.uk/def/payment#date"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <vs:term_status>stable</vs:term_status>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/payment#PaymentDataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A set of payments or expenditures, laid out as a cube of data</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Payment data set</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/payment#Purchase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The overall goods or service for which the payment was made</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Purchase</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/payment#Redaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An instance of Redaction can be used in place of the actual value 
+in a dataset to indicate that this is a replacement for the true data value which has
+been redacted. Typically the Redaction resource will be a blank note. It is recommended 
+that it have an appropriate rdfs:label (e.g. REDACTED). If further information on the
+reaction is available then dcterms properties should be used to carry those, in partcular
+dct:description can be used to convey a description of the redaction and reasons</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Redaction</rdfs:label>
+    <vs:term_status>proposed</vs:term_status>
+  </rdfs:Class>
+  <skos:Concept rdf:about="http://reference.data.gov.uk/def/payment#capital">
+    <rdf:type rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureCategory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment xml:lang="en">Indicates a capital expenditure.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Capital</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.hmrc.gov.uk/manuals/bimmanual/bim35010.htm"/>
+    <vs:term_status>stable</vs:term_status>
+    <skos:inScheme rdf:resource="http://reference.data.gov.uk/def/payment#expenditure-category"/>
+    <skos:notation>Capital</skos:notation>
+    <skos:topConceptOf rdf:resource="http://reference.data.gov.uk/def/payment#expenditure-category"/>
+  </skos:Concept>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#contract">
+    <rdfs:comment xml:lang="en">Indicates a contract associated with this payment (optional).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">contract</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <qb:AttributeProperty rdf:about="http://reference.data.gov.uk/def/payment#currency">
+    <qb:concept rdf:resource="http://purl.org/linked-data/sdmx/2009/concept#currency"/>
+    <rdfs:comment xml:lang="en">Currency in which a payment was made, typically attached to the dataset for single currency datasets.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">currency</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </qb:AttributeProperty>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#date">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The date the payment is deemed to have occurred.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">date</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/intervals/Interval"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <skos:ConceptScheme rdf:about="http://reference.data.gov.uk/def/payment#expenditure-category">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment xml:lang="en">A code scheme for classifying expenditures as capital/revenue.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Exenditure category scheme</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.hmrc.gov.uk/manuals/bimmanual/bim35010.htm"/>
+    <vs:term_status>stable</vs:term_status>
+    <skos:hasTopConcept rdf:resource="http://reference.data.gov.uk/def/payment#capital"/>
+    <skos:hasTopConcept rdf:resource="http://reference.data.gov.uk/def/payment#revenue"/>
+  </skos:ConceptScheme>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#expenditureCategory">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The category of expenditure in some appropriate categorization scheme (such as the Best Value Account Code of Practice categories). If the scheme is hierarchical then this should at least designate the narrowest (most fine grain) applicable code and can additionally designate the broader codes. Multiple code schemes can be used within the same dataset and consuming applications can use the skos:inScheme (and the rdf:type) of the code to determine the scheme.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureLine"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">expenditure category</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#expenditureCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataTypeProperty"/>
+    <rdfs:comment xml:lang="en">An (optional) internal code for the expenditure category. Such codes may not be useful across organizations but retaining them in a dataset may aid comparability of datasets within an organization and help with tracing back requests for further information. The internal code may actually be an amalgam of multiple different categories (e.g. may denote both the subjective and objective classifications of an expenditure).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureLine"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">expenditure code</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#expenditureLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Links a payment to the individual expenditure lines associated with it.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">expenditure line</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureLine"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/linked-data/cube#observation"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#grossAmount">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The amount paid, inclusive of any tax (whether reclaimable or not)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureLine"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">gross amount</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#invoice">
+    <rdfs:comment xml:lang="en">Indicates an invoice associated with this payment (optional).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">invoice</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#narrative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A narrative description of the goods or services that were supplied.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Purchase"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">narrative</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#netAmount">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The net amount of the payment. This is the effective cost to the payer after any reclaimable tax has been deducted.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureLine"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">net amount</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#order">
+    <rdfs:comment xml:lang="en">Indicates an order associated with this payment (optional).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">order</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#payee">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The entity to which the payment was made.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">payee</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#payer">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The entity which made the payment.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">payer</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#payment">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates the payment of which this expenditure line is a part.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureLine"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">payment</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <qb:SliceKey rdf:about="http://reference.data.gov.uk/def/payment#payment-slice">
+    <qb:componentProperty rdf:resource="http://reference.data.gov.uk/def/payment#date"/>
+    <qb:componentProperty rdf:resource="http://reference.data.gov.uk/def/payment#payee"/>
+    <qb:componentProperty rdf:resource="http://reference.data.gov.uk/def/payment#payer"/>
+    <qb:componentProperty rdf:resource="http://reference.data.gov.uk/def/payment#payment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment xml:lang="en">The definition of a slice through an expenditure cube that corresponds to all the expenditures in a single payment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">payment slice</rdfs:label>
+  </qb:SliceKey>
+  <qb:DataStructureDefinition rdf:about="http://reference.data.gov.uk/def/payment#payments-with-expenditure-structure">
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/payment#payment"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:measure rdf:resource="http://reference.data.gov.uk/def/payment#netAmount"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:attribute rdf:resource="http://reference.data.gov.uk/def/payment#currency"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/payment#payer"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/payment#payee"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/payment#date"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/payment#expenditureCategory"/>
+      </rdf:Description>
+    </qb:component>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment>The structure of a cube containing expenditure level information along with payments.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">expenditure structure</rdfs:label>
+  </qb:DataStructureDefinition>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#procurementCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A classification for the goods or services for which the payment was made.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Purchase"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">procurement category</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#purchase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Indicates the overall goods or service for which the payment was made.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">purchase</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/payment#Purchase"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A reference number, code or label which identifies the payment. Not unique across different suppliers.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">reference</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <skos:Concept rdf:about="http://reference.data.gov.uk/def/payment#revenue">
+    <rdf:type rdf:resource="http://reference.data.gov.uk/def/payment#ExpenditureCategory"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment xml:lang="en">Indicates a revenue expenditure.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">Revenue</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.hmrc.gov.uk/manuals/bimmanual/bim35010.htm"/>
+    <vs:term_status>stable</vs:term_status>
+    <skos:inScheme rdf:resource="http://reference.data.gov.uk/def/payment#expenditure-category"/>
+    <skos:notation>Revenue</skos:notation>
+    <skos:topConceptOf rdf:resource="http://reference.data.gov.uk/def/payment#expenditure-category"/>
+  </skos:Concept>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#totalGrossAmount">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Slice"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">total gross amount</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#totalNetAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Slice"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/payment#"/>
+    <rdfs:label xml:lang="en">total net amount</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/payment#unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Optionally indicates a particular organizational 
+unit (Department, Directorate etc) of the payer organization associated with the payment.
+Use org:classification to link the unit to a categorization of types of units to 
+support cross-comparison. For example, in the UK Local Authority spend application
+then the ESDToolkit-maintained list of Department Types may be a suitable code list.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/payment#Payment"/>
+    <rdfs:label xml:lang="en">unit</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Property>
+</rdf:RDF>

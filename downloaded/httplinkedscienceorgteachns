@@ -1,0 +1,1369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0034)http://linkedscience.org/teach/ns/ -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:prv="http://purl.org/net/provenance/ns#" xmlns:opmv="http://purl.org/net/opmv/ns#" xmlns:teach="http://linkedscience.org/teach/ns#" xmlns:ical="http://www.w3.org/2002/12/cal/icaltzd#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="alternate" type="application/rdf+xml" href="http://linkedscience.org/teach/ns/teach.rdf">
+<!--   <link rel="alternate" type="application/rdf+xml" href="http://linkedscience.org/teach/ns/teach-2012-06-27.rdf"> -->
+<!-- 
+  <link rel="prefetch alternate" type="application/rdf+xml" href="http://www.w3.org/2012/pyRdfa/extract/?format=xml&uri=http://linkedscience.org/teach/ns/"/>
+   -->
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Teaching Core Vocabulary Specification</title>
+<script type="text/javascript" async="" src="./Teaching Core Vocabulary Specification_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8367411-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><style type="text/css"></style></head>
+
+
+
+<body>
+
+<a href="http://linkedscience.org/about"><i>Back to LinkedScience.org</i></a>
+
+<h1 about="" property="dcterms:title" xml:lang="en">Teaching Core Vocabulary Specification</h1>
+<div about="" typeof="foaf:Document">
+
+<div property="rdfs:label" content="Document that defines the Teaching Core Vocabulary" xml:lang="en"></div>
+  <div rel="foaf:primaryTopic">
+    <div about="http://linkedscience.org/teach/ns#">
+      <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataItem"></div>
+      <div rel="rdf:type" resource="http://www.w3.org/2002/07/owl#Ontology"></div>
+      <div property="dcterms:title" content="Teaching Core Vocabulary namespace" xml:lang="en"></div>
+      <div rel="prv:createdBy">
+            <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataCreation"></div>
+            <div rel="prv:performedBy" resource="http://kauppinen.net/tomi#me"></div>
+            <div property="prv:performedAt" content="2013-04-25T18:09:00Z" datatype="xsd:dateTime"></div>
+      </div>
+      <div rel="dcterms:creator" resource="http://kauppinen.net/tomi#me"></div>
+      <div property="dcterms:created" content="2013-04-25T18:09:00Z" datatype="xsd:dateTime"></div>
+     </div>
+   </div>
+</div>
+
+<h2>25 April 2012</h2>
+
+<dl>
+  <dt>This version:</dt>
+  <dd><a href="http://linkedscience.org/teach/ns-20130425">http://linkedscience.org/teach/ns-20130425</a></dd>
+  <dt>Latest version:</dt>
+  <dd><a href="http://linkedscience.org/teach/ns">http://linkedscience.org/teach/ns</a></dd>
+
+  <dt>Previous version:</dt>
+  <dd><a href="http://linkedscience.org/teach/ns-20130315">http://linkedscience.org/teach/ns-20130315</a></dd>
+  <dt>Revision:</dt>
+  <dd>Revision: 0.94</dd>
+  <dt>Authors:</dt>
+  <dd about="http://kauppinen.net/tomi#me" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://kauppinen.net/tomi" property="foaf:name">Tomi Kauppinen</a>
+    (<a href="http://mediatech.aalto.fi/">Department of Media Technology</a>, Aalto University, Finland)
+    </dd>
+     <dd about="http://http://ifgi.uni-muenster.de/~j_tram02/foaf.rdf" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://ifgi.uni-muenster.de/~j_tram02/" property="foaf:name">Johannes Trame</a>
+    (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>
+          <dd about="http://http://ifgi.uni-muenster.de/~j_tram02/foaf.rdf" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://www.xing.com/profile/Andres_Westermann" property="foaf:name">Andres Westermann</a>
+    (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>
+
+   <dt>Contributors:</dt>
+      <dd>See <a href="http://linkedscience.org/teach/ns/#sec-ack">acknowledgements</a>.</dd>
+</dl>
+
+<p class="copyright">Copyright &copy; 2011 - 2013 Tomi Kauppinen.</p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by/1.0/"><img alt="Creative Commons License" style="border: 0pt none; float: right;" src="img/somerights.gif"></a>
+This work is licensed under a <a href="http://creativecommons.org/licenses/by/1.0/">Creative Commons License</a>. This copyright applies to the <em>Teaching Core Vocabulary</em> and accompanying documentation.</p>
+
+<p about="" resource="http://www.w3.org/TR/rdfa-syntax" rel="dcterms:conformsTo">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="img/valid-xhtml-rdfa.png" style="border: 0pt none; float: right" alt="Valid XHTML + RDFa"> </a>
+  Teaching Core Vocabulary relies on W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology, an open Web standard that can be freely used by anyone.</p>
+
+  <p>This visual layout and structure of the specification was adapted from the <a href="http://open-biomed.sourceforge.net/opmv/ns.html">Open Provenance Model Vocabulary</a> edited by Jun Zhao, <a href="http://rdfs.org/sioc/spec/">SIOC Core Ontology Specification</a> edited by Uldis Bojars and John G. Breslin and the <a href="http://trdf.sourceforge.net/provenance/ns.html">Provenance Vocabulary Core Ontology Specification</a> edited by Olaf Hartig and Jun Zhao.</p>
+
+<hr>
+
+<div>
+<h2 id="sec-abstract">Abstract</h2>
+
+<p>
+  <span about="http://linkedscience.org/teach/ns#" property="dcterms:description">TEACH, the Teaching Core Vocabulary,
+is a lightweight vocabulary providing terms to enable teachers to relate things in their courses together.
+The Teaching Core Vocabulary is based on practical requirements set by providing seminar and course descriptions as Linked Data.
+</span>
+</p>
+
+
+  <span about="" property="dcterms:description">This documents specifies the classes and properties introduced by the TEACH core vocabulary.</span>
+<p></p>
+</div>
+<hr>
+
+<div class="status">
+<h2 id="sec-status">Status of this document</h2>
+
+<p><strong>NOTE:</strong> <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document.</em></p>
+
+<p>This specification is an evolving document. This document may be updated or added to based on implementation experience, but no commitment is made by the authors regarding future updates. This document is generated by combining a machine-readable <a href="http://linkedscience.org/teach/ns#">Teaching Core Vocabulary Namespace</a> expressed in RDF/XML with a specification template and a set of per-term documents.</p>
+</div>
+
+<h2 id="sec-toc">Table of contents</h2>
+<ul>
+  <li><a href="http://linkedscience.org/teach/ns/#sec-intro">1. Introduction</a></li>
+  <li><a href="http://linkedscience.org/teach/ns/#sec-glance">2. The Teaching Core Vocabulary at a glance</a></li>
+  <li><a href="http://linkedscience.org/teach/ns/#sec-desc">3. Description about TEACH core vocabulary</a></li>
+  <ul>
+      <li><a href="http://linkedscience.org/teach/ns/#sec-extension">3.1. Evolution and extension of TEACH</a></li>
+      <li><a href="#sec-extension2">3.2. An example use of TEACH</a></li>
+  </ul>
+  <li><a href="http://linkedscience.org/teach/ns/#sec-specification">4. Cross-reference for core TEACH classes and properties</a></li>
+  <!--li><a href="#sec-decisions">4. Design Decisions</a></li-->
+  <li><a href="http://linkedscience.org/teach/ns/#sec-ack">5. Acknowledgements</a></li>
+  <li><a href="http://linkedscience.org/teach/ns/#sec-reference">6. References</a></li>
+  <li><a href="http://linkedscience.org/teach/ns/#sec-changes">7. Change log</a></li>
+</ul>
+
+<hr>
+
+<h2 id="sec-intro">1. Introduction</h2>
+  <p>The Teaching Core Vocabulary is defined as a set of classes and properties.</p>
+  <p>You may browse the also using Sindice Inspector as a graph or as a <a href="http://inspector.sindice.com/inspect?url=http%3A%2F%2Flinkedscience.org%2Fteach%2Fns%2F&content=#HTML">list</a>.</p>
+
+
+<p>The XML Namespace URIs that must be used by implementations of this specification are:</p>
+
+<ul>
+  <li><a href="http://linkedscience.org/teach/ns#">http://linkedscience.org/teach/ns#</a> - The Namespace of the
+Teaching Core Vocabulary
+</li>
+</ul>
+
+<div class="glance">
+<h2 id="sec-glance">2. The Teaching Core Vocabulary at a glance</h2>
+
+<p>An alphabetical index of terms from the Teaching Core Vocabulary, by class and by property, are given below. All the terms are hyperlinked to their detailed description for quick reference.</p>
+
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+ <p>Classes: |
+  <a href="#Course">Course</a> |
+  
+  <a href="#Assignment">Assignment</a> |
+  
+  <a href="#Material">Material</a> |
+  
+  <a href="#Teacher">Teacher</a> |
+  
+  <a href="#StudentGroup">StudentGroup</a> |
+  
+  <a href="#Student">Student</a> |
+  
+  <a href="#Module">Module</a> |
+  
+  <a href="#StudyProgram">StudyProgram</a> |
+  
+  <a href="#Lecture">Lecture</a> |
+  
+  <a href="#Building">Building</a> |
+  
+  <a href="#Room">Room</a> |
+  
+</p>
+
+
+<p>Properties: |
+
+<a href="#courseDescription">courseDescription</a> |
+
+<a href="#courseTitle">courseTitle</a> |
+
+<a href="#hasDescription">hasDescription</a> |
+
+<a href="#hasTitle">hasTitle</a> |
+
+<a href="#bookingNumber">bookingNumber</a> |
+
+<a href="#teacher">teacher</a> |
+
+<a href="#teacherOf">teacherOf</a> |
+
+<a href="#studentGroup">studentGroup</a> |
+
+<a href="#weeklyHours">weeklyHours</a> |
+
+<a href="#grading">grading</a> |
+
+<a href="#academicTerm">academicTerm</a> |
+
+<a href="#room">room</a> |
+
+<a href="#building">building</a> |
+
+<a href="#reportTemplate">reportTemplate</a> |
+
+<a href="#reviewTemplate">reviewTemplate</a> |
+
+<a href="#opponentOf">opponentOf</a> |
+
+<a href="#hasAssignment">hasAssignment</a> |
+
+<a href="#hasAssignmentMaterial">hasAssignmentMaterial</a> |
+
+<a href="#hasCourseMaterial">hasCourseMaterial</a> |
+
+<a href="#reading">reading</a> |
+
+<a href="#nextReading">nextReading</a> |
+
+<a href="#deadline">deadline</a> |
+
+<a href="#deadlineDraftReport">deadlineDraftReport</a> |
+
+<a href="#deadlineFinalReport">deadlineFinalReport</a> |
+
+<a href="#deadlineReviewReport">deadlineReviewReport</a> |
+
+<a href="#arrangedAt">arrangedAt</a> |
+
+<a href="#notArrangedAt">notArrangedAt</a> |
+
+<a href="#module">module</a> |
+
+<a href="#studyProgram">studyProgram</a> |
+
+<a href="#hasTeachingMethod">hasTeachingMethod</a> |
+
+</p>
+
+</div>
+</div>
+
+<div class="description">
+  <h2 id="sec-desc">3. Descriptions about TEACH</h2>
+</div>
+
+  <p>The Core TEACH definitions presented here are written using a computer language (RDF/OWL) that makes it easy for software to process some basic facts about the terms in the Teaching Core Vocabulary, and consequently about the things described using TEACH.</p>
+
+
+<h3 id="sec-extension">3.1. Evolution and extension of TEACH</h3>
+
+<p>The Teaching Core Vocabulary is identified by the namespace URI "http://linkedscience.org/teach/ns#".</p>
+
+<p>Revisions and extensions of TEACH are conducted through edits to the namespace document, which by convention is published on the Web at the namespace URI.</p>
+
+  <p>The properties and types defined here provide some basic concepts for describing information relevant when teaching a course/seminar. Other vocabularies (e.g. AIISO - Academic Institution Internal Structure Ontology, MLO - Metadata for Learning Opportunities, XCRI-CAP - XCRI Course Advertising Profile, the Dublin Core metadata terms, FOAF, BIBO - The Bibliographic Ontology, W3C Ontology for Media Resources, <a href="http://www.w3.org/TR/owl-time/">the Time Ontology in OWL</a>, the Open Provenance Model Vocabulary, etc.) can also be mixed in with TEACH terms, as can local extensions. TEACH is designed to be extended.</p>
+ <h3 id="sec-extension2">3.2. An example use of TEACH</h3>
+Here is a simple example use of classes and properties of TEACH Vocabulary to model a course that is taught at the Institute for Geoinformatics in Muenster.
+
+<pre><code>
+@prefix tisc: &lt;http://observedchange.com/tisc/ns#&gt;.
+@prefix ical: &lt;http://www.w3.org/2002/12/cal/icaltzd#&gt;.
+@prefix GE: &lt;http://www.w3.org/2002/12/cal/tzd/Germany/Berlin#&gt;.
+@prefix teach: &lt;http://linkedscience.org/teach/ns#&gt;.
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;.
+@prefix aiiso: &lt;http://purl.org/vocab/aiiso/schema#&gt;.
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt;.
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt;.
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+
+&lt;http://data.uni-muenster.de/context/csa/course/197&gt;
+        rdf:type       aiiso:Course;
+        teach:academicTerm "WS 2011/2012";
+        teach:bookingNumber "142256"^^xsd:int;
+        teach:courseDescription "BSc Studierenden koennen diesen Kurs im Modul [...]."@de;
+        teach:courseTitle "Study Project: Open Floor Map"@en;
+        teach:ects "5"^^xsd:int;
+        teach:studentGroup &lt;http://data.uni-muenster.de/context/csa/group/197&gt;;
+        teach:teacher &lt;http://data.uni-muenster.de/context/csa/teacher/ChristianKray&gt;;
+        teach:weeklyHours "2"^^xsd:int;
+        owl:sameAs &lt;http://data.uni-muenster.de/context/csa/course/197&gt;;
+        foaf:homepage &lt;http://data.uni-muenster.de/context/csa/course/197&gt;;
+        teach:module &lt;http://data.uni-muenster.de/context/csa/module/123&gt;;
+        teach:studyProgram &lt;http://data.uni-muenster.de/context/csa/studyprogram/1234&gt;;
+        teach:deadlineDraftReport "2012-06-10T23:59:59"^^xsd:dateTime;
+        teach:deadlineFinalReport "2012-06-30T23:59:59"^^xsd:dateTime;
+        teach:deadlineReviewReport "2012-06-20T23:59:59"^^xsd:dateTime;
+        teach:notArrangedAt "2012-06-19"^^xsd:date;
+        teach:grading "Grading of the seminar is as follows: 1/3 for the seminar work, 1/3 for the opponent work and presentation of the own work, 1/3 for the active participation."@en;
+        teach:nextReading &lt;http://wiki.openstreetmap.org/wiki/Indoor_Mapping&gt;;
+        teach:arrangedAt [
+                rdf:type       ical:Vevent;
+                ical:byday "TH"^^xsd:string;
+                ical:freq "WEEKLY"^^xsd:string;
+                ical:interval "1"^^xsd:int;
+                ical:summary "Study Project: Open Floor Map (weekly meeting) "@en;
+                teach:room &lt;http://data.uni-muenster.de/context/page/cris/rooms/ifgi/seminarroom>;
+                teach:building &lt;http://data.uni-muenster.de/context/page/cris/addresses/48151/WeselerStr253>;
+                ical:dtend "2012-04-05T16:00:00"^^GE:tz;
+                ical:dtstart "2012-06-12T14:00:00"^^GE:tz;
+                tisc:locatedAt "51.941269,7.610532" ];
+                ical:uid "2012-06-12T16: 95-69-1-7@lod";
+        teach:arrangedAt [
+                rdf:type       ical:Vevent;
+                ical:byday "WE"^^xsd:string;
+                ical:freq "WEEKLY"^^xsd:string;
+                ical:interval "1"^^xsd:int;
+                ical:summary "Study Project: Open Floor Map (Theory part) "@en;
+                teach:room &lt;http://data.uni-muenster.de/context/page/cris/rooms/ifgi/cippool&gt;;
+                teach:building &lt;http://data.uni-muenster.de/context/page/cris/addresses/48151/WeselerStr253&gt;;
+                ical:dtend "2012-04-04T12:00:00"^^GE:tz;
+                ical:dtstart "2012-06-11T10:00:00"^^GE:tz;
+                tisc:locatedAt "51.941269,7.610532" ];
+                ical:uid "2012-06-11T10: 95-69-1-7@lod".
+</code></pre>
+
+Another online example <a href="http://data.aalto.fi/id/courses/noppa/course_Puu-0.3310">a course at the Aalto University modeled with TEACH</a>.
+
+<div class="overview">
+  <h2 id="sec-specification">4. Cross-reference for core TEACH classes and properties</h2>
+</div>
+
+<!--  <a href="#Course">Course</a> |
+  
+  <a href="#Assignment">Assignment</a> |
+  
+  <a href="#Material">Material</a> |
+  
+  <a href="#Teacher">Teacher</a> |
+  
+  <a href="#StudentGroup">StudentGroup</a> |
+  
+  <a href="#Student">Student</a> |
+  
+  <a href="#Module">Module</a> |
+  
+  <a href="#StudyProgram">StudyProgram</a> |
+  
+  <a href="#Lecture">StudyProgram</a> |
+  
+  <a href="#Building">Building</a> |
+  
+  <a href="#Room">Room</a> 
+   -->
+
+<div class="specterm" id="Course"
+     about="http://linkedscience.org/teach/ns#Course" typeof="owl:Class">
+  <h3>Class: Course</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Course" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Course is where students are supposed to learn something.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Course">http://linkedscience.org/teach/ns#Course</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Assignment"
+     about="http://linkedscience.org/teach/ns#Assignment" typeof="owl:Class">
+  <h3>Class: Assignment</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Assignment" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Assignment of a course, for example an exercise.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Assignment">http://linkedscience.org/teach/ns#Assignment</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Material"
+     about="http://linkedscience.org/teach/ns#Material" typeof="owl:Class">
+  <h3>Class: Material</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Material" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Material of the course.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Material">http://linkedscience.org/teach/ns#Material</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Teacher"
+     about="http://linkedscience.org/teach/ns#Teacher" typeof="owl:Class">
+  <h3>Class: Teacher</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Teacher" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Teacher of the course.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Teacher">http://linkedscience.org/teach/ns#Teacher</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="StudentGroup"
+     about="http://linkedscience.org/teach/ns#StudentGroup" typeof="owl:Class">
+  <h3>Class: StudentGroup</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="StudentGroup" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">StudentGroup of the course.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#StudentGroup">http://linkedscience.org/teach/ns#StudentGroup</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="Student"
+     about="http://linkedscience.org/teach/ns#Student" typeof="owl:Class">
+  <h3>Class: Student</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Student" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Student of the course.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Student">http://linkedscience.org/teach/ns#Student</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="Module"
+     about="http://linkedscience.org/teach/ns#Module" typeof="owl:Class">
+  <h3>Class: Module</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Module" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Module (i.e. a set of courses) which the course belongs to.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Module">http://linkedscience.org/teach/ns#Module</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="StudyProgram"
+     about="http://linkedscience.org/teach/ns#StudyProgram" typeof="owl:Class">
+  <h3>Class: StudyProgram</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="StudyProgram" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">StudyProgram which the course is part of.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#StudyProgram">http://linkedscience.org/teach/ns#StudyProgram</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="Lecture"
+     about="http://linkedscience.org/teach/ns#Lecture" typeof="owl:Class">
+  <h3>Class: Lecture</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Lecture" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Lecture of the course.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Lecture">http://linkedscience.org/teach/ns#Lecture</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="Building"
+     about="http://linkedscience.org/teach/ns#Building" typeof="owl:Class">
+  <h3>Class: Building</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Building" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Building where the course is taking place.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Building">http://linkedscience.org/teach/ns#Building</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+<div class="specterm" id="Room"
+     about="http://linkedscience.org/teach/ns#Room" typeof="owl:Class">
+  <h3>Class: Room</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Room where the course is taking place.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Room">http://linkedscience.org/teach/ns#Room</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+ 
+
+ <div class="specterm" id="courseTitle" about="http://linkedscience.org/teach/ns#courseTitle" typeof="owl:ObjectProperty">
+
+  <h3>Property: courseTitle</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/page/Course_(education)"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#courseTitle"></div>
+  <div rel="rdfs:subPropertyOf" resource="http://purl.org/dc/terms/title"></div>
+  <div property="rdfs:label" content="courseTitle" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">courseTitle is subproperty of dc:title to specify the course title</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#courseTitle">http://linkedscience.org/teach/ns#courseTitle</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+  <div class="specterm" id="courseDescription" about="http://linkedscience.org/teach/ns#courseDescription" typeof="owl:ObjectProperty">
+
+  <h3>Property: courseDescription</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/page/Course_(education)"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#courseDescription"></div>
+  <div rel="rdfs:subPropertyOf" resource="http://purl.org/dc/terms/description"></div>
+  <div property="rdfs:label" content="courseDescription" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">courseDescription is subproperty of dc:description to specify the course description</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#courseDescription">http://linkedscience.org/teach/ns#courseDescription</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+     <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+ <div class="specterm" id="hasTitle" about="http://linkedscience.org/teach/ns#hasTitle" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasTitle</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/page/Course_(education)"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#hasTitle"></div>
+  <div rel="rdfs:subPropertyOf" resource="http://purl.org/dc/terms/title"></div>
+  <div property="rdfs:label" content="hasTitle" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasTitle is subproperty of dc:title  to specify needed titles of entities within the course, e.g. the title of course materials, assignments, etc.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#hasTitle">http://linkedscience.org/teach/ns#hasTitle</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+<!--     <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+  <div class="specterm" id="hasDescription" about="http://linkedscience.org/teach/ns#hasDescription" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasDescription</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/page/Course_(education)"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#hasDescription"></div>
+  <div rel="rdfs:subPropertyOf" resource="http://purl.org/dc/terms/description"></div>
+  <div property="rdfs:label" content="hasDescription" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasDescription is subproperty of dc:description to specify needed descriptions of entities within the course, e.g. the description of course materials, assignments, etc.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#hasDescription">http://linkedscience.org/teach/ns#hasDescription</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+  <!--     <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr> -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+  <div class="specterm" id="bookingNumber" about="http://linkedscience.org/teach/ns#bookingNumber" typeof="owl:ObjectProperty">
+
+  <h3>Property: bookingNumber</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/page/Course_(education)"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#bookingNumber"></div>
+  <div rel="rdfs:subPropertyOf" resource="http://purl.org/dc/terms/description"></div>
+  <div property="rdfs:label" content="bookingNumber" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">bookingNumber is an abstract property to uniquely identify the course. This identifier should be defined and provided by the operator of the course.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#bookingNumber">http://linkedscience.org/teach/ns#bookingNumber</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+           -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+<div class="specterm" id="teacher" about="http://linkedscience.org/teach/ns#teacher" typeof="owl:ObjectProperty">
+
+  <h3>Property: teacher</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/TEACHER"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#teacher"></div>
+  <div property="rdfs:label" content="teacher" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">teacher is an abstract property to relate a teacher to a course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#teacher">http://linkedscience.org/teach/ns#teacher</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Teacher">teach:Teacher</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="teacherOf" about="http://linkedscience.org/teach/ns#teacherOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: teacherOf</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/TEACHER"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#teacherOf"></div>
+  <div property="rdfs:label" content="teacherOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">teacherOf is an abstract property to relate a teacher to a course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#teacherOf">http://linkedscience.org/teach/ns#teacherOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Teacher">teach:Teacher</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="studentGroup" about="http://linkedscience.org/teach/ns#studentGroup" typeof="owl:ObjectProperty">
+
+  <h3>Property: studentGroup</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/TEACHER"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#studentGroup"></div>
+  <div property="rdfs:label" content="studentGroup" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">studentGroup is an abstract property to relate a student group to the course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#studentGroup">http://linkedscience.org/teach/ns#studentGroup</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/Group">foaf:Group</a><div rel="rdfs:range" resource="http://xmlns.com/foaf/0.1/Group"></div></td>
+          </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="weeklyHours" about="http://linkedscience.org/teach/ns#weeklyHours" typeof="owl:ObjectProperty">
+
+  <h3>Property: weeklyHours</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://de.dbpedia.org/resource/Semesterwochenstunde"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#weeklyHours"></div>
+  <div property="rdfs:label" content="weeklyHours" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">weeklyHours is an abstract property to express the number of weekly hours for the teaching.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#weeklyHours">http://linkedscience.org/teach/ns#weeklyHours</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+
+<div class="specterm" id="grading" about="http://linkedscience.org/teach/ns#grading" typeof="owl:ObjectProperty">
+
+  <h3>Property: grading</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Grading"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#grading"></div>
+  <div property="rdfs:label" content="grading" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">grading is an abstract property to relate the course/seminar to the description about its grading.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#grading">http://linkedscience.org/teach/ns#grading</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="academicTerm" about="http://linkedscience.org/teach/ns#academicTerm" typeof="owl:ObjectProperty">
+
+  <h3>Property: academicTerm</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/page/Academic_term"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#academicTerm"></div>
+  <div property="rdfs:label" content="academicTerm" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">academicTerm is an abstract property to express the academic term (e.g. Summer 2011) of the course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#academicTerm">http://linkedscience.org/teach/ns#academicTerm</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="ects" about="http://linkedscience.org/teach/ns#ects" typeof="owl:ObjectProperty">
+
+  <h3>Property: ects</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/European_Credit_Transfer_and_Accumulation_System"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#ects"></div>
+  <div property="rdfs:label" content="ects" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ects is an abstract property to express the ects (European Credit Transfer System) of the course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#ects">http://linkedscience.org/teach/ns#ects</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+
+<div class="specterm" id="room" about="http://linkedscience.org/teach/ns#room" typeof="owl:ObjectProperty">
+
+  <h3>Property: room</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Room"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#room"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">room is an abstract property to express the room where the course/seminar takes place.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#room">http://linkedscience.org/teach/ns#room</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+<div class="specterm" id="building" about="http://linkedscience.org/teach/ns#building" typeof="owl:ObjectProperty">
+
+  <h3>Property: building</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Building"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#building"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">building is an abstract property to express the building where the course/seminar takes place.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#building">http://linkedscience.org/teach/ns#building</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="reportTemplate" about="http://linkedscience.org/teach/ns#reportTemplate" typeof="owl:ObjectProperty">
+
+  <h3>Property: reportTemplate</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#reportTemplate"></div>
+  <div property="rdfs:label" content="reportTemplate" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">reportTemplate is an abstract property to relate a report template to the course/seminar so that students may use it to write their reports.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#reportTemplate">http://linkedscience.org/teach/ns#reportTemplate</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="reviewTemplate" about="http://linkedscience.org/teach/ns#reviewTemplate" typeof="owl:ObjectProperty">
+
+  <h3>Property: reviewTemplate</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#reviewTemplate"></div>
+  <div property="rdfs:label" content="reviewTemplate" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">reviewTemplate is an abstract property to relate a review template to the course/seminar so that students may use it to write their reviews of other student's reports.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#reviewTemplate">http://linkedscience.org/teach/ns#reviewTemplate</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+         <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="opponentOf" about="http://linkedscience.org/teach/ns#opponentOf" typeof="owl:ObjectProperty">
+
+  <h3>Property: opponentOf</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#opponentOf"></div>
+  <div property="rdfs:label" content="opponentOf" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">opponentOf is an abstract property to state that a student is an opponent of another, i.e. that he/she makes review of the other student's seminar work.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#opponentOf">http://linkedscience.org/teach/ns#opponentOf</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><div rel="rdfs:domain" resource="http://xmlns.com/foaf/0.1/Agent"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><div rel="rdfs:range" resource="http://xmlns.com/foaf/0.1/Agent"></div></td>
+          </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="reading" about="http://linkedscience.org/teach/ns#reading" typeof="owl:ObjectProperty">
+
+  <h3>Property: reading</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#reading"></div>
+  <div property="rdfs:label" content="reading" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">reading is an abstract property to relate required readings to the course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#reading">http://linkedscience.org/teach/ns#reading</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+          <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="nextReading" about="http://linkedscience.org/teach/ns#nextReading" typeof="owl:ObjectProperty">
+
+  <h3>Property: nextReading</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#nextReading"></div>
+  <div property="rdfs:label" content="nextReading" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">nextReading is an abstract property for dynamically stating the reading required to be read by the next session of the course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#nextReading">http://linkedscience.org/teach/ns#nextReading</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+           <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+
+<div class="specterm" id="deadline" about="http://linkedscience.org/teach/ns#deadline" typeof="owl:ObjectProperty">
+
+  <h3>Property: deadline</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#deadline"></div>
+  <div property="rdfs:label" content="deadline" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">deadline is an abstract property explicate the deadline for a draft project report.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#deadline">http://linkedscience.org/teach/ns#deadline</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+          <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="deadlineDraftReport" about="http://linkedscience.org/teach/ns#deadlineDraftReport" typeof="owl:ObjectProperty">
+
+  <h3>Property: deadlineDraftReport</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#deadlineDraftReport"></div>
+  <div property="rdfs:label" content="deadlineDraftReport" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">deadlineDraftReport is an abstract property explicate the deadline for a draft project report.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#deadlineDraftReport">http://linkedscience.org/teach/ns#deadlineDraftReport</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+            <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="deadlineFinalReport" about="http://linkedscience.org/teach/ns#deadlineFinalReport" typeof="owl:ObjectProperty">
+
+  <h3>Property: deadlineFinalReport</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#deadlineFinalReport"></div>
+  <div property="rdfs:label" content="deadlineFinalReport" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">deadlineFinalReport is an abstract property to explicate the deadline for a final project report.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#deadlineFinalReport">http://linkedscience.org/teach/ns#deadlineFinalReport</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+           <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="deadlineReviewReport" about="http://linkedscience.org/teach/ns#deadlineReviewReport" typeof="owl:ObjectProperty">
+
+  <h3>Property: deadlineReviewReport</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#deadlineReviewReport"></div>
+  <div property="rdfs:label" content="deadlineReviewReport" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">deadlineReviewReport is an abstract property to explicate the deadline for review reports (opponent works).</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#deadlineReviewReport">http://linkedscience.org/teach/ns#deadlineReviewReport</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+          <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="arrangedAt" about="http://linkedscience.org/teach/ns#arrangedAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: arrangedAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#arrangedAt"></div>
+  <div property="rdfs:label" content="arrangedAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">arrangedAt is an abstract property to explicate the date/time when the seminar is arranged at. It can be defined as in the following example:
+  http://www.w3.org/TR/rdfcal/#L21805</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#arrangedAt">http://linkedscience.org/teach/ns#arrangedAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://www.w3.org/2002/12/cal/icaltzd#">ical:Vevent</a><div rel="rdfs:range" resource="http://www.w3.org/2002/12/cal/icaltzd#"></div></td>
+<!--   <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td> -->
+          </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="notArrangedAt" about="http://linkedscience.org/teach/ns#notArrangedAt" typeof="owl:ObjectProperty">
+
+  <h3>Property: notArrangedAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#notArrangedAt"></div>
+  <div property="rdfs:label" content="notArrangedAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">notArrangedAt is an abstract property to explicate the date/time when the seminar has an exception in its schedule and thus is not arranged at.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#notArrangedAt">http://linkedscience.org/teach/ns#notArrangedAt</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+      <tr>
+          <th>Range:</th>
+          <td><a href="http://www.w3.org/2001/XMLSchema#datetime">xsd:datetime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#datetime"></div></td>
+<!--            <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td> -->
+          </tr>
+
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="module" about="http://linkedscience.org/teach/ns#module" typeof="owl:ObjectProperty">
+
+  <h3>Property: module</h3>
+
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Module"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#module"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Describes the module of the study program with which the course/seminar is associated.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#module">http://linkedscience.org/teach/ns#module</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+<div class="specterm" id="studyProgram" about="http://linkedscience.org/teach/ns#studyProgram" typeof="owl:ObjectProperty">
+
+  <h3>Property: studyProgram</h3>
+
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#studyProgram"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Describes the study program which is associated with the course/seminar.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#studyProgram">http://linkedscience.org/teach/ns#studyProgram</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+
+<div class="specterm" id="hasTeachingMethod" about="http://linkedscience.org/teach/ns#hasTeachingMethod" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasTeachingMethod</h3>
+
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns#hasTeachingMethod"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Describes the teaching method used in the course/seminar. property "hasTeachingMethod" inspired by an interview of Nobel Laureate Carl Wieman in "Transformation Is Possible
+If a University Really Cares", SCIENCE, Vol 340, April 19th, 2013: "Wieman came up with his simple, market-driven first step: Require universities to compile and release data on their teaching methods as a condition for receiving federal research funds. As students began using the data released by universities to help choose a college, he reasoned, universities would feel compelled to improve their teaching practices in order to attract the best applicants." The idea is that with the hasTeachingMethod-property universities can start publishing the teaching methods they use as Linked Open Data. Let us see which university implements the idea first.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/teach/ns#hasTeachingMethod">http://linkedscience.org/teach/ns#hasTeachingMethod</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Course">teach:Course</a><div rel="rdfs:domain" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+<!--       <tr>
+          <th>Range:</th>
+          <td><a href="http://linkedscience.org/teach/ns/#Object">owl:Thing</a><div rel="rdfs:range" resource="http://www.w3.org/2002/07/owl#thing"></div></td>
+          </tr>
+ -->
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="http://linkedscience.org/teach/ns/#sec-glance">back to overview</a>]</p>
+  <br>
+</div>
+
+
+
+<h2 id="sec-ack">5. Acknowledgement</h2>
+
+We would like to acknowledge the students of the Linked Open Data---(R)Evolution -seminar at the Institute for Geoinformatics, University of Muenster for motivating to create the TEACH vocabulary.
+
+<h2 id="sec-reference">6. References</h2>
+
+<h2 id="sec-changes">7. Change log</h2>
+
+<ul>
+  <li>2011-05-26: Tomi Kauppinen: initial version of the TEACH core vocabulary.</li>
+  <li>2011-07-05: New version of the TEACH core vocabulary, added courseDescription and courseTitle.</li>
+  <li>2012-06-27: New version of the TEACH core vocabulary, added module and studyProgram. Additionally the representation of the arrangedAt property was revised.</li>
+  <li>2013-03-15: Tomi Kauppinen added relevant classes (course, assignment, ...) as per many requests. Fixed also many bugs and issues about domain and range specifications. Identified also some issues that will be fixed in the next versions.</li>
+  <li>2013-04-25: Tomi Kauppinen added new property "hasTeachingMethod" inspired by an interview of Nobel Laureate Carl Wieman in "Transformation Is Possible
+If a University Really Cares", SCIENCE, Vol 340, April 19th, 2013: "Wieman came up with his simple, market-driven first step: Require universities to compile and release data on their teaching methods as a condition for receiving federal research funds. As students began using the data released by universities to help choose a college, he reasoned, universities would feel compelled to improve their teaching practices in order to attract the best applicants." The idea is that with the hasTeachingMethod-property universities can start publishing the teaching methods they use as Linked Open Data. Let us see which university picks this idea first.</li>
+
+</ul>
+
+
+
+</body></html>

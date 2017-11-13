@@ -1,0 +1,263 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://uri4uri.net/vocab.ttl/> rdf:type foaf:Document ;
+                                dcterms:title "URI Vocabulary" ;
+                                foaf:primaryTopic <http://uri4uri.net/vocab#> .
+
+<http://uri4uri.net/vocab#> rdf:type owl:Ontology ;
+                            dcterms:title "URI Vocabulary" ;
+                            dcterms:description "This vocabulary describes the entities which may be derived from a URI and the relationships between them, such as Internet Domains, prototcols, file suffixes etc. It was initially issued as part of an April 1st gag, but has utility beyond the initial joke." ;
+                            dcterms:issued "2013-04-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                            dcterms:creator <http://id.ecs.soton.ac.uk/person/1248> .
+
+<http://id.ecs.soton.ac.uk/person/1248> foaf:name "Christopher Gutteridge" ;
+                                        foaf:homepage <http://users.ecs.soton.ac.uk/cjg/> .
+
+<http://uri4uri.net/vocab#account> rdf:type rdf:Property ;
+                                   rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                   rdfs:label "account" .
+
+<http://uri4uri.net/vocab#connectsTo> rdf:type rdf:Property ;
+                                      rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                      rdfs:label "connects to" .
+
+<http://uri4uri.net/vocab#delegationRecordPage> rdf:type rdf:Property ;
+                                                rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                                rdfs:label "delegation record page" .
+
+<http://uri4uri.net/vocab#Domain> rdf:type rdfs:Class ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "Internet Domain" .
+
+<http://uri4uri.net/vocab#DomainDatatype> rdf:type rdfs:Datatype ;
+                                          rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                          rdfs:label "Internet Domain Identifier" .
+
+<http://uri4uri.net/vocab#Domain-Invalid> rdf:type rdfs:Class ;
+                                          rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                          rdfs:label "Invalid Internet Domain" .
+
+<http://uri4uri.net/vocab#Domain-Valid> rdf:type rdfs:Class ;
+                                        rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                        rdfs:label "Valid Internet Domain" .
+
+<http://uri4uri.net/vocab#filename> rdf:type rdf:Property ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "filename" .
+
+<http://uri4uri.net/vocab#Format> rdf:type rdfs:Class ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "File Format" .
+
+<http://uri4uri.net/vocab#fragmentOf> rdf:type rdf:Property ;
+                                      rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                      rdfs:label "fragment of" .
+
+<http://uri4uri.net/vocab#fragment> rdf:type rdf:Property ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "fragment" .
+
+<http://uri4uri.net/vocab#FragmentURI> rdf:type rdfs:Class ;
+                                       rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                       rdfs:label "URI with Fragement Identifier" .
+
+<http://uri4uri.net/vocab#host> rdf:type rdf:Property ;
+                                rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                rdfs:label "host" .
+
+<http://uri4uri.net/vocab#HostPort> rdf:type rdfs:Class ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "Host and Port" .
+
+<http://uri4uri.net/vocab#IANAPage> rdf:type rdf:Property ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "IANA page" .
+
+<http://uri4uri.net/vocab#IANARef> rdf:type rdf:Property ;
+                                   rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                   rdfs:label "IANA reference" .
+
+<http://uri4uri.net/vocab#identifiedBy> rdf:type rdf:Property ;
+                                        rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                        rdfs:label "identified by URI" .
+
+<http://uri4uri.net/vocab#key> rdf:type rdf:Property ;
+                               rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                               rdfs:label "key" .
+
+<http://uri4uri.net/vocab#length> rdf:type rdf:Property ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "length" .
+
+<http://uri4uri.net/vocab#md5> rdf:type rdf:Property ;
+                               rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                               rdfs:label "md5 hash" .
+
+<http://uri4uri.net/vocab#Mimetype> rdf:type rdfs:Class ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "Mimetype" .
+
+<http://uri4uri.net/vocab#MimetypeDatatype> rdf:type rdfs:Datatype ;
+                                            rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                            rdfs:label "Mimetype Identifier" .
+
+<http://uri4uri.net/vocab#noPortSpecified> rdf:type skos:Concept ;
+                                           rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                           rdfs:label "No Port Specified" .
+
+<http://uri4uri.net/vocab#pass> rdf:type rdf:Property ;
+                                rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                rdfs:label "password" .
+
+<http://uri4uri.net/vocab#path> rdf:type rdf:Property ;
+                                rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                rdfs:label "path" .
+
+<http://uri4uri.net/vocab#port> rdf:type rdf:Property ;
+                                rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                rdfs:label "port" .
+
+<http://uri4uri.net/vocab#Query> rdf:type rdfs:Class ;
+                                 rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                 rdfs:label "URI Query Part" .
+
+<http://uri4uri.net/vocab#QueryKey> rdf:type rdfs:Class ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "URI Query Key" .
+
+<http://uri4uri.net/vocab#QueryKVP> rdf:type rdfs:Class ;
+                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                    rdfs:label "URI Query Key-Value Pair" .
+
+<http://uri4uri.net/vocab#query> rdf:type rdf:Property ;
+                                 rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                 rdfs:label "query" .
+
+<http://uri4uri.net/vocab#queryString> rdf:type rdf:Property ;
+                                       rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                       rdfs:label "query string" .
+
+<http://uri4uri.net/vocab#QueryValue> rdf:type rdfs:Class ;
+                                      rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                      rdfs:label "URI Query Value" .
+
+<http://uri4uri.net/vocab#scheme> rdf:type rdf:Property ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "URI scheme" .
+
+<http://uri4uri.net/vocab#sponsor> rdf:type rdf:Property ;
+                                   rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                   rdfs:label "sponsor" .
+
+<http://uri4uri.net/vocab#subDom> rdf:type rdf:Property ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "subdomain" .
+
+<http://uri4uri.net/vocab#Suffix> rdf:type rdfs:Class ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "Filename Suffix" .
+
+<http://uri4uri.net/vocab#SuffixDatatype> rdf:type rdfs:Datatype ;
+                                          rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                          rdfs:label "Filename Suffix Identifier" .
+
+<http://uri4uri.net/vocab#suffix> rdf:type rdf:Property ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "suffix" .
+
+<http://uri4uri.net/vocab#TopLevelDomain-CountryCode> rdf:type rdfs:Class ;
+                                                      rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                                      rdfs:label "Country Top-Level Domain" .
+
+<http://uri4uri.net/vocab#TopLevelDomain> rdf:type rdfs:Class ;
+                                          rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                          rdfs:label "Top-Level Domain" .
+
+<http://uri4uri.net/vocab#TopLevelDomain-Generic> rdf:type rdfs:Class ;
+                                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                                  rdfs:label "Generic Top-Level Domain" .
+
+<http://uri4uri.net/vocab#TopLevelDomain-GenericRestricted> rdf:type rdfs:Class ;
+                                                            rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                                            rdfs:label "Restricted Generic Top-Level Domain" .
+
+<http://uri4uri.net/vocab#TopLevelDomain-Infrastructure> rdf:type rdfs:Class ;
+                                                         rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                                         rdfs:label "Infrastructure Top-Level Domain" .
+
+<http://uri4uri.net/vocab#TopLevelDomain-Sponsored> rdf:type rdfs:Class ;
+                                                    rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                                    rdfs:label "Sponsored Top-Level Domain" .
+
+<http://uri4uri.net/vocab#TopLevelDomain-Test> rdf:type rdfs:Class ;
+                                               rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                               rdfs:label "Test Top-Level Domain" .
+
+<http://uri4uri.net/vocab#URI> rdf:type rdfs:Class ;
+                               rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                               rdfs:label "URI" .
+
+<http://uri4uri.net/vocab#URIDatatype> rdf:type rdfs:Datatype ;
+                                       rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                       rdfs:label "URI Identifier" .
+
+<http://uri4uri.net/vocab#URIScheme> rdf:type rdfs:Class ;
+                                     rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                     rdfs:label "URI Scheme" .
+
+<http://uri4uri.net/vocab#URISchemeDatatype> rdf:type rdfs:Datatype ;
+                                             rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                             rdfs:label "URI Scheme Identifier" .
+
+<http://uri4uri.net/vocab#Statement> rdf:type rdfs:Class ;
+                                     rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                     rdfs:label "Statement (reified)" .
+
+<http://uri4uri.net/vocab#object> rdf:type rdf:Property ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "object" .
+
+<http://uri4uri.net/vocab#predicate> rdf:type rdf:Property ;
+                                     rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                     rdfs:label "predicate" .
+
+<http://uri4uri.net/vocab#subject> rdf:type rdf:Property ;
+                                   rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                   rdfs:label "subject" .
+
+<http://uri4uri.net/vocab#trueAt> rdf:type rdf:Property ;
+                                  rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                  rdfs:label "trueAt" .
+
+<http://uri4uri.net/vocab#usedForFormat> rdf:type rdf:Property ;
+                                         rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                         rdfs:label "used for format" .
+
+<http://uri4uri.net/vocab#usedForSuffix> rdf:type rdf:Property ;
+                                         rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                         rdfs:label "used for suffix" .
+
+<http://uri4uri.net/vocab#user> rdf:type rdf:Property ;
+                                rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                rdfs:label "user" .
+
+<http://uri4uri.net/vocab#value> rdf:type rdf:Property ;
+                                 rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                 rdfs:label "value" .
+
+<http://uri4uri.net/vocab#whoIsRecord> rdf:type rdf:Property ;
+                                       rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                       rdfs:label "whois record" .
+
+<http://uri4uri.net/vocab#WhoisServer> rdf:type rdfs:Class ;
+                                       rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                       rdfs:label "Whois Server" .
+
+<http://uri4uri.net/vocab#hasWhoIsServer> rdf:type rdf:Property ;
+                                          rdfs:isDefinedBy <http://uri4uri.net/vocab#> ;
+                                          rdfs:label "whois server" .

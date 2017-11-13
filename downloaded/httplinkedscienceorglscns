@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xml:lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:dct="http://purl.org/dc/terms/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:wot="http://xmlns.com/wot/0.1/"
+      xmlns:prv="http://purl.org/net/provenance/ns#"
+      xmlns:opmv="http://purl.org/net/opmv/ns#"
+      xmlns:lsc="http://linkedscience.org/lsc/ns#"
+>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="alternate" type="application/rdf+xml" href="lsc-2011-11-29.rdf" />
+  <link rel="stylesheet" type="text/css" href="http://linkedscience.org/teach/ns/main.css" />
+  <title>Linked Science Vocabulary Specification</title>
+</head>
+
+<body>
+	<a href="http://linkedscience.org/about"><i>Back to LinkedScience.org</i></a>
+<h1 about="" property="dcterms:title" xml:lang="en">Linked Science Core Vocabulary Specification</h1>
+<div about="" typeof="foaf:Document">
+
+
+
+<div property="rdfs:label" content="Document that defines the Linked Science Core Vocabulary" xml:lang="en"></div>
+  <div rel="foaf:primaryTopic">
+    <div about="http://linkedscience.org/lsc/ns#">
+      <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataItem"></div>
+      <div rel="rdf:type" resource="http://www.w3.org/2002/07/owl#Ontology"></div>
+      <div property="dcterms:title" content="Linked Science Core Vocabulary namespace" xml:lang="en"></div>
+      <div rel="prv:createdBy">
+	    <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataCreation"></div>
+	    <div rel="prv:performedBy" resource="http://kauppinen.net/tomi#me"></div>
+	    <div property="prv:performedAt" content="2011-11-29T11:30:00Z" datatype="xsd:dateTime"></div>
+      </div>
+      <div rel="dcterms:creator" resource="http://kauppinen.net/tomi#me"></div>
+      <div property="dcterms:created" content="2011-11-29T11:30:00Z" datatype="xsd:dateTime"></div>
+     </div>
+   </div>
+</div>
+
+<h2>29 November 2011</h2>
+
+<dl>
+  <dt>This version:</dt>
+  <dd><a href="http://linkedscience.org/lsc/ns-20111129">http://linkedscience.org/lsc/ns-20111129</a></dd>
+  <dt>Latest version:</dt>
+  <dd><a href="http://linkedscience.org/lsc/ns">http://linkedscience.org/lsc/ns</a></dd>
+
+ <dt>Previous version:</dt>
+  <dd><a href="http://linkedscience.org/lsc/ns-20110526">http://linkedscience.org/lsc/ns-20110526</a></dd>
+  <dt>Revision:</dt>
+  <dd>Revision: 0.91</dd>
+  <dt>Authors:</dt>
+  <dd>
+    Alkyoni Baglatzi
+    (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd> 
+  <dd about="http://kauppinen.net/tomi#me" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://kauppinen.net/tomi" property="foaf:name">Tomi Kauppinen</a>
+    (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>
+   <dd about="http://carsten.io/" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://carsten.io/" property="foaf:name">Carsten Keßler</a>
+   (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>    
+
+   <dt>Contributors:</dt>
+      <dd>See <a href="#sec-ack">acknowledgements</a>.</dd>   
+</dl>
+
+<p class="copyright">Copyright &copy; 2011 - 2011 Alkyoni Baglatzi and Tomi Kauppinen, Institute for Geoinformatics, University of Muenster, Germany.</p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by/1.0/"><!--  <img alt="Creative Commons License" style="border: 0pt none; float: right;" src="img/somerights.gif" /> --></a>
+This work is licensed under a <a href="http://creativecommons.org/licenses/by/1.0/">Creative Commons License</a>. This copyright applies to the <em>Linked Science Core Vocabulary</em> and accompanying documentation.</p>
+
+<p about="" resource="http://www.w3.org/TR/rdfa-syntax" rel="dcterms:conformsTo">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml-rdfa.png" style="border: 0pt none; float: right" alt="Valid XHTML + RDFa" /> </a>
+  Linked Science Vocabulary Specification relies on W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology, an open Web standard that can be freely used by anyone.</p>
+
+  <p>This visual layout and structure of the specification was adapted from the <a href="http://open-biomed.sourceforge.net/opmv/ns.html">Open Provenance Model Vocabulary</a> edited by Jun Zhao, <a href="http://rdfs.org/sioc/spec/">SIOC Core Ontology Specification</a> edited by Uldis Bojars and John G. Breslin and the <a href="http://trdf.sourceforge.net/provenance/ns.html">Provenance Vocabulary Core Ontology Specification</a> edited by Olaf Hartig and Jun Zhao.</p>
+
+<hr />
+
+<div>
+<h2 id="sec-abstract">Abstract</h2>
+
+<p>
+  <span about="http://linkedscience.org/lsc/ns#" property="dcterms:description">LSC, the Linked Science Core Vocabulary, 
+is a lightweight vocabulary providing terms to enable publishers and researchers to relate things in science to time, space, and themes. More precisely, LSC is designed for describing scientific resources including elements of research, their context, and for interconnecting them. We introduce LSC as an example of building blocks for <a href="http://linkedscience.org">Linked Science</a> to communicate the linkage between scientific resources in a machine-understandable way. The “core” in the name refers to the fact that LSC only defines the basic terms for science. We argue that the success of Linked Science—or Linked Data in general—lies in interconnected, yet distributed vocabularies that minimize ontological commitments. More specific terms needed by different scientific communities can therefore be introduced as extensions of LSC.
+
+LSC is hosted at <a href="http://linkedscience.org/about">LinkedScience.org</a>; please check also other available vocabularies at <a href="http://linkedscience.org/vocabularies/">LinkedScience.org/vocabularies</a>.
+
+
+</span>
+</p>
+  
+</span>
+  <span about="" property="dcterms:description">This documents specifies the classes and properties introduced by the Linked Science Core Vocabulary.</span>
+</p>
+</div>
+<hr />
+
+<div class="status">
+<h2 id="sec-status">Status of this document</h2>
+
+<p><strong>NOTE:</strong> <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document.</em></p>
+
+<p>This specification is an evolving document. This document may be updated or added to based on implementation experience, but no commitment is made by the authors regarding future updates. This document is generated by combining a machine-readable <a href="http://linkedscience.org/lsc/ns#">Linked Science Core Vocabulary Namespace</a> expressed in RDF/XML with a specification template and a set of per-term documents.</p>
+</div>
+
+<h2 id="sec-toc">Table of contents</h2>
+<ul>
+  <li><a href="#sec-intro">1. Introduction</a></li>
+  <li><a href="#sec-glance">2. The Linked Science Core Vocabulary at a glance</a></li>
+  <li><a href="#sec-desc">3. Description about LSC core vocabulary</a></li>
+  <ul>
+      <li><a href="#sec-extension">3.1. Evolution and extension of LSC</a></li>
+   <!--     <li><a href="#sec-extension">3.2. Example use of LSC</a></li>   -->
+ 
+  </ul>
+  <li><a href="#sec-specification">4. Cross-reference for core LSC classes and properties</a></li>
+  <!--li><a href="#sec-decisions">4. Design Decisions</a></li-->
+  <li><a href="#sec-ack">5. Acknowledgements</a></li>
+  <li><a href="#sec-reference">6. References</a></li>
+  <li><a href="#sec-changes">7. Change log</a></li>
+</ul>
+
+<hr />
+
+<h2 id="sec-intro">1. Introduction</h2>
+  <p>The Linked Science Core Vocabulary is defined as a set of classes and properties.</p>
+  <p>You may browse the also using Sindice Inspector as a graph or as a <a href="http://inspector.sindice.com/inspect?url=http%3A%2F%2Flinkedscience.org%2Flsc%2Fns%2F&content=#HTML">list</a>.</p>
+
+
+<p>The XML Namespace URI that should be used by implementations of this specification is:</p>
+
+<ul>
+  <li><a href="http://linkedscience.org/lsc/ns#">http://linkedscience.org/lsc/ns#</a> - The Namespace of the 
+Linked Science Core Vocabulary
+</li>
+</ul>
+
+<p>The prefix the Linked Science Core vocabulary is "lsc":</p>
+
+<ul>
+  <li><pre>@prefix lsc: &lt;http://linkedscience.org/lsc/ns#&gt; .</pre>
+</li>
+</ul>
+
+
+<div class="glance">
+<h2 id="sec-glance">2. The Linked Science Core Vocabulary at a glance</h2>
+
+<p>An alphabetical index of terms from the Linked Science Core Vocabulary, by class and by property, are given below. All the terms are hyperlinked to their detailed description for quick reference.</p>
+
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+
+
+
+<p>Classes: |
+  <a href="#Publication">Publication</a> |
+  <a href="#Research">Research</a> |
+  <a href="#Researcher">Researcher</a> |  
+
+<!--   <a href="#Characterization">Characterization</a> | -->
+  <a href="#Method">Method</a> |
+  <a href="#Hypothesis">Hypothesis</a> |
+  <a href="#Prediction">Prediction</a> |
+  <a href="#Conclusion">Conclusion</a> |    
+    
+  <a href="#Data">Data</a> |
+  
+</p>
+
+
+
+
+
+<p>Properties: |
+
+<a href="#isAboutTime">isAboutTime</a> |
+<a href="#isAboutRegion">isAboutRegion</a> |
+<a href="#reportedIn">reportedIn</a> |
+<a href="#reports">reports</a> |
+
+<a href="#isSupportedBy">isSupportedBy</a> | 
+
+<a href="#dataProduced">dataProduced</a> |
+<a href="#dataUsed">dataUsed</a> |
+
+<a href="#timeAccepted">timeAccepted</a> |
+<a href="#timeRevised">timeRevised</a> |
+<a href="#timeSubmitted">timeSubmitted</a> |
+
+<a href="#participatesIn">participatesIn</a> |
+
+<a href="#makes">makes</a> | <!-- hypothesis makes a prediction -->
+
+<a href="#tests">tests</a> | <!-- research tests a hypothesis -->
+<a href="#confirms">confirms</a> | <!-- research tests a hypothesis -->
+<a href="#falsifies">falsifies</a> | <!-- research tests a hypothesis -->
+
+<a href="#produces">produces</a> | <!-- research produces a conclusion -->
+
+<a href="#methodUsed">methodUsed</a> | <!-- research uses a method -->
+
+</p>
+
+</div>
+
+<img src="lsc-graph.png"></img>
+
+</div>
+
+<div class="description">
+  <h2 id="sec-desc">3. Descriptions about LSC</h2>
+</div>
+
+  <p>The Core LSC definitions presented here are written using a computer language (RDF/OWL) that makes it easy for software to process some basic facts about the terms in the Linked Science Core Vocabulary, and consequently about the things described using LSC.</p>
+
+
+<h3 id="sec-extension">3.1. Evolution and extension of LSC</h3>
+
+<p>The Linked Science Core Vocabulary is identified by the namespace URI "http://linkedscience.org/lsc/ns#".</p>
+
+<p>Revisions and extensions of LSC are conducted through edits to the namespace document, which by convention is published on the Web at the namespace URI.</p>
+
+  <p>The properties and types defined here provide some basic concepts for describing information relevant about research. Other vocabularies (e.g. AIISO - Academic Institution Internal Structure Ontology, BIBO - The Bibliographic Ontology, W3C Ontology for Media Resources, <a href="http://www.w3.org/TR/owl-time/">the Time Ontology in OWL</a>, the Open Provenance Model Vocabulary, <a href="http://sempublishing.svn.sourceforge.net/viewvc/sempublishing/SPAR/index.html">Semantic Publishing and Referencing Ontologies (SPAR)</a>, <a href="http://swan.mindinformatics.org/ontology.html">SWAN Ontology</a> etc.) can also be mixed in with LSC terms. LSC is designed to be extended.</p>
+
+<!--
+<h3 id="sec-extension">3.2. Example use of LSC</h3>
+
+Please check an example of how LSC could be used to describe a research setting: 
+<ul>
+  <li>
+     <a href="http://rdfpad.lodum.de/pad.ifgi.de/lscExample.html">http://rdfpad.lodum.de/pad.ifgi.de/lscExample.html</a> (HTML)
+  </li>
+ <li>
+     <a href="http://rdfpad.lodum.de/pad.ifgi.de/lscExample.ttl">http://rdfpad.lodum.de/pad.ifgi.de/lscExample.ttl</a> (TURTLE)
+ </li>
+</ul>
+
+-->
+
+<div class="overview">
+  <h2 id="sec-specification">4. Cross-reference for core LSC classes and properties</h2>
+</div>
+
+
+<h2>Classes:</h2>
+
+
+
+<div class="specterm" id="Publication"
+     about="http://linkedscience.org/lsc/ns#Publication" typeof="owl:Class">
+  <h3>Class: Publication</h3>
+ <div rel="rdfs:subClassOf" resource="http://purl.org/ontology/bibo/Document"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Publication" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Any kind of publication eg. scientific paper, book, journal publication.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Publication">http://linkedscience.org/lsc/ns#Publication</a></td></tr>
+ <tr><th>Subclass of:</th><td><a href="http://purl.org/ontology/bibo/Document">bibo:Document</a></td></tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Research"
+     about="http://linkedscience.org/lsc/ns#Research" typeof="owl:Class">
+  <h3>Class: Research</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Research" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Any kind of research.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Research">http://linkedscience.org/lsc/ns#Research</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Researcher"
+     about="http://linkedscience.org/lsc/ns#Researcher" typeof="owl:Class">
+  <h3>Class: Researcher</h3>
+<div rel="rdfs:subClassOf" resource="http://xmlns.com/foaf/0.1/Person"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Researcher" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A researcher that conducts research.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Researcher">http://linkedscience.org/lsc/ns#Researcher</a></td></tr>
+     <tr><th>Subclass of:</th><td><a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></td></tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Method"
+     about="http://linkedscience.org/teach/ns#Method" typeof="owl:Class">
+  <h3>Class: Method</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/teach/ns"></div>
+  <div property="rdfs:label" content="Method" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A method used in a scientific research.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/teach/ns#Method">http://linkedscience.org/teach/ns#Method</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Hypothesis"
+     about="http://linkedscience.org/lsc/ns#Hypothesis" typeof="owl:Class">
+  <h3>Class: Hypothesis</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Hypothesis" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Any kind of hypothesis.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Hypothesis">http://linkedscience.org/lsc/ns#Hypothesis</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Prediction"
+     about="http://linkedscience.org/lsc/ns#Prediction" typeof="owl:Class">
+  <h3>Class: Prediction</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Prediction" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Prediction made by a hypothesis.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Prediction">http://linkedscience.org/lsc/ns#Prediction</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Conclusion"
+     about="http://linkedscience.org/lsc/ns#Conclusion" typeof="owl:Class">
+  <h3>Class: Conclusion</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Conclusion" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Conclusion is made by research.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Conclusion">http://linkedscience.org/lsc/ns#Conclusion</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Data"
+     about="http://linkedscience.org/lsc/ns#Data" typeof="owl:Class">
+  <h3>Class: Data</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns"></div>
+  <div property="rdfs:label" content="Data" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Any kind of data.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://linkedscience.org/lsc/ns#Data">http://linkedscience.org/lsc/ns#Data</a></td></tr>
+
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<h2>Properties:</h2>
+
+<div class="specterm" id="reportedIn"
+     about="http://linkedscience.org/lsc/ns#reportedIn" typeof="owl:ObjectProperty">
+
+  <h3>Property: reportedIn</h3>
+   
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Publication"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#reportedIn"></div>
+  <div property="rdfs:label" content="reportedIn" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to relate a research to the publications it is reported in. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#reportedIn">http://linkedscience.org/lsc/ns#reportedIn</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Publication">lsc:Publication</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Publication"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="isAboutTime"
+     about="http://linkedscience.org/lsc/ns#isAboutTime" typeof="owl:ObjectProperty">
+
+  <h3>Property: isAboutTime</h3>
+   
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#isAboutTime"></div>
+  <div property="rdfs:label" content="isAboutTime" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to relate a research to the time period it refers.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#isAboutTime">http://linkedscience.org/lsc/ns#isAboutTime</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="isAboutRegion"
+     about="http://linkedscience.org/lsc/ns#isAboutRegion" typeof="owl:ObjectProperty">
+
+  <h3>Property: isAboutRegion</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://de.dbpedia.org/resource/Region"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#isAboutRegion"></div>
+  <div property="rdfs:label" content="weeklyHours" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to define the region a research refers to.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#isAboutRegion">http://linkedscience.org/lsc/ns#isAboutRegion</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Sub-property of:</th>
+	  <td><a href="http://purl.org/dc/terms/#coverage">dct:coverage</a><div rel="rdfs:subPropertyOf" resource="dct:coverage"></div></td>
+	  </tr>
+	  <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://observedchange.com/tisc/ns#Region">tisc:Region</a><div rel="rdfs:range" resource="http://observedchange.com/tisc/ns#Region"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="reports"
+     about="http://linkedscience.org/lsc/ns#reports" typeof="owl:ObjectProperty">
+
+  <h3>Property: reports</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Publication"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#reports"></div>
+  <div property="rdfs:label" content="grading" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to report the research of a publication.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#reports">http://linkedscience.org/lsc/ns#reports</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Publication">lsc:Publication</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Publication"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="isSupportedBy"
+     about="http://linkedscience.org/lsc/ns#isSupprtedBy" typeof="owl:ObjectProperty">
+
+  <h3>Property: isSupportedBy</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Support"></div>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#isSupportedBy"></div>
+  <div property="rdfs:label" content="isSupportedBy" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to express the relation between the hypothesis and the evidence of a research.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#isSupportedBy">http://linkedscience.org/lsc/ns#isSupportedBy</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Hypothesis">lsc:Hypothesis</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Hypothesis"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="dataProduced"
+     about="http://linkedscience.org/lsc/ns#dataProduced" typeof="owl:ObjectProperty">
+
+  <h3>Property: dataProduced</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Data"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#dataProduced"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Describes the relation between a research and the data produced in it.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#dataProduced">http://linkedscience.org/lsc/ns#dataProduced</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Data">lsc:Data</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Data"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="dataUsed"
+     about="http://linkedscience.org/lsc/ns#dataUsed" typeof="owl:ObjectProperty">
+
+  <h3>Property: dataUsed</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#dataUsed"></div>
+  <div property="rdfs:label" content="reportTemplate" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Describes the relation between a research and the data used to conduct it.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#dataUsed">http://linkedscience.org/lsc/ns#dataUsed</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Data">lsc:Data</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Data"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+
+
+<div class="specterm" id="timeAccepted"
+     about="http://linkedscience.org/lsc/ns#timeAccepted" typeof="owl:ObjectProperty">
+
+  <h3>Property: timeAccepted</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#timeAccepted"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to relate a publication to the time it was accepted.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeAccepted">http://linkedscience.org/lsc/ns#timeAccepted</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Publication">lsc:Publication</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Publication"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="timeRevised"
+     about="http://linkedscience.org/lsc/ns#timeRevised" typeof="owl:ObjectProperty">
+
+  <h3>Property: timeRevised</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#timeRevised"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to relate a publication to the time it was revised.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevised">http://linkedscience.org/lsc/ns#timeRevised</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Publication">lsc:Publication</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Publication"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="timeSubmitted"
+     about="http://linkedscience.org/lsc/ns#timeSubmitted" typeof="owl:ObjectProperty">
+
+  <h3>Property: timeSubmitted</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#timeSubmitted"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract property to relate a publication to the time it was submitted.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#timeSubmitted</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Publication">lsc:Publication</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Publication"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#dateTime"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<div class="specterm" id="participatesIn"
+     about="http://linkedscience.org/lsc/ns#participatesIn" typeof="owl:ObjectProperty">
+
+  <h3>Property: participatesIn</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#participatesIn"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A researcher participates in some research.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#participatesIn</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Researcher">lsc:Researcher</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Researcher"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<div class="specterm" id="makes"
+     about="http://linkedscience.org/lsc/ns#makes" typeof="owl:ObjectProperty">
+
+  <h3>Property: makes</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#makes"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A hypothesis makes a prediction.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#makes</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Hypothesis">lsc:Hypothesis</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Hypothesis"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Prediction">lsc:Prediction</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Prediction"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="tests"
+     about="http://linkedscience.org/lsc/ns#tests" typeof="owl:ObjectProperty">
+
+  <h3>Property: tests</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#tests"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A research tests a hypothesis.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#tests</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Hypothesis">lsc:Hypothesis</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Hypothesis"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="falsifies"
+     about="http://linkedscience.org/lsc/ns#falsifies" typeof="owl:ObjectProperty">
+
+  <h3>Property: falsifies</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#falsifies"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A research falsifies a hypothesis.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#falsifies</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Hypothesis">lsc:Hypothesis</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Hypothesis"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="confirms"
+     about="http://linkedscience.org/lsc/ns#confirms" typeof="owl:ObjectProperty">
+
+  <h3>Property: confirms</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#confirms"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A research confirms a hypothesis.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#confirms</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Hypothesis">lsc:Hypothesis</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Hypothesis"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="produces"
+     about="http://linkedscience.org/lsc/ns#produces" typeof="owl:ObjectProperty">
+
+  <h3>Property: produces</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Time"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#produces"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A research produces a conclusion.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#produces</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Conclusion">lsc:Conclusion</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Conclusion"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="methodUsed"
+     about="http://linkedscience.org/lsc/ns#methodUsed" typeof="owl:ObjectProperty">
+
+  <h3>Property: methodUsed</h3>
+  
+  <div rel="http://dbpedia.org/ontology/related" resource="http://dbpedia.org/resource/Method"></div>  
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#methodUsed"></div>
+  <div property="rdfs:label" content="room" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A method used in a research.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#timeRevisedSubmitted">http://linkedscience.org/lsc/ns#methodUsed</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Research">lsc:Research</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Research"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://linkedscience.org/lsc/ns#Method">lsc:Method</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Method"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+
+
+
+
+
+
+<!--<div class="specterm" id="hasEvidence"
+     about="http://linkedscience.org/lsc/ns#hasEvidence" typeof="owl:ObjectProperty">
+
+  <h3>Property: hasEvidence</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://linkedscience.org/lsc/ns#hasEvidence"></div>
+  <div property="rdfs:label" content="reviewTemplate" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">link between hypothesis and evidence</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://linkedscience.org/lsc/ns#hasEvidence">http://linkedscience.org/lsc/ns#hasEvidence</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>ObjectProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Object">lsc:Hypothesis</a><div rel="rdfs:domain" resource="http://linkedscience.org/lsc/ns#Hypothesis"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#Object">lsc:Evidence</a><div rel="rdfs:range" resource="http://linkedscience.org/lsc/ns#Evidence"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div> -->
+	
+
+
+      <tr>
+	  
+<!-- 	   <td><a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><div rel="rdfs:range" resource="http://www.w3.org/2006/time#TemporalEntity"></div></td> -->
+	  </tr>
+
+
+
+      </tbody>
+    </table>
+  
+  <br/>
+</div>
+
+
+<h2 id="sec-ack">5. Acknowledgement</h2>
+
+
+<h2 id="sec-reference">6. References</h2>
+
+The Linked Science Core vocabulary is explained in the following publication:
+<br></br>
+<ul><li>Tomi Kauppinen, Alkyoni Baglatzi and Carsten Keßler. <a href="http://linkedscience.org/wp-content/uploads/2012/02/linked-science-bookchapter-revised-2011-11-16.pdf">Linked Science: Interconnecting Scientific Assets</a>. In Terence Critchlow and Kerstin Kleese-Van Dam (Eds.): Data Intensive Science. CRC Press, USA, 2012 (to appear).
+</li></ul>
+
+<h2 id="sec-changes">7. Change log</h2>
+
+<ul>
+ <li>2011-11-29: Researcher is now a subclass of foaf:Person, and publication is a subclass of bibo:Document.</li>
+  <li>2011-05-26: Initial version of the LSC vocabulary.</li>
+  
+</ul>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8367411-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

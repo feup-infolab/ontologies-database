@@ -1,0 +1,34 @@
+{
+  "name": "ontologies_crawler",
+  "version": "1.0.0",
+  "description": "A Simple ontology Downloader from a list of ontologies",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.6.0",
+    "line-reader": "^0.4.0",
+    "mkdirp": "^0.5.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "rimraf": "^2.6.2",
+    "slug": "^0.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feup-infolab/ontologies_crawler.git"
+  },
+  "keywords": [
+    "ontology",
+    "crawler",
+    "list"
+  ],
+  "author": "silvae86",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/feup-infolab/ontologies_crawler/issues"
+  },
+  "homepage": "https://github.com/feup-infolab/ontologies_crawler#readme"
+}

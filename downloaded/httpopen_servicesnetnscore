@@ -1,0 +1,1893 @@
+
+
+
+
+	
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 ltie8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 ltie8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html xlmns:dc="http://purl.org/dc/elements/1.1/" lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title property="dc:title">
+		
+		CoreVocabulary | Core
+	
+		
+		 - 
+		Open Services for Lifecycle Collaboration
+	</title>
+	
+	
+	<meta name="viewport" content="width=1200">
+	
+	
+	<script src="/js/modernizer.js?v=1348861186"></script>
+	
+	<link rel="stylesheet" media="screen,projection" href="/css/oslc.css?v=1420581548">
+	<link rel="stylesheet" media="print" href="/css/print.css?v=1375369607">
+	
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	
+	
+	<link rel="alternate" title="Recent changes for this wiki" type="application/rss+xml" href="http://open-services.net/wiki/core/rss/">	
+	
+	<link rel="alternate" title="News feed for Open Services for Lifecycle Collaboration" type="application/rss+xml" href="http://open-services.net/rss/">
+	
+</head>
+<body 
+	id="" 
+	class="forms_typeahead js_details_polyfill js_dropdowns js_shrink_wiki_tables js_wiki" 
+	 
+	>
+
+	<div id="accessibilityNav">
+		<a class="totallyinvisible focusable" href="#main">Jump directly to the content of this page</a>
+		
+	</div>
+	
+	
+	<div id="top_login" class="slide">
+		<div class="container clearfix">
+			<form id="top_login_form" class="form form-inline form-hide-labels fr pvs" name="top_login_form" method="post" action="http://open-services.net/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="15" />
+<input type="hidden" name="RET" value="http://open-services.net/wiki/core/CoreVocabulary" />
+<input type="hidden" name="site_id" value="1" />
+<input type="hidden" name="csrf_token" value="d1568df590a1e85f3bc93ce84f6730d36d681ac9" />
+</div>
+
+
+			    	<label for="top_login_username">Username or email</label>
+			    	<input type="text" class="input-small required" required name="username" id="top_login_username" value="" maxlength="32" placeholder="Email or username">
+			    	<label for="top_login_password">Password</label>
+			    	<input type="password" class="input-xsmall required" required name="password" id="top_login_password" value="" maxlength="32" placeholder="Password">
+			    	<button type="submit" class="button button-tiny">Log in</button>
+			    	<a class="fs-smaller" href="http://open-services.net/forums/member/forgot_password">Forgot your password?</a>
+			    								        
+			</form>
+		</div>
+	</div>
+	
+	
+	<div id="header" role="banner">
+		
+		<div id="meta">
+			<div class="container clearfix posr">
+				<div id="sitelogo" class="fl" >
+					<a id="logolink" href="http://open-services.net/" title="Go to the home page">
+						
+						<div id="logo" class="posa">
+							<div id="logoinner">
+								<div id="logofront" class="posa">
+									<img src="http://open-services.net/css/images/logo-forflip.png" alt="OSLC Logo" />
+								</div>
+								
+								<!--googleoff: index-->
+								<div id="logoback" class="posa">
+									<span class="gohome posa dispb">(Home)</span>
+								</div>
+								<!--googleon: index-->
+							</div>
+							
+						</div>
+						
+						<span class="sitetitle-text dispib">
+							<span class="sitetitle-top dispb">Open Services for Lifecycle Collaboration</span>
+							<span class="sitetitle-bottom dispb posr">Lifecycle integration inspired by the web</span>
+						</span>
+					</a>
+				</div>
+				
+				<ul id="metanav" class="nav pan mhn mtm mbs fr" role="navigation">
+					
+						<li><a href="/forums/">Forum</a></li>
+					
+						<li><a href="/wiki/">Wiki</a></li>
+					
+						<li><a href="/mailman/listinfo">Mailing lists</a></li>
+					
+					
+					
+						<li class="mll"><a data-toggle="reveal" data-show-selector="#top_login" data-toggle-class="in" data-prevent-default="y" href="http://open-services.net/forums/member/login">Log in</a></li>
+						<li><a class="mlm" href="http://open-services.net/forums/member/register">Sign up</a></li>
+					
+				</ul>					
+				
+				
+			</div>
+		</div>
+		
+		<div id="nav" class="nav">
+			<div class="container clearfix">
+				<div id="mainnav" class="fl" role="navigation">
+					
+					
+	
+		<ul class="clearfix">
+			<li><a class="dropdown-toggle" data-toggle="dropdown" href="http://open-services.net/wiki">All wikis <span class="onlywithjs-inline">&darr;</span></a>
+				
+	
+		<ul id="all_wikis_dropdown" class="dropdown-menu">
+			<li><a href="http://open-services.net/wiki">All wikis</a></li>
+			<li class="nav-divider"></li>
+			
+			
+				<li class="dropdown-header">Administrative</li>
+				
+				<li><a href="https://wiki.oasis-open.org/oslc-sc">Steering Committee</a> 
+				
+				 </li>
+				
+			
+				<li class="nav-divider"></li><li class="dropdown-header">Core and common</li>
+				
+				<li><a href="https://wiki.oasis-open.org/oslc-core/">Core TC</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/core">Core</a> 
+				
+				 </li><li><a href="http://open-services.net/bin/view/Main/ReportingHome">Reporting</a> 
+				
+				 </li>
+				
+			
+				<li class="nav-divider"></li><li class="dropdown-header">Domain workgroups</li>
+				
+				<li><a href="http://open-services.net/wiki/alm-plm-interoperability">ALM-PLM Interoperability (1st  edition)</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/architecture-management">Architecture Management</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/asset-management">Asset Management</a> 
+				
+				 </li><li><a href="https://wiki.oasis-open.org/oslc-automation/">Automation TC</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/automation">Automation</a> 
+				
+				 </li><li><a href="https://wiki.oasis-open.org/oslc-ccm/">Change and Configuration Management TC</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/change-management">Change Management</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/configuration-management">Configuration Management</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/estimation-and-measurement">Estimation and Measurement</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/performance-monitoring">Performance Monitoring</a> 
+				
+				 </li><li><a href="https://wiki.oasis-open.org/oslc-promcode/">PROMCODE TC</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/quality-management">Quality Management</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/reconciliation">Reconciliation</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/requirements-management">Requirements Management</a> 
+				
+				 </li>
+				
+			
+				<li class="nav-divider"></li><li class="dropdown-header">User groups</li>
+				
+				<li><a href="http://open-services.net/wiki/communications">Communications</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/embedded-systems">Embedded Systems</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/mobility">Mobile</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/lifecycle-integration-patterns">Lifecycle Integration Patterns</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/alm-plm-interoperability-2nd-edition">ALM-PLM Interoperability (2nd edition)</a> 
+				
+				 </li><li><a href="http://open-services.net/wiki/human-factors">Human Factors</a> 
+				
+				 </li>
+				
+			
+			
+			
+			</ul>
+	
+	
+			</li>
+			
+			<li><a href="http://open-services.net/forums/member/register">Register</a></li>
+			
+			
+		</ul>
+	
+	
+					
+					
+				</div>
+				
+				
+				
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="main">
+		<div id="main-inner">
+			
+			
+			
+			
+				
+				 
+					<div role="navigation">
+						
+							
+		<a href="http://open-services.net/">Home</a> / 
+		<a href="http://open-services.net/wiki">Wiki</a> / <a href="http://open-services.net/wiki/core">Core</a>
+	
+						
+						 /
+					 </div>
+				
+								
+				
+				
+				<h1 class="pagetitle mtn ptn">
+					
+						
+		 
+		
+		
+		
+		
+		
+			CoreVocabulary
+		
+		
+		
+			
+				 
+			
+		
+				
+	
+					
+					
+					
+				</h1>
+
+			
+												
+			<div id="main_content" class="ptm pbl" role="main">
+							
+				
+				<div class="body-text">
+					
+				</div>
+				
+				
+				
+		
+	
+	<div class="totallyinvisible">
+		<datalist id="all_titles">
+			<option value="Special:Recentchanges">Special:Recentchanges</option>
+			<option value="Special:Categories">Special:Categories</option>
+			<option value="Special:Titles">Special:Titles</option>
+			
+			
+			<option value="Special:Files">Special:Files</option>
+			
+			
+			 <option value="index">index</option>
+				 
+			
+			 <option value="Core V3 Plan">Core V3 Plan</option>
+				 
+			
+			 <option value="OSLC Core V3 Outline">OSLC Core V3 Outline</option>
+				 
+			
+			 <option value="OSLC Core V2 Issues">OSLC Core V2 Issues</option>
+				 
+			
+			 <option value="OSLC Cross Domain Needs">OSLC Cross Domain Needs</option>
+				 
+			
+			 <option value="Core Specification V2 Implementation Guidance">Core Specification V2 Implementation Guidance</option>
+				 
+			
+			 <option value="Resource Design Guidelines">Resource Design Guidelines</option>
+				 
+			
+			 <option value="OSLC Common Glossary">OSLC Common Glossary</option>
+				 
+			
+			 <option value="Vocabulary index">Vocabulary index</option>
+				 
+			
+			 <option value="OSLC Core URI Naming Guidance">OSLC Core URI Naming Guidance</option>
+				 
+			
+			 <option value="DELETE ME spec test">DELETE ME spec test</option>
+				 
+			
+			 <option value="OSLC Core Partial Update">OSLC Core Partial Update</option>
+				 
+			
+			 <option value="Email Etiquette">Email Etiquette</option>
+				 
+			
+			 <option value="Meetings">Meetings</option>
+				 
+			
+			 <option value="Meeting20120905">Meeting20120905</option>
+				 
+			
+			 <option value="Meeting20120919">Meeting20120919</option>
+				 
+			
+			 <option value="Specification 3.0">Specification 3.0</option>
+				 
+			
+			 <option value="Meeting20121017">Meeting20121017</option>
+				 
+			
+			 <option value="Meeting20121114">Meeting20121114</option>
+				 
+			
+			 <option value="Meeting20121128">Meeting20121128</option>
+				 
+			
+			 <option value="ProposedCatalogExtension">ProposedCatalogExtension</option>
+				 
+			
+			 <option value="Meeting20121212">Meeting20121212</option>
+				 
+			
+			 <option value="Defining Vocabs 3.0">Defining Vocabs 3.0</option>
+				 
+			
+			 <option value="Specifications 3.0">Specifications 3.0</option>
+				 
+			
+			 <option value="Links">Links</option>
+				 
+			
+			 <option value="Find all links">Find all links</option>
+				 
+			
+			 <option value="Create link">Create link</option>
+				 
+			
+			 <option value="Create link in other resource">Create link in other resource</option>
+				 
+			
+			 <option value="Discovery">Discovery</option>
+				 
+			
+			 <option value="Meeting20130116">Meeting20130116</option>
+				 
+			
+			 <option value="Meeting20130130">Meeting20130130</option>
+				 
+			
+			 <option value="Meeting20130213">Meeting20130213</option>
+				 
+			
+			 <option value="Meeting20130227">Meeting20130227</option>
+				 
+			
+			 <option value="TrackedResourceSet 2.0">TrackedResourceSet 2.0</option>
+				 
+			
+			 <option value="CoreVocabulary">CoreVocabulary</option>
+				 
+			
+			 <option value="Meeting20130313">Meeting20130313</option>
+				 
+			
+			 <option value="Meeting20130410">Meeting20130410</option>
+				 
+			
+			 <option value="Meeting20130424">Meeting20130424</option>
+				 
+			
+			 <option value="Meeting20130522">Meeting20130522</option>
+				 
+			
+			 <option value="TrackedResourceSet 2.0 Implementation Reports">TrackedResourceSet 2.0 Implementation Reports</option>
+				 
+			
+			 <option value="Meeting20130612">Meeting20130612</option>
+				 
+			
+			 <option value="V2DuplicatePredicates">V2DuplicatePredicates</option>
+				 
+			
+			 <option value="Meeting20130717">Meeting20130717</option>
+				 
+			
+			 <option value="Delegated User Interface Dialogs 3.0">Delegated User Interface Dialogs 3.0</option>
+				 
+			
+			 <option value="User Interface Previews 3.0">User Interface Previews 3.0</option>
+				 
+			
+			 <option value="Terminology 3.0">Terminology 3.0</option>
+				 
+			
+			 <option value="Validation 3.0">Validation 3.0</option>
+				 
+			
+			 <option value="Filtering 3.0">Filtering 3.0</option>
+				 
+			
+			 <option value="Error Responses 3.0">Error Responses 3.0</option>
+				 
+			
+			 <option value="Discovery 3.0">Discovery 3.0</option>
+				 
+			
+			 <option value="Compatibility 3.0">Compatibility 3.0</option>
+				 
+			
+			 <option value="Issues 3.0">Issues 3.0</option>
+				 
+			
+			 <option value="Meeting20130814">Meeting20130814</option>
+				 
+			
+			 <option value="Meeting20130828">Meeting20130828</option>
+				 
+			
+			 <option value="Vocabulary Annotation Vocabulary">Vocabulary Annotation Vocabulary</option>
+				 
+			
+			 <option value="Meeting20130918">Meeting20130918</option>
+				 
+			
+			 <option value="Meeting20131002">Meeting20131002</option>
+				 
+			
+			 <option value="Meeting20131009">Meeting20131009</option>
+				 
+			
+			 <option value="Meeting20131106">Meeting20131106</option>
+				 
+			
+			 <option value="Exposing arbitrary actions on RDF resources">Exposing arbitrary actions on RDF resources</option>
+				 
+			
+			 <option value="Actions 2.0 Scenarios">Actions 2.0 Scenarios</option>
+				 
+			
+			 <option value="Actions 2.0 with profile rules">Actions 2.0 with profile rules</option>
+				 
+			
+			 <option value="Actions 2.0 with nil body profile">Actions 2.0 with nil body profile</option>
+				 
+			
+			 <option value="Actions 2.0 with profile rdftypes">Actions 2.0 with profile rdftypes</option>
+				 
+			
+			 <option value="Meeting20131120">Meeting20131120</option>
+				 
+			
+			 <option value="Generic consumer of Action resources scenario">Generic consumer of Action resources scenario</option>
+				 
+			
+			 <option value="Actions 2.0 Issues">Actions 2.0 Issues</option>
+				 
+			
+			 <option value="Actions 2.0">Actions 2.0</option>
+				 
+			
+			 <option value="IndexableLinkedDataProvider 2.0">IndexableLinkedDataProvider 2.0</option>
+				 
+			
+			 <option value="Actions 2.0 Examples">Actions 2.0 Examples</option>
+				 
+			
+			
+		</datalist>													
+	</div>
+
+	<div class="line">
+		
+		 
+			<div class="unit size1of4" id="wiki_sidebar">
+				<div class="gutter">
+					
+						<div class="mbl box-inset">
+							<form class="form form-validate" method="post" action="http://open-services.net/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="15" />
+<input type="hidden" name="RET" value="http://open-services.net/wiki/core/CoreVocabulary" />
+<input type="hidden" name="site_id" value="1" />
+<input type="hidden" name="csrf_token" value="d1568df590a1e85f3bc93ce84f6730d36d681ac9" />
+</div>
+
+
+							    	<label for="agreement_login_username">Username or email</label>
+							    	<input type="text" class="input-small required" required name="username" id="agreement_login_username" value="" maxlength="32">
+							    	<label for="agreement_login_password">Password</label>
+							    	<input type="password" class="input-small required" required name="password" id="agreement_login_password" value="" maxlength="32">
+							    	<br />
+							    	<button type="submit" class="button">Log in</button>
+							    	<a class="fs-smaller" href="http://open-services.net/forums/member/forgot_password">Forgot your password?</a>
+							    								        
+							</form>
+							<p class="mbn">New here? <a href="http://open-services.net/forums/member/register">Sign up!</a></p>
+						</div>
+					  
+					
+					
+					<ul class="nav-list box-inset mvn">
+						<li>
+							<form class="nav-list-item nav-list-form form form-inline" autocomplete="off" method="post" action="http://open-services.net/wiki/core/Special:Find_page">
+							<div class="totallyinvisible"><input type="hidden" name="XID" value="d1568df590a1e85f3bc93ce84f6730d36d681ac9" /></div>
+							<input type="text" class="input-xsmall" name="title" list="all_titles" placeholder="Go to page" maxlength="80" /><button type="submit" class="button fs-smaller" >Go <i data-icon="&#xe08d;"></i></button>
+							</form>
+						</li>
+						<li class="nav-divider"></li>
+						
+						<li ><a href="http://open-services.net/wiki/core/Special:Recentchanges" title="Most recent changes">Recent changes</a></li>
+						<li class="nav-divider"></li>
+						
+						<li ><a href="http://open-services.net/wiki/core">Core home</a></li>
+						<li ><a href="http://open-services.net/wiki/core/Special:Titles" title="List of Titles">All pages</a></li>
+						<li ><a href="http://open-services.net/wiki/core/Special:Categories" title="">Categories</a></li>
+						
+						<li><a href="http://open-services.net/wiki/core/Special:Random_page" title="Random Page">Random Page</a></li>
+						<li class="nav-divider"></li>
+						
+						<li>
+							<form class="nav-list-item nav-list-form form form-inline" autocomplete="off" method="post" action="http://open-services.net/wiki/core/Special:Search_results">
+							<div class="totallyinvisible"><input type="hidden" name="XID" value="d1568df590a1e85f3bc93ce84f6730d36d681ac9" /></div>
+							<input type="text" class="input-xsmall" placeholder="Search" name="keywords" value="" maxlength="80" />
+							<button type="submit" class="button fs-smaller">Search</button>
+							</form>
+						</li>
+						
+						<li class="nav-divider"></li>
+						
+						 		
+						<li ><a href="http://open-services.net/wiki/core/Special:Files" title="Uploaded Files">Uploaded Files</a></li>
+						<li class="nav-divider"></li>
+						<li><a href="http://open-services.net/wiki/core/rss/" title="Recent Changes in RSS">RSS</a></li>
+						<li class="nav-divider"></li>
+						<li><a href="http://stackoverflow.com/editing-help">Basic syntax guide</a></li>
+						<li><a href="http://expressionengine.com/user_guide/modules/wiki/wiki_syntax.html">Linking and categories syntax</a></li>
+					</ul>
+					
+					
+					  <div class="mvl">
+              
+
+    
+      <div class="box-inset">
+        <div class="flag">
+          <div class="flag-image prm">
+            <i class="icon-font icon-font-strip-module-img" data-icon="&#xe061;"></i>
+          </div>
+          <div class="flag-body">
+            <strong>Sort of a ghost town here</strong> <br />
+            Active specification development is now at 
+            <a href="http://open-services.net/workgroups/core-tc">Core TC</a>
+  
+          </div>
+        </div>
+      </div>
+
+    
+
+  
+					  </div>					  
+					
+					
+					
+						<h3>Want to contribute?</h3>
+						<ol class="mln pln">
+							<li class="mbn"><a href="/forums/member/register/">Register</a> </li>
+							<li class="mbn"><a href="/legal-agreements/members-agreement/">Complete Members Agreement</a> </li>
+							<li>
+								<a href="http://open-services.net/legal-agreements/core-wpa">
+								Complete WPA
+								</a> 
+								</li>
+						</ol>
+					
+					
+					
+						<div class="mtl">
+							
+								<i class="icon-font icon-font-tinted mrs" data-icon="&#xe04f;"></i>
+							
+							<a href="http://open-services.net/mailman/listinfo/oslc-core_open-services.net">
+								Mailing list
+							</a>
+						</div>
+					
+					
+					<p class="mtl">
+						<i class="icon-font icon-font-tinted mrs" data-icon="&#xe057;"></i>
+						<a href="http://open-services.net/workgroups/core" title="See more details about the Core Workgroup">Workgroup information</a>
+					</p>
+											
+				</div>
+			</div>
+		
+					
+		<div class="unit size3of4">
+			<div class="">
+				
+				<div class="pbs mbm" style="border-bottom: 1px solid #ccc;">
+					
+						  
+					
+					
+					
+					<a href="http://open-services.net/wiki/core/CoreVocabulary/history">History</a> &emsp;
+					<a href="http://open-services.net/wiki/core/CoreVocabulary">View</a> &emsp;
+					<a href="http://open-services.net/wiki/core/Special:Associated_Pages/CoreVocabulary" title="Links to this page">Links to this page</a>
+					
+					
+					
+						<span class="deemph mll">2013 March 3 | 10:21 am</span>
+					
+					
+					
+				</div>
+				
+				
+				
+				
+				
+									
+				 
+				
+				 
+				
+        
+
+								
+				
+				<div class="mvm">
+					
+	
+	
+	 
+
+<div class="body-text check-table-size">
+
+
+<h1 id='The-OSLC-Core-Vocabulary'>The OSLC Core Vocabulary
+		</h1>
+<p>The namespace URI for this vocabulary is: </p><blockquote>
+<verbatim>http://open-services.net/ns/core#</verbatim></blockquote>
+<p>This page lists the RDFS classes and RDF properties that make up 
+			the OSLC Core vocabulary. Following 
+			<a href="http://www.w3.org/TR/swbp-vocab-pub/">W3C best practices</a>, 
+			this information is available in HTML format (this page) and <a href="http://open-services.net/ns/core/core.rdf">in RDFS format</a>.
+				</p>
+<p>
+			More details on how this page is generated and other related material can be found in the <a href="http://open-services.net/wiki/core/OSLC-Core-URI-Naming-Guidance/">OSLC URI Naming Guidelines</a>.
+			</p>
+
+<p>
+<strong>Description:</strong>
+</p><p>
+			All vocabulary URIs defined in the OSLC Core namespace.
+		</p>
+
+<p>
+<strong>See Also:</strong>
+</p><ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+<li>
+<a href="http://open-services.net/ns/core/core.rdf">http://open-services.net/ns/core/core.rdf</a>
+</li>
+</ul><p>
+<strong>RDFS Classes in this namespace</strong>
+</p>
+<p>
+<a href="#AllowedValues">AllowedValues</a>, <a href="#Comment">Comment</a>, <a href="#Compact">Compact</a>, <a href="#CreationFactory">CreationFactory</a>, <a href="#Dialog">Dialog</a>, <a href="#Discussion">Discussion</a>, <a href="#Error">Error</a>, <a href="#ExtendedError">ExtendedError</a>, <a href="#OAuthConfiguration">OAuthConfiguration</a>, <a href="#PrefixDefinition">PrefixDefinition</a>, <a href="#Preview">Preview</a>, <a href="#Property">Property</a>, <a href="#Publisher">Publisher</a>, <a href="#QueryCapability">QueryCapability</a>, <a href="#ResourceShape">ResourceShape</a>, <a href="#ResponseInfo">ResponseInfo</a>, <a href="#Service">Service</a>, <a href="#ServiceProvider">ServiceProvider</a>, <a href="#ServiceProviderCatalog">ServiceProviderCatalog</a>
+</p>
+<p>
+<strong>RDF Properties in this namespace</strong>
+</p>
+<p>
+<a href="#allowedValue">allowedValue</a>, <a href="#allowedValues">allowedValues</a>, <a href="#Any">Any</a>, <a href="#AnyResource">AnyResource</a>, <a href="#authorizationURI">authorizationURI</a>, <a href="#comment">comment</a>, <a href="#creation">creation</a>, <a href="#creationDialog">creationDialog</a>, <a href="#creationFactory">creationFactory</a>, <a href="#default">default</a>, <a href="#defaultValue">defaultValue</a>, <a href="#describes">describes</a>, <a href="#details">details</a>, <a href="#dialog">dialog</a>, <a href="#discussedBy">discussedBy</a>, <a href="#discussionAbout">discussionAbout</a>, <a href="#document">document</a>, <a href="#domain">domain</a>, <a href="#Either">Either</a>, <a href="#Exactly-one">Exactly-one</a>, <a href="#executes">executes</a>, <a href="#extendedError">extendedError</a>, <a href="#futureAction">futureAction</a>, <a href="#hidden">hidden</a>, <a href="#hintHeight">hintHeight</a>, <a href="#hintWidth">hintWidth</a>, <a href="#icon">icon</a>, <a href="#initialHeight">initialHeight</a>, <a href="#Inline">Inline</a>, <a href="#inReplyTo">inReplyTo</a>, <a href="#instanceShape">instanceShape</a>, <a href="#isMemberProperty">isMemberProperty</a>, <a href="#label">label</a>, <a href="#largePreview">largePreview</a>, <a href="#LocalResource">LocalResource</a>, <a href="#maxSize">maxSize</a>, <a href="#message">message</a>, <a href="#modifiedBy">modifiedBy</a>, <a href="#moreInfo">moreInfo</a>, <a href="#name">name</a>, <a href="#nextPage">nextPage</a>, <a href="#oauthAccessTokenURI">oauthAccessTokenURI</a>, <a href="#oauthConfiguration">oauthConfiguration</a>, <a href="#oauthRequestTokenURI">oauthRequestTokenURI</a>, <a href="#occurs">occurs</a>, <a href="#One-or-many">One-or-many</a>, <a href="#partOfDiscussion">partOfDiscussion</a>, <a href="#prefix">prefix</a>, <a href="#prefixBase">prefixBase</a>, <a href="#prefixDefinition">prefixDefinition</a>, <a href="#property">property</a>, <a href="#propertyDefinition">propertyDefinition</a>, <a href="#queryBase">queryBase</a>, <a href="#queryCapability">queryCapability</a>, <a href="#range">range</a>, <a href="#readOnly">readOnly</a>, <a href="#Reference">Reference</a>, <a href="#rel">rel</a>, <a href="#representation">representation</a>, <a href="#Resource">Resource</a>, <a href="#resourceShape">resourceShape</a>, <a href="#resourceType">resourceType</a>, <a href="#results">results</a>, <a href="#selectionDialog">selectionDialog</a>, <a href="#service">service</a>, <a href="#serviceProvider">serviceProvider</a>, <a href="#serviceProviderCatalog">serviceProviderCatalog</a>, <a href="#shortId">shortId</a>, <a href="#shortTitle">shortTitle</a>, <a href="#smallPreview">smallPreview</a>, <a href="#statusCode">statusCode</a>, <a href="#totalCount">totalCount</a>, <a href="#usage">usage</a>, <a href="#valueShape">valueShape</a>, <a href="#valueType">valueType</a>, <a href="#Zero-or-many">Zero-or-many</a>, <a href="#Zero-or-one">Zero-or-one</a>
+</p>
+<h2 id='allowedValue'>allowedValue</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#allowedValue</verbatim><em>allowedValue</em> is an RDF property.</p>
+<p>value allowed for a property.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='AllowedValues'>AllowedValues</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#AllowedValues</verbatim><em>AllowedValues</em> is an RDFS class.</p>
+<p>Allowed values for one property.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#Resource_Allowed_Values">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#Resource_Allowed_Values</a>
+</li>
+</ul><h2 id='allowedValues'>allowedValues</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#allowedValues</verbatim><em>allowedValues</em> is an RDF property.</p>
+<p>Resource with allowed values for the property being defined. Range of oslc:AllowedValues</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Any'>Any</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Any</verbatim><em>Any</em> is an RDF description.</p>
+<p>Any value type is allowed.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='AnyResource'>AnyResource</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#AnyResource</verbatim><em>AnyResource</em> is an RDF description.</p>
+<p>AnyResource: value is either a Resource or Local Resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='authorizationURI'>authorizationURI</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#authorizationURI</verbatim><em>authorizationURI</em> is an RDF property.</p>
+<p>URI for obtaining OAuth authorization.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Comment'>Comment</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Comment</verbatim><em>Comment</em> is an RDFS class.</p>
+<p>A Comment resource represents a single note, or comment, in a discussion thread.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#oslc_Comment_Resource">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#oslc_Comment_Resource</a>
+</li>
+</ul><h2 id='comment'>comment</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#comment</verbatim><em>comment</em> is an RDF property.</p>
+<p>Comment about the resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Compact'>Compact</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Compact</verbatim><em>Compact</em> is an RDFS class.</p>
+<p>The Compact representation, fetched as application/x-oslc-compact+xml</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreUiPreview#Resource_Compact">http://open-services.net/bin/view/Main/OslcCoreUiPreview#Resource_Compact</a>
+</li>
+</ul><h2 id='creation'>creation</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#creation</verbatim><em>creation</em> is an RDF property.</p>
+<p>To create a new resource via the factory, post it to this URI.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory</a>
+</li>
+</ul><h2 id='creationDialog'>creationDialog</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#creationDialog</verbatim><em>creationDialog</em> is an RDF property.</p>
+<p>Enables clients to create a resource via UI.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='CreationFactory'>CreationFactory</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#CreationFactory</verbatim><em>CreationFactory</em> is an RDFS class.</p>
+<p>The CreationFactory definition included in a ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory</a>
+</li>
+</ul><h2 id='creationFactory'>creationFactory</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#creationFactory</verbatim><em>creationFactory</em> is an RDF property.</p>
+<p>Enables clients to create new resources.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='default'>default</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#default</verbatim><em>default</em> is an RDF description.</p>
+<p>Used in conjunction with oslc:usage property used to identify
+		which service is the default usage.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='defaultValue'>defaultValue</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#defaultValue</verbatim><em>defaultValue</em> is an RDF property.</p>
+<p>A default value for property, inlined into property definition.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='describes'>describes</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#describes</verbatim><em>describes</em> is an RDF property.</p>
+<p>This shape describes resources that are of the RDF type given by the object of the oslc:describes predicate. Formally, a shape S applies to a resource R if there is a triple R rdf:type T and there is a triple S oslc:describes T.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+<li>
+<a href="http://open-services.net/ns/core#ResourceShape">http://open-services.net/ns/core#ResourceShape</a>
+</li>
+</ul><h2 id='details'>details</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#details</verbatim><em>details</em> is an RDF property.</p>
+<p>A URL that may be used to retrieve a web page to determine additional details about the service provider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider</a>
+</li>
+</ul><h2 id='Dialog'>Dialog</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Dialog</verbatim><em>Dialog</em> is an RDFS class.</p>
+<p>The Dialog definition included in ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog</a>
+</li>
+</ul><h2 id='dialog'>dialog</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#dialog</verbatim><em>dialog</em> is an RDF property.</p>
+<p>The URI of the dialog.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog</a>
+</li>
+</ul><h2 id='discussedBy'>discussedBy</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#discussedBy</verbatim><em>discussedBy</em> is an RDF property.</p>
+<p>A series of notes and comments about this resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties</a>
+</li>
+</ul><h2 id='Discussion'>Discussion</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Discussion</verbatim><em>Discussion</em> is an RDFS class.</p>
+<p>A Discussion resource is intended to represent a sequence of comments or notes regarding the associated resource</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#oslc_Discussion_Resource">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#oslc_Discussion_Resource</a>
+</li>
+</ul><h2 id='discussionAbout'>discussionAbout</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#discussionAbout</verbatim><em>discussionAbout</em> is an RDF property.</p>
+<p>Reference to associated resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='document'>document</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#document</verbatim><em>document</em> is an RDF description.</p>
+<p>The URI of an HTML document to be used for the preview.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreUiPreview#Resource_Preview">http://open-services.net/bin/view/Main/OslcCoreUiPreview#Resource_Preview</a>
+</li>
+</ul><h2 id='domain'>domain</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#domain</verbatim><em>domain</em> is an RDF property.</p>
+<p>Namespace URI of the specification that is implemented by this service. In most cases this namespace URI will be for an OSLC domain, but other URIs MAY be used.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='Either'>Either</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Either</verbatim><em>Either</em> is an RDF description.</p>
+<p>Representations is either a URI reference or blank node.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Error'>Error</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Error</verbatim><em>Error</em> is an RDFS class.</p>
+<p>Basis for forming an error response.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error</a>
+</li>
+</ul><h2 id='Exactly-one'>Exactly-one</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Exactly-one</verbatim><em>Exactly-one</em> is an RDF description.</p>
+<p>Property with value is required.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='executes'>executes</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#executes</verbatim><em>executes</em> is an RDF property.</p>
+<p>Link from a currently available action to the future action it realizes.
+		</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/wiki/automation/OSLC-Automation-Specification-Version-2.1/#Future-actions">http://open-services.net/wiki/automation/OSLC-Automation-Specification-Version-2.1/#Future-actions</a>
+</li>
+<li>
+<a href="http://open-services.net/wiki/core/Actions-2.0/#Future-actions">http://open-services.net/wiki/core/Actions-2.0/#Future-actions</a>
+</li>
+</ul><h2 id='ExtendedError'>ExtendedError</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#ExtendedError</verbatim><em>ExtendedError</em> is an RDFS class.</p>
+<p>Extended error information.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Extended_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Extended_Error</a>
+</li>
+</ul><h2 id='extendedError'>extendedError</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#extendedError</verbatim><em>extendedError</em> is an RDF property.</p>
+<p>Extended (additional) error information.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error</a>
+</li>
+</ul><h2 id='futureAction'>futureAction</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#futureAction</verbatim><em>futureAction</em> is an RDF property.</p>
+<p>A predicate that links to an action that is not currently executable on the subject resource, 
+		but may be executable in the future and/or on other resources. 
+		For example, in OSLC Automation this is expected to link from an oslc_auto:AutomationPlan to an 
+		oslc:Action resource with zero bindings (as it is not executable), 
+		with the meaning that the executable form of the action may be available on oslc_auto:AutomationResult resources 
+		generated by executing that Automation Plan.  Similarly, resource shapes can allow discovery of actions
+		available on the output of a creation factory.
+		</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/wiki/automation/OSLC-Automation-Specification-Version-2.1/#Future-actions">http://open-services.net/wiki/automation/OSLC-Automation-Specification-Version-2.1/#Future-actions</a>
+</li>
+<li>
+<a href="http://open-services.net/wiki/core/Actions-2.0/#Future-actions">http://open-services.net/wiki/core/Actions-2.0/#Future-actions</a>
+</li>
+</ul><h2 id='hidden'>hidden</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#hidden</verbatim><em>hidden</em> is an RDF property.</p>
+<p>A hint that indicates that property MAY be hidden when presented in a user interface.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='hintHeight'>hintHeight</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#hintHeight</verbatim><em>hintHeight</em> is an RDF property.</p>
+<p>Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size).</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog</a>
+</li>
+</ul><h2 id='hintWidth'>hintWidth</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#hintWidth</verbatim><em>hintWidth</em> is an RDF property.</p>
+<p>Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size).</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Dialog</a>
+</li>
+</ul><h2 id='icon'>icon</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#icon</verbatim><em>icon</em> is an RDF property.</p>
+<p>URL to an icon file that represents the provider. This icon should be a favicon format and 16x16 pixels in size.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Publisher">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Publisher</a>
+</li>
+</ul><h2 id='initialHeight'>initialHeight</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#initialHeight</verbatim><em>initialHeight</em> is an RDF description.</p>
+<p>Recommended initial height of the preview. The presence of this property indicates that the preview supports dynamically computing its size. Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1). Em and ex units are interpreted relative to the default system font (at 100% size). </p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreUiPreview#Representation_Preview">http://open-services.net/bin/view/Main/OslcCoreUiPreview#Representation_Preview</a>
+</li>
+</ul><h2 id='Inline'>Inline</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Inline</verbatim><em>Inline</em> is an RDF description.</p>
+<p>An inline (RDF blank node) representation.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='inReplyTo'>inReplyTo</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#inReplyTo</verbatim><em>inReplyTo</em> is an RDF property.</p>
+<p>Reference to comment this comment is in reply to.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='instanceShape'>instanceShape</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#instanceShape</verbatim><em>instanceShape</em> is an RDF property.</p>
+<p>The URI of a Resource Shape that describes the possible properties.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties</a>
+</li>
+<li>
+<a href="http://open-services.net/ns/core#ResourceShape">http://open-services.net/ns/core#ResourceShape</a>
+</li>
+</ul><h2 id='isMemberProperty'>isMemberProperty</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#isMemberProperty</verbatim><em>isMemberProperty</em> is an RDF property.</p>
+<p>Used to define when a property is a member of a container, useful for query.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='label'>label</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#label</verbatim><em>label</em> is an RDF property.</p>
+<p>Very short label for use in menu items.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Publisher">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Publisher</a>
+</li>
+</ul><h2 id='largePreview'>largePreview</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#largePreview</verbatim><em>largePreview</em> is an RDF description.</p>
+<p>URI and sizing properties for an HTML document to be used for a large preview.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreUiPreview#Representation_Compact">http://open-services.net/bin/view/Main/OslcCoreUiPreview#Representation_Compact</a>
+</li>
+</ul><h2 id='LocalResource'>LocalResource</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#LocalResource</verbatim><em>LocalResource</em> is an RDF description.</p>
+<p>Local Resource: value is an resource available only inside the resource being defined (i.e. a Blank Node).</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='maxSize'>maxSize</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#maxSize</verbatim><em>maxSize</em> is an RDF property.</p>
+<p>For String properties only, specifies maximum characters allowed. If not set, then there is no maximum or maximum is specified elsewhere.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='message'>message</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#message</verbatim><em>message</em> is an RDF property.</p>
+<p>An informative message describing the error that occurred.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error</a>
+</li>
+</ul><h2 id='modifiedBy'>modifiedBy</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#modifiedBy</verbatim><em>modifiedBy</em> is an RDF property.</p>
+<p>The URI of a resource describing the entity that most recently modified this resource.  The link target is usually a foaf:Person or foaf:Agent, but could be any type.  This is modeled after dcterms:creator, but Dublin Core currently has no equivalent property.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://dublincore.org/documents/dcmi-terms/#terms-creator">http://dublincore.org/documents/dcmi-terms/#terms-creator</a>
+</li>
+<li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties</a>
+</li>
+</ul><h2 id='moreInfo'>moreInfo</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#moreInfo</verbatim><em>moreInfo</em> is an RDF property.</p>
+<p>A resource giving more information on the error SHOULD be of an HTML content-type.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Extended_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Extended_Error</a>
+</li>
+</ul><h2 id='name'>name</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#name</verbatim><em>name</em> is an RDF property.</p>
+<p>Name of property being defined, i.e. second part of property's Prefixed Name.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='nextPage'>nextPage</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#nextPage</verbatim><em>nextPage</em> is an RDF property.</p>
+<p>Link to next page of response.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Response_Information">http://open-services.net/bin/view/Main/OslcCoreSpecification#Response_Information</a>
+</li>
+</ul><h2 id='oauthAccessTokenURI'>oauthAccessTokenURI</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#oauthAccessTokenURI</verbatim><em>oauthAccessTokenURI</em> is an RDF property.</p>
+<p>URI for obtaining OAuth access token.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='OAuthConfiguration'>OAuthConfiguration</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#OAuthConfiguration</verbatim><em>OAuthConfiguration</em> is an RDFS class.</p>
+<p>The OAuthConfiguration definition included in ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_OAuth_Configuration">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_OAuth_Configuration</a>
+</li>
+</ul><h2 id='oauthConfiguration'>oauthConfiguration</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#oauthConfiguration</verbatim><em>oauthConfiguration</em> is an RDF property.</p>
+<p>Defines the three OAuth URIs required for a client to act as an OAuth consumer.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider</a>
+</li>
+</ul><h2 id='oauthRequestTokenURI'>oauthRequestTokenURI</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#oauthRequestTokenURI</verbatim><em>oauthRequestTokenURI</em> is an RDF property.</p>
+<p>URI for obtaining OAuth request token.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='occurs'>occurs</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#occurs</verbatim><em>occurs</em> is an RDF property.</p>
+<p>MUST be either http://open-services.net/ns/core#Exactly-one, http://open-services.net/ns/core#Zero-or-one, http://open-services.net/ns/core#Zero-or-many or http://open-services.net/ns/core#One-or-many.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='One-or-many'>One-or-many</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#One-or-many</verbatim><em>One-or-many</em> is an RDF description.</p>
+<p>Property is required and multi-valued.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='partOfDiscussion'>partOfDiscussion</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#partOfDiscussion</verbatim><em>partOfDiscussion</em> is an RDF property.</p>
+<p>Reference to owning Discussion resource .</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='prefix'>prefix</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#prefix</verbatim><em>prefix</em> is an RDF property.</p>
+<p>Namespace prefix to be used for this namespace.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='prefixBase'>prefixBase</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#prefixBase</verbatim><em>prefixBase</em> is an RDF property.</p>
+<p>The base URI of the namespace.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='PrefixDefinition'>PrefixDefinition</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#PrefixDefinition</verbatim><em>PrefixDefinition</em> is an RDFS class.</p>
+<p>The PrefixDefinition definition included in ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Prefix_Definition">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Prefix_Definition</a>
+</li>
+</ul><h2 id='prefixDefinition'>prefixDefinition</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#prefixDefinition</verbatim><em>prefixDefinition</em> is an RDF property.</p>
+<p>Defines a namespace prefix for use in JSON representations and in forming OSLC Query Syntax strings.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider</a>
+</li>
+</ul><h2 id='Preview'>Preview</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Preview</verbatim><em>Preview</em> is an RDFS class.</p>
+<p>The UI Preview representation.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreUiPreview#Resource_Preview">http://open-services.net/bin/view/Main/OslcCoreUiPreview#Resource_Preview</a>
+</li>
+</ul><h2 id='Property'>Property</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Property</verbatim><em>Property</em> is an RDFS class.</p>
+<p>A Property resource describes one allowed or required property of a resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#Value_type_Property">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#Value_type_Property</a>
+</li>
+</ul><h2 id='property'>property</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#property</verbatim><em>property</em> is an RDF property.</p>
+<p>The properties that are allowed or required by this shape.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='propertyDefinition'>propertyDefinition</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#propertyDefinition</verbatim><em>propertyDefinition</em> is an RDF property.</p>
+<p>URI of the property whose usage is being described.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Publisher'>Publisher</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Publisher</verbatim><em>Publisher</em> is an RDFS class.</p>
+<p>The Publisher definition included in ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Publisher">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Publisher</a>
+</li>
+</ul><h2 id='queryBase'>queryBase</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#queryBase</verbatim><em>queryBase</em> is an RDF property.</p>
+<p>The base URI to use for queries. Queries may be invoked either by HTTP GET or HTTP POST. For HTTP GET, a query URI is formed by appending a key=value pair to the base URI. For HTTP POST, the query parameters are encoded as content with media type application/x-www-form-urlencoded and sent in the request body. The base URI MAY accept other query languages and media types in the request body, e.g. application/sparql-query for SPARQL queries.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Query_Capability">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Query_Capability</a>
+</li>
+</ul><h2 id='QueryCapability'>QueryCapability</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#QueryCapability</verbatim><em>QueryCapability</em> is an RDFS class.</p>
+<p>The QueryCapability definition included in a ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='queryCapability'>queryCapability</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#queryCapability</verbatim><em>queryCapability</em> is an RDF property.</p>
+<p>Enables clients query across a collection of resources.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='range'>range</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#range</verbatim><em>range</em> is an RDF property.</p>
+<p>For properties with a resource value-type, Providers MAY also specify the range of possible resource types allowed, each specified by URI. The default range is http://open-services.net/ns/core#Any.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='readOnly'>readOnly</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#readOnly</verbatim><em>readOnly</em> is an RDF property.</p>
+<p>true if the property is read-only. If omitted, or set to false, then the property is writable. Providers SHOULD declare a property read-only when changes to the value of that property will not be accepted after the resource has been created, e.g. on PUT/PATCH requests. Consumers should note that the converse does not apply: Providers MAY reject a change to the value of a writable property.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Reference'>Reference</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Reference</verbatim><em>Reference</em> is an RDF description.</p>
+<p>A URI Reference representation to a resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='rel'>rel</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#rel</verbatim><em>rel</em> is an RDF property.</p>
+<p>If present and set to 'alternate' then indicates that work-around is provided, behavior for other values is undefined.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Extended_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Extended_Error</a>
+</li>
+</ul><h2 id='representation'>representation</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#representation</verbatim><em>representation</em> is an RDF property.</p>
+<p>Should be http://open-services.net/ns/core#Reference, http://open-services.net/ns/core#Inline or http://open-services.net/ns/core#Either</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Resource'>Resource</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Resource</verbatim><em>Resource</em> is an RDF description.</p>
+<p>Resource: value is a resource at a specified URI (i.e. a URI Reference).</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='ResourceShape'>ResourceShape</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#ResourceShape</verbatim><em>ResourceShape</em> is an RDFS class.</p>
+<p>The Resource Shape used for creation, query and modify.  Formally, a shape S applies to a resource R if there is a triple R rdf:type T and there is a triple S oslc:describes T, or if there is a triple R oslc:instanceShape S.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#Resource_Resource_Shape">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#Resource_Resource_Shape</a>
+</li>
+<li>
+<a href="http://open-services.net/ns/core#describes">http://open-services.net/ns/core#describes</a>
+</li>
+<li>
+<a href="http://open-services.net/ns/core#instanceShape">http://open-services.net/ns/core#instanceShape</a>
+</li>
+</ul><h2 id='resourceShape'>resourceShape</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#resourceShape</verbatim><em>resourceShape</em> is an RDF property.</p>
+<p>A Creation Factory MAY provide Resource Shapes that describe shapes of resources that may be created.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory</a>
+</li>
+</ul><h2 id='resourceType'>resourceType</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#resourceType</verbatim><em>resourceType</em> is an RDF property.</p>
+<p>The expected resource type URI of the resource that will be created using this creation factory. These would be the URIs found in the result resource's rdf:type property.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory</a>
+</li>
+</ul><h2 id='ResponseInfo'>ResponseInfo</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#ResponseInfo</verbatim><em>ResponseInfo</em> is an RDFS class.</p>
+<p>The ResponseInfo included in query results.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_ResponseInfo">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_ResponseInfo</a>
+</li>
+</ul><h2 id='results'>results</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#results</verbatim><em>results</em> is an RDF property.</p>
+<p>Used to hold the results of dialog action or JSON query results (default).
+		The JSON query result attribute 'oslc:results' is used whenever a provider doesn't have
+		a suitable property already in its model for such purposes.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='selectionDialog'>selectionDialog</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#selectionDialog</verbatim><em>selectionDialog</em> is an RDF property.</p>
+<p>Enables clients to select a resource via UI.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='Service'>Service</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Service</verbatim><em>Service</em> is an RDFS class.</p>
+<p>The Service definition included in a ServiceProvider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service</a>
+</li>
+</ul><h2 id='service'>service</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#service</verbatim><em>service</em> is an RDF property.</p>
+<p>Describes a service offered by the service provider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider</a>
+</li>
+</ul><h2 id='ServiceProvider'>ServiceProvider</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#ServiceProvider</verbatim><em>ServiceProvider</em> is an RDFS class.</p>
+<p>The Service Provider resource</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider</a>
+</li>
+</ul><h2 id='serviceProvider'>serviceProvider</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#serviceProvider</verbatim><em>serviceProvider</em> is an RDF property.</p>
+<p>A link to the resource's OSLC Service Provider.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties</a>
+</li>
+</ul><h2 id='ServiceProviderCatalog'>ServiceProviderCatalog</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#ServiceProviderCatalog</verbatim><em>ServiceProviderCatalog</em> is an RDFS class.</p>
+<p>The Service Provider Catalog resource</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider_Catalog">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider_Catalog</a>
+</li>
+</ul><h2 id='serviceProviderCatalog'>serviceProviderCatalog</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#serviceProviderCatalog</verbatim><em>serviceProviderCatalog</em> is an RDF property.</p>
+<p>Additional service provider catalog.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider_Catalog">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service_Provider_Catalog</a>
+</li>
+</ul><h2 id='shortId'>shortId</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#shortId</verbatim><em>shortId</em> is an RDF property.</p>
+<p>Shorter form of dcterms:identifier for the resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties</a>
+</li>
+</ul><h2 id='shortTitle'>shortTitle</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#shortTitle</verbatim><em>shortTitle</em> is an RDF property.</p>
+<p>Shorter form of dcterms:title for the resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties">http://open-services.net/bin/view/Main/OSLCCoreSpecAppendixA#OSLC_Properties</a>
+</li>
+</ul><h2 id='smallPreview'>smallPreview</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#smallPreview</verbatim><em>smallPreview</em> is an RDF description.</p>
+<p>URI and sizing properties for an HTML document to be used for a small preview.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreUiPreview#Representation_Compact">http://open-services.net/bin/view/Main/OslcCoreUiPreview#Representation_Compact</a>
+</li>
+</ul><h2 id='statusCode'>statusCode</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#statusCode</verbatim><em>statusCode</em> is an RDF property.</p>
+<p>The HTTP status code reported with the error.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Error</a>
+</li>
+</ul><h2 id='totalCount'>totalCount</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#totalCount</verbatim><em>totalCount</em> is an RDF property.</p>
+<p>This optional property indicates the total number of results across all pages, 
+		its value should be non-negative. In the context of a query resource, this value SHOULD 
+		be the total number of results, i.e. the number of resources that match the query. 
+		In the context of other resources, the value SHOULD be the total number of property 
+		values (i.e. RDF triples) of the resource. Unless Stable Paging is in effect, the 
+		total count MAY vary as a client retrieves subsequent pages.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Response_Information">http://open-services.net/bin/view/Main/OslcCoreSpecification#Response_Information</a>
+</li>
+</ul><h2 id='usage'>usage</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#usage</verbatim><em>usage</em> is an RDF property.</p>
+<p>An identifier URI for the domain specified usage of this creation factory. If a service provides multiple creation factories, it may designate the primary or default one that should be used with a property value of http://open-services.net/ns/core#default.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory">http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Creation_Factory</a>
+</li>
+</ul><h2 id='valueShape'>valueShape</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#valueShape</verbatim><em>valueShape</em> is an RDF property.</p>
+<p>if the value-type is a resource type, then Property MAY provide a shape value to indicate the Resource Shape that applies to the resource.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='valueType'>valueType</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#valueType</verbatim><em>valueType</em> is an RDF property.</p>
+<p>A URI that indicates the value type, for example XML Schema or RDF URIs for literal value types, and OSLC-specified for others.  If this property is omitted, then the value type is unconstrained.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Zero-or-many'>Zero-or-many</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Zero-or-many</verbatim><em>Zero-or-many</em> is an RDF description.</p>
+<p>Property is optional and multi-valued.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul><h2 id='Zero-or-one'>Zero-or-one</h2>
+<p>
+<verbatim>http://open-services.net/ns/core#Zero-or-one</verbatim><em>Zero-or-one</em> is an RDF description.</p>
+<p>Property is optional and single valued.</p>
+<strong>See Also:</strong>
+<ul><li>
+<a href="http://open-services.net/bin/view/Main/OslcCoreSpecification">http://open-services.net/bin/view/Main/OslcCoreSpecification</a>
+</li>
+</ul>
+
+</div>
+
+
+<!-- BEGIN 'Category' Namespace Stuff -->
+
+ 
+
+<!-- END 'Category' Namespace Stuff -->
+
+
+<!-- BEGIN Categories for Page -->
+
+
+<!-- END Categories for Page -->
+
+	
+	
+
+				</div>
+									
+			</div>
+		</div>
+	</div>	
+
+
+
+				<hr class="shadow-divider" />
+			
+			</div>
+		</div>
+	</div>
+	
+	<div id="footer">
+	    <div id="footer_inner" class="container">
+	    
+	    <div class="clearfix">
+	    	
+	    	<div id="footer_soc_media" class="nav">
+				<ul class="clearfix">
+				
+				
+					<li>
+						<a href="http://www.youtube.com/user/OpenServicesDotNet" title="YouTube">
+							<img src="/images/uploads/social/youtube_32x32.png" alt="YouTube">
+						</a>
+					</li>
+						
+				
+					<li>
+						<a href="http://twitter.com/oslcNews" title="Twitter">
+							<img src="/images/ed_resized/7e8c755d75010f93e490f58cf3097bcc29d3a705.png" alt="Twitter">
+						</a>
+					</li>
+						
+				
+					<li>
+						<a href="https://plus.google.com/u/0/107747465325293070028/posts" title="Google+">
+							<img src="/images/uploads/social/google-plus-new-32px.png" alt="Google+">
+						</a>
+					</li>
+						
+				
+					<li>
+						<a href="http://www.linkedin.com/groups/OSLC-Open-Services-Lifecycle-Collaboration-3957829" title="LinkedIn">
+							<img src="/images/ed_resized/d3cc30e3f58835633cc8e7c901a0c8fba1409d4c.png" alt="LinkedIn">
+						</a>
+					</li>
+						
+				
+				
+				</ul>
+			</div>
+	    	
+	    	<div id="footer_links" class="nav">
+				<ul class="clearfix">
+					
+          
+						<li><a href="http://open-services.net/terms">Terms of use</a></li>
+						
+					
+          
+						<li><a href="http://open-services.net/bylaws">Bylaws</a></li>
+						
+					
+          
+						<li><a href="http://open-services.net/ip-policy">IP Policy</a></li>
+						
+					
+          
+						<li><a href="http://open-services.net/legal-agreements">Legal agreements</a></li>
+						
+					
+          
+						<li><a href="http://open-services.net/privacy">Privacy policy</a></li>
+						
+					
+					<li><a href="http://open-services.net/rss/">RSS</a></li>
+					<li><span data-eeEncEmail_nWhRlprzFb='1'>.(JavaScript must be enabled to view this email address)</span><script type="text/javascript">/*<![CDATA[*/var out = '',el = document.getElementsByTagName('span'),l = ['>','a','/','<',' 107',' 99',' 97',' 98',' 100',' 101',' 101',' 70','>','\"',' 116',' 101',' 110',' 46',' 115',' 101',' 99',' 105',' 118',' 114',' 101',' 115',' 45',' 110',' 101',' 112',' 111',' 64',' 114',' 101',' 116',' 115',' 97',' 109',' 98',' 101',' 119',':','o','t','l','i','a','m','\"','=','f','e','r','h','a ','<'],i = l.length,j = el.length;while (--i >= 0)out += unescape(l[i].replace(/^\s\s*/, '&#'));while (--j >= 0)if (el[j].getAttribute('data-eeEncEmail_nWhRlprzFb'))el[j].innerHTML = out;/*]]>*/</script></li>
+				</ul>
+			</div>
+	    	
+	    </div>
+	    
+	    <div id="copyright" class="clear mtm small">
+			
+			<p>All content <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 US</a> unless otherwise specified. See more <a href="/terms/">terms of use</a>.</p>
+
+			
+		</div>
+	    
+	    </div>
+	</div>
+
+		
+	
+	<script src="/js/oslc.js?v=1395238092"></script>
+	
+	
+	<!--[if lte IE 7]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1%28beta4%29/IE8.js"></script>
+	<![endif]-->
+	
+	
+	
+	<script>
+		var _gaq=[['_setAccount','UA-24416914-1'],['_setDomainName', '.open-services.net'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	
+		
+</body>
+</html>
+
+
+
+
+	
+	
+		
+		
+	
+	
+	
+		
+	
+	
+  
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	
+	
+	
+
+
+
+	
+	
+	
+		
+		
+		
+			
+			
+			
+			
+			
+		
+		
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+		
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+		
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+

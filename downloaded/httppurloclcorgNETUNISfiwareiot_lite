@@ -1,0 +1,629 @@
+@prefix : <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix qu: <http://purl.org/NET/ssnx/qu/qu#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix m3-lite: <http://purl.org/iot/vocab/m3-lite#> .
+@prefix iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+@prefix qu-rec20: <http://purl.org/NET/ssnx/qu/qu-rec20#> .
+@base <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+
+<http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> rdf:type owl:Ontology ;
+                                                 
+                                                 rdfs:label "Working Draft" ;
+                                                 
+                                                 owl:versionInfo "0.4"@en ;
+                                                 
+                                                 dc:date "2017-04-11"@en ;
+                                                 
+                                                 dc:title "IoT-Lite Ontology"@en ;
+                                                 
+                                                 dc:creator "Kerry Taylor"@en ,
+                                                            "Maria Bermudez-Edo"@en ;
+                                                 
+                                                 dc:bibliographicCitation "Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, \"IoT-Lite: A Lightweight Semantic Model for the Internet of Things\", in Proc. of the IEEE Conferences on Ubiquitous Intelligence & Computing, July 2016, Toulouse, France."@en ,
+                                                                          "Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, \"IoT-Lite: a lightweight semantic model for the internet of things and its use with dynamic semantics\", Personal and Ubiquitous Computing (2017)."@en ;
+                                                 
+                                                 dc:creator "Payam Barnaghi"@en ,
+                                                            "Tarek Elsaleh"@en ;
+                                                 
+                                                 rdfs:comment "The IoT lite Ontology is a lightweight ontology to represent Internet of Things resources, entities and services. The lightweight allow the representation and use of IoT platforms without consuming excessive processing time when querying the ontology. However it is also a meta ontology that can be extended in order to represent IoT concepts in a more detail way in different domains."@en ;
+                                                 
+                                                 dc:description """This ontology describes IoT concepts into three classes. Objects, system or resources and services. The devices are also splitted into, although not restricted to, three classes: sensing devices actuating devices and tag devices. The services are described with an availability or access control and a coverage. This coverage represents the area covered by the IoT device. The figure below depicts the concepts of the ontology and the main relationships between them.
+IoT Lite Ontology is created to be used with a common taxonomy to describe the Units and QuantityKind that IoT devices can meassure. This taxonomy represent individuals in the ontology and is based in well-known taxonomies as: qu and qudt."""@en ;
+                                                 
+                                                 dc:rights "This ontology is distributed under a Creative Commons Attribution 3.0 Unported License - http://creativecommons.org/licenses/by/3.0/. This copyright applies to the iot-lite ontology specification and RDF."@en ;
+                                                 
+                                                 dc:contributor "This work is part of the EU FP7 FIWARE project and the EU H2020 FIESTA-IoT project at the Institution for Communication Systems University of Surrey."@en .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative
+
+:altRelative rdf:type owl:AnnotationProperty ;
+             
+             rdfs:comment "Relative Altitude can be used in place of an absolute altitude, especially in buildings, where it makes more sense to locate by levels or floors. For example the value \"0\" would indicate \"ground floor\", and \"1\" would indicate \"1st floor\" and so on."@en ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain geo:Point .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation
+
+:relativeLocation rdf:type owl:AnnotationProperty ;
+                  
+                  rdfs:comment "Relative Location is used to provide a place for where the Device is in. For example, Geonames URIs can be used to represent a place, city, area, or region. For \"University of Surrey\" this would be \"http://sws.geonames.org/6695971/\""@en ;
+                  
+                  rdfs:range xsd:string ;
+                  
+                  rdfs:domain geo:Point .
+
+
+
+###  http://purl.org/dc/elements/1.1/bibliographicCitation
+
+dc:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/creator
+
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/date
+
+dc:date rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/dateSubmitted
+
+dc:dateSubmitted rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/description
+
+dc:description rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/rights
+
+dc:rights rdf:type owl:AnnotationProperty .
+
+
+
+###  http://purl.org/dc/elements/1.1/title
+
+dc:title rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+
+geo:alt rdf:type owl:AnnotationProperty ;
+        
+        rdfs:domain geo:Point .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+
+geo:lat rdf:type owl:AnnotationProperty ;
+        
+        rdfs:domain geo:Point .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+
+geo:long rdf:type owl:AnnotationProperty ;
+         
+         rdfs:domain geo:Point .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy
+
+:exposedBy rdf:type owl:ObjectProperty ;
+           
+           rdfs:comment "A device is exposed by a service." ;
+           
+           rdfs:range :Service ;
+           
+           rdfs:domain ssn:Device .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes
+
+:exposes rdf:type owl:ObjectProperty ;
+         
+         rdfs:comment "For service-oriented queries. The inverse of exposedBy." ;
+         
+         rdfs:domain :Service ;
+         
+         owl:inverseOf :exposedBy ;
+         
+         rdfs:range ssn:Device .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute
+
+:hasAttribute rdf:type owl:ObjectProperty ;
+              
+              rdfs:comment "Links the devices with their attributes." ;
+              
+              rdfs:range :Attribute ;
+              
+              rdfs:domain :Entity ,
+                          :Object .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage
+
+:hasCoverage rdf:type owl:ObjectProperty ;
+             
+             rdfs:comment "Links the devices with their coverages." ;
+             
+             rdfs:range :Coverage ;
+             
+             rdfs:domain ssn:Device .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasMetadata
+
+:hasMetadata rdf:type owl:ObjectProperty ;
+             
+             rdfs:comment "Links any concept with metadata about that concept." ;
+             
+             rdfs:range :Metadata .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind
+
+:hasQuantityKind rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:comment "Links a sensor or an attribute with the quantity  kind it measures (e.g. A sensor -sensor1- measures temperature: sensor1 hasQuantityKind temperature)." ;
+                 
+                 rdfs:range qu:QuantityKind ;
+                 
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :Attribute
+                                             ssn:Sensor
+                                           )
+                             ] .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice
+
+:hasSensingDevice rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:comment "Links a sensor with a sensing device the same way as SSN." ;
+                  
+                  rdfs:range ssn:SensingDevice ;
+                  
+                  rdfs:domain ssn:Sensor .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit
+
+:hasUnit rdf:type owl:ObjectProperty ;
+         
+         rdfs:comment "Links the sensor with the units of the quantity kind it measures (e.g. A sensor -sensor1- measures temperature in Celsius: senso1 hasUnit celsius)." ;
+         
+         rdfs:domain ssn:Sensor ;
+         
+         rdfs:range qu:Unit .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith
+
+:isAssociatedWith rdf:type owl:ObjectProperty ;
+                  
+                  rdfs:comment "Defines the associations between objects and sensors (e.g. A table (object) has an attribute (temperature at the table) which is associated with a sensor (the temperature sensor of the room)."@en ;
+                  
+                  rdfs:domain :Entity ,
+                              :Object ;
+                  
+                  rdfs:range :Service .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf
+
+:isSubSystemOf rdf:type owl:ObjectProperty ;
+               
+               rdfs:comment "This defines that a devices system is a subsystem of another system. For example, a multi-sensor device is a subsystem of a smart building testbed. This is the inverse of the SSN object property \"hasSubSystem\". It allows a graph to start from a subsystem. This is useful for resource-centric graphs."@en ;
+               
+               rdfs:range ssn:System ;
+               
+               rdfs:domain ssn:System ;
+               
+               owl:inverseOf ssn:hasSubSystem .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem
+
+ssn:hasSubSystem rdf:type owl:ObjectProperty ;
+                 
+                 rdfs:range ssn:System ;
+                 
+                 rdfs:domain ssn:System .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#onPlatform
+
+ssn:onPlatform rdf:type owl:ObjectProperty ;
+               
+               rdfs:range ssn:Platform ;
+               
+               rdfs:domain ssn:System .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+
+geo:location rdf:type owl:ObjectProperty ;
+             
+             rdfs:range geo:Point .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint
+
+:endpoint rdf:type owl:DatatypeProperty ;
+          
+          rdfs:comment "Endpoint of the service. It is usually a URL where the service is available." ;
+          
+          rdfs:domain :Service ;
+          
+          rdfs:range xsd:anyURI .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id
+
+:id rdf:type owl:DatatypeProperty ;
+    
+    rdfs:comment "The ID of the Device or Entity"@en ;
+    
+    rdfs:domain :Entity ,
+                ssn:Device ;
+    
+    rdfs:range xsd:string .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription
+
+:interfaceDescription rdf:type owl:DatatypeProperty ;
+                      
+                      rdfs:comment "Interface Description of the service, e.g WADL, WSDL, NGSI9 etc." ;
+                      
+                      rdfs:domain :Service ;
+                      
+                      rdfs:range xsd:anyURI .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType
+
+:interfaceType rdf:type owl:DatatypeProperty ;
+               
+               rdfs:comment "Defines the type of interface of the service endpoint, e.g. RESTful, NGSI-9, MQTT, CoAP etc."@en ;
+               
+               rdfs:domain :Service ;
+               
+               rdfs:range xsd:string .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile
+
+:isMobile rdf:type owl:DatatypeProperty ;
+          
+          rdfs:comment "Is the Device mobile? This can be used by an IoT management platform to enable tracking of the device's location."@en ;
+          
+          rdfs:domain ssn:Platform ;
+          
+          rdfs:range xsd:boolean .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline
+
+:isOnline rdf:type owl:DatatypeProperty ;
+          
+          rdfs:comment "Is the IoT Service exposing the Resource, or associated with the Entity, online?"@en ;
+          
+          rdfs:domain :Service ;
+          
+          rdfs:range xsd:boolean .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType
+
+:metadataType rdf:type owl:DatatypeProperty ;
+              
+              rdfs:comment "Defines the type pf the metadata value (e.g. resolution of the sensor)."@en ;
+              
+              rdfs:domain :Metadata ;
+              
+              rdfs:range xsd:string .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue
+
+:metadataValue rdf:type owl:DatatypeProperty ;
+               
+               rdfs:comment "Value of the metadata"@en ;
+               
+               rdfs:domain :Metadata ;
+               
+               rdfs:range xsd:string .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius
+
+:radius rdf:type owl:DatatypeProperty ;
+        
+        rdfs:comment "Specifies the radius of a circle coverage defined by a point -the center of the circle- and its radius."@en ;
+        
+        rdfs:domain :Circle ;
+        
+        rdfs:range xsd:double .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice
+
+:ActuatingDevice rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf ssn:Device ;
+                 
+                 rdfs:comment "Device that can actuate over an object or QuantityKind."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute
+
+:Attribute rdf:type owl:Class ;
+           
+           rdfs:comment "An attribute of an IoT object that can be exposed by an IoT service (i.e. a room (IoT Object) has a temperature (Attribute), that can be exposed by a temperature sensor (IoT device)."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Circle
+
+:Circle rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Coverage ;
+        
+        rdfs:comment "Circle coverage it needs the location of the sensor as the centre of the circle and the radius as a DataProperty."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage
+
+:Coverage rdf:type owl:Class ;
+          
+          rdfs:comment "The coverage of an IoT device (i.e. a temperature sensor inside a room has a coverage of that room)."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity
+
+:Entity rdf:type owl:Class ;
+        
+        owl:equivalentClass :Object ;
+        
+        rdfs:comment """Any object that is relevant from a user or application perspective. 
+(IoT-A Definition)"""@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata
+
+:Metadata rdf:type owl:Class ;
+          
+          rdfs:comment "Class used to describe properties that cannot be described by QuantityKind and Units. i.e. the resolution of a sensor."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object
+
+:Object rdf:type owl:Class ;
+        
+        rdfs:comment "IoT entity"@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Polygon
+
+:Polygon rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Coverage ;
+         
+         rdfs:comment "The coverage is made up by linking several points by strait lines."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Rectangle
+
+:Rectangle rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Coverage ;
+           
+           rdfs:comment "The coverage is made up by giving two points which are the opposite corners of a rectangle."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service
+
+:Service rdf:type owl:Class ;
+         
+         rdfs:comment "Service provided by an IoT Device"@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#TagDevice
+
+:TagDevice rdf:type owl:Class ;
+           
+           rdfs:subClassOf ssn:Device ;
+           
+           rdfs:comment "Tag Device such as QR code or bar code."@en .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#VirtualEntity
+
+:VirtualEntity rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Entity ;
+               
+               rdfs:comment """Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
+
+Physical Entities are represented in the digital world by a Virtual Entity. This
+term is also referred to as “virtual counterpart” in the literature (Ro¨mer et al. 2002),
+but using the same root term “entity” in both concepts clearer shows the relationship
+of these concepts. There are many kinds of digital representations of Physical
+Entities: 3D models, avatars, database entries, objects (or instances of a class in an
+object-oriented programming language), and even a social-network account could
+be viewed as such a representation, because it digitally represents certain aspects of
+its human owner, such as a photograph or a list of his hobbies.
+
+Enabling Things to Talk: Designing IoT solutions with the IoT Architectural Reference Model, Alessandro Bassi, Martin Bauer, Martin Fiedler, Thorsten Kramp,
+Rob van Kranenburg, Sebastian Lange, Stefan Meissner""" .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Device
+
+ssn:Device rdf:type owl:Class ;
+           
+           rdfs:subClassOf ssn:System .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Platform
+
+ssn:Platform rdf:type owl:Class .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#SensingDevice
+
+ssn:SensingDevice rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf ssn:Device ,
+                                  ssn:Sensor .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Sensor
+
+ssn:Sensor rdf:type owl:Class .
+
+
+
+###  http://purl.oclc.org/NET/ssnx/ssn#System
+
+ssn:System rdf:type owl:Class .
+
+
+
+###  http://purl.org/NET/ssnx/qu/qu#QuantityKind
+
+qu:QuantityKind rdf:type owl:Class .
+
+
+
+###  http://purl.org/NET/ssnx/qu/qu#Unit
+
+qu:Unit rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
+
+geo:Point rdf:type owl:Class ;
+          
+          :relativeLocation "" ;
+          
+          geo:long "" ;
+          
+          geo:alt "" ;
+          
+          :altRelative "" ;
+          
+          geo:lat "" .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

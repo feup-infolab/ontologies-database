@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/ontology/styles.css" />
+    <link href="http://data.press.net/ontology/tag.rdf" rel="alternate"  type="application/rdf+xml" />
+    <link href="http://data.press.net/ontology/tag.ttl" rel="alternate"  type="text/rdf+n3" />
+	<title>SNaP Tag Ontology</title>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2697164-40']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</head>
+<body>
+	<div id="content">
+		<h1>SNaP Tag Ontology</h1>
+		<dl>
+			<dt>Latest Version</dt>
+			<dd><a href="http://data.press.net/ontology/tag/">http://data.press.net/ontology/tag/</a></dd>
+
+			<dt>Created</dt>
+			<dd>2011-07-28</dd>
+
+
+			<dt>Last Modified</dt>
+			<dd>2011-07-28</dd>
+
+			<dt>Authors</dt>
+
+            <dd><a href="http://uk.linkedin.com/in/pauliharman">Paul Harman</a></dd>
+            <dd><a href="http://uk.linkedin.com/in/jarredmcginnis">Jarred McGinnis</a></dd>
+            <dd><a href="http://uk.linkedin.com/in/paulwilton">Paul Wilton</a></dd>
+
+		</dl>
+		<div id="abstract">
+			<h2>Abstract</h2>
+			The Tag Ontology defines relationships for semantically annotating taggable things (for example news assets) with domain entities (stuff) and events.
+		</div>
+
+		<div id="introduction">
+		<h2>Design Notes</h2>
+<p>
+    There are two flavours of tag relationships, <strong>about</strong> and <strong>mentions</strong>.
+    This allows us a more expressive representation of the entities that appear in a news story and the prominence or
+    importance of that appearance.<br/>
+    It is possible to semi-automatically identify entities mentioned in a news story. Whether that story is about that
+    entity will require editorial oversight. The class of <strong>Taggable</strong> defines an interface that enables
+    resources to be tagged without constraining and binding what class of resources are taggable.
+    Currently, Assets are taggable, but in the future we may want more flexibility. This approach provides that
+    flexibility. Equally the class <strong>Tag</strong> provides an interface abstraction for domain entities.</p>
+<p>
+<img src="pn-tag-ontology.png" />
+</p>
+
+		</div>
+
+		<div id="overview">
+			<h2>Overview Of Terms</h2>
+			<p>An alphabetical index of the ontology terms, divided into classes, properties and individuals. All the terms are hyperlinked to their detailed description for quick reference.</p>
+
+			<p><strong>Classes</strong>:  | <a href="#class_Tag">Tag</a> | <a href="#class_Taggable">Taggable</a></p>
+			<p><strong>Properties</strong>:  | <a href="#prop_isTaggedWith">isTaggedWith</a> | <a href="#prop_mentions">mentions</a> | <a href="#prop_about">about</a></p>
+		</div>
+		<div id="terms">
+			<h2>Ontology Terms</h2>
+		</div>
+		<div id="classes">
+			<h2>Classes</h2>
+
+			<div class="term" id="class_Tag">
+				<h3>Class: Tag</h3>
+				<table>
+					<tr>
+						<td class="label">Label</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="label">Status</td>
+						<td>testing</td>
+					</tr>
+
+
+				</table>
+				<p class="comment">Generic Tag Class</p>
+
+			</div>
+
+			<div class="term" id="class_Taggable">
+				<h3>Class: Taggable</h3>
+				<table>
+					<tr>
+						<td class="label">Label</td>
+						<td>Generic Taggable Class</td>
+					</tr>
+					<tr>
+						<td class="label">Status</td>
+						<td>testing</td>
+					</tr>
+
+
+				</table>
+				<p class="comment">Generic Taggable Class - Taggable things can be tagged</p>
+
+			</div>
+
+		</div>
+		<div id="properties">
+			<h2>Object Properties</h2>
+
+			<div class="term" id="prop_isTaggedWith">
+				<h3>Property: isTaggedWith</h3>
+				<table>
+					<tr>
+						<td class="label">Label</td><td>Property that associates Tags with Taggables</td>
+					</tr>
+					<tr>
+						<td class="label">Status</td><td>testing</td>
+					</tr>
+
+
+					<tr>
+						<td class="label">Sub-Properties</td>
+						<td>&nbsp;<a href="#class_about">about</a>&nbsp;<a href="#class_mentions">mentions</a></td>
+					</tr>
+
+
+					<tr>
+						<td class="label">Range</td>
+						<td><a href="#class_Tag">Tag</a></td>
+					</tr>
+
+
+					<tr>
+						<td class="label">Domain</td>
+						<td><a href="#class_Taggable">Taggable</a></td>
+					</tr>
+
+				</table>
+				<p class="comment">Property that associates Tags with Taggables:  Taggable X isTaggedWith Tag Y</p>
+
+		</div>
+
+			<div class="term" id="prop_mentions">
+				<h3>Property: mentions</h3>
+				<table>
+					<tr>
+						<td class="label">Label</td><td>Property that associates Tags with Taggables refining pnt:isTaggedWith</td>
+					</tr>
+					<tr>
+						<td class="label">Status</td><td>testing</td>
+					</tr>
+
+
+
+					<tr>
+						<td class="label">Range</td>
+						<td><a href="#class_Tag">Tag</a></td>
+					</tr>
+
+
+					<tr>
+						<td class="label">Domain</td>
+						<td><a href="#class_Taggable">Taggable</a></td>
+					</tr>
+
+				</table>
+				<p class="comment">Property that associates Tags with Taggables, refines pnt:isTaggedWith:  Taggable X mentions Tag Y.  pnt:mentions is a weaker relationship that pnt:about</p>
+
+		</div>
+
+			<div class="term" id="prop_about">
+				<h3>Property: about</h3>
+				<table>
+					<tr>
+						<td class="label">Label</td><td>Property that associates Tags with Taggables refining pnt:isTaggedWith</td>
+					</tr>
+					<tr>
+						<td class="label">Status</td><td>testing</td>
+					</tr>
+
+
+
+					<tr>
+						<td class="label">Range</td>
+						<td><a href="#class_Tag">Tag</a></td>
+					</tr>
+
+
+					<tr>
+						<td class="label">Domain</td>
+						<td><a href="#class_Taggable">Taggable</a></td>
+					</tr>
+
+				</table>
+				<p class="comment">Property that associates Tags with Taggables, refines pnt:isTaggedWith:  Taggable X about Tag Y.  pnt:about is a stronger relationship that pnt:mentions</p>
+
+		</div>
+
+
+	</div>
+</body>
+</html>

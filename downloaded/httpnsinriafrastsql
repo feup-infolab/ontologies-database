@@ -1,0 +1,1752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sql="http://ns.inria.fr/ast/sql#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <owl:versionInfo>0.3</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <ns0:term_status xmlns:ns0="http://www.w3.org/2003/06/sw-vocab-status/ns#">unstable</ns0:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <rdfs:label xml:lang="en">SQL Abstract Syntax Trees Vocabulary</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:description xml:lang="en">A vocabulary that allows SQL code abstract syntax trees to be published in RDF.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-09</dcterms:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-28</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:title xml:lang="en">SQL Abstract Syntax Trees Vocabulary</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/1.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:creator>Corentin Follenfant</dcterms:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <dcterms:creator>Olivier Corby</dcterms:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <vann:preferredNamespacePrefix>sql</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <vann:preferredNamespaceUri>http://ns.inria.fr/ast/sql#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <rdfs:seeAlso rdf:resource="http://ns.inria.fr/ast/sql/index.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#">
+    <rdfs:seeAlso rdf:resource="http://spinrdf.org/sp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ASTNode">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ASTNode">
+    <rdfs:label xml:lang="en">Generic AST Node</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ASTNode">
+    <rdfs:comment xml:lang="en">Abstract class subsumed by all AST node classes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ASTNode">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Predicate">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Predicate">
+    <rdfs:label xml:lang="en">Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Predicate">
+    <rdfs:comment xml:lang="en">Represents a collection of one or more expressions or subqueries, that may be combined with logical operators, and when evaluated returns one of the TRUE / FALSE / UNKNOWN truth values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Predicate">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Predicate">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#JoinPredicate">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#JoinPredicate">
+    <rdfs:label xml:lang="en">Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#JoinPredicate">
+    <rdfs:comment xml:lang="en">Binary predicate used join two or more tables.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#JoinPredicate">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#JoinPredicate">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CrossJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CrossJoin">
+    <rdfs:label xml:lang="en">Cross Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CrossJoin">
+    <rdfs:comment xml:lang="en">Join predicate used to perform the cross-product of two tables.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CrossJoin">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#JoinPredicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CrossJoin">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InnerJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InnerJoin">
+    <rdfs:label xml:lang="en">Inner Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InnerJoin">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#JoinPredicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InnerJoin">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#OuterJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#OuterJoin">
+    <rdfs:label xml:lang="en">Outer Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#OuterJoin">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#JoinPredicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#OuterJoin">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RightOuterJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RightOuterJoin">
+    <rdfs:label xml:lang="en">Right Outer Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RightOuterJoin">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#OuterJoin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RightOuterJoin">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LeftOuterJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LeftOuterJoin">
+    <rdfs:label xml:lang="en">Left Outer Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LeftOuterJoin">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#OuterJoin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LeftOuterJoin">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FullOuterJoin">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FullOuterJoin">
+    <rdfs:label xml:lang="en">Full Outer Join Predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FullOuterJoin">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#OuterJoin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FullOuterJoin">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IsNull">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IsNull">
+    <rdfs:label xml:lang="en">Is Null predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IsNull">
+    <rdfs:comment xml:lang="en">Unary predicate that compares the evaluated expression's value with NULL</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IsNull">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IsNull">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Between">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Between">
+    <rdfs:label xml:lang="en">Range predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Between">
+    <rdfs:comment xml:lang="en">Ternary predicate used to assert whether a provided expression's value is within the range specified by two other expressions' values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Between">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Between">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#In">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#In">
+    <rdfs:label xml:lang="en">In predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#In">
+    <rdfs:comment xml:lang="en">Variadic predicate used to assert whether the first provided expression's value is within the set of following provided expressions' values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#In">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#In">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Exists">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Exists">
+    <rdfs:label xml:lang="en">Exists predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Exists">
+    <rdfs:comment xml:lang="en">Unary predicate that returns one of the TRUE or FALSE truth values depending on whether the evaluated subquery returns an empty result set.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Exists">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Exists">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Like">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Like">
+    <rdfs:label xml:lang="en">Like predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Like">
+    <rdfs:comment xml:lang="en">Binary predicate that returns one of the TRUE or FALSE truth values depending on whether the string resulting in the evaluation of the first expression matches the lightweight regular expression described in the second expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Like">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Like">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Operator">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Operator">
+    <rdfs:label xml:lang="en">Operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Operator">
+    <rdfs:comment xml:lang="en">A SQL operator used to perform arithmetic calculations, comparisons or value assignments.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Operator">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Operator">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Alias">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Alias">
+    <rdfs:label xml:lang="en">Alias</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Alias">
+    <rdfs:comment xml:lang="en">The SQL AS operator used to give an identifier to an expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Alias">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Alias">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#All">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#All">
+    <rdfs:label xml:lang="en">All</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#All">
+    <rdfs:comment xml:lang="en">The SQL '*' wildcard operator, substitutes to all the columns of the tables in the FROM clause.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#All">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#All">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ArithmeticOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ArithmeticOperator">
+    <rdfs:label xml:lang="en">Arithmetic Operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ArithmeticOperator">
+    <rdfs:comment xml:lang="en">A SQL arithmetic operator used to perform arithmetic calculation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ArithmeticOperator">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ArithmeticOperator">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Negate">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Negate">
+    <rdfs:label xml:lang="en">Negation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Negate">
+    <rdfs:comment xml:lang="en">A unary arithmetic operator used to produce the negative of its operand.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Negate">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ArithmeticOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Negate">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Plus">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Plus">
+    <rdfs:label xml:lang="en">Addition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Plus">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ArithmeticOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Plus">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Minus">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Minus">
+    <rdfs:label xml:lang="en">Subtraction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Minus">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ArithmeticOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Minus">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Mult">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Mult">
+    <rdfs:label xml:lang="en">Multiplication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Mult">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ArithmeticOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Mult">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Div">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Div">
+    <rdfs:label xml:lang="en">Division</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Div">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ArithmeticOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Div">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ComparisonOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ComparisonOperator">
+    <rdfs:label xml:lang="en">Comparison Operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ComparisonOperator">
+    <rdfs:comment xml:lang="en">A binary operator used to compare two values, and when evaluated returns one of the TRUE / FALSE / UNKNOWN truth values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ComparisonOperator">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ComparisonOperator">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterThan">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterThan">
+    <rdfs:label xml:lang="en">Greater than comparison</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterThan">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ComparisonOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterThan">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessThan">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessThan">
+    <rdfs:label xml:lang="en">Less than comparison</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessThan">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ComparisonOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessThan">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Equals">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Equals">
+    <rdfs:label xml:lang="en">Equality comparison</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Equals">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ComparisonOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Equals">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NotEquals">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NotEquals">
+    <rdfs:label xml:lang="en">Difference comparison</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NotEquals">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ComparisonOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NotEquals">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterEquals">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterEquals">
+    <rdfs:label xml:lang="en">Greater than or equal to comparison</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterEquals">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ComparisonOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#GreaterEquals">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessEquals">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessEquals">
+    <rdfs:label xml:lang="en">Less than or equal to comparison</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessEquals">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ComparisonOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LessEquals">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LogicalOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LogicalOperator">
+    <rdfs:label xml:lang="en">Logical Operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LogicalOperator">
+    <rdfs:comment xml:lang="en">A SQL logical connective used to perform logical calculation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LogicalOperator">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LogicalOperator">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#And">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#And">
+    <rdfs:label xml:lang="en">Logical Conjunction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#And">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#LogicalOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#And">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Or">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Or">
+    <rdfs:label xml:lang="en">Logical Disjunction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Or">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#LogicalOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Or">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Not">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Not">
+    <rdfs:label xml:lang="en">Logical Negation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Not">
+    <rdfs:comment xml:lang="en">A SQL logical negation that can be used to negate any condition.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Not">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#LogicalOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Not">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetOperator">
+    <rdfs:label xml:lang="en">Set Operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetOperator">
+    <rdfs:comment xml:lang="en">A SQL set operator used to perform set operation on the results of two or more queries.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetOperator">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetOperator">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Union">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Union">
+    <rdfs:label xml:lang="en">Union</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Union">
+    <rdfs:comment xml:lang="en">A SQL union operator used to return the combination of the result sets of two or more queries.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Union">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#SetOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Union">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UnionAll">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UnionAll">
+    <rdfs:label xml:lang="en">Union All</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UnionAll">
+    <rdfs:comment xml:lang="en">A SQL union operator used to return the combination of the result sets of two or more queries, including duplicate result rows.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UnionAll">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#SetOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UnionAll">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Intersect">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Intersect">
+    <rdfs:label xml:lang="en">Intersection</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Intersect">
+    <rdfs:comment xml:lang="en">A SQL intersection operator used to return the common result rows of the combination of the result sets of two or more queries.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Intersect">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#SetOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Intersect">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Except">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Except">
+    <rdfs:label xml:lang="en">Exclusion</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Except">
+    <rdfs:comment xml:lang="en">A SQL exclusion operator used to return the result set produced by removing the result rows of the second query that appear in the result set of the first query.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Except">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#SetOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Except">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StringOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StringOperator">
+    <rdfs:label xml:lang="en">String Operator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StringOperator">
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StringOperator">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Operator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StringOperator">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Concatenation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Concatenation">
+    <rdfs:label xml:lang="en">Concatenation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Concatenation">
+    <rdfs:comment xml:lang="en">A SQL concatenation operator that returns the combination of two strings, expressions or values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Concatenation">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#StringOperator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Concatenation">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Expression">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Expression">
+    <rdfs:label xml:lang="en">Expression</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Expression">
+    <rdfs:comment xml:lang="en">A SQL expression denotes any clause that when evaluated returns values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Expression">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Expression">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CaseExpression">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CaseExpression">
+    <rdfs:label xml:lang="en">Case Expression</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CaseExpression">
+    <rdfs:comment xml:lang="en">A SQL case expression enables the use of the IF &lt;condition&gt; THEN &lt;consequent&gt; ELSE &lt;alternative&gt; logic within SQL statements.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CaseExpression">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CaseExpression">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FunctionExpression">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FunctionExpression">
+    <rdfs:label xml:lang="en">Function Expression</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FunctionExpression">
+    <rdfs:comment xml:lang="en">A SQL function expressions consists in the use of any built-in SQL function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FunctionExpression">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#FunctionExpression">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregationExpression">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregationExpression">
+    <rdfs:label xml:lang="en">Aggregation Expression</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregationExpression">
+    <rdfs:comment xml:lang="en">A SQL aggregation expression consists in the use of an aggregate function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregationExpression">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Expression"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregationExpression">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Function">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Function">
+    <rdfs:label xml:lang="en">Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Function">
+    <rdfs:comment xml:lang="en">A SQL built-in function that performs calculation and returns a value. May be vendor-specific.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Function">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Function">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ScalarFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ScalarFunction">
+    <rdfs:label xml:lang="en">Scalar Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ScalarFunction">
+    <rdfs:comment xml:lang="en">A SQL scalar function returns a single value given the input values. The input value is of a SQL primitive data type.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ScalarFunction">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Function"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ScalarFunction">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregateFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregateFunction">
+    <rdfs:label xml:lang="en">Aggregate Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregateFunction">
+    <rdfs:comment xml:lang="en">A SQL aggregate function returns a single value given the values of multiple rows from a column.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregateFunction">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Function"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AggregateFunction">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sum">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sum">
+    <rdfs:label xml:lang="en">Sum</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sum">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the sum of the given expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sum">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sum">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Avg">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Avg">
+    <rdfs:label xml:lang="en">Average</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Avg">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the mean of the given expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Avg">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Avg">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Count">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Count">
+    <rdfs:label xml:lang="en">Count</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Count">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the number of rows or non NULL values from the result set.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Count">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Count">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Min">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Min">
+    <rdfs:label xml:lang="en">Minimum</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Min">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the minimum value of the given expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Min">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Min">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Max">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Max">
+    <rdfs:label xml:lang="en">Maximum</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Max">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the maximum value of the given expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Max">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Max">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Var">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Var">
+    <rdfs:label xml:lang="en">Variance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Var">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the variance of the given expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Var">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Var">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StdDev">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StdDev">
+    <rdfs:label xml:lang="en">Standard Deviation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StdDev">
+    <rdfs:comment xml:lang="en">The SQL aggregate function that returns the standard deviation (square root of the variance) of the given expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StdDev">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AggregateFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#StdDev">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataTypeConversionFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataTypeConversionFunction">
+    <rdfs:label xml:lang="en">Data Type Conversion Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataTypeConversionFunction">
+    <rdfs:comment xml:lang="en">A SQL scalar function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataTypeConversionFunction">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ScalarFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataTypeConversionFunction">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Cast">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Cast">
+    <rdfs:label xml:lang="en">Cast</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Cast">
+    <rdfs:comment xml:lang="en">A SQL scalar function that converts an expression to a target data type</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Cast">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataTypeConversionFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Cast">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DateTimeFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DateTimeFunction">
+    <rdfs:label xml:lang="en">Date Time Computation Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DateTimeFunction">
+    <rdfs:comment xml:lang="en">A SQL date time function returns a date or time value or performs a specific date or time value computation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DateTimeFunction">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ScalarFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DateTimeFunction">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Now">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Now">
+    <rdfs:label xml:lang="en">Now</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Now">
+    <rdfs:comment xml:lang="en">A SQL now function is a nullary function that returns the current timestamp.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Now">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DateTimeFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Now">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableFunction">
+    <rdfs:label xml:lang="en">Table Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableFunction">
+    <rdfs:comment xml:lang="en">A SQL function that returns a virtual table.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableFunction">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Function"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableFunction">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NumberFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NumberFunction">
+    <rdfs:label xml:lang="en">Number Function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NumberFunction">
+    <rdfs:comment xml:lang="en">A SQL number function that returns a numeric value and reads numeric values or string with numeric characters.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NumberFunction">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ScalarFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#NumberFunction">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Statement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Statement">
+    <rdfs:label xml:lang="en">Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Statement">
+    <rdfs:comment xml:lang="en">A SQL statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Statement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Statement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataDefinitionStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataDefinitionStatement">
+    <rdfs:label xml:lang="en">Data Definition Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataDefinitionStatement">
+    <rdfs:comment xml:lang="en">A SQL data definition statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataDefinitionStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataDefinitionStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataManipulationStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataManipulationStatement">
+    <rdfs:label xml:lang="en">Data Manipulation Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataManipulationStatement">
+    <rdfs:comment xml:lang="en">A SQL data manipulation statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataManipulationStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DataManipulationStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProceduralStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProceduralStatement">
+    <rdfs:label xml:lang="en">Procedural Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProceduralStatement">
+    <rdfs:comment xml:lang="en">A SQL procedural statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProceduralStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProceduralStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TransactionManagementStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TransactionManagementStatement">
+    <rdfs:label xml:lang="en">Transaction Management Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TransactionManagementStatement">
+    <rdfs:comment xml:lang="en">A SQL transaction management statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TransactionManagementStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TransactionManagementStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SessionManagementStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SessionManagementStatement">
+    <rdfs:label xml:lang="en">Session Management Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SessionManagementStatement">
+    <rdfs:comment xml:lang="en">A SQL session management statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SessionManagementStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SessionManagementStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AccessControlStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AccessControlStatement">
+    <rdfs:label xml:lang="en">Access Control Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AccessControlStatement">
+    <rdfs:comment xml:lang="en">A SQL access control statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AccessControlStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AccessControlStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IOStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IOStatement">
+    <rdfs:label xml:lang="en">Import / Export Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IOStatement">
+    <rdfs:comment xml:lang="en">A SQL import or export statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IOStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IOStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AlterStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AlterStatement">
+    <rdfs:label xml:lang="en">Alter Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AlterStatement">
+    <rdfs:comment xml:lang="en">A SQL ALTER statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AlterStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataDefinitionStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#AlterStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CreateStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CreateStatement">
+    <rdfs:label xml:lang="en">Create Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CreateStatement">
+    <rdfs:comment xml:lang="en">A SQL CREATE statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CreateStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataDefinitionStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CreateStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DropStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DropStatement">
+    <rdfs:label xml:lang="en">Drop Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DropStatement">
+    <rdfs:comment xml:lang="en">A SQL DROP statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DropStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataDefinitionStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DropStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SelectStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SelectStatement">
+    <rdfs:label xml:lang="en">Select Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SelectStatement">
+    <rdfs:comment xml:lang="en">A SQL SELECT statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SelectStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataManipulationStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SelectStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InsertStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InsertStatement">
+    <rdfs:label xml:lang="en">Insert Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InsertStatement">
+    <rdfs:comment xml:lang="en">A SQL INSERT statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InsertStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataManipulationStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#InsertStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DeleteStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DeleteStatement">
+    <rdfs:label xml:lang="en">Delete Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DeleteStatement">
+    <rdfs:comment xml:lang="en">A SQL DELETE statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DeleteStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataManipulationStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#DeleteStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UpdateStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UpdateStatement">
+    <rdfs:label xml:lang="en">Update Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UpdateStatement">
+    <rdfs:comment xml:lang="en">A SQL UPDATE statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UpdateStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#DataManipulationStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UpdateStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CallStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CallStatement">
+    <rdfs:label xml:lang="en">Call Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CallStatement">
+    <rdfs:comment xml:lang="en">A SQL CALL statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CallStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ProceduralStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CallStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CommitStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CommitStatement">
+    <rdfs:label xml:lang="en">Commit Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CommitStatement">
+    <rdfs:comment xml:lang="en">A SQL COMMIT statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CommitStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#TransactionManagementStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CommitStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RollbackStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RollbackStatement">
+    <rdfs:label xml:lang="en">Rollback Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RollbackStatement">
+    <rdfs:comment xml:lang="en">A SQL ROLLBACK statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RollbackStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#TransactionManagementStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RollbackStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LockTableStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LockTableStatement">
+    <rdfs:label xml:lang="en">Lock Table Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LockTableStatement">
+    <rdfs:comment xml:lang="en">A SQL LOCK TABLE statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LockTableStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#TransactionManagementStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#LockTableStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ConnectStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ConnectStatement">
+    <rdfs:label xml:lang="en">Connect Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ConnectStatement">
+    <rdfs:comment xml:lang="en">A SQL CONNECT statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ConnectStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#SessionManagementStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ConnectStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetStatement">
+    <rdfs:label xml:lang="en">Set Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetStatement">
+    <rdfs:comment xml:lang="en">Assigns a value to a session variable identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetStatement">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#SessionManagementStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SetStatement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Grant">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Grant">
+    <rdfs:label xml:lang="en">Grant Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Grant">
+    <rdfs:comment xml:lang="en">A SQL GRANT statement used to give a set of privileges or roles to specified users that are actionable on specified database objects.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Grant">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AccessControlStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Grant">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Revoke">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Revoke">
+    <rdfs:label xml:lang="en">Revoke Statement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Revoke">
+    <rdfs:comment xml:lang="en">A SQL REVOKE statement used to revoke a set of privileges or roles to specified users from specified database objects.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Revoke">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#AccessControlStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Revoke">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#args">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#args">
+    <rdfs:label xml:lang="en">AST Node Arguments</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#args">
+    <rdfs:comment xml:lang="en">The generic predicate used to attach an ordered list of children to any AST node.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#args">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#args">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#clause">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#clause">
+    <rdfs:label xml:lang="en">Clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#clause">
+    <rdfs:comment xml:lang="en">A SQL clause is a part of a statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#clause">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#Statement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#clause">
+    <rdfs:range rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#clause">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#select">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#select">
+    <rdfs:label xml:lang="en">SELECT clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#select">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies the projected tables of a SELECT statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#select">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#SelectStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#select">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#select">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#from">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#from">
+    <rdfs:label xml:lang="en">FROM clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#from">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies the target sources (tables, views, subqueries) of a SELECT statement.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#from">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#from">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#from">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#where">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#where">
+    <rdfs:label xml:lang="en">WHERE clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#where">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies the filtering predicates to apply on the inputs of the FROM clause.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#where">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#where">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#groupBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#groupBy">
+    <rdfs:label xml:lang="en">GROUP BY clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#groupBy">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies the columns whose values will be considered to cluster the result set of selected rows.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#groupBy">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#SelectStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#groupBy">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#groupBy">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#having">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#having">
+    <rdfs:label xml:lang="en">HAVING clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#having">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies the filtering predicates to apply on the clustered result set resulting of a GROUP BY clause.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#having">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#SelectStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#having">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#having">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#orderBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#orderBy">
+    <rdfs:label xml:lang="en">ORDER BY clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#orderBy">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies how to order the result set's records according to given expressions.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#orderBy">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#SelectStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#orderBy">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#orderBy">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdfs:label xml:lang="en">LIMIT clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdfs:comment xml:lang="en">The SQL clause that limits the number of records from the result set that should be returned.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#SelectStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#limit">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#into">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#into">
+    <rdfs:label xml:lang="en">INTO target table clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#into">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies into which table the following values or select statement's result set are to be inserted into.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#into">
+    <rdfs:range rdf:resource="http://ns.inria.fr/ast/sql#Table"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#into">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#into">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdfs:label xml:lang="en">VALUES list Clause</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdfs:comment xml:lang="en">The SQL clause that specifies a list of values or expressions evaluating to values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ast/sql#InsertStatement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/ast/sql#clause"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#values">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CatalogObject">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CatalogObject">
+    <rdfs:label xml:lang="en">Database Catalog Object</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CatalogObject">
+    <rdfs:comment xml:lang="en">A database catalog object reference.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CatalogObject">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#CatalogObject">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Schema">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Schema">
+    <rdfs:label xml:lang="en">Relational Schema</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Schema">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog schema.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Schema">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Schema">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Table">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Table">
+    <rdfs:label xml:lang="en">Relational Table</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Table">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog table.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Table">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Table">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Column">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Column">
+    <rdfs:label xml:lang="en">Relational Column</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Column">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog column.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Column">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Column">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Index">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Index">
+    <rdfs:label xml:lang="en">Relational Index</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Index">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog index.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Index">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Index">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Procedure">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Procedure">
+    <rdfs:label xml:lang="en">Relational Procedure</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Procedure">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog procedure.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Procedure">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Procedure">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#User">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#User">
+    <rdfs:label xml:lang="en">Relational User</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#User">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog user.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#User">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#User">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Role">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Role">
+    <rdfs:label xml:lang="en">Relational Role</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Role">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog role.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Role">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Role">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#View">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#View">
+    <rdfs:label xml:lang="en">Relational View</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#View">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog view.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#View">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#View">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sequence">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sequence">
+    <rdfs:label xml:lang="en">Relational Sequence</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sequence">
+    <rdfs:comment xml:lang="en">A reference or declarative statement for a catalog sequence.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sequence">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#CatalogObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#Sequence">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ObjectIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ObjectIdentifier">
+    <rdfs:label xml:lang="en">Database Catalog Object Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ObjectIdentifier">
+    <rdfs:comment xml:lang="en">A database catalog object identifier, qualified or not.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ObjectIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ASTNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ObjectIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SchemaIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SchemaIdentifier">
+    <rdfs:label xml:lang="en">Schema Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SchemaIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog schema.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SchemaIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SchemaIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableIdentifier">
+    <rdfs:label xml:lang="en">Table Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog table.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#TableIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ColumnIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ColumnIdentifier">
+    <rdfs:label xml:lang="en">Column Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ColumnIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog column.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ColumnIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ColumnIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IndexIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IndexIdentifier">
+    <rdfs:label xml:lang="en">Index Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IndexIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog index.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IndexIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#IndexIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProcedureIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProcedureIdentifier">
+    <rdfs:label xml:lang="en">Procedure Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProcedureIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog procedure.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProcedureIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ProcedureIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UserIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UserIdentifier">
+    <rdfs:label xml:lang="en">User Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UserIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog user.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UserIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#UserIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RoleIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RoleIdentifier">
+    <rdfs:label xml:lang="en">Role Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RoleIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog role.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RoleIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#RoleIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ViewIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ViewIdentifier">
+    <rdfs:label xml:lang="en">View Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ViewIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog view.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ViewIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#ViewIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SequenceIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SequenceIdentifier">
+    <rdfs:label xml:lang="en">Identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SequenceIdentifier">
+    <rdfs:comment xml:lang="en">A valid identifier for a catalog sequence.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SequenceIdentifier">
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ast/sql#ObjectIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/ast/sql#SequenceIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ast/sql#"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+<!ENTITY void "http://rdfs.org/ns/void#">
+<!ENTITY dcterms "http://purl.org/dc/terms/">
+<!ENTITY prov "http://www.w3.org/ns/prov#">
+<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+<!ENTITY doap "http://usefulinc.com/ns/doap#">
+<!ENTITY lllink "http://www.linklion.org/link/">
+<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+<!ENTITY llmap "http://www.linklion.org/mapping/">
+<!ENTITY lldat "http://www.linklion.org/dataset/">
+<!ENTITY llver "http://www.linklion.org/version/">
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+<!ENTITY llalg "http://www.linklion.org/algorithm/">
+<!ENTITY llfw "http://www.linklion.org/framework/">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<!ENTITY llont "http://www.linklion.org/ontology#">
+<!ENTITY lden "http://www.linklion.org/lden/">
+]>
+<rdf:RDF xmlns="http://www.linklion.org/ns/" xmlns:llmap="http://www.linklion.org/mapping/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:lllink="http://www.linklion.org/link/" xmlns:llalg="http://www.linklion.org/algorithm/" xmlns:void="http://rdfs.org/ns/void#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:lldat="http://www.linklion.org/dataset/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:llfw="http://www.linklion.org/framework/" xmlns:llver="http://www.linklion.org/version/" xmlns:llont="http://www.linklion.org/ontology#" xmlns:lden="http://www.linklion.org/lden/" xml:base="http://www.linklion.org/ns/">
+  <owl:Ontology rdf:about="http://www.linklion.org/ontology">
+    <rdfs:label xml:lang="en">LinkLion - the Link Discovery Portal</rdfs:label>
+    <rdfs:isDefinedBy>http://www.linklion.org/ontology</rdfs:isDefinedBy>
+    <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
+  </owl:Ontology>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://usefulinc.com/ns/doap#release -->
+  <owl:ObjectProperty rdf:about="&doap;release">
+    <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+  </owl:ObjectProperty>
+  <!-- http://www.linklion.org/ontology#hasSource -->
+  <owl:ObjectProperty rdf:about="&llont;hasSource">
+    <rdfs:range rdf:resource="&void;Dataset"/>
+    <rdfs:domain rdf:resource="&llont;Mapping"/>
+  </owl:ObjectProperty>
+  <!-- http://www.linklion.org/ontology#hasTarget -->
+  <owl:ObjectProperty rdf:about="&llont;hasTarget">
+    <rdfs:range rdf:resource="&void;Dataset"/>
+    <rdfs:domain rdf:resource="&llont;Mapping"/>
+  </owl:ObjectProperty>
+  <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
+  <owl:ObjectProperty rdf:about="&rdf;object"/>
+  <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate -->
+  <owl:ObjectProperty rdf:about="&rdf;predicate"/>
+  <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#subject -->
+  <owl:ObjectProperty rdf:about="&rdf;subject"/>
+  <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+  <owl:ObjectProperty rdf:about="&prov;wasAssociatedWith"/>
+  <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+  <owl:ObjectProperty rdf:about="&prov;wasDerivedFrom"/>
+  <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+  <owl:ObjectProperty rdf:about="&prov;wasGeneratedBy"/>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://purl.org/dc/terms/license -->
+  <owl:DatatypeProperty rdf:about="&dcterms;license"/>
+  <!-- http://usefulinc.com/ns/doap#revision -->
+  <owl:DatatypeProperty rdf:about="&doap;revision"/>
+  <!-- http://www.linklion.org/ontology#parameters -->
+  <owl:DatatypeProperty rdf:about="&llont;parameters">
+    <rdfs:domain rdf:resource="&llont;Algorithm"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.linklion.org/ontology#storedAt -->
+  <owl:DatatypeProperty rdf:about="&llont;storedAt">
+    <rdfs:domain rdf:resource="&llont;Mapping"/>
+    <rdfs:range rdf:resource="&xsd;anyURI"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.w3.org/ns/prov#generatedAtTime -->
+  <owl:DatatypeProperty rdf:about="&prov;generatedAtTime">
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="&llont;Algorithm"/>
+          <rdf:Description rdf:about="&llont;Mapping"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <!-- http://xmlns.com/foaf/0.1/name -->
+  <owl:DatatypeProperty rdf:about="&foaf;name"/>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://rdfs.org/ns/void#Dataset -->
+  <owl:Class rdf:about="&void;Dataset">
+    <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+  </owl:Class>
+  <!-- http://usefulinc.com/ns/doap#Project -->
+  <owl:Class rdf:about="&doap;Project"/>
+  <!-- http://usefulinc.com/ns/doap#Version -->
+  <owl:Class rdf:about="&doap;Version"/>
+  <!-- http://www.linklion.org/ontology#Algorithm -->
+  <owl:Class rdf:about="&llont;Algorithm">
+    <rdfs:label xml:lang="en">Algorithm</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&prov;Activity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&llont;parameters"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&prov;wasAssociatedWith"/>
+        <owl:onClass rdf:resource="&llont;LDFrameworkVersion"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;name"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&prov;generatedAtTime"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.linklion.org/ontology#LDFramework -->
+  <owl:Class rdf:about="&llont;LDFramework">
+    <rdfs:label xml:lang="en">Link Discovery Framework</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&doap;Project"/>
+    <rdfs:subClassOf rdf:resource="&prov;Agent"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;name"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.linklion.org/ontology#LDFrameworkVersion -->
+  <owl:Class rdf:about="&llont;LDFrameworkVersion">
+    <rdfs:label xml:lang="en">Link Discovery Framework Version</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&doap;Version"/>
+    <rdfs:subClassOf rdf:resource="&prov;Agent"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;license"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;anyURI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;name"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.linklion.org/ontology#Link -->
+  <owl:Class rdf:about="&llont;Link">
+    <rdfs:label xml:lang="en">Link</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&rdf;predicate"/>
+        <owl:onClass rdf:resource="&rdfs;Resource"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&rdf;subject"/>
+        <owl:onClass rdf:resource="&rdfs;Resource"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&rdf;object"/>
+        <owl:onClass rdf:resource="&rdfs;Resource"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&prov;wasDerivedFrom"/>
+        <owl:onClass rdf:resource="&llont;Mapping"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.linklion.org/ontology#Mapping -->
+  <owl:Class rdf:about="&llont;Mapping">
+    <rdfs:label xml:lang="en">Mapping</rdfs:label>
+    <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&llont;storedAt"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;anyURI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&llont;hasSource"/>
+        <owl:onClass rdf:resource="&void;Dataset"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&prov;generatedAtTime"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&llont;hasTarget"/>
+        <owl:onClass rdf:resource="&void;Dataset"/>
+        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+  <owl:Class rdf:about="&rdfs;Resource"/>
+  <!-- http://www.w3.org/ns/prov#Activity -->
+  <owl:Class rdf:about="&prov;Activity"/>
+  <!-- http://www.w3.org/ns/prov#Agent -->
+  <owl:Class rdf:about="&prov;Agent"/>
+  <!-- http://www.w3.org/ns/prov#Entity -->
+  <owl:Class rdf:about="&prov;Entity"/>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->

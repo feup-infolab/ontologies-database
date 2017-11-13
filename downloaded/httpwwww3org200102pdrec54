@@ -1,0 +1,282 @@
+<?xml-stylesheet href='http://www.w3.org/2002/06/rdfs2html' type='application/xml'?>
+
+<!-- Processed by Id: cwm.py,v 1.144 2003/09/14 20:20:20 timbl Exp -->
+<!--     using base file:/home/connolly/w3ccvs/WWW/2001/02pd/-->
+
+
+<rdf:RDF xmlns="http://www.w3.org/2001/02pd/rec54#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+    xmlns:log="http://www.w3.org/2000/10/swap/log#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#">
+        <dc:description>This is (the start of) an event-based model of the W3C process;
+  e.g. RECdd is the class of Recommendation Director's Decisions;
+	i.e. messages to w3c-ac-members announcing a new
+	W3C Recommendation.</dc:description>
+        <dc:title>Model of the W3C Process</dc:title>
+        <rdfs:comment>$Id: rec54.rdf,v 1.20 2014-06-12 11:03:50 denis Exp $</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.ilrt.bris.ac.uk/discovery/harmony/docs/abc/abc_draft.html"/>
+        <rdfs:seeAlso rdf:resource="http://www.indecs.org/"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/2002/01/tr-automation/"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/Consortium/Process/"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/DesignIssues/PaperTrail"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#WD">
+        <rdfs:label>W3C Working Draft</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#ActivityStatement"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#TRPub">
+        <rdfs:label>a W3C Technical Report</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/Consortium/Process/tr.html#Reports"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/doc#Work"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#Superseded">
+        <rdfs:comment>Another work has superseded this one, which should not be considered as current any more.</rdfs:comment>
+        <rdfs:label>supersed Work</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/doc#Work"/>
+    </rdf:Description>
+
+    <rdfs:Class rdf:about="http://www.w3.org/2001/02pd/rec54#ActivityStatement">
+        <rdfs:label>Activity Statement</rdfs:label>
+    </rdfs:Class>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#PER">
+        <rdfs:label>W3C Proposed Edited Recommendation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#CRreq">
+        <rdfs:label>CR req.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WGAction"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#LastCall"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#OrgJoins">
+        <rdfs:label>Org. Joins</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACaction"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#REC">
+        <rdfs:label>W3C Recommendation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#PR"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#implementationFeedbackDue">
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/02pd/rec54#CR"/>
+        <rdfs:label>implementation feedback due</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#cites">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/10/swap/pim/doc#Work"/>
+        <rdfs:label>cites</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#RECdd">
+        <rdfs:label>Rec. dd</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACnotice"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#CFR"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#PRReview"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#PR">
+        <rdfs:label>W3C Proposed Reccommendation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#CR"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#WD"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#PRReview">
+        <rdfs:label>PR review</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACaction"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#CFR"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#OrgJoins"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#PR"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#ActivityProposal">
+        <rdfs:label>Activity Proposal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACnotice"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#APreview">
+        <rdfs:label>A.P. review</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACaction"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#ActivityProposal"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#OrgJoins"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#lastCallFeedBackDue">
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/02pd/rec54#LastCall"/>
+        <rdfs:label>last call feedbackdue</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#editor">
+        <rdfs:label>editor</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#FirstEdition">
+        <rdfs:label>first Edition of a Recommendation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#REC"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#formerShortname">
+        <rdfs:label>former short name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#replaces">
+        <rdfs:comment>Specs that shouldn't be used anymore because a newer one is available</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/10/swap/pim/doc#Work"/>
+	<rdfs:label>replaces</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#supersedes">
+        <rdfs:comment>this Work supersedes what was one in that Work</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/10/swap/pim/doc#Work"/>
+        <rdfs:label>supersedes</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/10/swap/pim/doc#Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#participation">
+        <rdfs:label>participation</rdfs:label>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#WDreq"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#PRreq">
+        <rdfs:label>PR req.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WGAction"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#ImpEvidence"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#LastCall"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#fromSubmission">
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/02pd/rec54#NOTE"/>
+        <rdfs:label>published per Member Submission request</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#effect">
+        <rdfs:label>has an effect on</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#previousEdition">
+        <rdfs:label>previous edition</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#ImpEvidence">
+        <rdfs:label>Impl. Evidence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WGAction"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#LastCall">
+        <rdfs:label>Last Call WD</rdfs:label>
+        <rdfs:label>a WD in Last Call</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WD"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#WD"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#CR">
+        <rdfs:label>Candidate Recommendation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#WD"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#nomination">
+        <rdfs:label>nomination</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACaction"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#Charter"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#OrgJoins"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#participation"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#LCann">
+        <rdfs:label>Last Call Ann.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WGAction"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#Charter"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#LastCall"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#RSCND">
+        <rdfs:label>W3C Rescinded Recommendation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#Charter">
+        <rdfs:label>charter</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#Retired">
+        <rdfs:label>WD not longer in development</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WD"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#CFI">
+        <rdfs:label>CFI</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACnotice"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#CR"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#CRreq"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#CR"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#NOTE">
+        <rdfs:label>W3C Note</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#ActivityCreation">
+        <rdfs:label>Activity Creation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACnotice"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#APreview"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#ActivityStatement"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#WDreq">
+        <rdfs:label>WD req.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#WGAction"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#WD"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#CFR">
+        <rdfs:label>Call for Review</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACnotice"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#PR"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#PRreq"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#PR"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#prReviewsDue">
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/02pd/rec54#PR"/>
+        <rdfs:label>proposed recommendation feedback due</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#CFP">
+        <rdfs:label>CFP</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2001/02pd/rec54#ACnotice"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#ActivityCreation"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#ActivityStatement"/>
+        <cites rdf:resource="http://www.w3.org/2001/02pd/rec54#Charter"/>
+        <effect rdf:resource="http://www.w3.org/2001/02pd/rec54#Charter"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#patentRules">
+        <rdfs:label>governed by patent rules</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/2001/02pd/rec54#ED">
+        <rdfs:label>Editor's draft</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.w3.org/2001/02pd/rec54#TRPub"/>
+    </rdf:Description>
+</rdf:RDF>

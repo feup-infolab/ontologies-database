@@ -1,0 +1,201 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:wot="http://xmlns.com/wot/0.1/" xmlns:dcterm="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:cc="http://web.resource.org/cc/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:py="http://python.org/" xml:lang="en" lang="en"><head><title>LODE: An ontology for Linking Open Descriptions of Events</title><link rel="meta" type="application/rdf+xml" title="LODE: An ontology for Linking Open Descriptions of Events" href="http://linkedevents.org/ontology/2010-10-07/.rdf"></link><link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.7.0/build/reset-fonts/reset-fonts.css&amp;2.7.0/build/base/base-min.css"></link><style type="text/css">
+      code.xml .text {
+      color: #000000;
+      background: transparent;
+      }
+      code.xml .elem {
+      color: #000080; 
+      background: transparent;
+      }
+      code.xml .attr {
+      color: #008080;
+      background: transparent;
+      }
+      code.xml .attrVal {
+      color: #666666;
+      background: transparent;
+      }
+      code.xml .highlight {
+      background: #ffff00;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-style:italic;
+      }    
+      
+      pre {
+      border: 1px #9999cc dotted;
+      background-color: #f3f3ff;
+      color: #000000; 
+      width: 90%;
+      }
+      
+      blockquote {
+      border-style: solid;
+      border-color: #d0dbe7;
+      border-width: 0 0 0 .25em;
+      padding-left: 0.5em;
+      }
+      
+      blockquote, q {
+      font-style: italic;
+      } 
+      
+      body {
+      font-family: verdana, geneva, arial, sans-serif;
+      }
+      
+      a, p,blockquote, q, dl, dd, dt {
+      font-family: verdana, geneva, arial, sans-serif;
+      font-size: 1em;
+      }
+      
+      
+      dt {
+      font-weight: bold;
+      }
+      
+      
+      :link { color: #00C; background: transparent }
+      :visited { color: #609; background: transparent }
+      :link:active, :visited:active { color: #C00; background: transparent }
+      :link:hover, :visited:hover { background: #ffa; }
+      code :link, code :visited { color: inherit; }
+
+      h1, h2, h3, h4, h5, h6 { text-align: left }
+      h1, h2, h3 { color: #56102E; background: transparent; }
+      h1 { font: 900 170% sans-serif; border-bottom: 1px solid gray; } 
+      h2 { font: 800 140% sans-serif; border-bottom: 1px solid gray; } 
+      h3 { font: 700 120% sans-serif } 
+      h4 { font: bold 100% sans-serif }
+      h5 { font: italic 100% sans-serif }
+      h6 { font: small-caps 100% sans-serif }
+
+      body { padding: 0 4em 2em 4em;  line-height: 1.35; }
+      
+      pre { margin-left: 2em; /* overflow: auto; */ }
+      h1 + h2 { margin-top: 0; }
+      h2 { margin: 1.5em 0 1em 0; }
+      h2 + h3 { margin-top: 0; }
+      h3 { margin: 1.5em 0 1em 0; }
+      h4 { margin: 1em 0 0.75em 0; }
+      h5, h6 { margin: 1em 0 1em; }
+      p { margin: 1em 0; }
+      dl, dd { margin-top: 0; margin-bottom: 0; }
+      dt { margin-top: 0.75em; margin-bottom: 0.25em; clear: left; }
+      dd dt { margin-top: 0.25em; margin-bottom: 0; }
+      dd p { margin-top: 0; }
+      p + * > li, dd li { margin: 1em 0; }
+      dt, dfn { font-weight: bold; font-style: normal; }
+      pre, code { font-size: inherit; font-family: monospace; }
+      pre strong { color: black; font: inherit; font-weight: bold; background: yellow; }
+      pre em { font-weight: bolder; font-style: normal; }
+      var sub { vertical-align: bottom; font-size: smaller; position: relative; top: 0.1em; }
+      blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+      ins { background: green; color: white; /* color: green; border: solid thin lime; padding: 0.3em; line-height: 1.6em; */ text-decoration: none; }
+      del { background: maroon; color: white; /* color: maroon; border: solid thin red; padding: 0.3em; line-height: 1.6em; */ text-decoration: line-through; }
+      body ins, body del { display: block; }
+      body * ins, body * del { display: inline; }
+
+      table.properties { width: 90%; }
+      table.properties th { text-align: right; width: 9em; font-weight: normal; }
+
+      table { border-collapse: collapse;  border: none; }
+      table thead { border-bottom: solid #999999 2px; }
+      table td, table th { 
+        border: none;
+        border-bottom: solid #CCCCCC 1px; 
+        vertical-align: top; 
+        padding: 0.5em 1em 0.5em 0.5em;
+      }
+      table tr:hover td {
+        color: #56102E;
+      }
+
+      .historyList {
+        font-size: 0.9em;
+      }
+
+    </style></head><body><h1>LODE: An ontology for Linking Open Descriptions of Events</h1><dl class="doc-info"><dt>This Version</dt><dd><a href="http://linkedevents.org/ontology/2010-10-07/">http://linkedevents.org/ontology/2010-10-07/</a> [<a href="http://linkedevents.org/ontology/2010-10-07/html/">HTML</a>] [<a href="http://linkedevents.org/ontology/2010-10-07/rdfxml/">RDF/XML</a>]</dd><dt>Latest Version</dt><dd><a href="">http://linkedevents.org/ontology/</a></dd><dt>Authors</dt><dd><a href="http://aeshin.org/">Ryan Shaw</a></dd><dt>Contributors</dt><dd><a href="http://www.cwi.nl/~troncy/">Rapha&#235;l Troncy</a></dd><dd><a href="http://www.cwi.nl/~lynda/">Lynda Hardman</a></dd></dl><p class="rights">Copyright &#169; 2010 Ryan Shaw</p><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a>.</p><h2 id="toc">Table of Contents</h2><ul class="toc"><li><a href="#sec-introduction">Introduction</a></li><li><a href="#sec-namespace">Namespace</a></li><li><a href="#sec-terms">Summary of Terms</a></li><li><a href="#sec-classes">Vocabulary Classes</a></li><li><a href="#sec-properties">Vocabulary Properties</a></li><li><a href="#sec-license">License</a></li></ul><h2 id="sec-introduction">Introduction</h2><p class="comment">
+This document describes an ontology for publishing descriptions of
+historical events as Linked Data, and for mapping between other
+event-related vocabularies and ontologies.</p><h2 id="sec-changes">Changes From Previous Version</h2><ul></ul><h2 id="sec-namespace">Namespace</h2><p>The URI for this vocabulary is </p><pre><code>http://linkedevents.org/ontology/</code></pre><p>
+          When used in XML documents the suggested prefix is <code>lode</code></p><p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p><pre><code>http://linkedevents.org/ontology/Event
+http://linkedevents.org/ontology/atPlace</code></pre><h2 id="sec-terms">Summary of Terms</h2><p>This vocabulary defines
+
+    
+        one class
+      
+    and 
+    7 properties 
+      
+    .
+    </p><table><thead><tr><th>Term Name</th><th>Type</th><th>Definition</th></tr></thead><tr><td><a href="#term-Event" title="Event">Event</a></td><td><em>class</em></td><td>
+"Something that happened," as might be reported in a news article or
+explained by a historian.</td></tr><tr><td><a href="#term-atPlace" title="atPlace">atPlace</a></td><td><em>property</em></td><td>
+a named or relatively specified place that is where
+an event happened.</td></tr><tr><td><a href="#term-atTime" title="atTime">atTime</a></td><td><em>property</em></td><td>
+an abstract instant or interval of
+time that is when an event happened.</td></tr><tr><td><a href="#term-circa" title="circa">circa</a></td><td><em>property</em></td><td>
+an interval of time that can be
+precisely described using calendar dates and clock times.</td></tr><tr><td><a href="#term-illustrate" title="illustrate">illustrate</a></td><td><em>property</em></td><td>
+an event illustrated by some thing (typically a media object)</td></tr><tr><td><a href="#term-inSpace" title="inSpace">inSpace</a></td><td><em>property</em></td><td>
+an abstract region of space (e.g. a
+geospatial point or region) that is where an event happened.</td></tr><tr><td><a href="#term-involved" title="involved">involved</a></td><td><em>property</em></td><td>
+a (physical, social, or mental) object involved in
+an event.</td></tr><tr><td><a href="#term-involvedAgent" title="involvedAgent">involvedAgent</a></td><td><em>property</em></td><td>an agent involved in an event.</td></tr></table><h2 id="sec-classes">Vocabulary Classes</h2><div class="class"><h3 id="term-Event">Class: Event</h3><div class="description"><p class="definition"><strong>Definition: </strong>
+"Something that happened," as might be reported in a news article or
+explained by a historian.</p><p class="comment">
+An event consists of some temporal and spatial boundaries subjectively
+imposed on the flux of reality or imagination, that we wish to treat
+as an entity for the purposes of making statements about it. In
+particular, we may wish to make statements that relate people, places,
+or things to an event.</p><p class="comment">
+Note that, unlike some defintions of "event," this definition does not
+specify that an event involves a change of state, nor does it attempt
+to distinguish events from processes or states.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/Event</td></tr><tr><th>Label:</th><td>Event</td></tr><tr><th>Subclass of:</th><td><a href="http://purl.org/NET/cidoc-crm/core#E2_Temporal_Entity">http://purl.org/NET/cidoc-crm/core#E2_Temporal_Entity</a> and <a href="http://purl.org/dc/dcmitype/Event">dctype:Event</a></td></tr><tr><th>Equivalent to:</th><td><a href="http://purl.org/NET/c4dm/event.owl#Event">event:Event</a> and <a href="http://www.loa-cnr.it/ontologies/DUL.owl#Event">dul:Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><h2 id="sec-properties">Vocabulary Properties</h2><div class="property"><h3 id="term-atPlace">Property: atPlace</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] 
+a named or relatively specified place that is where
+an event happened.</p><p class="comment">
+This property relates an event to some meaningful place, which may
+have a name (e.g. "Paris") or may be defined relative to some other
+entity or entities (e.g. "the unincorporated area between Carson and
+Harbor Gateway"). An event may be related to more than one such
+place.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/atPlace</td></tr><tr><th>Label:</th><td>at place</td></tr><tr><th>Domain:</th><td><a href="#term-Event" title="Event">Event</a></td></tr><tr><th>Range:</th><td><a href="http://www.loa-cnr.it/ontologies/DUL.owl#Place">dul:Place</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation">dul:hasLocation</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-atTime">Property: atTime</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] 
+an abstract instant or interval of
+time that is when an event happened.</p><p class="comment">
+Equivalent definitions from other ontologies:
+
+* C4DM Event ontology: "Relates an event to a time object, classifying
+  a time region (either instantaneous or having an extent)."</p><p class="comment">
+This property relates an event to some subjectively imposed temporal
+boundaries, i.e. a span of time. An event can be related to only one
+such span of time.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/atTime</td></tr><tr><th>Label:</th><td>at time</td></tr><tr><th>Domain:</th><td><a href="#term-Event" title="Event">Event</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2006/time#TemporalEntity">owltime:TemporalEntity</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://purl.org/NET/cidoc-crm/core#P4_has_time-span">http://purl.org/NET/cidoc-crm/core#P4_has_time-span</a> and <a href="http://www.loa-cnr.it/ontologies/DUL.owl#isObservableAt">dul:isObservableAt</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-circa">Property: circa</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] 
+an interval of time that can be
+precisely described using calendar dates and clock times.</p><p class="comment">
+This property relates a span of time that cannot be precisely located
+in a chronological series to another span of time that can be
+precisely located, thus asserting that the latter is an approximation
+of the former.</p><p class="comment">An temporal relation expressing nearness in time.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/circa</td></tr><tr><th>Label:</th><td>circa</td></tr><tr><th>Domain:</th><td><a href="http://www.w3.org/2006/time#TemporalEntity">owltime:TemporalEntity</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2006/time#DateTimeInterval">owltime:DateTimeInterval</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-illustrate">Property: illustrate</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] 
+an event illustrated by some thing (typically a media object)</p><p class="comment">
+This property relates any thing (typically a media object) to an event which it
+illustrates, documents or comments upon.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/illustrate</td></tr><tr><th>Label:</th><td>illustrate</td></tr><tr><th>Domain:</th><td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td></tr><tr><th>Range:</th><td><a href="#term-Event" title="Event">Event</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2010-10-07</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-inSpace">Property: inSpace</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] 
+an abstract region of space (e.g. a
+geospatial point or region) that is where an event happened.</p><p class="comment">
+Note that a statement that relates an event to a region of space using
+this property only asserts that an event occurred somewhere within
+the region and does not assert that it occurred everywhere within the
+region.</p><p class="comment">
+This property relates an event to some subjectively imposed spatial
+boundaries, i.e. a region of space. An event can be related to only
+one such region of space.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/inSpace</td></tr><tr><th>Label:</th><td>in space</td></tr><tr><th>Domain:</th><td><a href="#term-Event" title="Event">Event</a></td></tr><tr><th>Range:</th><td><a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">geo:SpatialThing</a></td></tr><tr><th>Subproperty of:</th><td><a href="http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion">dul:hasRegion</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-involved">Property: involved</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] 
+a (physical, social, or mental) object involved in
+an event.</p><p class="comment">
+This property relates an event to any physical, social, or mental
+object or substance. It does not imply any causal relationship or
+influence or any other kind of explanatory relationship such as
+creation, destruction, etc.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/involved</td></tr><tr><th>Label:</th><td>involved</td></tr><tr><th>Domain:</th><td><a href="#term-Event" title="Event">Event</a></td></tr><tr><th>Range:</th><td><a href="http://www.loa-cnr.it/ontologies/DUL.owl#Object">dul:Object</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><div class="property"><h3 id="term-involvedAgent">Property: involvedAgent</h3><div class="description"><p class="definition"><strong>Definition: </strong>[The value of this property is] an agent involved in an event.</p><p class="comment">
+This property relates an event to anything with agency, such as a
+(legal or natural) person, a group, an organization, a computational
+agent, etc. It does not imply any causal relationship, influence,
+intentionality, etc.</p><table class="properties"><tbody><tr><th>URI:</th><td>http://linkedevents.org/ontology/involvedAgent</td></tr><tr><th>Label:</th><td>involved agent</td></tr><tr><th>Domain:</th><td><a href="#term-Event" title="Event">Event</a></td></tr><tr><th>Range:</th><td><a href="http://www.loa-cnr.it/ontologies/DUL.owl#Agent">dul:Agent</a></td></tr><tr><th>Subproperty of:</th><td><a href="#term-involved" title="involved">involved</a></td></tr></tbody></table><h4>History</h4><ul class="historyList"><li><span class="date">2009-07-28</span> - first issued</li></ul></div></div><h2 id="sec-license">License</h2><p class="license">This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a>.</p></body></html>

@@ -1,0 +1,2934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xml:lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:dct="http://purl.org/dc/terms/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:wot="http://xmlns.com/wot/0.1/"
+      xmlns:prv="http://purl.org/net/provenance/ns#"
+      xmlns:opmv="http://purl.org/net/opmv/ns#"
+      xmlns:moac="http://observedchange.com/moac/ns#"
+      xmlns:tisc="http://observedchange.com/tisc/ns#"
+>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="alternate" type="application/rdf+xml" href="moac-2012-01-29.rdf" />
+<link rel="stylesheet" type="text/css" href="http://observedchange.com/tisc/ns/main.css" />
+  <title>Management of a Crisis (MOAC) Vocabulary Specification</title>
+    <style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+    </style>
+</head>
+
+<body>
+<a href="http://observedchange.com/about"><i>Back to ObservedChange.com</i></a>
+<h1 about="" property="dcterms:title" xml:lang="en">Management of a Crisis (MOAC) Vocabulary Specification</h1>
+<div about="" typeof="foaf:Document">
+
+<div property="rdfs:label" content="Document that defines the Management of a Crisis Vocabulary" xml:lang="en"></div>
+  <div rel="foaf:primaryTopic">
+    <div about="http://www.observedchange.com/moac/ns#">
+      <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataItem"></div>
+      <div rel="rdf:type" resource="http://www.w3.org/2002/07/owl#Ontology"></div>
+      <div property="dcterms:title" content="Management of a Crisis Vocabulary namespace" xml:lang="en"></div>
+      <div rel="prv:createdBy">
+	    <div rel="rdf:type" resource="http://purl.org/net/provenance/ns#DataCreation"></div>
+	    <div rel="prv:performedBy" resource="http://kauppinen.net/tomi#me"></div>
+	    <div property="prv:performedAt" content="2012-01-29T20:30:00Z" datatype="xsd:dateTime"></div>
+      </div>
+      <div rel="dcterms:creator" resource="http://kauppinen.net/tomi#me"></div>
+      <div property="dcterms:created" content="2012-01-29T20:30:00Z" datatype="xsd:dateTime"></div>
+     </div>
+   </div>
+</div>
+
+<h2>29 January 2012</h2>
+
+<dl>
+  <dt>This version:</dt>
+  <dd><a href="http://observedchange.com/moac/ns-20120129">
+      http://observedchange.com/moac/ns-20120129</a></dd>
+  <dt>Latest version:</dt>
+  <dd><a href="http://observedchange.com/moac/ns">http://observedchange.com/moac/ns</a></dd>
+
+  <dt>Previous version:</dt>
+  <dd><a href="http://observedchange.com/moac/ns-20110601">http://observedchange.com/moac/ns-20110601</a></dd>
+  <dt>Revision:</dt>
+  <dd>Revision: 0.4</dd>
+  <dt>Author:</dt>
+<dd>Minu Limbu (<a href="https://sites.google.com/site/shelterhaiti2010/home">Haiti</a> Shelter <a href="http://oneresponse.info/Coordination/ClusterApproach/Pages/Cluster%20Approach.aspx"> Cluster</a> Information Manager (Feb-Aug 2010) / <a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>    
+<dt>Primary Contributors:</dt>
+<dd>Dong Wang (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany) 
+    </dd>
+<dd about="http://kauppinen.net/tomi#me" typeof="foaf:Person">
+    <a rel="foaf:homepage" href="http://kauppinen.net/tomi" property="foaf:name">Tomi Kauppinen</a>
+    (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany)
+    </dd>
+    <dd>
+    Jens Ortmann (<a href="http://ifgi.uni-muenster.de/">Institute for Geoinformatics</a>, University of Muenster, Germany) 
+    </dd>
+     
+  <dt>Secondary Contributors:</dt>
+      <dd>See <a href="#sec-ack">acknowledgements</a>.</dd>  
+</dl>
+
+<!-- <p class="copyright">Copyright &copy; 2011 - 2011 by Tomi Kauppinen, Jens Ortman, Minu Limbu and Dong Wang</p> -->
+<!-- <p><a rel="license" href="http://creativecommons.org/licenses/by/1.0/"><img alt="Creative Commons License" style="border: 0pt none; float: right;" src="img/somerights.gif" /></a> --></br>
+<p>
+This work is licensed under a <a href="https://secure.wikimedia.org/wikipedia/en/wiki/GNU_Lesser_General_Public_License">GNU Lesser General Public License</a>. 
+</p>
+</br>
+<p about="" resource="http://www.w3.org/TR/rdfa-syntax" rel="dcterms:conformsTo">
+  <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml-rdfa.png" style="border: 0pt none; float: right" alt="Valid XHTML + RDFa" /> </a>
+  The Management of a Crisis Vocabulary relies on W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology.</p>
+</br>
+<p>The visual layout and structure of the specification was adapted from the <a href="http://open-biomed.sourceforge.net/opmv/ns.html">Open Provenance Model Vocabulary</a> edited by Jun Zhao, <a href="http://rdfs.org/sioc/spec/">SIOC Core Ontology Specification</a> edited by Uldis Bojars and John G. Breslin, the <a href="http://trdf.sourceforge.net/provenance/ns.html">Provenance Vocabulary Core Ontology Specification</a> edited by Olaf Hartig and from <a href="http://observedchange.com/tisc/ns/">the Open Time and Space Core Vocabulary Specification</a> by Tomi Kauppinen.</p>
+
+<hr />
+
+<div>
+<h2 id="sec-abstract">Abstract</h2>
+
+<p>
+  <span about="http://observedchange.com/moac/ns#" property="dcterms:description">MOAC, the Management of a Crisis Vocabulary, 
+is a lightweight vocabulary aiming to provide terms to enable practitioners to relate different &quot;things&quot; in crisis management activities together as Linked Data. The initial MOAC terms originated from   
+ the <a href="http://www.ushahidi.com/products/ushahidi-platform"></a><a href="http://www.humanitarianinfo.org/iasc/">Inter Agency Standing Committee (IASC),</a><a href="https://www.sheltercluster.org/Pages/default.aspx"> Emergency Shelter Cluster in Haiti,</a> <a href="http://3w.unocha.org/WhoWhatWhere/index.php">UNOCHA 3W Who What Where Contact Database and </a></span><a href="http://www.ushahidi.com/products/ushahidi-platform">Ushahidi platform. </a><span about="" property="dcterms:description">Efforts have been made to involve a number of international humanitarian and crowdsourcing volunteering communities to authenticate MOAC usability, functionality and structures. Since, the vocabulary is still evolving, necessary changes based on expert recommendations will be carefully documented and necessary changes will be continuously updated in the same platform. </span></p>
+</div>
+<hr />
+
+<div class="status">
+<h2 id="sec-status">Status of this document</h2>
+
+<p><strong>NOTE:</strong> <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document.</em></p>
+
+<p>This specification is an evolving document. This document may be updated or added to based on implementation experience, but no commitment is made by the authors regarding future updates. This document is generated by combining a machine-readable <a href="http://observedchange.com/moac/ns#">Management of a Crisis Vocabulary Namespace</a> expressed in RDF/XML with a specification template and a set of per-term documents.</p>
+<p>**MOAC Revision 0.2: Vocabulary integrated terms described by <a href="http://haiti.ushahidi.com/">Ushahidi Haiti Project </a></p>
+<p>**MOAC Revision 0.4: Vocabulary expanded with humanitarian terms based the <a href="http://www.ushahidi.com/products/ushahidi-platform"></a><a href="http://www.humanitarianinfo.org/iasc/">Inter Agency Standing Committee (IASC)</a>,<a href="https://www.sheltercluster.org/Pages/default.aspx"> Emergency Shelter Cluster in Haiti,</a> <a href="http://3w.unocha.org/WhoWhatWhere/index.php">UNOCHA 3W Who What Where Contact Database.</a><span about="" property="dcterms:description">
+
+</p>
+</div>
+
+<h2 id="sec-toc">Table of contents</h2>
+<ul>
+  <li><a href="#sec-intro">1. Introduction</a></li>
+    <li><a href="#sec-glance">2. The Management of a Crisis Vocabulary at a glance</a></li>
+  <li><a href="#sec-glance2.1">2.1 Management of a Crisis Vocabulary Core Sections</a></li>
+
+  <li><a href="#sec-desc">3. Description about MOAC core vocabulary</a></li>
+  <ul>
+      <li><a href="#sec-extension">3.1. Evolution and extension of MOAC</a></li>
+  </ul>
+  <li><a href="#sec-specification">4. Cross-reference for core MOAC classes and properties</a></li>
+  <ul>
+  <li><a href="#sec-specification4.1">4.1 Who What Where (3W) Classes</a></li>
+  <li><a href="#sec-specification4.2">4.2 Cluster Approach classes</a></li>  
+  <li><a href="#sec-specification4.3">4.3 Shelter Cluster and Non Food Items MOAC classes</a></li>
+  <li><a href="#sec-specification4.4">4.4 Cluster Specific MOAC properties</a></li>
+  <li><a href="#sec-specification4.5">4.5 Ushahidi Haiti Platform MOAC Classes</a></li>  
+  <li><a href="#sec-specification4.6">4.6  Collection of MOAC Properties</a></li>  
+ </ul>
+  <li><a href="#sec-ack">5. Acknowledgements</a></li>
+  <li><a href="#sec-reference">6. References</a></li>
+  <li><a href="#sec-changes">7. Change log</a></li>
+</ul>
+<h2 id="sec-intro">1. Introduction</h2>
+  <p>
+  Today, most data from humanitarian agencies are in the form of spreadsheets, PDFs and word processor documents hidden somewhere in a desktop or a server. A number of agencies are making gradual efforts to publish these data as an open source.  However, during the period of the development of this platform, it is noted that there are no suitable disaster management vocabularies with well-defined URI (Uniform Resource Identifier)   and RDFs (Resource Description Framework). 
+  The Management of a Crisis Vocabulary (MOAC) is defined as a set of classes and properties. One of the primary goals of the MOAC is to link crisis information from three different sources: a) traditional humanitarian agencies (<a href="http://sheltercluster.org/">shelter cluster</a>), b) Volunteer and technical committees (<a href="http://haiti.ushahidi.com/">Ushahidi Platform</a>) and c) disaster affected communities. </p>
+
+</br>
+<p>The XML Namespace URI that must be used by implementations of this specification is:
+
+<a href="http://observedchange.com/moac/ns#">http://observedchange.com/moac/ns#</a> 
+</p>
+</br>
+<p>The suggested prefix for the namespace is "moac" to be used by implementations of this specification:
+<br></br>
+@prefix moac: <a href="http://observedchange.com/moac/ns#">http://observedchange.com/moac/ns#</a>
+</p>
+
+<div class="glance">
+<h2 id="sec-glance">2. The Management of a Crisis Vocabulary at a glance</h2>
+
+<p>An alphabetical index of terms from the Management of a Crisis Vocabulary, by class and by property, are given below. All the terms are hyperlinked to their detailed description for quick reference.</p>
+
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+<p>Classes: |
+    <a href="#AffectedPopulation">AffectedPopulation</a> | 
+    <a href="#Agency">Agency</a> |
+    <a href="#AidManipulation">AidManipulation</a> | 
+    <a href="#AnimalIllnessOrDeath">AnimalIllnessOrDeath</a>  |
+    <a href="#AskingToFowardAMessage">AskingToFowardAMessage</a> |    
+    <a href="#ChronicCareNeeds">ChronicCareNeeds</a> | 
+    <a href="#CollapsedStructure">CollapsedStructure</a> |   
+    <a href="#CommunicationLinesDown">CommunicationLinesDown</a> | 
+    <a href="#CompromisedBridge">CompromisedBridge</a> |  
+    <a href="#ContaminatedWater">ContaminatedWater</a> | 
+    <a href="#ContaminatedWaterSupply">ContaminatedWaterSupply</a> | 
+    <a href="#Deaths">Deaths</a> | 
+    <a href="#EarthquakeAndAftershock">EarthquakeAndAftershock</a> | 
+    <a href="#Emergency">Emergency</a> |
+    <a href="#FeedingCentersAvailable">FeedingCentersAvailable</a> | 
+    <a href="#FinancialServicesAvailable">FinancialServicesAvailable</a> | 
+    <a href="#Fire">Fire</a> | 
+    <a href="#Floods">Floods</a> | 
+    <a href="#FoodDistributionPoint">FoodDistributionPoint</a> |
+    <a href="#FoodShortage">FoodShortage</a> | 
+    <a href="#FuelShortage">FuelShortage</a> | 
+    <a href="#GroupViolence">GroupViolence</a> | 
+    <a href="#HealthOfWomen">HealthOfWomen</a> |  
+    <a href="#HighlyVulnerable">HighlyVulnerable</a> |
+    <a href="#HospitalOperating">HospitalOperating</a> |
+    <a href="#HumanRemainsManagement">HumanRemainsManagement</a> | 
+    <a href="#IDPConcentration">IDPConcentration</a> | 
+    <a href="#Incident">Incident</a> | 
+    <a href="#InfectiousHumanDisease">InfectiousHumanDisease</a> | 
+    <a href="#InfrastructureDamage">InfrastructureDamage</a> |  
+    <a href="#InternetAccess">InternetAccess</a> | 
+    <a href="#Landslides">Landslides</a> | 
+    <a href="#Looting">Looting</a> |
+    <a href="#MedicalEmergency">MedicalEmergency</a> | 
+    <a href="#MedicalEquipmentAndSupplyNeeds">MedicalEquipmentAndSupplyNeeds</a> |  
+    <a href="#Menaces">Menaces</a> | 
+    <a href="#MissingPersons">MissingPersons</a> | 
+    <a href="#NaturalHazards">NaturalHazards</a> | 
+	<a href="#NeedsResponse3W"> NeedsResponse3W </a> | 
+	<a href="#Needs3W"> Needs3W</a> | 
+    <a href="#NonfoodAidDistributionPoint">NonfoodAidDistributionPoint</a> | 
+    <a href="#Others">Others</a> |
+    <a href="#PeopleTrapped">PeopleTrapped</a> |  
+    <a href="#PersonsNews">PersonsNews</a> | 
+    <a href="#PortOpen">PortOpen</a> | 
+    <a href="#PowerOutage">PowerOutage</a> |
+    <a href="#PriceGouging">PriceGouging</a> | 
+    <a href="#PsychiatricNeed">PsychiatricNeed</a> | 
+    <a href="#PublicHealth">PublicHealth</a> |     
+	 <a href="#Response3W"> Response3W </a> |
+    <a href="#Riot">Riot</a> | 
+    <a href="#RoadBlocked">RoadBlocked</a> | 
+    <a href="#RubbleRemoval">RubbleRemoval</a> |     
+    <a href="#SearchAndRescue">SearchAndRescue</a> | 
+    <a href="#SecurityConcern">SecurityConcern</a> | 
+    <a href="#ServiceAvailable">ServiceAvailable</a> | 
+    <a href="#ShelterNeeded">ShelterNeeded</a> | 
+    <a href="#ShelterOffered">ShelterOffered</a> |        
+    <a href="#TheftOfAid">TheftOfAid</a> |           
+    <a href="#UnstableStructure">UnstableStructure</a> |             
+    <a href="#UshahidiReport">UshahidiReport</a> |     
+    <a href="#VitalLines">VitalLines</a> | 
+    <a href="#WaterSanitationAndHygienePromotion">WaterSanitationAndHygienePromotion</a> | 
+    <a href="#WaterShortage">WaterShortage</a> |             
+    <a href="#WaterDistributionPoint">WaterDistributionPoint</a> |
+    <a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a> | 
+<a href="#Who3W"> Who3W</a> | 
+<a href="#What3W"> What3W</a> | 
+<a href="#Where3W"> Where3W </a> | 
+<a href="#When3W"> When3W</a> | 
+ 
+  
+
+<p>Properties: |
+<a href="#affectedby">affectedby</a> |
+<a href="#approved">approved</a> |
+<a href="#atLocation">atLocation</a> |
+<a href="#atGeoLocationLatitude">atGeoLocationLatitude</a> |
+<a href="#atGeoLocationLongitude">atGeoLocationLongitude</a> |
+<a href="#belongsToCluster ">belongsToCluster </a> |
+<a href="#category">category</a> |
+<a href="#countOfAffectedPopulation">countOfAffectedPopulation</a> |
+<a href="#countofAffectedHH">countofAffectedHH</a> |
+<a href="#countInStock">countInStock</a> |
+<a href="#countInPipeline">countInPipeline</a> |
+<a href="#clusterActivity">clusterActivity</a> |
+<a href="#date">date</a> |
+<a href="#dateOfDistbn">dateOfDistbn</a> |
+<a href="#distributingPartner">distributingPartner   </a> |
+<a href="#description">description</a> |  
+<a href="#has3Wcomponent ">has3Wcomponent </a> |
+<a href="#hasOrganisationID  ">hasOrganisationID  </a> |
+<a href="#hasShelterItems  ">hasShelterItems  </a> |
+<a href="#hasNFIItems  ">hasNFIItems  </a> |
+<a href="#involvedIn">involvedIn  </a> |
+<a href="#impact">impact</a> |
+<a href="#NFINeededAt">NFINeededAt</a> |  
+<a href="#organizationName ">organizationName </a> |
+<a href="#supplyingAgency  ">supplyingAgency  </a> |
+<a href="#shelterOfferedAt">shelterOfferedAt   </a> |
+<a href="#shelterNeededAt">shelterNeededAt</a> |
+<a href="#tentDistbn">tentDistbn</a> |
+<a href="#title">title</a> |  
+<a href="#verified">verified</a> |
+
+</p> </div>
+
+<div class="glance">
+<h2 id="sec-glance2.1">2.1. Management of a Crisis Vocabulary Core Sections:</h2>
+<p>&nbsp;</p>
+<p><strong>Emergency Management Section:</strong></p>
+<p>This  section contains  list of MOAC vocabularies used to describe complex emergencies and security  incidents. </p>
+
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+  <p><strong>Complex Emergency: </strong><a href="#Emergency">Emergency</a> |<a href="#EarthquakeAndAftershock">EarthquakeAndAftershock </a>|  <a href="#Fire">Fire</a> | <a href="#Floods">Floods</a> | <a href="#Landslides">Landslides</a> | <a href="#Looting">Looting</a> | <a href="#MedicalEmergency">MedicalEmergency</a> |  <a href="#NaturalHazards">NaturalHazards</a> |
+  <p><strong>Security Incident :</strong>   <a href="#Incident">Incident</a> | <a href="#GroupViolence">GroupViolence</a> |  <a href="#Looting">Looting</a> |  <a href="#Menaces">Menaces</a>
+| <a href="#PriceGouging">PriceGouging</a><a href="#Riot">Riot</a> |
+ <a href="#SecurityConcern">SecurityConcern</a> |
+ <a href="#TheftOfAid">TheftOfAid</a>
+  <p><strong>Affected Population:</strong>  <a href="#Deaths">Deaths</a> | <a href="#HighlyVulnerable">HighlyVulnerable</a> | <a href="#HumanRemainsManagement">HumanRemainsManagement</a> | <a href="#MissingPersons">MissingPersons</a> |  <a href="#PeopleTrapped">PeopleTrapped</a> | <a href="#PersonsNews">PersonsNews</a> |
+</div>
+
+<p>&nbsp;</p>
+<p><strong>Who What Where (3W)Section:</strong></p>
+<p>The  section explains the basic termonologies about how disaster  information managers can identify  3W  that is which organizations (Who) are carrying out what activities (What) in  which locations (Where).</p>
+
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+  <p><strong>Who What Where Classes:  </strong>
+   <a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a> | 
+<a href="#Who3W"> Who3W</a> | 
+<a href="#What3W"> What3W</a> | 
+<a href="#Where3W"> Where3W </a> | 
+<a href="#When3W"> When3W</a> | 
+<a href="#NeedsResponse3W"> NeedsResponse3W </a> | 
+<a href="#Response3W"> Response3W </a> | 
+<a href="#Needs3W"> Needs3W</a> | 
+  
+  </div>
+<p>&nbsp;</p>
+<p><strong>Inter  Agency Standing Committee (IASC) Emergency Cluster Approach Section</strong>:</p>
+<p>This  section contains  list of MOAC vocabularies used to describe emergency humanitarian clusters like Shelter Cluster, Health Cluster. </p>
+<div style="padding: 5px; border: dotted; background-color: #ddd;">
+  <p><strong>CLuster Approach:   </strong>
+  
+<a href="#IASCCluster"> IASCCluster</a> | 
+<a href="#Cluster1Shelter"> Cluster1Shelter</a> | 
+<a href="#Cluster2Food"> Cluster2Food</a> | 
+<a href="#Cluster3WASH"> Cluster3WASH</a> | 
+
+
+  <p>  
+  <p><strong>Shelter Cluster: </strong>
+    <a href="#ShelterNeeded">ShelterNeeded</a> | <a href="#ShelterOffered">ShelterOffered</a> |
+    <a href="#ShelterAgency">ShelterAgency</a> | 
+	<a href="#ShelterActivity"> ShelterActivity</a> | 
+    <a href="#ShelterNFIItems"> ShelterNFIItems</a> | 
+    <a href="#ShelterItems"> ShelterItems</a> | 
+    <a href="#NFIItems"> NFIItems</a> |     
+    <a href="#ShelterResponse"> ShelterResponse</a> |    <!-- -
+    <a href="#NFIItems"> NFIItems</a> |            
+    <a href="#NFIItems"> NFIItems</a> |    
+    <a href="#NFIItems"> NFIItems</a> |    
+    <a href="#NFIItems"> NFIItems</a> | -->           
+  <p>  
+  <p><strong>Non Food Item (also a part of Shelter Cluster):</strong>
+     <a href="#FuelShortage">FuelShortage</a> | 
+       <a href="#NonfoodAidDistributionPoint">NonfoodAidDistributionPoint</a> | 
+    <a href="#RubbleRemoval">RubbleRemoval</a> |  
+  <p>  
+  <p><strong>Telecommunications Cluster:</strong>
+      <a href="#CommunicationLinesDown">CommunicationLinesDown</a> |  
+  <p>  
+  <p><strong>Water and Sanitation Cluster:   </strong>
+     <a href="#ContaminatedWater">ContaminatedWater</a> | <a href="#ContaminatedWaterSupply">ContaminatedWaterSupply</a> | 
+    <a href="#WaterSanitationAndHygienePromotion">WaterSanitationAndHygienePromotion</a> | 
+      <a href="#WaterShortage">WaterShortage</a> | 
+     <a href="#WaterDistributionPoint">WaterDistributionPoint</a> |   
+  <p>  
+  <p><strong>Food Cluster: 
+    </strong>
+     <a href="#FeedingCentersAvailable">FeedingCentersAvailable</a> | 
+    <a href="#FoodDistributionPoint">FoodDistributionPoint</a> | 
+    <a href="#FoodShortage">FoodShortage</a> | 
+  <p>  
+  <p><strong>Health Cluster: 
+    </strong>
+     <a href="#AnimalIllnessOrDeath">AnimalIllnessOrDeath</a> | 
+    <a href="#ChronicCareNeeds">ChronicCareNeeds</a> | 
+    <a href="#ChronicCareNeeds">ChronicCareNeeds</a> | 
+    <a href="#HospitalOperating">HospitalOperating</a>
+    | <a href="#InfectiousHumanDisease">InfectiousHumanDisease</a> | 
+    <a href="#MedicalEquipmentAndSupplyNeeds">MedicalEquipmentAndSupplyNeeds</a> | 
+    <a href="#PsychiatricNeed">PsychiatricNeed</a> | <a href="#PublicHealth">PublicHealth</a>
+  <p>
+  <p><strong>Camp Coordination and Camp Management Cluster: 
+    </strong>
+    <a href="#IDPConcentration">IDPConcentration</a> |  
+  <p>
+  <p><strong> Logistics Cluster: 
+  </strong>
+    <a href="#CollapsedStructure">CollapsedStructure</a> | 
+    <a href="#CompromisedBridge">CompromisedBridge</a> | 
+    <a href="#InfrastructureDamage">InfrastructureDamage</a> | 
+    <a href="#InternetAccess">InternetAccess</a> | 
+    <a href="#PortOpen">PortOpen</a> | 
+    <a href="#PowerOutage">PowerOutage</a> | 
+    <a href="#RoadBlocked">RoadBlocked</a> | 
+    <a href="#UnstableStructure">UnstableStructure</a> | 
+    <a href="#VitalLines">VitalLines</a> |  
+  </div>
+<p>&nbsp;</p>
+</div>
+
+</div>
+
+<div class="description">
+  <h2 id="sec-desc">3. Descriptions about MOAC</h2>
+</div>
+
+<p>The Core MOAC definitions presented here are written using a computer language (RDF/OWL) that makes it easy for software to process some basic facts about the terms in the Management of a Crisis Vocabulary, and consequently about the things described using MOAC.</p>
+
+<h3 id="sec-extension">3.1. Evolution and extension of MOAC</h3>
+
+<p>The Management of a Crisis Vocabulary is identified by the namespace URI "http://observedchange.com/moac/ns#".</p>
+
+<p>Revisions and extensions of MOAC are conducted through edits to the namespace document, which by convention is published on the Web at the namespace URI.</p>
+
+  <p>The properties and types defined here provide some basic concepts for describing crisis management related information.</p>
+
+
+<div class="overview">
+  <h2 id="sec-specification">4. Cross-reference for core MOAC classes and properties</h2>
+</div>
+  <p></p>
+
+<h3 id="sec-specification4.1">4.1 Who What Where (3W) Classes</h3>
+<p>Knowing which organizations (Who) are carrying out which activities (What) in which locations (Where) is commonly known as Who What Where (3w), which is one of the key elements and core products that humanitarian organizations strive to attain on the immediate onset of a disaster. (UNOCHA, 2005)</p>   
+
+<div class="specterm" id="WhoWhatWhere3W" about="http://observedchange.com/moac/ns#WhoWhatWhere3W" typeof="owl:Class">
+  <h3>Class: WhoWhatWhere3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="WaterShortage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Abstract term to describe the collection of which agency is doing what activities and where. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#WhoWhatWhere3W">http://observedchange.com/moac/ns#WhoWhatWhere3W</a></td>
+      </tr>
+<tr>
+  <th>Has Subclasses</th>
+  <td><a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a> | 
+<a href="#What3W"> What3W</a> | 
+<a href="#Where3W"> Where3W </a> | 
+<a href="#When3W"> When3W</a> | </td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Who3W" about="http://observedchange.com/moac/ns#Who3W" typeof="owl:Class">
+  <h3>Class: Who3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="Who3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Specific agency or Organisation humanitarian response information. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Who3W">http://observedchange.com/moac/ns#Who3W</a></td>
+      </tr>
+<tr>
+  <th>Subclass of</th>
+  <td><a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="What3W" about="http://observedchange.com/moac/ns#What3W" typeof="owl:Class">
+  <h3>Class: What3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="What3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Specific activities in relation to humanitarian response. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#What3W">http://observedchange.com/moac/ns#What3W</a></td>
+      </tr>
+<tr>
+  <th>Subclass of</th>
+  <td><a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Where3W" about="http://observedchange.com/moac/ns#Where3W" typeof="owl:Class">
+  <h3>Class: Where3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="Where3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Specific location(s) in relation to humanitarian response. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Where3W">http://observedchange.com/moac/ns#Where3W</a></td>
+      </tr>
+<tr>
+  <th>Subclass of</th>
+  <td><a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="When3W" about="http://observedchange.com/moac/ns#When3W" typeof="owl:Class">
+  <h3>Class: When3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="When3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Specific time in relation to humanitarian response. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#When3W">http://observedchange.com/moac/ns#When3W</a></td>
+      </tr>
+<tr>
+  <th>Subclass of</th>
+  <td><a href="#WhoWhatWhere3W"> WhoWhatWhere3W</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="NeedsResponse3W" about="http://observedchange.com/moac/ns#NeedsResponse3W" typeof="owl:Class">
+  <h3>Class: NeedsResponse3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="NeedsResponse3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Humanitarian needs and response related activities. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#NeedsResponse3W">http://observedchange.com/moac/ns#NeedsResponse3W</a></td>
+      </tr>
+<tr>
+  <th>Has Subclasses</th>
+  <td><a href="#Response3W"> Response3W</a></td>
+  <td><a href="#Needs3W"> Needs3W</a></td>
+    <td><a href="#ShelterNFIItems"> ShelterNFIItems</a></td>
+</tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Response3W" about="http://observedchange.com/moac/ns#Response3W" typeof="owl:Class">
+  <h3>Class: Response3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="Response3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Cluster Specific humanitarian response information. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Response3W">http://observedchange.com/moac/ns#Response3W</a></td>
+      </tr>
+<tr>
+  <th>Subclass of</th>
+  <td><a href="#NeedsResponse3W"> NeedsResponse3W</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Needs3W" about="http://observedchange.com/moac/ns#Needs3W" typeof="owl:Class">
+  <h3>Class: Needs3W</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#WhoWhatWhereSection"></div>
+  <div property="rdfs:label" content="Needs3W" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Cluster Specific humanitarian response information. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Needs3W">http://observedchange.com/moac/ns#Needs3W</a></td>
+      </tr>
+<tr>
+  <th>Subclass of</th>
+  <td><a href="#NeedsResponse3W"> NeedsResponse3W</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<h3 id="sec-specification4.2">4.2 Cluster Approach classes</h3>
+<p>The “cluster approach” is defined as a mechanism that can help to address identified gaps in response and enhance the quality of humanitarian action. It is part of a wider reform process aimed at improving the effectiveness of humanitarian response by ensuring greater predictability and accountability, while at the same time strengthening partnerships between NGOs, international organizations, the International Red Cross and Red Crescent Movement1 and UN agencies. </p>
+<p><span class="TermComment">At global level, the aim of the cluster approach is to strengthen system-wide preparedness and technical capacity to respond to humanitarian emergencies by ensuring that there is predictable leadership and accountability in all the main sectors or areas of humanitarian response.</span> At national level, the aim is to strengthen humanitarian response by demanding high standards of predictability, accountability and partnership in all sectors or areas of activity.</p>
+
+<div class="specterm" id="IASCCluster"
+     about="http://observedchange.com/moac/ns#IASCCluster" typeof="owl:Class">
+  <h3>Class:IASCCluster</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="IASCCluster" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> Humanitarian sectors and categories of population for achieving more strategic responses and better prioritization of available resources by clarifying the division of labour among organizations, better defining the roles and responsibilities of humanitarian organizations within the sectors, and providing the Humanitarian Coordinator with both a first point of call and a provider of last resort in all the key sectors or areas of activity.</p>
+
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#IASCCluster">http://observedchange.com/moac/ns#IASCCluster</a></td>
+      </tr>
+      <tr>
+        <th>Has Subclass:</th>
+                <td><a href="#Cluster1Shelter">Cluster1Shelter</a></td>
+        <td><a href="#Cluster2Food">Cluster2Food</a></td>
+        <td><a href="#Cluster3WASH">Cluster3WASH</a></td> 
+        
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Cluster1Shelter"
+     about="http://observedchange.com/moac/ns#Cluster1Shelter" typeof="owl:Class">
+  <h3>Class:Cluster1Shelter</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="Cluster1Shelter" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Inter Agency Standing Committee Emergency Shelter  related agency specific activities. The Shelter Cluster is co-chaired by IFRC and UNHCR at the global level. <strong>IFRC</strong> is convener of the Emergency Shelter Cluster in <strong>disaster situations</strong> while<strong> UNHCR leads the Emergency Shelter Cluster in the area of conflict generated IDPs</strong> (Internally Displaced Persons). In addition to IFRC and UNHCR, participants in the Global Shelter Cluster include: ACTED, Archi-Urgent, Article 25, Care UK, CHF, CRS, DFID, Habitat for Humanity, IOM, Medair, NRC, OFDA, Oxfam GB, ProAct, ProVention, RedR, Relief International, RICS, Save The Children UK, Shelter Centre, SKAT, UN Habitat, UN OCHA, UNRWA and  World Vision. (source:<a href="https://www.sheltercluster.org/Pages/About_Us.aspx"> sheltercluster.org</a>, accessed on 12 Feb 2012)</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#Cluster1Shelter">http://observedchange.com/moac/ns#Cluster1Shelter</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#IASCCluster">IASCCluster</a></td>
+        <!-- <td><a href="#Cluster2Food">Cluster2Food</a></td>
+        <td><a href="#Cluster3WASH">Cluster3WASH</a></td> 
+        <td><a href="#HighlyVulnerable">HighlyVulnerable</a></td>
+        <td><a href="#ContaminatedWaterSupply">ContaminatedWaterSupply</a></td>-->
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Cluster2Food"
+     about="http://observedchange.com/moac/ns#Cluster2Food" typeof="owl:Class">
+  <h3>Class:Cluster2Food</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="Cluster2Food" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Inter Agency Standing Committee Emergency Food related agency specific activities. World Food Programme (WFP) is the global cluster lead for Food.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#Cluster2Food">http://observedchange.com/moac/ns#Cluster2Food</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+        <td><a href="#IASCCluster">IASCCluster</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Cluster3WASH"
+     about="http://observedchange.com/moac/ns#Cluster3WASH" typeof="owl:Class">
+  <h3>Class:Cluster3WASH</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="Cluster3WASH" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Inter Agency Standing Committee Emergency Water Sanitation and Hygine related agency specific activities. UNICEF is the global cluster lead for WASH.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#Cluster3WASH">http://observedchange.com/moac/ns#Cluster3WASH</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+        <td><a href="#IASCCluster">IASCCluster</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<h3 id="sec-specification4.3">4.3 Shelter Cluster and Non Food Items MOAC classes </h3>
+
+<div class="specterm" id="ShelterAgency"
+     about="http://observedchange.com/moac/ns#ShelterAgency" typeof="owl:Class">
+  <h3>Class:ShelterAgency</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterAgency" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterAgency is a Shelter Cluster related humanitarian partner or a  specific organization involved in shelter  related humanitarian response. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterAgency">http://observedchange.com/moac/ns#ShelterAgency</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href=http://xmlns.com/foaf/0.1/agent>foaf:agent</a></td>
+        <!-- <td><a href="#Cluster2Food">Cluster2Food</a></td>
+        <td><a href="#Cluster3WASH">Cluster3WASH</a></td> 
+        <td><a href="#HighlyVulnerable">HighlyVulnerable</a></td>
+        <td><a href="#ContaminatedWaterSupply">ContaminatedWaterSupply</a></td>-->
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterActivity"
+     about="http://observedchange.com/moac/ns#ShelterActivity" typeof="owl:Class">
+  <h3>Class:ShelterActivity</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterActivity" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterActivity is a term that describes Shelter Cluster related humanitarian response. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterActivity">http://observedchange.com/moac/ns#ShelterActivity</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#Response3W">Response3W</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterNFIItems"
+     about="http://observedchange.com/moac/ns#ShelterNFIItems" typeof="owl:Class">
+  <h3>Class:ShelterNFIItems</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterNFIItems" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterNFIItems define  Shelter Cluster related humanitarian relief items (e.g. tents, tarpulins). </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th width="127">identifier:</th>
+        <td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterNFIItems">http://observedchange.com/moac/ns#ShelterNFIItems</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+       <td width="156"><a href="#NeedsResponse3W">NeedsResponse3W</a></td> 
+      </tr>
+      <tr>
+        <th>Has Subclasses:</th>
+        <td><a href="#ShelterItems">ShelterItems</a></td> 
+        <td width="207"><a href="#NFIItems">NFIItems</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterItems"
+     about="http://observedchange.com/moac/ns#ShelterItems" typeof="owl:Class">
+  <h3>Class:ShelterItems</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterItems" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterItems include, but are not limited to, tents, tarpulins distributed or stocked by shelter response humanitarian agencies.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterItems">http://observedchange.com/moac/ns#ShelterItems</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#ShelterNFIItems">ShelterNFIItems</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="NFIItems"
+     about="http://observedchange.com/moac/ns#NFIItems" typeof="owl:Class">
+  <h3>Class:NFIItems</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="NFIItems" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">NFIItems also known as Non Food Items include, but are not limited to, jerry cans, kots, mats distributed or stocked by shelter response humanitarian agencies.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#NFIItems">http://observedchange.com/moac/ns#NFIItems</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#ShelterNFIItems">ShelterNFIItems</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterResponse"
+     about="http://observedchange.com/moac/ns#ShelterResponse" typeof="owl:Class">
+  <h3>Class:ShelterResponse</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterResponse" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterResponse is related to activities defining Shelter Clusters' humanitarian response in an emergency. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterResponse">http://observedchange.com/moac/ns#ShelterResponse</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#Response3W">Response3W</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterOffered"
+     about="http://observedchange.com/moac/ns#ShelterOffered" typeof="owl:Class">
+  <h3>Class:ShelterOffered</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterOffered" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterOffered relates shelter activities when a humanitarian relief agencies provide shelter (e.g. tents, tarps) materials as a part of a relief distribution. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterOffered">http://observedchange.com/moac/ns#ShelterOffered</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#Response3W">Response3W</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="ShelterNeeded"
+     about="http://observedchange.com/moac/ns#ShelterNeeded" typeof="owl:Class">
+  <h3>Class:ShelterNeeded</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterNeeded" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterNeeded records information regarding additional shelter needs  as a part of planned relief distribution processes. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterNeeded">http://observedchange.com/moac/ns#ShelterNeeded</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="#Needs3W ">Needs3W </a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterDistributionPoint"
+     about="http://observedchange.com/moac/ns#ShelterDistributionPoint" typeof="owl:Class">
+  <h3>Class:ShelterDistributionPoint</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns#IASCClusterSection"></div>
+  <div property="rdfs:label" content="ShelterDistributionPoint" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterDistributionPoint is a specific location where humanitarian relief agencies provide shelter assistances as a part of relief distribution. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr>
+        <th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#ShelterDistributionPoint">http://observedchange.com/moac/ns#ShelterDistributionPoint</a></td>
+      </tr>
+      <tr>
+        <th>Subclass of:</th>
+                <td><a href="http://purl.org/dc/terms/Location">dc:location</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<h3 id="sec-specification4.4">4.4 Cluster specific  MOAC properties</h3>
+
+<!-- Shelter Cluster Properties-->
+<div class="specterm" id="belongsToCluster" about="http://observedchange.com/moac/ns#belongsToCluster" typeof="owl:DataProperty">
+  <h3>Property: belongsToCluster</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="belongsToCluster" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">belongsToCluster indicates the organisation which belongs to a specific IASC cluster for example, emergency Shelter cluster or Food Cluster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#belongsToCluster">http://observedchange.com/moac/ns#belongsToCluster</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Who3W">moac:Who3W</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#moac:Who3W"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#IASCCluster">moac:IASCCluster</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#IASCCluster"></div></td>
+	  </tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="affectedby" about="http://observedchange.com/moac/ns#affectedby" typeof="owl:DataProperty">
+  <h3>Property: affectedby</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="affectedby" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">affectedby indicates the relation of people being affected by certain disaster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#affectedby">http://observedchange.com/moac/ns#affectedby</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="362" align="left"><a href="#ShelterOffered">moac:ShelterOffered </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterOffered"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="#NaturalHazards">moac:NaturalHazards </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#NaturalHazards"> </div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="countOfAffectedPopulation" about="http://observedchange.com/moac/ns#countOfAffectedPopulation" typeof="owl:DataProperty">
+  <h3>Property: countOfAffectedPopulation</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="countOfAffectedPopulation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">countOfAffectedPopulation indicates the total number of people affected by a certain disaster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#countOfAffectedPopulation">http://observedchange.com/moac/ns#countOfAffectedPopulation</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="362" align="left"><a href="#AffectedPopulation">moac:AffectedPopulation </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#AffectedPopulation"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	   <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#int"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="countofAffectedHH" about="http://observedchange.com/moac/ns#countofAffectedHH" typeof="owl:DataProperty">
+  <h3>Property: countofAffectedHH</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="countofAffectedHH" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">countofAffectedHH indicates total number of House Holds affected by a certain disaster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#countofAffectedHH">http://observedchange.com/moac/ns#countofAffectedHH</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="414" align="left"><a href="#AffectedPopulation">moac:AffectedPopulation </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#AffectedPopulation"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	   <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#int"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+
+<div class="specterm" id="clusterActivity " about="http://observedchange.com/moac/ns#clusterActivity " typeof="owl:DataProperty">
+
+  <h3>Property: clusterActivity </h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="atLocation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">clusterActivity is a property to relate humanitarian Clusters with ongoing humanitarian response to meet the needs of affected population. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="83">Identifier:</th>
+      <td width="432"><a href="http://observedchange.com/moac/ns#atLocation">http://observedchange.com/moac/ns#clusterActivity </a></td>
+      </tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#IASCCluster">moac:IASCCluster</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#IASCCluster"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	 <td><a href="#NeedsResponse3W">moac:NeedsResponse3W</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#NeedsResponse3W"></div></td> </tr>
+    </tbody>
+  </table>
+
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="countInStock" about="http://observedchange.com/moac/ns#countInStock" typeof="owl:DataProperty">
+  <h3>Property: countInStock</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="countInStock" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">countInStock indicates the number of items currently stockpiled either at a store or at a distribution location.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#countInStock">http://observedchange.com/moac/ns#countInStock</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="290" align="left"><a href="#ShelterNFIItems">moac:ShelterNFIItems </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterNFIItems"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#int"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="countInPipeline" about="http://observedchange.com/moac/ns#countInPipeline" typeof="owl:DataProperty">
+  <h3>Property: countInPipeline</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="countInPipeline" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">countInPipeline indicates the number of relief items that are &quot;in the process&quot; of arriving from a different location.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#countInPipeline">http://observedchange.com/moac/ns#countInPipeline</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="290" align="left"><a href="#ShelterNFIItems">moac:ShelterNFIItems </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterNFIItems"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#int"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="dateOfDistbn" about="http://observedchange.com/moac/ns#dateOfDistbn" typeof="owl:DataProperty">
+  <h3>Property: dateOfDistbn</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="dateOfDistbn" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">dateOfDistbn indicates a particular date when shelter/NFI items are distributed.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#dateOfDistbn">http://observedchange.com/moac/ns#dateOfDistbn</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="290" align="left"><a href="#When3W">moac:When3W </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#When3W"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a><div rel="rdfs:range" resource="http://purl.org/dc/elements/1.1/date"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="distributingPartner" about="http://observedchange.com/moac/ns#distributingPartner" typeof="owl:DataProperty">
+  <h3>Property: distributingPartner</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="distributingPartner" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">distributingPartner indicates the name of an organisation that is responsible to distribute relief items in a disaster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#distributingPartner">http://observedchange.com/moac/ns#distributingPartner</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="290" align="left"><a href="#ShelterAgency">moac:ShelterAgency </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterAgency"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://www.w3.org/2000/01/rdf-schema#Literal">xsd:literal</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#Literal"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="has3Wcomponent" about="http://observedchange.com/moac/ns#has3Wcomponent" typeof="owl:DataProperty">
+  <h3>Property: has3Wcomponent</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="has3Wcomponent" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">has3Wcomponent indicates the four saparate components of 3W i.e  Who What Where and When.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#has3Wcomponent">http://observedchange.com/moac/ns#has3Wcomponent</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#WhoWhatWhere3W">moac:WhoWhatWhere3W</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#WhoWhatWhere3W"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#WhoWhatWhere3W">moac:WhoWhatWhere3W</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#WhoWhatWhere3W"></div></td>
+	  </tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<div class="specterm" id="hasOrganisationID" about="http://observedchange.com/moac/ns#hasOrganisationID" typeof="owl:DataProperty">
+  <h3>Property: hasOrganisationID</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="hasOrganisationID" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasOrganisationID is a unique identification number given to relief agency.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#hasOrganisationID">http://observedchange.com/moac/ns#hasOrganisationID</a></td></tr>
+      <tr><th>Domain:</th>
+      <td width="112"><a href="#Who3W">moac:Who3W</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#moac:Who3W"></div></td>
+	  <td width="290" align="left"><a href="#ShelterAgency">moac:ShelterAgency </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterAgency"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href=http://www.w3.org/2001/XMLSchema#string>xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="hasShelterItems" about="http://observedchange.com/moac/ns#hasShelterItems" typeof="owl:DataProperty">
+  <h3>Property: hasShelterItems</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="hasShelterItems" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasShelterItems indicates the name or a type of shelter related items. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#hasShelterItems">http://observedchange.com/moac/ns#hasShelterItems</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="290" align="left"><a href="#ShelterItems">moac:ShelterItems </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterItems"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#string"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="hasNFIItems" about="http://observedchange.com/moac/ns#hasNFIItems" typeof="owl:DataProperty">
+  <h3>Property: hasNFIItems</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="hasNFIItems" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">hasNFIItems indicates the name or a type of Non Food Items. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#hasNFIItems">http://observedchange.com/moac/ns#hasNFIItems</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="290" align="left"><a href="#NFIItems">moac:NFIItems </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#NFIItems"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#string"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="involvedIn" about="http://observedchange.com/moac/ns#involvedIn" typeof="owl:DataProperty">
+  <h3>Property: involvedIn</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="involvedIn" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">involvedIn indicates the agency that is involved with humanitarian activities/response  in a disaster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="3"><a href="http://observedchange.com/moac/ns#involvedIn">http://observedchange.com/moac/ns#involvedIn</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td colspan="2" align="left"><a href="#ShelterAgency">moac:ShelterAgency </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterAgency"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td width="154"><a href="#ShelterActivity">moac:ShelterActivity </a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterActivity"></div></td>
+	  
+	  <td width="166"><a href="#ShelterResponse">moac:ShelterResponse </a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterResponse"></div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<div class="specterm" id="NFINeededAt" about="http://observedchange.com/moac/ns#NFINeededAt" typeof="owl:DataProperty">
+  <h3>Property: NFINeededAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="NFINeededAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">NFINeededAt relates  &quot;where&quot; Non Food Items response might be necessary.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="3"><a href="http://observedchange.com/moac/ns#NFINeededAt">http://observedchange.com/moac/ns#NFINeededAt</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="395" colspan="2" align="left"><a href="#AffectedPopulation ">moac:AffectedPopulation  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#AffectedPopulation "> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td width="196" align="left"><a href="#Where3W ">moac:Where3W  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#Where3W "> </div></td>
+	  <td width="197" align="left"><a href="http://purl.org/dc/terms/Location ">dc:location  </a></a>
+	    <div rel="rdfs:range" resource="http://purl.org/dc/terms/Location"> </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="organizationName" about="http://observedchange.com/moac/ns#organizationName" typeof="owl:DataProperty">
+  <h3>Property: organizationName</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="organizationName" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">organizationName indicates the name of the organisation for a specific IASC cluster like emergency Shelter cluster or Food Cluster. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#organizationName">http://observedchange.com/moac/ns#organizationName</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="113"><a href="#Who3W">moac:Who3W</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#Who3W"></div></td>
+      
+	  <td width="290" align="left"><a href="#ShelterAgency">moac:ShelterAgency </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterAgency"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="#IASCCluster">moac:IASCCluster</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#IASCCluster"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<div class="specterm" id="shelterOfferedAt" about="http://observedchange.com/moac/ns#shelterOfferedAt" typeof="owl:DataProperty">
+  <h3>Property: shelterOfferedAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="shelterOfferedAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">shelterOfferedAt relates &quot;where&quot; shelter relief agencies provided relief items. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="3"><a href="http://observedchange.com/moac/ns#shelterOfferedAt">http://observedchange.com/moac/ns#shelterOfferedAt</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="395" colspan="2" align="left"><a href="#ShelterAgency ">moac:ShelterAgency  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterAgency "> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td width="196" align="left"><a href="#Where3W ">moac:Where3W  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#Where3W "> </div></td>
+	  <td width="197" align="left"><a href="http://purl.org/dc/terms/Location ">dc:location  </a></a>
+	    <div rel="rdfs:range" resource="http://purl.org/dc/terms/Location"> </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="shelterNeededAt" about="http://observedchange.com/moac/ns#shelterNeededAt" typeof="owl:DataProperty">
+  <h3>Property: shelterNeededAt</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="shelterNeededAt" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">shelterNeededAt relates &quot;where&quot; shelter response might be necessary.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="3"><a href="http://observedchange.com/moac/ns#shelterNeededAt">http://observedchange.com/moac/ns#shelterNeededAt</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="395" colspan="2" align="left"><a href="#AffectedPopulation ">moac:AffectedPopulation  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#AffectedPopulation "> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td width="196" align="left"><a href="#Where3W ">moac:Where3W  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#Where3W "> </div></td>
+	  <td width="197" align="left"><a href="http://purl.org/dc/terms/Location ">dc:location  </a></a>
+	    <div rel="rdfs:range" resource="http://purl.org/dc/terms/Location"> </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="supplyingAgency" about="http://observedchange.com/moac/ns#supplyingAgency" typeof="owl:DataProperty">
+  <h3>Property: supplyingAgency</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="supplyingAgency" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">supplyingAgency indicates the name of an organisation that is responsible to provide  humanitarian relief items. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#supplyingAgency">http://observedchange.com/moac/ns#supplyingAgency</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="112"><a href="#Who3W">moac:Who3W</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#moac:Who3W"></div></td>
+	  <td width="290" align="left"><a href="#ShelterAgency">moac:ShelterAgency </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterAgency"> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href=http://www.w3.org/2001/XMLSchema#string>xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="tentDistbn" about="http://observedchange.com/moac/ns#tentDistbn" typeof="owl:DataProperty">
+  <h3>Property: tentDistbn</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="tentDistbn" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">tentDistbn relates  the amount (count) of shelter items being offered.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#tentDistbn">http://observedchange.com/moac/ns#tentDistbn</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td width="395" align="left"><a href="#ShelterOffered ">moac:ShelterOffered  </a></a>
+	    <div rel="rdfs:range" resource="http://observedchange.com/moac/ns#ShelterOffered "> </div></td>
+      </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://www.w3.org/2001/XMLSchema#int">xsd:int</a><div rel="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#int"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+<!-- End of Shelter Cluster Properties-->
+<h3 id="sec-specification4.5">4.5  Ushahidi Haiti Platform MOAC Classes</h3>
+<div class="specterm" id="AffectedPopulation"
+     about="http://observedchange.com/moac/ns#AffectedPopulation" typeof="owl:Class">
+  <h3>Class: AffectedPopulation</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="AffectedPopulation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">AffectedPopulation is a group of disaster affecgted  people in need of humanitarian support. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#AffectedPopulation">http://observedchange.com/moac/ns#AffectedPopulation</a></td></tr>
+        <tr><th>Properties include :</th><td><a href="#affectedby">affectedby</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="Agency"
+     about="http://observedchange.com/moac/ns#Agency" typeof="owl:Class">
+  <h3>Class: Agency</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Agency" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Agency is an organization that aims to manage a crisis.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Agency">http://observedchange.com/moac/ns#Agency</a></td></tr>
+      <tr><th>Properties include :</th><td><a href="#verified">verified</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="AidManipulation" about="http://observedchange.com/moac/ns#AidManipulation" typeof="owl:Class">
+  <h3>Class: AidManipulation</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="AidManipulation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">AidManipulation.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#AidManipulation">http://observedchange.com/moac/ns#AidManipulation</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="AnimalIllnessOrDeath" about="http://observedchange.com/moac/ns#AnimalIllnessOrDeath" typeof="owl:Class">
+  <h3>Class: AnimalIllnessOrDeath</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="AnimalIllnessOrDeath" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">AnimalIllnessOrDeath   refers to the illness or death of animals caused by a disaster highlighting the possibility of spread of disease because of direct or indirect contamination.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#AnimalIllnessOrDeath">http://observedchange.com/moac/ns#AnimalIllnessOrDeath</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#PublicHealth">PublicHealth</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="AskingToFowardAMessage" about="http://observedchange.com/moac/ns#AskingToFowardAMessage" typeof="owl:Class">
+  <h3>Class: AskingToFowardAMessage</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="AskingToFowardAMessage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">AskingToFowardAMessage 
+      is the term used to forward certain community directed messages using third party sources.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#AskingToFowardAMessage">http://observedchange.com/moac/ns#AskingToFowardAMessage</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ChronicCareNeeds" about="http://observedchange.com/moac/ns#ChronicCareNeeds" typeof="owl:Class">
+  <h3>Class: ChronicCareNeeds</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="ChronicCareNeeds" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ChronicCareNeeds refers 
+      to the requirement of medical care which addresses preexisting or long term 
+      illness.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#ChronicCareNeeds">http://observedchange.com/moac/ns#ChronicCareNeeds</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#PublicHealth">PublicHealth</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="CollapsedStructure" about="http://observedchange.com/moac/ns#CollapsedStructure" typeof="owl:Class">
+  <h3>Class: CollapsedStructure</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="CollapsedStructure" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> A CollapsedStructure 
+      is a term that defines a totally damaged state of a structure resulting from human or natural phenomenon. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#CollapsedStructure">http://observedchange.com/moac/ns#CollapsedStructure</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#InfrastructureDamage">InfrastructureDamage</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="CommunicationLinesDown" about="http://observedchange.com/moac/ns#CommunicationLinesDown" typeof="owl:Class">
+  <h3>Class: CommunicationLinesDown</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="CommunicationLinesDown" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">CommunicationLinesDown 
+      indicates that a mobile or a landline phone in ceratain area will not work because of the problem in the communication wired poles. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#CommunicationLinesDown">http://observedchange.com/moac/ns#CommunicationLinesDown</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#InfrastructureDamage">InfrastructureDamage</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="CompromisedBridge" about="http://observedchange.com/moac/ns#CompromisedBridge" typeof="owl:Class">
+  <h3>Class: CompromisedBridge</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="CompromisedBridge" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">CompromisedBridge is a partially or completely damaged bridge that can no longer be used for transporting people or relief materials. 
+  
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#CompromisedBridge">http://observedchange.com/moac/ns#CompromisedBridge</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#InfrastructureDamage">InfrastructureDamage</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ContaminatedWater" about="http://observedchange.com/moac/ns#ContaminatedWater" typeof="owl:Class">
+  <h3>Class: ContaminatedWater</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="ContaminatedWater" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Undrinkable Water is water that is regarded unfit/unhealthy to drink for both humans 
+      and animals.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#ContaminatedWater">http://observedchange.com/moac/ns#ContaminatedWater</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ContaminatedWaterSupply" about="http://observedchange.com/moac/ns#ContaminatedWaterSupply" typeof="owl:Class">
+  <h3>Class: ContaminatedWaterSupply</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="ContaminatedWaterSupply" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> The source and delivery system provides water but polluted. It could result in outbreaks of diseases and other health realted issues.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#ContaminatedWaterSupply">http://observedchange.com/moac/ns#ContaminatedWaterSupply</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Emergency">Emergency</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Deaths" about="http://observedchange.com/moac/ns#Deaths" typeof="owl:Class">
+  <h3>Class: Deaths</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Deaths" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Deaths are the 
+      termination of the biological functions that sustain a living organism.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Deaths">http://observedchange.com/moac/ns#Deaths</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#NaturalHazards">NaturalHazards</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="EarthquakeAndAftershock" about="http://observedchange.com/moac/ns#EarthquakeAndAftershock" typeof="owl:Class">
+  <h3>Class: EarthquakeAndAftershock</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="EarthquakeAndAftershock" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">An earthquake is the result of a sudden release of energy in the Earth's crust that creates seismic waves, and an aftershock is an earthquake that occurs after a previous earthquake, the mainshock.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#EarthquakeAndAftershock">http://observedchange.com/moac/ns#EarthquakeAndAftershock</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#NaturalHazards">NaturalHazards</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Emergency" about="http://observedchange.com/moac/ns#Emergency" typeof="owl:Class">
+  <h3>Class: Emergency</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Emergency" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Emergency is a situation that poses an immediate crisis to human, 
+      life, health, property or environment.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#Emergency">http://observedchange.com/moac/ns#Emergency</a></td></tr>
+        <tr><th>Has Subclass:</th><td><a href="#Fire">Fire</a></td><td><a href="#PeopleTrapped">PeopleTrapped</a></td><td><a href="#MedicalEmergency">MedicalEmergency</a></td><td><a href="#HighlyVulnerable">HighlyVulnerable</a></td><td><a href="#ContaminatedWaterSupply">ContaminatedWaterSupply</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="FeedingCentersAvailable" about="http://observedchange.com/moac/ns#FeedingCentersAvailable" typeof="owl:Class">
+  <h3>Class: FeedingCentersAvailable</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="FeedingCentersAvailable" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">
+      FeedingCentersAvailable is a term that defines a location of a facility which supports providing basic life saving foods to infants and lactating mothers. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#FeedingCentersAvailable">http://observedchange.com/moac/ns#FeedingCentersAvailable</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="FinancialServicesAvailable" about="http://observedchange.com/moac/ns#FinancialServicesAvailable" typeof="owl:Class">
+  <h3>Class: FinancialServicesAvailable</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="FinancialServicesAvailable" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">
+      FinancialServicesAvailabe refers to services provided by the certain Non Government Organizations or finance industry as a part of recovery packages to the disaster affected communities. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#FinancialServicesAvailable">http://observedchange.com/moac/ns#FinancialServicesAvailable</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Fire" about="http://observedchange.com/moac/ns#Fire" typeof="owl:Class">
+  <h3>Class: Fire</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Fire" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Fire is an uncontrolled burning that has the potential to cause physical damage on human life, health, property or ecology.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Fire">http://observedchange.com/moac/ns#Fire</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#Emergency">Emergency</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Floods" about="http://observedchange.com/moac/ns#Floods" typeof="owl:Class">
+  <h3>Class: Floods</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Floods" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A flood is an 
+      overflow of an expanse of water that submerges land.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Floods">http://observedchange.com/moac/ns#Floods</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#NaturalHazards">NaturalHazards</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="FoodDistributionPoint" about="http://observedchange.com/moac/ns#FoodDistributionPoint" typeof="owl:Class">
+  <h3>Class: FoodDistributionPoint</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="FoodDistributionPoint" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">FoodDistributionPoint 
+      is&nbsp;a pre-identified location for distributing or transporting food or drink to the affected communities.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#FoodDistributionPoint">http://observedchange.com/moac/ns#FoodDistributionPoint</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="FoodShortage" about="http://observedchange.com/moac/ns#FoodShortage" typeof="owl:Class">
+  <h3>Class: FoodShortage</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="FoodShortage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">FoodShortage is a 
+      widespread scarcity of food that may apply to any faunal species.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#FoodShortage">http://observedchange.com/moac/ns#FoodShortage</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="FuelShortage" about="http://observedchange.com/moac/ns#FuelShortage" typeof="owl:Class">
+  <h3>Class: FuelShortage</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="FuelShortage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> FuelShortage is a lack 
+      of minimal cooking or other fuel that a person need on a daily basis.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#FuelShortage">http://observedchange.com/moac/ns#FuelShortage</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="GroupViolence" about="http://observedchange.com/moac/ns#GroupViolence" typeof="owl:Class">
+  <h3>Class: GroupViolence</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="GroupViolence" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">GroupViolence is a term used to describe more than one individual engaging in some form of criminal activities. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#GroupViolence">http://observedchange.com/moac/ns#GroupViolence</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Menaces">Menaces</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="HealthOfWomen" about="http://observedchange.com/moac/ns#HealthOfWomen" typeof="owl:Class">
+  <h3>Class: HealthOfWomen</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="HealthOfWomen" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">HealthOfWomen is a term used to include all the health issues related to female gender. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#HealthOfWomen">http://observedchange.com/moac/ns#HealthOfWomen</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#PublicHealth">PublicHealth</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="HighlyVulnerable" about="http://observedchange.com/moac/ns#HighlyVulnerable" typeof="owl:Class">
+  <h3>Class: HighlyVulnerable</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="MedicalEmergency" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">High possibility of loss resulting from the occurrence of the phenomenon.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#HighlyVulnerable">http://observedchange.com/moac/ns#HighlyVulnerable</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Emergency">Emergency</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="HospitalOperating" about="http://observedchange.com/moac/ns#HospitalOperating" typeof="owl:Class">
+  <h3>Class: HospitalOperating</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="HospitalOperating" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">HospitalOperating describes still functioning hospital after a disaster.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#HospitalOperating">http://observedchange.com/moac/ns#HospitalOperating</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="HumanRemainsManagement" about="http://observedchange.com/moac/ns#HumanRemainsManagement" typeof="owl:Class">
+  <h3>Class: HumanRemainsManagement</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="HumanRemainsManagement" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">HumanRemainsManagement 
+      is an abstract term used to define morgues or other locations where dead bodies can be properlay managed. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#HumanRemainsManagement">http://observedchange.com/moac/ns#HumanRemainsManagement</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="IDPConcentration" about="http://observedchange.com/moac/ns#IDPConcentration" typeof="owl:Class">
+  <h3>Class: IDPConcentration</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="IDPConcentration" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">IDPConcentration refers to the act of internally displaced people gathering in a certain location, which could eventually turn into an IDP camp. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#IDPConcentration">http://observedchange.com/moac/ns#IDPConcentration</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Incident" about="http://observedchange.com/moac/ns#Incident" typeof="owl:Class">
+  <h3>Class: Incident</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Incident" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Incident is a distinct or definite event.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="7"><a href="http://observedchange.com/moac/ns#Incident">http://observedchange.com/moac/ns#Incident</a></td></tr>
+      <tr><th>Properties include:</th><td><a href="#title">title</a></td><td><a href="#date">date</a></td><td><a href="#location">location</a></td><td><a href="#description">description</a></td><td><a href="#category">category</a></td><td><a href="#latitude">latitude</a></td><td><a href="#longitude">longitude</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="InfectiousHumanDisease" about="http://observedchange.com/moac/ns#InfectiousHumanDisease" typeof="owl:Class">
+  <h3>Class: InfectiousHumanDisease</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="InfectiousHumanDisease" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">InfectiousHumanDisease 
+      comprise of clinically evident illness resulting from the infection, presence 
+      and growth of pathogenic biological agents in an individual host organism that could also infect others. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#InfectiousHumanDisease">http://observedchange.com/moac/ns#InfectiousHumanDisease</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#PublicHealth">PublicHealth</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="InfrastructureDamage" about="http://observedchange.com/moac/ns#InfrastructureDamage" typeof="owl:Class">
+  <h3>Class: InfrastructureDamage</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="InfrastructureDamage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> InfrastureDamage is 
+      about the damage of physically existing basic facilities, services, and installations needed for the 
+      functioning of a community or society.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#InfrastructureDamage">http://observedchange.com/moac/ns#InfrastructureDamage</a></td></tr>
+      <tr><th>Has Subclass:</th><td><a href="#CollapsedStructure">CollapsedStructure</a></td><td><a href="#UnstableStructure">UnstableStructure</a></td><td><a href="#RoadBlocked">RoadBlocked</a></td><td><a href="#CompromisedBridge">CompromisedBridge</a></td><td><a href="#CommunicationLinesDown">CommunicationLinesDown</a></td></tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="InternetAccess" about="http://observedchange.com/moac/ns#InternetAccess" typeof="owl:Class">
+  <h3>Class: InternetAccess</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="InternetAccess" xml:lang="en"></div>
+        <p class="TermComment" property="rdfs:comment" xml:lang="en">InternetAccess refers 
+            to certain place that can provide internet services. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#InternetAccess">http://observedchange.com/moac/ns#InternetAccess</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Landslides" about="http://observedchange.com/moac/ns#Landslides" typeof="owl:Class">
+  <h3>Class: Landslides</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Landslides" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A landslide is a geological phenomenon which includes a wide range of ground 
+      movement.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Landslides">http://observedchange.com/moac/ns#Landslides</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#NaturalHazards">NaturalHazards</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Looting" about="http://observedchange.com/moac/ns#Looting" typeof="owl:Class">
+  <h3>Class: Looting</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Looting" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Looting is term that indicate a form of criminal activity when disaster affected people forcefully take away the relief distribution materials.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Looting">http://observedchange.com/moac/ns#Looting</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#Menaces">Menaces</a></td></tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="MedicalEmergency" about="http://observedchange.com/moac/ns#MedicalEmergency" typeof="owl:Class">
+  <h3>Class: MedicalEmergency</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="MedicalEmergency" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A medical emergency is an injury that is acute and poses an immediate risk to a person's life or long term health.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#MedicalEmergency">http://observedchange.com/moac/ns#MedicalEmergency</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Emergency">Emergency</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="MedicalEquipmentAndSupplyNeeds" about="http://observedchange.com/moac/ns#MedicalEquipmentAndSupplyNeeds" typeof="owl:Class">
+  <h3>Class: MedicalEquipmentAndSupplyNeeds</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="MedicalEquipmentAndSupplyNeeds" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">
+      MedicalEquipmentAndSupplyNeeds is a term describe the demand for Medical 
+      Equipment and Supplies.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#MedicalEquipmentAndSupplyNeeds">http://observedchange.com/moac/ns#MedicalEquipmentAndSupplyNeeds</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#PublicHealth">PublicHealth</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Menaces" about="http://observedchange.com/moac/ns#Menaces" typeof="owl:Class">
+  <h3>Class: Menaces</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Menaces" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> A Menace is a threat 
+      or danger that causes intimidation.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#Menaces">http://observedchange.com/moac/ns#Menaces</a></td></tr>
+      <tr><th>Has Subclass:</th><td><a href="#WaterSanitationAndHygienePromotion">WaterSanitationAndHygienePromotion</a></td><td><a href="#Looting">Looting</a></td><td><a href="#TheftOfAid">TheftOfAid</a></td><td><a href="#GroupViolence">GroupViolence</a></td><td><a href="#Riot">Riot</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="MissingPersons" about="http://observedchange.com/moac/ns#MissingPersons" typeof="owl:Class">
+  <h3>Class: MissingPersons</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="MissingPersons" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">MissingPersons are 
+      persons whose whereabouts are unknown after sudden onset of disaster.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#MissingPersons">http://observedchange.com/moac/ns#MissingPersons</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#NaturalHazards">NaturalHazards</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="NaturalHazards" about="http://observedchange.com/moac/ns#NaturalHazards" typeof="owl:Class">
+  <h3>Class: NaturalHazards</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="NaturalHazards" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> NaturalHazards is a 
+      term represent a threat of a naturally occurring event that will have a negative 
+      effect on people or the environment .
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="5"><a href="http://observedchange.com/moac/ns#NaturalHazards">http://observedchange.com/moac/ns#NaturalHazards</a></td></tr>
+      <tr><th>Has Subclass:</th><td><a href="#EarthquakeAndAftershock">EarthquakeAndAftershock</a></td><td><a href="#Deaths">Deaths</a></td><td><a href="#MissingPersons">MissingPersons</a></td><td><a href="#Floods">Floods</a></td><td><a href="#Landslides">Landslides</a></td></tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="NonfoodAidDistributionPoint" about="http://observedchange.com/moac/ns#NonfoodAidDistributionPoint" typeof="owl:Class">
+  <h3>Class: NonfoodAidDistributionPoint</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="NonfoodAidDistributionPoint" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">
+      NonfoodAidDistributionPoint is a location for distributing or transporting life saving Non Food Item other than food items, also known as NFIs in humaniatarian sphere.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#NonfoodAidDistributionPoint">http://observedchange.com/moac/ns#NonfoodAidDistributionPoint</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Others" about="http://observedchange.com/moac/ns#Others" typeof="owl:Class">
+  <h3>Class: Others</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Others" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Others is the class that is used when certain instance does not fit any of the classes. (Source:Ushahidi Haiti)</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Others">http://observedchange.com/moac/ns#Others</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PeopleTrapped" about="http://observedchange.com/moac/ns#PeopleTrapped" typeof="owl:Class">
+  <h3>Class: PeopleTrapped</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PeopleTrapped" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">People found in dangerous stituation might not be able to escape from the place they are.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#PeopleTrapped">http://observedchange.com/moac/ns#PeopleTrapped</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Emergency">Emergency</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PersonsNews" about="http://observedchange.com/moac/ns#PersonsNews" typeof="owl:Class">
+  <h3>Class: PersonsNews</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PersonsNews" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">PersonNews is the 
+      information about a person&#39;s status, e.g. death, injured, alive etc.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#PersonsNews">http://observedchange.com/moac/ns#PersonsNews</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PortOpen" about="http://observedchange.com/moac/ns#PortOpen" typeof="owl:Class">
+  <h3>Class: PortOpen</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PortOpen" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">PortOpen is the term that indicate a port opening of regular business for receiving humanitarian relief materials.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#PortOpen">http://observedchange.com/moac/ns#PortOpen</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PowerOutage" about="http://observedchange.com/moac/ns#PowerOutage" typeof="owl:Class">
+  <h3>Class: PowerOutage</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PowerOutage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A PowerOutage is a term 
+      which refers to electrical power failure, which means a short- or long-term loss 
+      of the electric power to an area.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#PowerOutage">http://observedchange.com/moac/ns#PowerOutage</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PriceGouging" about="http://observedchange.com/moac/ns#PriceGouging" typeof="owl:Class">
+  <h3>Class: PriceGouging</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PriceGouging" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">PriceGouging is a 
+      pejorative term referring to a situation in which a seller prices goods or 
+      commodities much higher than is considered reasonable or fair.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#PriceGouging">http://observedchange.com/moac/ns#PriceGouging</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PsychiatricNeed" about="http://observedchange.com/moac/ns#PsychiatricNeed" typeof="owl:Class">
+  <h3>Class: PsychiatricNeed</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PsychiatricNeed" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">PsychiatricNeed is a 
+      term indicate that people need medical care for mental disorders.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#PsychiatricNeed">http://observedchange.com/moac/ns#PsychiatricNeed</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#PublicHealth">PublicHealth</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="PublicHealth" about="http://observedchange.com/moac/ns#PublicHealth" typeof="owl:Class">
+  <h3>Class: PublicHealth</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="PublicHealth" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> PublicHealth is a term that deals with 
+      overall health related issues, conerns and initiatives for or in a community .
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan ="6"><a href="http://observedchange.com/moac/ns#PublicHealth">http://observedchange.com/moac/ns#PublicHealth</a></td></tr>
+      <tr><th>Has Subclass:</th><td><a href="#MedicalEquipmentAndSupplyNeeds">MedicalEquipmentAndSupplyNeeds</a></td><td><a href="#InfectiousHumanDisease">InfectiousHumanDisease</a></td><td><a href="#ChronicCareNeeds">ChronicCareNeeds</a></td><td><a href="#HealthOfWomen">HealthOfWomen</a></td><td><a href="#PsychiatricNeed">PsychiatricNeed</a></td><td><a href="#AnimalIllnessOrDeath">AnimalIllnessOrDeath</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="Riot" about="http://observedchange.com/moac/ns#Riot" typeof="owl:Class">
+  <h3>Class: Riot</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="Riot" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">A riot is a form of 
+      civil disorder characterized often by disorganized groups lashing out in a 
+      sudden and intense rash of violence against authority, property or people.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#Riot">http://observedchange.com/moac/ns#Riot</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Menaces">Menaces</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="RoadBlocked" about="http://observedchange.com/moac/ns#RoadBlocked" typeof="owl:Class">
+  <h3>Class: RoadBlocked</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="RoadBlocked" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">RoadBlocked indicate a road is blocked by a 
+      barricade caused by natural disaster or set up by human.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#RoadBlocked">http://observedchange.com/moac/ns#RoadBlocked</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#InfrastructureDamage">InfrastructureDamage</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="RubbleRemoval" about="http://observedchange.com/moac/ns#RubbleRemoval" typeof="owl:Class">
+  <h3>Class: RubbleRemoval</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="RubbleRemoval" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">RubbleRemoval is a term 
+      about the agreed upon and systamatic disopsal of of broken stone, of irregular size, shape and texture from a locaktion with totally damaged or partially damaged infrastructures.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#RubbleRemoval">http://observedchange.com/moac/ns#RubbleRemoval</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="SearchAndRescue" about="http://observedchange.com/moac/ns#SearchAndRescue" typeof="owl:Class">
+  <h3>Class: SearchAndRescue</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="SearchAndRescue" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">SearchAndRescue is a part of humanitarian relief effort on the immediate on set of disaster where a team of experts try and locate missing persons. 
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#SearchAndRescue">http://observedchange.com/moac/ns#SearchAndRescue</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="SecurityConcern" about="http://observedchange.com/moac/ns#SecurityConcern" typeof="owl:Class">
+  <h3>Class: SecurityConcern</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="SecurityConcern" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">SecurityConcern is a 
+      abstract term related to the worries of protection against 
+      danger, damage, loss, and criminal activity.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#SecurityConcern">http://observedchange.com/moac/ns#SecurityConcern</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ServiceAvailable" about="http://observedchange.com/moac/ns#ServiceAvailable" typeof="owl:Class">
+  <h3>Class: ServiceAvailable</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="ServiceAvailable" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> ServiceAvailable is an abstract term that indicates availability of different life saving and sustaining services in a disaster struck location/place.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="6"><a href="http://observedchange.com/moac/ns#ServiceAvailable">http://observedchange.com/moac/ns#ServiceAvailable</a></td></tr>
+      <tr><th rowspan="2">Has Subclass:</th><td><a href="#WaterDistributionPoint">WaterDistributionPoint</a></td><td><a href="#FoodDistributionPoint">FoodDistributionPoint</a></td><td colspan="2"><a href="#NonfoodAidDistributionPoint">NonfoodAidDistributionPoint</a></td><td><a href="#RubbleRemoval">RubbleRemoval</a></td><td><a href="#HumanRemainsManagement">HumanRemainsManagement</a></td></tr>
+      <tr><td><a href="#FinancialServicesAvailable">FinancialServicesAvailable</a></td><td><a href="#FeedingCentersAvailable">FeedingCentersAvailable</a></td><td ><a href="#PortOpen">PortOpen</a></td><td><a href="#ShelterOffered">ShelterOffered</a></td><td><a href="#InternetAccess">InternetAccess</a></td><td><a href="#HospitalOperating">HospitalOperating</a></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterNeeded" about="http://observedchange.com/moac/ns#ShelterNeeded" typeof="owl:Class">
+  <h3>Class: ShelterNeeded</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="ShelterNeeded" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterNeeded is a term used to indicate number of emergency life saving basic structures like tents and tarpaulins.
+ </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#ShelterNeeded">http://observedchange.com/moac/ns#ShelterNeeded</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="ShelterOffered" about="http://observedchange.com/moac/ns#ShelterOffered" typeof="owl:Class">
+  <h3>Class: ShelterOffered</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="ShelterOffered" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">ShelterOffered 
+      indicates a location where internally displace people have been offered termporary/transitional shelters.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#ShelterOffered">http://observedchange.com/moac/ns#ShelterOffered</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="TheftOfAid" about="http://observedchange.com/moac/ns#TheftOfAid" typeof="owl:Class">
+  <h3>Class: TheftOfAid</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="TheftOfAid" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">TheftOfAid is a term that indicate a form of criminal activity when unknown person(s) steal the relief distribution materials either from gowdown or relief distribution points.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#TheftOfAid">http://observedchange.com/moac/ns#TheftOfAid</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Menaces">Menaces</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="UnstableStructure" about="http://observedchange.com/moac/ns#UnstableStructure" typeof="owl:Class">
+  <h3>Class: UnstableStructure</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="UnstableStructure" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">UnstableStructure is a 
+      term that describe a partially damaged bulidings/structures which is still standing but uninhabitable.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#UnstableStructure">http://observedchange.com/moac/ns#UnstableStructure</a></td></tr>
+            <tr><th>Subclass of:</th><td><a href="#InfrastructureDamage">InfrastructureDamage</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="UshahidiReport" about="http://observedchange.com/moac/ns#UshahidiReport" typeof="owl:Class">
+  <h3>Class: UshahidiReport</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="UshahidiReport" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">UshahidiReport is a report from Ushahidi, contains simultaneously temporal and geospatial archive of events, based on the local observers' reports.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#UshahidiReport">http://observedchange.com/moac/ns#UshahidiReport</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="VitalLines" about="http://observedchange.com/moac/ns#VitalLines" typeof="owl:Class">
+  <h3>Class: VitalLines</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="VitalLines" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> Vitallines is an abstract 
+term that refer to particulars that could directly impact human lives.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td colspan="7"><a href="http://observedchange.com/moac/ns#VitalLines">http://observedchange.com/moac/ns#VitalLines</a></td></tr>
+      <tr><th>Has Subclass:</th><td><a href="#ContaminatedWater">ContaminatedWater</a></td><td><a href="#WaterShortage">WaterShortage</a></td><td><a href="#PowerOutage">PowerOutage</a></td><td><a href="#ShelterNeeded">ShelterNeeded</a></td><td><a href="#FoodShortage">FoodShortage</a></td><td><a href="#SecurityConcern">SecurityConcern</a></td><td><a href="#FuelShortage">FuelShortage</a></td></tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="WaterSanitationAndHygienePromotion" about="http://observedchange.com/moac/ns#WaterSanitationAndHygienePromotion" typeof="owl:Class">
+  <h3>Class: WaterSanitationAndHygienePromotion</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="WaterSanitationAndHygienePromotion" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en"> 
+      WaterSanitationAndHygienePromotion is a term refers to a concept that improving access to safe water and sanitation facilities leads to healthier families and communities. <a href="http://www.unicef.org/wash/index_43107.html">(UNICEF) </a>
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#WaterSanitationAndHygienePromotion">http://observedchange.com/moac/ns#WaterSanitationAndHygienePromotion</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#Menaces">Menaces</a></td></tr>
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="WaterShortage" about="http://observedchange.com/moac/ns#WaterShortage" typeof="owl:Class">
+  <h3>Class: WaterShortage</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="WaterShortage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Watershortage is a term 
+      used to refer to the situations that water resources can not meet human demand.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#WaterShortage">http://observedchange.com/moac/ns#WaterShortage</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="WaterDistributionPoint" about="http://observedchange.com/moac/ns#WaterDistributionPoint" typeof="owl:Class">
+  <h3>Class: WaterDistributionPoint</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="WaterDistributionPoint" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">WaterDistributionPoint 
+      is a location for distributing or transporting daily water to the disaster affected communities.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#WaterDistributionPoint">http://observedchange.com/moac/ns#WaterDistributionPoint</a></td></tr>
+      <tr><th>Subclass of:</th><td><a href="#ServiceAvailable">ServiceAvailable</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<!-- added here-->
+<div class="specterm" id="WaterShortage" about="http://observedchange.com/moac/ns#WaterShortage" typeof="owl:Class">
+  <h3>Class: WaterShortage</h3>
+
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="WaterShortage" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Watershortage is a term 
+      used to refer to the situations that water resources can not meet human demand.
+</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>identifier:</th><td><a href="http://observedchange.com/moac/ns#WaterShortage">http://observedchange.com/moac/ns#WaterShortage</a></td></tr>
+<tr><th>Subclass of:</th><td><a href="#VitalLines">VitalLines</a></td></tr>
+
+
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<h3 id="sec-specification4.6">4.6 Collection of MOAC Properties</h3>
+<div class="specterm" id="affectedby" about="http://observedchange.com/moac/ns#affectedby" typeof="owl:DataProperty">
+
+  <h3>Property: affectedby</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="affectedby" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">affectedby indicates disaster which has influence on population.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#affectedby">http://observedchange.com/moac/ns#affectedby</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#AffectedPopulation">moac:AffectedPopulation</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#AffectedPopulation"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="#NaturalHazard">moac:NaturalHazard</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#NaturalHazard"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="approved" about="http://observedchange.com/moac/ns#approved" typeof="owl:DataProperty">
+
+  <h3>Property: approved</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="approved" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">approved is a data 
+      property to attest a event or incident or document is true or not.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#approved">http://observedchange.com/moac/ns#approved</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Agency">moac:Agency</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Agency"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#boolean"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="atLocation" about="http://observedchange.com/moac/ns#atLocation" typeof="owl:DataProperty">
+
+  <h3>Property: atLocation</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="atLocation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">atLocation is a data 
+      property to attest agency to a certain location. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#atLocation">http://observedchange.com/moac/ns#atLocation</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Who3W">moac:Who3W</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Who3W"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+	    <div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="atGeoLocationLatitude" about="http://observedchange.com/moac/ns#atGeoLocationLatitude" typeof="owl:DataProperty">
+  <h3>Property: atGeoLocationLatitude</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="atLocation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">atGeoLocationLatitude is a data 
+      property used to link location or &quot;Where&quot; with specific latitude in the form of decimal degree. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#atLocation">http://observedchange.com/moac/ns#atGeoLocationLatitude</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Where3W">moac:Where3W</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Where3W"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a>
+	    <div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#float"></div></td>
+	  </tr>
+      <tr>
+        <th>sameAs</th>
+        <td><a href="http://www.w3.org/2003/01/geo/wgs84_pos#lat" >http://www.w3.org/2003/01/geo/wgs84_pos#lat</a></td>
+      </tr>
+    </tbody>
+</table>
+
+
+<div class="specterm" id="atGeoLocationLongitude" about="http://observedchange.com/moac/ns#atGeoLocationLongitude" typeof="owl:DataProperty">
+
+  <h3>Property: atGeoLocationLongitude</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="atLocation" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">GeoLocationLatitude is a data 
+  property used to link location or &quot;Where&quot; with specific longitude in the form of decimal degree.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#atLocation">http://observedchange.com/moac/ns#atGeoLocationLongitude</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Where3W">moac:Where3W</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Where3W"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a>
+	    <div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#float"></div></td>
+	  </tr>
+      <tr>
+        <th>sameAs</th>
+        <td><a href="http://www.w3.org/2003/01/geo/wgs84_pos#long" >http://www.w3.org/2003/01/geo/wgs84_pos#long</a></td>
+      </tr>
+      </tbody>
+    </table>
+
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="category" about="http://observedchange.com/moac/ns#category" typeof="owl:DataProperty">
+
+  <h3>Property: category</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="title" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">category is about the sort of an incident.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#category">http://observedchange.com/moac/ns#category</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>     
+      <tr><th>Identifier:</th><td><a href="http://rdfs.org/sioc/ns#topic">sioc:topic</a></td></tr>
+
+      <tr><th>Domain:</th>
+	  <td><a href="#Incident">moac:Incident</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Incident"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="date" about="http://observedchange.com/moac/ns#date" typeof="owl:DataProperty">
+  <h3>Property: date</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="date" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">date indicates a particular date. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th width="70">Identifier:</th><td width="290" colspan="2"><a href="http://observedchange.com/moac/ns#date">http://observedchange.com/moac/ns#date</a></td></tr>
+      
+      <tr>
+	  <th>Range:</th>
+	  <td colspan="2"><a href="http://purl.org/dc/elements/1.1/date">http://purl.org/dc/elements/1.1/date</a><div rel="rdfs:range" resource="http://purl.org/dc/elements/1.1/date"></div></td>
+	  </tr>
+    </tbody>
+  </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+
+
+<div class="specterm" id="description" about="http://observedchange.com/moac/ns#description" typeof="owl:DataProperty">
+
+  <h3>Property: description</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="title" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">description is about the content of an incident.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#description">http://observedchange.com/moac/ns#description</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>     
+      <tr><th>Sub Property of:</th><td><a href="http://rdfs.org/sioc/ns#content">sioc:content</a></td></tr>
+
+      <tr><th>Domain:</th>
+	  <td><a href="#Incident">moac:Incident</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Incident"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="impact" about="http://observedchange.com/moac/ns#impact" typeof="owl:DataProperty">
+
+  <h3>Property: impact</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="impact" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Impact is the effect or impression of disaster on population or infrastructure </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td colspan="2"><a href="http://observedchange.com/moac/ns#impact">http://observedchange.com/moac/ns#impact</a></td></tr>
+
+      <tr><th>OWL Type:</th><td colspan="2">DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td colspan="2"><a href="#NaturalHazard">moac:NaturalHazard</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#NaturalHazard"></div></td>
+	  </tr>
+      <tr>
+      <th>Range:</th>
+	  <td><a href="#AffectedPopulation">moac:AffectedPopulation</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#AffectedPopulation"></div></td>
+  <td><a href="#InfrastructureDamage">moac:InfrastructureDamage</a><div rel="rdfs:range" resource="http://observedchange.com/moac/ns#InfrastructureDamage"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+
+<div class="specterm" id="title" about="http://observedchange.com/moac/ns#title" typeof="owl:DataProperty">
+
+  <h3>Property: title</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="title" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Title is an identifying name given to an incident.</p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#title">http://observedchange.com/moac/ns#title</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Sub Property of:</th><td><a href="http://purl.org/dc/elements/1.1/title">http://purl.org/dc/elements/1.1/title</a></td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Incident">moac:Incident</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Incident"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<div class="specterm" id="verified" about="http://observedchange.com/moac/ns#verified" typeof="owl:DataProperty">
+
+  <h3>Property: verified</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="verified" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">verified is a property used in describing if certain information/data has been checked with more than one sources. </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#verified">http://observedchange.com/moac/ns#verified</a></td></tr>
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#Agency">moac:Agency</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#Agency"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td><a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#boolean"></div></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+
+<!-- 
+<div class="specterm" id="impact" about="http://observedchange.com/moac/ns#impact" typeof="owl:DataProperty">
+
+  <h3>Property: impact</h3>
+  <div rel="rdfs:isDefinedBy" resource="http://observedchange.com/moac/ns"></div>
+  <div property="rdfs:label" content="impact" xml:lang="en"></div>
+  <p class="TermComment" property="rdfs:comment" xml:lang="en">Impact is the effect or impression of disaster on population or infrastructure </p>
+  <table style="th { float: top; }">
+    <tbody>
+      <tr><th>Identifier:</th><td><a href="http://observedchange.com/moac/ns#impact">http://observedchange.com/moac/ns#impact</a></td></tr>
+
+      <tr><th>OWL Type:</th><td>DataProperty</td></tr>
+      <tr><th>Domain:</th>
+	  <td><a href="#NaturalHazard">moac:NaturalHazard</a><div rel="rdfs:domain" resource="http://observedchange.com/moac/ns#NaturalHazard"></div></td>
+	  </tr>
+      <tr>
+	  <th>Range:</th>
+	  <td></td>
+	  </tr>
+
+      </tbody>
+    </table>
+  <p style="float: right; font-size: small;">[<a href="#sec-glance">back to overview</a>]</p>
+  <br/>
+</div>
+ -->
+
+<h2 id="sec-ack">5. Acknowledgement</h2>
+<p> I would like to take this opportunity to express my sincere gratitude to my thesis supervisor Dr. Tomi Kauppinen (PhD) from the Institute for Geoinformatics, University of Munster in Germany. His regular and timely inputs during my research tenure have been instrumental towards the completion of this study. A sentence is not enough to summarize how grateful I am to my supervisor and Linked Open Data course coordinator - Dr. Kauppinen for showing me a completely new approach to better facilitate humanitarian information management processes. I have indescribable respect for Prof. Kuhn for his motivational speeches, his inspiring ideas and especially for his support even after being in a sabbatical.  </p>
+<p>My special thanks to PhD candidates Mr. Jens Ortmann and Mr. Dong Wang from the University of Munster in Germany as this research greatly benefited from a jointly co-authored scientific paper on a relevant topic titled <a href="http://ifgi.uni-muenster.de/~j_ortm02/publications/OrtmannetalTC2011.pdf">"Crowdsourcing Linked Open Data for Disaster Management"</a>.</p>
+<p> This vocabulary was prepared with generous contributions of many individuals and organizations that form the humanitarian and global crowdsourcing/volunteering community. In addition to thanking field and headquarter based colleagues from UNOCHA and the Emergency Shelter Cluster, I wish to acknowledge the support and cooperation from Ushahidi Inc, Standby taskforce Committee and Non Governmental Organisations. Sincere acknowledgements are expressed to: Andrej Verity, Andrew Alspach, CJ Hendrix, Cecilia Utas, Craig Williams, Gregg Grimsich, John Marinos, Paul Handley, Wendy Cue from UNOCHA; Neil Bauman, Catherine Lefebvre, Gregg Mcdonald, Miguel Urquia from the Shelter Cluster; Patrick Meier, Rob Baker from Ushahidi Inc.; Christoph Dennenmoser from Humanity Road, Inc. </p>
+
+<h2 id="sec-reference">6. References</h2>
+<p><a href="http://ifgi.uni-muenster.de/~j_ortm02/publications/OrtmannetalTC2011.pdf">"Crowdsourcing Linked Open Data for Disaster Management": </a> For MOAC Vocabulary Revision Version 0.2</p>
+<h2 id="sec-changes">7. Change log</h2>
+
+<ul>
+  <li>2011-05-30: Initial version of the MOAC core vocabulary.</li>
+  <li>2011-11-30: MOAC vocabulary Revision version 0. 2.</li>
+    <li>2012-01-29: MOAC vocabulary Revision version 0. 4.</li>
+</ul>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8367411-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<http://linkeddata.finki.ukim.mk/lod/ontology/cfrl#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+ns1:hasLoan	rdf:type	owl:ObjectProperty .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns4:	<http://www.w3.org/ns/regorg#> .
+ns1:hasLoan	rdfs:domain	ns4:RegisteredOrganization .
+@prefix ns5:	<http://purl.org/linked-data/cube#> .
+ns1:hasLoan	rdfs:range	ns5:Observation ;
+	rdfs:comment	"This property links a Company with a Loan instance." .
+ns1:hasReport	rdf:type	owl:ObjectProperty ;
+	rdfs:domain	ns4:RegisteredOrganization .
+@prefix ns6:	<http://www.xbrlsite.com/2013/FinancialReportOntology#> .
+ns1:hasReport	rdfs:range	ns6:FundamentalAccountingConcept ;
+	rdfs:comment	"This property links a Company with a Financial Report instance." .
+ns5:Observation	rdf:type	owl:Class ;
+	rdfs:label	"Observation" .
+ns4:RegisteredOrganization	rdf:type	owl:Class ;
+	rdfs:label	"Registered Organization" .
+ns6:FundamentalAccountingConcept	rdf:type	owl:Class ;
+	rdfs:label	"Fundamental Accounting Concept" .
+ns1:	rdf:type	owl:Ontology .
+@prefix dct:	<http://purl.org/dc/terms/> .
+ns1:	dct:modified	"2016-08-28" ;
+	rdfs:comment	"The Corporate Financial Reports and Loans Ontology (CFRL)." ;
+	owl:versionInfo	"1.1" ;
+	dct:description	"An ontology for interlinking Companies with their Financial Reports and Loans and Credits." ;
+	dct:contributor	<https://plus.google.com/+MilosJovanovik> ;
+	dct:creator	<https://plus.google.com/+BojanNajdenov> ;
+	dct:issued	"2014-09-01" ;
+	dct:publisher	<http://finki.ukim.mk/> ;
+	dct:title	"Corporate Financial Reports and Loans Ontology" .
+@prefix ns8:	<http://purl.org/vocab/vann/> .
+ns1:	ns8:preferredNamespacePrefix	"cfrl" ;
+	ns8:preferredNamespaceUri	"http://linkeddata.finki.ukim.mk/lod/ontology/cfrl#" .
+@prefix ns9:	<http://creativecommons.org/ns#> .
+ns1:	ns9:license	<https://creativecommons.org/licenses/by/3.0/> ;
+	dct:rights	"Copyright 2014, Bojan Najdenov" .

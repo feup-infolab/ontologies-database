@@ -1,0 +1,453 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix : <http://advene.org/ns/cinelab/ld#> .
+
+@base <http://advene.org/ns/cinelab/ld> .
+
+<> a owl:Ontology, vann:Vocabulary ;
+  dct:title "Cinelab ontology";
+  dct:creator <http://champin.net/#pa> ;
+  dct:contributor <http://olivieraubert.net/foaf.rdf#me>, <https://plus.google.com/104060678282385446773> ;
+  dct:created "2014-03-26T21:31:42CET"; 
+  dct:modified "2015-03-28T19:32:00CET";
+  dct:date     "2015-03-30";
+  rdfs:isDefinedBy <http://advene.org/cinelab/>;
+
+  vann:preferredNamespacePrefix "cl";
+  vann:preferredNamespaceUri "http://advene.org/ns/cinelab/ld#";
+
+  owl:imports <http://www.w3.org/ns/ma-ont>, <http://www.w3.org/ns/oa#>;
+
+  rdfs:comment
+    "This ontology allows to represent in RDF the Cinelab model <http://advene.org/cinelab/>."@en,
+    "Cette ontologie permet de représenter en RDF le modèle Cinelab <http://advene.org/cinelab/>."@fr
+  ;
+
+  dct:description
+    """The Advene project aims at providing a model and various formats to share annotations about digital video documents (movies, courses, conferences...), as well as tools to edit and visualize the hypervideos generated from both the annotations and the audiovisual documents. Teachers, moviegoers, etc. can use them to exchange multimedia comments and analyses about video documents.
+
+The Cinelab model allows not only to represent video annotations, but also an elicitation of their structure (through notions of schema and annotation type), as well as their presentations with views (templates applied on data to produce hypervideos) and queries.
+
+This model has been developed by the partners of the Cinelab project (2007-2008, funded by the french national research agency), and used afterwards in a number of projects and applications, including Advene (LIRIS) and Ligne de temps (IRI)."""@en,
+    """Le projet Advene a pour objectif de fournir un modèle et plusieurs formats de données pour partager des annotations sur des vidéos numériques (films, cours, conférences...), ainsi que des outils pour éditer et visualiser les hypérvidéos générées à partir de ces vidéos et des annotations. Les enseignants, les amateurs de cinéma, etc., peuvent les utiliser pour échanger leurs commentaires et analyse de documents audiovisuels.
+
+Le modèle Cinelab permet non seulement de représenter les annotations vidéos, mais aussi d'expliciter leur structure (à travers les notions de schéma et de type d'annotation), ainsi que leur présentations à l'aide de vues (modèles appliqués aux données pour produire des hypervidéos) et de requêtes.
+
+Ce modèle a été développé par les partenaires du projet Cinelab (2007-2008, financé par l'ANR), et utilisé par la suite dans plusieurs projets et applications, dont Advene (LIRIS) et Ligne de temps (IRI)."""@fr;
+.
+
+
+######## Classes ########
+
+#### Advene2 concepts ####
+
+:Package a rdfs:Class, owl:Class ;
+  rdfs:label "Package"@en, "Recueil"@fr ;
+.
+
+:Element a rdfs:Class, owl:Class ;
+  rdfs:label "Element"@en, "Élément"@fr ;
+.
+
+:Import a rdfs:Class, owl:Class ;
+  rdfs:label "Import"@en, "Import"@fr ;
+  rdfs:subClassOf :Element ;
+.
+
+:Media a rdfs:Class, owl:Class ;
+  rdfs:label "Media"@en, "Média"@fr ;
+  rdfs:subClassOf :Element ;
+.
+
+:Annotation a rdfs:Class, owl:Class ;
+  rdfs:label "Annotation"@en, "Annotation"@fr ;
+  rdfs:subClassOf :Element, :WithContent ;
+.
+
+:Relation a rdfs:Class, owl:Class ;
+  rdfs:label "Relation"@en, "Relation"@fr ;
+  rdfs:subClassOf :Element, :Group, :WithContent ;
+.
+
+:Resource a rdfs:Class, owl:Class ;
+  rdfs:label "Resource"@en, "Ressource"@fr ;
+  rdfs:subClassOf :Element, :WithContent ;
+.
+
+:Query a rdfs:Class, owl:Class ;
+  rdfs:label "Query"@en, "Requête"@fr ;
+  rdfs:subClassOf :Element, :Pipe, :WithContent ;
+.
+
+:View a rdfs:Class, owl:Class ;
+  rdfs:label "View"@en, "Vue"@fr ;
+  rdfs:subClassOf :Element, :Pipe, :WithContent ;
+.
+
+:List a rdfs:Class, owl:Class ;
+  rdfs:label "List"@en, "Liste"@fr ;
+  rdfs:subClassOf :Element, :Group ;
+.
+
+:Tag a rdfs:Class, owl:Class ;
+  rdfs:label "Tag"@en, "Tag"@fr ;
+  rdfs:subClassOf :Element, :Group ;
+.
+
+
+:Group a rdfs:Class, owl:Class ;
+  rdfs:label "Group"@en, "Groupe"@fr ;
+  rdfs:comment "Aspect of all elements acting as collections of other elements"@en ;
+.
+
+:Pipe a rdfs:Class, owl:Class ;
+  rdfs:label "Pipe"@en, "Tube"@fr ;
+  rdfs:comment "Aspect of all elements able to transform other elements"@en ;
+.
+
+:WithContent a rdfs:Class, owl:Class ;
+  rdfs:label "With Content"@en, "Ayant un Contenu"@fr ;
+  rdfs:comment "Aspect of all elements supporting the :hasContent property"@en ;
+.
+
+:Content a rdfs:Class, owl:Class ;
+  rdfs:label "Content"@en, "Contenu"@fr ;
+.
+
+:Test a rdfs:Class, owl:Class ;
+  rdfs:label "Test"@en, "Test"@fr ;
+  rdfs:subClassOf :View ;
+.
+
+:FrameOfReference a rdfs:Class, owl:Class ;
+  rdfs:label "Frame of Reference"@en, "Référenciel"@fr ;
+.
+
+#### Cinelab concepts ####
+
+:UserList a rdfs:Class, owl:Class ;
+  rdfs:label "User List"@en, "Liste Utilisateur"@fr ;
+  rdfs:subClassOf :List ;
+.
+
+:UserTag a rdfs:Class, owl:Class ;
+  rdfs:label "User Tag"@en, "Tag Utilisateur"@fr ;
+  rdfs:subClassOf :Tag ;
+.
+
+:AnnotationType a rdfs:Class, owl:Class ;
+  rdfs:label "Annotation Type"@en, "Type d'Annotation"@fr ;
+  rdfs:subClassOf :Tag ;
+.
+
+:RelationType a rdfs:Class, owl:Class ;
+  rdfs:label "Relation Type"@en, "Type de Relation"@fr ;
+  rdfs:subClassOf :Tag ;
+.
+
+:Schema a rdfs:Class, owl:Class ;
+  rdfs:label "Schema"@en, "Schéma"@fr ;
+  rdfs:subClassOf :List ;
+.
+
+
+######## :Package properties ########
+
+# the URI identifying the package is guessed
+# from its attribute 'uri', else from its attribute 'url'.
+
+:hasElement a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has element"@en, "a pour élément"@fr ;
+  rdfs:domain :Package ;
+  rdfs:range :Element ;
+.
+
+# if the 'url' attribute is different from the URI identifying the package,
+# then the :url property below is used.
+
+:url a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "URL"@en, "URL"@fr ;
+  rdfs:domain :Package ;
+  rdfs:range xsd:anyURI ;
+.
+
+######## :Element properties ########
+
+# when only one from :hasElement / :hasPackage is used,
+# prefer :hasElement.
+
+:hasPackage a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has package"@en, "a pour recueil"@fr ;
+  owl:inverseOf :hasElement ;
+  rdfs:domain :Element ;
+  rdfs:range :Package ;
+.
+
+:taggedWith a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "tagged with"@en, "tagué avec"@fr ;
+  rdfs:domain :Element ;
+  rdfs:range :Tag ;
+.
+
+######## :Import properties ########
+
+:hasImportedPackage a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has imported package"@en, "a pour recueil importé"@fr ;
+  rdfs:domain :Import ;
+  rdfs:range :Package ;
+.
+
+# the 'url' attribute of an Import, if different from its 'uri',
+# is represented by the :url property of its Package
+# (i.e. the objectof the :hasImportedPackage property)
+
+# The :imports property below can also be used to declare an import directly
+# between the importer package and the imported package.
+# This can be used *without* a corresponding :Import element,
+# but in that case, no identifier or metadata can be conveyed
+# for that semi-implicit import.
+
+:imports a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "imports"@en, "importe"@fr ;
+  rdfs:domain :Package ;
+  rdfs:range :Package ;
+.
+
+
+######## :Media properties ########
+
+# the URI used as the object of :represents below is guessed
+# from the 'uri' attribute of the Media element, else from its 'url' attribute.
+
+:represents a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "represents"@en, "représente"@fr ;
+  rdfs:domain :Media ;
+  rdfs:range ma:MediaResource ;
+.
+
+# the 'url' attribute of a Media, if different from its 'uri',
+# is represented by the ma:locator property of its MediaResource
+# (i.e. the objectof the :represents property).
+
+
+:hasFrameOfReference a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has frame of reference"@en, "a pour référenciel"@fr ;
+  rdfs:domain :Media ;
+  rdfs:range :FrameOfReference ;
+.
+# if omitted, can be assumed to be { unit = ms, origin = 0 }
+
+
+######## :Annotation properties ########
+
+:hasFragment a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has fragment"@en, "a pour fragment"@fr ;
+  rdfs:domain :Annotation ;
+  rdfs:range ma:MediaFragment ;
+.
+
+:hasAType a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label "has annotation type"@en, "a pour type d'annotation"@fr ;
+  rdfs:subPropertyOf :taggedWith ;
+  rdfs:domain :Annotation ;
+  rdfs:range :AnnotationType ;
+.
+
+# "All annotations in a Cinelab Package must have at least 1 annotation type"
+:Package rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty :hasElement ;
+  owl:allValuesFrom [ owl:unionOf (
+    [
+      owl:complementOf :Annotation ;
+    ]
+    [
+      a owl:Restriction ;
+      owl:onProperty :hasAType ;
+      owl:someValuesFrom owl:Thing ;
+    ]
+  )] ;
+].
+
+
+######## ma:MediaFragment properties ########
+
+:hasMediaElement a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has media element"@en, "a pour élément média"@fr ;
+  rdfs:domain ma:MediaFragment ;
+  rdfs:range :Media ;
+.
+
+:begin a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "has begin"@en, "a pour début"@fr ;
+  rdfs:comment "Start-time of the fragment, in milliseconds."@en ;
+  rdfs:domain ma:MediaFragment ;
+  rdfs:range xsd:integer ;
+.
+
+:end a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "has end"@en, "a pour fin"@fr ;
+  rdfs:comment "End-time of the fragment, in milliseconds."@en ;
+  rdfs:domain ma:MediaFragment ;
+  rdfs:range xsd:integer ;
+.
+
+
+######## :Relation properties ########
+
+:hasRType a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label "has relation type"@en, "a pour type d'relation"@fr ;
+  rdfs:subPropertyOf :taggedWith ;
+  rdfs:domain :Relation ;
+  rdfs:range :RelationType ;
+.
+
+# "All relations in a Cinelab Package must have at least 1 relation type"
+:Package rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty :hasElement ;
+  owl:allValuesFrom [ owl:unionOf (
+    [
+      owl:complementOf :Relation ;
+    ]
+    [
+      a owl:Restriction ;
+      owl:onProperty :hasRType ;
+      owl:someValuesFrom owl:Thing ;
+    ]
+  )] ;
+].
+
+# Relation types can also be used as properties between two :Annotation's
+# to declare a binary relation of that type directly.
+# This can be used *without* a corresponding :Relation element,
+# but in that case, no identifier, content or metadata can be conveyed
+# for that semi-implicit relation.
+
+:hasMembers a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has members"@en, "a pour membres"@fr ;
+  rdfs:domain :Relation ;
+  rdfs:range rdf:List ;
+.
+# implicit restrictions: members of a :Relation must be :Annotation's
+
+
+######## :List properties ########
+
+:hasItems a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has items"@en, "a pour éléments"@fr ;
+  rdfs:domain :List ;
+  rdfs:range rdf:List ;
+.
+# implicit restrictions:
+# - items of a :List must be :Element's
+# - items of a :Schema must be :AnnotationType's or :RelationType's
+
+
+######## :WithContent properties ########
+
+:hasContent a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label "has content"@en, "a pour contenu"@fr ;
+  rdfs:domain :WithContent ;
+  rdfs:range :Content ;
+.
+
+# every instance of :WithContent must have at least one content
+:WithContent rdfs:subClassOf [
+   a owl:Restriction ;
+   owl:onProperty :hasContent ;
+   owl:someValuesFrom owl:Thing ;
+].
+
+
+######## :Content properties ########
+
+:mimeType a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "has MIME type"@en, "a pour type MIME"@fr ;
+  rdfs:domain :Content ;
+  rdfs:range xsd:string ;
+.
+
+:data a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "has value"@en, "a pour valeur"@fr ;
+  rdfs:domain :Content ;
+  rdfs:range xsd:string ;
+  rdfs:seeAlso <#base64> ;
+.
+
+:hasModel a rdf:Property, owl:ObjectProperty ;
+  rdfs:label "has content model"@en, "a pour modèle de contenu"@fr ;
+  rdfs:domain :Content ;
+  rdfs:range :Resource ;
+.
+
+
+######## Datatypes ########
+
+:base64 a rdfs:Datatype ;
+  rdfs:label "base64 encoded data"@en, "données encodées en base64"@fr ;
+  rdfs:comment "A literal datatype to represent base64-encoded binary data."@en ;
+  rdfs:seeAlso <#data> ;
+.
+
+######## Mapping with OpenAnnotation ########
+
+:Annotation rdfs:subClassOf oa:Annotation .
+:hasFragment rdfs:subPropertyOf oa:hasTarget .
+:hasAnnotationContent rdfs:subPropertyOf oa:hasBody .
+
+# :hasAnnotationContent is the restriction of :hasContent for annotations
+:hasAnnotationContent a owl:ObjectProperty ;
+    rdfs:subPropertyOf :hasContent ;                       
+    rdfs:domain :Annotation .
+# an :Annotation must have an :hasAnnotationContent
+:Annotation rdfs:subClassOf [
+   a owl:Restriction ;
+   owl:onProperty :hasAnnotationContent ;
+   owl:someValuesFrom owl:Thing ;
+].
+# the axiom above combined with the functionality of :hasContent
+# forces the :hasContent of any :Annotation to be also its :hasAnnotationContent,
+# hence its oa:hasBody (see below).
+
+:Content rdfs:subClassOf cnt:ContentAsText .
+:data rdfs:subPropertyOf cnt:chars .
+:mimeType rdfs:subPropertyOf dc:format .
+
+
+######## Advene2 Metadata ########
+
+# Those properties are not meant to be used explicitly in RDF,
+# but as metadata in the Advene2 meta-model to encode non-temporal dimensions of a fragment.
+
+:fragDimId a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "Fragment Dimension 'id'" ;
+  rdfs:domain :Annotation ;
+  rdfs:comment "This metadata of an annotation encodes the 'id' dimension of its fragment."@en ;
+.
+
+:fragDimTrack a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "Fragment Dimension 'track'" ;
+  rdfs:domain :Annotation ;
+  rdfs:comment "This metadata of an annotation encodes the 'track' dimension of its fragment."@en ;
+.
+
+:fragDimXywh a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label "Fragment Dimension 'xywh'" ;
+  rdfs:domain :Annotation ;
+  rdfs:comment "This metadata of an annotation encodes the 'xywh' dimension of its fragment."@en ;
+.
+
+######## Additional Metadata ########
+
+<http://champin.net/#pa> rdfs:label "Pierre-Antoine Champin" .
+<http://olivieraubert.net/foaf.rdf#me> rdfs:label "Olivier Aubert" .
+<https://plus.google.com/104060678282385446773> rdfs:label "Olivier Aubert" .

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/transform"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+      xmlns:owl="http://www.w3.org/2002/07/owl#"
+      xmlns:dct="http://purl.org/dc/terms/"
+      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+      xmlns:bibo="http://purl.org/ontology/bibo/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:vann="http://purl.org/vocab/vann/"
+      xmlns:acrt="https://privatealpha.com/ontology/certification/1#"
+      version="XHTML+RDFa 1.0" xml:lang="en">
+  <head>
+    <title about="#" property="dct:title">An Agent Certification Ontology</title>
+    <base href="https://privatealpha.com/ontology/certification/1"/>
+    <!--<meta about="#" property="rdfs:label" content="An Agent Certification Ontology"/>-->
+    <meta about="#" property="vann:preferredNamespacePrefix" content="acrt"/>
+    <link about="#" rel="rdfs:isDefinedBy bibo:uri" href="#"/>
+  </head>
+  <body>
+    <h2>An Agent Certification Ontology</h2>
+    <div about="#" typeof="owl:Ontology bibo:Webpage">
+      <dl>
+        <dt>Author</dt>
+        <dd><a rel="external dct:creator" href="http://doriantaylor.com/person/dorian-taylor#me"><span property="foaf:name">Dorian Taylor</span></a></dd>
+        <dt>Created</dt>
+        <dd property="dct:created" datatype="xsd:dateTime" content="2014-01-23T23:40:28Z">January 23, 2014</dd>
+        <!--<dt>Updated</dt>
+        <dd property="2012-12-12T16:04:50-0800">December 12, 2012</dd>-->
+        <dt>Namespace URI</dt>
+        <dd><a href="#">https://privatealpha.com/ontology/certification/1#</a></dd>
+        <dt>Preferred Namespace Prefix</dt>
+        <dd about="#" property="vann:preferredNamespacePrefix">acrt</dd>
+      </dl>
+      <p property="rdfs:comment dct:description">This document specifies a vocabulary for asserting the existence of official endorsements or certifications of <em>agents</em>, such as people and organizations.</p>
+      <p>While there are plenty of linked data vocabularies for <a rel="external rdfs:seeAlso" href="http://creativecommons.org/ns">expressing licensing rights</a> on intellectual property, as well as those for <a rel="external rdfs:seeAlso" href="http://www.w3.org/ns/auth/cert">cryptographic certificates</a>, as <em>well</em> as <a rel="external rdfs:seeAlso" href="http://www.w3.org/TR/vocab-adms/">methods of referencing catalogues</a> <em>of</em> private and government certifications, <em>as <strong>well</strong></em> as ways of <a rel="external rdfs:seeAlso" href="http://www.w3.org/community/odrl/two/model/">expressing the <em>privileges</em></a> of certifications, there appears to be no other concise way to say something like the following:</p>
+      <blockquote>
+        <p>I have been granted a passport, by the government of Canada, with the number XY123456, issued on October 16, 2010, which expires on October 16, 2015.</p>
+      </blockquote>
+      <p>Here is the same assertion expressed in <a rel="external" href="http://www.w3.org/TR/turtle/">Turtle</a> using the proposed vocabulary:</p>
+      <blockquote>
+        <pre>&lt;http://doriantaylor.com/data/passport&gt; a acrt:Certification;
+    acrt:qualification &lt;http://dbpedia.org/page/Category:Passports&gt;;
+    acrt:authority &lt;http://www.ppt.gc.ca/&gt;;
+    acrt:principal &lt;http://doriantaylor.com/person/dorian-taylor#me&gt;;
+    # (never do this for real, at least for public consumption)
+    acrt:proof &lt;http://doriantaylor.com/file/my-passport.jpeg&gt;;
+    dct:coverage &lt;http://dbpedia.org/page/Canada&gt;;
+    dct:identifier "XY123456"^^xsd:string;
+    dct:issued "2010-10-16"^^xsd:date;
+    dct:valid "2015-10-16"^^xsd:date .
+</pre>
+      </blockquote>
+      <p property="skos:editorialNote">Note that this assertion says only in <em>informal</em> terms what the certification is, and what it allows me to do. This vocabulary is intended neither to describe the privileges granted by the certification, nor to describe the artifact that embodies the certification. It simply connects the subject of the certification to the issuing authority and their official serial number of the account.</p>
+      <p>I chose a passport for the example because it is about as banal as a certification gets: it merely certifies that I am who I say I am and that I am a Canadian citizen. This vocabulary could be used equally for drivers' licenses, business licenses, fishing licenses, dog licenses, etc., as it is intended only to encode and store a hint that such certification exists. It is also intended to be used for encoding achievements, awards, academic degrees, and public and private training certificates. It even could be used to convey information about reputation points on social networks or services like <a rel="external" href="http://openbadges.org/">Mozilla Open Badges</a>.</p>
+      <p property="skos:scopeNote">The purpose of this vocabulary is record-keeping and exchange, and likewise is its application context. The actual vetting mechanisms of the certifications in question are out of scope.</p>
+    </div>
+    <div>
+      <h2>Classes</h2>
+      <p>At this time, there is only the single class, <a href="#Certification">Certification</a>.</p>
+      <div id="Certification" about="[acrt:Certification]" typeof="owl:Class">
+        <h4 property="rdfs:label">Certification</h4>
+        <p property="rdfs:comment">This class represents the abstract notion of certification, of an agent, by another agent, that the first agent possesses some property or set of properties implied by the certification, potentially within some spatiotemporal scope, and which may or may not be designated by some identifier.</p>
+        <dl>
+          <!--<dt>Subclass of:</dt>
+          <dd><a rel="external rdfs:subClassOf" href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></dd>
+          <dt>Disjoint with:</dt>
+          <dd><a rel="owl:disjointWith" href="#Position">ibis:Position</a></dd>
+          <dd><a rel="owl:disjointWith" href="#Argument">ibis:Argument</a></dd>
+          -->
+          <dt>Examples:</dt>
+          <dd>
+            <ul>
+              <li property="skos:example">The issuance of a government-regulated privilege, e.g. driver's license</li>
+              <li property="skos:example">The issuance of an academic degree to a particular person</li>
+              <li property="skos:example">An officially-recognized trade qualification, e.g. a welding ticket</li>
+              <li property="skos:example">A mandatory professional status, e.g. bar association membership</li>
+              <li property="skos:example">A private certification of achievement, e.g. CISSP</li>
+              <li property="skos:example">An errors and omissions insurance policy</li>
+              <li property="skos:example">A pet license, where the principal is an animal</li>
+              <li property="skos:example">The notarization of an affadavit</li>
+              <li property="skos:example">An award (e.g. 2014 Nobel Prize in physics)</li>
+              <li>Anything that resembles some entity underwriting some attribute, privilege, skill, achievement, or claim of some other entity.</li>
+            </ul>
+          </dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+    </div>
+    <div>
+      <h2>Properties</h2>
+      <p>Many of the requirements of this vocabulary can be achieved with <a rel="external" href="http://dublincore.org/documents/dcmi-terms/">Dublin Core terms</a>.</p>
+      <ul>
+        <li>For the jurisdiction, use <a rel="external" href="http://purl.org/dc/terms/coverage">dct:coverage</a></li>
+        <li>For the license number, use <a rel="external" href="http://purl.org/dc/terms/identifier">dct:identifier</a></li>
+        <li>For the issue date, use <a rel="external" href="http://purl.org/dc/terms/issued">dct:issued</a></li>
+        <li>For the expiry date, use <a rel="external" href="http://purl.org/dc/terms/valid">dct:valid</a></li>
+      </ul>
+      <p>What follows are terms peculiar to certification itself.</p>
+      <div id="qualification" about="[acrt:qualification]" typeof="owl:ObjectProperty">
+        <h4 property="rdfs:label">qualification</h4>
+        <p property="rdfs:comment">This property specifies what achievement, skill, or fact is being certified.</p>
+        <blockquote class="note">
+          <p property="skos:note">The range of this term is left open, but should probably reference something abstract like a skos:Concept, an org:Role (itself a subclass of skos:Concept), or a skill, such as modeled by the Cognitive Characteristics Ontology.</p>
+        </blockquote>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#Certification">acrt:Certification</a></dd>
+          <!--<dt>Range:</dt>
+          <dd><a rel="external rdfs:range" href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></dd>-->
+          <dt>See also:</dt>
+          <dd><a rel="external rdfs:seeAlso" href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></dd>
+          <dd><a rel="external rdfs:seeAlso" href="http://www.w3.org/TR/vocab-org/#org:Role">org:Role</a></dd>
+          <dd><a rel="external rdfs:seeAlso" href="http://smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html">The Cognitive Characteristics Ontology</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+      <div id="principal" about="[acrt:principal]" typeof="owl:ObjectProperty">
+        <h4 property="rdfs:label">principal</h4>
+        <p property="rdfs:comment">This property specifies who or what agent is being certified.</p>
+        <blockquote class="note">
+          <p property="skos:note">The principal of the certification can be any agent, like a person, company, animal, AI, whatever.</p>
+        </blockquote>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#Certification">acrt:Certification</a></dd>
+          <dt>Range:</dt>
+          <dd><a rel="external rdfs:range" href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></dd>
+          <dt>Inverse of:</dt>
+          <dd><a rel="owl:inverseOf" href="#has-certification">acrt:has-certification</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+      <div id="has-certification" about="[acrt:has-certification]" typeof="owl:ObjectProperty">
+        <h4 property="rdfs:label">has-certification</h4>
+        <p property="rdfs:comment">This property specifies that an agent possesses a given certification.</p>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="external rdfs:domain" href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></dd>
+          <dt>Range:</dt>
+          <dd><a rel="rdfs:range" href="#Certification">acrt:Certification</a></dd>
+          <dt>Inverse of:</dt>
+          <dd><a rel="owl:inverseOf" href="#principal">acrt:principal</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+      <div id="authority" about="[acrt:authority]" typeof="owl:ObjectProperty owl:FunctionalProperty">
+        <h4 property="rdfs:label">authority</h4>
+        <p property="rdfs:comment">This property specifies who (or what) is doing the certifying.</p>
+        <blockquote class="note">
+          <p property="skos:note">The issuing authority can, once again, be a person, business, institution, or any other kind of agent.</p>
+        </blockquote>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#Certification">acrt:Certification</a></dd>
+          <dt>Range:</dt>
+          <dd><a rel="external rdfs:range" href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></dd>
+          <dt>Inverse of:</dt>
+          <dd><a rel="owl:inverseOf" href="#certifies">acrt:certifies</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+      <div id="certifies" about="[acrt:certifies]" typeof="owl:ObjectProperty owl:InverseFunctionalProperty">
+        <h4 property="rdfs:label">certifies</h4>
+        <p property="rdfs:comment">This property specifies that its subject, an agent, has issued a certification.</p>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="external rdfs:domain" href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></dd>
+          <dt>Range:</dt>
+          <dd><a rel="rdfs:range" href="#Certification">acrt:Certification</a></dd>
+          <dt>Inverse of:</dt>
+          <dd><a rel="owl:inverseOf" href="#authority">acrt:authority</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+      <div id="proof" about="[acrt:proof]" typeof="owl:ObjectProperty">
+        <h4 property="rdfs:label">proof</h4>
+        <p property="rdfs:comment">This property points to some proof of the certification, like a scan of an official document or a page on the issuing authority's website that corroborates the certification.</p>
+        <blockquote class="note">
+          <p property="skos:note">The range of this term is left open, but should probably reference a document. It could even point to an actual cryptographic certificate.</p>
+        </blockquote>
+        <dl>
+          <dt>Domain:</dt>
+          <dd><a rel="rdfs:domain" href="#Certification">acrt:Certification</a></dd>
+          <dt>Inverse of:</dt>
+          <dd><a rel="owl:inverseOf" href="#proves">acrt:proves</a></dd>
+          <dt>See also:</dt>
+          <dd><a rel="external rdfs:seeAlso" href="http://www.w3.org/ns/auth/cert">The Cert Ontology</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+      <div id="proves" about="[acrt:proves]" typeof="owl:ObjectProperty">
+        <h4 property="rdfs:label">proves</h4>
+        <p property="rdfs:comment">This property asserts that its subject is somehow proof of a given certification.</p>
+        <dl>
+          <dt>Range:</dt>
+          <dd><a rel="rdfs:range" href="#Certification">acrt:Certification</a></dd>
+          <dt>Inverse of:</dt>
+          <dd><a rel="owl:inverseOf" href="#proof">acrt:proof</a></dd>
+        </dl>
+        <p><a rel="rdfs:isDefinedBy" href="#">Back to Top</a></p>
+      </div>
+    </div>
+    <!--
+    <div>
+      <h2>References</h2>
+      <ul>
+      </ul>
+    </div>-->
+  </body>
+</html>

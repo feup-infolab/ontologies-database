@@ -1,0 +1,22 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+<http://linked.opendata.cz/ontology/ldvm/>	rdf:type	owl:Ontology .
+@prefix ns2:	<http://purl.org/vocommons/voaf#> .
+<http://linked.opendata.cz/ontology/ldvm/>	rdf:type	ns2:Vocabulary .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+<http://linked.opendata.cz/ontology/ldvm/>	dcterms:modified	"2015-02-15+01:00"^^xsd:date ;
+	owl:versionInfo	0.1 .
+@prefix ns5:	<http://purl.org/klimek#> .
+<http://linked.opendata.cz/ontology/ldvm/>	dcterms:creator	ns5:me .
+@prefix ns6:	<http://helmich.cz/#> .
+<http://linked.opendata.cz/ontology/ldvm/>	dcterms:creator	ns6:me ;
+	dcterms:description	"Vocabulary for Linked Data Visualization Model (LDVM) serves for description and configuration of components and pipelines according to LDVM"@en ;
+	dcterms:publisher	<http://opendata.cz> ;
+	dcterms:title	"Vocabulary for Linked Data Visualization Model"@en ;
+	dcterms:issued	"2015-02-15+01:00"^^xsd:date .
+@prefix ns7:	<http://purl.org/vocab/vann/> .
+<http://linked.opendata.cz/ontology/ldvm/>	ns7:preferredNamespacePrefix	"ldvm" ;
+	ns7:preferredNamespaceUri	"http://linked.opendata.cz/ontology/ldvm/" .
+@prefix ns8:	<http://creativecommons.org/ns#> .
+<http://linked.opendata.cz/ontology/ldvm/>	ns8:licence	<http://creativecommons.org/licenses/by/4.0> .

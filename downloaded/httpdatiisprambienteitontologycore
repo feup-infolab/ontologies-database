@@ -1,0 +1,2553 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="custom.css">
+
+<!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+<title>Ispra Core 0.0.1</title><script>var prefix='ispra';var base='http://dati.isprambiente.it/ontology/core#';</script>
+<script>
+var examples={};
+
+</script>
+</head>
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+	<div class="header-container">
+		<header class="wrapper clearfix">
+			<h1 class="title">Ispra Core 0.0.1</h1>
+			<nav>
+				<ul>
+					<li><a href="#classes">Classes</a></li>
+					<li><a href="#object">Object properties</a></li>
+					<li><a href="#datatype">Datatype properties</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<div class="main-container">
+		<div class="main wrapper clearfix">
+			<article>
+				<section><h2>Ispra Core Vocabulary Specification 0.0.1</h2><h3>Versions</h3>
+<p>
+	<strong>This version: </strong> <br /> http://dati.isprambiente.it/ontology/core#
+	(<a href="http://dati.isprambiente.it/ontology/core/ispra-core.0.1.rdf">rdf</a>)
+</p>
+
+<p>
+	<strong>Suggested prefix</strong> <br> ispra <br> <strong>
+		Ontology base </strong> <br> http://dati.isprambiente.it/ontology/core#
+</p>
+
+</section><section><h2>Authors</h2><p>
+<a href="http://www.isprambiente.gov.it/it">ISPRA</a> - Istituto Superiore per la Ricerca e la Protezione Ambientale, <a href="http://www.regesta.com">Regesta.exe</a>.
+<div style="height:45px">
+	<a style="float: left; margin: 8px 15px 15px 0; height: 45px;" href="http://www.isprambiente.gov.it/it"><img style="height: 45px; width: auto;"  src="logo.jpg" /></a> 
+	<a style="float: left; margin: 8px 15px 15px 0;" href="http://regesta.com"><img src="regesta.png" style="height: 45px; width: auto;"  /></a>
+</div>
+</p>
+</section><section><h2>The ontology</h2><p>L'ontologia ISPRA nasce dall'esigenza di pubblicazione dei dataset LOD ed &egrave; finalizzata alla descrizione dei processi e delle attivit&agrave; dell'Istituto negli ambiti circoscritti dai primi dataset pubblicati. 
+Al momento sono descritte in modo analitico le classi e le propriet&agrave; che insistono sul dominio specifico della rete ondametrica nazionale, della rete mareografica, del consumo del suolo e degli interventi di dissesto idrogeologico, 
+ma l'obiettivo &egrave; di estenderla parallelamente alla pubblicazione di nuovi dataset.
+</p>
+
+ 
+</p>
+<h3>License</h3>
+<p>
+	<a style="float: left; margin: 8px 15px 15px 0;" rel="license"
+		href="http://creativecommons.org/licenses/by/4.0/"> <img
+		alt="Licenza Creative Commons"
+		src="http://creativecommons.org/images/deed/by.png" /></a> This work is
+	licensed under a Creative Commons Attribution License. 
+</p></section>
+				<section><h2>Schema</h2><div id="graphImage"><a href="ispra.png"><img src="ispra.png"></a></div></section>
+				<h2 id="classes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oad="http://lod.xdams.org/reload/ocsa#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:viaf="http://viaf.org/ontology/1.1/#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:bio="http://purl.org/vocab/bio/0.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:gn="http://www.geonames.org/ontology#" xmlns:eac-cpf="http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ocd="http://dati.camera.it/ocd/">Classes</h2><table class="quick-reference class">
+<caption></caption>
+<colgroup>
+<col class="quick-ref-key">
+<col class="quick-ref-value">
+</colgroup>
+<tbody>
+<tr>
+<td class="th" colspan="2"><a href="#AirPres" id="AirPres" title="http://dati.isprambiente.it/ontology/core#AirPres" class="namespace">http://dati.isprambiente.it/ontology/core#AirPres</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#AirPres</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Pressione atmosferica</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Atmospheric Pressure</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Meteorologico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Meteorological Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#AirTemp" id="AirTemp" title="http://dati.isprambiente.it/ontology/core#AirTemp" class="namespace">http://dati.isprambiente.it/ontology/core#AirTemp</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#AirTemp</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Temperatura dell'aria</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Air Temperature</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Meteorologico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Meteorological Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Anemometer" id="Anemometer" title="http://dati.isprambiente.it/ontology/core#Anemometer" class="namespace">http://dati.isprambiente.it/ontology/core#Anemometer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Anemometer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Anemometro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Anemometer</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#AuthorityKind" id="AuthorityKind" title="http://dati.isprambiente.it/ontology/core#AuthorityKind" class="namespace">http://dati.isprambiente.it/ontology/core#AuthorityKind</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#AuthorityKind</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Autorit&agrave;</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Authority kind</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Ente coinvolto e funzione svolta.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Involved authorities and role played.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#entity" title="http://dati.isprambiente.it/ontology/core#entity" class="namespace">http://dati.isprambiente.it/ontology/core#entity</a><a href="#isDistrictAuthority" title="http://dati.isprambiente.it/ontology/core#isDistrictAuthority" class="namespace">http://dati.isprambiente.it/ontology/core#isDistrictAuthority</a><a href="#role" title="http://dati.isprambiente.it/ontology/core#role" class="namespace">http://dati.isprambiente.it/ontology/core#role</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#contractingAuthority" title="http://dati.isprambiente.it/ontology/core#contractingAuthority" class="namespace">http://dati.isprambiente.it/ontology/core#contractingAuthority</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Barometer" id="Barometer" title="http://dati.isprambiente.it/ontology/core#Barometer" class="namespace">http://dati.isprambiente.it/ontology/core#Barometer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Barometer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Barometro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Barometer</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Conductivity" id="Conductivity" title="http://dati.isprambiente.it/ontology/core#Conductivity" class="namespace">http://dati.isprambiente.it/ontology/core#Conductivity</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Conductivity</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Conducibilit&agrave;</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Conductivity</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro  di Qualit&agrave;</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Quality Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Contract" id="Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Contract</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Lotto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Contract</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#contractingAuthority" title="http://dati.isprambiente.it/ontology/core#contractingAuthority" class="namespace">http://dati.isprambiente.it/ontology/core#contractingAuthority</a><a href="#hasAgreement" title="http://dati.isprambiente.it/ontology/core#hasAgreement" class="namespace">http://dati.isprambiente.it/ontology/core#hasAgreement</a><a href="#hasEconomicIndicator" title="http://dati.isprambiente.it/ontology/core#hasEconomicIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#hasEconomicIndicator</a><a href="#hasIter" title="http://dati.isprambiente.it/ontology/core#hasIter" class="namespace">http://dati.isprambiente.it/ontology/core#hasIter</a><a href="#isLotOf" title="http://dati.isprambiente.it/ontology/core#isLotOf" class="namespace">http://dati.isprambiente.it/ontology/core#isLotOf</a><a href="#primaryGeographicalFeature" title="http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature" class="namespace">http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature</a><a href="#secondaryGeographicalFeature" title="http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature" class="namespace">http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature</a><a href="#amountFinanced" title="http://dati.isprambiente.it/ontology/core#amountFinanced" class="namespace">http://dati.isprambiente.it/ontology/core#amountFinanced</a><a href="#cup" title="http://dati.isprambiente.it/ontology/core#cup" class="namespace">http://dati.isprambiente.it/ontology/core#cup</a><a href="#officialInstabilityType" title="http://dati.isprambiente.it/ontology/core#officialInstabilityType" class="namespace">http://dati.isprambiente.it/ontology/core#officialInstabilityType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#instabilityRelatedTo" title="http://dati.isprambiente.it/ontology/core#instabilityRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityRelatedTo</a><a href="#isLotOf" title="http://dati.isprambiente.it/ontology/core#isLotOf" class="namespace">http://dati.isprambiente.it/ontology/core#isLotOf</a><a href="#lithologyRelatedTo" title="http://dati.isprambiente.it/ontology/core#lithologyRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#lithologyRelatedTo</a><a href="#lot" title="http://dati.isprambiente.it/ontology/core#lot" class="namespace">http://dati.isprambiente.it/ontology/core#lot</a><a href="#repairRelatedTo" title="http://dati.isprambiente.it/ontology/core#repairRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#repairRelatedTo</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#EconomicIndicator" id="EconomicIndicator" title="http://dati.isprambiente.it/ontology/core#EconomicIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#EconomicIndicator</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#EconomicIndicator</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Indicatore economico</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Economic Indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro del quadro economico del lotto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Parameter of the project economic framework.</td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasEconomicIndicator" title="http://dati.isprambiente.it/ontology/core#hasEconomicIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#hasEconomicIndicator</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Indicator" title="http://dati.isprambiente.it/ontology/core#Indicator" class="namespace">http://dati.isprambiente.it/ontology/core#Indicator</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#GeoFeature" id="GeoFeature" title="http://dati.isprambiente.it/ontology/core#GeoFeature" class="namespace">http://dati.isprambiente.it/ontology/core#GeoFeature</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#GeoFeature</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Elemento geografico</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Geographical feature</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="http://www.geonames.org/ontology#Feature" title="http://www.geonames.org/ontology#Feature" class="namespace">http://www.geonames.org/ontology#Feature</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Hydrometer" id="Hydrometer" title="http://dati.isprambiente.it/ontology/core#Hydrometer" class="namespace">http://dati.isprambiente.it/ontology/core#Hydrometer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Hydrometer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Idrometro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Hydrometer</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#HydrometricLevel" id="HydrometricLevel" title="http://dati.isprambiente.it/ontology/core#HydrometricLevel" class="namespace">http://dati.isprambiente.it/ontology/core#HydrometricLevel</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#HydrometricLevel</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Livello idrometrico</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Hydrometric Level</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Oceanografico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Oceanographic Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Hygrometer" id="Hygrometer" title="http://dati.isprambiente.it/ontology/core#Hygrometer" class="namespace">http://dati.isprambiente.it/ontology/core#Hygrometer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Hygrometer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Igrometro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Hygrometer</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Indicator" id="Indicator" title="http://dati.isprambiente.it/ontology/core#Indicator" class="namespace">http://dati.isprambiente.it/ontology/core#Indicator</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Indicatore</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#IndicatorCollection" id="IndicatorCollection" title="http://dati.isprambiente.it/ontology/core#IndicatorCollection" class="namespace">http://dati.isprambiente.it/ontology/core#IndicatorCollection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#IndicatorCollection</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Collezione di indicatori</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Indicator Collection</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#measurementPeriod" title="http://dati.isprambiente.it/ontology/core#measurementPeriod" class="namespace">http://dati.isprambiente.it/ontology/core#measurementPeriod</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Instability" id="Instability" title="http://dati.isprambiente.it/ontology/core#Instability" class="namespace">http://dati.isprambiente.it/ontology/core#Instability</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Instability</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Dissesto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Instability</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di dissesto indicata in progetto o rilevata in sito.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Type of instability phenomenon shown in the drawings or observed by site visit.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#instabilityRelatedTo" title="http://dati.isprambiente.it/ontology/core#instabilityRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityRelatedTo</a><a href="#instabilityType" title="http://dati.isprambiente.it/ontology/core#instabilityType" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityType</a><a href="#instabilityGroup" title="http://dati.isprambiente.it/ontology/core#instabilityGroup" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityGroup</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Instrument" id="Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#placedOn" title="http://dati.isprambiente.it/ontology/core#placedOn" class="namespace">http://dati.isprambiente.it/ontology/core#placedOn</a><a href="#averagingPeriod" title="http://dati.isprambiente.it/ontology/core#averagingPeriod" class="namespace">http://dati.isprambiente.it/ontology/core#averagingPeriod</a><a href="#directionalResolution" title="http://dati.isprambiente.it/ontology/core#directionalResolution" class="namespace">http://dati.isprambiente.it/ontology/core#directionalResolution</a><a href="#isPrimary" title="http://dati.isprambiente.it/ontology/core#isPrimary" class="namespace">http://dati.isprambiente.it/ontology/core#isPrimary</a><a href="#parameterReported" title="http://dati.isprambiente.it/ontology/core#parameterReported" class="namespace">http://dati.isprambiente.it/ontology/core#parameterReported</a><a href="#sensorModel" title="http://dati.isprambiente.it/ontology/core#sensorModel" class="namespace">http://dati.isprambiente.it/ontology/core#sensorModel</a><a href="#sensorSamplingFrequency" title="http://dati.isprambiente.it/ontology/core#sensorSamplingFrequency" class="namespace">http://dati.isprambiente.it/ontology/core#sensorSamplingFrequency</a><a href="#waveHeightReported" title="http://dati.isprambiente.it/ontology/core#waveHeightReported" class="namespace">http://dati.isprambiente.it/ontology/core#waveHeightReported</a><a href="#wavePeriodReported" title="http://dati.isprambiente.it/ontology/core#wavePeriodReported" class="namespace">http://dati.isprambiente.it/ontology/core#wavePeriodReported</a><a href="#wmoSensorCode" title="http://dati.isprambiente.it/ontology/core#wmoSensorCode" class="namespace">http://dati.isprambiente.it/ontology/core#wmoSensorCode</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#generatedBy" title="http://dati.isprambiente.it/ontology/core#generatedBy" class="namespace">http://dati.isprambiente.it/ontology/core#generatedBy</a><a href="#measuredBy" title="http://dati.isprambiente.it/ontology/core#measuredBy" class="namespace">http://dati.isprambiente.it/ontology/core#measuredBy</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Intervention" id="Intervention" title="http://dati.isprambiente.it/ontology/core#Intervention" class="namespace">http://dati.isprambiente.it/ontology/core#Intervention</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Intervention</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Intervento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Action</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Intervento per la mitigazione del rischio idrogeologico a cui &egrave; assegnato uno specifico finanziamento. Pu&ograve; essere costituito da uno pi&ugrave; lotti.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">A single action, funded under a plan for hydrogeological risk mitigation. It may consist of one or more related projects.</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="http://purl.org/procurement/public-contracts#Contract" title="http://purl.org/procurement/public-contracts#Contract" class="namespace">http://purl.org/procurement/public-contracts#Contract</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Lithology" id="Lithology" title="http://dati.isprambiente.it/ontology/core#Lithology" class="namespace">http://dati.isprambiente.it/ontology/core#Lithology</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Lithology</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Litologia</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Lithology</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipi litologici indicati in progetto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Lithology as stated in the project.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#lithologyRelatedTo" title="http://dati.isprambiente.it/ontology/core#lithologyRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#lithologyRelatedTo</a><a href="#lithologyType" title="http://dati.isprambiente.it/ontology/core#lithologyType" class="namespace">http://dati.isprambiente.it/ontology/core#lithologyType</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#LotStep" id="LotStep" title="http://dati.isprambiente.it/ontology/core#LotStep" class="namespace">http://dati.isprambiente.it/ontology/core#LotStep</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#LotStep</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Passi del lotto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Lot step</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Passo dell'iter di attuazione del progetto.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#hasStep" title="http://dati.isprambiente.it/ontology/core#hasStep" class="namespace">http://dati.isprambiente.it/ontology/core#hasStep</a><a href="#lot" title="http://dati.isprambiente.it/ontology/core#lot" class="namespace">http://dati.isprambiente.it/ontology/core#lot</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#MarineIndicator" id="MarineIndicator" title="http://dati.isprambiente.it/ontology/core#MarineIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#MarineIndicator</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#MarineIndicator</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Indicatore marino</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Marine Indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Indicator" title="http://dati.isprambiente.it/ontology/core#Indicator" class="namespace">http://dati.isprambiente.it/ontology/core#Indicator</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#MeasurementCollection" id="MeasurementCollection" title="http://dati.isprambiente.it/ontology/core#MeasurementCollection" class="namespace">http://dati.isprambiente.it/ontology/core#MeasurementCollection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#MeasurementCollection</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Set di Misure</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Measurement Collection</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Costituisce l'insieme di misure e metadati in un determinato periodo inerenti una grandezza osservata (es. Wind, Wave) in un dato luogo.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Set of measures and metadata in a specified period regarding an observed parameter (eg. Wind, Wave) in a given place</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#certainty" title="http://dati.isprambiente.it/ontology/core#certainty" class="namespace">http://dati.isprambiente.it/ontology/core#certainty</a><a href="#generatedBy" title="http://dati.isprambiente.it/ontology/core#generatedBy" class="namespace">http://dati.isprambiente.it/ontology/core#generatedBy</a><a href="#isDataOf" title="http://dati.isprambiente.it/ontology/core#isDataOf" class="namespace">http://dati.isprambiente.it/ontology/core#isDataOf</a><a href="#measurementPeriod" title="http://dati.isprambiente.it/ontology/core#measurementPeriod" class="namespace">http://dati.isprambiente.it/ontology/core#measurementPeriod</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#MeasureStation" id="MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#MeasureStation</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Stazione di Misura</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Measure Station</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Insieme di strumenti di misura che permettono il monitoraggio in un dato luogo, per un determinato tempo, relativamente ai suoi parametri fondamentali.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Facility with instruments and equipment for monitoring in a given place, for a determined period, relatively to its foundamental parameters.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#hasModel" title="http://dati.isprambiente.it/ontology/core#hasModel" class="namespace">http://dati.isprambiente.it/ontology/core#hasModel</a><a href="#measures" title="http://dati.isprambiente.it/ontology/core#measures" class="namespace">http://dati.isprambiente.it/ontology/core#measures</a><a href="#operationalStatus" title="http://dati.isprambiente.it/ontology/core#operationalStatus" class="namespace">http://dati.isprambiente.it/ontology/core#operationalStatus</a><a href="#typeOfDataStation" title="http://dati.isprambiente.it/ontology/core#typeOfDataStation" class="namespace">http://dati.isprambiente.it/ontology/core#typeOfDataStation</a><a href="#code" title="http://dati.isprambiente.it/ontology/core#code" class="namespace">http://dati.isprambiente.it/ontology/core#code</a><a href="#sigWaveCount" title="http://dati.isprambiente.it/ontology/core#sigWaveCount" class="namespace">http://dati.isprambiente.it/ontology/core#sigWaveCount</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#placedOn" title="http://dati.isprambiente.it/ontology/core#placedOn" class="namespace">http://dati.isprambiente.it/ontology/core#placedOn</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Model" id="Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Model</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Modello</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Model</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di stazione di misura (ispra-core:MeasureStation) in funzione delle sua caratteristiche principali (grandezza, costruzione, ecc.)</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Type of measuring station (ispra-core: Measure Station) including a set of its main characteristics (size, construction, etc.)</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#diameter" title="http://dati.isprambiente.it/ontology/core#diameter" class="namespace">http://dati.isprambiente.it/ontology/core#diameter</a><a href="#hullType" title="http://dati.isprambiente.it/ontology/core#hullType" class="namespace">http://dati.isprambiente.it/ontology/core#hullType</a><a href="#levelling" title="http://dati.isprambiente.it/ontology/core#levelling" class="namespace">http://dati.isprambiente.it/ontology/core#levelling</a><a href="#levellingTime" title="http://dati.isprambiente.it/ontology/core#levellingTime" class="namespace">http://dati.isprambiente.it/ontology/core#levellingTime</a><a href="#location" title="http://dati.isprambiente.it/ontology/core#location" class="namespace">http://dati.isprambiente.it/ontology/core#location</a><a href="#manufacturer" title="http://dati.isprambiente.it/ontology/core#manufacturer" class="namespace">http://dati.isprambiente.it/ontology/core#manufacturer</a><a href="#measurementHeight" title="http://dati.isprambiente.it/ontology/core#measurementHeight" class="namespace">http://dati.isprambiente.it/ontology/core#measurementHeight</a><a href="#mooringType" title="http://dati.isprambiente.it/ontology/core#mooringType" class="namespace">http://dati.isprambiente.it/ontology/core#mooringType</a><a href="#positioningSystem" title="http://dati.isprambiente.it/ontology/core#positioningSystem" class="namespace">http://dati.isprambiente.it/ontology/core#positioningSystem</a><a href="#structure" title="http://dati.isprambiente.it/ontology/core#structure" class="namespace">http://dati.isprambiente.it/ontology/core#structure</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasModel" title="http://dati.isprambiente.it/ontology/core#hasModel" class="namespace">http://dati.isprambiente.it/ontology/core#hasModel</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#MultiParameterProbe" id="MultiParameterProbe" title="http://dati.isprambiente.it/ontology/core#MultiParameterProbe" class="namespace">http://dati.isprambiente.it/ontology/core#MultiParameterProbe</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#MultiParameterProbe</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Sonda Multiparametrica</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Multi Parameter Probe</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Parameter" id="Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Parametro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#measuredBy" title="http://dati.isprambiente.it/ontology/core#measuredBy" class="namespace">http://dati.isprambiente.it/ontology/core#measuredBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#isDataOf" title="http://dati.isprambiente.it/ontology/core#isDataOf" class="namespace">http://dati.isprambiente.it/ontology/core#isDataOf</a><a href="#measures" title="http://dati.isprambiente.it/ontology/core#measures" class="namespace">http://dati.isprambiente.it/ontology/core#measures</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#PH" id="PH" title="http://dati.isprambiente.it/ontology/core#PH" class="namespace">http://dati.isprambiente.it/ontology/core#PH</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#PH</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">PH</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">PH</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro di Qualit&agrave;</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Quality Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Place" id="Place" title="http://dati.isprambiente.it/ontology/core#Place" class="namespace">http://dati.isprambiente.it/ontology/core#Place</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Place</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Luogo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Place</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">TBC</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">TBC</td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#primaryGeographicalFeature" title="http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature" class="namespace">http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature</a><a href="#secondaryGeographicalFeature" title="http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature" class="namespace">http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Redox" id="Redox" title="http://dati.isprambiente.it/ontology/core#Redox" class="namespace">http://dati.isprambiente.it/ontology/core#Redox</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Redox</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Redox</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Redox</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro di Qualit&agrave;</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Quality Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#RelativeHumidity" id="RelativeHumidity" title="http://dati.isprambiente.it/ontology/core#RelativeHumidity" class="namespace">http://dati.isprambiente.it/ontology/core#RelativeHumidity</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#RelativeHumidity</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Umidit&agrave; relativa</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Relative Humidity</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Meteorologico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Meteorological Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Repair" id="Repair" title="http://dati.isprambiente.it/ontology/core#Repair" class="namespace">http://dati.isprambiente.it/ontology/core#Repair</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Repair</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Opera</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Repair</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di opere definite nel progetto .</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Type of protection works.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#repairCategory" title="http://dati.isprambiente.it/ontology/core#repairCategory" class="namespace">http://dati.isprambiente.it/ontology/core#repairCategory</a><a href="#repairRelatedTo" title="http://dati.isprambiente.it/ontology/core#repairRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#repairRelatedTo</a><a href="#repairType" title="http://dati.isprambiente.it/ontology/core#repairType" class="namespace">http://dati.isprambiente.it/ontology/core#repairType</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#SoilUseIndicator" id="SoilUseIndicator" title="http://dati.isprambiente.it/ontology/core#SoilUseIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#SoilUseIndicator</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#SoilUseIndicator</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Indicatore di uso del suolo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Use soil Indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Indicator" title="http://dati.isprambiente.it/ontology/core#Indicator" class="namespace">http://dati.isprambiente.it/ontology/core#Indicator</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Sst" id="Sst" title="http://dati.isprambiente.it/ontology/core#Sst" class="namespace">http://dati.isprambiente.it/ontology/core#Sst</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Sst</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Temperatura Superficiale dell'acqua</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Sea Surface Temperature</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Oceanografico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Oceanographic Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Termometer" id="Termometer" title="http://dati.isprambiente.it/ontology/core#Termometer" class="namespace">http://dati.isprambiente.it/ontology/core#Termometer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Termometer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Termometro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Termometer</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#WaterTemperature" id="WaterTemperature" title="http://dati.isprambiente.it/ontology/core#WaterTemperature" class="namespace">http://dati.isprambiente.it/ontology/core#WaterTemperature</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#WaterTemperature</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Temperatura dell'acqua</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Water Temperature</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Oceanografico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Oceanographic Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Wave" id="Wave" title="http://dati.isprambiente.it/ontology/core#Wave" class="namespace">http://dati.isprambiente.it/ontology/core#Wave</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Wave</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Onda</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Wave</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Oceanografico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Oceanographic Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#WaveGauge" id="WaveGauge" title="http://dati.isprambiente.it/ontology/core#WaveGauge" class="namespace">http://dati.isprambiente.it/ontology/core#WaveGauge</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#WaveGauge</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ondametro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Wave Gauge</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#Wind" id="Wind" title="http://dati.isprambiente.it/ontology/core#Wind" class="namespace">http://dati.isprambiente.it/ontology/core#Wind</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#Wind</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Vento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Wind</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametro Meteorologico</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Meteorological Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr class="block">
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table><h2 id="object">Object Properties</h2><table class="quick-reference object">
+<caption></caption>
+<colgroup>
+<col class="quick-ref-key">
+<col class="quick-ref-value">
+</colgroup>
+<tbody>
+<tr>
+<td class="th" colspan="2"><a href="#belongsTo" id="belongsTo" title="http://dati.isprambiente.it/ontology/core#belongsTo" class="namespace">http://dati.isprambiente.it/ontology/core#belongsTo</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#belongsTo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Appartiene a</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Belongs to</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="http://purl.org/dc/dcmitype/Collection" title="http://purl.org/dc/dcmitype/Collection" class="namespace">http://purl.org/dc/dcmitype/Collection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/ns/org#OrganizationalUnit" title="http://www.w3.org/ns/org#OrganizationalUnit" class="namespace">http://www.w3.org/ns/org#OrganizationalUnit</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#certainty" id="certainty" title="http://dati.isprambiente.it/ontology/core#certainty" class="namespace">http://dati.isprambiente.it/ontology/core#certainty</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#certainty</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Validazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Certainty</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Livello di validazione del dato. Vengono definiti su scala numerica a partire da 0 (dati grezzi). Es. L0, L1, L2, ecc.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Certainty level of the observed data. It is defined as numerical scale starting from 0 (raw data). Eg L0, L1, L2, etc.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasurementCollection" title="http://dati.isprambiente.it/ontology/core#MeasurementCollection" class="namespace">http://dati.isprambiente.it/ontology/core#MeasurementCollection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#contractingAuthority" id="contractingAuthority" title="http://dati.isprambiente.it/ontology/core#contractingAuthority" class="namespace">http://dati.isprambiente.it/ontology/core#contractingAuthority</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#contractingAuthority</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ente legato all'intervento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Contracting authority</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; associa il contratto con un'entit&agrave; generica coinvolta (con un ruolo definito) nel contratto stesso.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects class contract with a generic entity involved, with specific role, in the contract.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#AuthorityKind" title="http://dati.isprambiente.it/ontology/core#AuthorityKind" class="namespace">http://dati.isprambiente.it/ontology/core#AuthorityKind</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#entity" id="entity" title="http://dati.isprambiente.it/ontology/core#entity" class="namespace">http://dati.isprambiente.it/ontology/core#entity</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#entity</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Entit&agrave;</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Entity</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; associa la classe AuthorityKind con l'entit&agrave;.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects class AuthorityKind with the entity.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#AuthorityKind" title="http://dati.isprambiente.it/ontology/core#AuthorityKind" class="namespace">http://dati.isprambiente.it/ontology/core#AuthorityKind</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://purl.org/goodrelations/v1#BusinessEntity" title="http://purl.org/goodrelations/v1#BusinessEntity" class="namespace">http://purl.org/goodrelations/v1#BusinessEntity</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#generatedBy" id="generatedBy" title="http://dati.isprambiente.it/ontology/core#generatedBy" class="namespace">http://dati.isprambiente.it/ontology/core#generatedBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#generatedBy</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Generato da</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Generated by</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Individua lo strumento che ha generato la misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instruments that generate the measure.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasurementCollection" title="http://dati.isprambiente.it/ontology/core#MeasurementCollection" class="namespace">http://dati.isprambiente.it/ontology/core#MeasurementCollection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#hasAgreement" id="hasAgreement" title="http://dati.isprambiente.it/ontology/core#hasAgreement" class="namespace">http://dati.isprambiente.it/ontology/core#hasAgreement</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#hasAgreement</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Has agreement</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Ha un accordo quadro</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Propriet&agrave; che collega il contratto con il decreto di attuazione.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the contract with its framework agreement.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://purl.org/procurement/public-contracts#FrameworkAgreement" title="http://purl.org/procurement/public-contracts#FrameworkAgreement" class="namespace">http://purl.org/procurement/public-contracts#FrameworkAgreement</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#hasEconomicIndicator" id="hasEconomicIndicator" title="http://dati.isprambiente.it/ontology/core#hasEconomicIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#hasEconomicIndicator</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#hasEconomicIndicator</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha indicatori economici</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has economic indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega il contratto agli indicatori economici.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Contract to its Economic Indicator</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#EconomicIndicator" title="http://dati.isprambiente.it/ontology/core#EconomicIndicator" class="namespace">http://dati.isprambiente.it/ontology/core#EconomicIndicator</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#hasIter" id="hasIter" title="http://dati.isprambiente.it/ontology/core#hasIter" class="namespace">http://dati.isprambiente.it/ontology/core#hasIter</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#hasIter</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha iter</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has iter</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega il Contratto con il suo iter burocratico.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the class Contract with its formal procedural steps.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#hasModel" id="hasModel" title="http://dati.isprambiente.it/ontology/core#hasModel" class="namespace">http://dati.isprambiente.it/ontology/core#hasModel</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#hasModel</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha modello di stazione di misura</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has measure station model</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega la Stazione di misura al suo modello.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Measure Station with its model.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#hasStep" id="hasStep" title="http://dati.isprambiente.it/ontology/core#hasStep" class="namespace">http://dati.isprambiente.it/ontology/core#hasStep</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#hasStep</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha passo di iter</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has step</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega il concetto di Iter con i passi relativi</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Concept of the formal procedure with its relative steps.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#LotStep" title="http://dati.isprambiente.it/ontology/core#LotStep" class="namespace">http://dati.isprambiente.it/ontology/core#LotStep</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#instabilityRelatedTo" id="instabilityRelatedTo" title="http://dati.isprambiente.it/ontology/core#instabilityRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityRelatedTo</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#instabilityRelatedTo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Dissesto relativo a</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Instability related to</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega la classe Dissesto al contratto di finanziamento relativo.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the class Instability to the contract.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instability" title="http://dati.isprambiente.it/ontology/core#Instability" class="namespace">http://dati.isprambiente.it/ontology/core#Instability</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#instabilityType" id="instabilityType" title="http://dati.isprambiente.it/ontology/core#instabilityType" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#instabilityType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Tipo di dissesto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Instability type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega la classe Dissesto ad un concetto pi&ugrave; specifico di dissesto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the class Instability to the more specific Concept of instability.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instability" title="http://dati.isprambiente.it/ontology/core#Instability" class="namespace">http://dati.isprambiente.it/ontology/core#Instability</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#isDataOf" id="isDataOf" title="http://dati.isprambiente.it/ontology/core#isDataOf" class="namespace">http://dati.isprambiente.it/ontology/core#isDataOf</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#isDataOf</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Grandezza osservata</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Observed Parameter</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Associa i dati misurati in un determinato periodo a una grandezza (es. Wind, Wave) osservata in un determinato luogo.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the measured data in a given period with an observed parameter (eg. Wind, Wave) in a given place.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasurementCollection" title="http://dati.isprambiente.it/ontology/core#MeasurementCollection" class="namespace">http://dati.isprambiente.it/ontology/core#MeasurementCollection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#isLotOf" id="isLotOf" title="http://dati.isprambiente.it/ontology/core#isLotOf" class="namespace">http://dati.isprambiente.it/ontology/core#isLotOf</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#isLotOf</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">E' lotto di</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is lot of</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega i lotti al contratto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Lot to the Contract.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#iterStepType" id="iterStepType" title="http://dati.isprambiente.it/ontology/core#iterStepType" class="namespace">http://dati.isprambiente.it/ontology/core#iterStepType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#iterStepType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Passi dell'iter</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Iter step type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Elenco dei passi dell'iter previsti per l'attuazione dell'intervento.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#lithologyRelatedTo" id="lithologyRelatedTo" title="http://dati.isprambiente.it/ontology/core#lithologyRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#lithologyRelatedTo</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#lithologyRelatedTo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Litologia collegata a</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Lithology related to</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega la litologia al contratto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Lithology to the Contract.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Lithology" title="http://dati.isprambiente.it/ontology/core#Lithology" class="namespace">http://dati.isprambiente.it/ontology/core#Lithology</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#lithologyType" id="lithologyType" title="http://dati.isprambiente.it/ontology/core#lithologyType" class="namespace">http://dati.isprambiente.it/ontology/core#lithologyType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#lithologyType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Tipo di litologia</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Lithology type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega la litologia allo specifico concetto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Lithology to the specific concept.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Lithology" title="http://dati.isprambiente.it/ontology/core#Lithology" class="namespace">http://dati.isprambiente.it/ontology/core#Lithology</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#lot" id="lot" title="http://dati.isprambiente.it/ontology/core#lot" class="namespace">http://dati.isprambiente.it/ontology/core#lot</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#lot</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Lotto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Lot</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega i singoli passi del contratto al lotto relativo.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the class Lot Step to the contract.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#LotStep" title="http://dati.isprambiente.it/ontology/core#LotStep" class="namespace">http://dati.isprambiente.it/ontology/core#LotStep</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#measuredBy" id="measuredBy" title="http://dati.isprambiente.it/ontology/core#measuredBy" class="namespace">http://dati.isprambiente.it/ontology/core#measuredBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#measuredBy</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Misurato da</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Measured by</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Individua lo strumento presente nella stazione di misura in un determinato luogo che &egrave; in grado di misurare una grandezza (es. Wind, Wave) .</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">It identifies the instrument located in a station in a given place that measures a parameter (eg. Wind, Wave).</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#measures" id="measures" title="http://dati.isprambiente.it/ontology/core#measures" class="namespace">http://dati.isprambiente.it/ontology/core#measures</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#measures</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Misura</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Measures</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Propriet&agrave; che collega la stazione di misura con la grandezza  (es. Wind, Wave) osservata in un determinato luogo.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">It connects the measure station with the observed parameter (eg. Wind, Wave) in a given place.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Parameter" title="http://dati.isprambiente.it/ontology/core#Parameter" class="namespace">http://dati.isprambiente.it/ontology/core#Parameter</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#operationalStatus" id="operationalStatus" title="http://dati.isprambiente.it/ontology/core#operationalStatus" class="namespace">http://dati.isprambiente.it/ontology/core#operationalStatus</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#operationalStatus</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Stato Operativo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Operational Status</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Indica lo stato operativo della stazione di misura (es. Operational, Ceased, ecc.).</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">It indicates the operational status of the measure station (Operational, Ceased, etc.).</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#placedOn" id="placedOn" title="http://dati.isprambiente.it/ontology/core#placedOn" class="namespace">http://dati.isprambiente.it/ontology/core#placedOn</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#placedOn</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Situato in </td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Placed on</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Stazione di misura in cui &egrave; presente lo strumento</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Measure station that includes the instrument.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#primaryGeographicalFeature" id="primaryGeographicalFeature" title="http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature" class="namespace">http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#primaryGeographicalFeature</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Luogo primario</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Primary geographical feature</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Luogo primario legato ad un intervento di dissesto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Primary geographical feature of a Contract</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Place" title="http://dati.isprambiente.it/ontology/core#Place" class="namespace">http://dati.isprambiente.it/ontology/core#Place</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#repairCategory" id="repairCategory" title="http://dati.isprambiente.it/ontology/core#repairCategory" class="namespace">http://dati.isprambiente.it/ontology/core#repairCategory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#repairCategory</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Categoria di opera</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Repair category</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Repair" title="http://dati.isprambiente.it/ontology/core#Repair" class="namespace">http://dati.isprambiente.it/ontology/core#Repair</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#repairGroup" id="repairGroup" title="http://dati.isprambiente.it/ontology/core#repairGroup" class="namespace">http://dati.isprambiente.it/ontology/core#repairGroup</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#repairGroup</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Gruppo di opera</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Repair group</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#repairRelatedTo" id="repairRelatedTo" title="http://dati.isprambiente.it/ontology/core#repairRelatedTo" class="namespace">http://dati.isprambiente.it/ontology/core#repairRelatedTo</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#repairRelatedTo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Opera collegata a</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Repair related to</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega l'opera al contratto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Repair to the Contract.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Repair" title="http://dati.isprambiente.it/ontology/core#Repair" class="namespace">http://dati.isprambiente.it/ontology/core#Repair</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#repairType" id="repairType" title="http://dati.isprambiente.it/ontology/core#repairType" class="namespace">http://dati.isprambiente.it/ontology/core#repairType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#repairType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Tipologia di opera</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Repair type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Questa propriet&agrave; collega l'opera al concetto del vocabolario controllato.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This property connects the Repair to a concept of a specific vocabulary.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Repair" title="http://dati.isprambiente.it/ontology/core#Repair" class="namespace">http://dati.isprambiente.it/ontology/core#Repair</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#secondaryGeographicalFeature" id="secondaryGeographicalFeature" title="http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature" class="namespace">http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#secondaryGeographicalFeature</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Luogo secondario</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Secondary geographical feature</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Luogo secondario legato ad un intervento di dissesto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Secondary geographical feature of a Contract</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Place" title="http://dati.isprambiente.it/ontology/core#Place" class="namespace">http://dati.isprambiente.it/ontology/core#Place</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#typeOfDataStation" id="typeOfDataStation" title="http://dati.isprambiente.it/ontology/core#typeOfDataStation" class="namespace">http://dati.isprambiente.it/ontology/core#typeOfDataStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#typeOfDataStation</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Tipo di stazione di misura</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Type of Data Station</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Type of Data Station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr class="block">
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table><h2 id="datatype">Datatype Properties</h2><table class="quick-reference datatype">
+<caption></caption>
+<colgroup>
+<col class="quick-ref-key">
+<col class="quick-ref-value">
+</colgroup>
+<tbody>
+<tr>
+<td class="th" colspan="2"><a href="#amountFinanced" id="amountFinanced" title="http://dati.isprambiente.it/ontology/core#amountFinanced" class="namespace">http://dati.isprambiente.it/ontology/core#amountFinanced</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#amountFinanced</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Importo finanziato</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Amount financed</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Importo finanziato (in euro)</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Amount financed (in Euros)</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#averagingPeriod" id="averagingPeriod" title="http://dati.isprambiente.it/ontology/core#averagingPeriod" class="namespace">http://dati.isprambiente.it/ontology/core#averagingPeriod</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#averagingPeriod</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Restituzione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Averaging Period</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Frequenza di restituzione del dato (in Minuti o Ore)</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Frequency of final outputs (in Minutes or Hours)</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#code" id="code" title="http://dati.isprambiente.it/ontology/core#code" class="namespace">http://dati.isprambiente.it/ontology/core#code</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#code</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Codice</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Code</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Codice identificativo della stazione individuato da organismi nazionali o internazionali.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">ID code of the measurement station as assigned by national or international organizations.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#cup" id="cup" title="http://dati.isprambiente.it/ontology/core#cup" class="namespace">http://dati.isprambiente.it/ontology/core#cup</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#cup</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Codice Unico di Progetto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Project Unit Code</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">E' costituito da una stringa alfanumerica di 15 caratteri, che accompagna ciascun progetto di investimento pubblico a partire dalla fase formale di assegnazione delle risorse.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">It consists of a string of 15 alphanumeric characters, which accompanies each contract from the stage of formal resource allocation.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#diameter" id="diameter" title="http://dati.isprambiente.it/ontology/core#diameter" class="namespace">http://dati.isprambiente.it/ontology/core#diameter</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#diameter</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Diametro</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Diameter</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Diametro della stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Diameter of the measure station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#directionalResolution" id="directionalResolution" title="http://dati.isprambiente.it/ontology/core#directionalResolution" class="namespace">http://dati.isprambiente.it/ontology/core#directionalResolution</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#directionalResolution</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Risoluzione direzionale</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Directional resolution</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Risoluzione dei parametri direzionali in gradi (360 se Omni-direzionale).</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Directional resolution in degrees (360 if Omni-directional).</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#hullType" id="hullType" title="http://dati.isprambiente.it/ontology/core#hullType" class="namespace">http://dati.isprambiente.it/ontology/core#hullType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#hullType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Scafo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Hull Type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia dello scafo  della stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Hull type of the measure station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#instabilityGroup" id="instabilityGroup" title="http://dati.isprambiente.it/ontology/core#instabilityGroup" class="namespace">http://dati.isprambiente.it/ontology/core#instabilityGroup</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#instabilityGroup</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Raggruppamento di dissesto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Instability group</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instability" title="http://dati.isprambiente.it/ontology/core#Instability" class="namespace">http://dati.isprambiente.it/ontology/core#Instability</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#isDistrictAuthority" id="isDistrictAuthority" title="http://dati.isprambiente.it/ontology/core#isDistrictAuthority" class="namespace">http://dati.isprambiente.it/ontology/core#isDistrictAuthority</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#isDistrictAuthority</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">E' autorit&agrave; di distretto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is district authority</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Booleano che indica se l'autorit&agrave; svolge anche il ruolo di autorit&agrave; di distretto.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Boolean property that states if the authority act as district authority.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#AuthorityKind" title="http://dati.isprambiente.it/ontology/core#AuthorityKind" class="namespace">http://dati.isprambiente.it/ontology/core#AuthorityKind</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#boolean" title="http://www.w3.org/2001/XMLSchema#boolean" class="namespace">http://www.w3.org/2001/XMLSchema#boolean</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#isPrimary" id="isPrimary" title="http://dati.isprambiente.it/ontology/core#isPrimary" class="namespace">http://dati.isprambiente.it/ontology/core#isPrimary</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#isPrimary</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">E' strumento primario</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is primary instruments</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Propriet&agrave; booleana che individua lo strumento primario (TRUE) che restituisce la misura e gli eventuali strumenti secondari (FALSE) utilizzati in caso di malfunzionamenti o per backup e validazione.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Boolean value identifing the primary measuring instrument (TRUE) and any secondary instruments (FALSE) used in case of malfunctions or for backup and validation.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#boolean" title="http://www.w3.org/2001/XMLSchema#boolean" class="namespace">http://www.w3.org/2001/XMLSchema#boolean</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#levelling" id="levelling" title="http://dati.isprambiente.it/ontology/core#levelling" class="namespace">http://dati.isprambiente.it/ontology/core#levelling</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#levelling</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Livellazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Levelling</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di operazioni di livellazione utilizzati per la definizione del livello di riferimento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Levelling activity useful to the definition of the referring level.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#levellingTime" id="levellingTime" title="http://dati.isprambiente.it/ontology/core#levellingTime" class="namespace">http://dati.isprambiente.it/ontology/core#levellingTime</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#levellingTime</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Anno di livellazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Levelling Time</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Anno in cui &egrave; stata effettuata l'operazione di livellazione.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Time (Year) of the levelling activities.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#location" id="location" title="http://dati.isprambiente.it/ontology/core#location" class="namespace">http://dati.isprambiente.it/ontology/core#location</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#location</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Localizzazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Location</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Localizzazione della stazione di misura (nel caso di mareografi &egrave; da intendersi in relazione allo spazio di mare antistante).</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Place in which the station is installed (in the case of tide gauges this place is related to the sea area in front of the station).</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#manufacturer" id="manufacturer" title="http://dati.isprambiente.it/ontology/core#manufacturer" class="namespace">http://dati.isprambiente.it/ontology/core#manufacturer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#manufacturer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Produttore</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Manufacturer</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Produttore e modello della stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Manufacter and model of the measure station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#measurementHeight" id="measurementHeight" title="http://dati.isprambiente.it/ontology/core#measurementHeight" class="namespace">http://dati.isprambiente.it/ontology/core#measurementHeight</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#measurementHeight</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Altezza di misurazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Measurement Height</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Altezza dello strumento rispetto al livello di riferimento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Instrument height above the reference level.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#measurementPeriod" id="measurementPeriod" title="http://dati.isprambiente.it/ontology/core#measurementPeriod" class="namespace">http://dati.isprambiente.it/ontology/core#measurementPeriod</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#measurementPeriod</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Periodo di misurazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Measurement Period</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Intervallo di tempo associato alla misura (Mese-Anno).</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Measurement Period related to the measure (Month-Year).</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#IndicatorCollection" title="http://dati.isprambiente.it/ontology/core#IndicatorCollection" class="namespace">http://dati.isprambiente.it/ontology/core#IndicatorCollection</a><a href="#MeasurementCollection" title="http://dati.isprambiente.it/ontology/core#MeasurementCollection" class="namespace">http://dati.isprambiente.it/ontology/core#MeasurementCollection</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#gYearMonth" title="http://www.w3.org/2001/XMLSchema#gYearMonth" class="namespace">http://www.w3.org/2001/XMLSchema#gYearMonth</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#mooringType" id="mooringType" title="http://dati.isprambiente.it/ontology/core#mooringType" class="namespace">http://dati.isprambiente.it/ontology/core#mooringType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#mooringType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ormeggio</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Mooring Type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di ormeggio della stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Mooring type of the measure station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#officialInstabilityType" id="officialInstabilityType" title="http://dati.isprambiente.it/ontology/core#officialInstabilityType" class="namespace">http://dati.isprambiente.it/ontology/core#officialInstabilityType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#officialInstabilityType</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Dissesto indicato nel decreto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Official instability type</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Tipologia di dissesto indicata nel decreto di finanziamento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Type of instability declared in the decree</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Contract" title="http://dati.isprambiente.it/ontology/core#Contract" class="namespace">http://dati.isprambiente.it/ontology/core#Contract</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#parameterReported" id="parameterReported" title="http://dati.isprambiente.it/ontology/core#parameterReported" class="namespace">http://dati.isprambiente.it/ontology/core#parameterReported</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#parameterReported</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Parametri riportati</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Parameters reported</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Insieme di grandezze osservate dallo strumento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Set of parameters measured by the instrument.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#phase" id="phase" title="http://dati.isprambiente.it/ontology/core#phase" class="namespace">http://dati.isprambiente.it/ontology/core#phase</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#phase</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Fase</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Phase</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#positioningSystem" id="positioningSystem" title="http://dati.isprambiente.it/ontology/core#positioningSystem" class="namespace">http://dati.isprambiente.it/ontology/core#positioningSystem</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#positioningSystem</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Georeferenziazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Positioning System</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Sistemi di georeferenziazione presenti nella stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Positioning System installed on the measure station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#role" id="role" title="http://dati.isprambiente.it/ontology/core#role" class="namespace">http://dati.isprambiente.it/ontology/core#role</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#role</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ruolo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Role</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Ruolo dell'ente nella classe Authority kind</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The role of Entity in Authority kind class.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#AuthorityKind" title="http://dati.isprambiente.it/ontology/core#AuthorityKind" class="namespace">http://dati.isprambiente.it/ontology/core#AuthorityKind</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#sensorModel" id="sensorModel" title="http://dati.isprambiente.it/ontology/core#sensorModel" class="namespace">http://dati.isprambiente.it/ontology/core#sensorModel</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#sensorModel</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Modello del sensore</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Sensor Model</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Modello del sensore/strumento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Sensor/Instrument Model.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#sensorSamplingFrequency" id="sensorSamplingFrequency" title="http://dati.isprambiente.it/ontology/core#sensorSamplingFrequency" class="namespace">http://dati.isprambiente.it/ontology/core#sensorSamplingFrequency</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#sensorSamplingFrequency</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Frequenza di campionamento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Sensor Sampling Frequency</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Frequenza di campionamento dello strumento (in hertz).</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Observation sampling of the instrumen (in hertz).</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#sigWaveCount" id="sigWaveCount" title="http://dati.isprambiente.it/ontology/core#sigWaveCount" class="namespace">http://dati.isprambiente.it/ontology/core#sigWaveCount</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#sigWaveCount</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Conteggio</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Count</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Conteggio delle osservazioni ondametriche nel periodo di funzionamento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Number of wave observations during the operational period.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#MeasureStation" title="http://dati.isprambiente.it/ontology/core#MeasureStation" class="namespace">http://dati.isprambiente.it/ontology/core#MeasureStation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#structure" id="structure" title="http://dati.isprambiente.it/ontology/core#structure" class="namespace">http://dati.isprambiente.it/ontology/core#structure</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#structure</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Struttura</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Structure</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Materiale o tipologia costruttiva della stazione di misura.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Material or building type of the measure station.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Model" title="http://dati.isprambiente.it/ontology/core#Model" class="namespace">http://dati.isprambiente.it/ontology/core#Model</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#waveHeightReported" id="waveHeightReported" title="http://dati.isprambiente.it/ontology/core#waveHeightReported" class="namespace">http://dati.isprambiente.it/ontology/core#waveHeightReported</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#waveHeightReported</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Output di Altezza d'onda</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Wave Height Reported</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametri di altezza d'onda restituiti dallo strumento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Wave height parameters reported by the instrument.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#wavePeriodReported" id="wavePeriodReported" title="http://dati.isprambiente.it/ontology/core#wavePeriodReported" class="namespace">http://dati.isprambiente.it/ontology/core#wavePeriodReported</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#wavePeriodReported</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Output di Periodo dell'onda</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Wave Period Reported</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Parametri di periodo dell'onda restituiti dallo strumento.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Wave period parameters reported by the instrument.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="2"><a href="#wmoSensorCode" id="wmoSensorCode" title="http://dati.isprambiente.it/ontology/core#wmoSensorCode" class="namespace">http://dati.isprambiente.it/ontology/core#wmoSensorCode</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://dati.isprambiente.it/ontology/core#wmoSensorCode</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Wmo Sensor Code</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Wmo Sensor Code</td>
+</tr>
+<tr class="s">
+<td valign="top">status</td><td valign="top">stable</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Associa lo strumento al relativo concept definito da WMO.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">It connects the intrument with the analogous concept as defined by WMO.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instrument" title="http://dati.isprambiente.it/ontology/core#Instrument" class="namespace">http://dati.isprambiente.it/ontology/core#Instrument</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#anyURI" title="http://www.w3.org/2001/XMLSchema#anyURI" class="namespace">http://www.w3.org/2001/XMLSchema#anyURI</a></td>
+</tr>
+<tr class="block">
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+			</article>
+
+			<!-- 			<aside>
+				<h3>aside</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+			</aside> -->
+
+		</div>
+		<!-- #main -->
+		<div class="scrollup">
+			<a href="#top">top</a>
+		</div>
+	</div>
+	<!-- #main-container -->
+
+	<div class="footer-container">
+		<footer class="wrapper">
+			
+			<p class="note">
+				build using owlHtmlGenerator by <a href="http://regesta.com">regesta.exe</a>
+			</p>
+		</footer>
+	</div>
+
+<!-- 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+	</script>
+ -->
+ 	<script src="js/vendor/jquery-1.11.2.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+	<script>
+		(function(b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l;
+			b[l] || (b[l] = function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+			b[l].l = +new Date;
+			e = o.createElement(i);
+			r = o.getElementsByTagName(i)[0];
+			e.src = '//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X', 'auto');
+		ga('send', 'pageview');
+	</script>-->
+</body>
+</html>

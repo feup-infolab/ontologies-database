@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+  <foaf:Organization rdf:about="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control">
+  </foaf:Organization>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamemodel#GameContext">
+  </owl:Class>
+
+  <owl:Ontology rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation">
+  </owl:Ontology>
+
+  <owl:Ontology rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc11:creator>
+      <foaf:Person rdf:about="http://www.oscarrodriguez.me">
+      </foaf:Person>
+    </dc11:creator>
+
+    <dc11:creator>
+      <foaf:Person rdf:about="https://plus.google.com/106595696646939943813">
+      </foaf:Person>
+    </dc11:creator>
+
+    <dc11:description xml:lang="en">This vocabulary is a component of Ludo. It was created to describe and represent the graphical elements of a serious game. It it based on &quot;Game Content Model: An Ontology for Documenting Serious Game Design&quot; by Tang, S et al.</dc11:description>
+    <dc11:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-01</dc11:issued>
+    <dc11:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-08-09</dc11:modified>
+    <dc11:publisher rdf:resource="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/>
+    <dc11:rights xml:lang="en">This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0 .</dc11:rights>
+    <dc11:title xml:lang="en">Ludo - Game Presentation</dc11:title>
+    <ns0:preferredNamespacePrefix>gamepresentation</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://ns.inria.fr/ludo/v1/gamepresentation#</ns0:preferredNamespaceUri>
+    <rdfs:comment xml:lang="en">Given the increasing amount of structured data published on the Web, many possibilities are open for creating new types of games that use resources from the Web of Data. In particular, if we consider the subcategory of Serious Games in which the object of the game is to educate the user through the interactive discovery of real-life concepts (associated to Semantic Web resources), the inclusion of a semantic representation of the user profile and his contextual information becomes an important element to recommend the user more accurate concepts. Ludo is an ontology that allows the creation of Serious Games with those characteristics.</rdfs:comment>
+    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Area">
+    <rdfs:comment xml:lang="en">Represents the area of an element in the display through their height and width</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Area</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Bar">
+    <rdfs:comment xml:lang="en">Component that indicates the remaining value of an attribute. It has a position and an area</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Bar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#FrontEndDisplay"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Counter">
+        <rdfs:comment xml:lang="en">This component uses digits or an icon to display the value or number of an attribute.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+        <rdfs:label xml:lang="en">Counter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#FrontEndDisplay"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointWith rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#Gauge"/>
+        <owl:disjointWith rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MiniMap"/>
+        <ns1:term_status>stable</ns1:term_status>
+      </owl:Class>
+    </owl:disjointWith>
+
+    <owl:disjointWith rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#Gauge"/>
+    <owl:disjointWith rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MiniMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Button">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Button</rdfs:label>
+    <rdfs:comment xml:lang="en">Button</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Checkbox">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Checkbox</rdfs:label>
+    <rdfs:comment xml:lang="en">Checkbox</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#FrontEndDisplay">
+    <rdfs:comment xml:lang="en">Describes a graphical component to notify game players about the parameters in the game world that would affect their game play. It can be a counter, gauge, bar or a mini map</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Front End Display</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent">
+    <rdfs:comment xml:lang="en">Some GUI components used in most software application. Each GUI component has properties such as position, value and visual representation which can be styled accordingly to suit the game theme.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">GUI Component</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MediaComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#GameControlInterface">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Game control interface</rdfs:label>
+    <rdfs:comment xml:lang="en">Game control interface</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#GamePresentation">
+    <rdfs:comment xml:lang="en">A virtual canvas that holds media components and GUI components to form a game menu, a game notification or a cut-scene to present information about the game and allow them to navigate through the game structure.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Game Presentation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamemodel#GameContext"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Gauge">
+    <rdfs:comment xml:lang="en">Represents a recreation of an analogue display. It can be used to represent game time, speed of a game object or even used as a compass to represent direction.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Gauge</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#FrontEndDisplay"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:disjointWith rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MiniMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Graphic">
+    <rdfs:comment xml:lang="en">The graphic in a game loaded from a URI. Additional properties such as position (x, y and z) and area (height and width) are required</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Graphic</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MediaComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#InputEvent">
+    <rdfs:comment xml:lang="en">Each of the hardware interface and GUI has its respective input events.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Input Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#List-box">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">List box</rdfs:label>
+    <rdfs:comment xml:lang="en">List box</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#MediaComponent">
+    <rdfs:comment xml:lang="en">A media component supported in a game sucha as text, graphic, sound and video.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Media Component</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#MiniMap">
+    <rdfs:comment xml:lang="en">Provides the location of specific game objects within a certain proximity</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Mini Map</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#FrontEndDisplay"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#ObjectAttribute">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Object atrribute</rdfs:label>
+    <rdfs:comment xml:lang="en">Object atrribute</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Position">
+    <rdfs:comment xml:lang="en">Represents the coordinates of an element of the game in the display x, y and z</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Position</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamemodel#ObjectAttribute"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Radio-button">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Radio Button</rdfs:label>
+    <rdfs:comment xml:lang="en">Radio Button</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Scrollbar">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Scroll bar</rdfs:label>
+    <rdfs:comment xml:lang="en">Scroll bar</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Sound">
+    <rdfs:comment xml:lang="en">A sound file to be used in the game loaded from a URI.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Sound</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Sound</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MediaComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Tab">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Tab</rdfs:label>
+    <rdfs:comment xml:lang="en">Tab</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Textbox">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Text Box</rdfs:label>
+    <rdfs:comment xml:lang="en">Text Box</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#Video">
+    <rdfs:comment xml:lang="en">A video to be used inside the game, loaded from a URI. Additional properties such as position (x, y and z) and area (height and width) are required</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Video</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MediaComponent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasGUIComponent">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GamePresentation"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has GUI component</rdfs:label>
+    <rdfs:comment xml:lang="en">Has GUI component</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasGUIComponentValue">
+    <rdfs:comment xml:lang="en">Each GUI components have properties such as position, value and visual representation which can be styled accordingly to suit the game theme.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has GUI Component Value</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasGUIControlInterface">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GameControlInterface"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">GUI Control Interface</rdfs:label>
+    <rdfs:comment xml:lang="en">GUI Control Interface</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GUIComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasHeight">
+    <rdfs:comment xml:lang="en">For visual media such as text, graphic and video, additional properties such as position (x, y and z) and area (height and width) are required. Pixels.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#Area"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has height</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasInputEventName">
+    <rdfs:comment xml:lang="en">Each of the hardware interface and GUI has its respective input events. For example, a mouse has input events such as move, roll over, roll out, left button up, left button down, right button up and right button down. Each input event can link to one or more actions depending on the state of the game object.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#InputEvent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has input Event name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasMediaComponent">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#GamePresentation"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has Media Component</rdfs:label>
+    <rdfs:comment xml:lang="en">Has Media Component</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#MediaComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasPosition">
+    <rdfs:comment xml:lang="en">This property relates a GUI component or a Media component object with a position object</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has Position</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#Position"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasURI">
+    <rdfs:comment xml:lang="en">Uniform Resource Identifier</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">URI</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#hasWidth">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#Area"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Has width</rdfs:label>
+    <rdfs:comment xml:lang="en">Has width</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#x">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">X coordinate</rdfs:label>
+    <rdfs:comment xml:lang="en">X coordinate</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#y">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Y coordinate</rdfs:label>
+    <rdfs:comment xml:lang="en">Y coordinate</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/gamepresentation#z">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation#"/>
+    <rdfs:label xml:lang="en">Z coordinate</rdfs:label>
+    <rdfs:comment xml:lang="en">Z coordinate</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+</rdf:RDF>

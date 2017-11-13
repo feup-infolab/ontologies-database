@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:pni="http://data.press.net/ontology/identifier/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://data.press.net/ontology/identifier/">
+        <dcterms:title xml:lang="en">SNaP Identifier Ontology</dcterms:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-21</dcterms:created>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-21</dcterms:modified>
+        <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/" />
+        <rdfs:comment xml:lang="en">The Identifier Ontology models non-RDF based Identifiers for resources. The enables us to maintain a mapping between RDF resources identifiers and their equivalent IDs in an alternate, non-RDF based domain.</rdfs:comment>
+        <foaf:maker>
+            <foaf:Person rdf:about="http://uk.linkedin.com/in/paulwilton">
+                <foaf:name>Paul Wilton</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <foaf:maker>
+            <foaf:Person rdf:about="http://www.linkedin.com/pub/matt-nathan/33/44a/68a">
+                <foaf:name>Matt Nathan</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <foaf:maker>
+            <foaf:Person rdf:about="http://uk.linkedin.com/in/pauliharman">
+                <foaf:name>Paul Harman</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <foaf:maker>
+            <foaf:Person rdf:about="http://uk.linkedin.com/in/jarredmcginnis">
+                <foaf:name>Jarred McGinnis</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3.0</owl:versionInfo>
+    </owl:Ontology>
+    <owl:Class rdf:about="http://data.press.net/ontology/identifier/Identifier">
+        <rdfs:label xml:lang="en">An Identifier for a resource</rdfs:label>
+        <rdfs:comment xml:lang="en">An ID for a given resource. For example a literal ID from a legacy system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/identifier/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:Class>
+    <owl:ObjectProperty rdf:about="http://data.press.net/ontology/identifier/hasIdentifier">
+        <rdfs:domain>
+            <owl:Class rdf:about="http://data.press.net/ontology/identifier/Identifiable">
+                <rdfs:label xml:lang="en">An Identifiable resource type</rdfs:label>
+                <rdfs:comment xml:lang="en">An instance that is Identifiable can have an Identifier associated with it.</rdfs:comment>
+                <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/identifier/" />
+                <vs:term_status>testing</vs:term_status>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.press.net/ontology/identifier/Identifier" />
+        <rdfs:label xml:lang="en">Associates an Identifier to an Identifiable thing</rdfs:label>
+        <rdfs:comment xml:lang="en">Associates an Identifier to an Identifiable thing</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/identifier/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://data.press.net/ontology/identifier/value">
+        <rdfs:domain rdf:resource="http://data.press.net/ontology/identifier/Identifier" />
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+        <rdfs:label xml:lang="en">the value of the Identifier</rdfs:label>
+        <rdfs:comment xml:lang="en">Property indicating the literal value of the Identifier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/identifier/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="http://data.press.net/ontology/identifier/authority">
+        <rdfs:domain rdf:resource="http://data.press.net/ontology/identifier/Identifier" />
+        <rdfs:range>
+            <owl:Class rdf:about="http://data.press.net/ontology/identifier/Authority">
+                <rdfs:label xml:lang="en">The Authority for an Identifier</rdfs:label>
+                <rdfs:comment xml:lang="en">The Authority for an Identifier, for example the domain or namespace within which an ID is contained</rdfs:comment>
+                <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/identifier/" />
+                <vs:term_status>testing</vs:term_status>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Indicates the ID Authority of an Identifier</rdfs:label>
+        <rdfs:comment xml:lang="en">Property defining the containing authority of an Identifier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/identifier/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:ObjectProperty>
+</rdf:RDF>

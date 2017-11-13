@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//FR" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+  <head>
+    <title>INRIA's Namespace server</title>
+    <meta name="organization" content="INRIA : The french national institut for research in computer science and control">
+    <meta name="description" lang="en" content="INRIA the national institute for research in computer science and control aims to network talents from the fields of information and computer science and technology from the entire french research system">
+    <meta name="keywords" lang="en" content="namespaces">
+    <link rel="stylesheet" href="/pagestrict.css" type="text/css">
+    <link rel="stylesheet" href="/ns.css" type="text/css">
+    <script type="text/javascript" src="/mail.js">
+<!--//-->
+    </script>
+  </head>
+  <body>
+  <!--  .............. logo INRIA .................. -->
+  <p style="margin-bottom: 16px"> <a name="haut" href="http://www.inria.org/"><img src="//commons.inria.fr/images/logos/inr_logo_cherch_FR_coul.jpg" alt="logo INRIA" border="0"></a></p>
+
+  <h1><img src="/ti_dessus.gif" width="170" height="28" alt="-----------------------"><br>INRIA's Namespace server<br><img src="/ti_dessous.gif" width="329" height="18" alt="-----------------------"></h1>
+  <div id="content">
+    <p><a href="/">What are INRIA's Namespaces ?</a></p>
+    <div id="list">
+        <h2><a name="list">Namespace steps</a></h2>
+<pre><a href="?C=N;O=D">Name</a>                 <hr /><a href="/">Parent Directory</a>     
+<a href="images/">images/</a>              
+<a href="v1/">v1/</a>                  
+<a href="index__.html">index__.html</a>         
+<hr /></pre>
+      </div>
+  </div>
+</body>
+</html>

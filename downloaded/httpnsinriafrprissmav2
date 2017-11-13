@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xml:base="http://ns.inria.fr/prissma/v2"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:fresnel="http://www.w3.org/2004/09/fresnel#">
+
+  <owl:Ontology rdf:about="http://ns.inria.fr/prissma/v2#">
+    <dc:title>PRISSMA: Presentation of Resources for Interoperable Semantic and Shareable Mobile Adaptability</dc:title>
+    <foaf:page rdf:resource="http://ns.inria.fr/prissma/v2/prissma.html"/>
+    <dc:creator rdf:resource="http://www-sop.inria.fr/members/Luca.Costabello/foaf.rdf#me"/>
+	<dc:description xml:lang="en">A vocabulary to model context-aware presentation knowledge for RDF User Interfaces.</dc:description>
+	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-20</dc:issued> 
+	<dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-20</dc:modified>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</owl:versionInfo>
+	<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+	<dc:publisher> 
+      <foaf:Organization rdf:about="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/> 
+    </dc:publisher>
+	<vann:preferredNamespacePrefix>prissma</vann:preferredNamespacePrefix> 
+	<vann:preferredNamespaceUri>http://ns.inria.fr/prissma/v2#</vann:preferredNamespaceUri>
+  </owl:Ontology>
+
+
+
+  <rdfs:Class rdf:ID="Prism">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Prism</rdfs:label>
+    <rdfs:comment>Wrapper class for describing the contextual conditions under which a given RDF presentation must be activated.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/09/fresnel#Group"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdfs:Class>
+    
+  <rdfs:Class rdf:ID="Context">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/><rdfs:label>Context</rdfs:label>
+    <rdfs:comment>The Context class is represents the mobile context and is equivalent to a fresnel:Purpose</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/09/fresnel#Purpose"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:ID="User">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/><rdfs:label>User</rdfs:label>
+    <rdfs:comment>Represents the target mobile user associated to a prissma:Context. To provide more flexibility, the class can be used to model both user stereotypes and specific users, according to the designer needs. The class is equivalent to foaf:Person</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/v1/Person"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:ID="Device">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Device</rdfs:label>
+    <rdfs:comment>The Device represents the mobile device on which Web of Data resource consumption takes place. It enables device-specific data representation. It is equivalent to the Device class of the delivery context ontology</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2007/uwa/context/deliveryContext.owl#Device"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:ID="Environment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Environment</rdfs:label>
+    <rdfs:comment>The class Environment models the user context in which the resource consumption takes place, therefore enabling customized resource presentation according to specific situations. </rdfs:comment>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:ID="Activity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/><rdfs:label>Activity</rdfs:label>
+    <rdfs:comment>The Activity class consists in a placemark aimed at modeling a high-level representation of an user action, such as 'running', 'driving', 'working', 'shopping', etc.</rdfs:comment>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:ID="POI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/><rdfs:label>POI</rdfs:label>
+    <rdfs:comment>The class models a Point of Interest (POI) and consists in a simplified version of W3C Point of Interest Core specifications. POIs are defined as entities that &quot;describe information about locations such as name, category, unique identifier, or civic address&quot;.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdfs:Class>
+
+
+
+  <rdf:Property rdf:ID="user">
+    <rdfs:label>user</rdfs:label>
+    <rdfs:comment>The property associates a User to a Purpose</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#Context"/>
+    <rdfs:range rdf:resource="http://ns.inria.fr/prissma/v2#User"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="device"><rdfs:label>device</rdfs:label>
+    <rdfs:comment>The property associates a Device to a Purpose</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#Context"/>
+    <rdfs:range rdf:resource="http://ns.inria.fr/prissma/v2#Device"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="environment"><rdfs:label>environment</rdfs:label>
+    <rdfs:comment>The property associates an Environment to a Purpose</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#Context"/>
+    <rdfs:range rdf:resource="http://ns.inria.fr/prissma/v2#Environment"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="currentPOI"><rdfs:label>currentPOI</rdfs:label>
+    <rdfs:comment>The property associates a POI to a prissma:Environment</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#Environment"/>
+    <rdfs:range rdf:resource="http://ns.inria.fr/prissma/v2#POI"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="nearbyEntity"><rdfs:label>nearbyObject</rdfs:label>
+    <rdfs:comment>The environmental proximity of a generic real-world entity can trigger different resource representations. The property is therefore used to associate nearby objects to the Environment model.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#Environment"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="motion"><rdfs:label>motion</rdfs:label>
+    <rdfs:comment>Associates any given high-level representation of motion to a prissma:Environment</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#Environment"/>
+    <vs:term_status xml:lang="en">testing</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="poiLabel">
+    <rdfs:label>poiLabel</rdfs:label>
+    <rdfs:comment>Associates an identifying resource to a POI (e.g. a given monument, a specific restaurant, etc.)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#POI"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="poiCategory"><rdfs:label>poiCategory</rdfs:label>
+    <rdfs:comment>Associates a category to a POI (e.g. monument, restaurant, etc.)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#POI"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+  <rdf:Property rdf:ID="radius">
+	<rdfs:label>radius</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment>Specifies the geographic extension of a POI. Value is expressed in metres.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/prissma/v2#POI"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <vs:term_status xml:lang="en">stable</vs:term_status>
+  </rdf:Property>
+
+</rdf:RDF>
