@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:olo="http://purl.org/ontology/olo/core#"
+xmlns:vann="http://purl.org/vocab/vann/"
+xmlns:bibo="http://purl.org/ontology/bibo/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+typeof="bibo:Document"
+about="http://www.purl.org/limo-ontology/limo"
+version="XHTML+RDFa 1.0">
+<head>
+  <title about="http://www.purl.org/limo-ontology/limo" property="dc:title">The Limo Specification</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+  <link rel="shortcut icon" href="http://195.251.218.39:8181/vocab/images/logo_islab.jpg"/>
+ <style type="text/css">
+thead {color:#104E8B; font-size:15pt; }
+tbody {color:black;}
+tfoot {color:red;}
+ol2 { type:A;}
+
+
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44869296-1', 'purl.org');
+  ga('send', 'pageview');
+
+</script>
+
+  <base href="http://www.purl.org/limo-ontology/limo" />
+  
+  <link href="xmlns-style.css" rel="stylesheet"  type="text/css" />
+  <link href="http://smiy.sourceforge.net/css/style.css" rel="stylesheet"  type="text/css" />
+  <link href="http://www.csw.inf.fu-berlin.de/ontdocu/specgen/groups.css" rel="stylesheet"  type="text/css" />
+  
+  <link about="http://www.purl.org/limo-ontology/limo" typeof="owl:Ontology" rel="dc:creator" href="foaflink" />
+  <link about="http://www.purl.org/limo-ontology/limo" rel="dc:creator" href="foaflink" />
+  <link about="http://www.purl.org/limo-ontology/limo" rel="dc:creator" href="foaflink" />
+  <link about="http://www.purl.org/limo-ontology/limo" rel="foaf:primaryTopic" rev="foaf:isPrimaryTopicOf" href="http://www.purl.org/limo-ontology/limo" />
+
+  
+
+</head>
+
+<body>
+  <h1><span about="http://www.purl.org/limo-ontology/limo" property="dc:title">Linked Statistical Models Vocabulary (LIMO)</span> <span about="http://www.purl.org/limo-ontology/limo" property="owl:versionInfo" datatype="xsd:decimal"></span></h1>
+
+<h2> A Vocabulary for Incorporating Predictive Models into the Linked Data Web</h2>
+  <h2>Unofficial Draft <span about="http://www.purl.org/limo-ontology/limo" property="dc:date" content="2013-10-15T19:27:20" datatype="xsd:dateTime">15 October 2013</span></h2>
+<table class="header" border="0">
+  <tr>
+    <td>
+		<dl about="http://www.purl.org/limo-ontology/limo">
+			<dt>This version:</dt>
+			<dd><a rel="dc:hasVersion" 
+				rev="dc:isVersionOf" href="http://195.251.218.39:8181/vocab/limo/2013/vocab-limo-20131015">http://www.purl.org/limo-ontology/limo/2013/vocab-limo-20131015</a></dd>
+
+			<dt>Latest Published version:</dt>
+			<dd><a href="http://www.purl.org/limo-ontology/limo">http://www.purl.org/limo-ontology/limo</a> </dd>
+
+			<dt>Previous version:</dt>
+			<dd><a rel="dc:hasVersion" 
+				rev="dc:isVersionOf" href="http://195.251.218.39:8181/vocab/limo/2013/vocab-limo-20131015">http://www.purl.org/limo-ontology/limo/2013/vocab-limo-20131015</a></dd>   
+			<dt>Authors:</dt>
+			<dd><a rel="rdfs:seeAlso" href="mailto:ekal@uom.gr">Evangelos Kalampokis</a>, <a rel="rdfs:seeAlso" href="http://www.iti.gr">CERTH/ITI</a> and <a rel="rdfs:seeAlso" href="http://www.uom.gr">University of Macedonia</a>,<br/>
+				<a rel="rdfs:seeAlso" href="mailto:akarm@uom.gr">Areti Karamanou</a>, <a rel="rdfs:seeAlso" href="http://www.iti.gr">CERTH/ITI</a> and <a rel="rdfs:seeAlso" href="http://www.uom.gr">University of Macedonia</a>,<br/>
+				<a rel="rdfs:seeAlso" href="mailto:tambouris@uom.gr">Efthimios Tambouris</a>, <a rel="rdfs:seeAlso" href="http://www.iti.gr">CERTH/ITI</a> and <a rel="rdfs:seeAlso" href="http://www.uom.gr">University of Macedonia</a>,<br/>
+				<a rel="rdfs:seeAlso" href="mailto:kat@uom.gr">Konstantinos Tarabanis</a>,  <a rel="rdfs:seeAlso" href="http://www.iti.gr">CERTH/ITI</a> and <a rel="rdfs:seeAlso" href="http://www.uom.gr">University of Macedonia</a>,<br/></dd>
+		</dl>
+
+		<!--p class="copyright"><span about="http://www.purl.org/limo-ontology/limo" property="dc:rights">Copyright &#169; 2013 Copyright holder here</span></p-->
+	</td>
+    <!--td align="right">
+		<table class="infobox">
+			<tr>
+				<td rowspan="2">
+					<img src="http://wfnm.sourceforge.net/images/sourceforge_logo.jpg" width="150" alt="Sourceforge"/>
+				</td>
+				<td align="center">
+					<b>Limo repository</b>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<a href="LinkToRepo">Source code, examples, graphics, ...</a>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan="2">
+					<img src="http://s.wordpress.org/about/images/buttons/buttonw-blue.png" width="150" alt="Wordpress" />
+				</td>
+				<td align="center">
+					<b>other Infos</b>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<a href="Another Link">Announcements, descriptions, use cases, ...</a>
+				</td>
+			</tr>
+		</table>
+	</td-->
+  </tr>
+</table>
+
+  <div about="http://www.purl.org/limo-ontology/limo" rel="dc:conformsTo"
+     resource="http://www.w3.org/TR/rdfa-syntax"></div>
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img style="border: 0; float: right; padding: 5px;"
+        src="http://www.w3.org/Icons/valid-xhtml-rdfa"
+        alt="Valid XHTML + RDFa" height="31" width="88" /></a>
+<a href="http://creativecommons.org/licenses/by/3.0/"><img alt=
+  "Creative Commons License" style="border: 0; float: right; padding: 5px;" src=
+  "http://i.creativecommons.org/l/by/3.0/88x31.png" /></a> This document is licensed under a <a about="http://www.purl.org/limo-ontology/limo" rel="license dc:license" href= "http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution License">Creative Commons
+  Attribution License</a>. This copyright applies to the <em>Limo Specification</em> 
+  and accompanying documentation in RDF.
+  <!-- Creative Commons License>
+  Example Licencing Information
+   <a href="http://creativecommons.org/licenses/by/1.0/"><img alt=
+  "Creative Commons License" style="border: 0; float: right; padding: 5px;" src=
+  "http://i.creativecommons.org/l/by/3.0/88x31.png" /></a> This work is licensed under a <a about="http://www.purl.org/limo-ontology/limo" rel="license dc:license" href= 
+  "http://creativecommons.org/licenses/by/3.0/" title="Creative Commons
+  Attribution License">Creative Commons
+  Attribution License</a>. This copyright applies to the <em>Limo Specification</em> 
+  and accompanying documentation in RDF.
+ Regarding underlying technology, the <em>Limo</em> uses W3C's <a href="http://www.w3.org/RDF/">RDF</a> technology, an
+  open Web standard that can be freely used by anyone.</p-->
+  </p>
+  <hr />
+
+
+<h2 id="sec-status">Abstract</h2>
+<p about="http://www.purl.org/limo-ontology/limo" property="dc:description">
+Predictive modeling reflects the process of using data and statistical or data mining methods for predicting new observations. The predictive models that are created out of this process could be reused in different applications in the same sense that open data is reused. Towards this end, a few standards have been proposed in order to enable transfer of predictive models across platforms and applications. In this paper
+we suggest the need for incorporating predictive models into the Linked
+Data Web. Towards this end, we propose an RDF Schema vocabulary
+that will enable the creation of predictive models descriptions adhering to
+the Linked Data principles. The incorporation of these descriptions into
+the Linked Data Web could create new potentials beyond cross-platform
+model reuse. In particular, it will enable (a) easy discovery and reuse of
+appropriate models at a Web Scale and (b) creation of more accurate
+models exploiting connections of models to other models, datasets and
+other resources on the Web.
+  <div class="status"/>
+    <h2>Status of This Document</h2>
+
+    <!--p about="http://www.purl.org/limo-ontology/limo">The template of this specification is derived from the  <a rel="rdfs:seeAlso" href="http://xmlns.com/foaf/spec/">FOAF 
+Vocabulary Specification</a>, which was created by <a rel="rdfs:seeAlso" href="http://danbri.org/">Dan Brickley</a> and <a rel="rdfs:seeAlso" href="http://nicecupoftea.org/">Libby Miller</a>, 
+and the <a rel="rdfs:seeAlso" href="http://musicontology.com/">Music Ontology Specification</a>, which was created by <a rel="rdfs:seeAlso" href="http://moustaki.org/">Yves Raimond</a>. It was 
+modified and extended by Bob Ferris. Furthermore, a modified and extended version of <a rel="rdfs:seeAlso" href="http://svn.foaf-project.org/foaftown/specgen/">Danbri's SpecGen version</a> was 
+used to generate most of the RDFa statements of the <em>Ordered List Ontology</em> for this specification (see <a rel="rdfs:seeAlso" 
+href="http://smiy.svn.sourceforge.net/viewvc/smiy/specgen/trunk/">here</a> for SpecGen version 6 by Bob Ferris).
+</p-->
+<p>This document is merely a public working draft of Limo vocabulary specification.</p> 
+<p>This document was published by <a rel="rdfs:seeAlso" href="http://islab.uom.gr">Information Systems Lab (ISLab)</a>. If you wish to make comments regarding this document, please contact  <a rel="rdfs:seeAlso" href="mailto:ekal@uom.gr">Evangelos Kalampokis</a> or <a rel="rdfs:seeAlso" href="mailto:akarm@uom.gr">Areti Karamanou</a>. All comments are welcome. </p>
+  <h2 id="sec-toc">Table of Contents</h2>
+
+  <ol>
+    <li><a href="#sec-glance">Outline of Limo</a>
+	<ol><li><a href="#sec-index">Vocabulary Index</a></li></ol></li>
+    <li><a href="#sec-intro">Introduction</a></li>
+	<li><a href="#sec-ns">Namespaces</a></li>
+	<li><a href="#sec-conformance">Conformance</a></li>
+	<li><a href="#sec-overview">Overview</a>
+	<ol><li><a href="#sec-example">A Basic Example</a></li></ol></li>
+	<li><a href="#sec-specification">Limo Specification</a></li>
+    <!--li><a href="#sec-bg">Background</a></li-->
+    <!--li><a href="#sec-standards">Limo and Standards</a></li-->
+    <!--li><a href="#sec-evolution">Evolution and Extension of the Limo</a></li-->
+    <!--li2><a href="#sec-crossref">Limo cross-reference: Listing the Limo Classes and Properties</a></li2-->
+    <!--li><a href="#sec-extrefs">External Vocabulary References</a></li-->
+    </ol>
+
+	<ol type="A">
+	<li><a href="#sec-ack">Acknowledgments</a></li>
+    <li><a href="#sec-changes">Change History</a></li>
+	<li><a href="#sec-references">References</a>
+		<ol>
+		<li><a href="#sec-normative">Normative References</a></li>
+		<li><a href="#sec-informative">Informative References</a></li>
+		</ol></li>
+  </ol>
+   <div style="clear: left;"></div>
+  <a id="sec-glance"></a>
+  <h2 id="glance">1. Outline of Limo</h2>
+  <p>Limo is an RDF vocabulary describing statistical and data mining models. Limo defines five main classes:</p>
+	<ul><li> <code><a href="#File">limo:File</a></code> represents the file that stores the model.</li>
+		<li> <code><a href="#Method">limo:Method</a></code> represents the method employed for the creation of the model.</li>
+		<li> <code><a href="#Model">limo:Model</a></code> represents the statistical or data mining model.</li>
+		<li> <code><a href="#Power">limo:Power</a></code> represents the predictive power of the model.</li>
+	    <li> <code><a href="#Variable">limo:Variable</a></code> represents the variables of the model.</li>
+	</ul>
+  
+ <figure>
+  <img src="http://195.251.218.39:8181/vocab/limo.png" alt="UML-style block diagram of the terms in this vocabulary"/>
+  <figcaption>Fig. <span class="figno">1</span> <span class="fig-title">Pictorial summary of Limo key terms and their relationship</span></figcaption>
+</figure>
+ <div style="clear: left;"></div>
+  <a id="sec-index"></a>
+ <h3 id="index">1.1 Vocabulary Index</h3>
+ <p>An a-z index of <em>Limo</em> terms, by class (categories or types) and by property.</p>
+ 
+ 
+ <div class="azlist">
+<p>Classes: | <a href="#File">File</a> |  <a href="#Method">Method</a> |  <a href="#Model">Model</a> |  <a href="#Power">Power</a> |  <a href="#Variable">Variable</a> | 
+</p>
+<p>Properties: | <a href="#accessURL">accessURL</a> |  <a href="#baseline">baseline</a> |  <a href="#creator">creator</a> |  <a href="#data">data</a> |  <a href="#description">description</a> |  <a href="#evaluationData">evaluationData</a> |  <a href="#evaluationMethod">evaluationMethod</a> |  <a href="#file">file</a> |  <a href="#issued">issued</a> |  <a href="#method">method</a> |  <a href="#modelType">modelType</a> |  <a href="#outcome">outcome</a> |  <a href="#power">power</a> |  <a href="#publishedIn">publishedIn</a> |  <a href="#rawData">rawData</a> |  <a href="#spatial">spatial</a> |  <a href="#temporal">temporal</a> |  <a href="#theme">theme</a> |  <a href="#title">title</a> |  <a href="#trainingData">trainingData</a> |  <a href="#usageType">usageType</a> |  <a href="#validationData">validationData</a> |  <a href="#variable">variable</a> |  <a href="#variableType">variableType</a> | 
+</p>
+</div>
+ 
+ 
+  <p> Main <em>Limo </em> terms, grouped in broad categories. </p>
+
+    
+    
+ 
+ 
+
+  <div style="clear: left;"></div>
+  <h2 id="sec-intro">2. Introduction</h2>
+  <p>Predictive modeling reflects the process of using data and statistical or data mining methods for predicting new observations. The predictive models that are created out of this process could be reused in different applications in the same sense that open data is reused. Towards
+this end, a few standards such as PMML [<cite><a class="bibref" href="#bib-PMML">PMML</a></cite>] have been proposed in order to enable transfer of predictive models across platforms and applications. Limo is an RDF Schema vocabulary that will enable the creation of predictive models descriptions adhering to the Linked Data principles. The incorporation of these descriptions into the Linked Data Web could create new potentials beyond cross-platform model reuse.
+  </p>
+  <p>You can find the Turtle source of Limo <a href="http://195.251.218.39:8181/vocab/limo.ttl">here</a>.</p>
+<h2 id="sec-ns">3. Namespaces</h2>
+  <p>The following table presents a set of namespaces and prefixes used in this document.</p>
+<table border="1">
+  <thead><tr><th>Prefix</th><th>Namespace</th><th>Reference</th></tr></thead>
+  <tbody>
+    <tr><td>limo</td><td><a href="http://purl.org/limo-ontology/limo#">http://purl.org/limo-ontology/limo#</a></td><td><em>This document, [<cite><a class="bibref" href="#bib-LIMO">LIMO</a></cite>]</em></td></tr>
+	<tr><td>qb</td><td><a href="http://purl.org/linked-data/cube#">http://purl.org/linked-data/cube#</a></td><td><em>[<cite><a class="bibref" href="#bib-RDF-Data-Cube-Vocabulary">RDF Data Qube Vocabulary</a></cite>]</em></td></tr>
+    <tr><td>skos</td><td><a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core#</a></td><td>[<cite><a class="bibref" href="#bib-SKOS">SKOS-REFERENCE</a></cite>]</td></tr>
+    <tr><td>foaf</td><td><a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></td><td>[<cite><a class="bibref" href="#bib-FOAF">FOAF</a></cite>]</td></tr>
+    <tr><td>dct</td><td><a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a></td><td>[<cite><a class="bibref" href="#bib-DCMI">DCMI</a></cite>]</td></tr>
+    <tr><td>dctype</td><td><a href="http://purl.org/dc/dcmitype/">http://purl.org/dc/dcmitype/</a></td><td>[<cite><a class="bibref" href="#bib-DCMITYPE">DCMITYPE</a></cite>]</td></tr>
+	<tr><td>rdf</td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></td><td>[<cite><a class="bibref" href="#bib-RDF-CONCEPTS">RDF-CONCEPTS</a></cite>]</td></tr>
+    <tr><td>rdfs</td><td><a href="http://www.w3.org/2000/01/rdf-schema">http://www.w3.org/2000/01/rdf-schema#</a></td><td>[<cite><a class="bibref" href="#bib-RDF-SCHEMA">RDF-SCHEMA</a></cite>]</td></tr>
+    <tr><td>eg</td><td><a href="http://example.org/ns#">http://example.org/ns#</a></td><td><em>(Non-normative, used for examples only)</em></td></tr>
+  </tbody>
+</table> 
+ <h2 id="sec-conformance">4. Conformance</h2>
+ <p><i>[TODO]</i></p>
+<h2 id="sec-overview">5. Overview</h2>
+ <h3 id="sec-example">5.1 A Basic Example</h3>
+  
+    <p>This section provides the <em>Limo</em> description of the predictive model developed by Ginsberg et al. and presented in [<cite><a class="bibref" href="#bib-INFLUENZA">GINSBERG_2009</a></cite>]. The model aims at predicting influenza-like illness (ILI) physician visits from ILI-related queries.</p>
+	<p>Initially, we define a description of the model itself. The model employs a linear regression method as well as data from Google and the US Centers for Disease Control and Prevention. The data is about nine regions of the United States between 2003 and 2008.</p>
+    
+  <div class="example">
+  <pre>
+	eg:DDCILImodel a limo:Model;
+		dct:title "CDC-ILI model"@en;
+		limo:spatial [rdf:type dbpedia:United_States];
+		limo:temporal
+			[a dc:terms PeriodOfTime;
+			limo:startDate "2003-09-28"^^xsd:date;
+			limo:endDate "2008-05-11"^^xsd:date;];
+		limo:modelType eg:regression;
+		limo:variable eg:resp;
+		limo:variable eg:pred;
+		limo:method eg:linearregression;
+		limo:power eg:CDCILIpower;
+		limo:file eg:CDCILIfile;
+		limo:rawData eg:CDCILIdataset;
+		limo:evaluationData eg:CDCILIevaluationdata;
+		limo:validationData eg:CDCILIvalidationdata;
+		limo:trainingData eg:CDCILItrainingdata;
+		dct:creator eg:ginsberg, eg:mohebbi, eg:patel, eg:brammer,
+		eg:smolinski, eg:brilliant.
+	eg:CDCILIdataset a dctype:DataSet;
+		dct:resource &lt;http://www.cdc.gov/flu/weekly&lt;.
+	</pre>
+  </div>
+  <p>We then define the variables of the model. Our example defines two variables: one of them, the predictor, reflects the probability that a random search query submitted from a region is ILI-related while the other, the response, is the percentage of physician visits in which a patient presents with influenza-like symptoms in a region.</p>
+	<div class="example">
+  <pre>
+	eg:resp a limo:Variable;
+		limo:variableType eg:continuous;
+		dct:description "Percentage of physician visits in which a
+		patient presents with influenza-like symptoms in a region"@en;
+		limo:usageType eg:response;
+		limo:theme eg:ILIphysvisits.
+	eg:pred a limo:Variable;
+		limo:variableType eg:continuous;
+		dct:description "Probability that a random search query
+		submitted from a region is ILI-related"@en;
+		limo:usageType eg:predictor;
+		limo:theme eg:ILIrandquery.
+	</pre>
+  </div>
+   <p>The predictive power of the model can been described by the next example. The model was assessed using cross validation and a mean correlation of 0.97 was obtained.</p>
+	<div class="example">
+	<pre>
+	eg:CDCILIpower a limo:Power;
+		limo:evaluationMethod eg:crossvalidation;
+		limo:outcome 0.97.
+  </pre>
+  </div>
+  <p>In addition, <em>Limo</em> will enable the performance of queries across distributed description of predictive models. For example, below we present a query that unveils the variables that are predictors of influenza-like physician visits constructed by data regarding the U.S.:</p>
+ <div class="example">
+	<pre>
+	SELECT ?variable
+	WHERE {
+			?model limo:variable ?variable1;
+			       limo:variable ?variable2;
+			       limo:spatial ?sp1.
+			?variable1 limo:usageType eg:predictor.
+			?variable2 limo:usageType eg:response;
+					   limo:theme eg:ILIphysvisits.
+			?sp1 rdf:type dbpedia:United_States.
+	}
+  </pre>
+  </div>
+ 
+ <div style="clear: left;"></div>
+
+
+  <!-- ================================================================== -->
+
+
+ 
+
+
+  <!--h2 id="sec-for">4. What's Limo for?</h2-->
+
+  <!--h2 id="sec-bg">5. Background</h2-->
+
+  
+
+  <!--h2 id="sec-standards">6. Limo and Standards</h2-->
+
+
+  <!--h2 id="sec-nsdoc">7. Limo Description</h2-->
+
+  <!--p>This specification serves as the <em>Limo</em> "namespace document". ... </p-->
+
+  <!--h3 id="sec-evolution">7. Evolution and Extension of Limo</h3-->
+
+   <h2 id="sec-specification">7. Limo Specification</h2>
+  <!--h2 id="sec-crossref">7. Limo cross-reference: Listing Limo Classes and Properties</h2-->
+
+  <!--p><em>Limo</em> introduces the following classes and properties. </p-->
+
+  <!-- the following is the script-generated list of classes and properties -->
+ 
+<!-- this is the a-z listing -->
+<!--<div class="azlist">
+<p>Classes: | <a href="#File">File</a> |  <a href="#Method">Method</a> |  <a href="#Model">Model</a> |  <a href="#Power">Power</a> |  <a href="#Variable">Variable</a> | 
+</p>
+<p>Properties: | <a href="#accessURL">accessURL</a> |  <a href="#baseline">baseline</a> |  <a href="#creator">creator</a> |  <a href="#data">data</a> |  <a href="#description">description</a> |  <a href="#evaluationData">evaluationData</a> |  <a href="#evaluationMethod">evaluationMethod</a> |  <a href="#file">file</a> |  <a href="#issued">issued</a> |  <a href="#method">method</a> |  <a href="#modelType">modelType</a> |  <a href="#outcome">outcome</a> |  <a href="#power">power</a> |  <a href="#publishedIn">publishedIn</a> |  <a href="#rawData">rawData</a> |  <a href="#spatial">spatial</a> |  <a href="#temporal">temporal</a> |  <a href="#theme">theme</a> |  <a href="#title">title</a> |  <a href="#trainingData">trainingData</a> |  <a href="#usageType">usageType</a> |  <a href="#validationData">validationData</a> |  <a href="#variable">variable</a> |  <a href="#variableType">variableType</a> | 
+</p>
+</div> -->
+
+    <!-- The list of groups starts here -->
+
+    <!-- End of the groups -->
+
+
+<!-- and this is the bulk of the vocab descriptions -->
+<div class="termlist"><h3>Classes and Properties (full detail)</h3><div class='termdetails'><h2>Classes</h2>
+ 
+
+
+<div class="specterm" id="File" about="http://purl.org/limo-ontology/limo#File" typeof="rdfs:Class">
+  			<h3>Class: File</h3> 
+  			<em property="rdfs:label" >limo:File</em> - <span property="rdfs:comment" >Describes a file that can be imported in a particular platform such as R or SAS and execute the model. This could also be a PMML-XML file.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Properties include:</th>
+ <td>  <a href="#accessURL">accessURL</a>
+ </td></tr>
+  			<tr><th>Used with:</th>
+ <td>  <a href="#file">file</a>
+</td></tr> 
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#File">#</a>] <!-- File --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="Method" about="http://purl.org/limo-ontology/limo#Method" typeof="rdfs:Class">
+  			<h3>Class: Method</h3> 
+  			<em property="rdfs:label" >limo:Method</em> - <span property="rdfs:comment" >Describes a statistical or data mining method used for creating a model. We assume that this class uses a set of predefined concepts such as linear regression, logistic regression, markov models, support vector machine, random forest, neural networks etc.</span> <br /><table style="th { float: top; }">
+  			
+  			<tr><th>Used with:</th>
+ <td>  <a href="#method">method</a>
+</td></tr> <tr><th>Sub class of:</th>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/2004/02/skos/core#Concept"><a href="#Concept">skos:Concept</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#Method">#</a>] <!-- Method --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="Model" about="http://purl.org/limo-ontology/limo#Model" typeof="rdfs:Class">
+  			<h3>Class: Model</h3> 
+  			<em property="rdfs:label" >limo:Model</em> - <span property="rdfs:comment" >The actual predictive model that is described by the vocabulary.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Properties include:</th>
+ <td>  <a href="#title">title</a>
+ <a href="#file">file</a>
+ <a href="#method">method</a>
+ <a href="#issued">issued</a>
+ <a href="#baseline">baseline</a>
+ <a href="#rawData">rawData</a>
+ <a href="#variable">variable</a>
+ <a href="#description">description</a>
+ <a href="#power">power</a>
+ <a href="#spatial">spatial</a>
+ <a href="#temporal">temporal</a>
+ <a href="#data">data</a>
+ <a href="#modelType">modelType</a>
+ <a href="#creator">creator</a>
+ <a href="#publishedIn">publishedIn</a>
+ </td></tr>
+  			<tr><th>Used with:</th>
+ <td>  <a href="#baseline">baseline</a>
+</td></tr> 
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#Model">#</a>] <!-- Model --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="Power" about="http://purl.org/limo-ontology/limo#Power" typeof="rdfs:Class">
+  			<h3>Class: Power</h3> 
+  			<em property="rdfs:label" >limo:Power</em> - <span property="rdfs:comment" >Describes the predictive power of a model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Properties include:</th>
+ <td>  <a href="#outcome">outcome</a>
+ <a href="#evaluationMethod">evaluationMethod</a>
+ </td></tr>
+  			<tr><th>Used with:</th>
+ <td>  <a href="#power">power</a>
+</td></tr> 
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#Power">#</a>] <!-- Power --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="Variable" about="http://purl.org/limo-ontology/limo#Variable" typeof="rdfs:Class">
+  			<h3>Class: Variable</h3> 
+  			<em property="rdfs:label" >limo:Variable</em> - <span property="rdfs:comment" >Represents the variables that are included in the predictive model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Properties include:</th>
+ <td>  <a href="#usageType">usageType</a>
+ <a href="#description">description</a>
+ <a href="#title">title</a>
+ <a href="#variableType">variableType</a>
+ <a href="#theme">theme</a>
+ </td></tr>
+  			<tr><th>Used with:</th>
+ <td>  <a href="#variable">variable</a>
+</td></tr> 
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#Variable">#</a>] <!-- Variable --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><h2>Properties</h2>
+ 
+
+
+<div class="specterm" id="accessURL" about="http://purl.org/limo-ontology/limo#accessURL" typeof="rdf:Property">
+  			<h3>Property: accessURL</h3> 
+  			<em property="rdfs:label" >limo:accessURL</em> - <span property="rdfs:comment" >The URL that the file can be accessed from.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#File"><a href="#File">limo:File</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#accessURL">#</a>] <!-- accessURL --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="baseline" about="http://purl.org/limo-ontology/limo#baseline" typeof="rdf:Property">
+  			<h3>Property: baseline</h3> 
+  			<em property="rdfs:label" >limo:baseline</em> - <span property="rdfs:comment" >Explicitly denotes that the predictive power of a model has been evaluated against the power of another model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+  <span rel="rdfs:range" resource="[_:]"></span>
+  									<span about="[_:]" typeof="owl:Class"></span>
+  									<span about="[_:]" rel="owl:unionOf" resource="[_:]"></span>  <span about="[_:]" typeof="rdf:Description"></span>
+  									<span about="[_:]" rel="rdf:first" href=""><a href=""></a></span>
+  									<span about="[_:]" rel="rdf:rest" resource="[_:]"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#baseline">#</a>] <!-- baseline --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="creator" about="http://purl.org/limo-ontology/limo#creator" typeof="rdf:Property">
+  			<h3>Property: creator</h3> 
+  			<em property="rdfs:label" >dct:creator</em> - <span property="rdfs:comment" >The person or organization that actually builds the model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://xmlns.com/foaf/0.1/Agent"><a href="#Agent">foaf:Agent</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#creator">#</a>] <!-- creator --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="data" about="http://purl.org/limo-ontology/limo#data" typeof="rdf:Property">
+  			<h3>Property: data</h3> 
+  			<em property="rdfs:label" >limo:data</em> - <span property="rdfs:comment" >Connects a model to the dataset that contains the actual data that have been used for the development of the model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/linked-data/cube#Dataset"><a href="#Dataset">qb:Dataset</a></span>
+ </td></tr><tr><th>Has sub property</th>
+ <td>  <a href="#validationData">limo:validationData</a>
+ <a href="#evaluationData">limo:evaluationData</a>
+ <a href="#trainingData">limo:trainingData</a>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#data">#</a>] <!-- data --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="description" about="http://purl.org/dc/terms/description" typeof="rdf:Property">
+  			<h3>Property: description</h3> 
+  			<em property="rdfs:label" >dct:description</em> - <span property="rdfs:comment" >A small text to describe what the variable or model is about.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Variable"><a href="#Variable">limo:Variable</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Literal"><a href="#Literal">rdfs:Literal</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#description">#</a>] <!-- description --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="evaluationData" about="http://purl.org/limo-ontology/limo#evaluationData" typeof="rdf:Property">
+  			<h3>Property: evaluationData</h3> 
+  			<em property="rdfs:label" >limo:evaluationData</em> - <span property="rdfs:comment" >Connects a model to the dataset that represents its evaluation data. </span> <br /><table style="th { float: top; }">
+  			
+  			<tr><th>Sub property of</th>
+ <td>  <span rel="rdfs:subPropertyOf" href="http://purl.org/limo-ontology/limo#data"><a href="#data">limo:data</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#evaluationData">#</a>] <!-- evaluationData --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="evaluationMethod" about="http://purl.org/limo-ontology/limo#evaluationMethod" typeof="rdf:Property">
+  			<h3>Property: evaluationMethod</h3> 
+  			<em property="rdfs:label" >limo:evaluationMethod</em> - <span property="rdfs:comment" >Is used to infer the predictive power of the model. The evaluation methods include out-of-sample evaluation with statistics such as Predicted Residual Sums of Squares, Root Mean Square Error or cross-validation techniques.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Power"><a href="#Power">limo:Power</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#evaluationMethod">#</a>] <!-- evaluationMethod --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="file" about="http://purl.org/limo-ontology/limo#file" typeof="rdf:Property">
+  			<h3>Property: file</h3> 
+  			<em property="rdfs:label" >limo:file</em> - <span property="rdfs:comment" >Connects a model with a relative file.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/limo-ontology/limo#File"><a href="#File">limo:File</a></span>
+  <span rel="rdfs:range" resource="[_:]"></span>
+  									<span about="[_:]" typeof="owl:Class"></span>
+  									<span about="[_:]" rel="owl:unionOf" resource="[_:]"></span>  <span about="[_:]" typeof="rdf:Description"></span>
+  									<span about="[_:]" rel="rdf:first" href=""><a href=""></a></span>
+  									<span about="[_:]" rel="rdf:rest" resource="[_:]"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#file">#</a>] <!-- file --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="issued" about="http://purl.org/dc/terms/issued" typeof="rdf:Property">
+  			<h3>Property: issued</h3> 
+  			<em property="rdfs:label" >dct:issued</em> - <span property="rdfs:comment" >Defines the actual date that the model has been created.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#issued">#</a>] <!-- issued --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="method" about="http://purl.org/limo-ontology/limo#method" typeof="rdf:Property">
+  			<h3>Property: method</h3> 
+  			<em property="rdfs:label" >limo:method</em> - <span property="rdfs:comment" >Connects a model with its statistical or data mining method.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/limo-ontology/limo#Method"><a href="#Method">limo:Method</a></span>
+  <span rel="rdfs:range" resource="[_:]"></span>
+  									<span about="[_:]" typeof="owl:Class"></span>
+  									<span about="[_:]" rel="owl:unionOf" resource="[_:]"></span>  <span about="[_:]" typeof="rdf:Description"></span>
+  									<span about="[_:]" rel="rdf:first" href=""><a href=""></a></span>
+  									<span about="[_:]" rel="rdf:rest" resource="[_:]"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#method">#</a>] <!-- method --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="modelType" about="http://purl.org/limo-ontology/limo#modelType" typeof="rdf:Property">
+  			<h3>Property: modelType</h3> 
+  			<em property="rdfs:label" >limo:modelType</em> - <span property="rdfs:comment" >Describes the main categories of the model that can be developed, namely classification, regression, clustering and dimension reduction.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#modelType">#</a>] <!-- modelType --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="outcome" about="http://purl.org/limo-ontology/limo#outcome" typeof="rdf:Property">
+  			<h3>Property: outcome</h3> 
+  			<em property="rdfs:label" >limo:outcome</em> - <span property="rdfs:comment" >
+		</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Power"><a href="#Power">limo:Power</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#outcome">#</a>] <!-- outcome --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="power" about="http://purl.org/limo-ontology/limo#power" typeof="rdf:Property">
+  			<h3>Property: power</h3> 
+  			<em property="rdfs:label" >limo:power</em> - <span property="rdfs:comment" >Connects a model to its predictive power.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/limo-ontology/limo#Power"><a href="#Power">limo:Power</a></span>
+  <span rel="rdfs:range" resource="[_:]"></span>
+  									<span about="[_:]" typeof="owl:Class"></span>
+  									<span about="[_:]" rel="owl:unionOf" resource="[_:]"></span>  <span about="[_:]" typeof="rdf:Description"></span>
+  									<span about="[_:]" rel="rdf:first" href=""><a href=""></a></span>
+  									<span about="[_:]" rel="rdf:rest" resource="[_:]"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#power">#</a>] <!-- power --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="publishedIn" about="http://purl.org/limo-ontology/limo#publishedIn" typeof="rdf:Property">
+  			<h3>Property: publishedIn</h3> 
+  			<em property="rdfs:label" >limo:publishedIn</em> - <span property="rdfs:comment" >Connects a model with the bibliographic resource it is published.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/dc/terms/BibliographicResource"><a href="#BibliographicResource">http://purl.org/dc/terms/:BibliographicResource</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#publishedIn">#</a>] <!-- publishedIn --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="rawData" about="http://purl.org/limo-ontology/limo#rawData" typeof="rdf:Property">
+  			<h3>Property: rawData</h3> 
+  			<em property="rdfs:label" >limo:rawData</em> - <span property="rdfs:comment" >Connects a model with it's dataset.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/dc/dcmitype#Dataset"><a href="#Dataset">dctype:Dataset</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#rawData">#</a>] <!-- rawData --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="spatial" about="http://purl.org/limo-ontology/limo#spatial" typeof="rdf:Property">
+  			<h3>Property: spatial</h3> 
+  			<em property="rdfs:label" >limo:spatial</em> - <span property="rdfs:comment" >Dexcribes the spatial dimension of the model. The spatial dimension is derived from the actual data that has been employed.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/dc/terms/Location"><a href="#Location">http://purl.org/dc/terms/:Location</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#spatial">#</a>] <!-- spatial --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="temporal" about="http://purl.org/limo-ontology/limo#temporal" typeof="rdf:Property">
+  			<h3>Property: temporal</h3> 
+  			<em property="rdfs:label" >limo:temporal</em> - <span property="rdfs:comment" >Describes the time period that the model covers. The time period reflects the period that is described in the actual data that have been used for the development of the model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/dc/terms/PeriodOfTime"><a href="#PeriodOfTime">http://purl.org/dc/terms/:PeriodOfTime</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#temporal">#</a>] <!-- temporal --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="theme" about="http://purl.org/limo-ontology/limo#theme" typeof="rdf:Property">
+  			<h3>Property: theme</h3> 
+  			<em property="rdfs:label" >limo:theme</em> - <span property="rdfs:comment" >Connects a variable to its concept theme.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Variable"><a href="#Variable">limo:Variable</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://www.w3.org/2004/02/skos/core#Concept"><a href="#Concept">skos:Concept</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#theme">#</a>] <!-- theme --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="title" about="http://purl.org/dc/terms/title" typeof="rdf:Property">
+  			<h3>Property: title</h3> 
+  			<em property="rdfs:label" >dct:title</em> - <span property="rdfs:comment" >A name given to the model.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Variable"><a href="#Variable">limo:Variable</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Literal"><a href="#Literal">rdfs:Literal</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#title">#</a>] <!-- title --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="trainingData" about="http://purl.org/limo-ontology/limo#trainingData" typeof="rdf:Property">
+  			<h3>Property: trainingData</h3> 
+  			<em property="rdfs:label" >limo:trainingData</em> - <span property="rdfs:comment" >Connects a model to a qb:DataSet that represents data that was used for the training of the model. </span> <br /><table style="th { float: top; }">
+  			
+  			<tr><th>Sub property of</th>
+ <td>  <span rel="rdfs:subPropertyOf" href="http://purl.org/limo-ontology/limo#data"><a href="#data">limo:data</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#trainingData">#</a>] <!-- trainingData --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="usageType" about="http://purl.org/limo-ontology/limo#usageType" typeof="rdf:Property">
+  			<h3>Property: usageType</h3> 
+  			<em property="rdfs:label" >limo:usageType</em> - <span property="rdfs:comment" >Denotes whether the variable is the response of the model or one of the predictors.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Variable"><a href="#Variable">limo:Variable</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#usageType">#</a>] <!-- usageType --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="validationData" about="http://purl.org/limo-ontology/limo#validationData" typeof="rdf:Property">
+  			<h3>Property: validationData</h3> 
+  			<em property="rdfs:label" >limo:validationData</em> - <span property="rdfs:comment" >Connects a model to a qb:DataSet that represents data that was used for the validation of the model. </span> <br /><table style="th { float: top; }">
+  			
+  			<tr><th>Sub property of</th>
+ <td>  <span rel="rdfs:subPropertyOf" href="http://purl.org/limo-ontology/limo#data"><a href="#data">limo:data</a></span>
+ </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#validationData">#</a>] <!-- validationData --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="variable" about="http://purl.org/limo-ontology/limo#variable" typeof="rdf:Property">
+  			<h3>Property: variable</h3> 
+  			<em property="rdfs:label" >limo:variable</em> - <span property="rdfs:comment" >Connects a model to one of its variables. </span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Model"><a href="#Model">limo:Model</a></span>
+ </td></tr>
+  			<tr><th>Range:</th>
+ <td>  <span rel="rdfs:range" href="http://purl.org/limo-ontology/limo#Variable"><a href="#Variable">limo:Variable</a></span>
+  <span rel="rdfs:range" resource="[_:]"></span>
+  									<span about="[_:]" typeof="owl:Class"></span>
+  									<span about="[_:]" rel="owl:unionOf" resource="[_:]"></span>  <span about="[_:]" typeof="rdf:Description"></span>
+  									<span about="[_:]" rel="rdf:first" href=""><a href=""></a></span>
+  									<span about="[_:]" rel="rdf:rest" resource="[_:]"></span> </td></tr>
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#variable">#</a>] <!-- variable --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="variableType" about="http://purl.org/limo-ontology/limo#variableType" typeof="rdf:Property">
+  			<h3>Property: variableType</h3> 
+  			<em property="rdfs:label" >limo:variableType</em> - <span property="rdfs:comment" >Denotes whether the variable is continuous, categorical or ordinal.</span> <br /><table style="th { float: top; }">
+  			<tr><th>Domain:</th>
+ <td>  <span rel="rdfs:domain" href="http://purl.org/limo-ontology/limo#Variable"><a href="#Variable">limo:Variable</a></span>
+ </td></tr>
+  			
+  			</table>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#variableType">#</a>] <!-- variableType --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div>
+
+
+
+
+
+</div>
+</div>
+
+
+<!--h2 id="sec-extrefs">9. External Vocabulary References</h2-->
+
+
+<!--h3 id="extns_status">Status Vocabulary</h3-->
+
+
+  <h2 id="sec-ack">A. Acknowledgments</h2>
+	<p><i>[TODO]</i></p>
+  <h2 id="sec-changes">B. Changes History</h2>
+  <p><i>[TODO]</i></p>
+  <h2 id="sec-references">C. References</h2>
+<h3 id="sec-normative">C.1 Normative References</h3> 
+ <dl class="bibliography">
+	<dt id="bib-DCMI"><b>[DCMI]</b></dt><dd>DCMI Metadata Terms (DCMI), URL: <a href="http://dublincore.org/documents/dcmi-terms/"><cite>http://dublincore.org/documents/dcmi-terms/</cite></a></dd>
+	<dt id="bib-DCMITYPE"><b>[DCMITYPE]</b></dt><dd>DCMI Type Vocabulary (DCMITYPE), URL: <a href="http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/"><cite>http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/</cite></a></dd>
+	<dt id="bib-FOAF"><b>[FOAF]</b></dt><dd>Friend of a Friend (FOAF), URL: <a href="http://www.foaf-project.org/"><cite>http://www.foaf-project.org/</cite></a></dd>
+	<dt id="bib-INFLUENZA"><b>[GINSBERG_2009]</b></dt>
+	  <dd>
+		Ginsberg, J., Mohebbi, M.H., Patel, R.S., Brammer, L., Smolinski, M.S., Brilliant, L. Detecting inlfluenza epidemics using research engine query data. Nature 457(7232), 2009.
+	  </dd>
+	<dt id="bib-LIMO"><b>[LIMO]</b></dt>
+	  <dd>
+		Kalampokis, E., Karamanou, A., Tambouris, E., and Tarabanis, K. Towards a Vocabulary for Incorporating Predictive Models into the Linked Data Web. 
+		SemStats 2013 in conjunction with ISWC 2013.
+	  </dd>
+	<dt id="bib-PMML"><b>[PMML]</b></dt><dd>Predictive Model Markup Language URL: <a href="http://www.dmg.org/v4-1/GeneralStructure.html"><cite>http://www.dmg.org/v4-1/GeneralStructure.html</cite></a></dd>
+	<dt id="bib-RDF-CONCEPTS"><b>[RDF-CONCEPTS]</b></dt><dd>Klyne, G. and Carroll, J.J.. <a href="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210"><cite>Resource Description Framework (RDF): Concepts and Abstract Syntax.</cite></a>10 February 2004. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210">http://www.w3.org/TR/2004/REC-rdf-concepts-20040210</a></dd>
+	<dt id="bib-RDF-Data-Cube-Vocabulary"><b>[RDF Data Cube Vocabulary]</b></dt><dd>RDF Data Cube Vocabulary. URL: <a href="http://www.w3.org/TR/vocab-data-cube/"><cite>http://www.w3.org/TR/vocab-data-cube/</cite></a></dd>
+	<dt id="bib-RDF-SCHEMA"><b>[RDF-SCHEMA]</b></dt><dd>Brickley, D., and Guha, E.T. <a href="http://www.w3.org/TR/2004/REC-rdf-schema-20040210"><cite>RDF Vocabulary Description Language 1.0: RDF Schema.</cite></a>10 February 2004. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2004/REC-rdf-schema-20040210">http://www.w3.org/TR/2004/REC-rdf-schema-20040210</a></dd>
+	<dt id="bib-SKOS"><b>[SKOS]</b></dt><dd>Simple Knowledge Organization System (SKOS), URL: <a href="http://www.w3.org/2004/02/skos/"><cite>http://www.w3.org/2004/02/skos/</cite></a></dd>
+	</dl>
+	<h3 id="sec-informative">C.2 Infrormative References</h3>
+</body>
+</html>
+

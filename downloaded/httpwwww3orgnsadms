@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:voaf="http://purl.org/vocommons/voaf#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:schema="http://schema.org/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns="http://www.w3.org/ns/adms#" >
+<!-- Document metadata -->
+
+  <owl:Ontology rdf:about="http://www.w3.org/ns/adms">
+    <rdfs:label xml:lang="en">Asset Description Metadata Schema (ADMS)</rdfs:label>
+    <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in ADMS</rdfs:comment>
+    <owl:versionInfo xml:lang="en">21 December 2013 - with correction to URI of the schema cf. using the namespace</owl:versionInfo>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-24</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-21</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-07-22</dcterms:modified>
+    <rdf:type rdf:resource="http://labs.mondeca.com/vocab/voaf#Vocabulary"/>
+    <voaf:specializes rdf:resource="http://www.w3.org/dcat"/>
+    <vann:preferredNamespaceUri>http://www.w3.org/ns/adms#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>adms</vann:preferredNamespacePrefix>
+    <dcterms:creator rdf:parseType="Resource">
+      <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
+      <foaf:name>Makx Dekkers</foaf:name>
+      <foaf:homepage rdf:resource="http://makxdekkers.com/"/>
+    </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+      <rdfs:seeAlso rdf:resource="http://andrea-perego.name/foaf/#me"/>
+      <foaf:name>Andrea Perego</foaf:name>
+      <foaf:homepage rdf:resource="http://andrea-perego.name/"/>
+      <schema:affiliation rdf:parseType="Resource">
+        <foaf:name>European Commission, Joint Research Centre </foaf:name>
+        <foaf:homepage rdf:resource="http://ies.jrc.ec.europa.eu/DE"/>
+      </schema:affiliation>
+    </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+      <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+      <foaf:name>Phil Archer</foaf:name>
+      <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+      <schema:affiliation rdf:parseType="Resource">
+        <foaf:name>W3C/ERCIM</foaf:name>
+        <foaf:homepage rdf:resource="http://www.w3.org/"/>
+      </schema:affiliation>
+    </dcterms:creator>
+    <foaf:maker rdf:parseType="Resource">
+      <foaf:name>Government Linked Data WG, based on output from the ADMS Working Group</foaf:name>
+      <foaf:page rdf:resource="http://www.w3.org/2011/gld/"/>
+    </foaf:maker>
+    <dcterms:description rdf:parseType="Literal">This is the RDF encoding of the 
+      <a href="http://www.w3.org/TR/vocab-adms/">Asset Description Metadata Schema</a>, 
+      originally developed under the European Union's <a href="http://ec.europa.eu/isa/">ISA Programme</a> 
+      and further developed by the W3C <a href="http://www.w3.org/2011/gld/">Government Linked Data Working Group</a>. It re-uses terms 
+      from several other vocabularies, notably Dublin Core, with elements of SKOS, FOAF 
+      and more.
+    </dcterms:description>
+    <foaf:depiction>
+      <rdf:Description rdf:about="http://www.w3.org/TR/2013/NOTE-vocab-adms-20130528/adms20130520.png">
+        <rdfs:label>Asset Description Metadata Schema (ADMS) UML Class Diagram</rdfs:label>
+      </rdf:Description>
+    </foaf:depiction>
+    <dcterms:abstract>ADMS is a profile of DCAT, used to describe semantic assets (or just 'Assets'), defined as highly reusable metadata (e.g. xml schemata, generic data models) and reference data (e.g. code lists, taxonomies, dictionaries, vocabularies) that are used for eGovernment system development.</dcterms:abstract>
+    <wdrs:describedby>
+      <rdf:Description rdf:about="http://www.w3.org/TR/vocab-adms/">
+        <dcterms:title>Asset Description Metadata Schema (ADMS)</dcterms:title>
+      </rdf:Description>
+    </wdrs:describedby>
+  </owl:Ontology>  
+
+<!-- Classes -->
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#AssetRepository">
+    <rdfs:label xml:lang="en">Asset Repository</rdfs:label>
+    <rdfs:comment xml:lang="en">An Asset Repository is a system or service that provides facilities for storage and maintenance of descriptions of Assets and Asset Distributions, and functionality that allows users to search and access these descriptions. An Asset Repository will typically contain descriptions of several Assets and related Asset Distributions.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog" />
+    <dcterms:identifier>adms:AssetRepository</dcterms:identifier>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#Asset">
+    <rdfs:label xml:lang="en">Asset</rdfs:label>
+    <rdfs:comment xml:lang="en">An Asset is an abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work). Assets can be versioned. Every time the intellectual content of an asset changes, the result is considered to be a new asset that can be linked to previous and next versions of the Asset. The physical embodiment of an Asset is called an Asset Distribution. A particular Asset may have zero or more Asset Distributions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset" />
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <dcterms:identifier>adms:Asset</dcterms:identifier>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#AssetDistribution">
+    <rdfs:label xml:lang="en">Asset Distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">An Asset Distribution represents a particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). An Asset Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Asset Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Asset Distributions themselves are not versioned.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution" />
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <dcterms:identifier>adms:AssetDistribution</dcterms:identifier>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#Identifier">
+    <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal">This class is based on the UN/CEFACT 
+    Identifier complex type defined in See Section 5.8 of Core Components Data Type Catalogue Version 3.1 (http://www.unece.org/fileadmin/DAM/cefact/codesfortrade/CCTS/CCTS-DTCatalogueVersion3p1.pdf)
+    In RDF this is expressed using the following properties:
+    - the content string should be provided using skos:notation, datatyped with the identifier scheme (inclduing the version number if appropriate);
+    - use dcterms:creator to link to a class describing the agency that manages the identifier scheme or adms:schemaAgency to provide the name as a literal.
+    Although not part of the ADMS conceptual model, it may be useful to provide further properties to the Identifier class such as
+    dcterms:created to provide the date on which the identifier was issued.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <dcterms:identifier>adms:Identifier</dcterms:identifier>
+  </rdfs:Class>
+
+
+<!-- ***************** Properties ********************** -->
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal">adms:identifier is used to link any resource to 
+      an instance of adms:Identifier which is its range. N.B. it is not appropriate to use 
+      dcterms:identifer to link to the Identifier class as its range is rdfs:Literal.
+      ADMS uses this to provide any identifier for the Asset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Identifier" />
+    <dcterms:identifier>adms:identifier</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#includedAsset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">included asset</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to an Asset that is contained in the Asset being described, e.g. when there are several vocabularies defined in a single document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset" />
+    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Asset" />
+    <dcterms:identifier>adms:includedAsset</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#interoperabilityLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">interoperability level</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal">Links an Asset to its adms:InteroperabilityLevel. Since this is encoded using skos:Concept, that is the defined range for this property.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset" />
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <dcterms:identifier>adms:interoperabilityLevel</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#last">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">last</rdfs:label>
+    <rdfs:comment>A link to the current or latest version of the Asset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/xhtml/vocab#last" />
+    <dcterms:identifier>adms:last</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#next">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">next</rdfs:label>
+    <rdfs:comment>A link to the next version of the Asset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/xhtml/vocab#next" />
+    <dcterms:identifier>adms:next</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#prev">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">prev</rdfs:label>
+    <rdfs:comment>A link to the previous version of the Asset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/xhtml/vocab#prev" />
+    <dcterms:identifier>adms:prev</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#representationTechnique">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">representation technique</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal">Links an adms:AssetDistribution to a skos:Concept that is its adms:RepresentationTechnique.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <dcterms:identifier>adms:representationTechnique</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#sample">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">sample</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a sample of an Asset (which is itself an Asset).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset" />
+    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Asset" />
+    <dcterms:identifier>adms:sample</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#schemeAgency"> 
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label xml:lang="en">scheme agency</rdfs:label>
+    <rdfs:comment xml:lang="en">The name of the agency responsible for issuing the identifier</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Identifier" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+    <dcterms:identifier>adms:schemeAgency</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">status</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal">Links to the status of the Asset or Asset Distribution 
+      in the context of a particular workflow process. Since Status is defined using a skos:Concept, 
+      that is the defined range for this property.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <dcterms:identifier>adms:status</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#supportedSchema"> 
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">supported schema</rdfs:label>
+    <rdfs:comment xml:lang="en">A schema according to which the Asset Repository can provide data about its content, e.g. ADMS</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Asset" />
+    <dcterms:identifier>adms:supportedSchema</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#translation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:label xml:lang="en">translation</rdfs:label>
+    <rdfs:comment xml:lang="en">Links Assets that are translations of each other.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <dcterms:identifier>adms:translation</dcterms:identifier>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.w3.org/ns/adms#versionNotes"> 
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:label xml:lang="en">version notes</rdfs:label>
+    <rdfs:comment xml:lang="en">A description of changes between this version and the previous version of the Asset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+    <dcterms:identifier>adms:versionNotes</dcterms:identifier>
+  </rdf:Property>
+
+</rdf:RDF>

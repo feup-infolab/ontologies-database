@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iais.fraunhofer.de/vocabs/rami#"
+     xml:base="http://iais.fraunhofer.de/vocabs/rami"
+     xmlns:schema="http://www.w3.org/2001/XMLSchema#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:sf="http://iais.fraunhofer.de/vocabs/sf#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/spec/"
+     xmlns:rami="http://iais.fraunhofer.de/vocabs/rami#"
+     xmlns:om="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://iais.fraunhofer.de/vocabs/rami#">
+        <void:vocabulary rdf:resource="http://iais.fraunhofer.de/vocabs/sf#"/>
+        <void:vocabulary rdf:resource="http://xmlns.com/foaf/spec/"/>
+        <owl:versionInfo>SNAPSHOT</owl:versionInfo>
+        <void:vocabulary rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <rdfs:isDefinedBy rdf:resource="http://iais.fraunhofer.de/vocabs/rami#"/>
+        <void:vocabulary rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+        <void:vocabulary rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <void:vocabulary rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <void:vocabulary rdf:resource="http://purl.org/dc/terms/"/>
+        <skos:prefLabel xml:lang="en">rami</skos:prefLabel>
+        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-30</dct:created>
+        <void:vocabulary rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+        <dct:creator>Niklas Petersen</dct:creator>
+        <vann:preferredNamespaceUri>http://iais.fraunhofer.de/vocabs/rami#</vann:preferredNamespaceUri>
+        <dct:publisher rdf:resource="http://de.dbpedia.org/resource/Fraunhofer-Gesellschaft"/>
+        <vann:preferredNamespacePrefix>rami</vann:preferredNamespacePrefix>
+        <void:vocabulary rdf:resource="http://www.w3.org/XML/1998/namespace"/>
+        <dct:creator>Irlan Grangel</dct:creator>
+        <skos:definition xml:lang="en">A vocabulary which represents the Reference Architecture Model for Industry 4.0 (RAMI), including the concept of the Administration Shell I4.0 Component.</skos:definition>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#brakingResistance -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#brakingResistance">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ElectricalData"/>
+        <rdfs:range rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/hertz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#contributes -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#contributes">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <skos:definition xml:lang="en">Agent(Person or Software) that contributes to the Entity/Object related data. It correspond to the Contributor concept of OMM</skos:definition>
+        <skos:prefLabel xml:lang="en">typeDescription</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#createdBy">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <skos:definition xml:lang="en">Agent(Person or Software) that creates to the Entity/Object related data. It correspond to the Creator concept of OMM</skos:definition>
+        <skos:prefLabel xml:lang="en">hasCreator</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#hasData -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#hasData">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#AdminShell"/>
+        <rdfs:range rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <skos:definition xml:lang="en">Connects the AdminShell with the different types of Data for the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">has Data</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#hasRAMIHierarchyLevel -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#hasRAMIHierarchyLevel">
+        <rdfs:range rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Connects the concepts with the correspondent layer in the RAMI Hierarchy Levels</skos:definition>
+        <skos:prefLabel>has RAMI Hierarchy Level</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#hasTechnicalFuncionality -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#hasTechnicalFuncionality">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#AdminShell"/>
+        <rdfs:range rdf:resource="http://iais.fraunhofer.de/vocabs/rami#TechnicalFunctionality"/>
+        <skos:definition xml:lang="en">The Administrative Shell has Technical Funcionalities</skos:definition>
+        <skos:prefLabel xml:lang="en">has Technical Funcionality</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#inputVoltage -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#inputVoltage">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ElectricalData"/>
+        <rdfs:range rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/volt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#isDescribedWith -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#isDescribedWith">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#AdminShell"/>
+        <rdfs:range rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Standard"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <rdfs:range rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <rdfs:comment xml:lang="en">The Object can be part of of other Objects</rdfs:comment>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#livePicture -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#livePicture">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/spec/Image"/>
+        <rdfs:comment xml:lang="en">Points to an Image for the Object/Entity</rdfs:comment>
+        <rdfs:label xml:lang="en">LivePicture</rdfs:label>
+        <rdfs:label xml:lang="de">Livebilder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#outputFrequency -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#outputFrequency">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ElectricalData"/>
+        <rdfs:range rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/hertz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#publishedURL -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#publishedURL">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Standard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#AnyURI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#wraps -->
+
+    <owl:ObjectProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#wraps">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#AdminShell"/>
+        <rdfs:range rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <skos:definition xml:lang="en">Connect the Object with the Admin Shell</skos:definition>
+        <skos:prefLabel xml:lang="en">wraps</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#CADFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#CADFormat">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#MCAD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Different types of format files for CAD Archive of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">CAD Format</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#CADSystem -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#CADSystem">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#MCAD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Points to the different types of CAD systems of the Object/Entity</skos:definition>
+        <skos:example>Neutral 2D, Neutral 3D, SolidWorks</skos:example>
+        <skos:prefLabel xml:lang="en">CAD Format</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#CADarchive -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#CADarchive">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#MCAD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:definition xml:lang="en">Link(URL) to the CAD Archive of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">CAD Archive</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#blockUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#blockUrl">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Firmware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:definition xml:lang="en">URL of the Firmware that belongs to the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">Block Url</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#brakingResistance -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#brakingResistance"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#certificateName -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#certificateName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#SafetyConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Certificate Safety Name of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">Certificate Name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#certificateUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#certificateUrl">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#SafetyConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:definition xml:lang="en">Certificate Safety Url of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">Certificate Url</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#contributionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#contributionDate">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <skos:definition xml:lang="en">Date when an Agent(Person or Software) contributes to the Entity/Object related data. It correspond to the Contributor concept of OMM</skos:definition>
+        <skos:prefLabel xml:lang="en">hasCreator</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#creationDate">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <skos:definition xml:lang="en">Date when an Agent(Person or Software) creates to the Entity/Object related data. It correspond to the Creator concept of OMM</skos:definition>
+        <skos:prefLabel xml:lang="en">hasCreator</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#description -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#description">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Description of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">has Description</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#eClassClassification -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#eClassClassification">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#eClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <skos:definition xml:lang="en">Identification of an object according to the eCl@ss Standard hierarchy level</skos:definition>
+        <skos:prefLabel xml:lang="en">eClassIRDI</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#eClassIRDI -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#eClassIRDI">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#eClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Unique Identification of an object according to eCl@ss Standard</skos:definition>
+        <skos:prefLabel xml:lang="en">eClassIRDI</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#firmwareDate -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#firmwareDate">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Firmware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <skos:definition xml:lang="en">Firmware date that belongs to the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">firmware Date</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#hasEnergyValue -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#hasEnergyValue">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#CumulativeEnergyConsumption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <skos:prefLabel xml:lang="en">hasEnergyValue</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#hasSensorId -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#hasSensorId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Unique Identification of the Sensor</skos:definition>
+        <skos:prefLabel xml:lang="en">hasSensorId</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#identification -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#identification">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/2005/Incubator/omm/XGR-omm-20111026/"/>
+        <skos:definition xml:lang="en">Identification for the Entity/Object related data. It correspond to the ID concept of OMM</skos:definition>
+        <skos:prefLabel xml:lang="en">Identification</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#inputVoltage -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#inputVoltage"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#inventoryNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#inventoryNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Inventory number of the Entity/Object according to the identification nomenclature</skos:definition>
+        <skos:prefLabel xml:lang="en">Inventory Number</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#isDescribedWith -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#isDescribedWith"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#logs -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#logs">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#TraceRecordings"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:prefLabel xml:lang="en">logs</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#manual -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#manual">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ApplicationData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:definition xml:lang="en">Points to the Manual document of a given Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">Manual</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#name -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Name of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">has Name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#objectId -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#objectId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Unique ID for the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">has Object Id</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#outputFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#outputFrequency"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#phasesNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#phasesNumber">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ElectricalData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:example>Single phase, three phase</skos:example>
+        <skos:prefLabel xml:lang="en">Phases Number</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#publishedURL -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#publishedURL"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#releaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#releaseDate">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Standard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <skos:definition xml:lang="en">Release Date of the Standard</skos:definition>
+        <skos:prefLabel xml:lang="en">Release Date</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#safetyName -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#safetyName">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#SafetyConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Name of the Safety Configuration of the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">Safety Name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#standardName -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#standardName">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#EngineeringData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Name of the Standard that specifies the Engineering Data</skos:definition>
+        <skos:prefLabel xml:lang="en">Standard Name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#standardURL -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#standardURL">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#EngineeringData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:definition xml:lang="en">Points to the URL of the Standard that specifies the Engineering Data</skos:definition>
+        <skos:prefLabel xml:lang="en">Standard URL</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#standardVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#standardVersion">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#EngineeringData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Version of the Standard that specifies the Engineering Data</skos:definition>
+        <skos:prefLabel xml:lang="en">Standard Version</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#stdName -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#stdName">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Standard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Name of the Standard</skos:definition>
+        <skos:prefLabel xml:lang="en">Std Name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#typeDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#typeDescription">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/2005/Incubator/omm/XGR-omm-20111026/"/>
+        <skos:definition xml:lang="en">Describes the Entity/Object related data. It correspond to the Description concept of OMM</skos:definition>
+        <skos:prefLabel xml:lang="en">typeDescription</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#version -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#version">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Firmware"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Standard"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Current version of the Standard</skos:definition>
+        <skos:definition xml:lang="en">Version of the Firmware that belongs to the Object/Entity</skos:definition>
+        <skos:prefLabel xml:lang="en">Version</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">has Version</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#videoRecordingUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#videoRecordingUrl">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#VideoRecording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:prefLabel xml:lang="en">Video Recording Url</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#videoUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#videoUrl">
+        <rdfs:domain rdf:resource="http://iais.fraunhofer.de/vocabs/rami#VideoRecordings"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:prefLabel xml:lang="en">videoUrl</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#AdminShell -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#AdminShell">
+        <dc:source xml:lang="en">This definition comprises material from RAMI4.0.</dc:source>
+        <skos:altLabel xml:lang="en">Administration Shell</skos:altLabel>
+        <skos:definition xml:lang="en">Describe the Administration Shell for Products, Components, e.g. Machines</skos:definition>
+        <skos:hiddenLabel xml:lang="en">Administrative Shell</skos:hiddenLabel>
+        <skos:prefLabel xml:lang="en">Admin Shell</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Verwaltungsschale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#ApplicationData -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#ApplicationData">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <skos:definition xml:lang="de">Hier bestimmt der Gegenstand das Format</skos:definition>
+        <skos:definition xml:lang="en">The object determines the format</skos:definition>
+        <skos:prefLabel xml:lang="de">Anwendungsdaten</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Application Data</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#BasicData -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#BasicData">
+        <skos:definition xml:lang="en">Describe the different types of Data related to the I4.0 Entity/Object</skos:definition>
+        <skos:prefLabel xml:lang="en">Data</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Daten</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#CumulativeEnergyConsumption -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#CumulativeEnergyConsumption"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#ElectricalData -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#ElectricalData">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <skos:definition xml:lang="en">Electrical Data for the Object</skos:definition>
+        <skos:prefLabel xml:lang="en">Electrical Data</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#EngineeringData -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#EngineeringData">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.businessdictionary.com/definition/engineering-data.html#ixzz45Ydk71Su"/>
+        <skos:definition xml:lang="en">Documents such as drawings, manufacturer&apos;s specifications, standards, and other information relating to design, procurement, fabrication, test, and inspection of an item or structure.</skos:definition>
+        <skos:prefLabel xml:lang="en">Engineering Data</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Engineering-Daten</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Firmware -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#Firmware">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ApplicationData"/>
+        <skos:definition xml:lang="de">Eingesetzte Firmware, Firmware-Module</skos:definition>
+        <skos:definition xml:lang="en">Used firmware, firmware modules</skos:definition>
+        <skos:prefLabel xml:lang="de">Firmware</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Firmware</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#MCAD -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#MCAD">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#EngineeringData"/>
+        <skos:definition xml:lang="en">Data that contain the files used for Mechanical Computer Aid Design of a given object</skos:definition>
+        <skos:prefLabel xml:lang="de">MCAD</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">MCAD</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Machine -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#Machine">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Object"/>
+        <skos:definition xml:lang="en">A machine is ordered, designed, commissioned, operated, serviced, converted and recycled.</skos:definition>
+        <skos:prefLabel xml:lang="en">Machine</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Object -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#Object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#Instance"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#Type"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <skos:altLabel xml:lang="en">Entity</skos:altLabel>
+        <skos:altLabel xml:lang="de">Entität</skos:altLabel>
+        <skos:definition xml:lang="en">Clearly identifiable object which is managed due to its importance in the world of information</skos:definition>
+        <skos:definition xml:lang="de">Eindeutig identifizierbarer Gegenstand, der aufgrund seiner Bedeutung in der Informationswelt verwaltet wird</skos:definition>
+        <skos:note xml:lang="en">Objects may be known in the form of a type or of an instance. An object in the planning phase is known as a type</skos:note>
+        <skos:prefLabel xml:lang="en">Object</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Objekt</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Order -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#Order">
+        <skos:definition xml:lang="en">Each order for manufacturing runs through a life cycle and its specifics necessarily have an impact on the production facility during performance of the order</skos:definition>
+        <skos:prefLabel xml:lang="en">Order</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#ConnectedWorld"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#ControlDevice"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#Enterprise"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#FieldDevice"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#Product"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#Station"/>
+                    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#WorkCenter"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:seeAlso rdf:resource="http://www.zvei.org/en/subjects/Industry-40/Pages/The-Reference-Architectural-Model-RAMI-40-and-the-Industrie-40-Component.aspx"/>
+        <skos:definition xml:lang="en">It describes the functional classification of various circumstances within Industrie 4.0. For classification within a factory, this axis of the reference architecture(layers) follows the IEC 62264 Standard.</skos:definition>
+        <skos:prefLabel xml:lang="en">RAMI Hierarchy Level</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#SafetyConfiguration -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#SafetyConfiguration">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#ApplicationData"/>
+        <skos:definition xml:lang="en">Safety Configuration of the Object/Entity. It contains certificate of compliance that states that the object has fullfils the safety requirements according to a given standard</skos:definition>
+        <skos:prefLabel xml:lang="en">SafetyConfiguration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#SensorMeasurementData -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#SensorMeasurementData">
+        <owl:equivalentClass rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#BasicData"/>
+        <rdfs:comment xml:lang="en">Data measured by a sensor</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Standard -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#Standard">
+        <skos:definition xml:lang="en">Standards that are used to describe the actual I4.0 Entity/Object</skos:definition>
+        <skos:prefLabel xml:lang="de">Standard</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Standard</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#TechnicalFunctionality -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#TechnicalFunctionality">
+        <skos:definition xml:lang="en">Technical Functionality of the Administration Shell</skos:definition>
+        <skos:note xml:lang="en">Technical functionality takes place in the Functional Layer of the reference architecture model RAMI4.0</skos:note>
+        <skos:prefLabel xml:lang="de">Fachliche Funktionalität</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Technical Functionality</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#TraceRecordings -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#TraceRecordings"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#VideoRecording -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#VideoRecording"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#VideoRecordings -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#VideoRecordings"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#eClass -->
+
+    <owl:Class rdf:about="http://iais.fraunhofer.de/vocabs/rami#eClass">
+        <rdfs:subClassOf rdf:resource="http://iais.fraunhofer.de/vocabs/rami#Standard"/>
+        <skos:definition xml:lang="en">Class to represent the connection of an I4.0 Entity/Object with the eCl@ss Standard</skos:definition>
+        <skos:prefLabel xml:lang="de">eClass</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">eClass</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#Sensor -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn#SensorOutput -->
+
+    <owl:Class rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#AnyURI -->
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#AnyURI"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hertz -->
+
+    <owl:Class rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hertz"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/volt -->
+
+    <owl:Class rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/volt"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/Image -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/spec/Image"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#ConnectedWorld -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#ConnectedWorld">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Connected World hierarchy level of RAMI 4.0.  Group of Factories, and the collaboration with external engineering firms, component suppliers and customers</skos:definition>
+        <skos:prefLabel xml:lang="en">Connected World</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#ControlDevice -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#ControlDevice">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Control Device hierarchy level of RAMI 4.0</skos:definition>
+        <skos:prefLabel xml:lang="en">Control Device</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Enterprise -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#Enterprise">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Enterprise hierarchy level of RAMI 4.0</skos:definition>
+        <skos:prefLabel xml:lang="en">Enterprise</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#FieldDevice -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#FieldDevice">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Field Device hierarchy level of RAMI 4.0</skos:definition>
+        <skos:prefLabel xml:lang="en">Field Device</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Instance -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#Instance"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Product -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#Product">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Product hierarchy level of RAMI 4.0</skos:definition>
+        <skos:prefLabel xml:lang="en">Product</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Station -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#Station">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Station hierarchy level of RAMI 4.0</skos:definition>
+        <skos:prefLabel xml:lang="en">Station</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#Type -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#Type"/>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#WorkCenter -->
+
+    <owl:NamedIndividual rdf:about="http://iais.fraunhofer.de/vocabs/rami#WorkCenter">
+        <rdf:type rdf:resource="http://iais.fraunhofer.de/vocabs/rami#RAMIHierarchyLevel"/>
+        <skos:definition xml:lang="en">Work Center hierarchy level of RAMI 4.0</skos:definition>
+        <skos:prefLabel xml:lang="en">Work Center</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#brakingResistance">
+        <skos:prefLabel xml:lang="en">braking Resistance</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#inputVoltage">
+        <skos:example>230 V AC / 50-60 Hz</skos:example>
+        <skos:prefLabel xml:lang="en">Input Voltage</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#isDescribedWith">
+        <skos:definition xml:lang="en">Points to the Standard used to describe a given object</skos:definition>
+        <skos:prefLabel xml:lang="en">Is Described With</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#outputFrequency">
+        <skos:prefLabel xml:lang="en">Output Frequency</skos:prefLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://iais.fraunhofer.de/vocabs/rami#publishedURL">
+        <skos:prefLabel xml:lang="en">Published URL</skos:prefLabel>
+        <skos:definition xml:lang="en">Published URL of the Standard</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

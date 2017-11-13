@@ -1,0 +1,61 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:liner="https://w3id.org/liner/"
+    xmlns:qudt="http://qudt.org/1.1/schema/qudt#"
+    xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ssn="https://www.w3.org/ns/ssn/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <rdf:Description rdf:about="http://qudt.org/1.1/schema/qudt#quantityValue">
+    <rdfs:subPropertyOf rdf:resource="evaluation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/1.1/schema/qudt#Quantity">
+    <rdfs:comment xml:lang="en">seas:Property extends qudt:Quantity because the evaluated property may not be a Quantity, but have several qualifiable aspects. The Semantic Actuator Network Ontology (SAN) proposes that ssn:Property be a subClass of qudt:QuantityKind. Yet a property may be not measureable and numerically quantifiable. Indeed, it may also be a boolean, or any other kind of quality value (e.g., "UNOPERATED").</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Property"/>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <rdf:Description rdf:about="http://qudt.org/1.1/schema/qudt#numericalValue">
+    <rdfs:subPropertyOf rdf:resource="evaluatedValue"/>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <rdf:Description rdf:about="http://qudt.org/1.1/schema/qudt#QuantityValue">
+    <rdfs:comment xml:lang="en">`seas:Evaluation` extends `qudt:QuantityValue` because the evaluated property may be something else than a Quantity. It may be a quality, or an enumeration.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+  </rdf:Description>
+  <voaf:Vocabulary rdf:about="QUDTAlignment">
+    <owl:versionInfo>v1.0</owl:versionInfo>
+    <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <dcterms:title xml:lang="en">QUDT Alignment.</dcterms:title>
+    <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+    <owl:imports rdf:resource="EvaluationOntology"/>
+    <dcterms:description xml:lang="en">This ontology defines proposed alignemnts with the QUDT ontology.</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-09-19</dcterms:modified>
+    <owl:versionIRI rdf:resource="QUDTAlignment-1.0"/>
+    <owl:imports rdf:resource="FeatureOfInterestOntology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-09-19</dcterms:issued>
+  </voaf:Vocabulary>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

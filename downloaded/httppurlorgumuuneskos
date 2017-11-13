@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY iso-thes "http://purl.org/iso25964/skos-thes#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY uneskos "http://purl.org/umu/uneskos#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+<rdf:RDF xmlns="http://purl.org/umu/uneskos#"
+     xml:base="http://purl.org/umu/uneskos"
+     xmlns:dcterms="http://purl.org/dc/terms/" 
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:iso-thes="http://purl.org/iso25964/skos-thes#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:uneskos="http://purl.org/umu/uneskos#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/" >
+    <owl:Ontology rdf:about="http://purl.org/umu/uneskos">
+	<rdfs:seeAlso rdf:resource="http://skos.um.es/TR/uneskos"/>
+	<owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+	<owl:imports rdf:resource="http://purl.org/iso25964/skos-thes"/>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-23</dcterms:created>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-10</dcterms:modified>
+	<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-10</dc:date>
+        <dcterms:description xml:lang="en">An RDF vocabulary for extending some SKOS and ISO-THES functions in order to improve the linked data consumption of SKOS datasets</dcterms:description>
+        <dcterms:creator foaf:name="Juan-Antonio Pastor-Sánchez"/>
+        <dcterms:title xml:lang="en">UNESKOS Vocabulary</dcterms:title>
+        <rdfs:seeAlso rdf:resource="http://skos.um.es/TR/uneskos-reference/"/>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- http://purl.org/umu/uneskos#contains -->
+
+    <owl:ObjectProperty rdf:about="&uneskos;contains">
+        <rdfs:label xml:lang="en">contains element</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept scheme with any resource.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/umu/uneskos"/>
+        <rdfs:domain rdf:resource="&skos;ConceptScheme"/>
+        <owl:inverseOf rdf:resource="&skos;inScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/umu/uneskos#hasMainConcept -->
+
+    <owl:ObjectProperty rdf:about="&uneskos;hasMainConcept">
+        <rdfs:label xml:lang="en">has main concept</rdfs:label>
+        <skos:definition xml:lang="en">Identifies access point concepts into a skos:Collection.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/umu/uneskos"/>
+        <rdfs:domain rdf:resource="&skos;Collection"/>
+        <rdfs:range rdf:resource="&skos;Concept"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;member"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/umu/uneskos#hasMicroThesaurus -->
+
+    <owl:ObjectProperty rdf:about="&uneskos;hasMicroThesaurus">
+        <rdfs:label xml:lang="en">has Microthesaurus</rdfs:label>
+        <skos:definition xml:lang="en">Relates a Concept Scheme with a ConceptGroup.</skos:definition>
+        <rdfs:range rdf:resource="&iso-thes;ConceptGroup"/>
+        <owl:inverseOf rdf:resource="&iso-thes;microThesaurusOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/umu/uneskos"/>
+        <rdfs:domain rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/umu/uneskos#mainConceptOf -->
+
+    <owl:ObjectProperty rdf:about="&uneskos;mainConceptOf">
+        <rdfs:label xml:lang="en">is main concept in Collection</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a Collection as a access point.</skos:definition>
+        <owl:inverseOf rdf:resource="http://purl.org/umu/uneskos#hasMainConcept"/>
+        <rdfs:isDefinedBy rdf:resource="http://skos.um.es/voc/uneskos"/>
+        <rdfs:range rdf:resource="&skos;Collection"/>
+        <rdfs:domain rdf:resource="&skos;Concept"/>
+        <rdfs:subPropertyOf rdf:resource="&uneskos;memberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/umu/uneskos#memberOf -->
+
+    <owl:ObjectProperty rdf:about="&uneskos;memberOf">
+        <rdfs:label xml:lang="en">member of</rdfs:label>
+        <skos:definition xml:lang="en">Identifies a concept collection.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/umu/uneskos"/>
+        <rdfs:range rdf:resource="&skos;Collection"/>
+        <owl:inverseOf rdf:resource="&skos;member"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Collection"/>
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

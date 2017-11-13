@@ -1,0 +1,315 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dctype: <http://purl.org/dc/dcmitype/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix voaf: <http://purl.org/vocommons/voaf#>.
+@prefix v: <http://www.w3.org/2006/vcard/ns#>.
+@prefix schema: <http://schema.org/>.
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix xbrll: <https://w3id.org/vocab/xbrll#> .
+@prefix geop: <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix rov: <http://www.w3.org/ns/regorg#>.
+
+
+# metadata info for the ontology here 
+<https://w3id.org/vocab/xbrll>
+    a owl:Ontology, voaf:Vocabulary;
+    rdfs:label "A lightweight XBRL vocabulary"@en;
+    rdfs:label "El vocabulario para informe financiero"@es;
+    dct:creator [foaf:name "Ghislain Atemezing"; schema:affiliation [foaf:homepage <http://www.mondeca.com>; foaf:name "Mondeca"]], 
+                [foaf:name "Maria Mora"; schema:affiliation [foaf:homepage <http://www.bris.ac.uk>; foaf:name "University of Bristol"]
+                 ];
+    dct:description "An attempt to publish XBRL standard following best practices on the Web."@en ;
+                 
+    dct:issued "2016-05-18"^^xsd:date;
+    dct:modified "2016-05-20"^^xsd:date;
+    dct:modified "2016-06-01"^^xsd:date;
+    dct:modified "2016-06-29"^^xsd:date;
+    dct:modified "2016-12-01"^^xsd:date;
+    vann:preferredNamespacePrefix "xbrll" ;
+    owl:versionInfo "0.1.1" ;
+    .
+
+
+##################################
+## ---//---classes here ---//--- 
+#################################
+
+xbrll:Report a rdfs:Class , owl:Class ; 
+	rdfs:label "Report"@en , "Informe"@es ;
+	rdfs:comment "A report may content many data points that are facts"@en ;
+	rdfs:subClassOf schema:Report ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:Fact a rdfs:Class, owl:Class ;
+	rdfs:label "Fact"@en ;
+	rdfs:comment "a fact is the representation of a value contextualised"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+	
+xbrll:Period a rdfs:Class, owl:Class ;
+	rdfs:label "Period"@en ;
+	rdfs:comment "period is the time period of the fact"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:Scenario a rdfs:Class, owl:Class ;
+	rdfs:label "Scenario"@en ;
+	rdfs:comment "scenario provides further contextual information about the fact"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:Tuple a rdfs:Class, owl:Class ;
+	rdfs:label "Tuple Fact"@en ;
+	rdfs:comment "a tuple defines multiple values in a Fact"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:Dimension a rdfs:Class , owl:Class ;
+	rdfs:label "Dimension"@en ;
+	rdfs:comment "Defines dimensional context in a Fact"@en;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:DimensionalItem a rdfs:Class , owl:Class ;
+	rdfs:label "Dimensional Item "@en ;
+	rdfs:comment "Defines dimensional items context in a Fact"@en;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:Entity a rdfs:Class , owl:Class ;
+	rdfs:label "Entity"@en ;
+	rdfs:subClassOf rov:RegisteredOrganization ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:Segment a rdfs:Class, owl:Class ;
+	rdfs:label "Segment"@en ;
+	rdfs:comment "segment to provides further contextual information about the fact"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:ScenarioItem a rdfs:Class, owl:Class ; 
+	rdfs:label "Scenario item"@en ;
+	rdfs:comment "Defines scenario items context in a Fact"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:SegmentItem a rdfs:Class, owl:Class ; 
+	rdfs:label "Segment item"@en ;
+	rdfs:comment "Defines segment items context in a Fact"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+##################################
+##  object properties here    ###
+##################################
+
+xbrll:period a owl:ObjectProperty, rdf:Property ;
+	 rdfs:label "Period"@en ;
+	 rdfs:domain xbrll:Period ;
+	 rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:concept a rdf:Property, owl:ObjectProperty;
+	rdfs:label "Concept"@en ;
+	rdfs:comment "Property to reference concept in a fact"@en ;
+	rdfs:domain [ a owl:Class ;
+						owl:unionOf (xbrll:ScenarioItem xbrll:SegmentItem xbrll:Fact )] ;
+	rdfs:range skos:Concept ;
+	.
+	
+xbrll:hasEntity a rdf:Property, owl:ObjectProperty;
+	rdfs:label "Has entity"@en ;
+	rdfs:comment "Property for linking a fact the entity reporting"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xbrll:Entity ;
+	.
+
+xbrll:hasScenario a rdf:Property, owl:DatatypeProperty ;
+	rdfs:comment "Property for linking a scenario from a Fact"@en ;
+	rdfs:label "Has scenario"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xbrll:Scenario;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:hasDimension a rdf:Property, owl:DatatypeProperty ;
+	rdfs:label "Has dimension"@en ;
+	rdfs:comment "Property for linking a dimension from a Fact"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xbrll:Dimension;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:hasSegment a rdf:Property, owl:DatatypeProperty ;
+	rdfs:label "Has segment"@en ;
+	rdfs:comment "Property for linking a segment from a Fact"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xbrll:Segment;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:dimensionalItem a owl:ObjectProperty, rdf:Property ;
+	 rdfs:label "Dimensional Item"@en ;
+	 rdfs:domain xbrll:Dimension ;
+	 rdfs:range xbrll:DimensionalItem ;
+	 rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:scenarioItem a owl:ObjectProperty, rdf:Property ;
+	 rdfs:label "Scenario Item"@en ;
+	 rdfs:domain xbrll:Scenario ;
+	 rdfs:range xbrll:ScenarioItem ;
+	 rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:segmentItem a owl:ObjectProperty, rdf:Property ;
+	 rdfs:label "Segment Item"@en ;
+	 rdfs:domain xbrll:Segment ;
+	 rdfs:range xbrll:SegmentItem ;
+	 rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:axis a rdf:Property, owl:ObjectProperty;
+	rdfs:label "Axis"@en ;
+	rdfs:comment "Axis"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	rdfs:domain xbrll:DimensionalItem;
+	rdfs:range skos:Concept ;
+	.
+
+xbrll:member a rdf:Property, owl:ObjectProperty;
+	rdfs:label "Member"@en ;
+	rdfs:comment "Domain member"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	rdfs:domain xbrll:DimensionalItem;
+	rdfs:range skos:Concept ;
+	.
+
+
+xbrll:scenario a rdf:Property, owl:ObjectProperty;
+	rdfs:label "Scenario"@en ;
+	rdfs:comment "Scenario property"@en ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	rdfs:domain xbrll:Fact;
+	rdfs:range xbrll:Scenario ;
+	.
+
+
+#####################################
+## --//--Data properties here --//--
+####################################
+
+xbrll:startDate a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Start date"@en ;
+	rdfs:comment "Starting date of a period"@en ;
+	rdfs:domain xbrll:Period ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:endDate a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "End date"@en ;
+	rdfs:comment "End date of a period"@en ;
+	rdfs:domain xbrll:Period ;
+	rdfs:range xsd:date ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:instant a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Is instant"@en ;
+	rdfs:comment "boolean for the instant moment"@en ;
+	rdfs:domain xbrll:Period ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:forever a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Is forever"@en ;
+	rdfs:domain xbrll:Period ;
+	rdfs:comment "Boolean telling the period is forever or not"@en ;
+	rdfs:range xsd:boolean ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:hasTuple a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Has tuple"@en ;
+	rdfs:comment "Tuple to which a fact points to"@en ;
+	rdfs:domain  [ a owl:Class ;
+						owl:unionOf (xbrll:Tuple  xbrll:Fact )]   ;
+	rdfs:range xsd:anyURI ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:unitRef a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Unit ref"@en ;
+	rdfs:comment "The reference unit used in the fact"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:value a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Value"@en ;
+	rdfs:comment "The actual value of a Fact"@en ;
+	rdfs:domain [ a owl:Class ;
+						owl:unionOf (xbrll:ScenarioItem xbrll:SegmentItem xbrll:Fact )] ;
+	rdfs:range [a rdfs:Datatype ;
+                         owl:unionOf ( xsd:double
+                                       xsd:string
+                                     )
+                       ] ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+xbrll:footnote a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Footnote"@en ;
+	rdfs:comment "The footnote of the concept"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xsd:string ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+xbrll:decimals a rdf:Property, owl:DatatypeProperty;
+	rdfs:label "Decimals"@en ;
+	rdfs:comment "Number of decimals used for a currency"@en ;
+	rdfs:domain xbrll:Fact ;
+	rdfs:range xsd:integer ;
+	rdfs:isDefinedBy <https://w3id.org/vocab/xbrll> ;
+	.
+
+
+
+## external resource.
+
+schema:Report a owl:Class.
+
+### Axioms ####
+
+xbrll:Fact owl:disjointWith xbrll:Tuple .
+xbrll:Period owl:disjointWith xbrll:Fact .
+xbrll:Scenario owl:disjointWith xbrll:Fact .
+xbrll:Segment owl:disjointWith xbrll:Dimension .
+
+
+
+	

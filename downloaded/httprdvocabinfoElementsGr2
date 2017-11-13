@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://rdvocab.info/ElementsGr2"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: RDA Group 2 Elements (deprecated) -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2">
+  <dc:title xml:lang="en">RDA Group 2 Elements (deprecated)</dc:title>
+  <skos:note  xml:lang="en">This was the provisional registration of the RDA Group 2 Element Vocabulary, managed by the DCMI/RDA Task Group. </skos:note>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/addressOfTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">addressOfTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Address of the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The address of a corporate body’s headquarters or offices, or an e-mail or Internet address for the body. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/addressOfThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">addressOfThePerson</reg:name>
+  <rdfs:label xml:lang="en">Address of the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The address of a person’s place of residence, business, or employer, and/or an e-mail or Internet address. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/affiliation">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">affiliation</reg:name>
+  <rdfs:label xml:lang="en">Affiliation (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A group with which a person is affiliated or has been affiliated through employment, membership, cultural identity, etc. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/associatedInstitution">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">associatedInstitution</reg:name>
+  <rdfs:label xml:lang="en">Associated institution (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">An institution commonly associated with a corporate body. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/biographicalInformation">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">biographicalInformation</reg:name>
+  <rdfs:label xml:lang="en">Biographical information (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">Information pertaining to the life or history of a person. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/corporateHistory">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">corporateHistory</reg:name>
+  <rdfs:label xml:lang="en">Corporate history (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">Information pertaining to the history of a corporate body. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/countryAssociatedWithThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">countryAssociatedWithThePerson</reg:name>
+  <rdfs:label xml:lang="en">Country associated with the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A country with which a person is identified. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateAssociatedWithTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateAssociatedWithTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Date associated with the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The date or range of dates on which a conference, etc., is held, or a date with which a corporate body is otherwise associated (e.g., date of founding). (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.4 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/dateOfEstablishment" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/dateOfConferenceEtc" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/dateOfTermination" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateAssociatedWithTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateAssociatedWithTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Date associated with the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A significant date associated with a family. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateAssociatedWithThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateAssociatedWithThePerson</reg:name>
+  <rdfs:label xml:lang="en">Date associated with the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A significant date associated with a person (e.g., date of birth, date of death). (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/dateOfBirth" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/dateOfDeath" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/periodOfActivityOfThePerson" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.2 and FRAD 4.1.</skos:scopeNote>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateOfBirth">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateOfBirth</reg:name>
+  <rdfs:label xml:lang="en">Date of birth (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The year a person was born. Date of birth may also include the month and day of the person’s birth. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/DateAssociatedWithThePerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateOfConferenceEtc">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateOfConferenceEtc</reg:name>
+  <rdfs:label xml:lang="en">Date of conference, etc. (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/dateAssociatedWithTheCorporateBody" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.4 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateOfDeath">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateOfDeath</reg:name>
+  <rdfs:label xml:lang="en">Date of death (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The year a person died. Date of death may also include the month and day of the person’s death. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/DateAssociatedWithThePerson" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.2 and FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateOfEstablishment">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateOfEstablishment</reg:name>
+  <rdfs:label xml:lang="en">Date of establishment (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The date on which a corporate body was established or founded. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/dateAssociatedWithTheCorporateBody" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.4 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateOfTermination">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateOfTermination</reg:name>
+  <rdfs:label xml:lang="en">Date of termination (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The date on which a corporate body was terminated or dissolved. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/dateAssociatedWithTheCorporateBody" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.4 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/dateOfUsage">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">dateOfUsage</reg:name>
+  <rdfs:label xml:lang="en">Date of usage (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A date or range of dates associated with the use of the name designated as the preferred name for a person. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Name" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/familyHistory">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">familyHistory</reg:name>
+  <rdfs:label xml:lang="en">Family history (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">Information pertaining to the history of a family. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/fieldOfActivityOfTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">fieldOfActivityOfTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Field of activity of the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A field of business in which a corporate body is engaged, its area of competence, responsibility, jurisdiction, etc. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/fieldOfActivityOfThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">fieldOfActivityOfThePerson</reg:name>
+  <rdfs:label xml:lang="en">Field of activity of the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A field of endeavour, area of expertise, etc., in which a person is engaged or was engaged. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.4 and FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/fullerFormOfName">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">fullerFormOfName</reg:name>
+  <rdfs:label xml:lang="en">Fuller form of name (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The full form of a part of a name represented only by an initial or abbreviation in the form chosen as the preferred name, or a part of the name not included in the form chosen as the preferred name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.1 and FRAD 4.1.</skos:scopeNote>
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/fullerFormOfNamePerson" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/fullerFormOfNamePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">fullerFormOfNamePerson</reg:name>
+  <rdfs:label xml:lang="en">Fuller form of name (Person) (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The full form of a part of a name represented only by an initial or abbreviation in the form chosen as the preferred name, or a part of the name not included in the form chosen as the preferred name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/fullerFormOfName" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/gender">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">gender</reg:name>
+  <rdfs:label xml:lang="en">Gender (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The gender with which a person identifies. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/hereditaryTitle">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">hereditaryTitle</reg:name>
+  <rdfs:label xml:lang="en">Hereditary title (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A title of nobility, etc., associated with a family. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/identifierForTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">identifierForTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Identifier for the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A character string uniquely associated with a corporate body, or with a surrogate for a corporate body (e.g., an authority record), that serves to differentiate that corporate body from other corporate bodies. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 5.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/identifierForTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">identifierForTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Identifier for the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A character string uniquely associated with a family, or with a surrogate for a family (e.g., an authority record), that serves to differentiate that family from other families. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 5.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/identifierForThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">identifierForThePerson</reg:name>
+  <rdfs:label xml:lang="en">Identifier for the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A character string uniquely associated with a person, or with a surrogate for a person (e.g., an authority record), that serves to differentiate that person from other persons. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/languageOfTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">languageOfTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Language of the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A language a corporate body uses in its communications. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/languageOfThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">languageOfThePerson</reg:name>
+  <rdfs:label xml:lang="en">Language of the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A language a person uses when writing for publication, broadcasting, etc. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/locationOfConferenceEtc">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">locationOfConferenceEtc</reg:name>
+  <rdfs:label xml:lang="en">Location of conference, etc. (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A local place in which a conference, congress, meeting, exhibition, fair, festival, etc., was held. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/placeAssociatedWithTheCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/locationOfHeadquarters">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">locationOfHeadquarters</reg:name>
+  <rdfs:label xml:lang="en">Location of headquarters (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A country, state, province, etc., or local place in which an organization has its headquarters. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/placeAssociatedWithTheCorporateBody" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.3 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/name">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">name</reg:name>
+  <rdfs:label xml:lang="en">Name (Deprecated)</rdfs:label>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Agent" />
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20287" />
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20287" />
+<reg:hasSubproperty rdf:resource="http://rdaregistry.info/Elements/e/P20287" />
+  <rdfs:range rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Name" />
+  <skos:definition xml:lang="en">(Deprecated)</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/nameOfTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">nameOfTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Name of the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A word, character, or group of words and/or characters by which a corporate body is known. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.1 and FRAD 5.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/preferredNameForTheCorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/variantNameForTheCorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/nameOfTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">nameOfTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Name of the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A word, character, or group of words and/or characters by which a family is known. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 5.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/preferredNameForTheFamily" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/variantNameForTheFamily" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/nameOfThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">nameOfThePerson</reg:name>
+  <rdfs:label xml:lang="en">Name of the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A word, character, or group of words and/or characters by which a person is known. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/preferredNameForThePerson" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.1 and FRAD 5.2.</skos:scopeNote>
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/variantNameForThePerson" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/note">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">note</reg:name>
+  <rdfs:label xml:lang="en">Note (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">An annotation providing additional information relating to data recorded in another element. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/numberOfAConferenceEtc">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">numberOfAConferenceEtc</reg:name>
+  <rdfs:label xml:lang="en">Number of a conference, etc. (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A designation of the sequencing of a conference, etc., within a series of conferences, etc. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/otherDesignationAssociatedWithTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">otherDesignationAssociatedWithTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Other designation associated with the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A word, phrase, or abbreviation indicating incorporation or legal status of a corporate body, or any term serving to differentiate the body from other corporate bodies, persons, etc. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.2, 4.7.5 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/otherDesignationAssociatedWithThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">otherDesignationAssociatedWithThePerson</reg:name>
+  <rdfs:label xml:lang="en">Other designation associated with the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A term other than a title that is associated with a person’s name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.4 and FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/periodOfActivityOfThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">periodOfActivityOfThePerson</reg:name>
+  <rdfs:label xml:lang="en">Period of activity of the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A date or range of dates indicative of the period in which a person was active in his or her primary field of endeavour. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/DateAssociatedWithThePerson" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.2 and FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/placeAssociatedWithTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">placeAssociatedWithTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Place associated with the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A significant location associated with a corporate body (e.g., location of a conference, etc., location of the headquarters of an organization). (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.7.3 and FRAD 4.3.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/locationOfHeadquarters" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/locationOfConferenceEtc" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/placeAssociatedWithTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">placeAssociatedWithTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Place associated with the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A place where a family resides or has resided or has some connection. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/placeOfBirth">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">placeOfBirth</reg:name>
+  <rdfs:label xml:lang="en">Place of birth (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The town, city, province, state, and/or country in which a person was born. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/placeOfDeath">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">placeOfDeath</reg:name>
+  <rdfs:label xml:lang="en">Place of death (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The town, city, province, state, and/or country in which a person died. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/placeOfResidence">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">placeOfResidence</reg:name>
+  <rdfs:label xml:lang="en">Place of residence (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A town, city, province, state, and/or country in which a person resides or has resided. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/preferredNameForTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">preferredNameForTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Preferred name for the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The name or form of name chosen as the basis for the authorized access point representing that body. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/nameOfTheCorporateBody" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.1 and FRAD 5.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/preferredNameForTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">preferredNameForTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Preferred name for the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The name or form of name chosen as the basis for the authorized access point representing that family. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/nameOfTheFamily" />
+  <skos:scopeNote xml:lang="en">FRAD 5.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/preferredNameForThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">preferredNameForThePerson</reg:name>
+  <rdfs:label xml:lang="en">Preferred name for the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The name or form of name chosen as the basis for the authorized access point representing that person. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/nameOfThePerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.1 and FRAD 5.2.</skos:scopeNote>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/professionOrOccupation">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">professionOrOccupation</reg:name>
+  <rdfs:label xml:lang="en">Profession or occupation (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A profession or occupation in which a person works or has worked. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/prominentMemberOfTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">prominentMemberOfTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Prominent member of the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A well-known individual who is a member of a family. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRAD 4.2.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/scopeOfUsage">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">scopeOfUsage</reg:name>
+  <rdfs:label xml:lang="en">Scope of usage (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">The type or form of work associated with the name designated as the preferred name for a person, family, or corporate body. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Name" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/titleOfThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">titleOfThePerson</reg:name>
+  <rdfs:label xml:lang="en">Title of the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A word or phrase indicative of royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of religious vocation. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <skos:scopeNote xml:lang="en">FRBR 4.6.3 and FRAD 4.1.</skos:scopeNote>
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/typeOfFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">typeOfFamily</reg:name>
+  <rdfs:label xml:lang="en">Type of family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A categorization or generic descriptor for the type of family. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicator">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">undifferentiatedNameIndicator</reg:name>
+  <rdfs:label xml:lang="en">Undifferentiated name indicator (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A categorization indicating that the core elements recorded are insufficient to differentiate between two or more entities with the same name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicatorPerson" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicatorCorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicatorFamily" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicatorCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">undifferentiatedNameIndicatorCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Undifferentiated name indicator (Corporate Body) (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A categorization indicating that the core elements recorded are insufficient to differentiate between two or more corporate bodies with the same name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicator" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicatorFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">undifferentiatedNameIndicatorFamily</reg:name>
+  <rdfs:label xml:lang="en">Undifferentiated name indicator (Family) (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A categorization indicating that the core elements recorded are insufficient to differentiate between two or more families with the same name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicator" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicatorPerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">undifferentiatedNameIndicatorPerson</reg:name>
+  <rdfs:label xml:lang="en">Undifferentiated name indicator (Person) (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A categorization indicating that the core elements recorded are insufficient to differentiate between two or more persons with the same name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/undifferentiatedNameIndicator" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/variantNameForTheCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">variantNameForTheCorporateBody</reg:name>
+  <rdfs:label xml:lang="en">Variant name for the corporate body (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A name or form of name by which a corporate body is known that differs from the name or form of name chosen as the preferred name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/nameOfTheCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/variantNameForTheFamily">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">variantNameForTheFamily</reg:name>
+  <rdfs:label xml:lang="en">Variant name for the family (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A name or form of name by which a family is known that differs from the name or form of name chosen as the preferred name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/nameOfTheFamily" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://rdvocab.info/ElementsGr2/variantNameForThePerson">
+  <rdfs:isDefinedBy rdf:resource="http://rdvocab.info/ElementsGr2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">variantNameForThePerson</reg:name>
+  <rdfs:label xml:lang="en">Variant name for the person (Deprecated)</rdfs:label>
+  <skos:definition xml:lang="en">A name or form of name by which a person is known that differs from the name or form of name chosen as the preferred name. (Deprecated)</skos:definition>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://rdvocab.info/ElementsGr2/nameOfThePerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
+        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

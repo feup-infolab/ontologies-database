@@ -9,6 +9,7 @@ var async = require('async');
 
 var downloadsFolderName = "downloaded";
 var possibleMimeTypes = ['text/turtle', "application/xml", "application/rdf+xml"];
+var ontologiesAndFilesMap = {};
 
 mkdirp.sync(downloadsFolderName);
 
@@ -16,6 +17,7 @@ lineReader.eachLine('ontologies_list.txt', function(line, last, cb) {
     console.log(line);
 
     if (last) {
+        fs.writeFileSync("map.json", JSON.stringify(ontologiesAndFilesMap, null, 4));
         cb(false); // stop reading
     } else {
         var newFileName = path.join(__dirname, downloadsFolderName, slug(line, '_'));
@@ -36,6 +38,8 @@ lineReader.eachLine('ontologies_list.txt', function(line, last, cb) {
                     .then(function (response) {
                         console.log("Contents");
                         fs.writeFileSync(newFileName, response);
+                        console.log(line + " ontology downloaded successfully");
+                        ontologiesAndFilesMap[line] = newFileName;
                         callback(null, true);
                     })
                     .catch(function (err) {
@@ -53,10 +57,6 @@ lineReader.eachLine('ontologies_list.txt', function(line, last, cb) {
                     {
                         console.log(line + " ontology not available!");
                     }
-                    else
-                    {
-                        console.log(line + " ontology downloaded successfully");
-                    }
                 }
 
                 cb();
@@ -66,6 +66,5 @@ lineReader.eachLine('ontologies_list.txt', function(line, last, cb) {
         {
             cb();
         }
-
     }
 });

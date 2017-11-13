@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY onyx "http://www.gsi.dit.upm.es/ontologies/onyx/ns#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY nif "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+]>
+
+
+<rdf:RDF
+     xml:base="http://www.gsi.dit.upm.es/ontologies/onyx/ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:onyx="http://www.gsi.dit.upm.es/ontologies/onyx/ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.gsi.dit.upm.es/ontologies/onyx/ns">
+        <rdfs:label xml:lang="en">Onyx Emotion Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="&xsd;string">1.5</owl:versionInfo>
+        <owl:priorVersion rdf:datatype="&xsd;string">https://www.gsi.dit.upm.es/ontologies/onyx/1.4</owl:priorVersion>
+        <rdfs:seeAlso rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">Onyx is an ontology designed to use for publishing the results of the emotion mining process in a form of structured data on the Web. The goal is to unify the access the numerical approximation of the emotion concept and allow extensive reasoning and search over multiple resources from different content providers.</rdfs:comment>
+        <dc:description xml:lang="en">Onyx is an ontology designed to use for publishing the results of the emotion mining process in a form of structured data on the Web. The goal is to unify the access the numerical approximation of the emotion concept and allow extensive reasoning and search over multiple resources from different content providers.</dc:description>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <vann:preferredNamespacePrefix>onyx</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://www.gsi.dit.upm.es/ontologies/onyx/ns#</vann:preferredNamespaceUri> 
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithm -->
+
+    <owl:ObjectProperty rdf:about="&onyx;algorithm">
+        <rdfs:label rdf:datatype="&xsd;string">algorithm</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The algorithm used in the Sentiment Analysis.</rdfs:comment>
+        <rdfs:domain rdf:resource="&onyx;EmotionAnalysis"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#usesEmotionModel -->
+
+    <owl:ObjectProperty rdf:about="&onyx;usesEmotionModel">
+        <rdfs:label rdf:datatype="&xsd;string">usesEmotionModel</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Specifies the Emotion Model used. Mainly used to describe Emotion Analysis activities.</rdfs:comment>
+        <rdfs:range rdf:resource="&onyx;EmotionModel"/>
+    </owl:ObjectProperty>
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#domain -->
+
+    <owl:ObjectProperty rdf:about="&onyx;domain">
+        <rdfs:label rdf:datatype="&xsd;string">domain</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&onyx;EmotionSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#extractedFrom -->
+
+    <owl:ObjectProperty rdf:about="&onyx;extractedFrom">
+        <rdfs:label xml:lang="en">extractedFrom</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Indicates the text from which the emotion has been extracted.</rdfs:comment>
+        <rdfs:domain rdf:resource="&onyx;EmotionSet"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+        <owl:inverseOf rdf:resource="&onyx;hasEmotionSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasActionTendency -->
+
+    <owl:ObjectProperty rdf:about="&onyx;hasActionTendency">
+        <rdfs:label rdf:datatype="&xsd;string">hasActionTendency</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Action tendency of the Emotion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:range rdf:resource="&onyx;ActionTendency"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&onyx;EmotionModel"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasAppraisal -->
+
+    <owl:ObjectProperty rdf:about="&onyx;hasAppraisal">
+        <rdfs:label rdf:datatype="&xsd;string">hasAppraisal</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"> Used to list the appraisals that a model defines</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:range rdf:resource="&onyx;Appraisal"/>
+        <rdfs:domain rdf:resource="&onyx;EmotionModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasDimension -->
+
+    <owl:ObjectProperty rdf:about="&onyx;hasDimension">
+        <rdfs:label rdf:datatype="&xsd;string">hasDimension</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"> Used to define the Dimensions of an Emotion Model</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:range rdf:resource="&onyx;Dimension"/>
+        <rdfs:domain rdf:resource="&onyx;EmotionModel"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasEmotionSet -->
+
+    <owl:ObjectProperty rdf:about="&onyx;hasEmotionSet">
+        <rdfs:label xml:lang="en">hasEmotionSet</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Indicates that a certain text has a subjective set of emotions expressed in it.</rdfs:comment>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+        <rdfs:range rdf:resource="&onyx;EmotionSet"/>
+    </owl:ObjectProperty>
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasEmotion -->
+
+    <owl:ObjectProperty rdf:about="&onyx;hasEmotion">
+        <rdfs:label xml:lang="en">hasEmotion</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Used to express the individual emotions within an EmotionSet.</rdfs:comment>
+        <rdfs:range rdf:resource="&onyx;Emotion"/>
+        <rdfs:domain rdf:resource="&onyx;EmotionSet"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#aggregatesEmotionSet -->
+
+    <owl:ObjectProperty rdf:ID="aggregatesEmotionSet">
+        <rdfs:domain rdf:resource="#AggregatedEmotionSet"/>
+        <rdfs:label xml:lang="en">aggregatesEmotionSet</rdfs:label>
+        <rdfs:range rdf:resource="#EmotionSet"/>
+        <rdfs:comment xml:lang="en">Indicates that the emotions associated to this entity are a calculation (eg. average) of the emotions in other EmotionSets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#aggregatesEmotion -->
+
+    <owl:ObjectProperty rdf:ID="aggregatesEmotion">
+        <rdfs:domain rdf:resource="#AggregatedEmotion"/>
+        <rdfs:label xml:lang="en">aggregatesEmotion</rdfs:label>
+        <rdfs:range rdf:resource="#Emotion"/>
+        <rdfs:comment xml:lang="en">Indicates that the AggregatedEmotion has been derived from other Emotions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasEmotionCategory -->
+
+    <owl:ObjectProperty rdf:about="&onyx;hasEmotionCategory">
+        <rdfs:label rdf:datatype="&xsd;string">hasEmotionCategory</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Value that represents the type of emotion.</rdfs:comment>
+        <rdfs:range rdf:resource="&onyx;EmotionCategory"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&onyx;Emotion"/>
+                    <rdf:Description rdf:about="&onyx;EmotionModel"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#source -->
+
+    <owl:ObjectProperty rdf:about="&onyx;source">
+        <rdfs:label rdf:datatype="&xsd;string">source</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Source from which the emotion was extracted (URL, Site, Entity...)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&onyx;EmotionAnalysis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;algorithmConfidence">
+        <rdfs:label xml:lang="en">algorithmConfidence</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">A numerical value that represents the accuracy of result as estimated by the algorithm itself (how much the emotion matches a gives object/product).</rdfs:comment>
+        <rdfs:domain rdf:resource="&onyx;Emotion"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#emotionText -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;emotionText">
+        <rdfs:label xml:lang="en">emotionText</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The exact text extract that expresses the emotion. This can be used when entity/text pointed by extractedFrom contains many emotions. 
+
+For example extractedFrom can point to a comment that contains many emotions about a movie, each emotion should have a separate onyx:Emotion and optionally an emotionText  property to indicate the specific text fragment of the comment.</rdfs:comment>
+        <rdfs:domain rdf:resource="&onyx;EmotionSet"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#hasEmotionIntensity -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;hasEmotionIntensity">
+        <rdfs:label rdf:datatype="&xsd;string">hasEmotionIntensity</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Value that quantifies the intensity of the emotion.</rdfs:comment>
+        <rdfs:domain rdf:resource="&onyx;Emotion"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#modelName -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;modelName">
+        <rdfs:label rdf:datatype="&xsd;string">modelName</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Human readable name of the model</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&onyx;EmotionCategory"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#sourceText -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;sourceText">
+        <rdfs:label rdf:datatype="&xsd;string">sourceText</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Optional value that contains the text from which the emotionText was taken.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#ActionTendency -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;ActionTendency">
+        <rdfs:label rdf:datatype="&xsd;string">ActionTendency</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Action Tendency of the emotion: a desire to behave in select communicative or important actions that are connected to a particular feeling.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#Appraisal -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;Appraisal">
+        <rdfs:label rdf:datatype="&xsd;string">Appraisal</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Parent for Appraisal properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#Dimension -->
+
+    <owl:DatatypeProperty rdf:about="&onyx;Dimension">
+        <rdfs:label rdf:datatype="&xsd;string">Dimension</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Parent for Dimension properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#Emotion -->
+
+    <owl:Class rdf:about="&onyx;Emotion">
+        <rdfs:label rdf:datatype="&xsd;string">Emotion</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Class that represents emotions in a generic way</rdfs:comment>
+    </owl:Class>
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#Emotion -->
+
+    <owl:Class rdf:about="&onyx;AggregatedEmotion">
+        <rdfs:label rdf:datatype="&xsd;string">AggregatedEmotion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&onyx;Emotion"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The same as Emotion, used to aggregate several emotions</rdfs:comment>
+    </owl:Class>
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionAnalysis -->
+
+    <owl:Class rdf:about="&onyx;EmotionAnalysis">
+        <rdfs:label rdf:datatype="&xsd;string">EmotionAnalysis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Activity"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">The action of analysing the sentiment in an entity. It produces an onyx:emotion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionCategory -->
+
+    <owl:Class rdf:about="&onyx;EmotionCategory">
+        <rdfs:label rdf:datatype="&xsd;string">EmotionCategory</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Class that represents an emotion category (anger, happiness, etc.)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionSet -->
+
+    <owl:Class rdf:about="&onyx;EmotionSet">
+        <rdfs:label xml:lang="en">EmotionSet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <owl:disjointWith rdf:resource="&prov;Bundle"/>
+        <owl:disjointWith rdf:resource="&prov;Collection"/>
+        <owl:disjointWith rdf:resource="&prov;Plan"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:comment xml:lang="en">Describes the concept of emotion expressed in a certain text.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#AggregatedEmotionSet -->
+
+    <owl:Class rdf:about="&onyx;AggregatedEmotionSet">
+        <rdfs:subClassOf rdf:resource="&onyx;EmotionSet"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">AggregatedEmotionSet</rdfs:label>
+        <rdfs:comment xml:lang="en">The same as the EmotionSet class but indicates that the properties of this class aggregate all the emotions detected in the "extractedFrom" source. If the aggregatesEmotionSet property is used this class could be created to aggregate only certain emotions.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionModel -->
+
+    <owl:Class rdf:about="&onyx;EmotionModel">
+        <rdfs:label rdf:datatype="&xsd;string">EmotionModel</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Represents an Emotion Representation Model, grouping its categories, dimensions, properties...</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+    <owl:Class rdf:about="&onyx;Media">
+        <rdfs:label rdf:datatype="&xsd;string">MediaContext</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Extends the NIF context to represent contexts with Multimedia. It is the equivalent of nif:String</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&nif;Context"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;string">http://www.gsi.dit.upm.es/ontologies/onyx/ns</rdfs:isDefinedBy>
+    </owl:Class>
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

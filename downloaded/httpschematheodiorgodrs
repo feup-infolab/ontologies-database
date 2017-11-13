@@ -1,0 +1,1049 @@
+<html prefix="foaf: http://xmlns.com/foaf/0.1/
+              owl: http://www.w3.org/2002/07/owl#
+              rdfs: http://www.w3.org/2000/01/rdf-schema#
+              dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              xmlns: http://schema.theodi.org/odrs#">
+    <head>
+        <title>Open Data Rights Statement Vocabulary</title>
+        <link href="bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body typeof="owl:Ontology" about="http://schema.theodi.org/odrs">    
+        <div class="container">
+            <div class="ontology">
+                <h1 property="dct:title">Open Data Rights Statement Vocabulary</h1>
+                <dl>
+                    <dt>Latest Version</dt>
+                    <dd><a href="http://schema.theodi.org/odrs">http://schema.theodi.org/odrs</a></dd>
+                    
+                    
+                        <dt>Created</dt>
+                        <dd property="dct:created">2013-05-31</dd>
+                    
+                    
+                    		  	
+                        <dt>Last Modified</dt>
+                        <dd property="dct:modified">2013-07-29</dd>
+                    
+                    		  		  
+                    <dt>Authors</dt>
+                    
+                        <dd property="foaf:maker" resource="http://www.ldodds.com#me">
+                            <a href="http://www.ldodds.com#me"><span property="foaf:name" typeof="foaf:Person" about="http://www.ldodds.com#me">Leigh Dodds</span></a>
+                        </dd>
+                    
+                        
+                    <dt>Alternate Versions</dt>
+                    <dd><a href="index.ttl">Turtle</a></dd>
+                    
+		         </dl>
+		         
+                <span property="rdfs:comment">A vocabulary that supports the publication of Open Data by providing the means to capture machine-readable "rights statements", e.g. the licensing information, copyright notices and attribution requirements that are associated with the publication and re-use of a dataset.</span>
+		         
+            </div>
+				
+		
+		  <h1>Introduction</h1>
+
+<p>Data published to the web should always be accompanied by machine-readable metadata that describes the dataset, its means of creation and, importantly, a statement of the rights that relate to potential re-use of the data. </p>
+
+<p>While legal requirements vary across juristictions, a statement of rights will typically include some or all of the following information:</p>
+
+<ul>
+<li>A reference to a licence or waiver that relates to re-use of the dataset</li>
+<li>A reference to a licence or waiver that relates to re-use of the contents of the dataset, e.g where that content is covered by copyright</li>
+<li>Notices, e.g. copyright notices, that should be preserved by re-users</li>
+<li>Guidance on a means of attributing the source of the data, e.g. when re-used in an application</li>
+<li>Pointers to further information, e.g. further guidance on re-use or details on how to acquire additional rights</li>
+</ul>
+
+<p>The Open Data Rights Statement vocabulary is intended to support the publication of machine-readable rights statements. The vocabulary builds on related work from the Dublin Core and Creative Commons communities and is intended to complement ongoing efforts to improve the quality of machine-readable dataset metadata. It is expected that the vocabulary will be useful in a number of contexts, e.g. for Linked Data publishing (<a href="http://www.w3.org/TR/vocab-dcat/">DCAT</a>, <a href="http://www.w3.org/TR/void/">VoiD</a>), dataset distribution (<a href="http://www.dataprotocols.org/en/latest/data-packages.html">Data Packages</a>), as well as data published via web APIs.</p>
+
+<p>The following sections of the document provide more background on the vocabulary, including references to relevant related work.</p>
+
+<h2>User Guides</h2>
+
+<p>There are two user guides which support the use of this vocabulary:</p>
+
+<ul>
+<li><a href="https://github.com/theodi/open-data-licensing/blob/master/guides/publisher-guide.md">Publishers Guide</a> -- a guide for data publishers that provides more detail on the design of the vocabulary and how it can be applied in a number of data publishing scenarios</li>
+<li><a href="https://github.com/theodi/open-data-licensing/blob/master/guides/reusers-guide.md">Re-Users Guide</a> -- a guide for data re-users on how to process machine-readable metadata that is based on this vocabulary</li>
+</ul>
+
+<h2>Related Work</h2>
+
+<p>There are several existing vocabularies cover similar goals, but all have their limitations. The Open Data Rights Statement vocabulary builds on this earlier work to support clearer publication of rights information.</p>
+
+<ul>
+<li><a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> distinguishes between a licence (<code>dct:License</code>) and a rights statement (<code>dct:RightsStatement</code>) and provides terms for relating a work to a machine-readable descriptions of these documents using the <code>dct:rights</code> and <code>dct:license</code> properties.</li>
+<li>The <a href="http://creativecommons.org/ns">Creative Commons vocabulary</a> (ccRel) supports the publication of machine-readable descriptions of broad classes of requirements, permissions and prohibitions that are associated with licences. It also includes some terms to support attribution.</li>
+<li>The <a href="http://vocab.org/waiver/terms/.html">Waiver</a> vocabulary supports the association of public domain waivers and community norms with a dataset</li>
+<li>The <a href="http://www.w3.org/community/odrl/">Open Data Rights Language</a> (ODRL) provides a standard means for expressing policies relating to the publishing, distribution and consumption of digital media.</li>
+<li>Similarly, the <a href="http://ns.inria.fr/l4lod/v2/l4lod_v2.html">L4LOD</a> and <a href="http://data.opendataday.it/LiMo/">LIMO</a> vocabularies also attempt to describe the essential aspects of individual licenses</li>
+</ul>
+
+<p>These vocabularies provide some of the necessary foundations for publishing rights statements, but each has its own limitations. As described in the next section, the ODRS vocabulary is intended to support the publication of &quot;rights statements&quot; that annotate the relationship between a dataset and its license information.</p>
+
+<h2>Design Rationale</h2>
+
+<p>The key limitations with the existing vocabularies are:</p>
+
+<ul>
+<li>There is no recognition of the need to separately license a database and its contents. Even outside of the EU, it is entirely possible that the content of a database is covered by a separate licence to its structure. Where required there should be unambiguous ways to link to more than one license or waiver</li>
+<li>An unclear distinction between descriptions of a re-usable licence; a rights statement which might apply to several datasets, and the specific rights associated with an individual dataset. This leads to some confusion around how best to publish attribution requirements, copyright notices, etc.</li>
+</ul>
+
+<p>The intention is that this vocabulary should allow data publisher to publish, as machine-readable metadata, the following information:</p>
+
+<ul>
+<li>A licence or waiver that applies to the database/data being published</li>
+<li>A licence or waiver that applies to the content of a database, where is needs to be separately recorded</li>
+<li>Copyright notices</li>
+<li>Guidance on attribution requirements</li>
+<li>Pointers to additional material, e.g. notes on usage of a licence, additional terms, etc.</li>
+</ul>
+
+<p>The approach taken here borrows from Dublin Core and introduces a &quot;Rights Statement&quot; as a resource that relates a dataset to one or more Licenses as well as providing additional context that relates to re-use of a dataset.</p>
+
+<p>The description of a License, such as the UK Open Government License, remains unchanged no matter how it is used or applied by an organisation. It is the Rights Statement that captures this customisation and description of copyright, attribution and other relevant relationships.</p>
+
+<p>A Rights Statement might apply to an individual Dataset. But it could equally be applied to several Datasets, e.g. if an organization has a common set of attribution requirements.</p>
+
+<p>The vocabulary does not provide a definition of dataset. This is intentionally under-specified to support the use of the vocabulary in a number of ways. The existing <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> terms (<code>dct:rights</code> and <code>dct:license</code>) can be used to relate a dataset to a <code>odrs:RightsStatement</code> or a licence.</p>
+
+<p>Similarly, this vocabulary intentionally does not attempt to support the machine-readable description of the terms of a specific license. This is already adequately covered by the <a href="http://creativecommons.org/ns">ccRel</a> and <a href="http://www.w3.org/community/odrl/">ODRL</a> vocabularies. </p>
+
+<p>The ODRS vocabulary is aimed at supporting a simple, common case of publishing open data using standard licenses. However it is compatible with efforts to create machine-readable expressions of licenses and policies. Additional notes on the <a href="https://github.com/theodi/open-data-licensing/wiki/Use-cases">use cases that have guided the design of the vocabulary</a> can be found in the project wiki.</p>
+
+<h2>Schema Diagram</h2>
+
+<p>The following diagram shows the key resources, relationships and properties defined by this vocabulary.</p>
+
+<p><img src="diagram.png" alt="Schema diagram"></p>
+
+<h2>Recent Changes</h2>
+
+<p>For a full history of changes view <a href="https://github.com/theodi/open-data-licensing/tree/master/schema">the source files in github</a>.</p>
+
+<p>The following lists highlights some of the key recent changes:</p>
+
+<ul>
+<li>29/07/2013 -- Added <code>compatibleWith</code> property</li>
+<li>29/07/2013 -- Added links to L4LOD, LIMO and ODRL vocabularies in the Related Work section and links to Use Cases.</li>
+</ul>
+
+		
+		
+		<div id="overview">
+            <h2>Overview Of Terms</h2>		
+			<p>An alphabetical index of the ontology terms, divided into classes and properties. All the terms are hyperlinked to their 
+			detailed description for quick reference.</p>
+			
+			<p><strong>Classes</strong>:
+            
+			 | <a href="#class_License">License</a>
+			
+			 | <a href="#class_RightsStatement">RightsStatement</a>
+					
+			</p>
+			
+			<p><strong>Properties</strong>:
+			
+			 | <a href="#prop_attributionText">attributionText</a>
+			
+			 | <a href="#prop_attributionURL">attributionURL</a>
+			
+			 | <a href="#prop_compatibleWith">compatibleWith</a>
+			
+			 | <a href="#prop_contentLicense">contentLicense</a>
+			
+			 | <a href="#prop_copyrightHolder">copyrightHolder</a>
+			
+			 | <a href="#prop_copyrightNotice">copyrightNotice</a>
+			
+			 | <a href="#prop_copyrightStatement">copyrightStatement</a>
+			
+			 | <a href="#prop_copyrightYear">copyrightYear</a>
+			
+			 | <a href="#prop_dataLicense">dataLicense</a>
+			
+			 | <a href="#prop_databaseRightHolder">databaseRightHolder</a>
+			
+			 | <a href="#prop_databaseRightStatement">databaseRightStatement</a>
+			
+			 | <a href="#prop_databaseRightYear">databaseRightYear</a>
+			
+			 | <a href="#prop_reuserGuidelines">reuserGuidelines</a>
+			
+			 | <a href="#prop_jurisdiction">jurisdiction</a>
+			
+			 | <a href="#prop_rights">rights</a>
+			
+			</p>				
+		</div>
+		
+		<div id="terms">
+			<h2>Ontology Terms</h2>
+		</div>
+		
+		<div id="classes">
+			<h3>Classes</h3>
+			
+	   			   			
+	   			<div typeof="owl:Class" about="http://schema.theodi.org/odrs#License" class="term" id="class_License">	   					   			
+	   				<h4>Class: License</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+		   				<table class="table">
+		   				<tr><td>Label</td><td><span property="rdfs:label">License</span></td></tr>
+		   				<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#License</code></td></tr>
+		   				
+		   					   				
+		   				</table>	   		
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+			   				<p property="rdfs:comment">A legal document that describes the legal terms for re-use of some information. A licence might be applicable to content, data, or both. This definition of licence used here is deliberately loose, and is intended to also cover waiver documents that indicate that the owner waives all rights over some information, e.g. public domain dedications.</p>
+			   				
+						</div>			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  			   			
+	   			<div typeof="owl:Class" about="http://schema.theodi.org/odrs#RightsStatement" class="term" id="class_RightsStatement">	   					   			
+	   				<h4>Class: RightsStatement</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+		   				<table class="table">
+		   				<tr><td>Label</td><td><span property="rdfs:label">Rights Statement</span></td></tr>
+		   				<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#RightsStatement</code></td></tr>
+		   				
+		   					   				
+		   				</table>	   		
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+			   				<p property="rdfs:comment">A description of the rights and terms of re-use for a dataset. A rights statement will include a reference to one or more licences copyright notices, and attribution requirements. Where a Rights Statement refers to several licences the intention is that these should separately apply to the data and content associated with the dataset. An individual Rights Statement may be specific to a dataset or could be applied to a 
+number of datasets published by the same organisation or person, where the rights associated with each dataset are identical.</p>
+			   				
+						</div>			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  				
+		
+		</div>
+		
+		<div id="properties">
+			<h3>Object Properties</h3>
+	
+	   		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#attributionURL" class="term" id="prop_attributionURL">
+	   				<h4>Property: attributionURL</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">attribution url</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#attributionURL</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="http://xmlns.com/foaf/0.1/Document"><span property="rdfs:range" resource="http://xmlns.com/foaf/0.1/Document">http://xmlns.com/foaf/0.1/Document</span></a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">The link which should be used when attributing a data source. The URL could be a reference to the dataset or publisher 
+homepage, but may also be a dedicated attribution page. This is useful when providing onward attribution to upstream sources.</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#compatibleWith" class="term" id="prop_compatibleWith">
+	   				<h4>Property: compatibleWith</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">compatible with</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#compatibleWith</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="#class_License">
+				   						       <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#License">License</a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_License">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#License">License</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">This property is used to indicates that one license is compatible with another. A re-use that meets the requirements, permissions and prohibitions of the first license should also meet the requirements, permissions and prohibitions of the second, compatible license. The inverse is not necessarily true: the compatible license might have stricter requirements. This statement can be used as an indicator that a re-user could publish a derivative dataset under the compatible license, e.g. to help drive automated selection and guidance licenses for publishers of derived data. However it is not a substitute for properly reading and understanding the text of either license.</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#contentLicense" class="term" id="prop_contentLicense">
+	   				<h4>Property: contentLicense</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">content license</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#contentLicense</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="#class_License">
+				   						       <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#License">License</a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">The contents of a database might be covered by a separate license, e.g. a database containing copyrightable material (e.g. text, images) might have different rights for the dataset and the contents. This property can be used to refer to a license that applies to the content of the dataset. In some cases the same license can be applied to both content and data, but in others a data publisher may choose to use a separate license for content. The value of the property will be the URI of the license that is being applied to the content.</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#copyrightHolder" class="term" id="prop_copyrightHolder">
+	   				<h4>Property: copyrightHolder</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">copyright holder</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#copyrightHolder</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="http://xmlns.com/foaf/0.1/Organization"><span property="rdfs:range" resource="http://xmlns.com/foaf/0.1/Organization">http://xmlns.com/foaf/0.1/Organization</span></a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">A reference to the organization that holds copyright over the content of the dataset</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#copyrightStatement" class="term" id="prop_copyrightStatement">
+	   				<h4>Property: copyrightStatement</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">copyright statement</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#copyrightStatement</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="http://xmlns.com/foaf/0.1/Document"><span property="rdfs:range" resource="http://xmlns.com/foaf/0.1/Document">http://xmlns.com/foaf/0.1/Document</span></a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">A link to a document that includes a statement about the copyright status of the content of a dataset. The web page might include both a copyright notice for a dataset, and any relevant guidance for re-users.</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#dataLicense" class="term" id="prop_dataLicense">
+	   				<h4>Property: dataLicense</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">data license</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#dataLicense</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="#class_License">
+				   						       <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#License">License</a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">This property is used to indicate which license covers reuse of the dataset(s) associated with this rights statement object. Typically this license will refer to a standard open license, e.g. as published by Creative Commons or Open Data Commons. The value of the property will be the URI of the license that is being applied to the data</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#databaseRightHolder" class="term" id="prop_databaseRightHolder">
+	   				<h4>Property: databaseRightHolder</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">database right holder</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#databaseRightHolder</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="http://xmlns.com/foaf/0.1/Organization"><span property="rdfs:range" resource="http://xmlns.com/foaf/0.1/Organization">http://xmlns.com/foaf/0.1/Organization</span></a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">A reference to the organization that holds database rights over the dataset</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#databaseRightStatement" class="term" id="prop_databaseRightStatement">
+	   				<h4>Property: databaseRightStatement</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">database right statement</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#databaseRightStatement</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="http://xmlns.com/foaf/0.1/Document"><span property="rdfs:range" resource="http://xmlns.com/foaf/0.1/Document">http://xmlns.com/foaf/0.1/Document</span></a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">A link to a document that includes a statement about the database rights that apply to this dataset. The web page might include both a statement on the applicable rights and any relevant guidance for re-users.</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#reuserGuidelines" class="term" id="prop_reuserGuidelines">
+	   				<h4>Property: reuserGuidelines</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">guidelines for re-users</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#reuserGuidelines</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="http://xmlns.com/foaf/0.1/Document"><span property="rdfs:range" resource="http://xmlns.com/foaf/0.1/Document">http://xmlns.com/foaf/0.1/Document</span></a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">Link to a document that provides guidelines for re-users of data that is covered by a specific rights statement. The guidelines 
+may include more detail on attribution guidelines, a fuller copyright statement, and general guidance on how the data might be re-used</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#jurisdiction" class="term" id="prop_jurisdiction">
+	   				<h4>Property: jurisdiction</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">jurisdiction</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#jurisdiction</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   				
+				   					<tr><td>Domain</td>
+				   					<td>
+				   					
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                           		   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">A reference to the jurisdiction in which copyright and/or database rights have been asserts. It is recommended that this refer to the URI for a country or region.</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  		
+	   			<div typeof="owl:ObjectProperty" about="http://schema.theodi.org/odrs#rights" class="term" id="prop_rights">
+	   				<h4>Property: rights</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+			   				
+			   				<table class="table">
+			   					<tr><td>Label</td><td><span property="rdfs:label">rights</span></td></tr>
+			   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#rights</code></td></tr>	   					
+				   				
+				   						   				
+				   				
+				   					<tr><td>Range</td>
+				   					<td>
+				   					
+				   						   
+				   						       <a href="#class_RightsStatement">
+				   						       <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+				   						   
+				   							   				
+				   					</td>
+				   					</tr>
+				   				
+				   						   				
+			   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+		   				
+			   				<p property="rdfs:comment">Associates a rights statement with a dataset. This property is equivalent to the Dublin Core rights property</p>
+			   				
+	   				</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>
+	  				
+		
+					
+			<h3>Datatype Properties</h3>
+	
+	   		
+	   			<div class="term" typeof="owl:DatatypeProperty" about="http://schema.theodi.org/odrs#attributionText" id="prop_attributionText">
+	   				<h4>Property: attributionText</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+		   				
+		   				<table class="table">
+							<tr><td>Label</td><td><span property="rdfs:label">attribution text</span></td></tr>
+		   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#attributionText</code></td></tr>							   				
+                                
+			   						   				
+                                
+                                    <tr><td>Range</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"><span property="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</span></a>
+                                           
+                                                           
+                                    </td>
+                                    </tr>
+                                
+                                
+                                    <tr><td>Domain</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                                                              
+                                                           
+                                    </td>
+                                    </tr>
+                                   	
+		   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+			   				<p property="rdfs:comment">The text to use in an attribution link. This may be the name of the publisher or a reference to a community or group of contributors</p>
+			   				
+	   					</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>	   			
+	  		
+	   			<div class="term" typeof="owl:DatatypeProperty" about="http://schema.theodi.org/odrs#copyrightNotice" id="prop_copyrightNotice">
+	   				<h4>Property: copyrightNotice</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+		   				
+		   				<table class="table">
+							<tr><td>Label</td><td><span property="rdfs:label">copyright notice</span></td></tr>
+		   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#copyrightNotice</code></td></tr>							   				
+                                
+			   						   				
+                                
+                                    <tr><td>Range</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"><span property="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</span></a>
+                                           
+                                                           
+                                    </td>
+                                    </tr>
+                                
+                                
+                                    <tr><td>Domain</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                                                              
+                                                           
+                                    </td>
+                                    </tr>
+                                   	
+		   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+			   				<p property="rdfs:comment">The copyright notice associated with a rights statement. A notice must typically be preserved and displayed when acknowledging the source of some data. This property is expressed as a simple literal value and so is suitable for simple copyright notices. Where a data publisher needs to reference a larger copyright statement and/or related guidance then the copyrightStatement property should be used instead.</p>
+			   				
+	   					</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>	   			
+	  		
+	   			<div class="term" typeof="owl:DatatypeProperty" about="http://schema.theodi.org/odrs#copyrightYear" id="prop_copyrightYear">
+	   				<h4>Property: copyrightYear</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+		   				
+		   				<table class="table">
+							<tr><td>Label</td><td><span property="rdfs:label">copyright year</span></td></tr>
+		   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#copyrightYear</code></td></tr>							   				
+                                
+			   						   				
+                                
+                                    <tr><td>Range</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"><span property="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</span></a>
+                                           
+                                                           
+                                    </td>
+                                    </tr>
+                                
+                                
+                                    <tr><td>Domain</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                                                              
+                                                           
+                                    </td>
+                                    </tr>
+                                   	
+		   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+			   				<p property="rdfs:comment">The year from which copyright over the content of the dataset is asserted.</p>
+			   				
+	   					</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>	   			
+	  		
+	   			<div class="term" typeof="owl:DatatypeProperty" about="http://schema.theodi.org/odrs#databaseRightYear" id="prop_databaseRightYear">
+	   				<h4>Property: databaseRightYear</h4>
+	   				<div class="row">
+	   					<div class="span2">
+	   					<h5>Overview</h5>
+	   					</div>
+	   					<div class="span10">
+		   				
+		   				<table class="table">
+							<tr><td>Label</td><td><span property="rdfs:label">database right year</span></td></tr>
+		   					<tr><td>URI</td><td><code>http://schema.theodi.org/odrs#databaseRightYear</code></td></tr>							   				
+                                
+			   						   				
+                                
+                                    <tr><td>Range</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"><span property="rdfs:range" resource="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</span></a>
+                                           
+                                                           
+                                    </td>
+                                    </tr>
+                                
+                                
+                                    <tr><td>Domain</td>
+                                    <td>
+                                    
+                                           
+                                               <a href="#class_RightsStatement">
+                                               <span property="rdfs:domain" resource="http://schema.theodi.org/odrs#RightsStatement">RightsStatement</a>
+                                                                              
+                                                           
+                                    </td>
+                                    </tr>
+                                   	
+		   				</table>	   				
+		   				</div>		   				
+					</div>		   	
+					<div class="row">
+						<div class="offset2 span10">
+			   				<p property="rdfs:comment">The year from which a database right over the dataset is asserted.</p>
+			   				
+	   					</div>
+	   			</div>
+	   			<div class="row">
+	   				<div class="offset10">
+	   					<a href="#overview">Back to Overview</a>
+					</div>	   					
+	   			</div>
+	   			<hr>	   			
+	  				
+				
+		</div>
+	
+	</div>
+
+	<script src="jquery.js"></script> 		
+	<script src="bootstrap.min.js"></script>
+	
+  </body>	
+</html>

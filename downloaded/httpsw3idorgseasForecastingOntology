@@ -1,0 +1,172 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:pep="https://w3id.org/pep/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:saref="https://w3id.org/saref#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="ForecastingOntology">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-08-29</dcterms:modified>
+    <owl:imports rdf:resource="/pep/pep-1.0"/>
+    <dcterms:title xml:lang="en">The SEAS Forecasting ontology</dcterms:title>
+    <owl:versionIRI rdf:resource="ForecastingOntology-1.1"/>
+    <owl:versionInfo>v1.1</owl:versionInfo>
+    <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+    <owl:priorVersion rdf:resource="ForecastingOntology-1.0"/>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <rdf:type>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </rdf:type>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-08-29</dcterms:issued>
+    <dcterms:description xml:lang="en">The SEAS Forecasting ontology extends the [Procedure Execution ontology (PEP)](https://w3id.org/pep/) and defines:&#xD;
+&#xD;
+- `seas:Forecaster` that implement `seas:Forecasting` procedures and do `seas:Forecast`s&#xD;
+&#xD;
+Sub types of `seas:Forecaster`, `seas:Forecasting`, and `seas:Forecast`, may constrain the type of the value of the property. For instance ontology `seas:BooleanOntology` may define `seas:BooleanForecaster`,  `seas:BooleanForecasting`, and  `seas:BooleanForecast`, that constrain the forecasted property to be a `seas:BooleanProperty`.&#xD;
+&#xD;
+&#xD;
+Figure below provides an overview of some concepts in this ontology:&#xD;
+&#xD;
+[![Overview of the Forecasting ontology](https://w3id.org/seas/forecasting.png)](https://w3id.org/seas/forecasting.png)&#xD;
+&#xD;
+</dcterms:description>
+  </owl:Ontology>
+  <owl:Class rdf:about="Forecast">
+    <rdfs:isDefinedBy rdf:resource="ForecastingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:label xml:lang="en">Forecast</rdfs:label>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Forecasting"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Forecaster"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/madeBy"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Property"/>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:about="forecastsProperty"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A Forecast is the execution of some Forecasting procedure by some Forecaster.</rdfs:comment>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Forecasting"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecution"/>
+  </owl:Class>
+  <owl:Class rdf:about="Forecasting">
+    <rdfs:isDefinedBy rdf:resource="ForecastingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="/pep/Procedure"/>
+    <rdfs:comment xml:lang="en">Forecasting is the procedure of forecasting the state of a property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Forecasting</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Forecaster">
+    <rdfs:isDefinedBy rdf:resource="ForecastingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Forecasting"/>
+      <owl:onProperty rdf:resource="/pep/implements"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Forecasting"/>
+      <owl:onProperty rdf:resource="/pep/implements"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecutor"/>
+    <rdfs:comment xml:lang="en">A Forecaster implements some Forecasting procedure, and may generate forecasts.</rdfs:comment>
+    <rdfs:label xml:lang="en">Forecaster</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:ObjectProperty rdf:about="forecasts">
+    <rdfs:isDefinedBy rdf:resource="ForecastingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="FeatureOfInterest"/>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Forecasting"/>
+        <owl:Class rdf:about="Forecaster"/>
+        <owl:Class rdf:about="Forecast"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">Links an Forecasting, Forecaster, or Forecast, to the feature of interest a property of which it forecasts.&#xD;
+&#xD;
+If `x` forecasts a property, then it also forecasts the feature of interest of this property:&#xD;
+&#xD;
+```&#xD;
+seas:forecastsProperty &lt; seas:forecasts o seas:isPropertyOf .&#xD;
+```&#xD;
+&#xD;
+If a forecasting forecasts a feature of interest, then any Forecaster that implements this forecasting also forecasts this feature of interest, and any Forecast that used this forecasting also forecasts this feature of interest. Furthermore, if a Forecaster forecasts a feature of interest, then any Forecast executed by this Forecaster also forecasts this feature of interest:&#xD;
+&#xD;
+```&#xD;
+seas:forecasts &lt; pep:usedProcedure o seas:forecasts .&#xD;
+seas:forecasts &lt; pep:usedProcedure o seas:forecasts .&#xD;
+seas:forecasts &lt; pep:madeBy o seas:forecasts .&#xD;
+```&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">forecasts</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="forecastsProperty">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/implements"/>
+      <owl:ObjectProperty rdf:about="forecastsProperty"/>
+    </owl:propertyChainAxiom>
+    <rdfs:comment xml:lang="en">Links an Forecasting, Forecaster, or Forecast, to the property it forecasts.&#xD;
+&#xD;
+If a forecasting forecasts a property, then any Forecaster that implements this forecasting also forecasts this property, and any Forecast that used this forecasting also forecasts this property. Furthermore, if a Forecaster forecasts a property, then any Forecast executed by this Forecaster also forecasts this property:&#xD;
+&#xD;
+```&#xD;
+seas:forecastsProperty &lt; pep:implements o seas:forecastsProperty .&#xD;
+seas:forecastsProperty &lt; pep:usedProcedure o seas:forecastsProperty .&#xD;
+seas:forecastsProperty &lt; pep:madeBy o seas:forecastsProperty .&#xD;
+```</rdfs:comment>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/usedProcedure"/>
+      <owl:ObjectProperty rdf:about="forecastsProperty"/>
+    </owl:propertyChainAxiom>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Forecasting"/>
+        <owl:Class rdf:about="Forecaster"/>
+        <owl:Class rdf:about="Forecast"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="Property"/>
+    <rdfs:label xml:lang="en">forecasts property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="ForecastingOntology"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/madeBy"/>
+      <owl:ObjectProperty rdf:about="forecastsProperty"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

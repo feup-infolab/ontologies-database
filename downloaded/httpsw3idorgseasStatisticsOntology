@@ -1,0 +1,134 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
+    xmlns:sdmx="http://purl.org/linked-data/sdmx#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:liner="https://w3id.org/liner/"
+    xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ssn="https://www.w3.org/ns/ssn/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="StatisticsOntology">
+    <owl:versionInfo>v1.0</owl:versionInfo>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-07-21</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-07-21</dcterms:modified>
+    <owl:imports rdf:resource="EvaluationOntology"/>
+    <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+    <dcterms:description xml:lang="en">This ontology defines common evaluation interpretation concepts for statistics.</dcterms:description>
+    <rdf:type>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </rdf:type>
+    <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <owl:versionIRI rdf:resource="StatisticsOntology-1.0"/>
+    <dcterms:title xml:lang="en">The SEAS Statistics ontology.</dcterms:title>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+  </owl:Ontology>
+  <owl:Class rdf:about="QuartileEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="RankedDistributionEvaluation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The evaluated value is one of the quartiles of the property value distribution. The rank of the quartile is the object of property `seas:rank`.</rdfs:comment>
+    <rdfs:label xml:lang="en">Quartile Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="DistributionMaximumEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the maximum of the property value distribution.</rdfs:comment>
+    <rdfs:label xml:lang="en">Distribution Maximum Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="DistributionMeanEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the mean of the property value distribution.</rdfs:comment>
+    <rdfs:label xml:lang="en">Distribution Mean Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="StandardDeviationEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the standard deviation of the property value distribution.</rdfs:comment>
+    <rdfs:label xml:lang="en">Standard Deviation Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="DecileEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="RankedDistributionEvaluation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The evaluated value is one of the deciles of the property value distribution. The rank of the decile is the object of property `seas:rank`.</rdfs:comment>
+    <rdfs:label xml:lang="en">Decile Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PercentileEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="RankedDistributionEvaluation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The evaluated value is one of the percentiles of the property value distribution. The rank of the percentile is the object of property `seas:rank`.</rdfs:comment>
+    <rdfs:label xml:lang="en">Percentile Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="DistributionMedianEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the median of the property value distribution.</rdfs:comment>
+    <rdfs:label xml:lang="en">Distribution Median Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="RankedDistributionEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+      >1</owl:cardinality>
+      <owl:onProperty>
+        <owl:FunctionalProperty rdf:about="rank"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is to be interpreted with respect to a rank, which is given as the object of property `seas:rank`.</rdfs:comment>
+    <rdfs:label xml:lang="en">Ranked Distribution Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="DistributionMinimumEvaluation">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the minimum of the property value distribution.</rdfs:comment>
+    <rdfs:label xml:lang="en">Distribution Minimum Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:FunctionalProperty rdf:about="rank">
+    <rdfs:isDefinedBy rdf:resource="StatisticsOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="RankedDistributionEvaluation"/>
+    <rdfs:comment xml:lang="en">Rank number of a ranked distribution evaluation, such as for quartiles, deciles or percentiles.</rdfs:comment>
+    <rdfs:label xml:lang="en">rank</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

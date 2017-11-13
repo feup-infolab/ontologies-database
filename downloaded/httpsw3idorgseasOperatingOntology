@@ -1,0 +1,83 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:qudt-unit="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#"
+    xmlns:sdmx="http://purl.org/linked-data/sdmx#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:saref="http://ontology.tno.nl/saref#"
+    xmlns:ssn="http://www.w3.org/ns/ssn/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:qudt="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="MaximumPeakRatingEvaluation">
+    <rdfs:isDefinedBy>
+      <voaf:Vocabulary rdf:about="OperatingOntology">
+        <owl:versionIRI rdf:resource="OperatingOntology-1.0"/>
+        <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+        <owl:versionInfo>v1.0</owl:versionInfo>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-07-24</dcterms:issued>
+        <dcterms:title xml:lang="en">The SEAS Failable System ontology</dcterms:title>
+        <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+        <dcterms:description xml:lang="en">The SEAS Operating Ontology defines evaluations of operating features of interest.</dcterms:description>
+        <vann:preferredNamespaceUri rdf:resource=""/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-07-24</dcterms:modified>
+        <owl:imports rdf:resource="EvaluationOntology"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+        <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+      </voaf:Vocabulary>
+    </rdfs:isDefinedBy>
+    <vs:term_status>test</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the maximum peak rating value of the property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maximum Peak Rating Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MaximumContinuousOperatingEvaluation">
+    <rdfs:isDefinedBy rdf:resource="OperatingOntology"/>
+    <vs:term_status>test</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the maximum continuous operating value of the property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maximum Continuous Operating Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="NominalOperatingEvaluation">
+    <rdfs:isDefinedBy rdf:resource="OperatingOntology"/>
+    <vs:term_status>test</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the nominal operating value of the property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Nominal</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="MaximumOperatingEvaluation">
+    <rdfs:isDefinedBy rdf:resource="OperatingOntology"/>
+    <vs:term_status>test</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the maximum operating value of the property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maximum Operating Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:Class rdf:about="MinimumOperatingEvaluation">
+    <rdfs:isDefinedBy rdf:resource="OperatingOntology"/>
+    <vs:term_status>test</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">The evaluated value is the minimum operating value of the property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Minimum Operating Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

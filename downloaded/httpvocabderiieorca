@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:orca="http://vocab.deri.ie/orca#">
+
+  <owl:Ontology rdf:about="http://vocab.deri.ie/orca">
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <dcterms:title>orca, the Ontology of Reasoning, Certainty and Attribution</dcterms:title>
+    <dcterms:description>orca, the Ontology of Reasoning, Certainty and Attribution, is an ontology for characterizing the certainty of information, how it is known, and its source</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-11-09</dcterms:modified>
+    <vann:preferredNamespaceUri>http://vocab.deri.ie/orca#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>orca</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://vocab.deri.ie/orca.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-19</dcterms:created>
+    <dcterms:partOf rdf:resource="http://vocab.deri.ie"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://vocab.deri.ie/orca#ahogan"/>
+    <dc:creator rdf:resource="http://vocab.deri.ie/orca#Jodi%20Schneider"/>
+  </owl:Ontology>
+
+  <adms:SemanticDistribution rdf:about="http://vocab.deri.ie/orca#ttl">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://vocab.deri.ie/orca.ttl</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <adms:SemanticDistribution rdf:about="http://vocab.deri.ie/orca#rdf">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://vocab.deri.ie/orca.rdf</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/orca#ahogan">
+    <foaf:name>Aidan Hogan</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/orca#Jodi%20Schneider">
+    <foaf:name>Jodi Schneider</foaf:name>
+    <foaf:homepage></foaf:homepage>
+    <foaf:mbox rdf:resource="mailto:jodi.schneider@deri.org"/>
+  </foaf:Person>
+
+  <dcterms:Agent rdf:about="http://vocab.deri.ie/orca#DERI">
+    <foaf:member rdf:resource="http://vocab.deri.ie/orca#Jodi%20Schneider"/>
+    <foaf:name>DERI</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </dcterms:Agent>
+
+  <rdfs:Class rdf:about="http://vocab.deri.ie/orca#Basis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Basis</rdfs:label>
+    <rdfs:comment>Indicates the basis of the knowledge</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.deri.ie/orca#Source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Source</rdfs:label>
+    <rdfs:comment>Indicates the source of the knowledge</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.deri.ie/orca#ConfidenceLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ConfidenceLevel</rdfs:label>
+    <rdfs:comment>Indicates how certain the knowledge is</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#hasSource">
+    <rdfs:label>hasSource</rdfs:label>
+    <rdfs:comment>Indicates the source of the knowledge.</rdfs:comment>
+    <rdfs:range rdf:resource="http://vocab.deri.ie/orca#Source"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#lessCertain">
+    <rdfs:label>lessCertain</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#directlyLessCertainThan">
+    <rdfs:label>directlyLessCertainThan</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocab.deri.ie/orca#lessCertain"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#moreCertain">
+    <rdfs:label>moreCertain</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#hasConfidenceLevel">
+    <rdfs:label>hasConfidenceLevel</rdfs:label>
+    <rdfs:comment>Indicates the confidence/certainty level of the knowledge.</rdfs:comment>
+    <rdfs:range rdf:resource="http://vocab.deri.ie/orca#ConfidenceLevel"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#directlyMoreCertainThan">
+    <rdfs:label>directlyMoreCertainThan</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocab.deri.ie/orca#moreCertain"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.deri.ie/orca#hasBasis">
+    <rdfs:label>hasBasis</rdfs:label>
+    <rdfs:comment>Indicates the basis of the knowledge.</rdfs:comment>
+    <rdfs:range rdf:resource="http://vocab.deri.ie/orca#Basis"/>
+  </rdf:Property>
+
+  <orca:ConfidenceLevel rdf:about="http://vocab.deri.ie/orca#LackOfKnowledge">
+    <rdfs:label xml:lang="en">lack of knowledge</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates lack of knowledge.</rdfs:comment>
+    <orca:directlyLessCertainThan rdf:resource="http://vocab.deri.ie/orca#HypotheticalKnowledge"/>
+  </orca:ConfidenceLevel>
+
+  <orca:ConfidenceLevel rdf:about="http://vocab.deri.ie/orca#HypotheticalKnowledge">
+    <rdfs:label xml:lang="en">hypothetical knowledge: low certainty</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates hypothetical knowledge: low certainty.</rdfs:comment>
+    <orca:directlyMoreCertainThan rdf:resource="http://vocab.deri.ie/orca#LackOfKnowledge"/>
+    <orca:directlyLessCertainThan rdf:resource="http://vocab.deri.ie/orca#DubitativeKnowledge"/>
+  </orca:ConfidenceLevel>
+
+  <orca:ConfidenceLevel rdf:about="http://vocab.deri.ie/orca#DubitativeKnowledge">
+    <rdfs:label xml:lang="en">dubitative knowledge: higher likelihood but short of complete certainty</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates dubitative knowledge: higher likelihood but short of complete certainty.</rdfs:comment>
+    <orca:directlyMoreCertainThan rdf:resource="http://vocab.deri.ie/orca#HypotheticalKnowledge"/>
+    <orca:directlyLessCertainThan rdf:resource="http://vocab.deri.ie/orca#DoxasticKnowledge"/>
+  </orca:ConfidenceLevel>
+
+  <orca:ConfidenceLevel rdf:about="http://vocab.deri.ie/orca#DoxasticKnowledge">
+    <rdfs:label xml:lang="en">doxastic knowledge: complete certainty, reflecting an accepted, known and/or proven fact</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates duoxastic knowledge: complete certainty, reflecting an accepted, known and/or proven fact.</rdfs:comment>
+    <orca:directlyMoreCertainThan rdf:resource="http://vocab.deri.ie/orca#DubitativeKnowledge"/>
+  </orca:ConfidenceLevel>
+
+  <orca:Basis rdf:about="http://vocab.deri.ie/orca#Reasoning">
+    <rdfs:label xml:lang="en">reasoning</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge known by reasoning.</rdfs:comment>
+  </orca:Basis>
+
+  <orca:Basis rdf:about="http://vocab.deri.ie/orca#Data">
+    <rdfs:label xml:lang="en">data</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge known by data.</rdfs:comment>
+  </orca:Basis>
+
+  <orca:Basis rdf:about="http://vocab.deri.ie/orca#Unidentified">
+    <rdfs:label xml:lang="en">unidentified</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge whose basis is unidentified.</rdfs:comment>
+  </orca:Basis>
+
+  <orca:Source rdf:about="http://vocab.deri.ie/orca#AuthorExplicitly">
+    <rdfs:label xml:lang="en">author, explicitly</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge explicitly attributed to the author.</rdfs:comment>
+  </orca:Source>
+
+  <orca:Source rdf:about="http://vocab.deri.ie/orca#AuthorImplicitly">
+    <rdfs:label xml:lang="en">author, implicitly</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge implicitly attributed to the author.</rdfs:comment>
+  </orca:Source>
+
+  <orca:Source rdf:about="http://vocab.deri.ie/orca#NamedExternalSource">
+    <rdfs:label xml:lang="en">named external source</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge attributed to a named external source (either explicitly or as a reference).</rdfs:comment>
+  </orca:Source>
+
+  <orca:Source rdf:about="http://vocab.deri.ie/orca#NamelessExternalSource">
+    <rdfs:label xml:lang="en">nameless external source</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge attributed to a nameless external source.</rdfs:comment>
+  </orca:Source>
+
+  <orca:Source rdf:about="http://vocab.deri.ie/orca#NoSource">
+    <rdfs:label xml:lang="en">no source</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates knowledge not attributed to any source.</rdfs:comment>
+  </orca:Source>
+
+</rdf:RDF>

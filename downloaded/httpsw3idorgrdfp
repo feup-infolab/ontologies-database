@@ -1,0 +1,327 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdfp="https://w3id.org/rdfp/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="">
+    <dc:title xml:lang="en">The RDF Presentation ontology</dc:title>
+    <vann:preferredNamespacePrefix>rdfp</vann:preferredNamespacePrefix>
+    <dc:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0/"/>
+    <owl:versionInfo>v1.0</owl:versionInfo>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-08-31</dc:issued>
+    <dc:creator rdf:resource="http://maxime-lefrancois.info/me#"/>
+    <owl:versionIRI rdf:resource="rdfp-1.0"/>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <dc:description xml:lang="en">## RDF Presentation and RDF Presentation Negotiation&#xD;
+&#xD;
+**To cite our work:**&#xD;
+&#xD;
+&gt; Maxime Lefrançois _Interopérabilité sémantique libérale pour les services et les objets_, Actes de la 17ème conférence Extraction et Gestion des Connaissances, EGC, Jan 2017, Grenoble, France - ([PDF](http://www.maxime-lefrancois.info/docs/Lefrancois-EGC2017-Interoperabilite.pdf) - [BibTeX](Lefrancois-EGC2017-Interoperabilite.bib))&#xD;
+&#xD;
+&#xD;
+An RDF graph can be presented in several ways, using different media types. Examples of RDF media types include `application/rdf+xml`, `text/turtle`, `application/json+ld`.&#xD;
+&#xD;
+Today, most of the content consumed/produced/published, on the Web is not presented in RDF. &#xD;
+&#xD;
+In the Web of Things, HTTP servers and clients would rather exchange lightweight documents, potentially binary. &#xD;
+Currently, most existing RDF Presentations generically apply to any RDF graph, at the cost of being heavy text-based documents.&#xD;
+Yet, lightweight HTTP servers/clients could be better satisfied with consuming/producing/publishing lightweight documents, may its structure be application-specific.&#xD;
+&#xD;
+On the other hand, various formalisms have been developed:&#xD;
+&#xD;
+- to lift documents to RDF. Examples include [RML mappings](http://rml.io), [XSPARQL](http://xsparql.deri.org/), [SPARQL-Generate](http://w3id.org/sparql-generate/);&#xD;
+- to lower RDF to documents. Examples include [XSPARQL](http://xsparql.deri.org/), [STTL, aka SPARQL-Template](https://ns.inria.fr/sparql-template/);&#xD;
+- to validate RDF graphs. Examples include simple [SPIN](http://spinrdf.org/), [ShEx](http://shexspec.github.io), [SHACL](https://www.w3.org/TR/shacl/). &#xD;
+&#xD;
+For a given range of RDF graphs and a specific media types, an RDF Presentation is a combination of lifting, lowering, and validation rules. With these rules, one can coherently interpret a representation as RDF (lift), validate the RDF graph, and generate back the representation from the RDF graph (lower).&#xD;
+&#xD;
+While sending any kind of document, potentially lightweight, an HTTP server/client may refer to the specific RDF Presentation that is used. Then, the HTTP client/server can lift the document to RDF, and validate it.&#xD;
+&#xD;
+Similarly, while requesting for an RDF graph, an HTTP server/client may inform the client/server what representation it prefers. Then, the client/server can validate the RDF graph, then lower it into a document.&#xD;
+&#xD;
+### RDF Presentation description &#xD;
+&#xD;
+Following the Linked Data principles, RDF Presentations are given uniform identifiers (URIs), and an RDF description of these presentations can be retrieved at their URI.&#xD;
+&#xD;
+The RDFP vocabulary can be used to describe RDF Presentations and the range of RDF graphs they apply to. It can be accessed at this URI: https://w3id.org/rdfp/ using content negotiation (i.e., set HTTP Header field `Accept` to one of the RDF syntaxes media types, or access it directly in [turtle](index.ttl), or in [RDF/XML](index.rdf).&#xD;
+&#xD;
+For example, the RDF Presentation identified by https://w3id.org/rdfp/example/graph/xml 303 redirects to https://w3id.org/rdfp/example/description where it is described as follows:&#xD;
+&#xD;
+```&#xD;
+@prefix rdfp: &lt;https://w3id.org/rdfp/&gt;.&#xD;
+@base &lt;https://w3id.org/rdfp/&gt;.&#xD;
+&#xD;
+&lt;example/graph/xml&gt; a rdfp:Presentation ;&#xD;
+  rdfp:mediaType "application/xml" ; &#xD;
+  rdfp:liftingRule &lt;example/graph/xml/liftingRule&gt; ;&#xD;
+  rdfp:loweringRule &lt;example/graph/xml/loweringRule&gt; ;&#xD;
+  rdfs:isDefinedBy &lt;example/description&gt; .&#xD;
+```&#xD;
+&#xD;
+A full example RDF graph that uses this vocabulary can be found at URI https://w3id.org/rdfp/example/description. Use content negotiation, or access it directly in [turtle](https://w3id.org/rdfp/example/description.ttl), or in [RDF/XML](https://w3id.org/rdfp/example/description.rdf).&#xD;
+&#xD;
+&#xD;
+The RDFP vocabulary describes web resources, RDF graphs, ontologies, and their representations.&#xD;
+&#xD;
+  The URI of a named graph is the identification of that graph in the sense of the W3C Architecture of the World Wide Web, Volume One.&#xD;
+  The graph is the content, and that graph can be represented by many different documents that can then be exchanged on the Web.&#xD;
+&#xD;
+## Referring to an RDF Presentation&#xD;
+&#xD;
+The RDF Presentation qualifies the representation type. Following the general architecture principles defined in [W3C Architecture of the World Wide Web, Volume One](https://www.w3.org/TR/2004/REC-webarch-20041215/), we keep orthogonal the identification and representation concepts. Arguably, the representation type (the media type) should be annotated with a link to the RDF Presentation used. &#xD;
+&#xD;
+Although new media types could have a parameter that refers to its presentation, such as: `application/seas;p="https://w3id.org/rdfp/example/graph/xml"`. &#xD;
+This link cannot be set by a global media type parameter, as per [RFC 2045, Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies](https://tools.ietf.org/html/rfc2045):&#xD;
+&#xD;
+&gt; There are NO globally-meaningful parameters that apply to all media types.  Truly global mechanisms are best addressed, in the MIME model, by the definition of additional Content-* header fields.&#xD;
+&#xD;
+We hence introduce HTTP header field `Content-Presentation` for this purpose. The value of this field is any absolute URI, that identifies the RDF Presentation of the represented RDF graph. &#xD;
+&#xD;
+Using this header properly, any existing server can be adapted to behave "as if" it was producing RDF: the client simply needs to dereference the presentation link, and use the associated lifting rule to interpret the retrieved document as RDF.&#xD;
+&#xD;
+Equally important, a lightweight client/server can send lightweight binary messages, while still letting its server/client the chance to interpret the message body as RDF.&#xD;
+&#xD;
+## RDF Presentation Negotiation&#xD;
+&#xD;
+RDF Presentation Negotiation is a way for the client to state its presentation preferences for the response message body. &#xD;
+&#xD;
+To achieve this, we introduce HTTP header field `Accept-Presentation`.  The value of this field is any (absolute) URI, that identifies the RDF Presentation the clients would like the server to use to encode the response RDF graph. &#xD;
+&#xD;
+Using this header properly, a lightweight client can request a compliant server to encode its responses in a specific format, hence transferring all the computation cost on the server.&#xD;
+&#xD;
+&#xD;
+## Directly referring to the lowering rule, validation rule, or lifting rule&#xD;
+&#xD;
+In some situations, it may seem unreasonable to expect the client/server to:&#xD;
+&#xD;
+1. dereference the RDF Presentation URI,&#xD;
+1. parse the RDF document,&#xD;
+1. navigate to the lifting, validation, or lowering rule of the RDF Presentation.&#xD;
+&#xD;
+Hence, in a future version of RDFP, we may introduce additional HTTP header fields to directly refer to these rules. For example:&#xD;
+&#xD;
+- HTTP header field `Content-Lifting-Rule` would mean that the receiver may use this lifting to generate RDF from the content;&#xD;
+- HTTP header field `Accept-Lowering-Rule` would mean that the client expects the server to use this lowering rule to generate a content it can process.&#xD;
+&#xD;
+## Implementation over Jersey&#xD;
+&#xD;
+[`rdfp-jersey-server`](get-started.html) is an extension of Jersey that eases the development of RESTful services that produce and consume RDF. It hides the RDF Presentation description and RDF Presentation Negotiation parts, and lets the end developer focus on manipulating RDF graphs as [Apache Jena](http://jena.apache.org/) models.&#xD;
+&#xD;
+&#xD;
+## Related projects&#xD;
+&#xD;
+The RDFP vocabulary is used in the following related projects:&#xD;
+&#xD;
+- [ONTOP - Ontology Platform](https://w3id.org/ontop/);&#xD;
+&#xD;
+`rdfp-jersey-server` is used in the following related projects:&#xD;
+&#xD;
+- [PEP - Process Execution Platform](https://w3id.org/pep/);&#xD;
+- [CNR Smart Charging Provider SEAS pilot platform](http://cnr-seas.cloudapp.net/scp/).&#xD;
+&#xD;
+## Contact&#xD;
+&#xD;
+maxime.lefrancois.86@gmail.com&#xD;
+&#xD;
+http://maxime-lefrancois.info/&#xD;
+</dc:description>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-09-08</dc:modified>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="GraphPresentation">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Instances of rdfp:GraphPresentation describe RDF Graph presentations in terms of lifting, lowering, and validation rules.&#xD;
+&#xD;
+   - lifting rules can be used to generate a RDF graph from a document, using for instance a RML mapping, a XSPARQL rule, or SPARQL-Generate rule;&#xD;
+   - lowering rules can be used to generate a document from a RDF graph, using for instance a STTL rule (aka. SPARQL-Template).&#xD;
+   - validation rules can be used to validate a document, using for instance a regular expression, a XSD Schema, or a JSON Schema&#xD;
+&#xD;
+   For example,&#xD;
+&#xD;
+    https://w3id.org/rdfp/example/graph/xml&gt; a rdfp:GraphPresentation ; &#xD;
+        rdfp:mediaType "application/xml" ; &#xD;
+        rdfp:liftingRule &lt;https://w3id.org/rdfp/example/graph/xml/lifingRule&gt; ;&#xD;
+        rdfp:loweringRule &lt;https://w3id.org/rdfp/example/graph/xml/loweringRule&gt; .</rdfs:comment>
+    <rdfs:label xml:lang="en">Presentation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Graph">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Resource"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Instances of rdfp:Graph are RDF graph resources that may have several representations.&#xD;
+&#xD;
+   For example,&#xD;
+&#xD;
+```&#xD;
+   &lt;https://w3id.org/rdfp/example/input&gt; a rdfp:Graph ;&#xD;
+     rdfp:describedBy &lt;https://w3id.org/rdfp/example/graph&gt; ;&#xD;
+     rdfp:representedBy &lt;some_rdfp_resource&gt; .&#xD;
+```&#xD;
+&#xD;
+We propose an alignment of this resource with rdfg:Graph, but this is part of [another document](https://w3id.org/rdfp/align/rdfg).&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">Graph</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="LiftingRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">The class of rules that enable RDF lifting.&#xD;
+Such rules may have various representations, such as a [RML mapping](http://rml.io), a [SPARQL-Generate](https://w3id.org/sparql-generate) or a [XSPARQL query](http://xsparql.deri.org/).</rdfs:comment>
+    <rdfs:label xml:lang="en">Lifting Rule</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="LoweringRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">The class of rules that enable RDF lowering. Such rules may have various representations, such as a [STTL rule](https://ns.inria.fr/sparql-template/).</rdfs:comment>
+    <rdfs:label xml:lang="en">Lowering Rule</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="GraphDescription">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Instances of rdfp:GraphDescription describe RDF Graphs in terms of validation and presentation.&#xD;
+&#xD;
+  A rdfp:GraphDescription may be linked to one or more validation rules.&#xD;
+  A rdfp:GraphDescription may be linked to one or more instances or rdfp:Presentation.&#xD;
+&#xD;
+   For example,&#xD;
+ &#xD;
+```&#xD;
+   &lt;https://w3id.org/rdfp/example/graph&gt; a rdfp:GraphDescription ;&#xD;
+     rdfp:validationRule &lt;some_sparql_ask_rule&gt; ;&#xD;
+     rdfp:presentedBy &lt;some_presentation_description&gt; .&#xD;
+```&#xD;
+&#xD;
+We propose an alignment of this resource with sd:Graph, but this is part of [another document](https://w3id.org/rdfp/align/sd).&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">Graph Description</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Resource">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">The class of web resources, that have one or several representations.</rdfs:comment>
+    <rdfs:label xml:lang="en">Resource</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="RepresentationValidationRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">The class of representation validation rules resources. Such resources may have various representations:&#xD;
+&#xD;
+- a JSON Schema for JSON representations;&#xD;
+- a XML Schema for XML representations;&#xD;
+- a XPath query that must retrieve an element to validate.</rdfs:comment>
+    <rdfs:label xml:lang="en">Representation Validation Rule</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Representation">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Resource"/>
+    <rdfs:comment xml:lang="en">The class of web representations. A representation is also a resource.</rdfs:comment>
+    <rdfs:label xml:lang="en">Representation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="GraphValidationRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">The class of graph validation rules resources. &#xD;
+  Such resources may have various representations:&#xD;
+&#xD;
+- a RDF Graph representation that contains SHACL instances;&#xD;
+- a ShEx document;&#xD;
+- a SPARQL ASK rule.&#xD;
+&#xD;
+For example, &#xD;
+&#xD;
+```&#xD;
+&lt;g&gt; a rdfp:GraphDescription ;&#xD;
+  rdfp:validationRule &lt;v&gt; .&#xD;
+```&#xD;
+&#xD;
+An RDFP engine willing to validate the conformance of a graph G described by `&lt;g&gt;` with SPARQL ASK queries should follow these steps:&#xD;
+&#xD;
+- operate a GET request at URI `&lt;v&gt;` with accepted media type "application/sparql-query"&#xD;
+- run the retrieved SPARQL ASK query against G.&#xD;
+- If the result is true, then G validates against `&lt;v&gt;`.</rdfs:comment>
+    <rdfs:label xml:lang="en">Graph Validation Rule</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="validationRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a graph description (resp. a presentation) to a validation rule against which graphs conforming to this description (resp. representations conforming to this presentation) should validate. Such resources may have various representations.&#xD;
+&#xD;
+For example, resource identified by `&lt;some_validation_rule&gt;` may have a representation as a [SPARQL ASK query](https://www.w3.org/TR/sparql11-query/#ask), as a [ShEx expression](http://shexspec.github.io/), or as a [SHACL shape](https://www.w3.org/TR/shacl/).</rdfs:comment>
+    <rdfs:label xml:lang="en">validation rule</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="alias">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a representation to one of its aliases. &#xD;
+&#xD;
+According to the Web architecture design principles, there should never be two following rdfp:alias links.</rdfs:comment>
+    <rdfs:label xml:lang="en">alias</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="representedBy">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a resource to one of its representations. It is expected that the representation has a media type.</rdfs:comment>
+    <rdfs:label xml:lang="en">represented by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="loweringRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="LoweringRule"/>
+    <rdfs:domain rdf:resource="GraphRepresentation"/>
+    <rdfs:comment xml:lang="en">Links a graph description to a resource that enables to lower a RDF Graph to a document.</rdfs:comment>
+    <rdfs:label xml:lang="en">lowering rule</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="presentationFor">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="presentedBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="GraphDescription"/>
+    <rdfs:domain rdf:resource="GraphPresentation"/>
+    <rdfs:comment xml:lang="en">Links a RDF graph presentation to the description of RDF graphs it may present.</rdfs:comment>
+    <rdfs:label xml:lang="en">presentation for</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="describedBy">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="GraphDescription"/>
+    <rdfs:domain rdf:resource="Graph"/>
+    <rdfs:comment xml:lang="en">Links a RDF graph to its description.</rdfs:comment>
+    <rdfs:label xml:lang="en">described by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="liftingRule">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="LiftingRule"/>
+    <rdfs:domain rdf:resource="GraphRepresentation"/>
+    <rdfs:comment xml:lang="en">Links a graph presentation to a resource that enables to lift documents to RDF.</rdfs:comment>
+    <rdfs:label xml:lang="en">lifting rule</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="presentedBy">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="GraphPresentation"/>
+    <rdfs:domain rdf:resource="GraphDescription"/>
+    <rdfs:comment xml:lang="en">Links a RDF graph description to one of its presentation means.</rdfs:comment>
+    <rdfs:label xml:lang="en">presented by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="mediaType">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a representation to its media type.</rdfs:comment>
+    <rdfs:label xml:lang="en">media type</rdfs:label>
+  </owl:DatatypeProperty>
+</rdf:RDF>

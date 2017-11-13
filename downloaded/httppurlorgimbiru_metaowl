@@ -1,0 +1,1377 @@
+
+
+
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de"
+      lang="de">
+
+
+
+    
+    
+    
+    
+    
+
+
+
+<head>
+
+<meta http-equiv="Content-Type"
+      content="text/html;charset=utf-8" />
+
+<meta name="generator" content="Plone - http://plone.org" />
+
+<!-- Internet Explorer fix, forces IE8 into newest possible rendering
+     engine even if it's on an intranet. This has to be defined before any
+     script/style tags. -->
+<meta http-equiv="X-UA-Compatible" content="IE=8" />     
+
+
+  <base href="http://portal.uni-freiburg.de/imbi/front-pag" /><!--[if lt IE 7]></base><![endif]-->
+
+
+
+  
+  
+    
+      <script type="text/javascript"
+              src="http://portal.uni-freiburg.de/imbi/portal_javascripts/UniFreiburg/jquery-cachekey1843.js">
+      </script>
+    
+    
+  
+
+  
+    
+      <script type="text/javascript"
+              src="http://portal.uni-freiburg.de/imbi/portal_javascripts/UniFreiburg/fckeditor-cachekey1793.js">
+      </script>
+    
+    
+  
+
+  
+    
+      <script type="text/javascript"
+              src="http://portal.uni-freiburg.de/imbi/portal_javascripts/UniFreiburg/unitheme-cachekey6857.js">
+      </script>
+    
+    
+  
+
+  
+    
+      <script type="text/javascript"
+              src="http://portal.uni-freiburg.de/imbi/portal_javascripts/UniFreiburg/unithemeCustom-cachekey8189.js">
+      </script>
+    
+    
+  
+
+  
+  
+    
+    
+      <style type="text/css"><!-- @import url(http://portal.uni-freiburg.de/imbi/portal_css/UniFreiburg/base-cachekey4485.css); --></style>
+    
+    
+  
+
+  
+    
+    
+      <style type="text/css"><!-- @import url(http://portal.uni-freiburg.de/imbi/portal_css/UniFreiburg/flyoutnav-cachekey0702.css); --></style>
+    
+    
+  
+
+  
+  <link rel="kinetic-stylesheet" type="text/css"
+        href="http://portal.uni-freiburg.de/imbi/portal_kss/UniFreiburg/at-cachekey5293.kss" />
+
+
+<link rel="kss-base-url" href="http://portal.uni-freiburg.de/imbi/front-pag" />
+<title>Herzlich willkommen! &mdash; Institut für Medizinische Biometrie und Statistik</title>
+
+
+    <!-- Internet Explorer Fixes -->
+    <!--[if IE]>
+        <style type="text/css" media="all">@import url(http://portal.uni-freiburg.de/imbi/IEFixes.css);</style>
+        <style type="text/css" media="all">@import url(http://portal.uni-freiburg.de/imbi/IE.css);</style>
+        
+        <script type="text/javascript"
+                src="http://portal.uni-freiburg.de/imbi/iefixes.js">
+        </script>
+        
+        
+    <![endif]-->
+
+        <!--[if IE 6]><link rel="stylesheet" type="text/css" href="IE6.css" media="all" /><![endif]-->
+        <!--[if IE 7]><link rel="stylesheet" type="text/css" href="IE7.css" media="all" /><![endif]-->
+
+
+    <link rel="author"
+          href="http://portal.uni-freiburg.de/imbi/author/cmsadmin"
+          title="Autoreninformation" />
+
+
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="http://portal.uni-freiburg.de/imbi/favicon.ico" />
+
+
+
+    <link rel="home"
+          href="http://portal.uni-freiburg.de/imbi"
+          title="Startseite" />
+
+    <link rel="contents"
+          href="http://portal.uni-freiburg.de/imbi/sitemap"
+          title="Übersicht" />
+
+
+
+
+
+
+    <link rel="search"
+          href="http://portal.uni-freiburg.de/imbi/search_form"
+          title="Search this site" />
+
+
+
+<!-- Disable IE6 image toolbar -->
+<meta http-equiv="imagetoolbar" content="no" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+
+</head>
+
+<body class="section-front-pag template-document_view"
+      dir="ltr">
+    <a id="top" name="top"></a>
+
+    <!-- start wrapper -->
+    <div id="wrapper">
+
+        <!-- start wrapperTable -->
+        <table id="wrapperTable">
+            <tbody>
+                <tr>
+
+                    <!-- start leftwrapperTable -->
+                    <td id="leftwrapperTable">
+
+                        <!-- start leftcolumnWrapper -->
+                        <div id="leftcolumnWrapper">
+
+                            <div id="leftTopSpace">&nbsp;</div>
+                            <div id="leftGreyBar">&nbsp;</div>
+                            <div id="leftUpperSpace"></div>
+
+                            <div id="navWrapper">
+
+                                <div id="portal-searchbox">
+    <form name="searchform"
+          action="http://portal.uni-freiburg.de/imbi/search">
+
+        <label for="searchGadget" class="hiddenStructure">Website durchsuchen</label>
+
+        <div class="LSBox">
+        <input name="SearchableText" type="text" size="18"
+               title="Website durchsuchen" accesskey="4"
+               class="inputLabel" id="searchGadget" />
+
+        <input class="searchButton" type="submit" value="" />
+    
+        <div class="searchSection">
+            <input id="searchbox_currentfolder_only"
+                   class="noborder" type="checkbox"
+                   name="path" value="/imbi" />
+            <label for="searchbox_currentfolder_only"
+                   style="cursor: pointer">nur im aktuellen Bereich</label>
+        </div>
+
+        <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
+        </div>
+    </form>
+
+    <div id="portal-advanced-search" class="hiddenStructure">
+        <a href="http://portal.uni-freiburg.de/imbi/search_form"
+           accesskey="5">Erweiterte Suche…</a>
+    </div>
+
+</div>
+
+                                <div class="clear"></div>
+
+                                <div id="home">
+                                    <a
+    href="http://portal.uni-freiburg.de/imbi"
+    id="startseite" class="navTreeCurrentItem">
+                                        <span>Startseite</span>
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+
+                                
+<div id="flyoutNav"><!-- start flyoutNav -->
+    <ul id="topLevel">
+        <li>
+            <a href="#" id="schnellzugriff">
+                <span>Schnellzugriff</span>
+            <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+            <!--[if lte IE 6]><table><tr><td><![endif]-->
+            <ul class="subnavigation1">
+                
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/aktuelles" class="">
+        <span>Aktuelles</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/team" class="">
+        <span>Team</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/studien_beratung" class="hasChilds">
+        <span>Studien und Beratung</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/studien_beratung/statBeratung" class="hasChilds">
+        <span>Statistische Beratung</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/studien_beratung/statBeratung/hinweise" class="">
+        <span>Hinweise zur statistischen Beratung</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/studien_beratung/statBeratung/online-anmeldung" class="">
+        <span>Online-Anmeldung</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/studien_beratung/Studien" class="hasChilds">
+        <span>Studien</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/studien_beratung/Studien/studien" class="">
+        <span>Beratung klinischer Studien </span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre" class="hasChilds">
+        <span>Studium und Lehre</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/QB1" class="">
+        <span>QB 1</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/qb12" class="">
+        <span>QB 12</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/WLV" class="">
+        <span>Weitere Lehrveranstaltungen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/lehrbuecher" class="hasChilds">
+        <span>Lehrbücher</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/lehrbuecher/competing-risks-and-multistate-models-with-r" class="">
+        <span>Competing Risks and Multistate Models with R</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/lehrbuecher/RegModToolInMedRes" class="">
+        <span>Regression Models as a Tool in Medical Research</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/lehrbuecher/meta-analysis-with-r" class="">
+        <span>Meta-Analysis with R</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/lehre/evaluation" class="">
+        <span>Evaluationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/KDS" class="hasChilds">
+        <span>Knowledge Discovery</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/KDS/projekte" class="hasChilds">
+        <span>Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/KDS/projekte/aktuell" class="">
+        <span>Aktuelle Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/KDS/projekte/abgeschlproj" class="">
+        <span>Abgeschlossene Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/KDS/Publikationen" class="">
+        <span>Publikationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike" class="hasChilds">
+        <span>Medical Data Science</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/medinf" class="hasChilds">
+        <span>Medizinische Informatik</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/medinf/lehre" class="">
+        <span>Lehre</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/medinf/projekte" class="">
+        <span>Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/medinf/publikationen" class="">
+        <span>Publikationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/klinepi" class="hasChilds">
+        <span>Klinische Epidemiologie</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/klinepi/projekte" class="">
+        <span>Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike/klinepi/publikationen" class="">
+        <span>Publikationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/MICLEP" class="hasChilds">
+        <span>Methods in Clinical Epidemiology (MICLEP)</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/MICLEP/Projekte" class="hasChilds">
+        <span>Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/MICLEP/Projekte/aktuell" class="">
+        <span>Aktuelle Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/MICLEP/Projekte/abgeschlproj" class="">
+        <span>Abgeschlossene Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/MICLEP/Publications" class="">
+        <span>Publikationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/SEVERA" class="hasChilds">
+        <span>Sektion Versorgungsforschung und Rehabilitionsforschung (SEVERA)</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/SEVERA/Projekte" class="">
+        <span>Projekte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/SEVERA/Publikationen" class="">
+        <span>Publikationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/SEVERA/weiteres" class="hasChilds">
+        <span>Weitere Informationen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/SEVERA/weiteres/jahresbericht" class="">
+        <span>Jahresberichte</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/SEVERA/weiteres/praxisempfehlungen" class="">
+        <span>Praxisempfehlungen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/support" class="hasChilds">
+        <span>Admin + IT</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/support/bibliothek" class="hasChilds">
+        <span>Bibliothek</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation3">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/support/bibliothek/links" class="">
+        <span>Links / Ressourcen</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/support/bibliothek/schulungsmaterialien" class="">
+        <span>Schulungsmaterialien</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/Kontakt" class="hasChilds">
+        <span>Kontakt</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+        <!--[if lte IE 6]><table><tr><td><![endif]-->
+        <ul class="subnavigation2">
+            
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/Kontakt/finden" class="">
+        <span>So finden Sie uns</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+<li>
+<a href="http://portal.uni-freiburg.de/imbi/Kontakt/Site%20map" class="">
+        <span>Lageplan</span>
+    <!--[if gte IE 7]><!--></a><!--<![endif]-->
+
+    
+</li>
+
+        </ul>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    
+</li>
+
+            </ul>
+            <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+        </li>
+    </ul><!-- end navigation 1st -->
+</div><!-- end flyoutNav -->
+<div class="clear"></div>
+
+                                <div class="clear"></div>
+
+                            </div><!-- end navWrapper -->
+                            <div class="clear"></div>
+
+
+                            
+                                
+                                    
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f696d62690a6e617669676174696f6e"
+     class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f696d62690a6e617669676174696f6e">
+<dl class="portletNavigationTree">
+
+
+    <dd>
+        <ul class="navTree navTreeHome">
+            
+        </ul>
+        <ul class="navTree navTreeLevel0">
+            
+
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/aktuelles"
+           class="state-published navTreeFolderish" title="">
+            <span>Aktuelles</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/team"
+           class="state-published navTreeFolderish" title="">
+            <span>Team</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/studien_beratung"
+           class="state-published navTreeFolderish" title="">
+            <span>Studien und Beratung</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/lehre"
+           class="state-published navTreeFolderish" title="">
+            <span>Studium und Lehre</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/KDS"
+           class="state-published navTreeFolderish" title="">
+            <span>Knowledge Discovery</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/medizinische-informatik-klinische-epidemiologie-mike"
+           class="state-published navTreeFolderish" title="">
+            <span>Medical Data Science</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/MICLEP"
+           class="state-published navTreeFolderish" title="">
+            <span>Methods in Clinical Epidemiology (MICLEP)</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/SEVERA"
+           class="state-published navTreeFolderish" title="">
+            <span>Sektion Versorgungsforschung und Rehabilitionsforschung (SEVERA)</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish ">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/support"
+           class="state-published navTreeFolderish" title="">
+            <span>Admin + IT</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish navTreeLastItem">
+
+    
+
+    <div>
+
+        <a href="http://portal.uni-freiburg.de/imbi/Kontakt"
+           class="state-published navTreeFolderish" title="">
+            <span>Kontakt</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+
+
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+</div>
+
+
+
+
+                                
+                            
+                        </div>
+                        <!-- end leftcolumnWrapper -->
+                    </td>
+                    
+                    <!-- start logowrapperTable -->
+                    <td id="logowrapperTable">
+                        <div id="logocolumnWrapper">
+                            <!-- start logo -->
+                            <div id="logoWrapper">
+                                <a
+    href="http://www.uni-freiburg.de/"
+    title="Albert-Ludwigs-Universität Freiburg"><img src="unilogo-200x66.gif" alt="Uni-Logo" /></a>
+                            </div>
+                            <!-- end logo -->
+                        </div>
+                    </td>
+                    <!-- end logowrapperTable -->
+
+                    <!-- start rightwrapperTable -->
+                    <td id="rightwrapperTable">
+
+                        <!-- start rightcolumnWrapper -->
+                        <div id="rightcolumnWrapper">
+
+                            <!-- start portaltop -->
+                            <div id="portal-header">
+
+	<div id="logo-resource" class="fr">
+		<a accesskey="1" href="http://portal.uni-freiburg.de/imbi"
+     title="Institut für Medizinische Biometrie und Statistik">
+			<img src="sub-logo.gif" alt="" />
+		</a>
+	</div>
+	
+	  <!-- availables ist neu definiert -->
+     <ul id="portal-languageselector">
+         
+         <li class="">
+                 <a href="http://portal.uni-freiburg.de/imbi/front-page-en?set_language=en"
+                    title="English">
+                     
+
+                     English</a>
+         </li>
+         
+         
+         <li class="currentLanguage">
+                 <a href="http://portal.uni-freiburg.de/imbi/front-pag?set_language=de"
+                    title="Deutsch">
+                     
+
+                     Deutsch</a>
+         </li>
+         
+     </ul>
+
+
+	
+	<div id="title-resource">
+		<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+				<tr>
+					<td valign="bottom">
+						<a accesskey="1"
+         href="http://portal.uni-freiburg.de/imbi"
+         class="resource"
+         title="Institut für Medizinische Biometrie und Statistik">Institut für Medizinische Biometrie und Statistik</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+  </div>
+	
+	<div id="title-uni">
+		<a href="http://www.uni-freiburg.de/"
+     title="Albert-Ludwigs-Universität Freiburg">Albert-Ludwigs-Universität Freiburg</a>
+	</div>
+	
+</div>
+
+<div id="red-bar"></div>
+
+<div id="sections-breadcrumbs-documentActions">
+
+
+    <div id="sections-breadcrumbs">
+	
+		
+
+		<div id="portal-breadcrumbs">
+		
+			<span id="breadcrumbs-you-are-here">Sie sind hier:</span>
+			<a href="http://portal.uni-freiburg.de/imbi">Startseite</a>
+		
+		</div>
+	</div>
+	
+	<div class="documentActions">
+    
+
+    <h5 class="hiddenStructure">Artikelaktionen</h5>
+
+    <ul>
+    
+        <li id="document-action-print">
+            <a href="javascript:this.print();" title="">
+               <span>Drucken</span>
+            </a>
+        </li>
+    
+
+    </ul>
+    
+
+    
+
+</div>
+
+
+</div>
+
+<div class="clear"></div>
+
+                            <!-- end portaltop -->
+
+                            <!-- start abovecontent -->
+                            <div id="viewlet-above-content"></div>
+                            <!-- end abovecontent -->
+
+                            <!-- start contentWrapper -->
+                            <div id="contentWrapper">
+
+                              <table id="portal-columns">
+                                <tbody>
+                                  <tr>
+
+                                    
+                                    <td
+    id="portal-column-content">
+
+                                        <!-- start slot content -->
+                                        
+                                        <div class="">
+
+                                          
+
+
+                                          <!-- start region-content -->
+                                          <div id="region-content" class="documentContent">
+
+                                            <!-- start portal_message -->
+                                            
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+                                            <!-- end portal_message -->
+                                            <div class="clear"></div>
+
+                                            <!-- start content -->
+                                            
+                                            <div id="content">
+                                              
+                                              
+    
+
+        
+
+        <h1 class="documentFirstHeading"> 
+            
+        <span class="" id="parent-fieldname-title">
+            Herzlich willkommen!
+        </span>
+    
+        </h1>
+        <!-- auskommentiert vom CMS-Team
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+        -->
+        <p class="documentDescription">
+            
+        <span class="" id="parent-fieldname-description">
+            
+        </span>
+    
+        </p>
+
+        
+
+
+
+        
+
+        
+        <div class="" id="parent-fieldname-text">
+            <p><style type="text/css">
+a {
+    padding-left: 0%;
+    padding-right: 0%
+    line-height: 1.5;
+}
+
+p.block {
+    padding-left: 5%;
+    padding-right: 20%;
+    font-size: 110%;
+    line-height: 1.5;
+}
+
+ul.block {
+    padding-left: 5%;
+    padding-right: 20%;
+    font-size: 110%;
+    line-height: 1.5;
+}
+
+table {
+    padding-left: 5%;
+    padding-right: 20%;
+    font-size: 100%;
+    line-height: 1.5;
+    border-spacing: 1px 20px;
+}
+
+tr.people {
+    background: #cccccc;
+    spacing-bottom: 5px;
+    font-size: 110%;
+}
+
+td {
+    padding: 5px;
+}
+
+td.image { 
+    padding: 0px;
+    width:100px;
+}
+</style></p>
+<p class="block">Zum Aufgabengebiet des Instituts für Medizinische Biometrie und Statistik am Universitätsklinikum Freiburg gehören die methodische und angewandte biomedizinische Forschung, die akademische <a href="/imbi/lehre">Lehre</a> und die <a href="/imbi/beratung">statistische Beratung</a>. Zum Institut gehören folgende Bereiche:</p>
+<ul class="block">
+    <li><a href="/imbi/studien_beratung">Studien und Beratung</a></li>
+    <li><a href="/imbi/biometrie">Knowledge Discovery and Synthesis</a></li>
+    <li><a href="/imbi/medizinische-informatik-klinische-epidemiologie-mike">Medical Data Science</a></li>
+    <li><a href="/imbi/MICLEP">Methods in Clinical Epidemiology</a></li>
+    <li><a href="http://www.uniklinik-freiburg.de/severa.html?L= ">Versorgungsforschung und Rehabilitationsforschung</a></li>
+    <li><a href="/imbi/support">Admin + IT</a></li>
+</ul>
+<p>&nbsp;</p>
+<p class="block">Es besteht eine enge Zusammenarbeit mit dem <a href="http://www.fdm.uni-freiburg.de/" target="_blank">Freiburger Zentrum  für Datenanalyse und Modellbildung</a>, dem  <a href="http://www.uniklinik-freiburg.de/zks.html" target="_blank">Studienzentrum</a>, mit <a href="http://www.cochrane.de/de/willkommen-auf-unseren-webseiten">Cochrane Deutschland</a> und mit dem <a href="https://www.drks.de/drks_web/">Deutschen Register Klinischer Studien</a></p>
+<p class="block"><a href="/imbi/leitbild">Leitbild und Organigramme</a><br />
+<a href="/imbi/historie">Historie des Instituts</a></p>
+            
+        </div>
+    
+
+        <div class="relatedItems">
+    
+        
+            
+        
+    
+</div>
+    
+        <div class="reviewHistory" id="review-history">
+    
+</div>
+
+        <!-- vom CMS-Team -->
+        
+
+<!--
+<div i18n:domain="plone"
+     id="category"
+     class="documentByLine"
+     tal:define="categories context/Subject|nothing;
+                 url_quote  nocall:modules/Products.PythonScripts.standard/url_quote;"
+     tal:condition="categories">
+  &mdash;
+  <tal:filedunder i18n:translate="label_filed_under">filed under:</tal:filedunder>
+  <span tal:repeat="category categories">
+    <a href=""
+       class="link-category"
+       rel="tag"
+       tal:content="category"
+       tal:define="quotedCat python:url_quote(category)"
+       tal:attributes="href string:${context/portal_url}/search?Subject%3Alist=${quotedCat}">
+      Category
+      </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
+  </span>
+</div>
+-->
+
+    
+
+                                            </div>
+                                            
+                                            <!-- end content -->
+
+                                            
+                                              
+    
+
+
+
+                                            
+
+                                            <span id="contentBottomLeft"></span>
+                                            <span id="contentBottomRight"></span>
+                                          </div>
+                                          <!-- end region-content -->
+                                        </div>
+                                        <!-- end slot content -->
+                                      
+                                      <div class="clear"></div>
+                                    </td>
+                                    
+
+                                    
+                                    
+                                    
+                                  </tr>
+                                </tbody>
+                              </table>
+                              
+                            </div>
+                            <div class="clear"></div>
+                            <!-- end contentWrapper -->
+
+                            <!-- belowcontent: auskommentiert vom CMS-Team, 23.02.2010 -->
+                            <!--
+                            <div tal:replace="structure provider:plone.belowcontent" />
+                            -->
+                            <!-- belowcontent -->
+                        </div>
+                        <!-- end rightcolumnWrapper -->
+                        <div class="clear"></div>
+                    </td>
+                    <!-- end rightwrapperTable -->
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td id="rightwrapperTableFooter">
+                      <!-- start portalfooter -->
+                      <div id="portal-footer">
+
+    <h6 class="cover">Start Footer</h6>
+        <div id="footer">
+            <ul id="portal-siteactions">
+
+    <li id="siteaction-sitemap"><a
+    href="http://portal.uni-freiburg.de/imbi/sitemap"
+    accesskey="3" title="Übersicht">Übersicht</a></li>
+    <li id="siteaction-contact"><a
+    href="http://portal.uni-freiburg.de/imbi/contact-info"
+    accesskey="9" title="Kontakt">Kontakt</a></li>
+    <li id="siteaction-impressum"><a
+    href="http://portal.uni-freiburg.de/imbi/impressum"
+    accesskey="" title="Impressum">Impressum</a></li>
+    <li id="siteaction-Intern"><a
+    href="http://portal.uni-freiburg.de/imbi/intern"
+    accesskey="" title="Intern">Intern</a></li>
+
+</ul>
+
+            <div id="userSupport">
+                <a title="Small Text" href="javascript:setBaseFontSize('smallText',1);" class="fontSmall">A</a>
+                <a title="Normal Text" href="javascript:setBaseFontSize('',1);" class="fontNormal">A</a>
+                <a title="Large Text" href="javascript:setBaseFontSize('largeText',1);" class="fontBig">A</a>
+            </div>
+            <div class="copyright">
+                Copyright &copy; 2017
+                <span>Universität Freiburg</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+</div>
+
+<div id="portal-personaltools-wrapper">
+
+<h5 class="hiddenStructure">Benutzerspezifische Werkzeuge</h5>
+
+<ul id="portal-personaltools" class="visualInline">
+   
+
+    
+        <li>
+            <a href="http://portal.uni-freiburg.de/imbi/login_form">Anmelden</a>
+        </li>
+    
+
+</ul>
+</div>
+
+<!-- Piwik --> 
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://cmsstats.uni-freiburg.de/" : "http://cmsstats.uni-freiburg.de/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 10);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://cmsstats.uni-freiburg.de/piwik.php?idsite=10" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
+                      <!-- end portalfooter -->
+                  </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="clear"></div>
+
+    </div>
+    <!-- end wrapper -->
+
+</body>
+</html>

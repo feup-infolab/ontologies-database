@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.js"></script>
+
+   <script type="text/javascript">
+   $(function() {
+   $("#myinput").suggest({
+   key: "AIzaSyDc_8-jyrugJClAVoyMSCgge9n22DH1L9k",
+   filter:"(all type:/language/human_language)",
+   output: "(/language/human_language/iso_639_3_code)"
+   })
+   .bind("fb-select", function(e, data) {
+   window.open("languages/tag-" + data.output["/language/human_language/iso_639_3_code"]["/language/human_language/iso_639_3_code"][0] + ".html", "_self");
+   });﻿
+   });
+   
+  </script>            
+  <title>lingvoj.org - Linked Languages</title>
+ </head>
+ <body bgcolor="#FFFFDD" prefix="skos:http://www.w3.org/2004/02/skos/core#   schema:http://schema.org/   lingvo:http://lingvoj.org/ontology#">
+   <table width="90%" align="center" cellpadding="10" style="border:solid 1px blue;">
+    <tr bgcolor="FFFFCC">
+     <td valign="middle" width="30%">
+      <font face="Arial">
+       <h3> <i>Linked Languages Resources</i></h3> 
+        A contribution to the <a href="http://www.w3.org/2013/data/">Web of Data</a> <br/>
+        by <span typeof="schema:WebPage" about="http://www.linkedvocabs.org/lingvoj">                    
+         <span property="schema:creator" typeof="schema:Person" resource="http://www.freebase.com/m/0q2536y"><span property="schema:url"  resource="http://google.com/+BernardVatant"><a href="http://google.com/+BernardVatant"><b>Bernard Vatant</b></a></span>, 
+          <span property="schema:worksFor" typeof="schema:Organization" resource="http://www.freebase.com/m/0drvn4"><span property="schema:url" resource="http://www.mondeca.com"><a href="http://www.mondeca.com"><b>Mondeca</b></a></span></span></span></span>
+       </font>
+     </td>
+     <td align="center" width="40%"><font face="Arial"><h1>lingvoj.org</h1>
+     </font></td>
+     <!--<td valign="middle">
+      <p align="left"><font face="Arial">Search languages<br/>
+       <input id="myinput" type="text"></input></br>
+       <i>Powered by Freebase</i>
+      </font></p>
+     </td> -->
+    </tr>
+   </table> 
+  <br/>
+  <table width="90%" align="center" cellpadding="10" style="border:solid 1px blue;">
+   <tr bgcolor="#FFFFDD">
+    <td>
+     <font size="2" face="Arial">
+      <h3>What's up?</h3> 
+      <p align="justify">2015-06-123 <br/>
+   The resources of Lingvoj are now maintained by <a href="http://www.atemezing.org" target="_blank">Ghislain Atemezing </a> @ Mondeca. <br/>
+   </p>
+
+	 <p align="justify">2014-08-11 <br/>
+	 <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.33.ttl">Lingvoj Ontology v2.33</a>. Added portuguese translations, thanks to Mariana Curado Malta. <br/>
+	 </p>
+      <p align="justify">2014-06-22 <br/>
+       Updated the <a href="http://www.linkedvocabs.org/lingvoj/translations/translations-2014.rdf">examples of translations</a> in conformance with the last ontology version.
+      </p>
+	 <p align="justify">2014-03-20 <br/>
+	 <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.32.ttl">Lingvoj Ontology v2.32</a>. Added japanese translations, thanks to Shuji Kamitsuna. <br/>
+	 </p>
+	  <p align="justify">2014-02-18 <br/>
+	  New dataset, linking ISO 639 codes to various linguistic resources, some of them yet unknown in the linked data ecosystem. Both <b><a href="http://www.linkedvocabs.org/lingvoj/languages/all.html">HTML table</a></b> and <b><a href="http://www.linkedvocabs.org/lingvoj/data.ttl">RDF dump</a></b> (Turtle file) are available. More resources to be added any time. 
+      <p align="justify">2014-01-30 <br/>
+       You can now search lingvoj.org pages using the <b><a href="https://developers.google.com/freebase/v1/search-widget">Freebase Search Widget</a></b>.
+       You can enter search values in any of the nine languages supported by the Freebase search : English (en), Spanish (es), French (fr), German (de), Italian (it), Portuguese (pt), Chinese (zh), Japanese (ja) and Korean (ko).
+       But suggestions are proposed in the first language of the list (English), as explained in the <a href="https://developers.google.com/freebase/v1/search-cookbook">Freebase Search Cookbook</a>.
+       A further improvement will be to select  your search language. On the French version pages, the suggestions are in French. <br/>
+       How does it work? By the magic of shared keys, the ISO codes. The widget calls the Freebase API, filtering the autocomplete values by the type of things we are looking for here: <a href="https://www.freebase.com/language/human_language">human languages</a>.
+       On selection, it asks if the selected object has a ISO 639-3 code. If yes, this code is used to redirect to the matching lingvoj.org page. If no ISO 639-3 code is found, nothing happens. In that case you can go to the Freebase record and add the code if it's really missing. But it can also be the case that this language is not yet acknowledged by ISO.<br/>
+       Thanks to the <a href="https://groups.google.com/forum/#!topic/freebase-discuss/wroKHgmWSVE">helpful support of Freebase team</a> to figure it out!  <br/>
+	   <i>Note that the Freebase API answer might sometimes be slow or time out.</i> 
+       </p>
+      <p align="justify">2014-01-20 <br/>
+       <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.31.ttl">Lingvoj Ontology v2.31</a>. Added some spanish translations, fixed some typos. <br/>
+       <b>Version française des pages de langues</b>. Exemples : [<a href="langues/tag-ar.html">ar</a>], [<a href="langues/tag-fr.html">fr</a>] .
+       </p>
+      <p align="justify">2014-01-16 <br/>
+       New individual pages for each language defined by an ISO 639 code (7874 languages to date), providing structured data and language resources. <br/>
+       <b><a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.3.ttl">Lingvoj Ontology v2.3</a></b> including representation of language resources, used in the above pages. (<a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.3.ttl">Turtle version)</a><br/>
+      Browse the <b><a href="languages/all.html">full list of languages</a></b>, or explore some examples : [<a href="languages/tag-ar.html">ar</a>], [<a href="languages/tag-fr.html">fr</a>], [<a href="languages/tag-sw.html">sw</a>], [<a href="languages/tag-zh.html">zh</a>]
+       </p>
+      <p align="justify">2013-12-20 : <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.21.ttl">Lingvoj Ontology v2.21</a> including dutch translations of labels and definitions, contributed by
+       <a href="http://google.com/+RonaldPoell">Ronald Poell</a>. Contributions for translation in other languages are <a href="https://plus.google.com/+BernardVatant/posts/1o3FAtH8oJj">welcome</a>. </p> 
+      <p align="justify">2013-12-19 : <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.2.ttl">Lingvoj Ontology v2.2</a> including spanish translations of labels and definitions, contributed by
+       <a href="http://google.com/+MaríaPovedaVillalón">María Poveda Villalón</a>. </p> 
+           <p align="justify">2013-02-07 : <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.1.ttl">Lingvoj Ontology v2.1</a></p> 
+           <p align="justify">Version 2 includes more detailed properties to describe the levels of knowledge of a person in a language 
+            (understood, spoken, read, written), various ways a language is linked to a country (official, main, regional, minority) 
+            or to an organization, a project or an event. it also includes properties to describe the status of a language at a given date (living, endangered, extinct).
+            All elements are named and defined in both English, French (v2.1) and Spanish (v2.2), more translations expected.<br/>
+            The ontology is available in <a href="http://www.linkedvocabs.org/lingvoj/ontology_v2.2.ttl">Turtle syntax</a> with inner comments. The <a href="http://ontorule-project.eu/parrot/parrot?documentUri=http://www.linkedvocabs.org/lingvoj/ontology">html documentation</a> is automatically generated 
+            from the Turtle file by redirection of the ontology namespace via content negotiation to the cool <a href="http://ontorule-project.eu/parrot/parrot">Parrot</a> service.<br/>
+            This version also relies on the new <a href="http://www.linkedvocabs.org/lingvoj/olca">Ontology Loose Coupling Annotation</a> vocabulary to attach such properties to classes in popular ontologies without constraining too much their domain.
+             Background reading for this new vocabulary on <a href="http://blog.hubjects.com/2013/02/schemaorg-and-ontology-loose-coupling.html">this blog post</a>.</p>  
+            
+      <h3>Why do we need that?</h3>
+      <h4>Languages are an endangered heritage</h4>
+      <p align="justify">According to <a href="http://www.ethnologue.com/">Ethnologue</a>, the number of human
+       languages currently used in the world amounts to almost 7,000. About half of them could be extinct before the end of this century.
+       Only a small fraction of them is supported by some writing system and have
+       written heritage, and among those, still less are used in modern information systems and on
+       the Web. A good indication of the number of languages used on the Web is provided by the <a
+        href="http://meta.wikimedia.org/wiki/List_of_Wikipedias">multilingual editions of
+        Wikipedia</a>, to-date 285 different languages, that is less than 5% of all known languages.
+       Ranking of languages by importance of their respective wikipedia is a fairly good indicator for the Web influence of their
+       communities of speakers, but very different from the ranking based on the <a
+        href="http://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers">number of
+        speakers</a>. 
+      <h4>We need languages as Linked Data</h4>
+      <p align="justify">In current XML and RDF practice, languages are identified by tags, typically used in the
+       "xml:lang" attribute. The allowed values of tags are defined by <a
+        href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>. Those language tags are
+       typically used for rdfs:label or rdfs:comment, and allow the filtering of such elements of
+       description by language, for example in SPARQL queries. But they do not provide support for
+       queries such as: </p>
+      <ul>
+       <li> "Can I find <a href="http://www.linkedvocabs.org/lingvoj/ontology#nativeLanguage">native speakers</a> of <a href="http://lexvo.org/id/iso639-3/ben">Bengali </a> in Berlin?" </li>
+       <li> "Which books by Victor Hugo are <a href="http://www.linkedvocabs.org/lingvoj/ontology#Translation">translated</a> in <a href="http://lexvo.org/id/iso639-3/ara">Arabic</a>?" </li>
+       <li> "Is this software documented in <a href="http://lexvo.org/id/iso639-3/zho">Chinese</a>?". </li>
+      </ul>
+      <p align="justify">To answer such queries, languages need to be represented as resources, likely to be linked to other
+       resources representing books, people, organizations, places, events, products ... through
+       dedicated properties. Such properties can be found in the <a href="http://www.linkedvocabs.org/lingvoj/ontology">Lingvoj Ontology</a>.
+       URIs for languages have been defined in lingvoj.org namespace since 2007, and many other URIs have been defined afterwards in the linked data cloud.
+       Since 2010 lingvoj.org URIs mainly redirect to those of lexvo.org. More details below. </p>
+           <h3>History</h3>
+           <p>
+                 2010-05-10 : <b> lingvoj.org meets <a href="http://lexvo.org">Lexvo.org</a></b>
+           </p>
+           <p align="justify">Since the launch of lingvoj.org in 2007, the <a href="http://linkeddata.org">linked data
+                 cloud</a> has grown at a steady pace, and a growing number of URI sets have been published
+                 to identify human languages. <b>
+                       <a href="http://lexvo.org">Lexvo.org</a>
+                 </b> is providing the most exhaustive of those so far, in which URIs for languages are
+                 integrated in a global approach of terminology. Through exchanges with Gerard de Melo, editor
+                 at Lexvo.org, it has been decided to redirect and deprecate lingvoj.org URIs for individual
+                 languages to the benefit of the more stable and exhaustive publication at Lexvo.org.</p>
+            <p align="justify">From that date most lingvoj.org URIs for individual languages are redirected to lexvo.org URIs
+                 through content negotiation. A few exceptions are URIs of languages with no ISO 639-3 codes,
+                 since lexvo URIs are built on those codes, and languages with a regional tag, such as en-us. </p>
+            <p align="justify">The <a href="http://www.linkedvocabs.org/lingvoj/lingvoj-to-lexvo.rdf">
+                 <b>lingvo-to-lexvo</b></a> RDF file provides the mappings and equivalence between lingvo and lexvo URIs. Applications
+                 using the lingvoj.org URIs are invited to change their references accordingly, although the
+                 redirection mechanism should avoid any breakdown of applications using lingvoj.org URIs.</p>
+           
+            <p align="justify">2009-04-06 : <a href="http://www.linkedvocabs.org/lingvoj/ontology_v1.3.rdf">Lingvoj Ontology v1.3</a> 
+                  introducing the use of dcterms:language, as a superproperty of various
+                 lingvoj object properties, and its inverse property "is language of", used to link to active
+                 Wikipedia in the language when available (265 such languages to date).</p>
+           
+            <p align="justify">2008-01-28 : <a href="http://www.linkedvocabs.org/lingvoj/ontology_v1.2.rdf">Lingvoj Ontology  v1.2</a> 
+                  declaring the "Lingvo" class as subclass of "LinguisticSystem" as defined by the
+                 new release of <a href="http://dublincore.org/schemas/rdfs/">Dublin Core terms in RDFS</a>.</p>
+            
+            <p align="justify">2007-11-29 : <a href="http://www.linkedvocabs.org/lingvoj/ontology_v1.1.rdf">Lingvoj Ontology v1.1</a>
+                  including the Translation class, allowing to declare facts such as : 
+                  <i>The resource A in original language L1 has beeen translated into resource B in target language
+                  L2, by the the translator Z.</i> <a href="http://www.linkedvocabs.org/lingvoj/translations/translations-2014.rdf">
+                        Examples of translations</a>.</p>
+            
+            <p align="justify">2007-10-09 : Eventually, with the precious help from the Linking Open Data community,
+                 achieved publication with proper content negociation, which works well with Firefox. For some
+                 reason this content negociation is not well supported by Internet Explorer. <br/>Note that
+                 this results in new URIs for languages. URIs used in previous versions are no longer
+                 supported. Cool URI never change, which means the previous ones were not cool, and the new
+                 ones should be stable from now on. </p>
+            <p align="justify">
+                 <b>Disclaimer</b><br/> Resources provided here have no official status, but URIs in the
+                 lingvoj namespaces are intended to remain "cool", which means stable and dereferencable. </p>
+     </font>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

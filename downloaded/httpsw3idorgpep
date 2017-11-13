@@ -1,0 +1,204 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:pep="https://w3id.org/pep/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdfp="https://w3id.org/rdfp/"
+    xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-05-28</dcterms:modified>
+    <vann:preferredNamespacePrefix>pep</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <owl:priorVersion rdf:resource="pep-1.0"/>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <owl:versionIRI rdf:resource="pep-1.1"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:description xml:lang="en">&#xD;
+&#xD;
+The Procedure Execution ontology (PEP) defines `pep:ProcedureExecutor`s that implement `pep:Procedure` methods, and generate `pep:ProcedureExecution` activities. Procedures may be linked to some description of the input and/or the output using object properties `pep:hasInput` and `pep:hasOutput`. Their executions may be linked to some description of the command and/or the result using object properties `pep:hasResult` and `pep:hasCommand`. If the command or the result are simple RDF literals (a typed UNICODE string), then one may use datatype properties `pep:hasSimpleResult` and `pep:hasSimpleCommand` instead. Procedure executions made by a specific procedure executor using a specific procedure can be grouped in containers. Figure below overviews the PEP ontology, and illustrates it with an example.&#xD;
+&#xD;
+[![Overview of the PEP Ontology](https://w3id.org/pep/pep-1.1.png)](https://w3id.org/pep/pep-1.1.png).&#xD;
+&#xD;
+## PEP generalizes the core concepts of SOSA/SSN&#xD;
+&#xD;
+The procedure execution ontology is a simple extension of the [Semantic Sensor Network (SSN) Ontology](https://www.w3.org/TR/vocab-ssn/) and its core, called [Sensor, Observation, Sample, and Actuator (SOSA)](https://www.w3.org/TR/vocab-ssn/). SOSA describe `sosa:Sensor`s that implement `sosa:Procedure`s and make `sosa:Observation`s, which are activities. In parallel to this, it describes `sosa:Actuator`s that implement `sosa:Procedure`s and make `sosa:Actuation`s. The Procedure Execution ontology defines an ontology pattern as a generalization of these two parallel conceptual models, which accounts for at least one third use case: *Web services exposed on the web may be called to trigger the execution of some procedures*.  SOSA/SSN defines input, output, results, and PEP introduces the command. &#xD;
+&#xD;
+We provide an external document to  align with the [the Semantic Sensor Network ontology](https://w3id.org/pep/SSNAlignment-1.1).&#xD;
+&#xD;
+## PEP to describe Web services that call lengthy algorithms&#xD;
+&#xD;
+PEP can be used to describe [Web containers of Web service executions](http://ci.emse.fr/pep-platform/) one can call in a RESTful way, and that consume and produce documents with a RDF data model. A set of such containers are referred  to as a **Process Execution Platform**. &#xD;
+&#xD;
+We provide an external document to align PEP with the [the RDF Presentation ontology](https://w3id.org/pep/RDFPAlignment-1.1). This  alignment encourages to describe the input and output of Web services using `rdfp:GraphDescription`, and the command and result of their execution using URIs to `rdfp:RDFSource`s.&#xD;
+</dcterms:description>
+    <owl:versionInfo>v1.1</owl:versionInfo>
+    <dcterms:title xml:lang="en">Procedure Execution ontology.</dcterms:title>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-07-01</dcterms:issued>
+    <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="ProcedureExecutor">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:disjointWith>
+      <owl:Class rdf:about="Procedure"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Device, agent (including humans), or software (simulation, web service) involved in, or implementing, a `Procedure`. Examples of sub-classes of Procedure Executor are Sensor, Actuator, Estimator.&#xD;
+&#xD;
+A Procedure Executor can be linked to the executions that it made using property `made`. Also, it can be linked to one or more `Procedure`s it implements using property `implements`. A Procedure Executor implements each of the methods used by the `Execution`s it made. &#xD;
+&#xD;
+Other metadata may detail geolocation, vendor, operator, consumed power, etc.</rdfs:comment>
+    <rdfs:label>Procedure Executor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ProcedureExecution">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:disjointWith rdf:resource="ProcedureExecutor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="Procedure"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Act of carrying out a Procedure. Links to:&#xD;
+&#xD;
+- a Procedure Executor to describe what made it and how; &#xD;
+- the used procedure;&#xD;
+- the command and the result of the procedure execution (simple or complex).&#xD;
+</rdfs:comment>
+    <rdfs:label>Procedure Execution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Procedure">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">A workflow, protocol, plan, algorithm, or computational method. It explains the steps to be carried out to arrive at reproducible results. A Procedure is re-usable, and might be implemented by several Procedure Executors and used for several Procedure Executions. &#xD;
+&#xD;
+Examples of sub-classes of Procedure include Sensing, Actuating, Planning, Forecasting.</rdfs:comment>
+    <rdfs:label xml:lang="en">Procedure</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ProcedureExecutionContainer">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">The class of containers of Procedure Executions made by a specific Procedure Executor using a specific Procedure. &#xD;
+&#xD;
+A Procedure Executor Container can be for example a Web container of Procedure Execution resources, where one may operate HTTP POST requests to execute a given procedure.</rdfs:comment>
+    <rdfs:label>Procedure Execution Container</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="implements">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description>
+        <owl:inverseOf>
+          <owl:FunctionalProperty rdf:about="forExecutor"/>
+        </owl:inverseOf>
+      </rdf:Description>
+      <owl:FunctionalProperty rdf:about="forProcedure"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <owl:ObjectProperty rdf:about="made"/>
+      <owl:FunctionalProperty rdf:about="usedProcedure"/>
+    </owl:propertyChainAxiom>
+    <rdfs:range rdf:resource="Procedure"/>
+    <rdfs:domain rdf:resource="ProcedureExecutor"/>
+    <rdfs:comment xml:lang="en">A relation between a Procedure Executor and a Procedure it implements.</rdfs:comment>
+    <rdfs:label>implements</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="made">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:about="madeBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="ProcedureExecution"/>
+    <rdfs:domain rdf:resource="ProcedureExecutor"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Relation between a procedure executor and an execution it made.</rdfs:comment>
+    <rdfs:label>made</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:FunctionalProperty rdf:about="hasCommand">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a Procedure Execution to its unique command (a OWL individual).</rdfs:comment>
+    <rdfs:label>has command</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="hasOutput">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a Procedure to the (unique) description of its output.</rdfs:comment>
+    <rdfs:label>has output</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="madeBy">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <owl:inverseOf rdf:resource="made"/>
+    <rdfs:range rdf:resource="ProcedureExecutor"/>
+    <rdfs:domain rdf:resource="ProcedureExecution"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Relation between a Procedure Execution and what made it.</rdfs:comment>
+    <rdfs:label>made by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="forExecutor">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:range rdf:resource="ProcedureExecutor"/>
+    <rdfs:domain rdf:resource="ProcedureExecutionContainer"/>
+    <rdfs:comment xml:lang="en">Links a Procedure Execution Container to the Procedure Executor that makes the executions it contains.</rdfs:comment>
+    <rdfs:label>for executor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="hasSimpleResult">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a Procedure Execution to its unique simple result (a RDFS literal).</rdfs:comment>
+    <rdfs:label>has simple result</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="hasResult">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a Procedure Execution to its unique result (a OWL individual).</rdfs:comment>
+    <rdfs:label>has result</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="hasSimpleCommand">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a Procedure Execution to its unique simple command (a RDFS literal).</rdfs:comment>
+    <rdfs:label>has simple command</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="usedProcedure">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:range rdf:resource="Procedure"/>
+    <rdfs:domain rdf:resource="ProcedureExecution"/>
+    <rdfs:comment xml:lang="en">Relation between a Procedure Execution and the Procedure it used.</rdfs:comment>
+    <rdfs:label>used procedure</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="forProcedure">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:range rdf:resource="Procedure"/>
+    <rdfs:domain rdf:resource="ProcedureExecutionContainer"/>
+    <rdfs:comment xml:lang="en">Links a Procedure Execution Container to the Procedure that the executions it contains used.</rdfs:comment>
+    <rdfs:label>for procedure</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="hasInput">
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Links a Procedure to the (unique) description of its input.</rdfs:comment>
+    <rdfs:label>has input</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+</rdf:RDF>

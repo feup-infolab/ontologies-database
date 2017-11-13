@@ -1,0 +1,385 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:pep="https://w3id.org/pep/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:qudt-unit="http://data.qudt.org/qudt/owl/1.0.0/unit.owl#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:saref="http://ontology.tno.nl/saref#"
+    xmlns:ssn="http://www.w3.org/ns/ssn/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:qudt="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="Connection">
+    <rdfs:isDefinedBy>
+      <voaf:Vocabulary rdf:about="SystemOntology">
+        <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+        <dcterms:title xml:lang="en">The SEAS System ontology</dcterms:title>
+        <dcterms:description xml:lang="en">The System Ontology defines Systems, Connections between systems, and Connection Points at which systems may be connected. This ontology is then specialized for multiple domains. For example:&#xD;
+&#xD;
+- In electric energy: &#xD;
+    - power systems consume, produce, store, and exchange electricity;&#xD;
+    - power connections are where electricity flows between systems;&#xD;
+    - power connection points are plugs, sockets, or power busses.&#xD;
+- In the electricity market:&#xD;
+    - players and markets are systems;&#xD;
+    - connections are contracts or transactions between two players, or between a player and a market;&#xD;
+    - connection points include offers and bids.&#xD;
+&#xD;
+Figure below provides an overwiew of the concepts in this ontology:&#xD;
+&#xD;
+[![Overview of the System ontology](https://w3id.org/seas/system.png)](https://w3id.org/seas/system.png)&#xD;
+&#xD;
+</dcterms:description>
+        <vann:preferredNamespaceUri rdf:resource=""/>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-06-06</dcterms:issued>
+        <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+        <owl:versionInfo>v1.1</owl:versionInfo>
+        <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-09-21</dcterms:modified>
+        <owl:priorVersion rdf:resource="SystemOntology-1.0"/>
+        <owl:versionIRI rdf:resource="SystemOntology-1.1"/>
+        <owl:imports rdf:resource="EvaluationOntology"/>
+        <owl:imports rdf:resource="FeatureOfInterestOntology"/>
+        <owl:imports rdf:resource="/pep/"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </voaf:Vocabulary>
+    </rdfs:isDefinedBy>
+    <vs:term_status>stable</vs:term_status>
+    <owl:disjointWith>
+      <owl:Class rdf:about="System"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="ConnectionPoint"/>
+      </owl:someValuesFrom>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:about="connectsSystemAt"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="System"/>
+      </owl:someValuesFrom>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:about="connectsSystem"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+    <rdfs:comment xml:lang="en">The class of connections between systems.&#xD;
+&#xD;
+This class qualifies property `seas:connectedTo`. &#xD;
+&#xD;
+A connection describes potential interactions between systems. &#xD;
+&#xD;
+For example, a power connection between power systems describes the fact that these systems may exchange electricity.&#xD;
+&#xD;
+```&#xD;
+&lt;connection&gt; seas:connectsSystem &lt;electric_vehicle&gt; , &lt;electric_vehicle_service_equipment&gt; .&#xD;
+&lt;electric_vehicle&gt; seas:connectedThrough &lt;connection&gt; .&#xD;
+&lt;electric_vehicle_service_equipment&gt; seas:connectedThrough &lt;connection&gt; .&#xD;
+```&#xD;
+&#xD;
+Any two connected systems are connected through a connection. If:&#xD;
+&#xD;
+```&#xD;
+&lt;system1&gt; a seas:System .&#xD;
+&lt;system2&gt; a seas:System .&#xD;
+&lt;system1&gt; seas:connectedTo &lt;system2&gt; .&#xD;
+```&#xD;
+&#xD;
+then there exists `_:connection` such that:&#xD;
+&#xD;
+```&#xD;
+_:connection seas:connectsSystem &lt;system1&gt; , &lt;system2&gt; .&#xD;
+```&#xD;
+&#xD;
+A connection can connect more than two systems at the same time.&#xD;
+&#xD;
+&#xD;
+Figure below illustrates connections of systems:&#xD;
+&#xD;
+[![Connections of systems](https://w3id.org/seas/system2.png)](https://w3id.org/seas/system2.png)&#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">Connection</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="IncomingEvaluation">
+    <rdfs:isDefinedBy rdf:resource="ZoneOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">Evaluation of how the exterior contributes to the property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Incoming evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="OutgoingEvaluation">
+    <rdfs:isDefinedBy rdf:resource="ZoneOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:disjointWith rdf:resource="IncomingEvaluation"/>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">Evaluation of how the property contributes to the exterior.</rdfs:comment>
+    <rdfs:label xml:lang="en">Outgoing Evaluation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ConnectionPoint">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:disjointWith rdf:resource="Connection"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="System"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+      >1</owl:cardinality>
+      <owl:onProperty>
+        <owl:FunctionalProperty rdf:about="connectionPointOf"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+    <rdfs:comment xml:lang="en">The class of connection points of systems, at which they may be connected to other systems.&#xD;
+&#xD;
+This class qualifies properties `seas:connectsSystem` and `seas:connectedThrough`.&#xD;
+&#xD;
+A connection point belongs to exactly one system.&#xD;
+&#xD;
+&#xD;
+For example, an electric vehicle service equipment may have three power connection points: two different kinds of plugs that enable to charge electric vehicles, and a three phase power bus connection point to the grid:&#xD;
+&#xD;
+```&#xD;
+&lt;electric_vehicle&gt; seas:connectsAt &lt;plug_high_voltage&gt; , &lt;normal_plug&gt; , &lt;three_phase_connection_point&gt; .&#xD;
+```&#xD;
+&#xD;
+&#xD;
+Any system connected through a connection is connected at one of its connection points to the connection:&#xD;
+  if:&#xD;
+&#xD;
+```&#xD;
+&lt;system&gt; a seas:System .&#xD;
+&lt;system&gt; seas:connectedThrough &lt;connection&gt; .&#xD;
+&lt;connection&gt; a seas:Connection .&#xD;
+```&#xD;
+&#xD;
+  then there exists `_:connectionPoint` such that:&#xD;
+&#xD;
+```&#xD;
+&lt;system&gt; seas:connectsAt _:connectionPoint .&#xD;
+&#xD;
+_:connectionPoint seas:connectsSystemAt &lt;connection&gt; .&#xD;
+```&#xD;
+&#xD;
+&#xD;
+The system of a connection point that is connected through a connection is itself connected through the connection:. If:&#xD;
+&#xD;
+```&#xD;
+&lt;connection&gt; a seas:Connection .&#xD;
+&lt;system&gt; a seas:System .&#xD;
+&lt;connectionPoint&gt; a seas:ConnectionPoint ;&#xD;
+&lt;connectionPoint&gt; seas:connectsSystemThrough &lt;connection&gt; .&#xD;
+```&#xD;
+&#xD;
+then it is true that:&#xD;
+&#xD;
+```&#xD;
+&lt;connectionPoint&gt; seas:connectionPointOf &lt;system&gt; .&#xD;
+```&#xD;
+&#xD;
+Figure below illustrates connection points of systems:&#xD;
+&#xD;
+[![Connection points of systems](https://w3id.org/seas/system3.png)](https://w3id.org/seas/system3.png)&#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">Connection Point</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="System">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:subClassOf rdf:resource="FeatureOfInterest"/>
+    <rdfs:comment xml:lang="en">The class of systems, i.e., systems virtually isolated from the environment, whose behaviour and interactions with the environment are modeled.&#xD;
+&#xD;
+  Systems can be connected to other systems. Connected systems interact in some ways. For example:&#xD;
+&#xD;
+```&#xD;
+&lt;electric_vehicle&gt; seas:connectedTo &lt;electric_vehicle_service_equipment&gt; .&#xD;
+```&#xD;
+&#xD;
+  Systems can also have subsystems. Properties of subsystems somehow contribute to the properties of the supersystem. For example:&#xD;
+&#xD;
+```&#xD;
+&lt;battery&gt; seas:subSystemOf &lt;electric_vehicle&gt; .&#xD;
+```&#xD;
+&#xD;
+Figure below illustrates systems and their connections:&#xD;
+&#xD;
+[![Systems and their connections](https://w3id.org/seas/system1.png)](https://w3id.org/seas/system1.png)&#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">System</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:ObjectProperty rdf:about="connectedThrough">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <owl:InverseFunctionalProperty rdf:about="connectsAt"/>
+      <owl:ObjectProperty rdf:about="connectsSystemThrough"/>
+    </owl:propertyChainAxiom>
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="connectsSystem"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="Connection"/>
+    <rdfs:domain rdf:resource="System"/>
+    <rdfs:comment xml:lang="en">Links a system to one of its connections to other systems.</rdfs:comment>
+    <rdfs:label xml:lang="en">connected through</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="connectsSystemAt">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="connectsSystemThrough"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="ConnectionPoint"/>
+    <rdfs:domain rdf:resource="Connection"/>
+    <rdfs:comment xml:lang="en">Links a connection to one of the connection points at which it connects a system.</rdfs:comment>
+    <rdfs:label xml:lang="en">connects system at</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="connectsSystem">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <owl:ObjectProperty rdf:about="connectsSystemAt"/>
+      <owl:FunctionalProperty rdf:about="connectionPointOf"/>
+    </owl:propertyChainAxiom>
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf rdf:resource="connectedThrough"/>
+    <rdfs:range rdf:resource="System"/>
+    <rdfs:domain rdf:resource="Connection"/>
+    <rdfs:comment xml:lang="en">Links a connection to one of the systems it connects.</rdfs:comment>
+    <rdfs:label xml:lang="en">connects system</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="connectsSystemThrough">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf rdf:resource="connectsSystemAt"/>
+    <rdfs:range rdf:resource="Connection"/>
+    <rdfs:domain rdf:resource="ConnectionPoint"/>
+    <rdfs:comment xml:lang="en">Links a connection point to one of the connections through which it connects its system.</rdfs:comment>
+    <rdfs:label xml:lang="en">connects system through</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:SymmetricProperty rdf:about="connectedTo">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:range rdf:resource="System"/>
+    <rdfs:domain rdf:resource="System"/>
+    <rdfs:comment xml:lang="en">Links a system to a system it is connected to.&#xD;
+&#xD;
+Connected systems interact in some way. The exact meaning of _interact_ is defined by sub properties of `seas:connectedTo`.&#xD;
+&#xD;
+For example, for the electricity to directly flow between an electric vehicle service equipment and an electric vehicle, then they must be linked by property `seas:exchangesElectricityWith`: &#xD;
+&#xD;
+```&#xD;
+seas:exchangesElectricityWith rdfs:subPropertyOf seas:connectedTo .&#xD;
+&#xD;
+&lt;electric_vehicle&gt; seas:exchangesElectricityWith &lt;electric_vehicle_service_equipment&gt; .&#xD;
+```&#xD;
+&#xD;
+Property `seas:connectedTo` is symmetric:&#xD;
+&#xD;
+```&#xD;
+if x seas:connectedTo y, then it is true that y seas:connectedTo x.&#xD;
+```&#xD;
+&#xD;
+This property can be qualified using class `seas:Connection`, which connects the two systems.&#xD;
+&#xD;
+If there is a connection between several systems, then one may infer these systems are pairwise connected.</rdfs:comment>
+    <rdfs:label xml:lang="en">connected to</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:about="subSystemOf">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="hasSubSystem"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="System"/>
+    <rdfs:domain rdf:resource="System"/>
+    <rdfs:comment xml:lang="en">Links a system to its super system.&#xD;
+&#xD;
+Properties of subsystems somehow contribute to the properties of the super system. The exact meaning of _contribute_ is defined by sub properties of `seas:subSystemOf`.&#xD;
+&#xD;
+For example, if a fridge is a subsystem of a kitchen, then its consumption power contributes to the consumption power of the kitchen. &#xD;
+&#xD;
+Property `seas:subSystemOf` is functional, and should be asymmetric:&#xD;
+&#xD;
+```&#xD;
+if x seas:subSystemOf y1 and x seas:subSystemOf y2, then y1 and y2 refer to the same resource.&#xD;
+if x seas:subSystemOf y, then it can't be the case that y seas:subSystemOf x.&#xD;
+```&#xD;
+&#xD;
+The asymmetric aspect of property `seas:subSystemOf` would prevents a system from being its own sub-system. Unfortunately, OWL 2 DL disallow a non-simple property (e.g., a functional property) from being asymmetric, see OWL 2 Syntax section 11.&#xD;
+&#xD;
+If it was possible that both the fridge and the kitchen be sub systems of a common super system, say, the house, then the consumption power of the fridge would contribute twice to the consumption power of the house. The functional aspect of property `seas:subSystemOf` prevents this undesired effect. &#xD;
+&#xD;
+Due to the open world assumption of RDF, it is not possible to model the closed set of sub systems of a system using property `seas:subSystemOf`.&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">sub system of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="connectionPointOf">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="connectsAt"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="System"/>
+    <rdfs:domain rdf:resource="ConnectionPoint"/>
+    <rdfs:comment xml:lang="en">Links a connection point to the one and only one system it belongs to.</rdfs:comment>
+    <rdfs:label xml:lang="en">connection point to</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="connectsAt">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf rdf:resource="connectionPointOf"/>
+    <rdfs:range rdf:resource="ConnectionPoint"/>
+    <rdfs:domain rdf:resource="System"/>
+    <rdfs:comment xml:lang="en">Links a system to one of the connection points at which it connects.</rdfs:comment>
+    <rdfs:label xml:lang="en">connects at</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="hasSubSystem">
+    <rdfs:isDefinedBy rdf:resource="SystemOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf rdf:resource="subSystemOf"/>
+    <rdfs:range rdf:resource="System"/>
+    <rdfs:domain rdf:resource="System"/>
+    <rdfs:comment xml:lang="en">Links a system to one of its sub systems.</rdfs:comment>
+    <rdfs:label xml:lang="en">has sub system</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <rdf:Description rdf:about="/pep/ProcedureExecutor">
+    <rdfs:subClassOf rdf:resource="System"/>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <rdf:Description rdf:about="BalanceEvaluation">
+    <rdfs:isDefinedBy rdf:resource="ZoneOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:disjointWith rdf:resource="IncomingEvaluation"/>
+    <rdfs:subClassOf rdf:resource="Evaluation"/>
+    <rdfs:comment xml:lang="en">Evaluation of the difference between the incoming evaluation and the outgoing evaluation.</rdfs:comment>
+    <rdfs:label>Balance Evaluation</rdfs:label>
+  </rdf:Description>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

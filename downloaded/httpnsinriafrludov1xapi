@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+  <foaf:Organization rdf:about="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control">
+  </foaf:Organization>
+
+  <owl:Ontology rdf:about="http://ns.inria.fr/ludo/v1/xapi">
+  </owl:Ontology>
+
+  <owl:Ontology rdf:about="http://ns.inria.fr/ludo/v1/xapi#">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc11:creator>
+      <foaf:Person rdf:about="http://www.oscarrodriguez.me">
+      </foaf:Person>
+    </dc11:creator>
+
+    <dc11:creator>
+      <foaf:Person rdf:about="https://plus.google.com/106595696646939943813">
+      </foaf:Person>
+    </dc11:creator>
+
+    <dc11:description xml:lang="en">This is an OWL formalization of the statements defined in the Experience API (xAPI) specification. It is a module of the LUDO ontology.</dc11:description>
+    <dc11:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-01</dc11:issued>
+    <dc11:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-08-09</dc11:modified>
+    <dc11:publisher rdf:resource="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/>
+    <dc11:rights xml:lang="en">This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0 .</dc11:rights>
+    <dc11:title xml:lang="en">Ludo - Game Model</dc11:title>
+    <ns0:preferredNamespacePrefix>xapi</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://ns.inria.fr/ludo/v1/xapi#</ns0:preferredNamespaceUri>
+    <rdfs:comment xml:lang="en">Given the increasing amount of structured data published on the Web, many possibilities are open for creating new types of games that use resources from the Web of Data. In particular, if we consider the subcategory of Serious Games in which the object of the game is to educate the user through the interactive discovery of real-life concepts (associated to Semantic Web resources), the inclusion of a semantic representation of the user profile and his contextual information becomes an important element to recommend the user more accurate concepts. Ludo is an ontology that allows the creation of Serious Games with those characteristics.</rdfs:comment>
+    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Account">
+    <rdfs:comment xml:lang="en">A user account on an existing system, such as a private system (LMS or intranet) or a public system (social networking site).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Account</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Activity">
+    <rdfs:comment xml:lang="en">An Activity is a type of Object making up the this in I did this; it is something with which an Actor interacted. It can be a unit of instruction, experience, or performance that is to be tracked in meaningful combination with a Verb. Interpretation of Activity is broad, meaning that Activities can even be tangible objects such as a chair (real or virtual). In the statement &quot;Anna tried a cake recipe&quot;, the recipe constitutes the Activity in terms of the xAPI statement. Other examples of activities include a book, an e-learning course, a hike or a meeting.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#ActivityDefinition">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity Definition</rdfs:label>
+    <rdfs:comment xml:lang="en">Activity Definition</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#ActivityProvider">
+    <rdfs:comment xml:lang="en">The software object that is communicating with the LRS to record information about a learning experience. May be similar to a SCORM package in that it is possible to bundle learning assets with the software object that performs this communication, but an Activity Provider may also be separate from the experience it is reporting about.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity Provider</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Actor">
+    <rdfs:comment xml:lang="en">An identity or persona of an individual or group tracked using Statements as doing an action (Verb) within an Activity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Actor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Agent">
+    <rdfs:comment xml:lang="en">An Agent (an individual) is a persona or system.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Attachment">
+    <rdfs:comment xml:lang="en">A digital artifact providing evidence of a learning experience.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Attachment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Authentication">
+    <rdfs:comment xml:lang="en">The concept of verifying the identity of a user or system. Authentication allows interactions between the two &quot;trusted&quot; parties.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Authentication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Authorization">
+    <rdfs:comment xml:lang="en">The affordance of permissions based on a user or system's role; the process of making one user or system &quot;trusted&quot; by another.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Authorization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#BaseEndpoint">
+    <rdfs:comment xml:lang="en">The maximal path under all Experience API endpoints, including a slash. E.g. an LRS with a statements endpoint of http://example.com/xAPI/statements would have a Base Endpoint of http://example.com/xAPI/&quot;</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Base Endpoint</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Category">
+    <rdfs:comment xml:lang="en">An Activity used to categorize the Statement. Tags would be a synonym. Category SHOULD be used to indicate a profile of xAPI behaviors, as well as other categorizations. For example: Anna attempts a biology exam, and the Statement is tracked using the CMI5 profile. The Statements Activity refers to the exam, and the category is the CMI5 profile.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Category</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Client">
+    <rdfs:comment xml:lang="en">Refers to any entity that may interact with an LRS. A Client can be an Activity Provider, reporting tool, an LMS, or another LRS.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Client</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#CommunityOfPractice">
+    <rdfs:comment xml:lang="en">A group, usually connected by a common cause, role or purpose, which operates in a common modality.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Community of Practice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Context">
+    <rdfs:comment xml:lang="en">An optional field that provides a place to add contextual information to a Statement. All properties are optional.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Context</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#ContextActivity">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Context Activity</rdfs:label>
+    <rdfs:comment xml:lang="en">Context Activity</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Extension">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Extension</rdfs:label>
+    <rdfs:comment xml:lang="en">Extension</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Group">
+    <rdfs:comment xml:lang="en">A Group represents a collection of Agents and can be used in most of the same situations an Agent can be used. There are two types of Groups, anonymous and identified.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Group</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Grouping">
+    <rdfs:comment xml:lang="en">an Activity with an indirect relation to the Activity which is the Object of the Statement. For example: a course that is part of a qualification. The course has several classes. The course relates to a class as the parent, the qualification relates to the class as the grouping.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Grouping</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#IRI">
+    <rdfs:comment xml:lang="en">A unique identifier which may be an IRL. In the xAPI, all IRIs should be a full absolute IRIs including a scheme. Relative IRIs should not be used. IRLs should be defined within a domain controlled by the person creating the IRL.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">International Resource Identifier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#IRL">
+    <rdfs:comment xml:lang="en">In the context of this document, an IRL is an IRI that when translated into a URI (per the IRI to URI rules), is a URL. Some communities of practice simply use URL even if they use IRIs, which isn't as technically correct within xAPI.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">International Resource Locator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Immutable">
+    <rdfs:comment xml:lang="en">Adjective used to describe things which cannot be changed. With some exceptions, Statements in the xAPI are immutable. This ensures that when Statements are shared between LRSs, multiple copies of the Statement remain the same.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Immutable</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity">
+    <rdfs:comment xml:lang="en">Traditional e-learning has included structures for interactions or assessments. As a way to allow these practices and structures to extend Experience API's utility, this specification includes built-in definitions for interactions, which borrows from the SCORM 2004 4th Edition Data Model. These definitions are intended to provide a simple and familiar utility for recording interaction data. These definitions are simple to use, and consequently limited. It is expected that communities of practice requiring richer interactions definitions will do so through the use of extensions to an Activity's type and definition.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Interaction Activity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Interaction Component</rdfs:label>
+    <rdfs:comment xml:lang="en">Interaction Component</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#InverseFunctionalIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Inverse Functional Identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">Inverse Functional Identifier</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#LMS">
+    <rdfs:comment xml:lang="en">A software package used to administer one or more courses to one or more learners. An LMS is typically a web-based system that allows learners to authenticate themselves, register for courses, complete courses and take assessments</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Learning Management System</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#LRS">
+    <rdfs:comment xml:lang="en">A system that stores learning information. Prior to the xAPI most LRSs were Learning Management Systems (LMSs); however this document uses the term LRS to be clear that a full LMS is not necessary to implement the xAPI. The xAPI is dependent on an LRS to function.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Learning Record Store</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#LanguageMap">
+    <rdfs:comment xml:lang="en">A language map is a dictionary where the key is a  RFC 5646 Language Tag, and the value is an string in the language specified in the tag. This map should be populated as fully as possible based on the knowledge of the string in question in different languages.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">LanguageMap</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#MSM">
+    <rdfs:comment xml:lang="en">Three levels of obligation with regards to conformance to the xAPI specification. A system that fails to implement a MUST (or a MUST NOT) requirement is non-conformant. Failing to meet a SHOULD requirement is not a violation of conformity, but goes against best practices. MAY indicates an option, to be decided by the developer with no consequences for conformity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">MUST / SHOULD / MAY</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Object">
+    <rdfs:comment xml:lang="en">The Object of a Statement can be an Activity, Agent/Group, Sub-Statement, or Statement Reference. It is the &quot;this&quot; part of the Statement, i.e. &quot;I did this&quot;.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Other">
+    <rdfs:comment xml:lang="en">A context Activity that doesn't fit one of the other fields. For example: Anna studies a textbook for a biology exam. The Statements Activity refers to the textbook, and the exam is a context Activity of type other.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Other</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Parent">
+    <rdfs:comment xml:lang="en">An Activity with a direct relation to the Activity which is the Object of the Statement. In almost all cases there is only one sensible parent or none, not multiple. For example: a Statement about a quiz question would have the quiz as its parent Activity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Parent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Profile">
+    <rdfs:comment xml:lang="en">A construct where information about the learner or activity is kept, typically in name/document pairs that have meaning to an instructional system component.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Profile</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#REST">
+    <rdfs:comment xml:lang="en">An architecture for designing networked web Services. It relies on HTTP methods and uses current web best practices.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">REST</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Registration">
+    <rdfs:comment xml:lang="en">An instance of a learner experiencing a particular Activity.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Registration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Result">
+    <rdfs:comment xml:lang="en">An optional field that represents a measured outcome related to the Statement in which it is included.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Result</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Score">
+    <rdfs:comment xml:lang="en">An optional field that represents the outcome of a graded Activity achieved by an Agent.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Score</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Service">
+    <rdfs:comment xml:lang="en">A software component responsible for one or more aspects of the distributed learning process. An LMS typically combines many services to design a complete learning experience.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Service</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Statement">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Statement</rdfs:label>
+    <rdfs:comment xml:lang="en">Statement</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#TinCanAPI">
+    <rdfs:comment xml:lang="en">The previous name of the API defined in this document, often used in informal references to the Experience API.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">TIN CAN API</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#Verb">
+    <rdfs:comment xml:lang="en">Defines the action being done by the Actor within the Activity within a Statement.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Verb</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasAccount">
+    <rdfs:comment>Account property</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Agent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label>Account</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Account"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasAccountName">
+    <rdfs:comment xml:lang="en">The unique id or name used to log in to this account. This is based on FOAFs accountName.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Account"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Account Name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasActivityDefinitionDescription">
+    <rdfs:comment xml:lang="en">A description of the Activity</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#ActivityDefinition"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity Definition Description</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasActivityDefinitionName">
+    <rdfs:comment xml:lang="en">The human readable visual name of the Activity</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#ActivityDefinition"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity Definition Name</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasActivityDefinitionType">
+    <rdfs:comment xml:lang="en">The type of Activity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#ActivityDefinition"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity Definition Type</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasActor">
+    <rdfs:comment>An mandatory Agent or Group Object</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Actor</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Actor"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasActorObjectType">
+    <rdfs:comment xml:lang="en">Either an Agent or Group of agents</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Actor Object Type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasAgentName">
+    <rdfs:comment xml:lang="en">Full name of the Agent.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Agent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Agent name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasAttachment">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Attachment</rdfs:label>
+    <rdfs:comment xml:lang="en">Has attachment</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasAuthority">
+    <rdfs:comment xml:lang="en">The authority property provides information about whom or what has asserted that this Statement is true.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Authority</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasChoice">
+    <rdfs:comment xml:lang="en">Array of interaction components</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Choice</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasContentType">
+    <rdfs:comment xml:lang="en">The content type of the attachment. https://www.ietf.org/rfc/rfc2046.txt?number=2046</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Content type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasContext">
+    <rdfs:comment xml:lang="en">An optional field that provides a place to add contextual information to a Statement. All properties are optional.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Context</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasContextActivity">
+    <rdfs:comment>A map of types of learning activity context that this Statement is related to.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#ContextActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Context Activity</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasDescription">
+    <rdfs:comment>Description of the attachment</rdfs:comment>
+    <rdfs:label>Description of the attachment</rdfs:label>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasDisplay">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+    <rdfs:label xml:lang="en">Has Display</rdfs:label>
+    <rdfs:comment xml:lang="en">Has display property</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasDuration">
+    <rdfs:comment xml:lang="en">Period of time over which the Statement occurred. Formatted according to ISO 8601 with a precision of 0.01 seconds</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Result"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Duration</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasExtension">
+    <rdfs:comment xml:lang="en">A map of other properties as needed.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Extension</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasGroupName">
+    <rdfs:comment xml:lang="en">Name of the group.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Group"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Group Name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasHomePage">
+    <rdfs:comment xml:lang="en">The canonical home page for the system the account is on. This is based on FOAFs accountServiceHomePage.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Account"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Home page</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasID">
+    <rdfs:comment xml:lang="en">A UUID (see RFC 4122 for requirements, and the UUID must be in standard string form).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">ID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasInstructor">
+    <rdfs:comment xml:lang="en">Instructor that the Statement relates to, if not included as the Actor of the Statement.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Instructor</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasInteractionComponentDescription">
+    <rdfs:comment xml:lang="en">A description of the interaction component (for example, the text for a given choice in a multiple-choice interaction)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Interaction Component Description</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasInteractionComponentID">
+    <rdfs:comment xml:lang="en">A value such as used in practice for &quot;cmi.interactions.n.id&quot; as defined in the SCORM 2004 4th Edition Run-Time Environment</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Interaction Component ID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasInteractionCorrectResponsesPattern">
+    <rdfs:comment xml:lang="en">Corresponds to &quot;cmi.interactions.n.correct_responses.n.pattern&quot; as defined in the SCORM 2004 4th Edition Run-Time Environment, where the final n is the index of the array.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Correct Responses Pattern</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasInteractionType">
+    <rdfs:comment xml:lang="en">As in &quot;cmi.interactions.n.type&quot; as defined in the SCORM 2004 4th Edition Run-Time Environment.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Interaction Type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasInverseFunctionalIdentifier">
+    <rdfs:comment xml:lang="en">An Inverse Functional Identifier unique to the Agent.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Actor"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Inverse Functional Identifier</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InverseFunctionalIdentifier"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasLanguage">
+    <rdfs:comment xml:lang="en">Code representing the language in which the experience being recorded in this Statement (mainly) occurred in, if applicable and known. As defined in RFC 5646</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Language</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasLanguageTag">
+    <rdfs:comment xml:lang="en">Language tags are used to help identify languages, whether spoken, written, signed, or otherwise signaled, for the purpose of communication. This includes constructed and artificial languages but excludes languages not intended primarily for human communication, such as programming languages.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Language Tag</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasLanguageVerb">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#LanguageMap"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Language Verb</rdfs:label>
+    <rdfs:comment xml:lang="en">Language Verb</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasLength">
+    <rdfs:comment xml:lang="en">The length of the attachment data in octets.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Length</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasMax">
+    <rdfs:comment xml:lang="en">Decimal number greater than min (if present). Cf. cmi.score.max</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Score"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Max</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasMbox">
+    <rdfs:comment xml:lang="en">The required format is &quot;mailto:email address&quot;. Only email addresses that have only ever been and will ever be assigned to this Agent, but no others, should be used for this property and mbox_sha1sum.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Agent"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">mbox</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasMember">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Member</rdfs:label>
+    <rdfs:comment xml:lang="en">Member</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Agent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasMin">
+    <rdfs:comment xml:lang="en">Decimal number less than max (if present)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Score"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Min</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasMoreInfo">
+    <rdfs:comment xml:lang="en">Resolves to a document with human-readable information about the Activity, which could include a way to launch the activity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#ActivityDefinition"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Activity Definition More Info</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasName">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Account"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Name</rdfs:label>
+    <rdfs:comment xml:lang="en">Name</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasObject">
+    <rdfs:comment xml:lang="en">Activity, Agent, or another Statement that is the Object of the Statement. Represents the &quot;This&quot; in &quot;I Did This&quot;. Note that Objects which are provided as a value for this field should include an &quot;objectType&quot; field. If not specified, the Object is assumed to be an Activity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Object"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasObjectDefinition">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Object"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object Definition</rdfs:label>
+    <rdfs:comment xml:lang="en">Object Definition</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#ActivityDefinition"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasObjectExtension">
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object Extension</rdfs:label>
+    <rdfs:comment xml:lang="en">Object Extension</rdfs:comment>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasObjectID">
+    <rdfs:comment xml:lang="en">An identifier for a single unique Activity</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object ID</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasObjectInteration">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Object"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object Interaction Property</rdfs:label>
+    <rdfs:comment xml:lang="en">Object Interaction Property</rdfs:comment>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasObjectType">
+    <rdfs:comment>Can be an Activity, Agent, Group, Statement or SubStatemen</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Object Type</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasOpenID">
+    <rdfs:comment xml:lang="en">An openID that uniquely identifies the Agent.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InverseFunctionalIdentifier"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Open ID</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasPlatform">
+    <rdfs:comment xml:lang="en">Platform used in the experience of this learning activity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Platform</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasRaw">
+    <rdfs:comment xml:lang="en">Decimal number between min and max (if present, otherwise unrestricted), inclusive.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Score"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Raw</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasRegistration">
+    <rdfs:comment xml:lang="en">The registration that the Statement is associated with. UUID</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Registration</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasResponse">
+    <rdfs:comment xml:lang="en">A response appropriately formatted for the given Activity.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Result"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Response</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasResult">
+    <rdfs:comment xml:lang="en">An optional field that represents a measured outcome related to the Statement in which it is included.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Result</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Result"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasRevision">
+    <rdfs:comment xml:lang="en">Revision of the learning activity associated with this Statement. Format is free.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Revision</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasScale">
+    <rdfs:comment xml:lang="en">Array of interaction components</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Scale</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasScaled">
+    <rdfs:comment xml:lang="en">Decimal number between 1 and 1, inclusive. Cf. cmi.score.scaled in SCORM 2004 4th Edition</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Score"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Scaled</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasScore">
+    <rdfs:comment xml:lang="en">The score of the Agent in relation to the success or quality of the experience.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Result"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Score</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Score"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasSha-2">
+    <rdfs:comment xml:lang="en">The SHA-2 (SHA-256, SHA-384, SHA-512) hash of the attachment data. SHA-224 SHOULD not be used: a minimum key size of 256 bits is recommended.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">SHA-2</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasSha1sum">
+    <rdfs:comment xml:lang="en">The SHA1 hash of a mailto IRI (i.e. the value of an mbox property). An LRS MAY include Agents with a matching hash when a request is based on an mbox.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InverseFunctionalIdentifier"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Mbox SHA1</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasSource">
+    <rdfs:comment xml:lang="en">Array of interaction components</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Source</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasStatement">
+    <rdfs:comment xml:lang="en">Another Statement, which should be considered as context for this Statement.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Statement</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Object"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasStatementID">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Statement ID</rdfs:label>
+    <rdfs:comment xml:lang="en">Statement ID</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasStep">
+    <rdfs:comment xml:lang="en">Array of interaction components</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Step</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasStoredTime">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Stored time</rdfs:label>
+    <rdfs:comment xml:lang="en">Stored time</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasTarget">
+    <rdfs:comment xml:lang="en">Array of interaction components</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionActivity"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Target</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#InteractionComponent"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasTeam">
+    <rdfs:comment xml:lang="en">Team that this Statement relates to, if not included as the Actor of the Statement.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Context"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Team</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Group"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasTimeStamp">
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Time stamp</rdfs:label>
+    <rdfs:comment xml:lang="en">Time stamp</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasUrl">
+    <rdfs:comment xml:lang="en">An IRL at which the attachment data may be retrieved, or from which it used  to be retrievable.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">File URL</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasUsageType">
+    <rdfs:comment xml:lang="en">Identifies the usage of this attachment. For example: one expected use case for attachments is to include a &quot;completion certificate&quot;. A type IRI corresponding to this usage should be coined, and used with completion certificate attachments.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Attachment"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Usage Type</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasVerb">
+    <rdfs:comment xml:lang="en">Action of the Learner or Team Object. Represents the &quot;Did&quot; in &quot;I Did This&quot;.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Verb</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Verb"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasVerbID">
+    <rdfs:comment xml:lang="en">Corresponds to a Verb definition. Each Verb definition corresponds to the meaning of a Verb, not the word. The IRI should be human-readable and contain the Verb meaning.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Verb"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Verb ID</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#hasVersion">
+    <rdfs:comment xml:lang="en">Version information in Statements helps systems that process data from an LRS get their bearings. Since the Statement data model is guaranteed consistent through all 1.0.x versions, in order to support data flow among such LRSs the LRS is given some flexibility on Statement versions that are accepted.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Statement"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Version</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#isCompleted">
+    <rdfs:comment xml:lang="en">Indicates whether or not the Activity was completed.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Result"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Completion</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://ns.inria.fr/ludo/v1/xapi#isSuccess">
+    <rdfs:comment xml:lang="en">Indicates whether or not the attempt on the Activity was successful.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/ludo/v1/xapi#Result"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Success</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://ns.inria.fr/ludo/v1/xapi#xAPI">
+    <rdfs:comment xml:lang="en">Tin Can API is a simple, lightweight way for any permitted Actor to store and retrieve extensible learning records, learner and learning experience profiles, regardless of platform.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/ludo/v1/xapi#"/>
+    <rdfs:label xml:lang="en">Experience API</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+</rdf:RDF>

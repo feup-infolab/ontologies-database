@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://vocab.deri.ie/pdo">
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <dcterms:title>Project Documents Ontology</dcterms:title>
+    <dcterms:description>The Project Documents Ontology, described using W3C RDF Schema and the Web Ontology Language, models the inherent structure and concepts of various documents in a project-specific setting, like meeting minutes, status reports etc.</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-07-09</dcterms:modified>
+    <vann:preferredNamespaceUri>http://ontologies.smile.deri.ie/pdo#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>pdo</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://vocab.deri.ie/pdo.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-07-09</dcterms:created>
+    <dcterms:publisher>http://vocab.deri.ie/pdo#DERI%2C%20NUI%20Galway</dcterms:publisher>
+    <dcterms:partOf rdf:resource="http://vocab.deri.ie"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://vocab.deri.ie/pdo#pravar"/>
+  </owl:Ontology>
+
+  <adms:SemanticDistribution rdf:about="http://vocab.deri.ie/pdo#ttl">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://vocab.deri.ie/pdo.ttl</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <adms:SemanticDistribution rdf:about="http://vocab.deri.ie/pdo#rdf">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://vocab.deri.ie/pdo.rdf</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/pdo#pravar">
+    <foaf:name>Pradeep Varma</foaf:name>
+    <foaf:homepage></foaf:homepage>
+    <foaf:mbox rdf:resource="mailto:pradeep.varma@deri.org"/>
+  </foaf:Person>
+
+  <dcterms:Agent rdf:about="http://vocab.deri.ie/pdo#DERI%2C%20NUI%20Galway">
+    <foaf:member rdf:resource="http://vocab.deri.ie/pdo#pravar"/>
+    <foaf:name>DERI, NUI Galway</foaf:name>
+    <foaf:homepage rdf:resource="http://deri.ie/"/>
+  </dcterms:Agent>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Absentee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Absentee</rdfs:label>
+    <rdfs:comment>Models the absentee role of a person in a meeting context.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#PersonRole"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#ActionItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ActionItem</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artifact and models the structure of an action item/task</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#AgendaItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AgendaItem</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artifact and models the structure of an agenda item</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Artefact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Artefact</rdfs:label>
+    <rdfs:comment>An abstract class for  any kind of information artifact which can be structured according to its sematics.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Attendee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Attendee</rdfs:label>
+    <rdfs:comment>Models the attendee role of a person in a meeting context.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#PersonRole"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Chair">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Chair</rdfs:label>
+    <rdfs:comment>Models the chair role of a person in a meeting context.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#PersonRole"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Comment</rdfs:label>
+    <rdfs:comment>Models a comment made by a person</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Document</rdfs:label>
+    <rdfs:comment>The base class for all kinds of electronic documents in a project-specific setting.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#LeaveReport">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>LeaveReport</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artefact and models the structure of a leave report</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#LeaveReport"/>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Report"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Meeting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Meeting</rdfs:label>
+    <rdfs:comment>The class modelling the actual meeting which is the subject of a particular minutes document.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#MeetingMinutes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Minutes</rdfs:label>
+    <rdfs:comment>The class modelling the structure and cotent of an electronic version of the minutes of a meetintg.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Document"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#PersonRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>PersonRole</rdfs:label>
+    <rdfs:comment>The abstract class modelling various roles taken by individuals during a particular context ( for example, the attendees, scribe etc in a meeting or the reporter in a status report.)</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Poll">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Poll</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artifact and models the structure of a poll</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#PollOption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>PollOption</rdfs:label>
+    <rdfs:comment>Models an option in a poll. Each option is linked to a list of people who selected the option during the poll</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Presenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Presenter</rdfs:label>
+    <rdfs:comment>Models the presenter role of a person in the context of an agenda item.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#PersonRole"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Publication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Publication</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artifact and uses bibliography ontology to model the structure of a publication</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Report">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>TravelReport</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artefact and models the structure of a travel report</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Reporter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Reporter</rdfs:label>
+    <rdfs:comment>Models the reporting role of a person in a status reporting context.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#PersonRole"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#Scribe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Scribe</rdfs:label>
+    <rdfs:comment>Models the scribe role of a person in a meeting context.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#PersonRole"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#StatusReport">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Report</rdfs:label>
+    <rdfs:comment>The class modelling the structure and content of an electronic version of a status reports document</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Document"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://ontologies.smile.deri.ie/pdo#TravelReport">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>TravelReport</rdfs:label>
+    <rdfs:comment>Subclasses pdo:Artefact and models the structure of a travel report</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://ontologies.smile.deri.ie/pdo#Report"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#hasAlias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasAlias</rdfs:label>
+    <rdfs:comment>A way to store different alias names of objects (used internally by the application)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#hasCreationTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasCreationTime</rdfs:label>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#ActionItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#hasDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasDescription</rdfs:label>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#ActionItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#hasEndTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hadEndTime</rdfs:label>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#ActionItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#hasStartTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasStartTime</rdfs:label>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#ActionItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#hasStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasStatus</rdfs:label>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#ActionItem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#contains">
+    <rdfs:label>contains</rdfs:label>
+    <rdfs:comment>The property which links an artefact (for example, an agenda item , an action item, a travle report, etc ) to the document in which it is mentioned.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#Document"/>
+    <rdfs:range rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#isAssignedTo">
+    <rdfs:label>isAssignedTo</rdfs:label>
+    <rdfs:comment>This property links a pdo:ActionItem object to a foaf:Person object who is reponsible for the action item</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#ActionItem"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://ontologies.smile.deri.ie/pdo#mentions">
+    <rdfs:label>mentions</rdfs:label>
+    <rdfs:comment>The property which links an artefact (for example, an agenda item , an action item, a travle report, etc ) to the document in which it is mentioned.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#Artefact"/>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#Comment"/>
+    <rdfs:domain rdf:resource="http://ontologies.smile.deri.ie/pdo#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource"/>
+  </rdf:Property>
+
+</rdf:RDF>

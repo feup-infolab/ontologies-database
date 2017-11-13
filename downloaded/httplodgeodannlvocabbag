@@ -1,0 +1,716 @@
+<rdf:RDF
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:locn="http://www.w3.org/ns/locn#"
+    xmlns="http://lod.geodan.nl/vocab/bag#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:qudt-quantity="http://qudt.org/vocab/quantity#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:qudt="http://qudt.org/1.1/vocab/unit#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="http://lod.geodan.nl/vocab/bag">
+    <dcterms:spatial rdf:resource="http://dbpedia.org/resource/Netherlands"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-06-03</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-10-09</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-09-19</dcterms:modified>
+    <dcterms:description xml:lang="en">Vocabulary for the Dutch base registry of buildings and addresses (BAG).</dcterms:description>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2013-11-05</dc:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-06-04</dcterms:modified>
+    <rdfs:label xml:lang="en">Vocabulary for the Dutch base registry of buildings and addresses (BAG).</rdfs:label>
+    <rdfs:label xml:lang="nl">Vocabularium voor de Basisregistratie Adressen en Gebouwen (BAG).</rdfs:label>
+    <dc:creator rdf:resource="http://lod.geodan.nl/org/frans_knibbe"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-10-10</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-05-12</dcterms:modified>
+    <dc:publisher rdf:resource="http://lod.geodan.nl/org/geodan"/>
+    <dcterms:description xml:lang="nl">Vocabularium voor de Basisregistratie Adressen en Gebouwen (BAG).</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-10-16</dcterms:modified>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-03-11</dc:date>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Pand">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:label xml:lang="nl">pand</rdfs:label>
+    <rdfs:label xml:lang="en">building</rdfs:label>
+    <skos:narrower>
+      <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Pandmutatie"/>
+    </skos:narrower>
+    <rdfs:comment xml:lang="nl">De kleinste bij de totstandkoming functioneel en bouwkundig-constructief zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar en afsluitbaar is.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The smallest unit of a building with functional or constructional independence that has a direct and permanent connection with the earth and is possible to enter and close. </rdfs:comment>
+    <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/concept/Pand"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Mutatie">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="nl">mutatie</rdfs:label>
+    <rdfs:label xml:lang="en">mutation</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie is een verandering van de gegevens van een object dat in de  Basisregistratie Adressen en Gebouwen (BAG) wordt bijgehouden. De eerste registratie van gegevens wordt ook als mutatie gezien.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation is a change in the set of properties of an object that is registered in the BAG. The first set of properties is also considered a mutation.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Standplaats">
+    <rdfs:label xml:lang="nl">standplaats</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een formeel door de gemeenteraad als zodanig aangewezen terrein of een gedeelte daarvan, dat bestemd is voor het permanent plaatsen van een niet direct en duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige - of recreatieve doeleinden geschikte ruimte.</rdfs:comment>
+    <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/concept/Standplaats"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#AdresseerbaarObject"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An officially assigned site for the placement of a construction without a direct and permanent connection with the earth.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:narrower>
+      <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Standplaatsmutatie"/>
+    </skos:narrower>
+    <rdfs:label xml:lang="en">static caravan site</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#AdresseerbaarObject">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    <rdfs:label xml:lang="nl">adresseerbaar object</rdfs:label>
+    <rdfs:label xml:lang="en">addressable object</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een ruimtelijk object dat een adres heeft. Een adresseerbaar object heeft 1 hoofdadres, en 0 of meer nevenadressen. Een nevenadres kan worden toegekend indien een verblijfsobject meerdere toegangen heeft aan verschillende straten.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A spatial object that can be identified by an address.</rdfs:comment>
+    <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/brk/id/concept/Adresseerbaarobject"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Nummeraanduiding">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <skos:narrower>
+      <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+    </skos:narrower>
+    <rdfs:label xml:lang="nl">nummeraanduiding</rdfs:label>
+    <rdfs:label xml:lang="en">address</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een door het bevoegde gemeentelijke orgaan toegekende aanduiding van een verblijfsobject, een standplaats of een ligplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The address assigned by the official municipal authority.</rdfs:comment>
+    <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/concept/Nummeraanduiding"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+    <skos:broader>
+      <skos:Concept rdf:about="http://lod.geodan.nl/vocab/bag#OpenbareRuimte">
+        <skos:narrower rdf:resource="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label xml:lang="nl">openbare ruimte</rdfs:label>
+        <rdfs:comment xml:lang="en">An officialy named public space, usually a street or a square.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+        <rdfs:comment xml:lang="nl">Een door het bevoegde gemeentelijke orgaan aangewezen en van een naam voorziene buitenruimte die binnen één woonplaats is gelegen, bijvoorbeeld een straat of een plein.</rdfs:comment>
+        <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/concept/Openbare_ruimte"/>
+        <rdfs:label xml:lang="en">public space</rdfs:label>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:label xml:lang="nl">openbareruimtemutatie</rdfs:label>
+    <rdfs:label xml:lang="en">mutation of a public space</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een openbare ruimte.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on a public space.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Standplaatsmutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Adresseerbaarobjectmutatie"/>
+    </rdfs:subClassOf>
+    <skos:broader rdf:resource="http://lod.geodan.nl/vocab/bag#Standplaats"/>
+    <rdfs:label xml:lang="nl">standplaatsmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">static caravan site mutation</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een ligplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on a static caravan site.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Ligplaats">
+    <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/concept/Ligplaats"/>
+    <rdfs:comment xml:lang="nl">Een formeel door de gemeenteraad als zodanig aangewezen plaats in het water, al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, dat bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige- of recreatieve doeleinden geschikt vaartuig.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:label xml:lang="en">berth</rdfs:label>
+    <rdfs:label xml:lang="nl">ligplaats</rdfs:label>
+    <rdfs:comment xml:lang="en">The official place where a boat is permanently moored.</rdfs:comment>
+    <skos:narrower>
+      <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Ligplaatsmutatie"/>
+    </skos:narrower>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#AdresseerbaarObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Adresseerbaarobjectmutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+    <skos:broader rdf:resource="http://lod.geodan.nl/vocab/bag#AdresseerbaarObject"/>
+    <rdfs:label xml:lang="nl">adresseerbaarobjectmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">addressable object mutation</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een adresseerbaar object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on an addressable object.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Ligplaatsmutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Adresseerbaarobjectmutatie"/>
+    <skos:broader rdf:resource="http://lod.geodan.nl/vocab/bag#Ligplaats"/>
+    <rdfs:label xml:lang="nl">ligplaatsmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">berth mutation</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een ligplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on a berth.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Adresseerbaarobjectmutatie"/>
+    <skos:broader>
+      <skos:Concept rdf:about="http://lod.geodan.nl/vocab/bag#Verblijfsobject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+        <rdfs:label xml:lang="en">residential object</rdfs:label>
+        <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/brk/id/concept/Verblijfsobject"/>
+        <rdfs:comment xml:lang="nl">De kleinste binnen één of meerdere panden gelegen en voor woon-, bedrijfsmatige, of recreatieve doeleinden geschikte eenheid van gebruik die ontsloten wordt via een eigen toegang vanaf de openbare weg, een erf of een gedeelde verkeersruimte en die onderwerp kan zijn van goederenrechtelijke rechtshandelingen.</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label xml:lang="nl">verblijfsobject</rdfs:label>
+        <skos:narrower rdf:resource="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie"/>
+        <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#AdresseerbaarObject"/>
+        <rdfs:comment xml:lang="en">The smallest unit of space within one or more buildings, intended for residential, business or recreation purposes and having its own access from a public space or private courtyard.</rdfs:comment>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:label xml:lang="nl">verblijfsobjectmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">mutation of an residential object</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een verblijfsobject.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on a residential object.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Woonplaatsmutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+    <skos:broader>
+      <skos:Concept rdf:about="http://lod.geodan.nl/vocab/bag#Woonplaats">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:comment xml:lang="en">An officialy named part of a municipality, used to indicate a place of residence.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een door het bevoegde gemeentelijke orgaan aangewezen en van een naam voorzien gedeelte van het grondgebied van de gemeente.</rdfs:comment>
+        <rdfs:seealso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/concept/Woonplaats"/>
+        <rdfs:label xml:lang="en">city, town or village of residence</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:label xml:lang="nl">woonplaats</rdfs:label>
+        <skos:narrower rdf:resource="http://lod.geodan.nl/vocab/bag#Woonplaatsmutatie"/>
+      </skos:Concept>
+    </skos:broader>
+    <rdfs:label xml:lang="nl">woonplaatsmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">mutation of a city, town or village of residence</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een woonplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on a city, town or village of residence.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Pandmutatie">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+    <skos:broader rdf:resource="http://lod.geodan.nl/vocab/bag#Pand"/>
+    <rdfs:label xml:lang="nl">pandmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">mutation of a building</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een pand.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on a building.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <rdfs:subClassOf rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+    <skos:broader rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduiding"/>
+    <rdfs:label xml:lang="nl">nummeraanduidingmutatie</rdfs:label>
+    <rdfs:label xml:lang="en">mutation of an address</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een mutatie van de gegevens van een nummeraanduiding.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A mutation of the data on an address.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#correctie">
+    <rdfs:label xml:lang="nl">correctie</rdfs:label>
+    <rdfs:label xml:lang="en">correction</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een volgnummer ter unieke identificatie van de inactieve mutaties met een gelijk begintijdstip.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A sequence number to identify inactive mutations with the same start time.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#oppervlakte">
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Oppervlakte_verblijfsobject-Verblijfsobject"/>
+    <rdfs:label xml:lang="nl">oppervlakte (vierkante meter)</rdfs:label>
+    <rdfs:comment xml:lang="nl">De oppervlakte gemeten volgens de specificaties in NEN 2580.</rdfs:comment>
+    <rdfs:label xml:lang="en">area (square meter)</rdfs:label>
+    <qudt:quantity rdf:resource="http://qudt.org/vocab/quantity#Area"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie"/>
+    <qudt:unit rdf:resource="http://qudt.org/1.1/vocab/unit#SquareMeter"/>
+    <rdfs:comment xml:lang="en">De area according to measurement specified in standard NEN 2580.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#openbareruimtetype">
+    <rdfs:label xml:lang="nl">type openbare ruimte</rdfs:label>
+    <rdfs:label xml:lang="en">type of public space</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het soort openbare ruimte.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The type of public space.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Type_Openbare_ruimte-Openbare_ruimte"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Terrein</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Landschappelijk gebied</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>Water</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>Weg</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>Kunstwerk</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>Administratief gebied</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>Spoorbaan</rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#pandstatus">
+    <rdfs:label xml:lang="nl">status van een pand</rdfs:label>
+    <rdfs:label xml:lang="en">status of a building</rdfs:label>
+    <rdfs:comment xml:lang="nl">De fase van de levensloop van de pand.</rdfs:comment>
+    <rdfs:comment xml:lang="en">the phase of development of a buiding.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Pandstatus-Pand"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Pand in gebruik (niet ingemeten)</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Niet gerealiseerd pand</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>Pand in gebruik</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>Bouwvergunning verleend</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>Bouw gestart</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>Pand gesloopt</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>Sloopvergunning verleend</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>Pand buiten gebruik</rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Pandmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#plaatsstatus">
+    <rdfs:label xml:lang="nl">status van een ligplaats of standplaats</rdfs:label>
+    <rdfs:label xml:lang="en">status of berth or static caravan site</rdfs:label>
+    <rdfs:comment xml:lang="nl">De fase van de levensloop van de ligplaats of standplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">the phase of development of a berth or a static caravan site.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Ligplaatsstatus-Ligplaats"/>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Standplaatsstatus-Standplaats"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Plaats ingetrokken</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Plaats aangewezen</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Ligplaatsmutatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Standplaatsmutatie"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#woonplaatsstatus">
+    <rdfs:label xml:lang="nl">status van een woonplaats</rdfs:label>
+    <rdfs:label xml:lang="en">status of a city, town or village of residence</rdfs:label>
+    <rdfs:comment xml:lang="nl">De fase van de levensloop van de woonplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">the phase of development of a city, town or village of residence.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Woonplaatsstatus-Woonplaats"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Woonplaats ingetrokken</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Woonplaats aangewezen</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Woonplaatsmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#postcode">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+    <rdfs:label xml:lang="nl">postcode</rdfs:label>
+    <rdfs:label xml:lang="en">post code</rdfs:label>
+    <rdfs:comment xml:lang="nl">De nummering van een geadresseerd object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The number of an address.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Postcode-Nummeraanduiding"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#huisnummertoevoeging">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+    <rdfs:label xml:lang="nl">huisnummertoevoeging</rdfs:label>
+    <rdfs:label xml:lang="en">house number extension</rdfs:label>
+    <rdfs:comment xml:lang="nl">Die letters of tekens die noodzakelijk zijn om, naast huisnummer en -letter, het adres aan te duiden.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Any extra letters or digits needed to identify the address.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Huisnummertoevoeging-Nummeraanduiding"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#officieel">
+    <rdfs:label xml:lang="nl">officieel</rdfs:label>
+    <rdfs:label xml:lang="en">official</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een aanduiding waarmee kan worden aangegeven dat een object in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor de opname.</rdfs:comment>
+    <rdfs:comment xml:lang="en">This shows whether an object is registered because of a field observation.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#begindatum">
+    <rdfs:label xml:lang="nl">begindatum</rdfs:label>
+    <rdfs:label xml:lang="en">start date</rdfs:label>
+    <rdfs:comment xml:lang="nl">De begintijd van een periode waarin een of meer gegevens die worden bijgehouden over een object een wijziging hebben ondergaan.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The start of the time period in which object data have been changed.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#woonplaatsnaam">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#postName"/>
+    <rdfs:label xml:lang="nl">woonplaatsnaam</rdfs:label>
+    <rdfs:label xml:lang="en">name of a city, town or village of residence</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een door het bevoegde gemeentelijke orgaan toegekende benaming van een woonplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The name assigned by the municipal authority to a city, town or village of residence.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Woonplaatsmutatie"/>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Woonplaatsnaam-Woonplaats"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#woonplaats">
+    <rdfs:label xml:lang="nl">woonplaats</rdfs:label>
+    <rdfs:label xml:lang="en">city, town or village of residence</rdfs:label>
+    <rdfs:comment xml:lang="nl">Gerelateerde woonplaats.</rdfs:comment>
+    <rdfs:comment xml:lang="en">related city, town or village of residence.</rdfs:comment>
+    <rdfs:range rdf:resource="http://lod.geodan.nl/vocab/bag#Woonplaats"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Woonplaatsmutatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#bouwjaar">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Pandmutatie"/>
+    <rdfs:label xml:lang="nl">bouwjaar</rdfs:label>
+    <rdfs:label xml:lang="en">built year</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het jaar waarin het pand gereed kwam.</rdfs:comment>
+    <rdfs:comment xml:lang="en">De year in which the building was ready.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Oorspronkelijke_bouwjaar_pand-Pand"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#documentdatum">
+    <rdfs:label xml:lang="nl">documentdatum</rdfs:label>
+    <rdfs:label xml:lang="en">document date</rdfs:label>
+    <rdfs:comment xml:lang="nl">De datum van vaststelling van het brondocument op basis waarvan een opname of mutatie van gegevens heeft plaatsgevonden.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The date of the document on which a mutation is based.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#pand">
+    <rdfs:range rdf:resource="http://lod.geodan.nl/vocab/bag#Pand"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Pandmutatie"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label xml:lang="nl">pand</rdfs:label>
+    <rdfs:label xml:lang="en">building</rdfs:label>
+    <rdfs:comment xml:lang="nl">Gerelateerd pand.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Related building.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Pandrelatering-Verblijfsobject"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#hoofdadres">
+    <rdfs:label xml:lang="nl">hoofdadres</rdfs:label>
+    <rdfs:label xml:lang="en">main address</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het hoofdadres van een object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The main address of an object.</rdfs:comment>
+    <rdfs:range rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduiding"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Adresseerbaarobjectmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#gebruiksdoel">
+    <rdfs:label xml:lang="nl">gebruiksdoel</rdfs:label>
+    <rdfs:label xml:lang="en">purpose</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het gebruiksdoel van een verblijfsobject.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The functional purpose of a residential object.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Gebruiksdoel_verblijfsobject-Verblijfsobject"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>winkelfunctie</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>celfunctie</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>kantoorfunctie</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>industriefunctie</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>logiesfunctie</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>sportfunctie</rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:first>gezondheidszorgfunctie</rdf:first>
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:first>bijeenkomstfunctie</rdf:first>
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:first>onderwijsfunctie</rdf:first>
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:first>woonfunctie</rdf:first>
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:first>overige gebruiksfunctie</rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:rest>
+                          </rdf:rest>
+                        </rdf:rest>
+                      </rdf:rest>
+                    </rdf:rest>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#nummeraanduidingstatus">
+    <rdfs:label xml:lang="nl">status van een nummeraanduiding</rdfs:label>
+    <rdfs:label xml:lang="en">status of an address</rdfs:label>
+    <rdfs:comment xml:lang="nl">De fase van de levensloop van de nummeraanduiding.</rdfs:comment>
+    <rdfs:comment xml:lang="en">the phase of development of an address.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Nummeraanduidingstatus-Nummeraanduiding"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Naamgeving ingetrokken</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Naamgeving uitgegeven</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#openbareruimtestatus">
+    <rdfs:label xml:lang="nl">status van een openbare ruimte</rdfs:label>
+    <rdfs:label xml:lang="en">status of a public space</rdfs:label>
+    <rdfs:comment xml:lang="nl">De fase van de levensloop van de openbare ruimte.</rdfs:comment>
+    <rdfs:comment xml:lang="en">the phase of development of the public space.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Status_Openbare_ruimte-Openbare_ruimte"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Naamgeving ingetrokken</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Naamgeving uitgegeven</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#inOnderzoek">
+    <rdfs:label xml:lang="nl">inonderzoek</rdfs:label>
+    <rdfs:label xml:lang="en">investigated</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een aanduiding waarmee wordt aangegeven dat een onderzoek wordt uitgevoerd naar de juistheid van gegevens van het object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">This property shows whether the data of an object are being investigated.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#documentnummer">
+    <rdfs:label xml:lang="nl">documentnummer</rdfs:label>
+    <rdfs:label xml:lang="en">document number</rdfs:label>
+    <rdfs:comment xml:lang="nl">De unieke aanduiding van het brondocument op basis waarvan een opname of mutatie van gegevens heeft plaatsgevonden.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The unique identifier of the document on which a mutation is based.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#verkorteNaam">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+    <rdfs:label xml:lang="nl">verkorte naam</rdfs:label>
+    <rdfs:label xml:lang="en">abbreviated name</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een verkorte versie van de naam.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An abbreviated version of the name.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#openbareRuimte">
+    <rdfs:label xml:lang="nl">openbare ruimte</rdfs:label>
+    <rdfs:label xml:lang="en">public space</rdfs:label>
+    <rdfs:comment xml:lang="nl">Gerelateerde openbare ruimte.</rdfs:comment>
+    <rdfs:comment xml:lang="en">related public space.</rdfs:comment>
+    <rdfs:range rdf:resource="http://lod.geodan.nl/vocab/bag#OpenbareRuimte"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#nummeraanduiding">
+    <rdfs:label xml:lang="nl">nummeraanduiding</rdfs:label>
+    <rdfs:label xml:lang="en">address</rdfs:label>
+    <rdfs:comment xml:lang="nl">Gerelateerde nummeraanduiding.</rdfs:comment>
+    <rdfs:comment xml:lang="en">related address.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+    <rdfs:range rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduiding"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#lastKnown">
+    <rdfs:label xml:lang="nl">laast bekende mutatie</rdfs:label>
+    <rdfs:label xml:lang="en">last known mutation</rdfs:label>
+    <rdfs:comment xml:lang="nl">Van alle mutaties van een object is dit binnen de dataset meest recente actieve mutatie.</rdfs:comment>
+    <rdfs:comment xml:lang="en">This indicates that this mutation is the most recent active mutation of an object.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#nevenadres">
+    <rdfs:range rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduiding"/>
+    <rdfs:label xml:lang="nl">nevenadres</rdfs:label>
+    <rdfs:label xml:lang="en">additional address</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een nevenadres van een object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An additonal address of an object.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Adresseerbaarobjectmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#huisnummer">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+    <rdfs:label xml:lang="nl">huisnummer</rdfs:label>
+    <rdfs:label xml:lang="en">house number</rdfs:label>
+    <rdfs:comment xml:lang="nl">De nummering van een geadresseerd object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The number of an address.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Huisnummer-Nummeraanduiding"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#huisletter">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+    <rdfs:label xml:lang="nl">huisletter</rdfs:label>
+    <rdfs:label xml:lang="en">house letter</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfabetisch teken (a-z, A-Z).</rdfs:comment>
+    <rdfs:comment xml:lang="en">A letter (a-z, A-Z) added to a house number.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Huisletter-Nummeraanduiding"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduidingmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#verblijfsobjectstatus">
+    <rdfs:label xml:lang="nl">status van een verblijfsobject</rdfs:label>
+    <rdfs:label xml:lang="en">status of a residential object</rdfs:label>
+    <rdfs:comment xml:lang="nl">De fase van de levensloop van het verblijfsobject.</rdfs:comment>
+    <rdfs:comment xml:lang="en">the phase of development of the residential object.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Verblijfsobjectstatus-Verblijfsobject"/>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first>Verblijfsobject buiten gebruik</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first>Verblijfsobject in gebruik (niet ingemeten)</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first>Niet gerealiseerd verblijfsobject</rdf:first>
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:first>Verblijfsobject ingetrokken</rdf:first>
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:first>Verblijfsobject gevormd</rdf:first>
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:first>Verblijfsobject in gebruik</rdf:first>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:rest>
+                </rdf:rest>
+              </rdf:rest>
+            </rdf:rest>
+          </rdf:rest>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#actief">
+    <rdfs:label xml:lang="nl">actief</rdfs:label>
+    <rdfs:label xml:lang="en">active</rdfs:label>
+    <rdfs:comment xml:lang="nl">Als een mutatie actief is maakt zij deel uit van de levensloop van een object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An active mutation is part of the actual development of an object.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#geometrie">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+    <rdfs:label xml:lang="nl">geometrie</rdfs:label>
+    <rdfs:label xml:lang="en">geometry</rdfs:label>
+    <rdfs:comment xml:lang="nl">De tweedimensionele geometrische representatie van de omtrek van het object.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The two dimensional representation of the extent of the object.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Woonplaatsmutatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Pandmutatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Verblijfsobjectmutatie"/>
+          <rdf:Description rdf:about="http://lod.geodan.nl/vocab/bag#Ligplaatsmuatie"/>
+          <rdfs:Class rdf:about="http://lod.geodan.nl/vocab/bag#Standplaatsmutatie"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#identificatie">
+    <rdfs:label xml:lang="nl">identificatie</rdfs:label>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#OpenbareRuimte"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Pand"/>
+    <rdfs:comment xml:lang="en">The unique identifier of an object in the BAG.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Woonplaats"/>
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:comment xml:lang="nl">De unieke identificatie van een object binnen de BAG. Woonplaatsen hebben een unieke woonplaatscode van vier cijfers. Alle overige objecten hebben een unieke identificatie van het formaat GGGGTTNNNNNNNNNN, waarbij GGGG staat voor de gemeentecode van de gemeente die het object als eerste heeft opgevoerd. Bij een gemeentelijke herindeling blijft de identificatie van de objecten binnen die gemeente ongewijzigd. TT staat voor de objecttypecode. Die is 01 voor een verblijfsobject, 02 voor een ligplaats, 03 voor een standplaats, 10 voor een pand, 20 voor een nummeraanduiding, 30 voor een openbare ruimte en 40 voor een woonplaats.  NNNNNNNNNN is een binnen een gemeente uniek tiencijferig nummer.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Adresseerbaarobject"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Nummeraanduiding"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#einddatum">
+    <rdfs:label xml:lang="nl">einddatum</rdfs:label>
+    <rdfs:label xml:lang="en">end date</rdfs:label>
+    <rdfs:comment xml:lang="nl">De eindtijd van een periode waarin een of meer gegevens die worden bijgehouden over een object een wijziging hebben ondergaan.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The end of the time period in which object data have been changed.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Mutatie"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://lod.geodan.nl/vocab/bag#openbareruimtenaam">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+    <rdfs:label xml:lang="en">name of a public space</rdfs:label>
+    <rdfs:label xml:lang="nl">openbareruimtenaam</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+    <rdfs:seeAlso rdf:resource="http://data.stelselvanbasisregistraties.nl/bag/id/gegevenselement/Naam_Openbare_ruimte-Openbare_ruimte"/>
+    <rdfs:domain rdf:resource="http://lod.geodan.nl/vocab/bag#Openbareruimtemutatie"/>
+    <rdfs:comment xml:lang="nl">Een door het bevoegde gemeentelijke orgaan toegekende benaming van een openbare ruimte.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The name assigned by the municipal authority to a public space.</rdfs:comment>
+  </rdf:Property>
+</rdf:RDF>

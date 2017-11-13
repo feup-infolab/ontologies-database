@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="./ns-schema.xsl" type="text/xsl" media="screen"?>
+<!DOCTYPE rdf:RDF [
+ <!ENTITY owl  "http://www.w3.org/2002/07/owl#">
+ <!ENTITY rdf  "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+ <!ENTITY music "http://www.kanzaki.com/ns/music">
+ <!ENTITY dc  "http://purl.org/dc/elements/1.1/">
+ <!ENTITY dcterms "http://purl.org/dc/terms/">
+ <!ENTITY foaf  "http://xmlns.com/foaf/0.1/">
+ <!ENTITY wordnet "http://xmlns.com/wordnet/1.6/">
+ <!ENTITY cal "http://www.w3.org/2002/12/cal/ical#">
+ <!ENTITY ex  "http://purl.org/net/ns/ex#">
+ <!ENTITY ont  "http://purl.org/net/ns/ontology-annot#">
+]>
+<rdf:RDF xmlns:owl="&owl;" xmlns:rdf="&rdf;" xmlns:rdfs="&rdfs;" xmlns:dc="&dc;" xmlns:dcterms="&dcterms;" xmlns:foaf="&foaf;" xmlns:wn="&wordnet;" xmlns:ex="&ex;" xmlns:m="&music;#" xmlns:ont="&ont;" xml:base="&music;">
+
+ <owl:Ontology rdf:about="">
+  <owl:imports rdf:resource="http://www.kanzaki.com/ns/dliser.rdf"/>
+  <!--
+  <owl:priorVersion rdf:resource="http://www.kanzaki.com/ns/music-rdfs.rdf" rdfs:comment="Prior RDF Schema version"/>
+  -->
+  <rdfs:label>Music Vocabulary</rdfs:label>
+  <rdfs:comment>A vocabulary, or music ontology, to describe classical music and performances. Classes (categories) for musical works, events, instruments and performers, as well as related properties are defined. Make sure to distinguish musical works (e.g. Opera) from performance events (Opera_Event), or works (String_Quartette) from performer (StringQuartetEnsemble in this vocab), whose natural language terms are used interchangeblly. The present version experiments more precise model to describe a musical work, its representations (performances, scores, etc) and a musical event to present a representation (a concert). Includes 30 keys as individuals.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">音楽作品、楽器、演奏情報を記述するためのボキャブラリ。Opera_Event（演奏）とOpera（作品）や、String_Quartette（作品）とStringQuartetEnsemble（団体）のように、日常語では両方の意味に使われるクラスの区別に注意。このバージョンでは、音楽作品、その表現（演奏、楽譜など）とイベント（演奏会）をより精密にモデリングするべく実験中。</rdfs:comment>
+  <owl:versionInfo>Version 0.9.6 - OWL DL version. Some stable, some experimental. Changed terms: Opera_Performance to Opera_Event, Ballet_Performance to Ballet_Event.</owl:versionInfo>
+  <ont:created>2003-07-04</ont:created>
+  <ont:modified>2007-10-31</ont:modified>
+  <!--previous:2007-01-15,08-23-->
+  <ont:creator>
+   <foaf:Person>
+    <foaf:name xml:lang="ja">神崎正英</foaf:name>
+    <foaf:homepage rdf:resource="http://www.kanzaki.com/"/>
+    <rdfs:seeAlso rdf:resource="http://www.kanzaki.com/info/webwho.rdf"/>
+   </foaf:Person>
+  </ont:creator>
+ </owl:Ontology>
+
+<!-- = = = = = = = = = = = = = = = = = = = = = -->
+<!-- ====         Class definitions       ==== -->
+<!-- = = = = = = = = = = = = = = = = = = = = = -->
+
+<!--**** Musical Work Related Classes ****-->
+ 
+ <owl:Class rdf:ID="Musical_Work">
+  <rdfs:label>Musical Work</rdfs:label>
+  <rdfs:comment>A musical work in any form, e.g. a composition, its movement, phrase, theme etc.</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Oeuvre">
+  <rdfs:label>Oeuvre</rdfs:label>
+  <rdfs:comment>A (complete) musical work by a composer.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Movement">
+  <rdfs:label>Movement</rdfs:label>
+  <rdfs:comment>A subsection of a musical work. Typically a movement of a symphony, but also a piece of suit, etc.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+
+ <owl:Class rdf:ID="Orchestral_Work">
+  <rdfs:label>Orchestral Work</rdfs:label>
+  <rdfs:comment>A composition for orchestra (and a soloist or soloists, optionally with chorus)</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Opera">
+  <rdfs:label>Opera (Work)</rdfs:label>
+  <rdfs:comment>A musical work with drama, song, chorus and orchestral music. Note 'Opera_Event' in this vocabulary describes the performance of an opera.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Ballet">
+  <rdfs:label>Ballet (Work)</rdfs:label>
+  <rdfs:comment>A musical work for a dance form featuring a staged presentation of group or solo dancing. Note 'Ballet_Event' in this vocabulary describes the performance of a ballet.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Symphony">
+  <rdfs:label>Symphony</rdfs:label>
+  <rdfs:comment>A large and complex work for symphony orchestra</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Orchestral_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Concerto">
+  <rdfs:label>Concerto</rdfs:label>
+  <rdfs:comment>A composition for orchestra and a soloist</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Orchestral_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Overture">
+  <rdfs:label>Overture</rdfs:label>
+  <rdfs:comment>An orchestral music composed for the opening of an opera or oratorio, often played as an independend work in concerts</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Orchestral_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Suite">
+  <rdfs:label>Suite</rdfs:label>
+  <rdfs:comment>A musical composition of several movements only loosely connected</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Symphonic_Poem">
+  <rdfs:label>Symphonic Poem</rdfs:label>
+  <rdfs:comment>An orchestral composition based on a thematic subject</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Orchestral_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Religious_Music">
+  <rdfs:label>Religious Music</rdfs:label>
+  <rdfs:comment>A genre of music composed for performance as part of religious ceremonies</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Chamber_Music">
+  <rdfs:label>Chamber Music</rdfs:label>
+  <rdfs:comment>A genre of music composed for performance by small ensemble</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="String_Quartet">
+  <rdfs:label>String Quartet</rdfs:label>
+  <rdfs:comment>A music composed for instrumental quartet with 2 violins and a viola and a cello. Note 'StringQuartetEnsemble' is SQ ensemble in this vocabulary.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Chamber_Music"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+ 
+ <owl:DeprecatedClass rdf:ID="String_Quartette">
+  <rdf:type rdf:resource="&owl;Class"/>
+  <owl:equivalentClass rdf:resource="#String_Quartet"/>
+ </owl:DeprecatedClass>
+
+ <owl:Class rdf:ID="Choral_Music">
+  <rdfs:label>Choral Music</rdfs:label>
+  <rdfs:comment>A genre of music composed for performance by a chorus or choir</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Cantata">
+  <rdfs:label>Cantata</rdfs:label>
+  <rdfs:comment>A vocal composition accompanied by instruments and generally containing more than one movement.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Choral_Music"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Oratorio">
+  <rdfs:label>Oratorio</rdfs:label>
+  <rdfs:comment>A large musical composition for orchestra, vocal soloists and chorus</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Choral_Music"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Text">
+  <rdfs:label>Text</rdfs:label>
+  <rdfs:comment>Text of a musical work (e.g. lyric or verse)</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Key">
+  <rdfs:label>Key</rdfs:label>
+  <rdfs:comment>A key of a musical work (e.g. C-dur, b-moll)</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+
+<!--**** Musical Representation Related Classes ****-->
+ 
+ <owl:Class rdf:ID="Musical_Representation">
+  <rdfs:label>Musical Representation</rdfs:label>
+  <rdfs:comment>Representation of a musical work, such as a score, sheet music, perfornamce, recoding, etc.</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Performance">
+  <rdfs:label>Peroformance</rdfs:label>
+  <rdfs:comment>Representation of a musical work in the form of performace, e.g. playing instruments, singing etc. Note a concert is a Musical_Event where a Performance is presented.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Representation"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+<!-- documents -->
+
+ <owl:Class rdf:ID="Written_Representation">
+  <rdfs:label>Written Representation</rdfs:label>
+  <rdfs:comment>Representation of a musical work in the form of a written expression, e.g. score, parts, autograph, printed music, sketch, etc.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Representation"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Score">
+  <rdfs:label>Score</rdfs:label>
+  <rdfs:comment>A full score or piano-vocal score of a work, either published or manuscript.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Written_Representation"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Part">
+  <rdfs:label>Part</rdfs:label>
+  <rdfs:comment>A music for a particular instrument or voice taken from a full score (Note: in this ontology, Part is not a division of an orchestra).</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Written_Representation"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Sketch">
+  <rdfs:label>Sketch</rdfs:label>
+  <rdfs:comment>A sketch, or a brief prelimary composition of a work.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Written_Representation"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+
+
+
+
+<!--**** Performing Event Related Classes ****-->
+ <owl:Class rdf:ID="Musical_Event">
+  <rdfs:label>Musical Event</rdfs:label>
+  <rdfs:comment>An event of musical performance by players or singers, including theatrical staging. Typically the event has date and location. Note this is different from Performance, which is a 'representation' of a musical work realized at a musical event or recording, etc.</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Concert">
+  <rdfs:label>Concert</rdfs:label>
+  <rdfs:comment>An event of musical performance by players or singers not involving theatrical staging</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Event"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Recital">
+  <rdfs:label>Recital</rdfs:label>
+  <rdfs:comment>An event of musical performance especially by soloists</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Event"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Opera_Event">
+  <rdfs:label>Opera Event</rdfs:label>
+  <rdfs:comment>An event of opera performance (not an opera as a musical work, which is defined here as 'Opera')</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Event"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:DeprecatedClass rdf:ID="Opera_Performance">
+  <rdf:type rdf:resource="&owl;Class"/>
+  <owl:equivalentClass rdf:resource="#Opera_Event"/>
+ </owl:DeprecatedClass>
+
+ <owl:Class rdf:ID="Ballet_Event">
+  <rdfs:label>Ballet Event</rdfs:label>
+  <rdfs:comment>An event of ballet performance
+  </rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Event"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:DeprecatedClass rdf:ID="Ballet_Performance">
+  <rdf:type rdf:resource="&owl;Class"/>
+  <owl:equivalentClass rdf:resource="#Ballet_Event"/>
+ </owl:DeprecatedClass>
+
+ <owl:Class rdf:ID="Venue">
+  <rdfs:label>Venue</rdfs:label>
+  <rdfs:comment>A venue for musical performance, e.g. concert hall, opera house, recital hall, etc.</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+<!--**** Musical Instrument Related Classes ****-->
+
+ <owl:Class rdf:ID="Musical_Instrument">
+  <rdfs:label>Musical Instrument</rdfs:label>
+  <rdfs:comment>An instrument to play music</rdfs:comment>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="String_Instrument">
+  <rdfs:label>String Instrument</rdfs:label>
+  <rdfs:comment>A stringed musical instrument, in which sound is produced by plucking, striking, or bowing taut strings.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Woodwind_Instrument">
+  <rdfs:label>Woodwind Instrument</rdfs:label>
+  <rdfs:comment>A wind musical instrument, in which sound is produced by the vibration of reeds in the mouthpiece, or by the passing of air across the mouthpiece.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Brass_Instrument">
+  <rdfs:label>Brass Instrument</rdfs:label>
+  <rdfs:comment>A wind musical instrument, that consists of a brass tube  blown by means of a cup-shaped or funnel-shaped mouthpiece.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Percussion">
+  <rdfs:label>Percussion</rdfs:label>
+  <rdfs:comment>A musical instrument that produces sound by striking the body.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Keyboard_Instrument">
+  <rdfs:label>Keyboard Instrument</rdfs:label>
+  <rdfs:comment>A musical instrument that has a set of keys that consist of scale.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musical_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Violin">
+  <rdfs:label>Violin</rdfs:label>
+  <rdfs:comment>A musical instrument played with a bow, having four strings. Usually plays the highest part of the string section.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Viola">
+  <rdfs:label>Viola</rdfs:label>
+  <rdfs:comment>A stringed instrument of the violin family, slightly larger than a violin, tuned a fifth lower, and having a deeper, more sonorous tone.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Cello">
+  <rdfs:label>Cello</rdfs:label>
+  <rdfs:comment>A stringed instrument of the violin family, with bass to tenor tone. Usually played in sitting position.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Contrabass">
+  <rdfs:label>Contrabass</rdfs:label>
+  <rdfs:comment>The largest member of string insrtument, usually with four or five strings.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Flute">
+  <rdfs:label>Flute</rdfs:label>
+  <rdfs:comment>A high-pitched woodwind instrument; a slender tube closed at one end with finger holes on one end and an opening near the closed end across which the breath is blown</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Woodwind_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Piccolo">
+  <rdfs:label>Piccolo</rdfs:label>
+  <rdfs:comment>A piccolo flute, smaller member of the flute family.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Flute"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Oboe">
+  <rdfs:label>Oboe</rdfs:label>
+  <rdfs:comment>A woodwind instrument with a conical bore and a double-reed mouthpiece.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Woodwind_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="EnglishHorn">
+  <rdfs:label>English Horn</rdfs:label>
+  <rdfs:comment>A double-reed woodwind instrument, larger member of the oboe family.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oboe"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Clarinet">
+  <rdfs:label>Clarinet</rdfs:label>
+  <rdfs:comment>A woodwind instrument having a straight cylindrical tube with a flaring bell and a single-reed mouthpiece.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Woodwind_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="BassClarinet">
+  <rdfs:label>Bass Clarinet</rdfs:label>
+  <rdfs:comment>A larger member of the clarinet family, usually in key B-flat.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Clarinet"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="SopranoClarinet">
+  <rdfs:label>Soprano Clarinet</rdfs:label>
+  <rdfs:comment>A smaller member of the clarinet family, commonly in key E-flat.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Clarinet"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="BassetHorn">
+  <rdfs:label>Basset Horn</rdfs:label>
+  <rdfs:comment>A larger member of the clarinet family, typically in lower F, and has darker and less brilliant timbre.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Clarinet"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Bassoon">
+  <rdfs:label>Bassoon</rdfs:label>
+  <rdfs:comment>A low-pitched woodwind instrument with a double reed, having a long wooden body attached to a U-shaped lateral tube that leads to the mouthpiece. A Fagotto.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Woodwind_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Contrafagotto">
+  <rdfs:label>Contrafagotto</rdfs:label>
+  <rdfs:comment>A larger mebmer of the basoon family, producing the lowest tone in the woodwind section.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Bassoon"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Saxophone">
+  <rdfs:label>Saxophone</rdfs:label>
+  <rdfs:comment>A woodwind instrument with a single-reed mouthpiece and a (usually curved) conical metal tube, including soprano, alto, tenor, and baritone sizes.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Woodwind_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Horn">
+  <rdfs:label>Horn</rdfs:label>
+  <rdfs:comment>A brass instrument with a long narrow tube that is coiled in a circle before ending in a flaring bell, usually being equipped with valves. A French Horn.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Brass_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Trumpet">
+  <rdfs:label>Trumpet</rdfs:label>
+  <rdfs:comment>A A soprano brass instrument consisting of a long metal tube looped once and ending in a flared bell, usually being equipped with valves or pistons.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Brass_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Trombone">
+  <rdfs:label>Trombone</rdfs:label>
+  <rdfs:comment>A brass instrument consisting of a long cylindrical tube, and having a movable U-shaped slide for producing different pitches.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Brass_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Tuba">
+  <rdfs:label>Tuba</rdfs:label>
+  <rdfs:comment>A large, valved, brass instrument with a bass pitch.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Brass_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Timpani">
+  <rdfs:label>Timpani</rdfs:label>
+  <rdfs:comment>A set of large copper or brass hemispherical drums with a parchment head that can be tuned by adjusting the tension.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Percussion"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Harp">
+  <rdfs:label>Harp</rdfs:label>
+  <rdfs:comment>An instrument with usually 46 or 47 strings that are played by plucking with the fingers.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Piano">
+  <rdfs:label>Pian</rdfs:label>
+  <rdfs:comment>A musical instrument with a manual keyboard actuating hammers that strike wire strings. A pianoforte.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Keyboard_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Celesta">
+  <rdfs:label>Celesta</rdfs:label>
+  <rdfs:comment>A musical instrument with a keyboard and metal plates struck by hammers that produce bell-like tones.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Keyboard_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Harpsichord">
+  <rdfs:label>Harpsichord</rdfs:label>
+  <rdfs:comment>A keyboard instrument whose strings are plucked by means of quills or plectrums. Cembalo.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Keyboard_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Guitar">
+  <rdfs:label>Guitar</rdfs:label>
+  <rdfs:comment>A musical instrument having a large flat-backed sound box, a long fretted neck, and usually six strings, played by strumming or plucking.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Mandolin">
+  <rdfs:label>Mandolin</rdfs:label>
+  <rdfs:comment>A pear-shaped small stringed instrument descended from the lute, played with a pick.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#String_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+
+
+<!--**** Musician and Artist Related Classes ****-->
+ <owl:Class rdf:ID="Artist">
+  <rdfs:label>Artist</rdfs:label>
+  <rdfs:comment>A person or group (or any agent) who creates or performs art works</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="&foaf;Agent"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="MusicalGroup">
+  <rdfs:label>Musical Group</rdfs:label>
+  <rdfs:comment>A group that performs art works</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Artist"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Composer">
+  <rdfs:label>Composer</rdfs:label>
+  <rdfs:comment>A person (or any agent) who composed art works</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Artist"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Musician">
+  <rdfs:label>Musician</rdfs:label>
+  <rdfs:comment>An artist who performs, composes or conducts music</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Artist"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Director">
+  <rdfs:label>Director</rdfs:label>
+  <rdfs:comment>An artist who directs a musical group</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Artist"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Player">
+  <rdfs:label>Player</rdfs:label>
+  <rdfs:comment>An artist who performs a musical instrument</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Singer">
+  <rdfs:label>Singer</rdfs:label>
+  <rdfs:comment>An artist who sings a song</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+<!-- directors -->
+ <owl:Class rdf:ID="Conductor">
+  <rdfs:label>Conductor</rdfs:label>
+  <rdfs:comment>A Conductor</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Director"/>
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="MusicDirector">
+  <rdfs:label>Music Director</rdfs:label>
+  <rdfs:comment>The person who leads a musical group</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Director"/>
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Choreographer">
+  <rdfs:label>Choreographer</rdfs:label>
+  <rdfs:comment>someone who creates new dances, or directs an opera</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Director"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+<!-- instrumental performers -->
+ <owl:Class rdf:ID="Violinist">
+  <rdfs:label>Violinist</rdfs:label>
+  <rdfs:comment>A Violn player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Violin"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Violist">
+  <rdfs:label>Violist</rdfs:label>
+  <rdfs:comment>A Viola player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Viola"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Cellist">
+  <rdfs:label>Cellist</rdfs:label>
+  <rdfs:comment>A Cello player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Cello"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Contrabassist">
+  <rdfs:label>Contrabassist</rdfs:label>
+  <rdfs:comment>A Contrabass player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Contrabass"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Flutist">
+  <rdfs:label>Flutist</rdfs:label>
+  <rdfs:comment>A Flute player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Flute"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="PiccoloPlayer">
+  <rdfs:label>Piccolo player</rdfs:label>
+  <rdfs:comment>A Piccolo flute player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Flutist"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Piccolo"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Oboist">
+  <rdfs:label>Oboist</rdfs:label>
+  <rdfs:comment>An Oboe player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Oboe"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="EnglishHornPlayer">
+  <rdfs:label>English Horn player</rdfs:label>
+  <rdfs:comment>An English Horn player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Oboist"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#EnglishHorn"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Clarinettist">
+  <rdfs:label>Clarinettist</rdfs:label>
+  <rdfs:comment>A Clarinet player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Clarinet"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="BassClarinettist">
+  <rdfs:label>Bass_Clarinettist</rdfs:label>
+  <rdfs:comment>A Bass Clarinet player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Clarinettist"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#BassClarinet"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Bassoonist">
+  <rdfs:label>Bassoonist</rdfs:label>
+  <rdfs:comment>A Fagotto player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Bassoon"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="ContrafagottoPlayer">
+  <rdfs:label>ContrafagottoPlayer</rdfs:label>
+  <rdfs:comment>A Contrafagotto player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Bassoonist"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Contrafagotto"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Hornist">
+  <rdfs:label>Hornist</rdfs:label>
+  <rdfs:comment>A Horn player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Horn"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Trumpeter">
+  <rdfs:label>Trumpeter</rdfs:label>
+  <rdfs:comment>A Trumpet player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Trumpet"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Trombonist">
+  <rdfs:label>Trombonist</rdfs:label>
+  <rdfs:comment>A Trombone player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Trombone"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="TubaPlayer">
+  <rdfs:label>TubaPlayer</rdfs:label>
+  <rdfs:comment>A Tuba player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Tuba"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Timpanist">
+  <rdfs:label>Timpanist</rdfs:label>
+  <rdfs:comment>A Timpani player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Timpani"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Harpist">
+  <rdfs:label>Harpist</rdfs:label>
+  <rdfs:comment>A Harp player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Harp"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Pianist">
+  <rdfs:label>Pianist</rdfs:label>
+  <rdfs:comment>A Piano player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Piano"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="CelestaPlayer">
+  <rdfs:label>CelestaPlayer</rdfs:label>
+  <rdfs:comment>A Celesta player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Celesta"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Percussionist">
+  <rdfs:label>Percussionist</rdfs:label>
+  <rdfs:comment>A Percussion player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Percussion"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Guitarist">
+  <rdfs:label>Guitarist</rdfs:label>
+  <rdfs:comment>A Guitar player</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Player"/>
+  <rdfs:subClassOf>
+   <owl:Restriction>
+    <owl:onProperty rdf:resource="#plays"/>
+    <owl:someValuesFrom rdf:resource="#Guitar"/>
+   </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+<!-- singers -->
+ <owl:Class rdf:ID="Soprano">
+  <rdfs:label>Soprano</rdfs:label>
+  <rdfs:comment>A Soprano singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="MezzoSoprano">
+  <rdfs:label>Mezzo Soprano</rdfs:label>
+  <rdfs:comment>A Mezzo Soprano singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Alto">
+  <rdfs:label>Alto</rdfs:label>
+  <rdfs:comment>An Alto singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Tenor">
+  <rdfs:label>Tenor</rdfs:label>
+  <rdfs:comment>A Tenor singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Countertenor">
+  <rdfs:label>Countertenor</rdfs:label>
+  <rdfs:comment>A Countertenor singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Baritone">
+  <rdfs:label>Baritone</rdfs:label>
+  <rdfs:comment>A Baritone singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Bass">
+  <rdfs:label>Bass</rdfs:label>
+  <rdfs:comment>A Bass singer</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Singer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+<!-- Performance groups -->
+
+ <owl:Class rdf:ID="Orchestra">
+  <rdfs:label>Orchestra</rdfs:label>
+  <rdfs:comment>A musical group which perfroms large scale symphonic works</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#MusicalGroup"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Ensemble">
+  <rdfs:label>Ensemble</rdfs:label>
+  <rdfs:comment>A musical group which perfroms in relatively small size, particularly chamber music</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#MusicalGroup"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="StringQuartetEnsemble">
+  <rdfs:label>Qtring Quartet</rdfs:label>
+  <rdfs:comment>A musical group of four string players. Note 'String_Quartette' is SQ as musical work in this vocabulary.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#MusicalGroup"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="Chorus">
+  <rdfs:label>Chorus</rdfs:label>
+  <rdfs:comment>A musical group of singers.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#MusicalGroup"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="OperaCompany">
+  <rdfs:label>Opera Company</rdfs:label>
+  <rdfs:comment>A musical group that performs opera works.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#MusicalGroup"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+ <owl:Class rdf:ID="BalletCompany">
+  <rdfs:label>Ballet Company</rdfs:label>
+  <rdfs:comment>A musical group that performs ballet works.</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#MusicalGroup"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:Class>
+
+
+
+
+
+<!-- = = = = = = = = = = = = = = = = = = = = = -->
+<!-- ====       Property definitions      ==== -->
+<!-- = = = = = = = = = = = = = = = = = = = = = -->
+
+<!--**** Musical Work Related Properties ****-->
+ <owl:ObjectProperty rdf:ID="description">
+  <rdfs:label>Description</rdfs:label>
+  <rdfs:comment>A description of the subject musical work. Super-property of some properties in this vocabulary, as well as description of a general descriptive resource such as time-line of composing process.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Musical_Work"/>
+  <rdfs:range rdf:resource="&owl;Thing"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="event_description">
+  <rdfs:label>Event Description</rdfs:label>
+  <rdfs:comment>A description of the subject musical event. Super-property of #program, #presents, #venue.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Musical_Event"/>
+  <rdfs:range rdf:resource="&owl;Thing"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="artist_description">
+  <rdfs:label>Artist Description</rdfs:label>
+  <rdfs:comment>A description of the subject artist or agent. Super-property of #plays, #performs.</rdfs:comment>
+  <rdfs:domain rdf:resource="&foaf;Agent"/>
+  <rdfs:range rdf:resource="&owl;Thing"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="composer">
+  <rdfs:label>Composer</rdfs:label>
+  <rdfs:comment>The subject musical work is composed by a person, a group, a software program etc.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:subPropertyOf rdf:resource="&dc;creator"/>
+  <rdfs:domain rdf:resource="#Oeuvre"/>
+  <rdfs:range rdf:resource="&foaf;Agent"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="composition">
+  <rdfs:label>Composition</rdfs:label>
+  <rdfs:comment>Describes the composition process of the subject. Composition period or completion date, place, revision etc. can be described as properties of the object composition process.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="premiere">
+  <rdfs:label>Premiere</rdfs:label>
+  <rdfs:comment>The subject musical work was first performed at an concert</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:range rdf:resource="#Musical_Event"/>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<m:Symphony>
+ <m:composer foaf:name="Shubert"/>
+ <dc:title>Symohony No.7 'Unfinished'</dc:title>
+ <m:opus>D.759</m:opus>
+ <dcterms:created>1822-01</dcterms:created>
+ <m:premiere rdf:parseType="Resource">
+  <dc:date>1865-12-17</dc:date>
+  <cal:location>Wien Musikfereinsall</cal:location>
+ </m:premiere>
+</m:Symphony>
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="published">
+  <rdfs:label>published</rdfs:label>
+  <rdfs:comment>The subject musical work is published as a score or sheet music (still not sure what kind of class is appropriate as the range)</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:range rdf:resource="#Written_Representation"/>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<m:Symphony>
+ <m:composer foaf:name="Beethoven"/>
+ <dc:title>Symphony No.9</dc:title>
+ <m:opus>Op.125</m:opus>
+ <m:published>
+  <m:Score>
+   <dc:date>1826-08</dc:date>
+   <dc:description>The first published edition</dc:description>
+   <dc:publisher>Schott</dc:publisher>
+  </m:Score>
+ </m:published>
+</m:Symphony>
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="source">
+  <rdfs:label>Source</rdfs:label>
+  <rdfs:comment>The subject musical work has a historical source, such as sketch, autograph score or published score.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:range rdf:resource="#Written_Representation"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="sections">
+  <rdfs:label>Sections</rdfs:label>
+  <rdfs:comment>The subject musical work has subsections such as movements. Current model recommends RDF Collection as the object.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:domain rdf:resource="#Oeuvre"/>
+  <rdfs:range rdf:resource="&owl;Thing"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+<!-- textual descriptions of a musical work -->
+
+ <owl:DatatypeProperty rdf:ID="opus">
+  <rdfs:label>Opus</rdfs:label>
+  <rdfs:comment>The subject musical composition has an identifier assigned by a composer (e.g. 'op.131') or other editor (e.g. 'KV.551')</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;identifier"/>
+  <rdfs:domain rdf:resource="#Oeuvre"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:ID="form">
+  <rdfs:label>Form</rdfs:label>
+  <rdfs:comment>The subject musical work or its movement has a form, such as sonata, minuet, etc. Would be better defined as ObjectProperty.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+  <rdfs:domain rdf:resource="#Musical_Work"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+ <owl:ObjectProperty rdf:ID="key">
+  <rdfs:label>Key</rdfs:label>
+  <rdfs:comment>The subject musical work or its movement has a key, such as C major, d minor, etc.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#description"/>
+  <rdfs:domain rdf:resource="#Musical_Work"/>
+  <rdfs:range rdf:resource="#Key"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:DatatypeProperty rdf:ID="keyName">
+  <rdfs:label>Key Name</rdfs:label>
+  <rdfs:comment>The subject musical work or its movement has a key. Textual version of #key.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+  <rdfs:domain rdf:resource="#Musical_Work"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:ID="marks">
+  <rdfs:label>Marks</rdfs:label>
+  <rdfs:comment>The subject musical work or its movement has instruction mark(s) of tempo and/or expression</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+  <rdfs:domain rdf:resource="#Musical_Work"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:ID="meter">
+  <rdfs:label>Meter</rdfs:label>
+  <rdfs:comment>The subject musical work or its movement has a time measure such as 3/4, 4/4, 6/8 etc</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+  <rdfs:domain rdf:resource="#Musical_Work"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+<!--**** Musical Representation Related Properties ****-->
+
+ <owl:ObjectProperty rdf:ID="represents">
+  <rdfs:label>Represents</rdfs:label>
+  <rdfs:comment>The subject (performance, score, etc) is a representation of the object musical work. An experiment to have better model.</rdfs:comment>
+  <rdfs:domain rdf:resource="#Musical_Representation"/>
+  <rdfs:range rdf:resource="#Musical_Work"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="derivedFrom">
+  <rdfs:label>Derived From</rdfs:label>
+  <rdfs:comment>The subject is (was) derived from the object, e.g a copy score is derived from the composer manuscript (or, possibly, a CD recording is derived from a performance at a concert).</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;source"/>
+  <rdfs:domain rdf:resource="#Musical_Representation"/>
+  <rdfs:range rdf:resource="#Musical_Representation"/>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<m:Symphony rdf:about="http://purl.org/net/masterwork/beethoven/op.125">
+ <m:source>
+  <m:Score rdf:about="urn:musicalsource:lvb/125/autograph">
+   <dc:title>Autograph score</dc:title>
+  </m:Score>
+ </m:source>
+ <m:source>
+  <m:Score rdf:about="urn:musicalsource:lvb/125/copystscore1">
+   <dc:title>A copyist's socore used as engraver's copy</dc:title>
+   <m:derivedFrom rdf:resource="urn:musicalsource:lvb/125/autograph"/>
+  </m:Score>
+ </m:source>
+</m:Symphony>
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+<!--**** Performance Related Properties ****-->
+
+ <owl:ObjectProperty rdf:ID="performer">
+  <rdfs:label>Performer</rdfs:label>
+  <rdfs:comment>The subject has a performer (an artist, a group, a machine etc.). The preferred domain of this property is #Performance, so as to model that "a concert presents a performance (of a musical work) that is realized by this performer". However, in natural language, we often say that "a concert has performers who play these musical works", i.e. the domain of 'performer' is #Musical_Event in this case, and it would be more intuitive model. Hence, the domain is leave unrestricted here for a moment.<!--If the object agent does not have 'performs' property, the agent is assumed to perform all programs of the subject musical event.--> </rdfs:comment>
+  <!--rdfs:domain rdf:resource="#Musical_Event"/-->
+  <rdfs:range rdf:resource="&foaf;Agent"/>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<!--Preferred description.-->
+<m:Concert>
+ <m:presents>
+  <m:Performance>
+   <m:conductor foaf:name="Sir Roger Norrington"/>
+   <m:performer foaf:name="R.S.O. Stuttgart"/>
+   <m:represents>
+    <m:Symphony>
+     <m:composer foaf:name="Brahms"/>
+     <dc:title>Symphony No.2 D major</dc:title>
+    </m:Symphony>
+   </m:represents>
+  </m:Performance>
+ </m:presents>
+</m:Concert>
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+  <ex:example>
+   <ex:Example>
+   <ex:code><![CDATA[
+<!--Possibly more intuitive description.-->
+<m:Concert>
+ <m:conductor foaf:name="Sir Roger Norrington"/>
+ <m:performer foaf:name="R.S.O. Stuttgart"/>
+ <m:program>
+  <m:Symphony>
+   <m:composer foaf:name="Brahms"/>
+   <dc:title>Symphony No.2 D major</dc:title>
+  </m:Symphony>
+ </m:program>
+</m:Concert>
+
+<!-- An application may infer that:
+{X a m:Concert; m:performer Y; m:program Z.} =>
+{X m:presents [a m:Performance; m:performer Y; m:represents Z] .}
+-->
+]]></ex:code>
+   </ex:Example>
+  </ex:example>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="soloist">
+  <rdfs:label>Soloist</rdfs:label>
+  <rdfs:comment>The subject performance is performed by this soloist (or the subject musical event has a soloist. See comment of #performer.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#performer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="conductor">
+  <rdfs:label>Conductor</rdfs:label>
+  <rdfs:comment>The subject performance is coducted by the object (or the subject musical event has a conductor). See comment of #performer.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#performer"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="performs">
+  <rdfs:label>Performs</rdfs:label>
+  <rdfs:comment>The subject artist (or group, machine, etc) performs a musical work.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#artist_description"/>
+  <owl:inverseOf rdf:resource="#performer"/>
+  <rdfs:domain rdf:resource="&foaf;Agent"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="program">
+  <rdfs:label>Program</rdfs:label>
+  <rdfs:comment>The subject musical event presents a musical work as its program</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#event_description"/>
+  <rdfs:range rdf:resource="#Oeuvre"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <owl:ObjectProperty rdf:ID="plays">
+  <rdfs:label>Plays</rdfs:label>
+  <rdfs:comment>The subject artist (or group, machine, etc) plays an musical instrument. If :me :plays :Violin, then :me a :Violininst.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#artist_description"/>
+  <rdfs:range rdf:resource="#Musical_Instrument"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+ <!-- experiments as of 2006-06-18 -->
+ 
+ <owl:ObjectProperty rdf:ID="presents">
+  <rdfs:label>Presents</rdfs:label>
+  <rdfs:comment>The subject musical event presents a performance of a musical work. An experiment to have better model to describe musical work, its representation and an event to present the representation.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#event_description"/>
+  <rdfs:range rdf:resource="#Performance"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+ <owl:ObjectProperty rdf:ID="venue">
+  <rdfs:label>Venue</rdfs:label>
+  <rdfs:comment>The subject musical event is presented at the object venue.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#event_description"/>
+  <rdfs:range rdf:resource="#Venue"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:ObjectProperty>
+
+
+
+<!--**** Textual description of a musical event ****-->
+
+ <owl:DatatypeProperty rdf:ID="performerName">
+  <rdfs:label>PerformerName</rdfs:label>
+  <rdfs:comment>The subject musical event has a performer. Literal version of #performer.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+  <rdfs:domain rdf:resource="#Musical_Event"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:ID="conductorName">
+  <rdfs:label>Conductor Name</rdfs:label>
+  <rdfs:comment>The subject musical event has a conductor. Literal version of #conductor.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="#performerName"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+ <owl:DatatypeProperty rdf:ID="programLine">
+  <rdfs:label>Program Line</rdfs:label>
+  <rdfs:comment>The subject musical event presents a musical work as its program. Literal version of #program.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="&dc;description"/>
+  <rdfs:domain rdf:resource="#Musical_Event"/>
+  <rdfs:range rdf:resource="&rdfs;Literal"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </owl:DatatypeProperty>
+
+
+
+<!-- === Externals to complete the ontoloty as OWL DL ==== -->
+
+ <owl:Class rdf:about="&foaf;Agent"/>
+ <owl:ObjectProperty rdf:about="&dc;creator"/>
+ <owl:ObjectProperty rdf:about="&dc;source"/>
+ <owl:DatatypeProperty rdf:about="&dc;identifier"/>
+ <owl:DatatypeProperty rdf:about="&dc;description"/>
+
+ <owl:DatatypeProperty rdf:about="&dcterms;alternative"/>
+ <owl:ObjectProperty rdf:about="&dcterms;description"/>
+ <owl:Ontology rdf:about="http://www.kanzaki.com/ns/music-rdfs.rdf"/>
+
+
+
+<!-- ==== Individuals ==== -->
+
+
+ <m:Key rdf:ID="C-dur">
+  <rdfs:label>C dur</rdfs:label>
+  <dcterms:alternative>C major</dcterms:alternative>
+  <rdfs:comment>Major key based on C, whose key signature has no sharp or flat.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/C_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="G-dur">
+  <rdfs:label>G dur</rdfs:label>
+  <dcterms:alternative>G major</dcterms:alternative>
+  <rdfs:comment>Major key based on G, whose key signature has 1 sharp.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/G_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="D-dur">
+  <rdfs:label>D dur</rdfs:label>
+  <dcterms:alternative>D major</dcterms:alternative>
+  <rdfs:comment>Major key based on D, whose key signature has 2 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/D_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="A-dur">
+  <rdfs:label>A dur</rdfs:label>
+  <dcterms:alternative>A major</dcterms:alternative>
+  <rdfs:comment>Major key based on A, whose key signature has 3 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/A_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="E-dur">
+  <rdfs:label>E dur</rdfs:label>
+  <dcterms:alternative>E major</dcterms:alternative>
+  <rdfs:comment>Major key based on E, whose key signature has 4 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/E_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="H-dur">
+  <rdfs:label>H dur</rdfs:label>
+  <dcterms:alternative>B major</dcterms:alternative>
+  <rdfs:comment>Major key based on B, whose key signature has 5 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/B_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="Fis-dur">
+  <rdfs:label>Fis dur</rdfs:label>
+  <dcterms:alternative>F-Sharp major</dcterms:alternative>
+  <rdfs:comment>Major key based on F sharp, whose key signature has 6 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/F_sharp_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="Cis-dur">
+  <rdfs:label>Cis dur</rdfs:label>
+  <dcterms:alternative>C-Sharp major</dcterms:alternative>
+  <rdfs:comment>Major key based on C sharp, whose key signature has 7 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/C_sharp_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="F-dur">
+  <rdfs:label>F dur</rdfs:label>
+  <dcterms:alternative>F major</dcterms:alternative>
+  <rdfs:comment>Major key based on F, whose key signature has 1 flat.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/F_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="B-dur">
+  <rdfs:label>B dur</rdfs:label>
+  <dcterms:alternative>B-Flat major</dcterms:alternative>
+  <rdfs:comment>Major key based on B flat, whose key signature has 2 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/B_flat_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="Es-dur">
+  <rdfs:label>Es dur</rdfs:label>
+  <dcterms:alternative>E-Flat major</dcterms:alternative>
+  <rdfs:comment>Major key based on E flat, whose key signature has 3 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/E_flat_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="As-dur">
+  <rdfs:label>As dur</rdfs:label>
+  <dcterms:alternative>A-Flat major</dcterms:alternative>
+  <rdfs:comment>Major key based on A flat, whose key signature has 4 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/A_flat_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="Des-dur">
+  <rdfs:label>Des dur</rdfs:label>
+  <dcterms:alternative>D-Flat major</dcterms:alternative>
+  <rdfs:comment>Major key based on D flat, whose key signature has 5 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/D_flat_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="Ges-dur">
+  <rdfs:label>Ges dur</rdfs:label>
+  <dcterms:alternative>G-Flat major</dcterms:alternative>
+  <rdfs:comment>Major key based on G flat, whose key signature has 6 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/G_flat_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="Ces-dur">
+  <rdfs:label>Ces dur</rdfs:label>
+  <dcterms:alternative>C-Flat major</dcterms:alternative>
+  <rdfs:comment>Major key based on C flat, whose key signature has 7 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/C_flat_major" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="a-moll">
+  <rdfs:label>a moll</rdfs:label>
+  <dcterms:alternative>A minor</dcterms:alternative>
+  <rdfs:comment></rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/A_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="e-moll">
+  <rdfs:label>e moll</rdfs:label>
+  <dcterms:alternative>E minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on E, whose key signature has 1 sharp.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/E_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="h-moll">
+  <rdfs:label>h moll</rdfs:label>
+  <dcterms:alternative>B minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on B, whose key signature has 2 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/B_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="fis-moll">
+  <rdfs:label>fis moll</rdfs:label>
+  <dcterms:alternative>F-Sharp minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on F sharp, whose key signature has 3 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/F_sharp_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="cis-moll">
+  <rdfs:label>cis moll</rdfs:label>
+  <dcterms:alternative>C-Sharp minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on C sharp, whose key signature has 4 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/C_sharp_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="gis-moll">
+  <rdfs:label>gis moll</rdfs:label>
+  <dcterms:alternative>G-Sharp minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on G sharp, whose key signature has 5 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/G_sharp_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="dis-moll">
+  <rdfs:label>dis moll</rdfs:label>
+  <dcterms:alternative>D-Sharp minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on D sharp, whose key signature has 6 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/D_sharp_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="ais-moll">
+  <rdfs:label>ais moll</rdfs:label>
+  <dcterms:alternative>A-Sharp minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on A sharp, whose key signature has 7 sharps.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/A_sharp_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="d-moll">
+  <rdfs:label>d moll</rdfs:label>
+  <dcterms:alternative>D minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on D, whose key signature has 1 flat.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/D_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="g-moll">
+  <rdfs:label>g moll</rdfs:label>
+  <dcterms:alternative>G minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on G, whose key signature has 2 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/G_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="c-moll">
+  <rdfs:label>c moll</rdfs:label>
+  <dcterms:alternative>C minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on C, whose key signature has 3 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/C_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="f-moll">
+  <rdfs:label>f moll</rdfs:label>
+  <dcterms:alternative>F minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on F, whose key signature has 4 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/F_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="b-moll">
+  <rdfs:label>b moll</rdfs:label>
+  <dcterms:alternative>B-Flat minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on B flat, whose key signature has 5 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/B_flat_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="es-moll">
+  <rdfs:label>es moll</rdfs:label>
+  <dcterms:alternative>E-Flat minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on E flat, whose key signature has 6 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/E_flat_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+ <m:Key rdf:ID="as-moll">
+  <rdfs:label>as moll</rdfs:label>
+  <dcterms:alternative>A-Flat minor</dcterms:alternative>
+  <rdfs:comment>Minor key based on A flat, whose key signature has 7 flats.</rdfs:comment>
+  <dcterms:description rdf:resource="http://en.wikipedia.org/wiki/A_flat_minor" rdf:type="&foaf;Document"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+ </m:Key>
+
+
+
+<!-- = = = = = = = = = = = = = = = = = = = = = -->
+<!-- ====             Examples            ==== -->
+<!-- = = = = = = = = = = = = = = = = = = = = = -->
+
+ <ex:Example>
+  <rdfs:comment>A simple description of a concert.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">演奏会の簡単な記述例。</rdfs:comment>
+  <ex:pfx>m:</ex:pfx>
+  <ex:image rdf:resource="http://www.kanzaki.com/works/2007/misc/music-vocab-sample1.png"/>
+  <ex:code><![CDATA[
+<m:Concert>
+ <dc:date>2008-02-11</dc:date>
+ <m:conductor>
+  <m:Conductor rdf:about="http://www.kanzaki.com/bass/conductor#長田雅人">
+   <foaf:name>Masato Osada</foaf:name>
+  </m:Conductor>
+ </m:conductor>
+ <m:performer>
+  <m:Orchestra rdf:about="http://www.kanzaki.com/bass/orch#オーケストラ・ダスビダーニャ">
+   <foaf:name>orchestra 'do svidanya'</foaf:name>
+  </m:Orchestra>
+ </m:performer>
+ <m:program>
+  <m:Symphony rdf:about="http://www.kanzaki.com/music/mcat/shostakovich/op.103#s">
+   <dc:title>Symphony No.11 g-minor</dc:title>
+   <m:opus>op.103</m:opus>
+   <m:composer>
+    <m:Composer rdf:about="http://www.kanzaki.com/ns/psi/en/Dmitri_Shostakovich#s"/>
+   </m:composer>
+  </m:Symphony>
+ </m:program>
+</m:Concert>
+ ]]></ex:code>
+  <ex:exampleOf rdf:resource=""/>
+ </ex:Example>
+
+
+ <ex:Example>
+  <rdfs:comment>Another description of a concert with its title, date, program and venue. See also examples in the definition of 'performer' for more erabolate model (the preferred domain of this property is m:Performance, not m:Concert).</rdfs:comment>
+  <rdfs:comment xml:lang="ja">ある演奏会の名称、日時、プログラム、会場の記述例。より精密なモデルの案として、'performer'の定義セクションにある例も参照。</rdfs:comment>
+  <ex:pfx>m:</ex:pfx>
+  <ex:image>
+   <foaf:Image rdf:about="http://www.kanzaki.com/works/2007/misc/music-vocab-sample2.png" rdfs:label="'circles and arrows' graphical representation of this example"/>
+  </ex:image>
+  <ex:code><![CDATA[
+<m:Concert>
+ <dc:title>Tokyo Green Symphony Orchestra 12th Concert</dc:title>
+ <dc:date>2003-11-02T14:00+09:00</dc:date>
+ <m:conductor foaf:name="Yuri Nitta"/>
+ <m:performer>
+  <m:Violinist>
+   <foaf:name>Tomoko Kawada</foaf:name>
+   <m:performs rdf:nodeID="p1"/>
+  </m:Violinist>
+ </m:performer>
+ <m:performer>
+  <m:Orchestra foaf:name="Tokyo Green Symphony Orchestra"/>
+ </m:performer>
+ <m:program>
+  <m:Concerto rdf:nodeID="p1">
+   <m:composer foaf:name="Bruch"/>
+   <dc:title>Violin Concerto No.1 g minor</dc:title>
+   <m:opus>op.26</m:opus>
+  </m:Concerto>
+ </m:program>
+ <m:program>
+  <m:Symphony>
+   <m:composer foaf:name="Brahms"/>
+   <dc:title>Symphony No.2 D major</dc:title>
+   <m:opus>op.73</m:opus>
+  </m:Symphony>
+ </m:program>
+ <m:venue>
+  <m:Venue geo:lat="35.69" geo:long="139.81">
+   <dc:title>Sumida Triphony</dc:title>
+  </m:Venue>
+ </m:venue>
+</m:Concert>
+ ]]></ex:code>
+  <ex:exampleOf rdf:resource=""/>
+ </ex:Example>
+
+ <ex:Example>
+  <rdfs:comment>A simplified description of a concert with its title, date, program and venue. All property values are literal string here.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">ある演奏会の名称、日時、プログラム、会場を、文字列だけで記述する例。</rdfs:comment>
+  <ex:pfx>m:</ex:pfx>
+  <ex:code><![CDATA[
+<m:Concert>
+ <dc:title>Tokyo Green Symphony Orchestra 12th Concert</dc:title>
+ <dc:date>2003-11-02T14:00+09:00</dc:date>
+ <m:conductorName>Yuri Nitta</m:conductorName>
+ <m:performerName>Violin: Tomoko Kawada</m:performerName>
+ <m:performerName>Orchestra: Tokyo Green Symphony Orchestra</m:performerName>
+ <m:programLine>Bruch: Violin Concerto No.1 g minor</m:programLine>
+ <m:programLine>Brahms: Symphony No.2 D major</m:programLine>
+ <cal:location>Sumida Triphony</cal:location>
+</m:Concert>
+ ]]></ex:code>
+  <ex:exampleOf rdf:resource=""/>
+ </ex:Example>
+
+ <ex:Example>
+  <rdfs:comment>A description of a symphony with its composition data and descriptions of movements. Note now key values are expressed as URIs.</rdfs:comment>
+  <rdfs:comment xml:lang="ja">交響曲の楽曲情報と楽章データの記述例。調性の記述をURIに変更。</rdfs:comment>
+  <ex:trial rdf:resource="http://purl.org/net/masterwork/schubert/D.759"/>
+  <ex:image>
+   <foaf:Image rdf:about="http://www.kanzaki.com/works/2007/misc/music-vocab-sample3.png" rdfs:label="'circles and arrows' graphical representation of this example"/>
+  </ex:image>
+  <ex:pfx>m:</ex:pfx>
+  <ex:code><![CDATA[
+<m:Symphony>
+ <m:composer rdf:parseType="Resource">
+  <foaf:name>シューベルト</foaf:name>
+  <foaf:homepage rdf:resource="http://www.kanzaki.com/music/mw/sym/schubert"/>
+ </m:composer>
+ <dc:title>Symohony No.7 'Unfinished'</dc:title>
+ <m:opus>D.759</m:opus>
+ <m:key rdf:resource="http://www.kanzaki.com/ns/music#h-moll"/>
+ <dcterms:created>1822-01</dcterms:created>
+ <m:premiere rdf:parseType="Resource">
+  <dc:date>1865-12-17</dc:date>
+  <cal:location>Wien Musikfereinsall</cal:location>
+ </m:premiere>
+ <m:sections rdf:parseType="Collection">
+  <m:Movement>
+   <m:marks>Allegro moderato</m:marks>
+   <m:key rdf:resource="http://www.kanzaki.com/ns/music#h-moll"/>
+   <m:meter>3/4</m:meter>
+  </m:Movement>
+  <m:Movement>
+   <m:marks>Andante con moto</m:marks>
+   <m:key rdf:resource="http://www.kanzaki.com/ns/music#Es-dur"/>
+   <m:meter>3/8</m:meter>
+  </m:Movement>
+ </m:sections>
+</m:Symphony>
+ ]]></ex:code>
+  <ex:exampleOf rdf:resource=""/>
+ </ex:Example>
+
+</rdf:RDF>

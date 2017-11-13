@@ -1,0 +1,216 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:liner="https://w3id.org/liner/"
+    xmlns:qudt="http://qudt.org/1.1/schema/qudt#"
+    xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ssn="https://www.w3.org/ns/ssn/"
+    xmlns:qb="http://purl.org/linked-data/cube#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="FeatureOfInterestOntology">
+    <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+    <dcterms:description xml:lang="en">This ontology defines feature of interest and their properties, as an extension of the core classes of the SSN ontology (https://www.w3.org/ns/ssn/).&#xD;
+&#xD;
+A feature of interest is an abstraction of a real world phenomena (thing, person, event, etc). A feature of interest is then defined in terms of its properties, which are qualifiable, quantifiable, observable or operable qualities of the feature of interest. &#xD;
+&#xD;
+Figure below provides an overview of the concepts in this ontology:&#xD;
+&#xD;
+[![Overview of the System ontology](https://w3id.org/seas/featureofinterest.png)](https://w3id.org/seas/featureofinterest.png)&#xD;
+&#xD;
+For example the following RDF Graph describes a fridge, with its property `&lt;fridge/1/consumption&gt;`:&#xD;
+&#xD;
+```&#xD;
+&lt;fridge/1&gt; a seas:FeatureOfInterest ;&#xD;
+  seas:hasProperty &lt;fridge/1/consumption&gt; .&#xD;
+```&#xD;
+&#xD;
+One can further define the semantics of this property by refining the relationship it has with `&lt;fridge/1&gt;`.&#xD;
+This is done using sub properties of `seas:hasProperty`, informally named *property keys*, that are functional properties with domain `seas:FeatureOfInterest` and range `seas:Property`.&#xD;
+For example, &#xD;
+&#xD;
+```&#xD;
+ex:consumption a owl:ObjectProperty , owl:FunctionalProperty ;&#xD;
+  rdfs:subPropertyOf seas:hasProperty ;&#xD;
+  rdfs:domain ex:ElectricPowerSystem ;&#xD;
+  rdfs:range ex:EnergyProperty .&#xD;
+```&#xD;
+&#xD;
+Then the link between `&lt;fridge/1&gt;` and property `&lt;fridge/1/consumption&gt;` can be further specified:&#xD;
+&#xD;
+```&#xD;
+&lt;fridge/1&gt; a seas:FeatureOfInterest ;&#xD;
+  ex:consumption &lt;fridge/1/consumption&gt; .&#xD;
+```&#xD;
+&#xD;
+If a property is quantifiable, then it has one unique quantity dimension. There is hence a vocabulary of property classes depending on the quantity dimension they have.&#xD;
+&#xD;
+Unlike in the 2005 SSN ontology, any feature of interest property may itself be a feature of interest. In fact, the SSN ontology was originally based on the DUL ontology, which imposed that properties could not be feature of interest themselves. Yet we identified in some use cases where properties should have properties.&#xD;
+&#xD;
+For example, the fridge consumption has a frequency, or a faults counter. &#xD;
+&#xD;
+```&#xD;
+&lt;fridge/1/consumption&gt; a seas:FeatureOfInterest ;&#xD;
+  ex:frequency &lt;fridge/1/consumption/frequency&gt; .&#xD;
+```&#xD;
+&#xD;
+&#xD;
+One may also define the class of electric power systems as the class of feature of interest that are linked to some property by property key `ex:consumption`:&#xD;
+&#xD;
+```&#xD;
+ex:ElectricPowerSystem a owl:Class ;&#xD;
+  rdfs:subClassOf [&#xD;
+    owl:onProperty ex:consumption ;&#xD;
+    owl:someValuesFrom seas:EnergyProperty ] .&#xD;
+```&#xD;
+&#xD;
+Alignments to other ontologies are proposed in external documents: &#xD;
+&#xD;
+- [SSNAlignment](https://w3id.org/seas/SSNAlignment) proposes an alignement to the [SSN ontology](http://www.w3.org/ns/ssn/).&#xD;
+- [QUDTAlignment](https://w3id.org/seas/QUDTAlignment) proposes an alignement to the [QUDT ontology](http://qudt.org/).&#xD;
+&#xD;
+&#xD;
+Sub types of `seas:Property` constrain the type of the value of the property. This ontology defines only two such sub types of property, `seas:BooleanProperty` and `seas:EnumeratedProperty`. Other ontologies may define many more.&#xD;
+&#xD;
+There may be many other sub properties of `seas:hasProperty` define the semantics of the link between a feature of interest and its property. This ontology defines only one such subproperty of hasProperty: `seas:location`. Other ontologies may define many more. &#xD;
+</dcterms:description>
+    <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+    <dcterms:title xml:lang="en">The SEAS Feature of Interest ontology.</dcterms:title>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-09-21</dcterms:modified>
+    <owl:versionIRI rdf:resource="FeatureOfInterestOntology-1.0"/>
+    <owl:versionInfo>v1.0</owl:versionInfo>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <rdf:type>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </rdf:type>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-07-01</dcterms:issued>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="Property">
+    <rdfs:isDefinedBy rdf:resource="FeatureOfInterestOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+      >1</owl:cardinality>
+      <owl:onProperty>
+        <owl:FunctionalProperty rdf:about="isPropertyOf"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An observable or operable Quality of an Event or Object. That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor, or operable by an actuator. &#xD;
+&#xD;
+On the other hand, a property may also itself be a feature of interest. For example if a fridge uses alternative current energy, then several aspects of its energy consumption property may be quantified. Examples of such aspects include:&#xD;
+&#xD;
+- the active power consumption;&#xD;
+- the reactive power consumption;&#xD;
+- the phase of voltage relative to current;&#xD;
+- the frequency;&#xD;
+- the minimal operating value of the frequency;&#xD;
+- the number of occurences of unusual values.&#xD;
+&#xD;
+These are different properties of the same property:&#xD;
+&#xD;
+```&#xD;
+ex:activePower a owl:ObjectProperty ;&#xD;
+  rdfs:subPropertyOf seas:hasProperty ;&#xD;
+  rdfs:domain seas:PowerProperty ;&#xD;
+  rdfs:range seas:PowerProperty .&#xD;
+&#xD;
+&lt;fridge/1/consumption&gt; a seas:FeatureOfInterest ;&#xD;
+  ex:activePower &lt;fridge/1/consumption/activePower&gt; .&#xD;
+```&#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="FeatureOfInterest">
+    <rdfs:isDefinedBy rdf:resource="FeatureOfInterestOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">A feature of interest is an abstraction of a real world phenomena (thing, person, event, etc). A feature of interest is then defined in terms of its properties.</rdfs:comment>
+    <rdfs:label xml:lang="en">Feature of Interest</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PercentageProperty">
+    <rdfs:isDefinedBy rdf:resource="FeatureOfInterestOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:subClassOf rdf:resource="Property"/>
+    <rdfs:comment xml:lang="en">The class of properties that are quantified using some percentage value.</rdfs:comment>
+    <rdfs:label xml:lang="en">Percentage Property</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="hasProperty">
+    <rdfs:isDefinedBy rdf:resource="FeatureOfInterestOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:about="isPropertyOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="Property"/>
+    <rdfs:domain rdf:resource="FeatureOfInterest"/>
+    <rdfs:comment xml:lang="en">Links a seas:FeatureOfInterest to a seas:Property of that feature. In the first version of the SSN ontology, this concept was defined as a subproperty of dul:hasQuality. dul:hasQuality is a relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'.&#xD;
+&#xD;
+For example, the following RDF graph describes that feature of interest `&lt;fridge/1&gt;` has property `&lt;fridge/1/consumption&gt;` .&#xD;
+&#xD;
+```&#xD;
+&lt;fridge/1&gt; seas:hasProperty &lt;fridge/1/consumption&gt; .&#xD;
+```&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">property</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:SymmetricProperty rdf:about="derivesFrom">
+    <rdfs:isDefinedBy rdf:resource="FeatureOfInterestOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf rdf:resource="derivesFrom"/>
+    <rdfs:range rdf:resource="Property"/>
+    <rdfs:domain rdf:resource="Property"/>
+    <rdfs:comment xml:lang="en">Links a seas:Property of another seas:Property it derives from.&#xD;
+&#xD;
+For example,&#xD;
+&#xD;
+```&#xD;
+&lt;fridge/1/consumptionPower&gt; seas:derivesFrom &lt;fridge/1/consumedEnergy&gt; .&#xD;
+```&#xD;
+&#xD;
+This property is symmetric, and the derived property is also a property of the feature of interest:&#xD;
+&#xD;
+```&#xD;
+seas:hasProperty &lt; seas:hasProperty o seas:derivesFrom&#xD;
+```&#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">derives from</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:about="isPropertyOf">
+    <rdfs:isDefinedBy rdf:resource="FeatureOfInterestOntology"/>
+    <vs:term_status>stable</vs:term_status>
+    <owl:inverseOf rdf:resource="hasProperty"/>
+    <rdfs:range rdf:resource="FeatureOfInterest"/>
+    <rdfs:domain rdf:resource="Property"/>
+    <rdfs:comment xml:lang="en">Links a seas:Property of its one and only seas:FeatureOfInterest. &#xD;
+  For example,&#xD;
+&#xD;
+```&#xD;
+&lt;fridge/1/consumption&gt; seas:isPropertyOf &lt;fridge/1&gt; .&#xD;
+```&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">is property of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

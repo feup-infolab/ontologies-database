@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/Step">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An atomic unit of a workflow, that may be characterized by a starting time and an ending time, and may be associated with one or more events.  A workflow step usually involves some input information, material or energy needed to complete the step, and some output information, material or energy produced by that step.  In the case of a publishing workflow, a step typically results in the creation of a publication entity, usually by the modification of another pre-existing publication entity, e.g. the creation of an edited paper from a rough draft, or of an HTML representation from an XML mark-up.</rdfs:comment>
+    <rdfs:label xml:lang="en">step</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Na650f5f9b51d4be883d0319668ffbf87"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task"/>
+    <rdfs:subClassOf rdf:nodeID="Nff388718cbd54b52920da7e724723605"/>
+    <rdfs:subClassOf rdf:nodeID="Nf95d8e7c4e11483cb3e7b1b8a29487db"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6f5393f64dbe4cc8b3491c847f0aeb3f">
+    <swrl:argument1 rdf:resource="urn:swrl#sj"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://purl.org/spar/pwo/Step"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo">
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    <rdfs:comment xml:lang="en">The Publishing Workflow Ontology (PWO) is an ontology for describing the workflow associated with the publication of a document.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.</rdfs:comment>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+    <owl:imports rdf:resource="http://www.essepuntato.it/2009/10/error"/>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aldo Gangemi</dc:creator>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl"/>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Publishing Workflow Ontology (PWO)</dc:title>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl"/>
+    <dc:description rdf:resource="https://svn.code.sf.net/p/sempublishing/code/PWO/pwo.png"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-06-01</dc:date>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.4</owl:versionInfo>
+    <dc:description xml:lang="en">The Publishing Workflow Ontology (PWO) is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web).</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N630a13b493054ed8adad77ddabb8b662">
+    <rdf:first rdf:nodeID="Nb41558f05aaf40449de045d0eedec006"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/isProducedBy">
+    <rdfs:label xml:lang="en">is produced by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/produces"/>
+    <rdfs:comment xml:lang="en">The property linking something to the workflow step or an event (e.g. an action executing a workflow step) that produces, creates or results in that thing.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff388718cbd54b52920da7e724723605">
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Action"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/isStepOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">The property linking a step in a workflow to the workflow of which it is a component.</rdfs:comment>
+    <rdfs:label xml:lang="en">is step of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb41558f05aaf40449de045d0eedec006">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument2 rdf:resource="urn:swrl#sj"/>
+    <swrl:propertyPredicate rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes"/>
+    <swrl:argument1 rdf:resource="urn:swrl#si"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne2cefc6173c34ecfa55adcfeb95a1a10">
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/hasStep"/>
+    <rdf:rest rdf:nodeID="Nb9062f21c0884242ac7d2cbb62a8d8f4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd2b83c2705d64e6eb05aec70215f5431">
+    <rdf:rest rdf:nodeID="Nd64a51d1caa948f391344ee0ae613e78"/>
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/isStepOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/taskrole.owl#Task">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd4f186a39fe54d639ac57a8337dab67e">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2009/10/error/hasError"/>
+    <swrl:argument1 rdf:resource="urn:swrl#si"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A step cannot need a resource that will be produced by a following step</swrl:argument2>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/isExecutedBy">
+    <rdfs:comment>This property allows to link a workflow description to the related workflow execution.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#isSatisfiedBy"/>
+    <rdfs:label>is executed by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/produces">
+    <rdfs:domain rdf:nodeID="Na9fdf4db8ba7410f9a93ea55c6e2744e"/>
+    <rdfs:label xml:lang="en">produces</rdfs:label>
+    <rdfs:comment xml:lang="en">The property linking a workflow step or an event (e.g. an action executing a workflow step) to the thing that the step/event produces, creates or results in.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9a4ca3802754b149be63db16dce6954">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N9a89106f60e541da94ce50a11f34c993"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03f7eaa2ba054a2ca1b7e7b6fe98313f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:nodeID="Nabdb9de2c848417ba791db07d12dafc3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3704f468848e4116b8b01f8d5efd8143">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1bd454fd21d0498c86d84744c0424ecc">
+    <rdf:first rdf:nodeID="Nac8d642150ba4a02a7ad472170f98878"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N28b21292c0ef49999c0a90302cc330fb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39c3e1c4b36945c0a2d22bd2d7424327">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Ndf2ba5321a82487b8f6b2be5444b6d6a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">
+    <rdfs:label xml:lang="en">at time</rdfs:label>
+    <rdfs:comment xml:lang="en">A step is performed within a time interval.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/involvesAction">
+    <rdfs:range rdf:resource="http://purl.org/spar/pwo/Action"/>
+    <owl:propertyChainAxiom rdf:nodeID="N02021d963b4b4330859d048920e11170"/>
+    <rdfs:comment xml:lang="en">The property linking a particular execution of a workflow to an action.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/isActionInvolvedIn"/>
+    <rdfs:label xml:lang="en">involves action</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pwo/WorkflowExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf188fba079c4961a264eddd2893f42a">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/hasFirstStep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has first step</rdfs:label>
+    <rdfs:comment xml:lang="en">A workflow that starts with a particular step.</rdfs:comment>
+    <rdfs:range rdf:nodeID="N03f7eaa2ba054a2ca1b7e7b6fe98313f"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pwo/hasStep"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/isIntervalFor">
+    <rdfs:comment xml:lang="en">It allows one to link an interval describing when an event happened to the related event.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is interval for</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/executes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl#satisfies"/>
+    <rdfs:comment xml:lang="en">This property allows to link a workflow execution to the related workflow description.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/isExecutedBy"/>
+    <rdfs:label xml:lang="en">executes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/happened">
+    <rdfs:comment xml:lang="en">It allows one to link an event to the interval when it happened.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/isIntervalFor"/>
+    <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <rdfs:label xml:lang="en">happened</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a89106f60e541da94ce50a11f34c993">
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/Action"/>
+    <rdf:rest rdf:nodeID="N39c3e1c4b36945c0a2d22bd2d7424327"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61137749da004f5b9b161116734133d8">
+    <rdf:rest rdf:nodeID="Naf188fba079c4961a264eddd2893f42a"/>
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/Step"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40460154a79646a092aa4e429e8bb450">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="Ne9a4ca3802754b149be63db16dce6954"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/involvesAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2009/10/error/hasError">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c7d782e56d045b690355b479ae88c13">
+    <swrl:propertyPredicate rdf:resource="http://purl.org/spar/pwo/produces"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument2 rdf:resource="urn:swrl#r"/>
+    <swrl:argument1 rdf:resource="urn:swrl#sj"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na650f5f9b51d4be883d0319668ffbf87">
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3dcfe55701d8485a9c1ba1b45e52d1eb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/hasFirstStep"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Step"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N82884f14125e412da5b97ddb2e616e59">
+    <rdf:first rdf:nodeID="Nd4f186a39fe54d639ac57a8337dab67e"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N904f5b5e147945f7ac22974c7f609239">
+    <rdf:rest rdf:nodeID="N3704f468848e4116b8b01f8d5efd8143"/>
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/Step"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/needs">
+    <rdfs:domain rdf:nodeID="N7e05fe3f79b74128924cf0f95de0b8e2"/>
+    <rdfs:comment xml:lang="en">The property linking a workflow step or an event (e.g. an action executing a workflow step) to anything required to undertake that step/event.</rdfs:comment>
+    <rdfs:label xml:lang="en">needs</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9062f21c0884242ac7d2cbb62a8d8f4">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#isExecutedIn"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nac8d642150ba4a02a7ad472170f98878">
+    <swrl:argument1 rdf:resource="urn:swrl#si"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument2 rdf:resource="urn:swrl#r"/>
+    <swrl:propertyPredicate rdf:resource="http://purl.org/spar/pwo/needs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/isNeededBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/needs"/>
+    <rdfs:comment xml:lang="en">The property linking a thing required to undertake a workflow step or an event (e.g. an action executing a workflow step) to the step/event itself.</rdfs:comment>
+    <rdfs:label xml:lang="en">is needed by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3923bf30e9d342e2aac7247f9e858ddf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/executes"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/isActionInvolvedIn">
+    <rdfs:comment xml:lang="en">The property linking an event to a particular execution of a workflow description.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:propertyChainAxiom rdf:nodeID="Nbb7dc5952ccf48778e98293acd6a62ed"/>
+    <rdfs:label xml:lang="en">is action involved in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/Workflow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">workflow</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#Plan"/>
+    <rdfs:comment xml:lang="en">A sequence of connected steps, representing a sequence of publishing operations undertaken by agents. A workflow may be seen as an abstract model of real work.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N3dcfe55701d8485a9c1ba1b45e52d1eb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/hasStep">
+    <rdfs:range rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/isStepOf"/>
+    <rdfs:label xml:lang="en">has step</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pwo/Workflow"/>
+    <rdfs:comment xml:lang="en">The property linking a workflow to a component step.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbb7dc5952ccf48778e98293acd6a62ed">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"/>
+    <rdf:rest rdf:nodeID="Nd2b83c2705d64e6eb05aec70215f5431"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d7c36eefa7f49989aaeb19f2731694e">
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/happened"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf95d8e7c4e11483cb3e7b1b8a29487db">
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter"/>
+    <owl:onClass rdf:resource="http://www.w3.org/2006/time#DurationDescription"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/Action">
+    <rdfs:label>action</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>An event with at least one agent that is participant in it and that is linked to a workflow execution and to a step of the related workflow description.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N4faa5623e3c642db8c09a6c79e398e0e"/>
+    <rdfs:subClassOf rdf:nodeID="N1d7c36eefa7f49989aaeb19f2731694e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N00c6386557e24973af0ca726327fc85b">
+    <swrl:argument1 rdf:resource="urn:swrl#si"/>
+    <swrl:classPredicate rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4faa5623e3c642db8c09a6c79e398e0e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N11bd1957b4df413298d37cb2a4212c74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd35d8fd0c8814d53a4349cf529cdd44a">
+    <rdf:first rdf:nodeID="N00c6386557e24973af0ca726327fc85b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N3d7f338ec59f412dbc7cb21a01ba5e10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/WorkflowExecution">
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation"/>
+    <rdfs:subClassOf rdf:nodeID="N3923bf30e9d342e2aac7247f9e858ddf"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution"/>
+    <rdfs:subClassOf rdf:nodeID="N40460154a79646a092aa4e429e8bb450"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/hasNextStep">
+    <rdfs:range rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property linking a step in a workflow with the step that directly follows it.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pwo/hasPreviousStep"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdfs:label xml:lang="en">has next step</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pwo/hasPreviousStep">
+    <rdfs:comment xml:lang="en">A property linking a step in a workflow with the step that directly precedes it.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows"/>
+    <rdfs:label xml:lang="en">has previous step</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N02021d963b4b4330859d048920e11170">
+    <rdf:rest rdf:nodeID="Ne2cefc6173c34ecfa55adcfeb95a1a10"/>
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/executes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28b21292c0ef49999c0a90302cc330fb">
+    <rdf:first rdf:nodeID="N6c7d782e56d045b690355b479ae88c13"/>
+    <rdf:rest rdf:nodeID="N630a13b493054ed8adad77ddabb8b662"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#si">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d7f338ec59f412dbc7cb21a01ba5e10">
+    <rdf:rest rdf:nodeID="N1bd454fd21d0498c86d84744c0424ecc"/>
+    <rdf:first rdf:nodeID="N6f5393f64dbe4cc8b3491c847f0aeb3f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11bd1957b4df413298d37cb2a4212c74">
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#Action"/>
+    <rdf:rest rdf:nodeID="Nc8a5c49d48d1452b8a3e3b9359785e61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndbc563b818f64d88b0a4664f5e497d0b">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="N82884f14125e412da5b97ddb2e616e59"/>
+    <swrl:body rdf:nodeID="Nd35d8fd0c8814d53a4349cf529cdd44a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na9fdf4db8ba7410f9a93ea55c6e2744e">
+    <owl:unionOf rdf:nodeID="N61137749da004f5b9b161116734133d8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7e05fe3f79b74128924cf0f95de0b8e2">
+    <owl:unionOf rdf:nodeID="N904f5b5e147945f7ac22974c7f609239"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd64a51d1caa948f391344ee0ae613e78">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/spar/pwo/isExecutedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#isTaskDefinedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyFollows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#directlyPrecedes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/sequence.owl#precedes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#r">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndf2ba5321a82487b8f6b2be5444b6d6a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#executesTask"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/owlapi#nodeID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplanexecution.owl#PlanExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nabdb9de2c848417ba791db07d12dafc3">
+    <owl:onProperty rdf:resource="http://purl.org/spar/pwo/hasPreviousStep"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pwo/Step"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#isParticipantIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/basicplandescription.owl#definesTask">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#hasParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#sj">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc8a5c49d48d1452b8a3e3b9359785e61">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/taskexecution.owl#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>

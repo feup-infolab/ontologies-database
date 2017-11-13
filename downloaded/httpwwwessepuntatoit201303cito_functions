@@ -1,0 +1,827 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY cito "http://purl.org/spar/cito/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY cito-functions "http://www.essepuntato.it/2013/03/cito-functions/" >
+    <!ENTITY discourse-relationships "http://purl.org/swan/2.0/discourse-relationships/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.essepuntato.it/2013/03/cito-functions#"
+     xml:base="http://www.essepuntato.it/2013/03/cito-functions"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cito-functions="http://www.essepuntato.it/2013/03/cito-functions/"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:discourse-relationships="http://purl.org/swan/2.0/discourse-relationships/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.essepuntato.it/2013/03/cito-functions">
+        <rdfs:label>CiTOFunction</rdfs:label>
+        <dc:creator>Angelo Di Iorio</dc:creator>
+        <dc:creator>Andrea Nuzzolese</dc:creator>
+        <owl:versionInfo xml:lang="en">1.2 - aligned with CiTO 2.5.1</owl:versionInfo>
+        <rdfs:comment xml:lang="en">CiTOFunctions is an ontology that classifies each CiTO property according to the factual and rhetorical citational function it refers to.</rdfs:comment>
+        <dc:title>Functions of Citations</dc:title>
+        <dc:description xml:lang="en">CiTOFunctions is an ontology that provides a classification for citations. In particular, it classifies CiTO properties (each defining a particular citational act) according to their factual (class functions:FactualFunction) and positive/neutral/negative rhetorical functions (classes functions:PositiveRhetoricalFunction, functions:NeuterRhetoricalFunction and functions:NegativeRhetoricalFunction), as proposed by Peroni et al. in: 
+
+Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics: Science, Services and Agents on the World Wide Web, 17 (December 2012): 33-43. Amsterdam, The Netherlands: Elsevier. DOI: 10.1016/j.websem.2012.08.001</dc:description>
+        <dc:creator>Silvio Peroni</dc:creator>
+        <dc:date>2013-05-20</dc:date>
+        <owl:imports rdf:resource="http://purl.org/spar/cito"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.essepuntato.it/2013/03/cito-functions/CitationFunction -->
+
+    <owl:Class rdf:about="&cito-functions;CitationFunction">
+        <rdfs:label xml:lang="en">citation function</rdfs:label>
+        <rdfs:comment xml:lang="en">A class defining the set of citation types having a particular function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2013/03/cito-functions/FactualFunction -->
+
+    <owl:Class rdf:about="&cito-functions;FactualFunction">
+        <rdfs:label xml:lang="en">factual function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cito-functions;CitationFunction"/>
+        <rdfs:comment xml:lang="en">A class defining the set of citation types having a factual function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2013/03/cito-functions/NegativeRhetoricalFunction -->
+
+    <owl:Class rdf:about="&cito-functions;NegativeRhetoricalFunction">
+        <rdfs:label xml:lang="en">negative rhetorical function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cito-functions;RhetoricalFunction"/>
+        <rdfs:comment xml:lang="en">A class defining the set of citation types having a negative rhetorical function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2013/03/cito-functions/NeutralRhetoricalFunction -->
+
+    <owl:Class rdf:about="&cito-functions;NeutralRhetoricalFunction">
+        <rdfs:label xml:lang="en">neutral rhetorical function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cito-functions;RhetoricalFunction"/>
+        <rdfs:comment xml:lang="en">A class defining the set of citation types having a neutral rhetorical function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2013/03/cito-functions/PositiveRhetoricalFunction -->
+
+    <owl:Class rdf:about="&cito-functions;PositiveRhetoricalFunction">
+        <rdfs:label xml:lang="en">positive rhetorical function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cito-functions;RhetoricalFunction"/>
+        <rdfs:comment xml:lang="en">A class defining the set of citation types having a positive rhetorical function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.essepuntato.it/2013/03/cito-functions/RhetoricalFunction -->
+
+    <owl:Class rdf:about="&cito-functions;RhetoricalFunction">
+        <rdfs:label xml:lang="en">rhetorical function</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&cito-functions;CitationFunction"/>
+        <rdfs:comment xml:lang="en">A class defining the set of citation types having a particular rhetorical function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/cito/agreesWith -->
+
+    <owl:NamedIndividual rdf:about="&cito;agreesWith">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/cites -->
+
+    <owl:NamedIndividual rdf:about="&cito;cites">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsAuthority -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsAuthority">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsDataSource -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsDataSource">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsEvidence -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsEvidence">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsMetadataDocument -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsMetadataDocument">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsPotentialSolution -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsPotentialSolution">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsRecommendedReading -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsRecommendedReading">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsRelated -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsRelated">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesAsSourceDocument -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesAsSourceDocument">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/citesForInformation -->
+
+    <owl:NamedIndividual rdf:about="&cito;citesForInformation">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/compiles -->
+
+    <owl:NamedIndividual rdf:about="&cito;compiles">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/confirms -->
+
+    <owl:NamedIndividual rdf:about="&cito;confirms">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/containsAssertionFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;containsAssertionFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/corrects -->
+
+    <owl:NamedIndividual rdf:about="&cito;corrects">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/credits -->
+
+    <owl:NamedIndividual rdf:about="&cito;credits">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/critiques -->
+
+    <owl:NamedIndividual rdf:about="&cito;critiques">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/derides -->
+
+    <owl:NamedIndividual rdf:about="&cito;derides">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/describes -->
+
+    <owl:NamedIndividual rdf:about="&cito;describes">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/disagreesWith -->
+
+    <owl:NamedIndividual rdf:about="&cito;disagreesWith">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/discusses -->
+
+    <owl:NamedIndividual rdf:about="&cito;discusses">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/disputes -->
+
+    <owl:NamedIndividual rdf:about="&cito;disputes">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/documents -->
+
+    <owl:NamedIndividual rdf:about="&cito;documents">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/extends -->
+
+    <owl:NamedIndividual rdf:about="&cito;extends">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/givesBackgroundTo -->
+
+    <owl:NamedIndividual rdf:about="&cito;givesBackgroundTo">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/givesSupportTo -->
+
+    <owl:NamedIndividual rdf:about="&cito;givesSupportTo">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/hasReplyFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;hasReplyFrom">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/includesExcerptFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;includesExcerptFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/includesQuotationFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;includesQuotationFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isAgreedWithBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isAgreedWithBy">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsAuthorityBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsAuthorityBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsDataSourceBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsDataSourceBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsEvidenceBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsEvidenceBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsMetadataDocumentBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsMetadataDocumentBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsPotentialSolution -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsPotentialSolution">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsRecommendedReading -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsRecommendedReading">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsRelatedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsRelatedBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedAsSourceDocumentBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedAsSourceDocumentBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCitedForInformationBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCitedForInformationBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCompiledBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCompiledBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isConfirmedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isConfirmedBy">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCorrectedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCorrectedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCreditedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCreditedBy">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isCritiquedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isCritiquedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDeridedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isDeridedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDescribedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isDescribedBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDisagreedWithBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isDisagreedWithBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDiscussedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isDiscussedBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDisputedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isDisputedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isDocumentedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isDocumentedBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isExtendedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isExtendedBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isParodiedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isParodiedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isPlagiarizedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isPlagiarizedBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isQualifiedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isQualifiedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isRefutedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isRefutedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isRetractedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isRetractedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isReviewedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isReviewedBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isRidiculedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isRidiculedBy">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isSepculatedOnBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isSepculatedOnBy">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isSupportedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isSupportedBy">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/isUpdatedBy -->
+
+    <owl:NamedIndividual rdf:about="&cito;isUpdatedBy">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/obtainsBackgroundFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;obtainsBackgroundFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/obtainsSupportFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;obtainsSupportFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/parodies -->
+
+    <owl:NamedIndividual rdf:about="&cito;parodies">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/plagiarizes -->
+
+    <owl:NamedIndividual rdf:about="&cito;plagiarizes">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/providesAssertionFor -->
+
+    <owl:NamedIndividual rdf:about="&cito;providesAssertionFor">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+        <rdf:type rdf:resource="&cito-functions;RhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/providesConclusionsFor -->
+
+    <owl:NamedIndividual rdf:about="&cito;providesConclusionsFor">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/providesDataFor -->
+
+    <owl:NamedIndividual rdf:about="&cito;providesDataFor">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/providesExcerptFor -->
+
+    <owl:NamedIndividual rdf:about="&cito;providesExcerptFor">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/providesMethodFor -->
+
+    <owl:NamedIndividual rdf:about="&cito;providesMethodFor">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/providesQuotationFor -->
+
+    <owl:NamedIndividual rdf:about="&cito;providesQuotationFor">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/qualifies -->
+
+    <owl:NamedIndividual rdf:about="&cito;qualifies">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/refutes -->
+
+    <owl:NamedIndividual rdf:about="&cito;refutes">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/repliesTo -->
+
+    <owl:NamedIndividual rdf:about="&cito;repliesTo">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/retracts -->
+
+    <owl:NamedIndividual rdf:about="&cito;retracts">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/reviews -->
+
+    <owl:NamedIndividual rdf:about="&cito;reviews">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/ridicules -->
+
+    <owl:NamedIndividual rdf:about="&cito;ridicules">
+        <rdf:type rdf:resource="&cito-functions;NegativeRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/speculatesOn -->
+
+    <owl:NamedIndividual rdf:about="&cito;speculatesOn">
+        <rdf:type rdf:resource="&cito-functions;NeutralRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/supports -->
+
+    <owl:NamedIndividual rdf:about="&cito;supports">
+        <rdf:type rdf:resource="&cito-functions;PositiveRhetoricalFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/updates -->
+
+    <owl:NamedIndividual rdf:about="&cito;updates">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/usesConclusionsFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;usesConclusionsFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/usesDataFrom -->
+
+    <owl:NamedIndividual rdf:about="&cito;usesDataFrom">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/spar/cito/usesMethodIn -->
+
+    <owl:NamedIndividual rdf:about="&cito;usesMethodIn">
+        <rdf:type rdf:resource="&cito-functions;FactualFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&cito-functions;NegativeRhetoricalFunction"/>
+            <rdf:Description rdf:about="&cito-functions;NeutralRhetoricalFunction"/>
+            <rdf:Description rdf:about="&cito-functions;PositiveRhetoricalFunction"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

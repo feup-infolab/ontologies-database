@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	  xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+	  xmlns:gr="http://purl.org/goodrelations/v1"
+	  xmlns:essglobal="http://purl.org/essglobal/vocab/"
+	  xmlns:owl="http://www.w3.org/2002/07/owl#">
+	  
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/SSEInitiative">
+	<rdfs:label xml:lang="en">SSE Initiative</rdfs:label>
+	<dcterms:description xml:lang="en">An organization, practice, network, or other initiative that is recognized as belonging within the social solidarity economy.  </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+	<rdfs:subClassOf>http://www.w3.org/ns/org/OrganizationUnit</rdfs:subClassOf>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/Network">
+	<rdfs:label xml:lang="en">Network</rdfs:label>
+	<dcterms:description xml:lang="en">A network of individuals and/or organizations that participate in the SSE. </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+	<rdfs:subClassOf>http://www.w3.org/ns/org/OrganizationColaboration</rdfs:subClassOf>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/ProductOrService">
+	<rdfs:label xml:lang="en">Product or Service</rdfs:label>
+	<dcterms:description xml:lang="en">The good offered by an SSE initiative. It may be material goods or provision of services. </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+	<rdfs:subClassOf>http://purl.org/goodrelations/v1/ProductOrService</rdfs:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/Address">
+	<rdfs:label xml:lang="en">Address</rdfs:label>
+	<dcterms:description xml:lang="en">A phisical address of a Location of sale, of a SSE Initiative or of a Network </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/LocationOfSale">
+	<rdfs:label xml:lang="en">Location of Sale</rdfs:label>
+	<dcterms:description xml:lang="en">Place where the goods or services of an SSE initiative are provided. It can be self owned shops, but also partner places where the products or services are available among those from other initiatives. </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+	<rdfs:subClassOf>http://purl.org/goodrelations/v1/Location</rdfs:subClassOf>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/SaleOption">
+	<rdfs:label xml:lang="en">Sale Option</rdfs:label>
+	<dcterms:description xml:lang="en">A Product sold at a certain price, under specific properties, in a certain Location. </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/Cost">
+	<rdfs:label xml:lang="en">Cost</rdfs:label>
+	<dcterms:description xml:lang="en">The cost for a particular product or service produced by an SSE initiative or network, including all costs. The price will be this cost added to delivery costs and sales margin as can be seen in the sale-option class.</dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/CostComposition">
+	<rdfs:label xml:lang="en">Cost Composition</rdfs:label>
+	<dcterms:description xml:lang="en">A breakdown of all inputs (as taxes and raw materials) and labour costs that make up the product or service's final cost. An open cost is a pre-requisite for solidarity fair trade systems. </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/Input">
+	<rdfs:label xml:lang="en">Input</rdfs:label>
+	<dcterms:description xml:lang="en">A product, service, or activity that goes into making the final product or service. </dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/Labour">
+	<rdfs:label xml:lang="en">Labour</rdfs:label>
+	<dcterms:description xml:lang="en">Work done for specific tasks related to the provision of goods or services offered by the SSE initiative. Generally it can be human, animal or machine labour, but in ESSglobal it's human labour only.</dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/OtherCosts">
+	<rdfs:label xml:lang="en">Other Costs</rdfs:label>
+	<dcterms:description xml:lang="en">Other costs which impact on the final cost of a product or service provided by an SSE initiative, other than input or labour, like taxes, deprecation of machinery, funds, etc. The delivery costs are not included in these costs: they are included in the sale-options class.</dcterms:description>
+	<rdfs:isDefinedBy>http://purl.org/essglobal/vocab/</rdfs:isDefinedBy>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+</rdf:Description>
+
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/objective">
+	<rdfs:label xml:lang="en">Objective</rdfs:label>
+	<dcterms:description xml:lang="en">Actionable and measurable steps the SSE Initiative is taking to carry out its mission. </dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Network"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/mission">
+	<rdfs:label xml:lang="en">Mission</rdfs:label>
+	<dcterms:description xml:lang="en">The initiative's vision, values, and principles.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Network"/>
+</rdf:Description>	
+	
+	
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/economicSector">
+	<rdfs:label xml:lang="en">Economic Sector</rdfs:label>
+	<dcterms:description xml:lang="en">A categorization of the type of activities carried on by SSE initiatives, depending of its nature, raw materials and methodology.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+   <rdfs:Datatype rdf:resource="http://purl.org/essglobal/standard/activities/" />
+   <rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/totalWomen">
+	<rdfs:label xml:lang="en">Total of Women</rdfs:label>
+	<dcterms:description xml:lang="en">The number of women that work in the SSE Initiative.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/totalMen">
+	<rdfs:label xml:lang="en">Total of Men</rdfs:label>
+	<dcterms:description xml:lang="en">The number of men that work in the SSE Initiative.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/totalOfMembers">
+	<rdfs:label xml:lang="en">Total of Members</rdfs:label>
+	<dcterms:description xml:lang="en">The total number of members that work in the SSE Initiative.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+</rdf:Description>
+    
+    
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/legalForm">
+	<rdfs:label xml:lang="en">Legal Form</rdfs:label>
+	<dcterms:description xml:lang="en">The legal form of a SSE Initiative or Network.To be described.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:Datatype rdf:resource="http://purl.org/essglobal/standard/legal-form/" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Network"/>
+</rdf:Description>
+	
+	
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/qualifier">
+	<rdfs:label xml:lang="en">Qualifier</rdfs:label>
+	<dcterms:description xml:lang="en">
+		Aspect that differentiates the product or service of an SSE initiative which is related to the form of production, the actors involved, the use of only organic materials, etc. 
+		Examples are organic, permacultural, made with recycled raw materials, indigenous, made by women, etc.
+   </dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:Datatype rdf:resource="http://purl.org/essglobal/standard/qualifiers/" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/ProductOrService"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Input" />
+ </rdf:Description>
+ 
+ <rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasProductOrService">
+	<rdfs:label xml:lang="en">Has Product or Service</rdfs:label>
+	<dcterms:description xml:lang="en">A Network or SSE Initiative produce products or make available services.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SSEInitiative"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Network"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/ProductOrService"/>
+	<owl:equivalentProperty>http://purl.org/goodrelations/v1/offers</owl:equivalentProperty>
+</rdf:Description>
+ 
+  <rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasAddress">
+	<rdfs:label xml:lang="en">Has an Address</rdfs:label>
+	<dcterms:description xml:lang="en">The address that the SSE initiative, Network or Location of Sale have.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Network"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/ProductOrService"/>
+<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Network"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/LocationOfSale"/>
+</rdf:Description>
+ 
+ <rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasSaleOption">
+	<rdfs:label xml:lang="en">Has a Sale Option</rdfs:label>
+	<dcterms:description xml:lang="en">A sale option si connected to a place where the good or service is provided.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/ProductOrService"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/SaleOption"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasCost">
+	<rdfs:label xml:lang="en">Has Cost</rdfs:label>
+	<dcterms:description xml:lang="en">The cost for a particular product or service produced by an SSE initiative or network.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/ProductOrService"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/Cost"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/isComposedBy">
+	<rdfs:label xml:lang="en">Is Composed By</rdfs:label>
+	<dcterms:description xml:lang="en">A breakdown of all inputs (as taxes and raw materials) and labour costs that make up the product or service's final cost. An open cost is a pre-requisite for solidarity fair trade systems.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Cost"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/CostComposition"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasInputCost">
+	<rdfs:label xml:lang="en">Has input</rdfs:label>
+	<dcterms:description xml:lang="en">A product, service, or activity that goes into making the final product or service.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/CostComposition"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/Input"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasLabourCost">
+	<rdfs:label xml:lang="en">Has Labour</rdfs:label>
+	<dcterms:description xml:lang="en">Work done for specific tasks related to the provision of goods or services offered by the SSE initiative. Generally it can be human, animal or machine labour, but in ESSglobal it's human labour only.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/CostComposition"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/Labour"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasOtherCosts">
+	<rdfs:label xml:lang="en">Has Other Costs</rdfs:label>
+	<dcterms:description xml:lang="en">Other costs which impact on the final cost of a product or service provided by an SSE initiative, other than input or labour, like taxes, deprecation of machinery, funds, etc. The delivery costs are not included in these costs: they are included in the sale-options class.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/CostComposition"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/OtherCosts"/>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/availableAt">
+	<rdfs:label xml:lang="en">Available At</rdfs:label>
+	<dcterms:description xml:lang="en">A Product or Service is sold at a sale location under specific definitions.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SaleOption"/>
+	<rdfs:range rdf:resource="http://purl.org/essglobal/vocab/LocationOfSale" />
+	<owl:equivalentProperty>http://purl.org/goodrelations/v1/availableAtOrFrom</owl:equivalentProperty>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/isAvailable">
+	<rdfs:label xml:lang="en">Is available</rdfs:label>
+	<dcterms:description xml:lang="en">If the Sale Option (the product/service at a certain price, under specific properties, in a specific Sale Location) is available.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#boolean"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SaleOption"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/salesMarginPercentage">
+	<rdfs:label xml:lang="en">Sales Margin (percentage)</rdfs:label>
+	<dcterms:description xml:lang="en">
+		Margin (on sales) is the difference between selling price and cost. This difference is typically expressed either as a percentage of selling price or on a per-unit basis. This attribute is the percentage sales margin. 
+   </dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SaleOption" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/salesMarginValue">
+	<rdfs:label xml:lang="en">Sales Margin (value)</rdfs:label>
+	<dcterms:description xml:lang="en">
+		Margin (on sales) is the difference between selling price and cost. This difference is typically expressed either as a percentage of selling price or on a per-unit basis. The present attribute is an absolute value for sales margin on each unit of the product or service offered in the location.
+	</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-04-15</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/SaleOption" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/state">
+	<rdfs:label xml:lang="en">State</rdfs:label>
+	<dcterms:description xml:lang="en">The State of the Address.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Address"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/1.0/isMain">
+	<rdfs:label xml:lang="en">Is Main</rdfs:label>
+	<dcterms:description xml:lang="en">If the Location of Sale is the headquarter of the SSE initiative?</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/1.0/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#boolean" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/LocationOfSale"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/isSSE">
+	<rdfs:label xml:lang="en">Is SSE Initiative</rdfs:label>
+	<dcterms:description xml:lang="en">If the Location of Sale is a place belonging to the SSE.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#boolean" />
+		<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/LocationOfSale" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/deliveryRangeDistance">
+	<rdfs:label xml:lang="en">Delivery Range (distance)</rdfs:label>
+	<dcterms:description xml:lang="en">Delivery range of product or service, in kilometers or miles.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/LocationOfSale" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/quantityPerProductOrServiceUnit">
+	<rdfs:label xml:lang="en">Quantity per Product or Service Unit</rdfs:label>
+	<dcterms:description xml:lang="en">The quantity of the input that goes into providing one unit of the final product or service. </dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Input" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/costPerUnit">
+	<rdfs:label xml:lang="en">Cost per Unit</rdfs:label>
+	<dcterms:description xml:lang="en">The cost per unit of input.</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Input" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/unit">
+	<rdfs:label xml:lang="en">Unit</rdfs:label>
+	<dcterms:description xml:lang="en">The unit that a product or service is measured in, in the Universal Unit System (e.g., kilograms, hours)</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Input" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/hasImpactOnPrice">
+	<rdfs:label xml:lang="en">Has impact on price</rdfs:label>
+	<dcterms:description xml:lang="en">Does the input contribute to the monetary price of the final product? Whereas many (perhaps most) inputs do contribute to the monetary price of the final product or service, some don't. For example, volunteer labour may contribute greatly to production without adding to the monetary cost of production. 
+</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#boolean" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Input" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/OtherCosts" />
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/essglobal/vocab/typeOfLabour">
+	<rdfs:label xml:lang="en">Type of Labour</rdfs:label>
+	<dcterms:description xml:lang="en">The human labour dedicated for providing goods or services can be of different types, depending on the established labour relations. For example, it might be associative (i.e., the worker is one of the collective owners of the SSE initiative), but it might also be subordinated work (an employee of the SSE initiative), volunteer work or externally hired work (like a freelancer or a partner initiative).</dcterms:description>
+	<rdfs:isDefinedBy rdf:resource="http://purl.org/essglobal/vocab/"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-06</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-04</dcterms:modified>
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+	<rdfs:Datatype rdf:resource="http://purl.org/essglobal/standard/type-of-labour/" />
+	<rdfs:domain rdf:resource="http://purl.org/essglobal/vocab/Labour" />
+</rdf:Description>
+
+
+</rdf:RDF>

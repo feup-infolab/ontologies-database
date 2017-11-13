@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="shortcut icon" href="http://sti-innsbruck.at/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+	<title>Accommodation Ontology Language Reference</title>
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="Martin Hepp (Hepp Research GmbH)" />
+	<meta name="publisher" content="Martin Hepp" />
+	<meta name="keywords" content="E-Commerce, E-Business, GoodRelations, Ontology, Tourism, Hotels, Camping, Vacation homes" />
+	<meta name="generator" content="specgen" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+	</head>
+	<body>
+<div id="top">
+        <a href="http://www.sti-innsbruck.at/"><img id="logo" src="sti_logo.gif" alt="STI Innsbruck" /></a>
+</div>
+<!-- Ontology -->
+<h1 style="clear:both">Accommodation Ontology Language Reference</h1>
+<div class="box">
+        <h2 id="ontology">Accommodation Ontology Metadata <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a>)</span></h2>
+        <h3>V 1.0, Release 2013-03-25</h3>
+        <p><strong>Latest version:</strong> <a href="http://purl.org/acco/ns">http://purl.org/acco/ns</a>#</p>
+        <p><strong>Author:</strong> Martin Hepp (Hepp Research GmbH)</p>
+        <p>
+                <strong>URI</strong> <a href="http://purl.org/acco/ns">http://purl.org/acco/ns</a>#<br/>
+                <strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Accommodation Ontology
+        </p>
+        <div class="comment">
+                <p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+                <p>ACCO: The Accommodation Ontology<br/>
+    <br/>
+A Web vocabulary for hotels, vacation homes, camping sites, and other accommodation offers for e-commerce.<br/>
+<br/>
+Vocabulary:    <a href="http://purl.org/acco/ns">http://purl.org/acco/ns</a>#<br/>
+Namespace:     <a href="http://purl.org/acco/ns">http://purl.org/acco/ns</a>#<br/>
+<br/>
+The Accommodation Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental. <br/>
+<br/>
+See <a href="http://purl.org/goodrelations/">http://purl.org/goodrelations/</a> for more information.</p>
+        </div>  
+        <p><strong><a href="http://purl.org/dc/terms/subject">dcterms:subject</a></strong> E-Commerce, E-Business, GoodRelations, Ontology, Tourism, Hotels, Camping, Vacation homes</p>
+        <p><strong><a href="http://purl.org/dc/terms/contributor">dcterms:contributor</a></strong> Michael Fried, Birgit Leiter, and Dieter Fensel. Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</p>
+        <p><strong><a href="http://purl.org/dc/terms/rights">dcterms:rights</a></strong> The Accommodation Ontology ontology is available under the Creative Commons Attribution 3.0 Unported license; see <a href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</a>. 
+In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), 
+as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</p>
+</div>
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="toc">Table of Contents</h2>
+        <ol>
+               <li><a href="#overview">Overview</a></li>
+               <li><a href="#examples">Examples</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#dprops">Datatype Properties</a></li>
+                <li><a href="#oprops">Object Properties</a></li>
+                
+                <li><a href="#individuals">Individuals</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+                <li><a href="#license">License</a></li>
+                <li><a href="#acknowledgements">Acknowledgments</a></li>
+               <li><a href="#references">References</a></li>
+               <li><a href="#changelog">Change Log</a></li>
+        </ol>
+</div>
+    <div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="overview">Overview</h2>
+        <p>
+            This Accommodation Ontology is an extension of <a href="http://purl.org/goodrelations/">GoodRelations</a> and provides the additional vocabulary elements for</p>
+        <ul> 
+            <li>describing hotel rooms, hotels, camping sites, and other forms of accommodations, their features, and</li>
+            <li>modeling compound prices as frequently found in the tourism sector, e.g. weekly cleaning fees or extra charges for electricity in vacation homes based on metered usages.</li>
+        </ul>
+        <p>In typical hotel scenarios, we must distinguish between the legal agent operating the hotel (<a href="http://purl.org/goodrelations/v1#BusinessEntity">gr:BusinessEntity</a>), the hotel as a whole (<a href="http://purl.org/acco/ns#Hotel">acco:Hotel</a>), and the individual hotel rooms (<a href="http://purl.org/acco/ns#HotelRoom">acco:HotelRoom</a>). This distinction is important, because we may want to represent hotel features and room features. For instance, a sauna can be a room feature or a hotel feature. All accommodations are at the same time instances of the GoodRelations classes <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a> and <a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>. Hotel rooms and hotels or camping pitches and camping sites can be linked via the <a href="http://purl.org/acco/ns#partOf">acco:partOf</a> relationship type.</p>
+        <p>The following illustration shows a simple example of using the ontology:<br /><br />
+            <strong>Scenario:</strong> A double room with a double bed for US$ 99/night for one or two persons. <br />
+            <img id="img_overview" src="acco-overview.png" alt="ACCO Overview" />           
+        </p>
+        <h3 id="features">Representation of Accommodation Features</h3> 
+        <p>The general patterns of extending GoodRelations for vertical industries are described <a href="http://wiki.goodrelations-vocabulary.org/Documentation/Extensions">here</a>.</p>      
+        <p>The Accommodation Ontology slightly deviates from this standard pattern, because a global standardization of room or hotel features is not possible without loosing granularity. For instance, even features that look trivial at first sight, like &quot;Wifi&quot;, &quot;Star Rating&quot;, or &quot;TV Set&quot;, are impossible to harmonize in a feasible and lossless way. For instance, a Wifi network may vary by the supported speed standard and there are numerous different star ratings in use across the global that vary in scale and requirements. Technical equipment like TV sets or coffee makers can vary in quality and features, and hotels will typically want to preserve as much of their individiual value proposition in any description. 
+        </p>
+        <p>Thus, the Accommodation Ontology follows a radically different approach for Web Ontology Engineering in that it supports the so called <i>Deferred Consensus Principle</i> (Hepp (2012)): Instead of consolidating product features in the ontology, it provides a consolidated conceptual model for encoding proprietary feature information in a way that is most useful for the automated, heuristical consolidation at the client side. So instead of defining properties for room and hotel features, the ontology provides the class <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> that can hold feature information in varying degrees of formality.</p>
+        <p>Only for very few features the ontology provides readily standardized conceptual elements, like</p>
+        <ul>
+            <li>acco:occupancy</li>
+            <li>acco:occupancyAdults</li>
+            <li>acco:occupancyMinors</li>
+            <li>acco:petsAllowed</li>
+            <li>acco:size</li>
+        </ul>
+        <p>
+            The following illustration shows how hotel and room features can be expressed using <a href="http://purl.org/acco/ns#feature">acco:feature</a> and instances of <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a>.<br />
+            <strong>Scenario:</strong> A double room with two double beds that can be used by up to four persons and that has a minibar. The hotel is a 4-star hotel according to the DEHOGA rating and has a sauna as an optional feature, i.e. when you rent the room, the right to use the room does not automatically imply you can use the sauna for free. There may be an additional charge.<br />
+        <img id="img_features" src="acco-features.png" alt="ACCO Features" />
+        </p>
+        <h3 id="prices">Compound Prices</h3>    
+        <p>GoodRelations already provides many of the elements needed for expressing typical pricing patterns in the tourism sector, e.g. temporal validity, payment charges, arbitrary billing increments, etc. However, it lacks a pattern for prices that consist of many price components that apply in parallel. For instance, a camping ground may charge a daily rate per pitch plus a fee per person and a one-time fee for waste disposal at the end of the stay.
+        </p>    
+        <p>For this purpose, the Accommodation Ontology defines a new subclass of <a href="http://purl.org/goodrelations/v1#PriceSpecifiation">gr:PriceSpecifiation</a> named <a href="http://purl.org/acco/ns#CompoundPrice">acco:CompoundPrice</a> that can collate multiple, well formalized price components using <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> instances. For instance, we can model the pricing of a camping site as follows:</p>
+        <pre>
+foo:myOffer <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> 
+             [ a <a href="http://purl.org/acco/ns#CompoundPrice">acco:CompoundPrice</a> ;
+               <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                     [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                      <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;base rental fee&quot;@en ;
+                      <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                      <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;10&quot;^^xsd:float ;
+                      <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ;
+               <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                     [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                      <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;fee per person&quot;@en ;
+                      <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                      <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;5&quot;^^xsd:float ;
+                      <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ;
+               <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                     [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                      <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;fee per car&quot;@en ;
+                      <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                      <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;7&quot;^^xsd:float ;
+                      <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ;
+            ] .         
+        </pre>
+        <h3 id="uml">UML Class Diagrams</h3>        
+        <p>There are UML class diagrams available that illustrate the conceptual structures of the Accommodation Ontology. Note that the following diagrams are only approximations of the real OWL DL model, since they do not represent all details of the formal model.
+        </p>
+        <ul>
+            <li><a href="acco-uml.pdf">UML Class Diagram 1:</a> Product Perspective (Rooms and Hotels etc.)</li>
+            <li><a href="acco-price-uml.pdf">UML Class Diagram 2:</a> Compound Price Extension </li>
+        </ul>
+    </div>
+	<div class="box">
+		<p class="top">[<a href="#top">back to top</a>]</p>
+		<h2 id="examples">Examples</h2>
+		<p>
+			This section shows typical examples of using the ontology.
+		</p>
+		<p>We assume the following prefix declarations for all examples:</p>
+		<pre>
+@prefix foaf: &lt;<a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>&gt; .
+@prefix xsd: &lt;<a href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a>#&gt; .
+@prefix pto: &lt;<a href="http://www.productontology.org/id/">http://www.productontology.org/id/</a>&gt; .
+@prefix gr: &lt;<a href="http://purl.org/goodrelations/v1">http://purl.org/goodrelations/v1</a>#&gt; .
+@prefix rdf: &lt;<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">http://www.w3.org/1999/02/22-rdf-syntax-ns</a>#&gt; .
+@prefix rdfs: &lt;<a href="http://www.w3.org/2000/01/rdf-schema">http://www.w3.org/2000/01/rdf-schema</a>#&gt; .
+@prefix owl: &lt;<a href="http://www.w3.org/2002/07/owl">http://www.w3.org/2002/07/owl</a>#&gt; .
+@prefix dbpedia: &lt;<a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>&gt; .
+@prefix acco: &lt;<a href="http://purl.org/acco/ns">http://purl.org/acco/ns</a>#&gt; .
+@prefix foo: &lt;<a href="http://ontologies.sti-innsbruck.at/acco/examples.rdf">http://ontologies.sti-innsbruck.at/acco/examples.rdf</a>#&gt; .
+</pre>
+		<h3 id="hotel_mini">Hotel Room (Minimal)</h3>
+		<strong>Scenario:</strong> A hotel room for $99 per night	
+		<h4 id="hotel_mini_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="hotel_mini_n3">Turtle</h4>
+		<pre>
+# Hotel Room (Minimal)
+# Scenario: A hotel room for $99 per night
+foo:Room1 a <a href="http://purl.org/acco/ns#HotelRoom">acco:HotelRoom</a>, <a href="http://purl.org/goodrelations/v1#SomeItems">gr:SomeItems</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Double-room with sea-side view&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/acco/ns#bed">acco:bed</a> <a href="http://purl.org/acco/ns#Double">acco:Double</a> ;
+    # We assume the same price for single or double occupancy
+    <a href="http://purl.org/acco/ns#occupancy">acco:occupancy</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                     <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                     <a href="http://purl.org/goodrelations/v1#hasMinValue">gr:hasMinValue</a> &quot;1&quot;^^xsd:int ;
+                     <a href="http://purl.org/goodrelations/v1#hasMaxValue">gr:hasMaxValue</a> &quot;2&quot;^^xsd:int ] .    
+
+foo:RoomOffer1 a <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a> ;
+     <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Double-room with sea-side view for $ 99 per night&quot;@en ;
+     <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+# Note: <a href="http://purl.org/goodrelations/v1#includes">gr:includes</a> does not work here, since the default unit is C62 (one piece), but we need to say &quot;one day&quot; (DAY)
+     <a href="http://purl.org/goodrelations/v1#includesObject">gr:includesObject</a> [ a <a href="http://purl.org/goodrelations/v1#TypeAndQuantityNode">gr:TypeAndQuantityNode</a> ;
+                        <a href="http://purl.org/goodrelations/v1#amountOfThisGood">gr:amountOfThisGood</a> &quot;1&quot;^^xsd:float ;
+                        <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ;
+                        <a href="http://purl.org/goodrelations/v1#typeOfGood">gr:typeOfGood</a> foo:Room1 ] ;
+     <a href="http://purl.org/goodrelations/v1#hasBusinessFunction">gr:hasBusinessFunction</a> <a href="http://purl.org/goodrelations/v1#LeaseOut">gr:LeaseOut</a> ;
+     <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;USD&quot;^^xsd:string ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;99&quot;^^xsd:float ;
+                                <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ;
+# three rooms left
+     <a href="http://purl.org/goodrelations/v1#hasInventoryLevel">gr:hasInventoryLevel</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                            <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                            <a href="http://purl.org/goodrelations/v1#hasMinValue">gr:hasMinValue</a> &quot;3&quot;^^xsd:float ] ;
+     <a href="http://xmlns.com/foaf/0.1/depiction">foaf:depiction</a> &lt;<a href="http://example.com/images/seaside_view.png">http://example.com/images/seaside_view.png</a>&gt; ;
+     <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://example.com/rooms/seaside_view/">http://example.com/rooms/seaside_view/</a>&gt; . 
+		</pre>
+		<h3 id="hotel">Hotel Room (with Features)</h3>
+		<strong>Scenario:</strong> A hotel room for $99 per night. Room features: Safe, Wifi, Balcony, Minibar; Hotel features: Pool and Sauna.	
+		<h4 id="hotel_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="hotel_n3">Turtle</h4>
+		<pre>
+# Hotel Room (with Features)
+# Scenario: A hotel room for $99 per night. Room features: Safe, Wifi, Balcony, Minibar; Hotel features: Pool and Sauna.
+foo:Room2 a <a href="http://purl.org/acco/ns#HotelRoom">acco:HotelRoom</a>, <a href="http://purl.org/goodrelations/v1#SomeItems">gr:SomeItems</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Double-room with sea-side view&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/acco/ns#bed">acco:bed</a> <a href="http://purl.org/acco/ns#Double">acco:Double</a> ;
+    # Link to the hotel and its features
+    <a href="http://purl.org/acco/ns#partOf">acco:partOf</a> foo:Hotel1 ;
+    # We assume the same price for single or double occupancy
+    <a href="http://purl.org/acco/ns#occupancy">acco:occupancy</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                     <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                     <a href="http://purl.org/goodrelations/v1#hasMinValue">gr:hasMinValue</a> &quot;1&quot;^^xsd:int ;
+                     <a href="http://purl.org/goodrelations/v1#hasMaxValue">gr:hasMaxValue</a> &quot;2&quot;^^xsd:int ] ;    
+    <a href="http://purl.org/acco/ns#includedFeature">acco:includedFeature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Safe&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;yes&quot;@en ] ;
+    <a href="http://purl.org/acco/ns#includedFeature">acco:includedFeature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Wifi&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;yes&quot;@en ] ;
+    <a href="http://purl.org/acco/ns#includedFeature">acco:includedFeature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Balcony&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;yes&quot;@en ] ;
+    <a href="http://purl.org/acco/ns#feature">acco:feature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Minbar&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;yes&quot;@en ] .
+
+foo:Hotel1 a <a href="http://purl.org/acco/ns#Hotel">acco:Hotel</a>, <a href="http://purl.org/goodrelations/v1#Individual">gr:Individual</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Seaside View Paradise Hotel&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/acco/ns#includedFeature">acco:includedFeature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Pool&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;yes&quot;@en ] ;
+    <a href="http://purl.org/acco/ns#includedFeature">acco:includedFeature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Sauna&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;yes&quot;@en ] .
+</pre>
+		<h3 id="hotel_bb">Hotel Room (with Breakfast)</h3>
+		<strong>Scenario:</strong> A hotel room for $99 per night per person in a double room <strong>with breakfast.</strong> 	
+		<h4 id="hotel_bb_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="hotel_bb_n3">Turtle</h4>
+		<pre>
+# Hotel Room (with Breakfast)
+# Scenario: A hotel room for $99 per night per person in a single room with breakfast.
+foo:Room3 a <a href="http://purl.org/acco/ns#HotelRoom">acco:HotelRoom</a>, <a href="http://purl.org/goodrelations/v1#SomeItems">gr:SomeItems</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Single-room with sea-side view&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/acco/ns#bed">acco:bed</a> <a href="http://purl.org/acco/ns#Queen">acco:Queen</a> ;
+    <a href="http://purl.org/acco/ns#occupancy">acco:occupancy</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                     <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                     <a href="http://purl.org/goodrelations/v1#hasValue">gr:hasValue</a> &quot;1&quot;^^xsd:int ] .   
+    
+foo:HealthyBreakfast a <a href="http://purl.org/acco/ns#Breakfast">acco:Breakfast</a>, <a href="http://purl.org/goodrelations/v1#SomeItems">gr:SomeItems</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Healthy breakfast in buffet-style&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en .
+          
+foo:RoomOffer3 a <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Single-room with sea-side view for $ 99 per night including breakfast&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#includesObject">gr:includesObject</a> [ a <a href="http://purl.org/goodrelations/v1#TypeAndQuantityNode">gr:TypeAndQuantityNode</a>;
+                        <a href="http://purl.org/goodrelations/v1#amountOfThisGood">gr:amountOfThisGood</a> &quot;1&quot;^^xsd:float;
+                        <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ;
+                        <a href="http://purl.org/goodrelations/v1#typeOfGood">gr:typeOfGood</a> foo:Room3 ] ;
+    <a href="http://purl.org/goodrelations/v1#includesObject">gr:includesObject</a> [ a <a href="http://purl.org/goodrelations/v1#TypeAndQuantityNode">gr:TypeAndQuantityNode</a> ;
+                        <a href="http://purl.org/goodrelations/v1#amountOfThisGood">gr:amountOfThisGood</a> &quot;1&quot;^^xsd:float ;
+                        <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                        <a href="http://purl.org/goodrelations/v1#typeOfGood">gr:typeOfGood</a> foo:HealthyBreakfast ;
+# You can keep the breakfast after consumption ;-)
+                        <a href="http://purl.org/goodrelations/v1#hasBusinessFunction">gr:hasBusinessFunction</a> <a href="http://purl.org/goodrelations/v1#Sell">gr:Sell</a> ] ;
+# Note: The business function of the main <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a> determines the business function for all 
+# included objects or services, unless a business function attached to a <a href="http://purl.org/goodrelations/v1#TypeAndQuantityNode">gr:TypeAndQuantityNode</a> overrides it.
+     <a href="http://purl.org/goodrelations/v1#hasBusinessFunction">gr:hasBusinessFunction</a> <a href="http://purl.org/goodrelations/v1#LeaseOut">gr:LeaseOut</a> ;
+     <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;USD&quot;^^xsd:string ;
+                                <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;99&quot;^^xsd:float ;
+                                <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ];
+     <a href="http://xmlns.com/foaf/0.1/depiction">foaf:depiction</a> &lt;<a href="http://example.com/images/seaside_view.png">http://example.com/images/seaside_view.png</a>&gt; ;
+     <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://example.com/rooms/seaside_view/">http://example.com/rooms/seaside_view/</a>&gt; . 
+		</pre>
+		<h3 id="camping">Camping</h3>
+		<strong>Scenario:</strong> A camping pitch for 10 EUR/night plus 5 EUR per person plus 7 EUR per car	
+		<h4 id="camping_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="camping_n3">Turtle</h4>
+		<pre>
+# Camping
+# Scenario: A camping pitch for 10 EUR/night plus 5 EUR per person plus 7 EUR per car
+foo:Camping a <a href="http://purl.org/acco/ns#CampingPitch">acco:CampingPitch</a>, <a href="http://purl.org/goodrelations/v1#SomeItems">gr:SomeItems</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Camping pitch on our lakeside campground&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/acco/ns#optionalFeature">acco:optionalFeature</a> [
+        a <a href="http://purl.org/acco/ns#AccommodationFeature">acco:AccommodationFeature</a> ;
+        <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Electricity&quot;@en ;
+        <a href="http://purl.org/acco/ns#value">acco:value</a> &quot;220&quot;@en ;
+        <a href="http://purl.org/acco/ns#unit">acco:unit</a> &quot;volts&quot;@en ];
+    <a href="http://purl.org/acco/ns#permittedUsage">acco:permittedUsage</a> <a href="http://dbpedia.org/resource/Automobile">dbpedia:Automobile</a>, <a href="http://dbpedia.org/resource/Tent">dbpedia:Tent</a> ;
+    <a href="http://purl.org/acco/ns#petsAllowed">acco:petsAllowed</a> &quot;false&quot;^^xsd:boolean .
+                        
+foo:CampingOffer a <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;A camping pitch for 10 EUR/night plus 5 EUR per person plus 7 EUR per car&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#includesObject">gr:includesObject</a> [ a <a href="http://purl.org/goodrelations/v1#TypeAndQuantityNode">gr:TypeAndQuantityNode</a> ;
+                        <a href="http://purl.org/goodrelations/v1#amountOfThisGood">gr:amountOfThisGood</a> &quot;1&quot;^^xsd:float ;
+                        <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ;
+                        <a href="http://purl.org/goodrelations/v1#typeOfGood">gr:typeOfGood</a> foo:Camping ];
+    <a href="http://purl.org/goodrelations/v1#hasBusinessFunction">gr:hasBusinessFunction</a> <a href="http://purl.org/goodrelations/v1#LeaseOut">gr:LeaseOut</a> ;
+    <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> 
+        [ a <a href="http://purl.org/acco/ns#CompoundPrice">acco:CompoundPrice</a> ;
+          <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                 <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;base rental fee&quot;@en ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;10&quot;^^xsd:float ;
+                 <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ;
+          <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                 <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;fee per person&quot;@en ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;5&quot;^^xsd:float ;
+                 <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ;
+          <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                [ a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                 <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;fee per car&quot;@en ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;7&quot;^^xsd:float ;
+                 <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;DAY&quot;^^xsd:string ] ; 
+	 	] ;
+     <a href="http://xmlns.com/foaf/0.1/depiction">foaf:depiction</a> &lt;<a href="http://example.com/images/camping.png">http://example.com/images/camping.png</a>&gt; ;
+     <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://example.com/lakeside-camping/">http://example.com/lakeside-camping/</a>&gt; . 
+		</pre>
+		<h3 id="house">House</h3>
+		<strong>Scenario:</strong> A vacation home with 3 rooms and a total of 3 beds. The maximum occupancy is six person. The price is 500 EUR per week for a minimum duration of two weeks. Cleaning is 50 EUR per stay, electricity 0.50 EUR per kWh.
+		<h4 id="house_rdfa">RDFa</h4>
+You can use the tool at <a href="http://rdf-translator.appspot.com">http://rdf-translator.appspot.com</a> to generate an RDFa version of the example.
+		<h4 id="house_n3">Turtle</h4>
+		<pre>
+# House
+# Scenario: A vacation home with 3 rooms and a total of 3 double beds. The maximum occupancy is six person. 
+# The price is 500 EUR per week for a minimum duration of two weeks. Cleaning is 50 EUR per stay, electricity 0.50 EUR per kWh.
+foo:House a <a href="http://purl.org/acco/ns#House">acco:House</a>, <a href="http://purl.org/goodrelations/v1#Individual">gr:Individual</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Our beautiful little cottage on Belle Ile&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;...more text...&quot;@en ;
+    <a href="http://purl.org/acco/ns#petsAllowed">acco:petsAllowed</a> &quot;false&quot;^^xsd:boolean ;
+    <a href="http://purl.org/acco/ns#occupancy">acco:occupancy</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                     <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                     <a href="http://purl.org/goodrelations/v1#hasMinValue">gr:hasMinValue</a> &quot;1&quot;^^xsd:int ;
+                     <a href="http://purl.org/goodrelations/v1#hasMaxValue">gr:hasMaxValue</a> &quot;6&quot;^^xsd:int ] ;
+    <a href="http://purl.org/acco/ns#numberOfRooms">acco:numberOfRooms</a> [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                         <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ;
+                         <a href="http://purl.org/goodrelations/v1#hasValue">gr:hasValue</a> &quot;3&quot;^^xsd:int ] ;
+    <a href="http://purl.org/acco/ns#bed">acco:bed</a> [ a <a href="http://purl.org/acco/ns#BedDetails">acco:BedDetails</a> ;
+               <a href="http://purl.org/acco/ns#quantity">acco:quantity</a> &quot;3&quot;^^xsd:integer ;
+               <a href="http://purl.org/acco/ns#typeOfBed">acco:typeOfBed</a> <a href="http://purl.org/acco/ns#Double">acco:Double</a> ] .
+            
+foo:HouseOffer a <a href="http://purl.org/goodrelations/v1#Offering">gr:Offering</a> ;
+    <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;Our beautiful little cottage on Belle Ile&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#description">gr:description</a> &quot;&quot;&quot;Price: 500 EUR per week for a minimum duration of two weeks. 
+Cleaning is 50 EUR per stay, electricity 0.50 EUR per kWh&quot;&quot;&quot;@en ;
+    <a href="http://purl.org/goodrelations/v1#includesObject">gr:includesObject</a> [ a <a href="http://purl.org/goodrelations/v1#TypeAndQuantityNode">gr:TypeAndQuantityNode</a> ;
+                        <a href="http://purl.org/goodrelations/v1#amountOfThisGood">gr:amountOfThisGood</a> &quot;1&quot;^^xsd:float ;
+                        <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;WEE&quot;^^xsd:string ;
+                        <a href="http://purl.org/goodrelations/v1#typeOfGood">gr:typeOfGood</a> foo:House ] ;
+    <a href="http://purl.org/goodrelations/v1#hasBusinessFunction">gr:hasBusinessFunction</a> <a href="http://purl.org/goodrelations/v1#LeaseOut">gr:LeaseOut</a> ;
+    <a href="http://purl.org/goodrelations/v1#eligibleDuration">gr:eligibleDuration</a>  [ a <a href="http://purl.org/goodrelations/v1#QuantitativeValue">gr:QuantitativeValue</a> ;
+                           <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;WEE&quot;^^xsd:string ;
+                           <a href="http://purl.org/goodrelations/v1#hasMinValue">gr:hasMinValue</a> &quot;2&quot;^^xsd:int ] ;
+    <a href="http://purl.org/goodrelations/v1#hasPriceSpecification">gr:hasPriceSpecification</a> 
+        [ a <a href="http://purl.org/acco/ns#CompoundPrice">acco:CompoundPrice</a> ;
+          <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                [a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                 <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;base rental fee&quot;@en ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;500&quot;^^xsd:float ;
+                 # WEE = UN/CEFACT Common Code for week
+                 <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;WEE&quot;^^xsd:string ] ;
+          <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                [a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                 <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;electricity&quot;@en ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;0.50&quot;^^xsd:float ;
+                 <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;KWH&quot;^^xsd:string ] ;
+          <a href="http://purl.org/acco/ns#priceComponent">acco:priceComponent</a> 
+                [a <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> ;
+                 <a href="http://purl.org/goodrelations/v1#name">gr:name</a> &quot;cleaning&quot;@en ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrency">gr:hasCurrency</a> &quot;EUR&quot;^^xsd:string ;
+                 <a href="http://purl.org/goodrelations/v1#hasCurrencyValue">gr:hasCurrencyValue</a> &quot;50&quot;^^xsd:float ;
+                 <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> &quot;C62&quot;^^xsd:string ] ; 
+		] ;
+
+     <a href="http://xmlns.com/foaf/0.1/depiction">foaf:depiction</a> &lt;<a href="http://example.com/images/belle-ile.png">http://example.com/images/belle-ile.png</a>&gt; ;
+     <a href="http://xmlns.com/foaf/0.1/page">foaf:page</a> &lt;<a href="http://example.com/belle-ile-cottage/">http://example.com/belle-ile-cottage/</a>&gt; . 
+</pre>
+	</div>
+		<!-- Classes -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="classes">1. Classes</h2>
+			<ul>
+				<li><a href="#Accommodation">acco:Accommodation</a> </li>
+				<li><a href="#AccommodationFeature">acco:AccommodationFeature</a> </li>
+				<li><a href="#Allinclusive">acco:Allinclusive</a> </li>
+				<li><a href="#Apartment">acco:Apartment</a> </li>
+				<li><a href="#BedDetails">acco:BedDetails</a> </li>
+				<li><a href="#BedType">acco:BedType</a> </li>
+				<li><a href="#Breakfast">acco:Breakfast</a> </li>
+				<li><a href="#CampingPitch">acco:CampingPitch</a> </li>
+				<li><a href="#CampingSite">acco:CampingSite</a> </li>
+				<li><a href="#CompoundPrice">acco:CompoundPrice</a> </li>
+				<li><a href="#Dinner">acco:Dinner</a> </li>
+				<li><a href="#DwellingType">acco:DwellingType</a> </li>
+				<li><a href="#Hotel">acco:Hotel</a> </li>
+				<li><a href="#HotelRoom">acco:HotelRoom</a> </li>
+				<li><a href="#House">acco:House</a> </li>
+				<li><a href="#Lunch">acco:Lunch</a> </li>
+				<li><a href="#Meal">acco:Meal</a> </li>
+				<li><a href="#MeetingRoom">acco:MeetingRoom</a> </li>
+				<li><a href="#Resort">acco:Resort</a> </li>
+				<li><a href="#Suite">acco:Suite</a> </li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Accommodation">acco:Accommodation <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Accommodation">http://purl.org/acco/ns#Accommodation</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#Location">http://purl.org/goodrelations/v1#Location</a> <a href="http://purl.org/goodrelations/v1#ProductOrService">http://purl.org/goodrelations/v1#ProductOrService</a> <a href="http://schema.org/Place">http://schema.org/Place</a> <a href="http://schema.org/Product">http://schema.org/Product</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Accommodation (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.<br/>
+<br/>
+Note: For more specific types of accommodations not defined in this ontology, you can easily use any Wikipedia entry from <br/>
+<br/>
+    <a href="http://en.wikipedia.org/wiki/List_of_human_habitation_forms">http://en.wikipedia.org/wiki/List_of_human_habitation_forms</a><br/>
+<br/>
+and replace the base URI<br/>
+<br/>
+    <a href="http://en.wikipedia.org/wiki/">http://en.wikipedia.org/wiki/</a><br/>
+<br/>
+by<br/>
+<br/>
+    <a href="http://www.productontology.org/id/">http://www.productontology.org/id/</a><br/>
+<br/>
+For instance, if you want want to describe an igloo (http://en.wikipedia.org/wiki/Igloo) for rent, you can use the local part 'Igloo' as a class identifier as follows:<br/>
+<br/>
+    <a href="http://www.productontology.org/id/Igloo">http://www.productontology.org/id/Igloo</a></p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+			<p><strong>Subclasses</strong></p>
+			<ul>
+				<li>
+					<a href="#Apartment">acco:Apartment</a>
+				</li>
+				<li>
+					<a href="#CampingPitch">acco:CampingPitch</a>
+				</li>
+				<li>
+					<a href="#CampingSite">acco:CampingSite</a>
+				</li>
+				<li>
+					<a href="#Hotel">acco:Hotel</a>
+				</li>
+				<li>
+					<a href="#HotelRoom">acco:HotelRoom</a>
+				</li>
+				<li>
+					<a href="#House">acco:House</a>
+				</li>
+				<li>
+					<a href="#MeetingRoom">acco:MeetingRoom</a>
+				</li>
+				<li>
+					<a href="#Resort">acco:Resort</a>
+				</li>
+				<li>
+					<a href="#Suite">acco:Suite</a>
+				</li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="AccommodationFeature">acco:AccommodationFeature <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#AccommodationFeature">http://purl.org/acco/ns#AccommodationFeature</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Accommodation Feature
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An accommodation feature is a structured value representing the feature of an accommodation as a property-value pair of varying degrees of formality.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#availabilityTimes">acco:availabilityTimes</a> <a href="#max">acco:max</a> <a href="#min">acco:min</a> <a href="#propertyID">acco:propertyID</a> <a href="#unit">acco:unit</a> <a href="#unitCode">acco:unitCode</a> <a href="#validFrom">acco:validFrom</a> <a href="#validThrough">acco:validThrough</a> <a href="#value">acco:value</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#optionalFeature">acco:optionalFeature</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Allinclusive">acco:Allinclusive <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Allinclusive">http://purl.org/acco/ns#Allinclusive</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#ProductOrService">http://purl.org/goodrelations/v1#ProductOrService</a> <a href="http://schema.org/Product">http://schema.org/Product</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> All-inclusive (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>All-inclusive in the sense of this vocabulary is a comprehesive set of foods and beverages, and sometimes complementing services, provided throughout the entire day.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Apartment">acco:Apartment <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Apartment">http://purl.org/acco/ns#Apartment</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Apartment (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#bed">acco:bed</a> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#numberOfRooms">acco:numberOfRooms</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="BedDetails">acco:BedDetails <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#BedDetails">http://purl.org/acco/ns#BedDetails</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Bed Details
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A node holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use <a href="http://purl.org/acco/ns#bed">acco:bed</a> directly with <a href="http://purl.org/acco/ns#BedType">acco:BedType</a> instances.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#quantity">acco:quantity</a> <a href="#typeOfBed">acco:typeOfBed</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#bed">acco:bed</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="BedType">acco:BedType <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#BedType">http://purl.org/acco/ns#BedType</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QualitativeValue">http://purl.org/goodrelations/v1#QualitativeValue</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Bed Type
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A type of bed. This is used for indicating the bed or beds available in an accommodation. Use DBpedia URIs whenever possible.</p>
+			</div>
+			<p><strong>Predefined Individuals</strong></p>
+			<ul>
+				<li><a href="#CaliforniaKing">acco:CaliforniaKing</a></li>
+				<li><a href="#Double">acco:Double</a></li>
+				<li><a href="#King">acco:King</a></li>
+				<li><a href="#OlympicQueen">acco:OlympicQueen</a></li>
+				<li><a href="#Queen">acco:Queen</a></li>
+				<li><a href="#Single">acco:Single</a></li>
+			</ul>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#bed">acco:bed</a> <a href="#typeOfBed">acco:typeOfBed</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Breakfast">acco:Breakfast <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Breakfast">http://purl.org/acco/ns#Breakfast</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Meal">acco:Meal</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Breakfast (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A breakfast is the first meal taken after rising from a night's sleep, most often eaten in the early morning before undertaking the day's work. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Breakfast">http://en.wikipedia.org/wiki/Breakfast</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="CampingPitch">acco:CampingPitch <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#CampingPitch">http://purl.org/acco/ns#CampingPitch</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Camping Pitch (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A camping pitch is an individual place for overnight stay in the outdoors, typically being part of a larger <a href="http://purl.org/acco/ns#CampSite">acco:CampSite</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#permittedUsage">acco:permittedUsage</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="CampingSite">acco:CampingSite <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#CampingSite">http://purl.org/acco/ns#CampingSite</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Camping Site (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A camping site, campsite, or campground is a place used for overnight stay in the outdoors. In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or parks a camper; a campground may contain many campsites. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Campsite">http://en.wikipedia.org/wiki/Campsite</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#gated">acco:gated</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#permittedUsage">acco:permittedUsage</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="CompoundPrice">acco:CompoundPrice <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#CompoundPrice">http://purl.org/acco/ns#CompoundPrice</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#PriceSpecification">http://purl.org/goodrelations/v1#PriceSpecification</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Compound Price
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use <a href="http://purl.org/goodrelations/v1#name">gr:name</a> for indicating the dimension (e.g. "electricity" or "final cleaning").</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#priceComponent">acco:priceComponent</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Dinner">acco:Dinner <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Dinner">http://purl.org/acco/ns#Dinner</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Meal">acco:Meal</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Dinner (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A dinner is the main meal of the day, often consumed in the evening of the day.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="DwellingType">acco:DwellingType <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#DwellingType">http://purl.org/acco/ns#DwellingType</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QualitativeValue">http://purl.org/goodrelations/v1#QualitativeValue</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Dwelling Type
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A type of dwelling, e.g. tent, mobile home, etc. for indicating the permitted usage on a campsite. Use DBpedia URIs whenever possible.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#permittedUsage">acco:permittedUsage</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Hotel">acco:Hotel <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Hotel">http://purl.org/acco/ns#Hotel</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Hotel (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A hotel is an establishment that provides lodging paid on a short-term basis. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Hotel">http://en.wikipedia.org/wiki/Hotel</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="HotelRoom">acco:HotelRoom <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#HotelRoom">http://purl.org/acco/ns#HotelRoom</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Hotel Room (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A hotel room is a single room in a hotel.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#bed">acco:bed</a> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#numberOfRooms">acco:numberOfRooms</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="House">acco:House <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#House">http://purl.org/acco/ns#House</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> House (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#bed">acco:bed</a> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#numberOfRooms">acco:numberOfRooms</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Lunch">acco:Lunch <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Lunch">http://purl.org/acco/ns#Lunch</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Meal">acco:Meal</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Lunch (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A luncheon, commonly abbreviated to lunch, is a middle of the day meal. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Lunch">http://en.wikipedia.org/wiki/Lunch</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Meal">acco:Meal <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Meal">http://purl.org/acco/ns#Meal</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#ProductOrService">http://purl.org/goodrelations/v1#ProductOrService</a> <a href="http://schema.org/Product">http://schema.org/Product</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Meal (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A meal in the sense of this vocabulary is some combination of food or beverages.</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span>
+			</p>
+			<p><strong>Subclasses</strong></p>
+			<ul>
+				<li>
+					<a href="#Breakfast">acco:Breakfast</a>
+				</li>
+				<li>
+					<a href="#Dinner">acco:Dinner</a>
+				</li>
+				<li>
+					<a href="#Lunch">acco:Lunch</a>
+				</li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="MeetingRoom">acco:MeetingRoom <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#MeetingRoom">http://purl.org/acco/ns#MeetingRoom</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Meeting Room (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>)  </p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Resort">acco:Resort <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Resort">http://purl.org/acco/ns#Resort</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Resort (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishment operated by a single company. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>)</p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#feature">acco:feature</a> <a href="#gated">acco:gated</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Suite">acco:Suite <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a>)</span>
+			</h3>
+			<p class="left_align">
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Suite">http://purl.org/acco/ns#Suite</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subClassOf">rdfs:subClassOf</a></strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Suite (<a href="http://purl.org/goodrelations/v1#ProductOrService">gr:ProductOrService</a>, <a href="http://purl.org/goodrelations/v1#Location">gr:Location</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms. (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_">http://en.wikipedia.org/wiki/Suite_</a>(hotel)) </p>
+			</div>
+			<p class="left_align">
+				<strong>Properties (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>) :</strong> <span class="item_list"> <a href="#bed">acco:bed</a> <a href="#feature">acco:feature</a> <a href="#includedFeature">acco:includedFeature</a> <a href="#numberOfRooms">acco:numberOfRooms</a> <a href="#occupancy">acco:occupancy</a> <a href="#occupancyAdults">acco:occupancyAdults</a> <a href="#occupancyMinors">acco:occupancyMinors</a> <a href="#optionalFeature">acco:optionalFeature</a> <a href="#partOf">acco:partOf</a> <a href="#petsAllowed">acco:petsAllowed</a> <a href="#size">acco:size</a> <a href="http://purl.org/goodrelations/v1#description">http://purl.org/goodrelations/v1#description</a> <a href="http://purl.org/goodrelations/v1#name">http://purl.org/goodrelations/v1#name</a> <a href="http://schema.org/geo">http://schema.org/geo</a> <a href="http://schema.org/image">http://schema.org/image</a> <a href="http://xmlns.com/foaf/0.1/depiction">http://xmlns.com/foaf/0.1/depiction</a> <a href="http://xmlns.com/foaf/0.1/logo">http://xmlns.com/foaf/0.1/logo</a></span><br/>
+				<strong>This class is a valid range (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>) for:</strong> <span class="item_list"> <a href="#partOf">acco:partOf</a></span>
+			</p>
+		</div>
+		
+		<!-- Datatype Properties -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="dprops">2. Datatype Properties</h2>
+			<ul>
+				<li><a href="#gated">acco:gated</a></li>
+				<li><a href="#max">acco:max</a></li>
+				<li><a href="#min">acco:min</a></li>
+				<li><a href="#petsAllowed">acco:petsAllowed</a></li>
+				<li><a href="#propertyID">acco:propertyID</a></li>
+				<li><a href="#quantity">acco:quantity</a></li>
+				<li><a href="#unit">acco:unit</a></li>
+				<li><a href="#unitCode">acco:unitCode</a></li>
+				<li><a href="#validFrom">acco:validFrom</a></li>
+				<li><a href="#validThrough">acco:validThrough</a></li>
+				<li><a href="#value">acco:value</a></li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="gated">acco:gated <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#gated">http://purl.org/acco/ns#gated</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> gated (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>Indicates whether the accommodation is gated, i.e. access is controlled via a fence and some form of gate.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#CampingSite">acco:CampingSite</a> <a href="#Resort">acco:Resort</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="max">acco:max <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#max">http://purl.org/acco/ns#max</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> max (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The upper bound of the value for the feature. It is best to use this property with numerical datatypes, e.g. xsd:decimal, xsd:int, or xsd:float.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="min">acco:min <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#min">http://purl.org/acco/ns#min</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> min (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The lower bound of the value for the feature. It is best to use this property with numerical datatypes, e.g. xsd:decimal, xsd:int, or xsd:float.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="petsAllowed">acco:petsAllowed <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#petsAllowed">http://purl.org/acco/ns#petsAllowed</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> pets allowed (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>Indicates whether pets are allowed to enter the accommodation.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="propertyID">acco:propertyID <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#propertyID">http://purl.org/acco/ns#propertyID</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> property ID (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A global identifier, e.g. a URI, a prefixed string, or any other identifier that can be used to refer to a standardized property type.<br/>
+<br/>
+The following prefixes and values are reserved:<br/>
+starRating:HOTREC <br/>
+starRating:DEHOGA<br/>
+starRating:WHR<br/>
+starRating:Hotelstars<br/>
+</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="quantity">acco:quantity <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#quantity">http://purl.org/acco/ns#quantity</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> quantity (1..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The quantity of the given bed type available in the <a href="http://purl.org/acco/ns#HotelRoom">acco:HotelRoom</a>, <a href="http://purl.org/acco/ns#Suite">acco:Suite</a>, <a href="http://purl.org/acco/ns#House">acco:House</a>, or <a href="http://purl.org/acco/ns#Apartment">acco:Apartment</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#BedDetails">acco:BedDetails</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#integer">http://www.w3.org/2001/XMLSchema#integer</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="unit">acco:unit <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#unit">http://purl.org/acco/ns#unit</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> unit (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A textual representation of the unit of measurement, e.g. global identifier, e.g. "m" or "meter". When you have the UN/CEFACT Common Code for the unit available, it is better to use <a href="http://purl.org/acco/ns#unitCode">acco:unitCode</a>. This property is for the cases where a standardized unit code is not available from the data source.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a> <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">http://purl.org/goodrelations/v1#UnitPriceSpecification</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="unitCode">acco:unitCode <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#unitCode">http://purl.org/acco/ns#unitCode</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> unit code (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The UN/CEFACT Common Code for the unit of measurement, e.g. "MTR" for meter, "HUR" for hours, etc. If you only have a textual representation of the unit of measurement, use <a href="http://purl.org/acco/ns#unit">acco:unit</a> instead.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="validFrom">acco:validFrom <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#validFrom">http://purl.org/acco/ns#validFrom</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> valid from (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>Indicates the beginning of a time interval during which a certain feature is valid or available. For example, a sauna or swimming pool may only be available during certain periods.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="validThrough">acco:validThrough <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#validThrough">http://purl.org/acco/ns#validThrough</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> valid from (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>Indicates the beginning of a time interval during which a certain feature is valid or available. For example, a sauna or swimming pool may only be available during certain periods.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="value">acco:value <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#DatatypeProperty">owl:DatatypeProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#value">http://purl.org/acco/ns#value</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty">http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> value (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The point value for the feature unless it is an interval. If possible, use numerical datatypes, e.g. xsd:decimal, xsd:int, or xsd:float. Textual content is also acceptable, though.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.w3.org/2000/01/rdf-schema#Literal</a></span>
+			</p>
+		</div>
+		<!-- Object Properties -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="oprops">3. Object Properties</h2>
+			<ul>
+				<li><a href="#availabilityTimes">acco:availabilityTimes</a></li>
+				<li><a href="#bed">acco:bed</a></li>
+				<li><a href="#feature">acco:feature</a></li>
+				<li><a href="#includedFeature">acco:includedFeature</a></li>
+				<li><a href="#numberOfRooms">acco:numberOfRooms</a></li>
+				<li><a href="#occupancy">acco:occupancy</a></li>
+				<li><a href="#occupancyAdults">acco:occupancyAdults</a></li>
+				<li><a href="#occupancyMinors">acco:occupancyMinors</a></li>
+				<li><a href="#optionalFeature">acco:optionalFeature</a></li>
+				<li><a href="#partOf">acco:partOf</a></li>
+				<li><a href="#permittedUsage">acco:permittedUsage</a></li>
+				<li><a href="#priceComponent">acco:priceComponent</a></li>
+				<li><a href="#referenceQuantity">acco:referenceQuantity</a></li>
+				<li><a href="#size">acco:size</a></li>
+				<li><a href="#typeOfBed">acco:typeOfBed</a></li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="availabilityTimes">acco:availabilityTimes <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#availabilityTimes">http://purl.org/acco/ns#availabilityTimes</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> availability times (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>Indicates the times of availability of a particular accommodation feature. <span style="text-decoration: underline">Example:</span> The sauna is available from 8:00 - 10:00 a.m. on weekdays.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#OpeningHoursSpecification">http://purl.org/goodrelations/v1#OpeningHoursSpecification</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="bed">acco:bed <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#bed">http://purl.org/acco/ns#bed</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> bed (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use <a href="http://purl.org/acco/ns#bed">acco:bed</a> directly with <a href="http://purl.org/acco/ns#BedType">acco:BedType</a> instances. If you want to indicate the quantity of a certain <a href="http://purl.org/acco/ns#BedType">acco:BedType</a>, use an instance of <a href="http://purl.org/acco/ns#BedDetails">acco:BedDetails</a>. For more detailed information, use <a href="http://purl.org/acco/ns#feature">acco:feature</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Apartment">acco:Apartment</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#BedDetails">acco:BedDetails</a> <a href="#BedType">acco:BedType</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="feature">acco:feature <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#feature">http://purl.org/acco/ns#feature</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> feature (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A feature (e.g. a characteristic or service) of the <a href="http://purl.org/acco/ns#Accommodation">acco:Accommodation</a>. This generic property does not make a statement about whether the feature is included in the offer for the main accommodation or available at extra costs. </p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span>
+			</p>
+			<p><strong>Subproperties</strong></p>
+			<ul>
+				<li>
+					<a href="#includedFeature">acco:includedFeature</a>
+				</li>
+				<li>
+					<a href="#optionalFeature">acco:optionalFeature</a>
+				</li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="includedFeature">acco:includedFeature <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#includedFeature">http://purl.org/acco/ns#includedFeature</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="#feature">acco:feature</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> included feature (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A feature (e.g. a characteristic or service) of the <a href="http://purl.org/acco/ns#Accommodation">acco:Accommodation</a> that is included in the offer for the main accommodation, i.e. at no extra costs. </p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="numberOfRooms">acco:numberOfRooms <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#numberOfRooms">http://purl.org/acco/ns#numberOfRooms</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> number of rooms (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The number of rooms (excluding bathrooms and closets of the <a href="http://purl.org/acco/ns#Suite">acco:Suite</a>, <a href="http://purl.org/acco/ns#House">acco:House</a>, or <a href="http://purl.org/acco/ns#Apartment">acco:Apartment</a>. <br/>
+Typical unit code(s): C62 for person</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Apartment">acco:Apartment</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="occupancy">acco:occupancy <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#occupancy">http://purl.org/acco/ns#occupancy</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> occupancy (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The allowed total occupancy for the accommodation in persons (including infants etc.<br/>
+Typical unit code(s): C62 for person</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="occupancyAdults">acco:occupancyAdults <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#occupancyAdults">http://purl.org/acco/ns#occupancyAdults</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> occupancy adults (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The allowed total occupancy of adults (in the sense of fully paying guests) for the accommodation in persons. The exact definition of what constitutes an adult varies across regions and will typically not match the legal definition of being an adult. <br/>
+Typical unit code(s): C62 for person</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="occupancyMinors">acco:occupancyMinors <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#occupancyMinors">http://purl.org/acco/ns#occupancyMinors</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> occupancy minors (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The allowed total occupancy of minors (in the sense of not fully paying guests) for the accommodation in persons. The exact definition of what constitutes a minor varies across regions and will typically not match the legal definition of being a minor. <br/>
+Typical unit code(s): C62 for person</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="optionalFeature">acco:optionalFeature <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#optionalFeature">http://purl.org/acco/ns#optionalFeature</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="#feature">acco:feature</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> optional feature (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A feature (e.g. a characteristic or service) of the <a href="http://purl.org/acco/ns#Accommodation">acco:Accommodation</a> that is generally available but not included in the offer for the main accommodation, i.e. at  extra costs. </p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#AccommodationFeature">acco:AccommodationFeature</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="partOf">acco:partOf <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#partOf">http://purl.org/acco/ns#partOf</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> partOf (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A naive parthood relation between two <a href="http://purl.org/acco/ns#Accommodation">acco:Accommodation</a> instances. <span style="text-decoration: underline">Examples:</span> A certain hotel room is part of a certain hotel, a certain house is part of a holiday resort, etc. </p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="permittedUsage">acco:permittedUsage <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#permittedUsage">http://purl.org/acco/ns#permittedUsage</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> permitted usage (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The type of objects that you are allowed to put on the camping pitch, e.g. a tent, car, boat, or mobile homre. Use DBpedia URIs whenever possible.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#DwellingType">acco:DwellingType</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="priceComponent">acco:priceComponent <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#priceComponent">http://purl.org/acco/ns#priceComponent</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> price component (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>This property links to all <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">gr:UnitPriceSpecification</a> nodes that apply in parallel for the <a href="http://purl.org/acco/ns#CompoundPrice">acco:CompoundPrice</a> node.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#CompoundPrice">acco:CompoundPrice</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">http://purl.org/goodrelations/v1#UnitPriceSpecification</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="referenceQuantity">acco:referenceQuantity <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#referenceQuantity">http://purl.org/acco/ns#referenceQuantity</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> reference quantity (0..*)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for <a href="http://purl.org/goodrelations/v1#hasUnitOfMeasurement">gr:hasUnitOfMeasurement</a> for the advanced cases where the price does not relate to a standard unit.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#UnitPriceSpecification">http://purl.org/goodrelations/v1#UnitPriceSpecification</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="size">acco:size <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#size">http://purl.org/acco/ns#size</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a></strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty">http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty</a></span><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> size (0..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The size of the accommodation, e.g. in square meter or squarefoot.<br/>
+Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard </p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#Accommodation">acco:Accommodation</a> <a href="#Apartment">acco:Apartment</a> <a href="#CampingPitch">acco:CampingPitch</a> <a href="#CampingSite">acco:CampingSite</a> <a href="#Hotel">acco:Hotel</a> <a href="#HotelRoom">acco:HotelRoom</a> <a href="#House">acco:House</a> <a href="#MeetingRoom">acco:MeetingRoom</a> <a href="#Resort">acco:Resort</a> <a href="#Suite">acco:Suite</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="http://purl.org/goodrelations/v1#QuantitativeValue">http://purl.org/goodrelations/v1#QuantitativeValue</a></span>
+			</p>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="typeOfBed">acco:typeOfBed <span class="rdf_type">(rdf:type <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#typeOfBed">http://purl.org/acco/ns#typeOfBed</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> type of bed (1..1)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>The type of bed to which the <a href="http://purl.org/acco/ns#BedDetail">acco:BedDetail</a> node refers, i.e. the type of bed available in the quantity indicated by <a href="http://purl.org/acco/ns#quantity">acco:quantity</a>.</p>
+			</div>
+			<p class="left_align">
+				<strong>Compatible with (<a href="http://www.w3.org/2000/01/rdf-schema#domain">rdfs:domain</a>):</strong> <span class="item_list"> <a href="#BedDetails">acco:BedDetails</a></span><br/>
+				<strong>Allowed values (<a href="http://www.w3.org/2000/01/rdf-schema#range">rdfs:range</a>):</strong> <span class="item_list"> <a href="#BedType">acco:BedType</a></span>
+			</p>
+		</div>
+		
+		<!-- Instances -->
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="individuals">4. Individuals</h2>
+			<ul>
+				<li><a href="#CaliforniaKing">acco:CaliforniaKing</a></li>
+				<li><a href="#Double">acco:Double</a></li>
+				<li><a href="#King">acco:King</a></li>
+				<li><a href="#OlympicQueen">acco:OlympicQueen</a></li>
+				<li><a href="#Queen">acco:Queen</a></li>
+				<li><a href="#Single">acco:Single</a></li>
+			</ul>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="CaliforniaKing">acco:CaliforniaKing <span class="rdf_type">(rdf:type <a href="#BedType">acco:BedType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#CaliforniaKing">http://purl.org/acco/ns#CaliforniaKing</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> California King or King Long bed (<a href="http://purl.org/acco/ns#BedType">acco:BedType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A California King or King Long bed. The actual dimension may vary by country, see <a href="http://en.wikipedia.org/wiki/Bed_size">http://en.wikipedia.org/wiki/Bed_size</a>.</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Double">acco:Double <span class="rdf_type">(rdf:type <a href="#BedType">acco:BedType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Double">http://purl.org/acco/ns#Double</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Double or full bed (<a href="http://purl.org/acco/ns#BedType">acco:BedType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A double bed. The actual dimension may vary by country, see <a href="http://en.wikipedia.org/wiki/Bed_size">http://en.wikipedia.org/wiki/Bed_size</a>.</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="King">acco:King <span class="rdf_type">(rdf:type <a href="#BedType">acco:BedType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#King">http://purl.org/acco/ns#King</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> King or Super King bed (<a href="http://purl.org/acco/ns#BedType">acco:BedType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An King or Super King bed. The actual dimension may vary by country, see <a href="http://en.wikipedia.org/wiki/Bed_size">http://en.wikipedia.org/wiki/Bed_size</a>.</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="OlympicQueen">acco:OlympicQueen <span class="rdf_type">(rdf:type <a href="#BedType">acco:BedType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#OlympicQueen">http://purl.org/acco/ns#OlympicQueen</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Olympic Queen bed (<a href="http://purl.org/acco/ns#BedType">acco:BedType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>An Olympic Queen bed. The actual dimension may vary by country, see <a href="http://en.wikipedia.org/wiki/Bed_size">http://en.wikipedia.org/wiki/Bed_size</a>.</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Queen">acco:Queen <span class="rdf_type">(rdf:type <a href="#BedType">acco:BedType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Queen">http://purl.org/acco/ns#Queen</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Queen King or Wide Double bed (<a href="http://purl.org/acco/ns#BedType">acco:BedType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A Queen King (UK/Ire.) or Wide Double (Japan) bed. The actual dimension may vary by country, see <a href="http://en.wikipedia.org/wiki/Bed_size">http://en.wikipedia.org/wiki/Bed_size</a>.</p>
+			</div>
+		</div>
+		<div class="box gr_elem_cnt">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h3 id="Single">acco:Single <span class="rdf_type">(rdf:type <a href="#BedType">acco:BedType</a>)</span></h3>
+			<p>
+				<strong>URI</strong> <a href="http://purl.org/acco/ns#Single">http://purl.org/acco/ns#Single</a><br/>
+				<strong><a href="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a></strong> Single or twin bed (<a href="http://purl.org/acco/ns#BedType">acco:BedType</a>)
+			</p>
+			<div class="comment">
+				<p class="comment_p1"><a href="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a></p>
+				<p>A single bed. The actual dimension may vary by country, see <a href="http://en.wikipedia.org/wiki/Bed_size">http://en.wikipedia.org/wiki/Bed_size</a>.</p>
+			</div>
+		</div>
+<!-- Additional static information -->
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="contact">5. Contact Information</h2>
+			<table border="0" cellspacing="5" cellpadding="5">
+				<tr>
+					<td>
+						<p><strong>Univ.-Prof. Dr. Dieter Fensel</strong></p>
+						<p>Semantic Technology Institute<br/>
+							ICT - Technologie Park Innsbruck<br/>
+							Technikerstraße 21a<br/>
+							6020 Innsbruck<br/>
+							Austria<br/></p>
+						<p>					
+						<strong>Phone:</strong> +43 512 507 6485<br/>
+						<strong>eMail:</strong> IM@sti2.at<br/>
+						<strong>Web:</strong> <a href="http://sti-innsbruck.at/">http://sti-innsbruck.at/</a><br/>
+						</p>
+					</td>
+					<td>
+						<p><strong>Univ.-Prof. Dr. Martin Hepp</strong></p>
+						<p>Hepp Research GmbH<br/><br/>
+						Kuppelnaustrasse 5<br/>
+						D-88212 Ravensburg<br/>
+						Germany<br/>
+						</p>
+						<p>
+						<strong>Phone:</strong> +49 751 2708 5256-0<br/>
+						<strong>eMail:</strong> contact@heppresearch.com<br/>
+						<strong>Web:</strong> <a href="http://www.heppresearch.com/">http://www.heppresearch.com/</a><br/>
+						</p>	
+					</td>
+				</tr>
+			</table>		
+
+</div>
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="license">6. License</h2>
+        <p>
+                The Accommodation Ontology is available under the <strong><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a></strong> license. You are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), as long as you attribute the work and link back to <a href="http://purl.org/acco/ns">http://purl.org/acco/ns</a>#.
+        </p>
+</div>
+<div class="box">
+        <p class="top">[<a href="#top">back to top</a>]</p>
+        <h2 id="acknowledgements">7. Acknowledgements</h2>
+        <p>
+                This documentation has been generated automatically from the most recent ontology specification in OWL using a Python script written by <a href="http://www.stalsoft.com/">Alex Stolz</a> and <a href="http://www.heppnetz.de/">Martin Hepp</a>. Our script uses the <a href="http://code.google.com/p/rdflib/">RDFlib</a> library for parsing and handling RDF and the <a href="http://jinja.pocoo.org/">Jinja</a> template engine for generating the HTML document.
+        </p>
+</div>
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="references">References</h2>
+			<p>
+			<strong>Hepp, Martin:</strong> <em><a href="http://www.heppnetz.de/files/GoodRelationsEKAW2008-crc-final.pdf">GoodRelations: An Ontology for Describing Products and Services Offers on the Web</a></em>, Proceedings of the 16th International Conference on Knowledge Engineering and Knowledge Management (EKAW2008), Acitrezza, Italy, September 29 - October 3, 2008, Springer LNCS, Vol 5268, pp. 332-347.
+			</p>
+			<p>
+			<strong>Hepp, Martin:</strong> <em>From Ontologies to Web Ontologies: Lessons learned from Conceptual Modeling for the WWW</em>, forthcoming (2012).
+			</p>			
+		</div>
+		<div class="box">
+			<p class="top">[<a href="#top">back to top</a>]</p>
+			<h2 id="changelog">Change Log</h2>
+			<p>2013-03-25: Minor fixes</p>
+			<ul>
+				<li>Typo in <a href="http://purl.org/acco/ns#Accommodation">acco:Accommodation</a> fixed</li>
+				<li>Added definitions for <a href="http://xmlns.com/foaf/0.1/Document">foaf:Document</a> and <a href="http://xmlns.com/foaf/0.1/primaryTopic">foaf:primaryTopic</a> to stay in OWL DL</li>			
+			</ul>			
+			<p>2012-05-31: First official release</p>
+			<ul>
+				<li>Added examples</li>
+				<li>Added modeling for <a href="http://purl.org/acco/ns#BedDetails">acco:BedDetails</a> and predefined individuals for common bed types</li>				
+			</ul>
+			<p>2012-05-30: Initial version</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   
+  RDF Schema declaration for AGLS Metadata Terms
+  
+  This Version
+  Created:  2007-12-11
+  Modified: 2010-08-18
+  Creator:  David Bromage, National Archives of Australia
+  
+ -->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcam="http://purl.org/dc/dcam/" xmlns:agls="http://www.agls.gov.au/agls/1.2/" xmlns:aglsterms="http://www.agls.gov.au/agls/terms/">
+  <rdf:Description rdf:about="http://www.agls.gov.au/agls/terms/">
+    <dcterms:title xml:lang="en-AU">The AGLS Metadata Terms Namespace providing access to its content by means of an RDF Schema.</dcterms:title>
+    <dcterms:creator xml:lang="en-AU">National Archives of Australia</dcterms:creator>
+    <dcterms:publisher xml:lang="en-AU">National Archives of Australia</dcterms:publisher>
+    <dcterms:rights>Copyright Commonwealth of Australia 2007</dcterms:rights>
+    <dcterms:description xml:lang="en-AU">The AGLS Metadata Terms Namespace provides URIs for the AGLS Metadata Terms Vocabulary. Vocabulary terms are declared using RDF Schema language to support RDF applications. The AGLS Metadata Terms form a richer vocabulary, which is intended to facilitate discovery of resources. It will be updated according to AGLS Working Group decisions.</dcterms:description>
+    <dcterms:language>English</dcterms:language>
+    <dcterms:created>2002-04-18</dcterms:created>
+    <dcterms:modified>2010-06-30</dcterms:modified>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/act">
+    <rdfs:label xml:lang="en-AU">Act</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A specific piece of legislation which requires or drives the creation or provision of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/mandate" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/terms/mandate" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/aggregationLevel">
+    <rdfs:label xml:lang="en-AU">Aggregation Level</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The level of aggregation of the described resource.</rdfs:comment>
+    <dcterms:description xml:lang="en-AU">There are only two values possible for this refinement, either item or collection.</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:domain rdf:resource="http://purl.org/dc/terms/Collection" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2007-12-19</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/availability">
+    <rdfs:label xml:lang="en-AU">Availability</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">How the resource can be obtained or accessed, or contact information.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/availability" />
+    <dcterms:issued>2007-12-19</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/availability" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/case">
+    <rdfs:label xml:lang="en-AU">Case</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A specific piece of case law which requires or drives the creation or provision of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/mandate" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/terms/mandate" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/category">
+    <rdfs:label xml:lang="en-AU">Category</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The generic type of the resource being described.</rdfs:comment>
+    <dcterms:description xml:lang="en-AU">There are only three valid values for this property, 'service', 'document' or 'agency'.</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/dateLicensed">
+    <rdfs:label xml:lang="en-AU">Date Licensed</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">Date a license was applied or became effective.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/documentType">
+    <rdfs:label xml:lang="en-AU">Document Type</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The form of the resource where category = 'document'.</rdfs:comment>
+    <dcterms:description xml:lang="en-AU">Document is used in its widest sense and includes such things as software, sound files and images.</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2007-12-19</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/function">
+    <rdfs:label xml:lang="en-AU">Function</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The business function to which the resource relates.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/function" />
+    <dcterms:issued>2007-12-19</dcterms:issued>
+    <dcterms:modified>2007-12-19</dcterms:modified>
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/function" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dc/terms/isBasisFor">
+    <rdfs:label xml:lang="en-AU">Is Version Of</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A related resource that is a performance, production, derivation, translation or interpretation of the described resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dc/terms/isBasedOn">
+    <rdfs:label xml:lang="en-AU">Has Version</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A related resource of which the described resource is a performance, production, derivation, translation or interpretation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/jurisdiction">
+    <rdfs:label xml:lang="en-AU">Jurisdiction</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The name of the political/administrative entity covered by the resource.</rdfs:comment>
+    <dcterms:description xml:lang="en-AU">Jurisdiction is a description of the territory over which a particular government exercises its authority or a particular business transacts its operations, to which the resource content is applicable.</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/coverage" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:domain rdf:resource="http://purl.org/dc/terms/Jurisdiction" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2007-12-19</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/mandate">
+    <rdfs:label xml:lang="en-AU">Mandate</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A specific legal instrument which requires a resource to be created or made available.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/mandate" />
+    <dcterms:issued>2007-12-19</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/mandate" />
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/protectiveMarking">
+    <rdfs:label xml:lang="en-AU">Protective Marking</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A protective marking applied to the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/rights" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2009-02-06</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/regulation">
+    <rdfs:label xml:lang="en-AU">Regulation</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A specific regulation which requires or drives the creation or provision of the resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/1.2/mandate" />
+    <rdfs:subPropertyOf rdf:resource="http://www.agls.gov.au/agls/terms/mandate" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.agls.gov.au/agls/terms/serviceType">
+    <rdfs:label xml:lang="en-AU">Service Type</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The form of the resource where category = 'service'.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/type" />
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type" />
+    <dcterms:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2007-12-19</dcterms:modified>
+  </rdf:Property>
+  <!-- Classes for encoding schemes -->
+  <rdfs:Class rdf:about="http://www.agls.gov.au/agls/terms/AGLSAgentClass">
+    <rdfs:label xml:lang="en-AU">AGLS Agent Class</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A set of agent encoding schemes and/or formats</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dcterms:issued>2008-05-27</dcterms:issued>
+    <dcterms:modified>2010-04-13</dcterms:modified>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.agls.gov.au/agls/terms/AvailClass">
+    <rdfs:label xml:lang="en-AU">Availability Class</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A set of availability encoding schemes and/or formats</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.agls.gov.au/agls/terms/DocumentClass">
+    <rdfs:label xml:lang="en-AU">Document Class</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A set of document encoding schemes and/or formats</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.agls.gov.au/agls/terms/FunctionClass">
+    <rdfs:label xml:lang="en-AU">Function Class</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A set of function encoding schemes and/or formats</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2010-04-13</dcterms:modified>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.agls.gov.au/agls/terms/JuriClass">
+    <rdfs:label xml:lang="en-AU">Jurisdiction Class</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A set of jurisdiction encoding schemes and/or formats</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.agls.gov.au/agls/terms/ServiceClass">
+    <rdfs:label xml:lang="en-AU">Service Class</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">A set of service encoding schemes and/or formats</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <dcterms:issued>2007-12-12</dcterms:issued>
+    <dcterms:modified>2010-04-13</dcterms:modified>
+  </rdfs:Class>
+  <!-- Syntax Encoding schemes -->
+  <aglsterms:AgentClass rdf:about="http://www.agls.gov.au/agls/terms/AglsAgent">
+    <rdfs:label xml:lang="en-AU">AAGLS Agent Scheme</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of agents defined by contact details according to Dublin Core Structured Values</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agls.gov.au/documents/AglsAgent/" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype" />
+  </aglsterms:AgentClass>
+  <aglsterms:AvailClass rdf:about="http://www.agls.gov.au/agls/terms/AglsAvail">
+    <rdfs:label xml:lang="en-AU">AGLS Availability Scheme</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of resource availability or physical access to a resource defined by contact details according to Dublin Core Structured Values</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agls.gov.au/documents/AglsAvail/" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype" />
+  </aglsterms:AvailClass>
+  <aglsterms:AgentClass rdf:about="http://www.agls.gov.au/agls/terms/Geocode">
+    <rdfs:label xml:lang="en-AU">Geocode</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">Geographic coordinates expressed as latitude and longitude.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <dcterms:issued>2008-10-21</dcterms:issued>
+    <dcterms:modified>2010-04-13</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype" />
+  </aglsterms:AgentClass>
+  <aglsterms:AgentClass rdf:about="http://www.agls.gov.au/agls/terms/GOLD">
+    <rdfs:label xml:lang="en-AU">Government Online Directory</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of agents defined by contact details according to X500 syntax.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://gold.directory.gov.au/" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype" />
+  </aglsterms:AgentClass>
+  <!-- Vocabulary Encoding schemes -->
+  <aglsterms:FunctionClass rdf:about="http://www.agls.gov.au/agls/terms/AGIFT">
+    <rdfs:label xml:lang="en-AU">Australian Governments' Interactive Functions Thesaurus</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of function types specified by the National Archives of Australia.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.naa.gov.au/agift/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:FunctionClass>
+  <aglsterms:AgentClass rdf:about="http://www.agls.gov.au/agls/terms/agls-audience">
+    <rdfs:label xml:lang="en-AU">AGLS Audience Vocabulary</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of audience types specified by the AGLS Audience Scheme.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agls.gov.au/documents/agls-audience/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AgentClass>
+  <aglsterms:JuriClass rdf:about="http://www.agls.gov.au/agls/terms/AglsJuri">
+    <rdfs:label xml:lang="en-AU">AGLS Jurisdiction Vocabulary</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of Australian jurisdictions specified by the AGLS Jurisdiction Scheme.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agls.gov.au/documents/AglsJuri/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:JuriClass>
+  <aglsterms:DocumentClass rdf:about="http://www.agls.gov.au/agls/terms/agls-document">
+    <rdfs:label xml:lang="en-AU">AGLS Document Vocabulary</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of document types specified by the AGLS Document Scheme.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agls.gov.au/documents/agls-document/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:DocumentClass>
+  <aglsterms:ServiceClass rdf:about="http://www.agls.gov.au/agls/terms/agls-service">
+    <rdfs:label xml:lang="en-AU">AGLS Service Vocabulary</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of service types specified by the AGLS Service Scheme.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agls.gov.au/documents/agls-service/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2010-04-13</dcterms:modified>
+  </aglsterms:ServiceClass>
+  <aglsterms:AudienceClass rdf:about="http://www.agls.gov.au/agls/terms/AZNSCO">
+    <rdfs:label xml:lang="en-AU">Australian and New Zealand Standard Classification of Occupations</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of occupations specified by the Australian Bureau of Statistics.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/anzsco/" />
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AudienceClass>
+  <aglsterms:AudienceClass rdf:about="http://www.agls.gov.au/agls/terms/ANZSIC">
+    <rdfs:label xml:lang="en-AU">Australian and New Zealand Standard Industrial Classification</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of industries specified by the Australian Bureau of Statistics.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/anzsic/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AudienceClass>
+  <dcterms:SubjectScheme rdf:about="http://www.agls.gov.au/agls/terms/APAIS">
+    <rdfs:label xml:lang="en-AU">Australian Public Affairs Information Service</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of Australian economic, social, political and cultural affairs subjects specified by the National Library of Australia.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.nla.gov.au/apais/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </dcterms:SubjectScheme>
+  <dcterms:SubjectScheme rdf:about="http://www.agls.gov.au/agls/terms/APT">
+    <rdfs:label xml:lang="en-AU">Australian Picture Thesaurus</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of subject terms for indexing Australian images specified by the National Library of Australia</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.picturethesaurus.gov.au/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </dcterms:SubjectScheme>
+  <aglsterms:AudienceClass rdf:about="http://www.agls.gov.au/agls/terms/ASGC">
+    <rdfs:label xml:lang="en-AU">Australian Standard Geographical Classification</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of places specified by the Australian Bureau of Statistics</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.abs.gov.au/asgc/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AudienceClass>
+  <aglsterms:AudienceClass rdf:about="http://www.agls.gov.au/agls/terms/edna-audience">
+    <rdfs:label xml:lang="en-AU">Education Network Australia Audience Vocabulary</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of audience types specified by Education Network Australia.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.edna.edu.au/edna/go/resources/metadata/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AudienceClass>
+  <aglsterms:AudienceClass rdf:about="http://www.agls.gov.au/agls/terms/Postcode">
+    <rdfs:label xml:lang="en-AU">Australian Postcode</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of postcodes specified by the Australian Postal Corporation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2008-03-05</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AudienceClass>
+  <aglsterms:AudienceClass rdf:about="http://www.agls.gov.au/agls/terms/roleCode">
+    <rdfs:label xml:lang="en-AU">Role Code</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of functions codes to describe the function performed by the responsible party.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2008-10-07</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </aglsterms:AudienceClass>
+  <dcterms:SubjectScheme rdf:about="http://www.agls.gov.au/agls/terms/TAGS">
+    <rdfs:label xml:lang="en-AU">Thesaurus of Australian Governments</rdfs:label>
+    <rdfs:comment xml:lang="en-AU">The set of labelled subject types specified by the Australian Government Information Management Office</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.agls.gov.au/agls/terms/" />
+    <rdfs:seeAlso rdf:resource="http://www.agimo.gov.au/services/tags/" />
+    <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme" />
+    <dcterms:issued>2002-04-18</dcterms:issued>
+    <dcterms:modified>2009-02-02</dcterms:modified>
+  </dcterms:SubjectScheme>
+</rdf:RDF>

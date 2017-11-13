@@ -1,0 +1,1413 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:mvco="http://purl.oclc.org/NET/mvco.owl#"
+    xmlns:mx="urn:mpeg:mpeg21:2003:01-REL-MX-NS#"
+    xmlns:dii="urn:mpeg:mpeg21:2002:01-DII-NS#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://purl.oclc.org/NET/mvco.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment xml:lang="en">ISO/IEC 21000-19 Media Value Chain Ontology (MVCO)</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Instantiator">
+    <rdfs:comment xml:lang="en">A User who interprets a Manifestation of a Work making an Instance</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="User"/>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="acts"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="MakeInstance"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="MakeWorkInstance">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeInstance"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="WorkManifestation"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="actedOver"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="resultsIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="WorkInstance"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The Action of making an Instance from a Work Manifestation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WorkInstance">
+    <rdfs:comment xml:lang="en">An object or event which is an example of an Identified Manifestation of a Work (e.g. a File)</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Instance"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#MakeWorkInstance"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="resultedFrom"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Collective">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#User"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Set of two or more Users.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CopyrightExceptionPermission">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Permission"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasRequired"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="CopyrightExceptionFact"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Permission to invoke one right exceptionally.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Copy">
+    <rdfs:comment xml:lang="en">A mechanical reproduction of analogue or digital representations of a given IP Entity. In the case of digital Copies the result is virtually identical  while in the case of analogue Copies the results can vary considerably in quality.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IPEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="MakeCopy"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Work"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Product"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Manifestation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Instance"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#User">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">Any person or legal entity in a Value-Chain connecting (and including) Creator and End-User.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:ID="belongsTo"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Collective"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="Action"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#acts"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EndUserAction">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Action performed by an EndUser</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PublicCommunication"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Product"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Distributor</mvco:rightGivenBy>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Produce"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Action"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeInstance"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MakeAdaptation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Synchronise"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MakeManifestation"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeCopy"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Fact">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith rdf:resource="#User"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Positive proposition.</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="isTrue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Synchronise">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <mvco:impliesAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Render</mvco:impliesAlso>
+    <mvco:impliesAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#ModifyCopy</mvco:impliesAlso>
+    <rdfs:comment xml:lang="en">The Action of concurrently performing/displaying two distinct IP Entities each for a different human sense e.g. text and audio or video and song</rdfs:comment>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Creator</mvco:rightGivenBy>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Work"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Action"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Permission">
+    <rdfs:comment xml:lang="en">Authorisation from one RightsOwner to one or more Users to perform one or more Actions on a given IPEntity.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Action"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="permitsAction"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="issuedBy"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#User"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Fact"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasRequired"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Action"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#permitsAction"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#User"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#issuedBy"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Distributor">
+    <rdfs:comment xml:lang="en">A User who distributes a Product</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#acts"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Distribute"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="MakeAdaptationInstance">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="AdaptationInstance"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeInstance"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="AdaptationManifestation"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">The Action of making an Instance from an AdaptationManifestation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="MoveContent">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The action of moving the location of a content</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#EndUserAction"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeInstance">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Produce"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">The Action of making an Instance from a Manifestation.</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PublicCommunication"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Action"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Manifestation"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeManifestation"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#Instance"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Adaptation">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Work"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Manifestation"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">A Work that is derived from another Work</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Instance"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IPEntity"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Copy"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#MakeAdaptation"/>
+              <owl:Class rdf:about="#Synchronise"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Product"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="UseData">
+    <owl:disjointWith rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Data documenting the functions Actions performed by a Device User on a content item and the associated context</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeAdaptation">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeCopy"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Adaptation"/>
+              <owl:Class rdf:about="#Work"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#MakeInstance"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeManifestation"/>
+    </owl:disjointWith>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Adaptor</mvco:rightGivenBy>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Produce"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Adaptation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The Action of making an Adaptation</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Action"/>
+    </rdfs:subClassOf>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Creator</mvco:rightGivenBy>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PublicCommunication"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="MakeWorkInstanceCopy">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeCopy"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#WorkInstance"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The Action of making a WorkInstanceCopy</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="WorkInstanceCopy"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#IPEntity">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasRightsOwner"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">Types of IP Represented as Content: Work, Adaptation, Manifestation, Instance...</rdfs:comment>
+    <owl:disjointWith rdf:resource="#User"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Action"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Permission"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#hasRightsOwner"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#User"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="isMadeUpOf"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#IPEntity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ModifyCopy">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">Action of modifying a copy.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#EndUserAction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MakeAdaptationManifestation">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#AdaptationManifestation"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeManifestation"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#Adaptation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The action of making an AdaptationManifestation from an Adaptation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#WorkManifestation">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Manifestation"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="MakeWorkManifestation"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">An object or event which is an expression of a Manifestation of a Work</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#CopyrightExceptionFact">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fact related to the invokation of a CopyrightException</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Fact"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="MakeAdaptationInstanceCopy">
+    <rdfs:comment xml:lang="en">The Action of making an AdaptationInstanceCopy</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:ID="AdaptationInstanceCopy"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeCopy"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#AdaptationInstance"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Produce">
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Instantiator</mvco:rightGivenBy>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Creator</mvco:rightGivenBy>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Copy"/>
+              <owl:Class rdf:about="#Instance"/>
+			  <owl:Class rdf:about="#Manifestation"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Product"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The Function of making Products</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PublicCommunication"/>
+    </owl:disjointWith>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Action"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WorkManifestationCopy">
+    <rdfs:comment xml:lang="en">A copy of a WorkManifestation.</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Copy"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="MakeWorkManifestationCopy"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeWorkManifestation">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeManifestation"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:about="#Work"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#WorkManifestation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The action of making a Manifestation from Work.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="Broadcast">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The Function that Delivers Content to a Device in a point-to-multipoint modality</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PublicCommunication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Creator">
+    <rdfs:comment xml:lang="en">A User who generates a Work and makes its first Manifestation, also referred to as author</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#acts"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="CreateWork"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#User"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Action">
+    <owl:disjointWith rdf:resource="#User"/>
+    <owl:disjointWith rdf:resource="#Permission"/>
+    <owl:disjointWith rdf:resource="#IPEntity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="actedBy"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#User"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedBy"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The exercise of a Right.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdaptationInstanceCopy">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">A copy of an AdaptationInstance</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Copy"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#MakeAdaptationInstanceCopy"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeWorkManifestationCopy">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeCopy"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#WorkManifestation"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#WorkManifestationCopy"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The Action of making a WorkManifestationCopy</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Render">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The Action of generating a human-perceivable signal</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#EndUserAction"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Instance">
+    <rdfs:comment xml:lang="en">An object or event which is an example of an Identified Manifestation (e.g. a File)</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#MakeInstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#IPEntity"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Work"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Product"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Manifestation"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#PublicCommunication">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Producer</mvco:rightGivenBy>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Creator</mvco:rightGivenBy>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <rdfs:comment xml:lang="en">The Function of publicly displaying/performing, e.g. live performance, radio, television, internet streaming, multicast of Instances and Manifestations, and download</rdfs:comment>
+    <mvco:impliesAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Render</mvco:impliesAlso>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Copy"/>
+              <owl:Class rdf:about="#Instance"/>
+              <owl:Class rdf:about="#Product"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Action"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AdaptationInstance">
+    <rdfs:comment xml:lang="en">An object or event which is an example of an Identified Adaptation Manifestation (e.g. a File)</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Instance"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#MakeAdaptationInstance"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeCopy">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Copy"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#MakeInstance"/>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <owl:disjointWith rdf:resource="#Produce"/>
+    <rdfs:subClassOf rdf:resource="#Action"/>
+    <rdfs:comment xml:lang="en">The Action of making a Copy</rdfs:comment>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Creator</mvco:rightGivenBy>
+    <owl:disjointWith rdf:resource="#PublicCommunication"/>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Instantiator</mvco:rightGivenBy>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeManifestation"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Instance"/>
+              <owl:Class rdf:about="#Manifestation"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Work">
+    <rdfs:comment xml:lang="en">A creation that retains intellectual or artistic attributes independently of its Manifestations</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#CreateWork"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#IPEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#WorkInstanceCopy">
+    <rdfs:comment xml:lang="en">A copy of a WorkInstance</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Copy"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#MakeWorkInstanceCopy"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Distribute">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#PublicCommunication"/>
+    <rdfs:comment xml:lang="en">The Function of selling, renting and lending</rdfs:comment>
+    <owl:disjointWith rdf:resource="#MakeAdaptation"/>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Producer</mvco:rightGivenBy>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Product"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#MakeCopy"/>
+    <mvco:rightGivenBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://purl.oclc.org/NET/mvco.owl#Creator</mvco:rightGivenBy>
+    <owl:disjointWith rdf:resource="#Produce"/>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <rdfs:subClassOf rdf:resource="#Action"/>
+    <owl:disjointWith rdf:resource="#EndUserAction"/>
+    <owl:disjointWith rdf:resource="#MakeInstance"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeManifestation"/>
+    </owl:disjointWith>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="Adaptor">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">A User who produces an Adaptation</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#User"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#MakeAdaptation"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#acts"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="EndUser">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#acts"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#EndUserAction"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">A User in a Value-Chain who ultimately consumes Content.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#User"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CreateWork">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:complementOf>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+            <owl:someValuesFrom rdf:resource="#IPEntity"/>
+          </owl:Restriction>
+        </owl:complementOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#EndUserAction"/>
+    <owl:disjointWith rdf:resource="#MakeAdaptation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Work"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Produce"/>
+    <owl:disjointWith rdf:resource="#PublicCommunication"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#MakeManifestation"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">The action of creating a Work.</rdfs:comment>
+    <owl:disjointWith rdf:resource="#MakeCopy"/>
+    <rdfs:subClassOf rdf:resource="#Action"/>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <owl:disjointWith rdf:resource="#Distribute"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith rdf:resource="#MakeInstance"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Manifestation">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith rdf:resource="#Work"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Product"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">An object or event which is an expression of a Work.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="#MakeManifestation"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#IPEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Product">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Produce"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#resultedFrom"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#IPEntity"/>
+    <owl:disjointWith rdf:resource="#Work"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">A Content Item that adds value to IP Entities by including them with an appropriate Licence for the purpose of Publishing</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Stream">
+    <rdfs:subClassOf rdf:resource="#PublicCommunication"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The Function of Delivering Content to a Device where the transferred Content is Processed for Rendering only and not Stored</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ContentHandler">
+    <rdfs:subClassOf rdf:resource="#User"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#User"/>
+        <owl:onProperty>
+          <owl:TransitiveProperty rdf:ID="actOnBehalfOf"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">User who is appointed to act on Content on behalf and within the scope and responsability of another User´s rights.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:Class>
+  <owl:Class rdf:ID="Download">
+    <rdfs:subClassOf rdf:resource="#PublicCommunication"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The Action of transferring a file or program from a central computer to a smaller computer or to a computer at a remote location</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeManifestation">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:disjointWith rdf:resource="#Synchronise"/>
+    <owl:disjointWith rdf:resource="#PublicCommunication"/>
+    <owl:disjointWith rdf:resource="#Produce"/>
+    <rdfs:comment xml:lang="en">The action of making a Manifestation.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Manifestation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#actedOver"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Adaptation"/>
+              <owl:Class rdf:about="#Work"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Action"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Producer">
+    <rdfs:subClassOf rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">A User who produces a Product from an Instance.</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Produce"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#acts"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="AdaptationManifestationCopy">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Copy"/>
+          <owl:Restriction>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="MakeAdaptationManifestationCopy"/>
+            </owl:someValuesFrom>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">A copy of an AdaptationManifestation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#AdaptationManifestation">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Manifestation"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#MakeAdaptationManifestation"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#resultedFrom"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="en">An object or event which is an expression of an Adaptation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MakeAdaptationManifestationCopy">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Action of making an AdaptationManifestationCopy</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MakeCopy"/>
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#AdaptationManifestation"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:about="#actedOver"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#AdaptationManifestationCopy"/>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="#resultsIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#actedOver">
+    <rdfs:range rdf:resource="#IPEntity"/>
+    <rdfs:domain rdf:resource="#Action"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Specifies which IPEntity is the object the Action</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#permitsAction">
+    <rdfs:range rdf:resource="#Action"/>
+    <rdfs:comment xml:lang="en">Relation used to express the Actions that are allowed to be performed.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:domain rdf:resource="#Permission"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#issuedBy">
+    <rdfs:domain rdf:resource="#Permission"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Declares who has issued a permission</rdfs:comment>
+    <rdfs:range rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isRightsOwnerOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Declares who is the rights owner of this IP Entity</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:about="#hasRightsOwner"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#User"/>
+    <rdfs:range rdf:resource="#IPEntity"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasRequired">
+    <rdfs:range rdf:resource="#Fact"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >For a Permission to be valid, the Fact has to hold</rdfs:comment>
+    <rdfs:domain rdf:resource="#Permission"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#acts">
+    <rdfs:domain rdf:resource="#User"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Performance of an Action by a User</rdfs:comment>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#actedBy"/>
+    </owl:inverseOf>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:range rdf:resource="#Action"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#resultedFrom">
+    <owl:inverseOf>
+      <owl:FunctionalProperty rdf:about="#resultsIn"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#IPEntity"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:range rdf:resource="#Action"/>
+    <rdfs:comment xml:lang="en">The dependance of one IP Entity on another.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#actedBy">
+    <rdfs:domain rdf:resource="#Action"/>
+    <rdfs:range rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Role who has executed the Action</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isMadeUpOf">
+    <rdfs:domain rdf:resource="#IPEntity"/>
+    <rdfs:comment xml:lang="en">Relates a composite IPEntity with its constituent IPEntities</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:range rdf:resource="#IPEntity"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="hasSocialTag">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#IPEntity"/>
+          <owl:Class rdf:about="#User"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Attributes a social tag: text, commentary, critique, synopsis (e.g. FOAF)...</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:about="#actOnBehalfOf">
+    <rdfs:domain rdf:resource="#ContentHandler"/>
+    <rdfs:range rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">Relates a ContentHandler with the User under the auspices of which the ContentHandler operates.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="#belongsTo">
+    <rdfs:comment xml:lang="en">Relates a User with a Collective</rdfs:comment>
+    <rdfs:range rdf:resource="#Collective"/>
+    <rdfs:domain rdf:resource="#User"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:TransitiveProperty>
+  <owl:FunctionalProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Title of the ontology</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="urn:mpeg:mpeg21:2002:01-DII-NS#RelatedIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#IPEntity"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >It allows the identification information that is related to a Digital Item (or parts thereof).</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="isDigital">
+    <rdfs:domain rdf:resource="#IPEntity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >distinguishes between digital management of both digital and non digital IP Entities</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasRightsOwner">
+    <rdfs:comment xml:lang="en">Defines the owner of the Rights over an IP Entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#User"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:domain rdf:resource="#IPEntity"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#isTrue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Truth of a proposition</rdfs:comment>
+    <rdfs:domain rdf:resource="#Fact"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#resultsIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1.0</owl:versionInfo>
+    <rdfs:range rdf:resource="#IPEntity"/>
+    <rdfs:domain rdf:resource="#Action"/>
+    <rdfs:comment xml:lang="en">Declares which IPentity arises as a result of the execution of an Action. It is a functional relation.</rdfs:comment>
+  </owl:FunctionalProperty>
+  <mvco:User rdf:ID="Anonymous"/>
+  <owl:AnnotationProperty rdf:ID="impliesAlso"/>
+  <owl:AnnotationProperty rdf:ID="rightGivenBy"/>
+</rdf:RDF>
+

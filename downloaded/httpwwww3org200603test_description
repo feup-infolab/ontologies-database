@@ -1,0 +1,181 @@
+
+<!-- Processed by Id: cwm.py,v 1.164 2004/10/28 17:41:59 timbl Exp -->
+<!--     using base file:/home/dom/WWW/2006/03/test-description.n3-->
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:test="http://www.w3.org/2006/03/test-description#">
+
+    <rdf:Description rdf:about="">
+        <seeAlso rdf:resource="http://www.w3.org/TR/2005/NOTE-test-metadata-20050914/"/>
+    </rdf:Description>
+
+    <owl:Class rdf:about="http://www.w3.org/2006/03/test-description#ReviewStatus">
+        <comment>A particular stage in a review process</comment>
+        <label xml:lang="en">Status in a review process</label>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2006/03/test-description#SimpleReviewStatus">
+        <label xml:lang="en">A status for a simple review process containing 6 possible stages</label>
+        <subClassOf rdf:resource="http://www.w3.org/2006/03/test-description#ReviewStatus"/>
+        <owl:oneOf rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://www.w3.org/2006/03/test-description#unreviewed"/>
+            <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.w3.org/2006/03/test-description#accepted"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.w3.org/2006/03/test-description#assigned"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.w3.org/2006/03/test-description#approved"/>
+                        <rdf:rest rdf:parseType="Resource">
+                            <rdf:first rdf:resource="http://www.w3.org/2006/03/test-description#rejected"/>
+                            <rdf:rest rdf:parseType="Resource">
+                                <rdf:first rdf:resource="http://www.w3.org/2006/03/test-description#onhold"/>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:rest>
+                        </rdf:rest>
+                    </rdf:rest>
+                </rdf:rest>
+            </rdf:rest>
+        </owl:oneOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2006/03/test-description#SpecificationTestCase">
+        <comment>A test case which relates to a requirement set in a specification</comment>
+        <label xml:lang="en">A Test Case based on a specification</label>
+        <subClassOf rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#specificationReference"/>
+        </subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/2006/03/test-description#TestCase">
+        <comment>A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement</comment>
+        <label xml:lang="en">A Test Case</label>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#purpose"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#purpose"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            <owl:onProperty rdf:resource="http://www.w3.org/2006/03/test-description#reviewStatus"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+        </subClassOf>
+    </owl:Class>
+
+    <test:ReviewStatus rdf:about="http://www.w3.org/2006/03/test-description#accepted">
+        <comment>the item has gone through a first review, which shows it as valid for further processing</comment>
+        <label xml:lang="en">accepted</label>
+    </test:ReviewStatus>
+
+    <test:ReviewStatus rdf:about="http://www.w3.org/2006/03/test-description#approved">
+        <comment>the item has gone through the review process and was approved</comment>
+        <label xml:lang="en">approved</label>
+    </test:ReviewStatus>
+
+    <test:ReviewStatus rdf:about="http://www.w3.org/2006/03/test-description#assigned">
+        <comment>a more specific review of the item has been assigned to someone</comment>
+        <label xml:lang="en">assigned</label>
+    </test:ReviewStatus>
+
+    <rdf:Property rdf:about="http://www.w3.org/2006/03/test-description#expectedResults">
+        <comment>The results that a conformant implementation is expected to produce when this test is executed</comment>
+        <domain rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
+        <label xml:lang="en">expected results</label>
+    </rdf:Property>
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/03/test-description#informationResourceInput">
+        <comment xml:lang="en">Information Resource (e.g. a file) used as input for the test case</comment>
+        <label xml:lang="en">information resource as input</label>
+        <range rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+        <subPropertyOf rdf:resource="http://www.w3.org/2006/03/test-description#input"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/03/test-description#informationResourceResults">
+        <comment>Information Resource (e.g. a file) that contains the expected results for the test case</comment>
+        <label xml:lang="en">information resource as expected results</label>
+        <range rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+        <subPropertyOf rdf:resource="http://www.w3.org/2006/03/test-description#expectedResults"/>
+    </owl:ObjectProperty>
+
+    <rdf:Property rdf:about="http://www.w3.org/2006/03/test-description#input">
+        <comment xml:lang="en">Parameters or data that are needed for the test execution.</comment>
+        <domain rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
+        <label xml:lang="en">input</label>
+    </rdf:Property>
+
+    <test:ReviewStatus rdf:about="http://www.w3.org/2006/03/test-description#onhold">
+        <comment>the item had already gone through the review process, but the results of the review need to be re-assessed due to new input</comment>
+        <label>on hold</label>
+    </test:ReviewStatus>
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/03/test-description#preCondition">
+        <comment xml:lang="en">a condition that must be met before the test is executed</comment>
+        <domain rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
+        <label xml:lang="en">precondition</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/03/test-description#purpose">
+        <domain rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
+        <label xml:lang="en">purpose</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <test:ReviewStatus rdf:about="http://www.w3.org/2006/03/test-description#rejected">
+        <comment>the item has gone through the review process and was rejected</comment>
+        <label xml:lang="en">rejected</label>
+    </test:ReviewStatus>
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/03/test-description#reviewStatus">
+        <label xml:lang="en">status of review</label>
+        <range rdf:resource="http://www.w3.org/2006/03/test-description#ReviewStatus"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/03/test-description#specificationReference">
+        <comment xml:lang="en">a description or a link of what part of which specification lead to the creation of this test case</comment>
+        <domain rdf:resource="http://www.w3.org/2006/03/test-description#TestCase"/>
+        <label xml:lang="en">reference in specification</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+    <test:ReviewStatus rdf:about="http://www.w3.org/2006/03/test-description#unreviewed">
+        <comment>the item has been proposed, but hasn't been reviewed (e.g. for completeness) yet</comment>
+        <label xml:lang="en">unreviewed</label>
+    </test:ReviewStatus>
+</rdf:RDF>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/terms/" xmlns:msm="http://iserve.kmi.open.ac.uk/ns/msm#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-03-10</dc:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-03-10</dc:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:description xml:lang="en">This is a simple ontology that provides the core vocabulary for capturing service properties</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-03</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-14</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-03</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-21</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-09-03</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:creator rdf:resource="http://kmi.open.ac.uk/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:creator rdf:resource="http://identifiers.kmi.open.ac.uk/people/carlos-pedrinaci/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:creator rdf:resource="http://jacek.cz/#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <dc:creator rdf:resource="http://kmi.open.ac.uk/people/member/luca-panziera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <rdfs:label xml:lang="en">Minimal Service Model</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <owl:imports rdf:resource="http://www.w3.org/ns/sawsdl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <owl:imports rdf:resource="http://www.wsmo.org/ns/wsmo-lite"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm">
+    <owl:versionInfo>1.3</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent">
+    <rdfs:label xml:lang="en">Message Content</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent">
+    <rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart">
+    <rdfs:label xml:lang="en">Message Part</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Operation">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Operation">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Operation">
+    <rdfs:label xml:lang="en">Operation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Operation">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Service">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Service">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Service">
+    <rdfs:label xml:lang="en">Service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#Service">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput">
+    <rdfs:label xml:lang="en">has Input</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasMandatoryPart">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasMandatoryPart">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasMandatoryPart">
+    <rdfs:label xml:lang="en">has Mandatory Part</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasMandatoryPart">
+    <rdfs:subPropertyOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasMandatoryPart">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasName">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasName">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasName">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasName">
+    <rdfs:label xml:lang="en">has Name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasName">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasName">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+    <rdfs:label xml:lang="en">has Operation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOptionalPart">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOptionalPart">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOptionalPart">
+    <rdfs:label xml:lang="en">has Optional Part</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOptionalPart">
+    <rdfs:subPropertyOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOptionalPart">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput">
+    <rdfs:label xml:lang="en">has Output</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasFault">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasFault">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasFault">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasFault">
+    <rdfs:label xml:lang="en">has Fault</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasFault">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasFault">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInputFault">
+    <rdfs:subPropertyOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasFault"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInputFault">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInputFault">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInputFault">
+    <rdfs:label xml:lang="en">has Input Fault</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInputFault">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInputFault">
+    <vs:term_status>archaic</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutputFault">
+    <rdfs:subPropertyOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasFault"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutputFault">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutputFault">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutputFault">
+    <rdfs:label xml:lang="en">has Output Fault</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutputFault">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutputFault">
+    <vs:term_status>archaic</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPart">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPart">
+    <rdfs:label xml:lang="en">has Part</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPart">
+    <rdfs:subPropertyOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPart">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive">
+    <rdfs:label xml:lang="en">has Part Transitive</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasPartTransitive">
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <rdfs:label xml:lang="en">is grounded in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#isGroundedIn">
+    <vs:term_status>testing</vs:term_status>
+  </rdf:Description>
+</rdf:RDF>
