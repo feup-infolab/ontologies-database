@@ -1,0 +1,468 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///home/pa/recherche/learning_cafe/ontologies/modele_cinelab.gs/ld/index.ttl-->
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/">
+
+    <vann:Vocabulary rdf:about="http://advene.org/ns/cinelab/ld">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+        <dct:contributor rdf:resource="http://olivieraubert.net/foaf.rdf#me"/>
+        <dct:contributor rdf:resource="https://plus.google.com/104060678282385446773"/>
+        <dct:created>2014-03-26T21:31:42CET</dct:created>
+        <dct:creator rdf:resource="http://champin.net/#pa"/>
+        <dct:date>2015-03-29</dct:date>
+        <dct:description xml:lang="fr">Le projet Advene a pour objectif de fournir un modèle et plusieurs formats de données pour partager des annotations sur des vidéos numériques (films, cours, conférences...), ainsi que des outils pour éditer et visualiser les hypérvidéos générées à partir de ces vidéos et des annotations. Les enseignants, les amateurs de cinéma, etc., peuvent les utiliser pour échanger leurs commentaires et analyse de documents audiovisuels.
+
+Le modèle Cinelab permet non seulement de représenter les annotations vidéos, mais aussi d'expliciter leur structure (à travers les notions de schéma et de type d'annotation), ainsi que leur présentations à l'aide de vues (modèles appliqués aux données pour produire des hypervidéos) et de requêtes.
+
+Ce modèle a été développé par les partenaires du projet Cinelab (2007-2008, financé par l'ANR), et utilisé par la suite dans plusieurs projets et applications, dont Advene (LIRIS) et Ligne de temps (IRI).</dct:description>
+        <dct:description xml:lang="en">The Advene project aims at providing a model and various formats to share annotations about digital video documents (movies, courses, conferences...), as well as tools to edit and visualize the hypervideos generated from both the annotations and the audiovisual documents. Teachers, moviegoers, etc. can use them to exchange multimedia comments and analyses about video documents.
+
+The Cinelab model allows not only to represent video annotations, but also an elicitation of their structure (through notions of schema and annotation type), as well as their presentations with views (templates applied on data to produce hypervideos) and queries.
+
+This model has been developed by the partners of the Cinelab project (2007-2008, funded by the french national research agency), and used afterwards in a number of projects and applications, including Advene (LIRIS) and Ligne de temps (IRI).</dct:description>
+        <dct:modified>2015-03-28T19:32:00CET</dct:modified>
+        <dct:title>Cinelab ontology</dct:title>
+        <vann:preferredNamespacePrefix>cl</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://advene.org/ns/cinelab/ld#</vann:preferredNamespaceUri>
+        <comment xml:lang="fr">Cette ontologie permet de représenter en RDF le modèle Cinelab &#60;http://advene.org/cinelab/&#62;.</comment>
+        <comment xml:lang="en">This ontology allows to represent in RDF the Cinelab model &#60;http://advene.org/cinelab/&#62;.</comment>
+        <isDefinedBy rdf:resource="http://advene.org/cinelab/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ma-ont"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/oa#"/>
+    </vann:Vocabulary>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Annotation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Annotation</label>
+        <label xml:lang="fr">Annotation</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#WithContent"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:onProperty rdf:resource="http://advene.org/ns/cinelab/ld#hasAnnotationContent"/>
+            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        </subClassOf>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#AnnotationType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Annotation Type</label>
+        <label xml:lang="fr">Type d'Annotation</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Tag"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Content">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Content</label>
+        <label xml:lang="fr">Contenu</label>
+        <subClassOf rdf:resource="http://www.w3.org/2011/content#ContentAsText"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Element">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Element</label>
+        <label xml:lang="fr">Élément</label>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#FrameOfReference">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Frame of Reference</label>
+        <label xml:lang="fr">Référenciel</label>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Group">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment xml:lang="en">Aspect of all elements acting as collections of other elements</comment>
+        <label xml:lang="en">Group</label>
+        <label xml:lang="fr">Groupe</label>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Import">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Import</label>
+        <label xml:lang="fr">Import</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#List">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">List</label>
+        <label xml:lang="fr">Liste</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Group"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Media">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Media</label>
+        <label xml:lang="fr">Média</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Package">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Package</label>
+        <label xml:lang="fr">Recueil</label>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:allValuesFrom rdf:parseType="Resource">
+                <owl:unionOf rdf:parseType="Resource">
+                    <rdf:first rdf:parseType="Resource">
+                        <owl:complementOf rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+                    </rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:parseType="Resource">
+                            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                            <owl:onProperty rdf:resource="http://advene.org/ns/cinelab/ld#hasAType"/>
+                            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </owl:unionOf>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://advene.org/ns/cinelab/ld#hasElement"/>
+        </subClassOf>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:allValuesFrom rdf:parseType="Resource">
+                <owl:unionOf rdf:parseType="Resource">
+                    <rdf:first rdf:parseType="Resource">
+                        <owl:complementOf rdf:resource="http://advene.org/ns/cinelab/ld#Relation"/>
+                    </rdf:first>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:parseType="Resource">
+                            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+                            <owl:onProperty rdf:resource="http://advene.org/ns/cinelab/ld#hasRType"/>
+                            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:rest>
+                </owl:unionOf>
+            </owl:allValuesFrom>
+            <owl:onProperty rdf:resource="http://advene.org/ns/cinelab/ld#hasElement"/>
+        </subClassOf>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Pipe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment xml:lang="en">Aspect of all elements able to transform other elements</comment>
+        <label xml:lang="en">Pipe</label>
+        <label xml:lang="fr">Tube</label>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Query">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Query</label>
+        <label xml:lang="fr">Requête</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Pipe"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#WithContent"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Relation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Relation</label>
+        <label xml:lang="fr">Relation</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Group"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#WithContent"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#RelationType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Relation Type</label>
+        <label xml:lang="fr">Type de Relation</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Tag"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Resource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Resource</label>
+        <label xml:lang="fr">Ressource</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#WithContent"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Schema">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Schema</label>
+        <label xml:lang="fr">Schéma</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#List"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Tag">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Tag</label>
+        <label xml:lang="fr">Tag</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Group"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#Test">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">Test</label>
+        <label xml:lang="fr">Test</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#View"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#UserList">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="fr">Liste Utilisateur</label>
+        <label xml:lang="en">User List</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#List"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#UserTag">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="fr">Tag Utilisateur</label>
+        <label xml:lang="en">User Tag</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Tag"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#View">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <label xml:lang="en">View</label>
+        <label xml:lang="fr">Vue</label>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#Pipe"/>
+        <subClassOf rdf:resource="http://advene.org/ns/cinelab/ld#WithContent"/>
+    </Class>
+
+    <Class rdf:about="http://advene.org/ns/cinelab/ld#WithContent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment xml:lang="en">Aspect of all elements supporting the :hasContent property</comment>
+        <label xml:lang="fr">Ayant un Contenu</label>
+        <label xml:lang="en">With Content</label>
+        <subClassOf rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+            <owl:onProperty rdf:resource="http://advene.org/ns/cinelab/ld#hasContent"/>
+            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        </subClassOf>
+    </Class>
+
+    <Datatype rdf:about="http://advene.org/ns/cinelab/ld#base64">
+        <comment xml:lang="en">A literal datatype to represent base64-encoded binary data.</comment>
+        <label xml:lang="en">base64 encoded data</label>
+        <label xml:lang="fr">données encodées en base64</label>
+        <seeAlso rdf:resource="http://advene.org/ns/cinelab/ld#data"/>
+    </Datatype>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#begin">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment xml:lang="en">Start-time of the fragment, in milliseconds.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/ma-ont#MediaFragment"/>
+        <label xml:lang="fr">a pour début</label>
+        <label xml:lang="en">has begin</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#data">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Content"/>
+        <label xml:lang="fr">a pour valeur</label>
+        <label xml:lang="en">has value</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <seeAlso rdf:resource="http://advene.org/ns/cinelab/ld#base64"/>
+        <subPropertyOf rdf:resource="http://www.w3.org/2011/content#chars"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#end">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment xml:lang="en">End-time of the fragment, in milliseconds.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/ma-ont#MediaFragment"/>
+        <label xml:lang="fr">a pour fin</label>
+        <label xml:lang="en">has end</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#fragDimId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment xml:lang="en">This metadata of an annotation encodes the 'id' dimension of its fragment.</comment>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+        <label>Fragment Dimension 'id'</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#fragDimTrack">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment xml:lang="en">This metadata of an annotation encodes the 'track' dimension of its fragment.</comment>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+        <label>Fragment Dimension 'track'</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#fragDimXywh">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment xml:lang="en">This metadata of an annotation encodes the 'xywh' dimension of its fragment.</comment>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+        <label>Fragment Dimension 'xywh'</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasAType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+        <label xml:lang="fr">a pour type d'annotation</label>
+        <label xml:lang="en">has annotation type</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#AnnotationType"/>
+        <subPropertyOf rdf:resource="http://advene.org/ns/cinelab/ld#taggedWith"/>
+    </rdf:Property>
+
+    <owl:ObjectProperty rdf:about="http://advene.org/ns/cinelab/ld#hasAnnotationContent">
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+        <subPropertyOf rdf:resource="http://advene.org/ns/cinelab/ld#hasContent"/>
+        <subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasBody"/>
+    </owl:ObjectProperty>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasContent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#WithContent"/>
+        <label xml:lang="fr">a pour contenu</label>
+        <label xml:lang="en">has content</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Content"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasElement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Package"/>
+        <label xml:lang="fr">a pour élément</label>
+        <label xml:lang="en">has element</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasFragment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Annotation"/>
+        <label xml:lang="fr">a pour fragment</label>
+        <label xml:lang="en">has fragment</label>
+        <range rdf:resource="http://www.w3.org/ns/ma-ont#MediaFragment"/>
+        <subPropertyOf rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasFrameOfReference">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Media"/>
+        <label xml:lang="fr">a pour référenciel</label>
+        <label xml:lang="en">has frame of reference</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#FrameOfReference"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasImportedPackage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Import"/>
+        <label xml:lang="fr">a pour recueil importé</label>
+        <label xml:lang="en">has imported package</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Package"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasItems">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#List"/>
+        <label xml:lang="fr">a pour éléments</label>
+        <label xml:lang="en">has items</label>
+        <range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasMediaElement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://www.w3.org/ns/ma-ont#MediaFragment"/>
+        <label xml:lang="fr">a pour élément média</label>
+        <label xml:lang="en">has media element</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Media"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasMembers">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Relation"/>
+        <label xml:lang="fr">a pour membres</label>
+        <label xml:lang="en">has members</label>
+        <range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasModel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Content"/>
+        <label xml:lang="fr">a pour modèle de contenu</label>
+        <label xml:lang="en">has content model</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Resource"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasPackage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <label xml:lang="fr">a pour recueil</label>
+        <label xml:lang="en">has package</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Package"/>
+        <owl:inverseOf rdf:resource="http://advene.org/ns/cinelab/ld#hasElement"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#hasRType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Relation"/>
+        <label xml:lang="fr">a pour type d'relation</label>
+        <label xml:lang="en">has relation type</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#RelationType"/>
+        <subPropertyOf rdf:resource="http://advene.org/ns/cinelab/ld#taggedWith"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#imports">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Package"/>
+        <label xml:lang="fr">importe</label>
+        <label xml:lang="en">imports</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Package"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#mimeType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Content"/>
+        <label xml:lang="fr">a pour type MIME</label>
+        <label xml:lang="en">has MIME type</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#represents">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Media"/>
+        <label xml:lang="en">represents</label>
+        <label xml:lang="fr">représente</label>
+        <range rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#taggedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Element"/>
+        <label xml:lang="en">tagged with</label>
+        <label xml:lang="fr">tagué avec</label>
+        <range rdf:resource="http://advene.org/ns/cinelab/ld#Tag"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://advene.org/ns/cinelab/ld#url">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <domain rdf:resource="http://advene.org/ns/cinelab/ld#Package"/>
+        <label xml:lang="en">URL</label>
+        <label xml:lang="fr">URL</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </rdf:Property>
+
+    <rdf:Description rdf:about="http://champin.net/#pa">
+        <label>Pierre-Antoine Champin</label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://olivieraubert.net/foaf.rdf#me">
+        <label>Olivier Aubert</label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="https://plus.google.com/104060678282385446773">
+        <label>Olivier Aubert</label>
+    </rdf:Description>
+</rdf:RDF>

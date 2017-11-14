@@ -1,10 +1,11 @@
 {
-  "name": "ontologies_crawler",
+  "name": "ontologies_database",
   "version": "1.0.0",
-  "description": "A Simple ontology Downloader from a list of ontologies",
+  "description": "A Simple ontology database built from a list of ontologies, with auto-download abilities",
   "main": "index.js",
   "dependencies": {
     "async": "^2.6.0",
+    "libxmljs": "^0.18.7",
     "line-reader": "^0.4.0",
     "mkdirp": "^0.5.1",
     "request": "^2.83.0",
@@ -12,13 +13,16 @@
     "rimraf": "^2.6.2",
     "slug": "^0.9.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/feup-infolab/ontologies_crawler.git"
+    "url": "git+https://github.com/feup-infolab/ontologies_database.git"
   },
   "keywords": [
     "ontology",
@@ -28,7 +32,7 @@
   "author": "silvae86",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/feup-infolab/ontologies_crawler/issues"
+    "url": "https://github.com/feup-infolab/ontologies_database/issues"
   },
-  "homepage": "https://github.com/feup-infolab/ontologies_crawler#readme"
+  "homepage": "https://github.com/feup-infolab/ontologies_database#readme"
 }
