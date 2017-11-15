@@ -1,5 +1,5 @@
 {
-  "name": "ontologies_database",
+  "name": "feup-infolab/ontologies-database",
   "version": "0.0.2",
   "description": "A Simple ontology database built from a list of ontologies, with auto-download abilities",
   "main": "index.js",
