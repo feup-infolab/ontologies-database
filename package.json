@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/feup-infolab/ontologies_database.git"
+    "url": "git+https://github.com/feup-infolab/ontologies-database.git"
   },
   "keywords": [
     "ontology",
@@ -36,7 +36,7 @@
   "author": "silvae86",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/feup-infolab/ontologies_database/issues"
+    "url": "https://github.com/feup-infolab/ontologies-database/issues"
   },
-  "homepage": "https://github.com/feup-infolab/ontologies_database#readme"
+  "homepage": "https://github.com/feup-infolab/ontologies-database#readme"
 }
