@@ -1,17 +1,16 @@
-var lineReader = require('line-reader');
-var rp = require('request-promise');
-var slug = require('slug');
-var fs = require('fs');
-var rimraf = require('rimraf');
-var mkdirp = require('mkdirp');
-var path = require('path');
-var async = require('async');
+var lineReader = require("line-reader");
+var rp = require("request-promise");
+var slug = require("slug");
+var fs = require("fs");
+var rimraf = require("rimraf");
+var mkdirp = require("mkdirp");
+var path = require("path");
+var async = require("async");
 var libxmljs = require("libxmljs");
-
 
 var possibleMimeTypes = ["application/xml", "application/rdf+xml"];
 
-var OntologiesDatabase = function(options)
+var OntologiesDatabase = function (options)
 {
     var self = this;
 
@@ -37,7 +36,7 @@ var OntologiesDatabase = function(options)
     self._ontologiesAndFilesMap = {};
 };
 
-OntologiesDatabase.prototype.getMap = function()
+OntologiesDatabase.prototype.getMap = function ()
 {
     var self = this;
     self._ontologiesAndFilesMap = require(self.ontologiesMapFilename);
@@ -45,37 +44,40 @@ OntologiesDatabase.prototype.getMap = function()
     return self._ontologiesAndFilesMap;
 };
 
-OntologiesDatabase.prototype.reload = function(callback) {
+OntologiesDatabase.prototype.reload = function (callback)
+{
     var self = this;
 
     mkdirp.sync(self.downloadsFolderName);
 
-    if(fs.existsSync(self.ontologiesListFilename))
+    if (fs.existsSync(self.ontologiesListFilename))
     {
-        lineReader.eachLine(self.ontologiesListFilename, function (line, last, cb) {
-
-            var tryToDownloadOntology = function(cb) {
-                var newFileName = path.join(self.downloadsFolderName, slug(line, '_'));
+        lineReader.eachLine(self.ontologiesListFilename, function (line, last, cb)
+        {
+            var tryToDownloadOntology = function (cb)
+            {
+                var newFileName = path.join(self.downloadsFolderName, slug(line, "_"));
 
                 rimraf.sync(newFileName);
 
-                async.detect(possibleMimeTypes, function (mimetype, callback) {
-
+                async.detect(possibleMimeTypes, function (mimetype, callback)
+                {
                     console.log("Trying to download ontology " + line + " with mimetype " + mimetype + " ....");
                     var options = {
                         uri: line,
                         headers: {
-                            'Accept': mimetype
+                            Accept: mimetype
                         },
                         timeout: 3000
                     };
 
                     rp(options)
-                        .then(function (response) {
+                        .then(function (response)
+                        {
                             try
                             {
                                 var xmlDoc = libxmljs.parseXml(response);
-                                var fd = fs.openSync(newFileName, 'a');
+                                var fd = fs.openSync(newFileName, "a");
                                 fs.writeFileSync(newFileName, response);
                                 fs.closeSync(fd);
                                 self._ontologiesAndFilesMap[line] = newFileName;
@@ -87,10 +89,12 @@ OntologiesDatabase.prototype.reload = function(callback) {
                                 callback(null, false);
                             }
                         })
-                        .catch(function (err) {
+                        .catch(function (err)
+                        {
                             callback(null, false);
                         });
-                }, function (err, result) {
+                }, function (err, result)
+                {
                     if (err)
                     {
                         console.error("Error downloading " + line);
@@ -110,15 +114,17 @@ OntologiesDatabase.prototype.reload = function(callback) {
 
             if (last)
             {
-                tryToDownloadOntology(function(err, result){
+                tryToDownloadOntology(function (err, result)
+                {
                     fs.writeFileSync(self.ontologiesMapFilename, JSON.stringify(self._ontologiesAndFilesMap, null, 4));
                     cb(false); // stop reading
-                    callback(null, path.resolve(self.downloadsFolderName), self._ontologiesAndFilesMap);  //finish everything
+                    callback(null, path.resolve(self.downloadsFolderName), self._ontologiesAndFilesMap); // finish everything
                 });
             }
             else
             {
-                tryToDownloadOntology(function(err, result){
+                tryToDownloadOntology(function (err, result)
+                {
                     cb();
                 });
             }
