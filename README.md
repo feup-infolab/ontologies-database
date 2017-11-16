@@ -28,6 +28,7 @@ cd ontologies-database
 Then, run the loading script:
 
 ````bash
+chmod +x ./load_ontologies_into_virtuoso.sh 
 ./load_ontologies_into_virtuoso.sh ontologies_list.txt
 ````
 
