@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 filename="$1"
 
 if [ ! -f "/usr/local/virtuoso-opensource/bin/isql" ]
@@ -7,15 +7,12 @@ then
     exit 1
 fi
 
+cat $filename  | while IFS= read -r line ; do
+        read -ra ontology_and_file -d '' <<<"$line"
+        uri=${ontology_and_file[0]}
+        file=$(pwd)/${ontology_and_file[1]}
 
-while read -r line
-do
-    ontology_and_file=$(line)
-    uri=${line[0]}
-    file=${line[1]}
-
-    /usr/local/virtuoso-opensource/bin/isql << EOF1
-DB.DBA.TTLP_MT (file_to_string_output ('$file'), '', '$uri',512);
+        /usr/local/virtuoso-opensource/bin/isql << EOF1
+SPARQL LOAD <file://$file> INTO GRAPH <$uri>;
 EOF1
-
-done < "$filename"
+done
