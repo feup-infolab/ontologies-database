@@ -1,6 +1,6 @@
 {
   "name": "@feup-infolab/ontologies-database",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Simple ontology database built from a list of ontologies, with auto-download abilities",
   "main": "index.js",
   "dependencies": {
@@ -32,7 +32,7 @@
   "scripts": {
     "test": "mocha",
     "fix": "eslint --fix . --config .eslintrc.json",
-    "start" : "node run.js"
+    "start": "node run.js"
   },
   "repository": {
     "type": "git",
