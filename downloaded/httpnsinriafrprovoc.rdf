@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY org2 "http://www.w3.org/ns/org#" >
+    <!ENTITY spec "http://xmlns.com/foaf/spec/#" >
+    <!ENTITY ontology "http://dbpedia.org/ontology/" >
+    <!ENTITY drm "http://vocab.data.gov/def/drm#" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY vann "http://purl.org/vocommons/voaf#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY ns "http://www.w3.org/2006/vcard/ns#" >
+    <!ENTITY v12 "http://purl.org/goodrelations/v1#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY org "http://www.w3.org/TR/vocab-org/#org:" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY v1 "http://www.heppnetz.de/ontologies/goodrelations/v1#" >
+]>
+
+
+<rdf:RDF xmlns="http://ns.inria.fr/provoc#"
+     xml:base="http://ns.inria.fr/provoc"
+     xmlns:spec="http://xmlns.com/foaf/spec/#"
+     xmlns:v1="http://www.heppnetz.de/ontologies/goodrelations/v1#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2006/vcard/ns#"
+     xmlns:vann="http://purl.org/vocommons/voaf#"
+     xmlns:org="http://www.w3.org/TR/vocab-org/#org:"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:drm="http://vocab.data.gov/def/drm#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:v12="http://purl.org/goodrelations/v1#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:org2="http://www.w3.org/ns/org#"
+     xmlns:cc="http://creativecommons.org/ns#">
+    <owl:Ontology rdf:about="http://ns.inria.fr/provoc">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">1.0</owl:versionInfo>
+        <dc:issued rdf:datatype="&xsd;date">2016-01-01</dc:issued>
+        <dc:title xml:lang="en">Product Vocabulary</dc:title>
+        <rdfs:comment xml:lang="fr">ProVoc (Product Vocabulary) est un vocabulaire qui peut être utilisé pour représenter des informations et les manipuler à travers le Web. L&apos;ontologie permet de représenter : 1) La hiérarchie d&apos;une société : Groupe (Entreprise), Divisions d&apos;un groupe, Marques d&apos;une division ou d&apos;un groupe, 2) La production d&apos;une société : Gammes de produits (attachées à une marque), produits d&apos;une gamme, packages de produits (un panier alimentaire par exemple), composition des produits...
+
+Quels apports ? 
+
+- pv:Range
+Dans ProVoc, nous introduisons les gammes de produits pv:Range.
+GoodRelations défini des variantes de produits  (http://wiki.goodrelations-vocabulary.org/Documentation/Product_variants, http://www.heppnetz.de/ontologies/goodrelations/v1.html#isVariantOf) : &quot;A variant is a specialization of a product model and inherits all of its product properties, unless they are defined locally. This allows a very compact modeling of product models that vary only in  a few properties.&quot;
+D&apos;après GoodRelations, une variante d&apos;un MacBook est par exemple un MacBook13Inch ou un MacBook15Inch qui varient par leur taille d&apos;écran  et la quantité de ports USB disponibles. Il s&apos;agit d&apos;héritage entre un produit « parent » et ses dérivés qui doivent respecter les normes imposées par le produit « parent » (à moins de redéfinir les valeurs). Dans la version actuelle de GoodRelations, il existe une relation gr:isVariantOf nécessairement entre deux modèles de produits ou service. Or, les gammes de produits peuvent difficilement être traitées comme un ensemble de dérivés d&apos;un produit/modèle commun. Par exemple, Elsève est une gamme proposant des shampooings avec des dérivés, mais Elsève propose aussi des Colorations avec des dérivés,  des Huiles avec des dérivés etc etc, donc à part qu&apos;il s&apos;agit de traitement pour les cheveux, ces  produits n&apos;ont pas grand-chose en commun. En utilisant gr:isVariantOf entre certains produits « proches », on aurait plusieurs clusters de produits apparentés, au détriment d&apos;une gamme unique. L&apos;utilisation de pv:Range permet de respecter la structure fournie par l&apos;expert, non subjective.
+En conclusion, les variantes semblent pertinentes pour identifier des produits similaires (voir également http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo qui ne se différencie de isVariantOf que par le fait que le domain et le range de isSimilarTo sont plus large), mais les gammes de produits ont une toute autre vocation.
+gr:isVariantOf a une sémantique très large et subjective (comme pour isSimilarTo, d’ailleurs M. Hepp le dit clairement ici http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo). Par exemple, rien n’empêche d’exprimer qu’une Renault Clio 4 est une variante d’une Ford Fiesta (http://www.autonews.fr/nouveautes/nouveaute/104216-renault-clio-fiesta-prix/ pourtant elles ne sont pas de la même marque.  
+Enfin, notons qu&apos;une pv:Range ne représente ni un produit ni un modèle de produit. pv:Range permet de lier une marque à ses produits de façon non subjective (fournie par l’expert). 
+Il serait pertinent de limiter l’utilisation de gr:isVariantOf aux produits appartenant à une pv:Range.
+
+- pv:Package
+Dans ProVoc nous introduisons la classe pv:Package qui permet de représenter des ensembles de produits vendus comme un unique produit. Par exemple un coffret de cosmétique contenant une BB crème, un gloss, et le parfum La vie est Belle de Lancôme. Un autre exemple est un panier alimentaire contenant différents produits.
+
+- pv:Provider
+Dans ProVoc nous introduisons pv:Provider qui représente les fournisseurs de produits (par exemple Carrefour est fournisseur des produits Nutella).
+
+-  pv:Component
+Dans ProVoc nous introduisons pv:Component qui permet de décrire la composiiton d&apos;un produit (par exemple, un parfum peut contenir du linalool).
+
+D&apos;autres classes et propriétés sont introduites dans ProVoc dans le but de raffiner le modèle. Par exemple, pv:Model, pv:Designer, et pv:Ambassador sont des sous-classes de foaf:Person. ProVoc permet aussi de lier les composants d&apos;un produit avec leur impact sur la santé (pv:healthImpact).
+
+Concernant les propriétés classiques liées directement au produit, telles que la couleur, le prix, la référence, la description, etc, voir Good Relations.
+</rdfs:comment>
+        <vann:preferredNamespaceUri>http://purl.org/vocommons/voaf#</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>voaf</vann:preferredNamespacePrefix>
+        <dc:rights>Copyright © 2016 INRIA and VISEO</dc:rights>
+        <dc:description xml:lang="en">ProVoc (Product Vocabulary) is a vocabulary that can be used to represent information and manipulate them through the Web. This ontology reflects: 1) The basic hierarchy of a company: Group (Company), Divisions of a Group, Brand names attached to a Division or a Group, and 2) The production of a company: products, ranges of products (attached to a Brand), the composition of a product, packages of products...</dc:description>
+        <rdfs:comment xml:lang="en">ProVoc (Product Vocabulary) is a vocabulary that can be used to represent information and manipulate them through the Web. This ontology reflects: 1) The basic hierarchy of a company: Group (Company), Divisions of a Group, Brand names attached to a Division or a Group, and 2) The production of a company: products, ranges of products (attached to a Brand), the composition of a product, packages of products...
+
+
+What contributions ? 
+
+- pv:Range
+In ProVoc we introduce pv:Range.
+GoodRelations defined &quot;variants&quot; ( http://wiki.goodrelations-vocabulary.org/Documentation/Product_variants , http://www.heppnetz.de/ontologies/goodrelations/v1.html#isVariantOf ) as following: &quot;&quot;A variant is a specialization of a product model and inherits all of its product properties, unless they are defined locally. This allows a very compact modeling of product models that vary only in  a few properties. &quot;
+According to GoodRelations, a variant of a MacBook is for example a MacBook13Inch or MacBook15Inch which vary in screen size and in available USB ports. This is inheritage between a product model and its derivatives, which must meet the standards imposed by the product model (obviously values can be redefined locally). According to the current version of GoodRelations,gr:isVariantOf necessarily exists between two models of product or service. However, ranges of products can hardly be considered as a set of derivatives of a product (or model of product). For example, Elsève is a range of products offering shampoos with some derivatives, but Elsève also offers creams with derivatives, oils with derivatives etc., so apart that such products are related to treatment for hair, they have not much in common. Using gr:isVariantOf between certain &apos;close&apos; products, we would obtain multiple clusters of related products, to the detriment of a unique range of products. Using pv:Range allows to respect the structure provided by the expert.
+In conclusion, variants seem to identify similar products (see also http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo which differs from gr:isVariantOf by the fact that the domain and ranks of isSimilarTo are larger), but pv:range has a different vocation.
+gr:isVariantOf has a very broad and subjective semantics (such as gr:isSimilarTo, as Mr. Hepp said clearly here http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo ). For example , with gr:isVariantOf it would be possible to express that a Renault Clio 4 is a variant of a Ford Fiesta ( http://www.autonews.fr/nouveautes/nouveaute/104216-renault-clio-fiesta-prix/ yet they are not of the same brand) whilst they are not of the same brand name.
+Finally, note that a pv:Range does not represent a set of products nor product models. pv:range is used to objectively link a brand to its products (provided by the expert).
+It would be appropriate to limit the use of gr:isVariantOf to products belonging to a pv:Range.
+
+- pv:Package
+In ProVoc we introduce the pv:Package class that is used to represent sets of products sold as a single product. For example a cosmetic box containing a BB cream, a lip gloss, and a perfume byl Lancôme. Another example is a food package that contains different products.
+
+-pv:Provider
+In ProVoc we introduce the pv:Provider that makes a product available in the e-commerce.
+
+- pv:Component
+In ProVoc we introduce the pv:Component which enables to describe the composition of a product (for instance, a perfume can contain linalool).
+
+We  introduce more properties and classes in order to refine the model. For instance, pv:Model, pv:Designer, and pv:Ambassador appear as a subclass of foaf:Person.  ProVoc can also be used in order to link products and their components with their impact on health ( see pv:healthImpact).
+
+Concerning classic properties related to the product, such as color, price, reference, description, etc., see Good Relations (http://www.heppnetz.de/projects/goodrelations/).
+</rdfs:comment>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <dc:publisher rdf:resource="http://wimmics.inria.fr/"/>
+        <dc:contributor rdf:resource="http://www-sop.inria.fr/members/Elena.Cabrio/"/>
+        <dc:contributor rdf:resource="http://www-sop.inria.fr/members/Fabien.Gandon/"/>
+        <dc:publisher rdf:resource="http://www.viseo.com/"/>
+        <dc:contributor rdf:resource="http://www.viseo.com/en/research/Cedric-Lopez"/>
+        <dc:contributor rdf:resource="http://www.viseo.com/en/research/Frederique-Segond"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.inria.fr/provoc#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://ns.inria.fr/provoc#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasLogo -->
+
+    <owl:AnnotationProperty rdf:about="&ns;hasLogo">
+        <rdfs:domain rdf:resource="http://ns.inria.fr/provoc#ProductOrServiceRange"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/#term_depiction -->
+
+    <owl:AnnotationProperty rdf:about="&spec;term_depiction">
+        <rdfs:comment xml:lang="en">The depiction property is a relationship between a thing and an Image that depicts it. This property can be used for the image of a product, for instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://ns.inria.fr/provoc#ProductOrServiceRange"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.inria.fr/provoc#belongsToBrand -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#belongsToBrand">
+        <rdfs:comment xml:lang="en">This specifies the brand of a range or a product.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="&v1;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#belongsToDivision -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#belongsToDivision">
+        <rdfs:comment xml:lang="en">This specifies the division that proposes a brand.</rdfs:comment>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Division"/>
+        <rdfs:domain rdf:resource="&v1;Brand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#belongsToGroup -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#belongsToGroup">
+        <rdfs:comment xml:lang="en">This specifies the group that contains divisions.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Division"/>
+        <rdfs:range rdf:resource="&org2;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#belongsToPackage -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#belongsToPackage">
+        <rdfs:comment xml:lang="en">This specifies the package that contains several products,, not neceserraly from the same pv:Range.</rdfs:comment>
+        <rdfs:range rdf:resource="http://ns.inria.fr/provoc#Package"/>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#belongsToProductOrServiceRange -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#belongsToProductOrServiceRange">
+        <rdfs:comment xml:lang="en">This specifies the range of products.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#consistsOf -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#consistsOf">
+        <rdfs:comment xml:lang="en">This specifies the components included in a component.</rdfs:comment>
+        <rdfs:range rdf:resource="http://ns.inria.fr/provoc#Component"/>
+        <rdfs:domain rdf:resource="http://ns.inria.fr/provoc#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasAmbassador -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasAmbassador">
+        <rdfs:comment xml:lang="en">This specifies the ambassadors of a product, a range of product, a brand, a division, etc...</rdfs:comment>
+        <rdfs:range rdf:resource="http://ns.inria.fr/provoc#Ambassador"/>
+        <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/provoc#hasRepresentative"/>
+        <rdfs:domain rdf:resource="&v12;BusinessEntity"/>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:domain rdf:resource="http://schema.org/Provider"/>
+        <rdfs:domain rdf:resource="http://schema.org/brand"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Division"/>
+        <rdfs:domain rdf:resource="&v1;Brand"/>
+        <rdfs:domain rdf:resource="&org2;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasComponent">
+        <rdfs:comment xml:lang="en">This specifies the components included in a product.</rdfs:comment>
+        <rdfs:range rdf:resource="http://ns.inria.fr/provoc#Component"/>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasCreator -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasCreator">
+        <rdfs:comment xml:lang="en">This specifies main contributors of the creation of the product.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasFounder -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasFounder">
+        <rdfs:comment xml:lang="en">This specifies the founder of a group.</rdfs:comment>
+        <rdfs:domain rdf:resource="&org2;Organization"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasFragranceCreator -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasFragranceCreator">
+        <rdfs:comment xml:lang="en">This specifies the creator of a fragrance.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/provoc#hasCreator"/>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasModel -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasModel">
+        <rdfs:comment xml:lang="en">This specifies the models who represent a product, a range of product, a brand, a division, etc...</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/provoc#hasRepresentative"/>
+        <rdfs:domain rdf:resource="&v12;BusinessEntity"/>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:domain rdf:resource="http://schema.org/brand"/>
+        <rdfs:domain rdf:resource="&v1;Brand"/>
+        <rdfs:domain rdf:resource="&org2;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasPackageDesigner -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasPackageDesigner">
+        <rdfs:comment xml:lang="en">This specifies the designer of a fragrance.</rdfs:comment>
+        <rdfs:range rdf:resource="http://ns.inria.fr/provoc#Designer"/>
+        <rdfs:subPropertyOf rdf:resource="http://ns.inria.fr/provoc#hasCreator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasProvider -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasProvider">
+        <rdfs:comment xml:lang="en">This specifies providers of products incurred by a corporation. for instance Sephora is a provider of L&apos;Oréal.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="http://schema.org/Provider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasRepresentative -->
+
+    <owl:ObjectProperty rdf:about="http://ns.inria.fr/provoc#hasRepresentative">
+        <rdfs:comment xml:lang="en">This specifies persons who represent a product, a range of product, a brand, a division, etc...</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:ObjectProperty rdf:about="&dc;source">
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.data.gov/def/drm#worksFor -->
+
+    <owl:ObjectProperty rdf:about="&drm;worksFor">
+        <rdfs:comment xml:lang="en">This specifies persons who are working or who worked for a brand or a business entity.</rdfs:comment>
+        <rdfs:range rdf:resource="&v12;BusinessEntity"/>
+        <rdfs:range rdf:resource="http://schema.org/brand"/>
+        <rdfs:range rdf:resource="&v1;Brand"/>
+        <rdfs:range rdf:resource="&org2;Organization"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasPrimarySite -->
+
+    <owl:ObjectProperty rdf:about="&org2;hasPrimarySite">
+        <rdfs:domain rdf:resource="&org2;Organization"/>
+        <rdfs:subPropertyOf rdf:resource="&org2;hasSite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasSite -->
+
+    <owl:ObjectProperty rdf:about="&org2;hasSite"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/formationYear -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;formationYear">
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasFunctionality -->
+
+    <owl:DatatypeProperty rdf:about="http://ns.inria.fr/provoc#hasFunctionality">
+        <rdfs:comment xml:lang="en">This specifies the functionalities/roles of a component. For instance &quot;sodium nitrate&quot; is a food preservative.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://ns.inria.fr/provoc#Component"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasTarget -->
+
+    <owl:DatatypeProperty rdf:about="http://ns.inria.fr/provoc#hasTarget">
+        <rdfs:comment xml:lang="en">A product or service may have a target, for example, male or female.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un produit ou service peut avoir une cible, par exemple féminine ou masculine.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://ns.inria.fr/provoc#hasVersion">
+        <rdfs:comment xml:lang="en">A product or service may have different versions.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#healthImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://ns.inria.fr/provoc#healthImpact">
+        <rdfs:comment xml:lang="en">A component/ingredient of a product may have an impact according to health.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://ns.inria.fr/provoc#Component"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:DatatypeProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:DatatypeProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:DatatypeProperty rdf:about="&dc;source">
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#color -->
+
+    <owl:DatatypeProperty rdf:about="&v12;color">
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.heppnetz.de/ontologies/goodrelations/v1#description -->
+
+    <owl:DatatypeProperty rdf:about="&v1;description">
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasLogo -->
+
+    <owl:DatatypeProperty rdf:about="&ns;hasLogo">
+        <rdfs:domain rdf:resource="&v1;Brand"/>
+        <rdfs:domain rdf:resource="&org2;Organization"/>
+        <owl:equivalentProperty rdf:resource="&spec;term_logo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/#term_depiction -->
+
+    <owl:DatatypeProperty rdf:about="&spec;term_depiction">
+        <rdfs:comment xml:lang="en">The depiction property is a relationship between a thing and an Image that depicts it. This property can be used for the image of a product, for instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&v12;ProductOrService"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/#term_logo -->
+
+    <owl:DatatypeProperty rdf:about="&spec;term_logo">
+        <rdfs:domain rdf:resource="&v1;Brand"/>
+        <rdfs:domain rdf:resource="&org2;Organization"/>
+        <rdfs:subPropertyOf rdf:resource="&spec;term_depiction"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.inria.fr/provoc#Ambassador -->
+
+    <owl:Class rdf:about="http://ns.inria.fr/provoc#Ambassador">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#Component -->
+
+    <owl:Class rdf:about="http://ns.inria.fr/provoc#Component">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">Component of a product (for instance a flywheel or an exhaust pipe for a car, component ingredients of a perfume, etc.  )</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Composant d&apos;un produit (par exemple un volant ou un tuyau d&apos;échappement pour une voiture, les ingrédients d&apos;un parfum, etc.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#Designer -->
+
+    <owl:Class rdf:about="http://ns.inria.fr/provoc#Designer">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">The person (or the entity) who designed the product</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La personne (ou l&apos;entité) qui a designé le produit</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#Package -->
+
+    <owl:Class rdf:about="http://ns.inria.fr/provoc#Package">
+        <rdfs:comment xml:lang="en">A package is a set of products. For example, a cosmetic package containing creams, a perfume, gloss , ...</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un package est un ensemble de produits. Par exemple, un coffret de cosmétique qui contient des crèmes, un parfum, du gloss, ...</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.inria.fr/provoc#ProductOrServiceRange -->
+
+    <owl:Class rdf:about="http://ns.inria.fr/provoc#ProductOrServiceRange">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="en">A range of commercial products</rdfs:comment>
+        <rdfs:comment xml:lang="en">GoodRelations defined &quot;variants&quot; ( http://wiki.goodrelations-vocabulary.org/Documentation/Product_variants , http://www.heppnetz.de/ontologies/goodrelations/v1.html#isVariantOf ) as following: &quot;&quot;A variant is a specialization of a product model and inherits all of is product properties, unless they are defined locally. This allows a very compact modeling of product models that vary only in  a few properties. &quot;
+According to GoodRelations, a variant of a MacBook is for example a MacBook13Inch or MacBook15Inch which vary in screen size and in available USB ports. This is inheritage between a product model and its derivatives, which must meet the standards imposed by the product model (obviously values can be redefined locally). According to the current version of GoodRelations, the relation&quot;isVariantOf&quot; necessarily exists between two models of product or service. However, ranges of products can hardly be considered as a set of derivatives of a product (or model of product). For example, Elsève is a range of products offering shampoos with some derivatives, but Elsève also offers creams with derivatives, oils with derivatives etc., so apart that such products are related to treatment for hair, they have not much in common. Using gr:isVariantOf between certain &apos;close&apos; products, we would obtain multiple clusters of related products, to the detriment of a unique range of products. Using pv:Range allows to respect the structure provided by the expert.
+In conclusion, gr:variants seem to identify similar products (see also http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo which differs from gr:isVariantOf by the fact that the domain and ranks of isSimilarTo are larger), but pv:range has a different vocation.
+gr:isVariantOf has a very broad and subjective semantics (such as gr:isSimilarTo, as Mr. Hepp said clearly here http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo ). For example , with gr:isVariantOf it would be possible to express that a Renault Clio 4 is a variant of a Ford Fiesta ( http://www.autonews.fr/nouveautes/nouveaute/104216-renault-clio-fiesta-prix/ yet they are not of the same brand) whilst they are not of the same brand name.
+Finally, note that a pv:Range does not represent a set of products nor product models. pv:range is used to objectively link a brand to its products (provided by the expert).
+It would be appropriate to limit the use of gr:isVariantOf to products belonging to a pv:Range.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#BusinessEntity -->
+
+    <owl:Class rdf:about="&v12;BusinessEntity">
+        <owl:equivalentClass rdf:resource="&org2;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/goodrelations/v1#ProductOrService -->
+
+    <owl:Class rdf:about="&v12;ProductOrService"/>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+    <owl:Class rdf:about="&vann;Vocabulary"/>
+    
+
+
+    <!-- http://schema.org/Provider -->
+
+    <owl:Class rdf:about="http://schema.org/Provider">
+        <rdfs:subClassOf rdf:resource="&org2;Organization"/>
+        <rdfs:comment xml:lang="en">The provider is an organization. It differs from the organization in that sense that brands do not belong to him. The supplier offers brands for sale that do not always belong to the same organisaation. Example: Carrefour sells products belonging to Lustucru and Tipiak companies.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Le fournisseur est une organisation. Il se distingue de l&apos;organisation par le fait que les marques ne lui appartiennent pas, il ne fait que les commercialiser. Le fournisseur propose des marques à la vente qui n&apos;appartiennent pas toujours à la même organisation. Exemple : Carrefour vend des produits des entreprises Lustucru et Tipiak.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/brand -->
+
+    <owl:Class rdf:about="http://schema.org/brand">
+        <owl:equivalentClass rdf:resource="&v1;Brand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Division -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Division">
+        <rdfs:subClassOf rdf:resource="&org2;Organization"/>
+        <rdfs:comment xml:lang="en">An instance of this class represents a division  (a subgroup) of a BusinessEntity. Indeed, an organization is sometimes divided into several divisions, and each division provides different brands. GoodRelations propose a direct relation between gr:BusinessEntity and gr:Brand.
+Example: L&apos;Oréal Consumer is a division of L&apos;Oréal group.</rdfs:comment>
+        <comment xml:lang="fr">Une instance de cette classe représente une division (un sous-groupe) de BusinessEntity. En effet, une organisation est parfois divisée en plusieurs divisions, et chaque division propose des marques différentes. GoodRelations lie gr:BusinessEntity directement à gr:Brand.
+Exemple : L&apos;Oréal Grand Public est une division du groupe L&apos;Oréal.</comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.heppnetz.de/ontologies/goodrelations/v1#Brand -->
+
+    <owl:Class rdf:about="&v1;Brand"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Organization -->
+
+    <owl:Class rdf:about="&org2;Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="&spec;term_Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/#Organization -->
+
+    <owl:Class rdf:about="&spec;Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/#Person -->
+
+    <owl:Class rdf:about="&spec;Person"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/spec/#term_Agent -->
+
+    <owl:Class rdf:about="&spec;term_Agent"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

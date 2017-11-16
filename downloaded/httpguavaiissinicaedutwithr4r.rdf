@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY r4r "http://guava.iis.sinica.edu.tw/r4r/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://guava.iis.sinica.edu.tw/r4r/"
+     xml:base="http://guava.iis.sinica.edu.tw/r4r/"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:r4r="http://guava.iis.sinica.edu.tw/r4r/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://guava.iis.sinica.edu.tw/r4r">
+        <owl:versionInfo rdf:datatype="&xsd;dateTime">2015-05-12T14:05:12+08:00</owl:versionInfo>
+        <dc:creator rdf:datatype="&xsd;Name">Andrea Wei-Ching Huang</dc:creator>
+        <dc:contributor>Jason Guan-Shuo Mai</dc:contributor>
+        <dc:title>Relations for Reusing (R4R) Ontology</dc:title>
+        <dc:description>R4R is a light-weight ontology for representing general relationships of resource for publication and reusing. It asserts that a certain reusing context occurred and determined by its two basic relations, namely, isPackagedWith and isCitedBy. The isPackagedWith relation declares the resource is ready to be reused by incorporating License and Provenance information. The Cites relation is an exceptional to isCitedBy which occurs only two related objects cite each other at the same time. Five resource objects including article, data, code, provenance and license are major class concepts to represent in this ontology. 
+
+The namespace for all R4R terms is http://guava.iis.sinica.edu.tw/r4r/</dc:description>
+        <dc:creator>Tyng-Ruey Chuang</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/Definition -->
+
+    <owl:AnnotationProperty rdf:about="&r4r;Definition"/>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/inReusingContext -->
+
+    <owl:AnnotationProperty rdf:about="&r4r;inReusingContext">
+        <rdfs:label>inReusingContext</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/inReusingContext</rdfs:isDefinedBy>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/cites -->
+
+    <owl:ObjectProperty rdf:about="&r4r;cites">
+        <rdfs:label>cites</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/cites</rdfs:isDefinedBy>
+        <Definition>Any resource (A) is referenced by any other resource (B) only when the publication time of A is equal to B. .cites. is used to describe this relation. When it is used as the basic relation description for resource publication, r4r:Cites can be used to describe relations between article, data, or code of RRObject. When it is used for reusing context, r4r:Cites relates any resource that reuses RRObject for citation, and the reusing context is enriched by the packaging of RRPolicy.</Definition>
+        <rdfs:domain rdf:resource="&r4r;RRObject"/>
+        <owl:propertyDisjointWith rdf:resource="&r4r;isCitedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/hasLicense -->
+
+    <owl:ObjectProperty rdf:about="&r4r;hasLicense">
+        <rdfs:label>hasLicense</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/haslicense</rdfs:isDefinedBy>
+        <Definition>It declares the use of license information for RRObject and its subclass when RRPolicy is not ready to use. It is used as the basic relation description for resource publication.</Definition>
+        <rdfs:range rdf:resource="&r4r;License"/>
+        <rdfs:domain rdf:resource="&r4r;RRObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/hasProvenance -->
+
+    <owl:ObjectProperty rdf:about="&r4r;hasProvenance">
+        <rdfs:label>hasProvenance</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/hasprovenance</rdfs:isDefinedBy>
+        <Definition>It is used for relating subclass of RRObject to its provenance information when RRPolicy is not ready to use. It is used as the basic relation description for resource publication.</Definition>
+        <rdfs:range rdf:resource="&r4r;Provenance"/>
+        <rdfs:domain rdf:resource="&r4r;RRObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/hasTime -->
+
+    <owl:ObjectProperty rdf:about="&r4r;hasTime">
+        <rdfs:label>hasTime</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/hastime
+</rdfs:isDefinedBy>
+        <Definition>It describes the creation time of the RRObject. It is used as the basic relation description for resource publication and reusing. A complete R4R resource representation (RRObject isPackagedWith RRPolicy) shares the same property, r4r:locateAt with RRObject.</Definition>
+        <rdfs:domain rdf:resource="&r4r;RRObject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/TR/owl-time/#Temporal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/isCitedBy -->
+
+    <owl:ObjectProperty rdf:about="&r4r;isCitedBy">
+        <rdfs:label>isCitedBy</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/iscitedby</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&r4r;RRObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/isPackagedWith -->
+
+    <owl:ObjectProperty rdf:about="&r4r;isPackagedWith">
+        <rdfs:label>isPackagedWith</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/ispackagedwith</rdfs:isDefinedBy>
+        <Definition>It is used for relating RRObject and RRPolicy for accomplishing a particular component, RRPolicy. This relation is served for the reusing context.</Definition>
+        <rdfs:range rdf:resource="&r4r;RRObject"/>
+        <rdfs:domain rdf:resource="&r4r;RRPolicy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="&r4r;isPartOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>isPartOf</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/ispartof</rdfs:isDefinedBy>
+        <Definition>It describes partial relationships with temporal and spatial constraints, and carries with it some characteristics such as being transitive. A isPartOf B only if A and B share the same time and location. Data can be part of data; code can be part of code or data; data like keywords or sentences can also be described as part of the Article; metadata can be part of provenance as long as two objects carry partial and transitive relations.</Definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/locateAt -->
+
+    <owl:ObjectProperty rdf:about="&r4r;locateAt">
+        <rdfs:label>locateAt</rdfs:label>
+        <Definition>It is used to relate a machine-readable representation of the RRObject&apos;s identification, such as DOI, URI, URL, etc. It is used as the basic relation description for resource publication and reusing. A complete R4R resource representation (RRObject isPackagedWith RRPolicy) shares the same property, r4r:locateAt with RRObject.</Definition>
+        <rdfs:isDefinedBy>http://www.w3.org/TR/rdf-schema/#ch_resource</rdfs:isDefinedBy>
+        <rdfs:domain rdf:resource="&r4r;RRObject"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:DatatypeProperty rdf:about="&rdf;type">
+        <rdfs:domain rdf:resource="&r4r;Article"/>
+        <rdfs:domain rdf:resource="&r4r;Code"/>
+        <rdfs:domain rdf:resource="&r4r;Data"/>
+        <rdfs:domain rdf:resource="&r4r;Provenance"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/Article -->
+
+    <owl:Class rdf:about="&r4r;Article">
+        <rdfs:label>Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&r4r;RRObject"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/article</rdfs:isDefinedBy>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/vocab-dcat/#class-dataset</inReusingContext>
+        <Definition>An object is presented mainly as textual form but not exclusively. It is not limited for representing research publications only, and may be presented in a variety of article formats such as: blog articles, encyclopedia articles (a primary division of encyclopedia content; Wikipedia entry pages), Usenet or web forum articles, even non-textual based resources like spoken articles (articles produced in the forms of video clips and audio recordings such as Vlogs/Video blogs, podcasts and audiobooks) are such cases.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/Code -->
+
+    <owl:Class rdf:about="&r4r;Code">
+        <rdfs:label>Code</rdfs:label>
+        <owl:equivalentClass rdf:resource="&r4r;Data"/>
+        <rdfs:subClassOf rdf:resource="&r4r;RRObject"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/code</rdfs:isDefinedBy>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/vocab-dcat/#class-dataset</inReusingContext>
+        <Definition>Any collection of computer instructions is written in human-readable computer language, and served for programming and executing the Data of RRObject.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/Data -->
+
+    <owl:Class rdf:about="&r4r;Data">
+        <rdfs:label>Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&r4r;RRObject"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/data</rdfs:isDefinedBy>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/vocab-dcat/#class-dataset</inReusingContext>
+        <Definition>Data is presented in a structure form such as dataset, algorithms, models, metadata schema or ontologies. There are other forms of data, for instance, tables, figures or nanopublication. Other text based supplement materials like review, comments, and feedbacks are also included.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/License -->
+
+    <owl:Class rdf:about="&r4r;License">
+        <rdfs:label>License</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&r4r;RRPolicy"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/license</rdfs:isDefinedBy>
+        <Definition>The authorization of the use and reuse of the referred resource, as well as the document recording that authorization.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/Provenance -->
+
+    <owl:Class rdf:about="&r4r;Provenance">
+        <rdfs:label>Provenance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&r4r;RRPolicy"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/provenance</rdfs:isDefinedBy>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/prov-o/#Entity</inReusingContext>
+        <Definition>metadata, metadata about metadata, or version information. Descriptive metadata can be represented as part of the Provenance.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/RRObject -->
+
+    <owl:Class rdf:about="&r4r;RRObject">
+        <rdfs:label>RRObject</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&r4r;locateAt"/>
+                <owl:onClass rdf:resource="&rdfs;Resource"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&r4r;hasTime"/>
+                <owl:onClass rdf:resource="http://www.w3.org/TR/owl-time/#Temporal"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="&r4r;RRPolicy"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/rrobject</rdfs:isDefinedBy>
+        <Definition>Any resource served as a component for publication and reusing is defined as a Reusing Related Object (RRObject). It can be a knowledge unit for research purposes, or any resource that has relations similar to the relations between article, data and code.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://guava.iis.sinica.edu.tw/r4r/RRPolicy -->
+
+    <owl:Class rdf:about="&r4r;RRPolicy">
+        <rdfs:label>RRPolicy</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&r4r;isPackagedWith"/>
+                <owl:someValuesFrom rdf:resource="&r4r;RRObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/rrpolicy</rdfs:isDefinedBy>
+        <Definition>Any mechanism designed for relating to RRObject for reusing purposes is defined as a Reusing Related Policy (RRPolicy). RRPolicy is free to be extended for more issues such as security and trust for its subclasses concepts.</Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="&rdfs;Resource">
+        <rdfs:label>rdfs:Resource</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/rdf-schema/</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/TR/owl-time/#Temporal -->
+
+    <owl:Class rdf:about="http://www.w3.org/TR/owl-time/#Temporal">
+        <rdfs:label>time:Temporal</rdfs:label>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+    <owl:Class rdf:about="&dcat;Dataset">
+        <rdfs:label>dcat:Dataset</rdfs:label>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/article</inReusingContext>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/code</inReusingContext>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/data</inReusingContext>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/vocab-dcat/#class-dataset</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="&prov;Entity">
+        <rdfs:label>prov:Entity</rdfs:label>
+        <inReusingContext rdf:datatype="&xsd;anyURI">http://guava.iis.sinica.edu.tw/r4r/provenance</inReusingContext>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/prov-o/#Entity</rdfs:isDefinedBy>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:ns4="http://purl.org/vocab/vann/"
+	xmlns:ns5="http://creativecommons.org/ns#" >
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/cfrl#hasLoan">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/regorg#RegisteredOrganization" />
+    <rdfs:range rdf:resource="http://purl.org/linked-data/cube#Observation" />
+    <rdfs:comment>This property links a Company with a Loan instance.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/cfrl#hasReport">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/regorg#RegisteredOrganization" />
+    <rdfs:range rdf:resource="http://www.xbrlsite.com/2013/FinancialReportOntology#FundamentalAccountingConcept" />
+    <rdfs:comment>This property links a Company with a Financial Report instance.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/linked-data/cube#Observation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Observation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/regorg#RegisteredOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Registered Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.xbrlsite.com/2013/FinancialReportOntology#FundamentalAccountingConcept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Fundamental Accounting Concept</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/cfrl#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <dct:modified>2016-08-28</dct:modified>
+    <rdfs:comment>The Corporate Financial Reports and Loans Ontology (CFRL).</rdfs:comment>
+    <owl:versionInfo>1.1</owl:versionInfo>
+    <dct:description>An ontology for interlinking Companies with their Financial Reports and Loans and Credits.</dct:description>
+    <dct:contributor rdf:resource="https://plus.google.com/+MilosJovanovik" />
+    <dct:creator rdf:resource="https://plus.google.com/+BojanNajdenov" />
+    <dct:issued>2014-09-01</dct:issued>
+    <dct:publisher rdf:resource="http://finki.ukim.mk/" />
+    <dct:title>Corporate Financial Reports and Loans Ontology</dct:title>
+    <ns4:preferredNamespacePrefix>cfrl</ns4:preferredNamespacePrefix>
+    <ns4:preferredNamespaceUri>http://linkeddata.finki.ukim.mk/lod/ontology/cfrl#</ns4:preferredNamespaceUri>
+    <ns5:license rdf:resource="https://creativecommons.org/licenses/by/3.0/" />
+    <dct:rights>Copyright 2014, Bojan Najdenov</dct:rights>
+  </rdf:Description>
+</rdf:RDF>

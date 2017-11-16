@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY voaf "http://purl.org/vocommons/voaf#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY lifecycle "http://purl.org/vocab/lifecycle/schema#" >
+    <!ENTITY dul "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY iot-lifecycle "http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:iot-lifecycle="http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:lifecycle="http://purl.org/vocab/lifecycle/schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <Ontology rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle">
+        <terms:issued>2015-02-20</terms:issued>
+        <rdfs:comment>This ontology is a specialization of the lifecycle vocabulary (http://purl.org/vocab/lifecycle/schema) meant to be used in the context of IoT. It is used as a module in the IoT core domain ontology IoT-O (www.irit.fr/recherches/MELODI/ontologies/IoT-O). 
+
+IoT-Lifecycle adds a specific state definition (ParametrizedState) and a specific transition (Update) that is useful to model actuators.</rdfs:comment>
+        <foaf:primaryTopic>State machines</foaf:primaryTopic>
+        <dc:title>IoT-Lifecycle</dc:title>
+        <dc:creator>Nicolas Seydoux, Khalil Drira, Nathalie Hernandez, Thierry Monteil</dc:creator>
+		<dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#seydoux"/>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#drira"/>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#hernandez"/>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#monteil"/>
+        <versionInfo>2.0</versionInfo>
+        <dc:publisher>IRIT (https://www.irit.fr/)</dc:publisher>
+        <dc:publisher>LAAS-CNRS (https://www.laas.fr)</dc:publisher>
+        <vann:preferredNamespacePrefix>iot-lifecycle</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceURI>http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle</vann:preferredNamespaceURI>
+        <terms:modified>2016-02-26</terms:modified>
+        <voaf:extends rdf:resource="http://purl.org/vocab/lifecycle/schema#"/>
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <imports rdf:resource="http://vocab.org/lifecycle/schema-20080603.rdf"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#isTriggeredBy -->
+
+    <ObjectProperty rdf:about="&iot-lifecycle;isTriggeredBy">
+        <rdfs:label>is triggered by</rdfs:label>
+        <rdfs:comment>Relation between a Transition and whatever Entity can trigger it</rdfs:comment>
+        <rdfs:domain rdf:resource="&lifecycle;Transition"/>
+        <rdfs:range rdf:resource="&dul;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#possibleUpdate -->
+
+    <ObjectProperty rdf:about="&iot-lifecycle;possibleUpdate">
+        <rdfs:label>possible update</rdfs:label>
+        <rdfs:comment>Indicates that an update is acessible for a ParametrizedState</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&lifecycle;possibleTransition"/>
+        <rdfs:domain rdf:resource="&iot-lifecycle;ParametrizedState"/>
+        <rdfs:range rdf:resource="&iot-lifecycle;Update"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#stateParametrizedBy -->
+
+    <ObjectProperty rdf:about="&iot-lifecycle;stateParametrizedBy">
+        <rdfs:label>state parametrized by</rdfs:label>
+        <rdfs:domain rdf:resource="&iot-lifecycle;ParametrizedState"/>
+        <rdfs:range rdf:resource="&dul;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#triggersTransition -->
+
+    <ObjectProperty rdf:about="&iot-lifecycle;triggersTransition">
+        <rdfs:label>triggers transition</rdfs:label>
+        <rdfs:comment>Characterizes an entity able to trigger a transition : agent, software, condition...</rdfs:comment>
+        <rdfs:range rdf:resource="&lifecycle;Transition"/>
+        <rdfs:domain rdf:resource="&dul;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#updatesState -->
+
+    <ObjectProperty rdf:about="&iot-lifecycle;updatesState">
+        <rdfs:label>updates state</rdfs:label>
+        <rdfs:comment>This Update regards the provided ParametrizedState</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&lifecycle;possibleState"/>
+        <rdfs:range rdf:resource="&iot-lifecycle;ParametrizedState"/>
+        <rdfs:domain rdf:resource="&iot-lifecycle;Update"/>
+    </ObjectProperty>
+    
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#impactsState -->
+
+    <ObjectProperty rdf:about="&iot-lifecycle;impactsState">
+        <rdfs:label>impacts state</rdfs:label>
+        <rdfs:comment>This relationships links an entity that impacts a Ressource State and said State. For instance, if an Actuator is updated by an Actuation, this Actuation impacts the Actuator&apos;s State.</rdfs:comment>
+        <rdfs:range rdf:resource="&lifecycle;State"/>
+        <rdfs:domain rdf:resource="&dul;Entity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#Action -->
+
+    <rdf:Description rdf:about="&lifecycle;Action">
+        <rdfs:subClassOf rdf:resource="&dul;Action"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#Lifecycle -->
+
+    <rdf:Description rdf:about="&lifecycle;Lifecycle">
+        <rdfs:subClassOf rdf:resource="&dul;Set"/>
+        <rdfs:comment>Plays the role of StateSet proposed in http://ontologydesignpatterns.org/wiki/Submissions:Object_with_states</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#State -->
+
+    <rdf:Description rdf:about="&lifecycle;State">
+        <rdfs:subClassOf rdf:resource="&dul;Situation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#Task -->
+
+    <rdf:Description rdf:about="&lifecycle;Task">
+        <equivalentClass rdf:resource="&dul;Task"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#TaskGroup -->
+
+    <rdf:Description rdf:about="&lifecycle;TaskGroup">
+        <rdfs:subClassOf rdf:resource="&dul;Set"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#TaskProgress -->
+
+    <rdf:Description rdf:about="&lifecycle;TaskProgress">
+        <rdfs:subClassOf rdf:resource="&dul;Situation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#Transition -->
+
+    <rdf:Description rdf:about="&lifecycle;Transition">
+        <rdfs:subClassOf rdf:resource="&dul;Event"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#ParametrizedState -->
+
+    <Class rdf:about="&iot-lifecycle;ParametrizedState">
+        <rdfs:label>Parametrized State</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&lifecycle;State"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&iot-lifecycle;stateParametrizedBy"/>
+                <someValuesFrom rdf:resource="&owl;Thing"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>In the case of IoT, a continuous space will be associated with a numerical value and with a specific kind of Transition, an Update.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#Update -->
+
+    <Class rdf:about="&iot-lifecycle;Update">
+        <rdfs:label>Update</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&lifecycle;Transition"/>
+        <rdfs:comment>This special kind of Transition concerns Continuous states, and marks an update of the state value without having a &quot;real&quot; change of state.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task -->
+
+    <rdf:Description rdf:about="&dul;Task"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

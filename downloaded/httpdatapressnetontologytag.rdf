@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:pnt="http://data.press.net/ontology/tag/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://data.press.net/ontology/tag/">
+        <dcterms:title xml:lang="en">SNaP Tag Ontology</dcterms:title>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-07-28</dcterms:created>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-10-03</dcterms:modified>
+        <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/" />
+        <foaf:maker>
+            <foaf:Person rdf:about="http://uk.linkedin.com/in/pauliharman">
+                <foaf:name>Paul Harman</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <foaf:maker>
+            <foaf:Person rdf:about="http://uk.linkedin.com/in/jarredmcginnis">
+                <foaf:name>Jarred McGinnis</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <foaf:maker>
+            <foaf:Person rdf:about="http://uk.linkedin.com/in/paulwilton">
+                <foaf:name>Paul Wilton</foaf:name>
+            </foaf:Person>
+        </foaf:maker>
+        <rdfs:comment xml:lang="en">The Tag Ontology defines relationships for semantically annotating taggable things (for example news assets) with domain entities (stuff) and events.</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    <owl:Class rdf:about="http://data.press.net/ontology/tag/Taggable">
+        <rdfs:label xml:lang="en">Generic Taggable Class</rdfs:label>
+        <rdfs:comment xml:lang="en">Generic Taggable Class - Taggable things can be tagged</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/tag/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:Class>
+    <owl:Class rdf:about="http://data.press.net/ontology/tag/Tag">
+        <rdfs:label xml:lang="en">Generic Tag Class</rdfs:label>
+        <rdfs:comment xml:lang="en">Generic Tag Class - Taggables are tagged with a Tag</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/tag/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:Class>
+    <owl:ObjectProperty rdf:about="http://data.press.net/ontology/tag/isTaggedWith">
+        <rdfs:domain rdf:resource="http://data.press.net/ontology/tag/Taggable" />
+        <rdfs:range rdf:resource="http://data.press.net/ontology/tag/Tag" />
+        <rdfs:label xml:lang="en">Property that associates Tags with Taggables</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that associates Tags with Taggables:  Taggable X isTaggedWith Tag Y</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/tag/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://data.press.net/ontology/tag/about">
+        <rdfs:subPropertyOf rdf:resource="http://data.press.net/ontology/tag/isTaggedWith" />
+        <rdfs:domain rdf:resource="http://data.press.net/ontology/tag/Taggable" />
+        <rdfs:range rdf:resource="http://data.press.net/ontology/tag/Tag" />
+        <rdfs:label xml:lang="en">Property that associates Tags with Taggables refining pnt:isTaggedWith</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that associates Tags with Taggables, refines pnt:isTaggedWith:  Taggable X about Tag Y.  pnt:about is a stronger relationship that pnt:mentions</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/tag/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://data.press.net/ontology/tag/mentions">
+        <rdfs:subPropertyOf rdf:resource="http://data.press.net/ontology/tag/isTaggedWith" />
+        <rdfs:domain rdf:resource="http://data.press.net/ontology/tag/Taggable" />
+        <rdfs:range rdf:resource="http://data.press.net/ontology/tag/Tag" />
+        <rdfs:label xml:lang="en">Property that associates Tags with Taggables refining pnt:isTaggedWith</rdfs:label>
+        <rdfs:comment xml:lang="en">Property that associates Tags with Taggables, refines pnt:isTaggedWith:  Taggable X mentions Tag Y.  pnt:mentions is a weaker relationship that pnt:about</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.press.net/ontology/tag/" />
+        <vs:term_status>testing</vs:term_status>
+    </owl:ObjectProperty>
+</rdf:RDF>

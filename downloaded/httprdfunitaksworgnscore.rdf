@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:prov="http://www.w3.org/ns/prov#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:rlog="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#"
+   xmlns:rut="http://rdfunit.aksw.org/ns/core#"
+   xmlns:spin="http://spinrdf.org/spin#"
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://rdfunit.aksw.org/ns/core#">
+    <dc:creator xml:lang="en">Dimitris Kontokostas</dc:creator>
+    <dc:creator xml:lang="en">Jens Lehmann</dc:creator>
+    <dc:creator xml:lang="en">Patrick Westphal</dc:creator>
+    <dc:creator xml:lang="en">Roland Cornelissen</dc:creator>
+    <dc:creator xml:lang="en">Sebastian Hellmann</dc:creator>
+    <dc:creator xml:lang="en">Sören Auer</dc:creator>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-01</dc:date>
+    <dc:description rdf:resource="http://jens-lehmann.org/files/2014/eswc_rdfunit_nlp.pdf"/>
+    <dc:description rdf:resource="http://rdfunit.aksw.org/ns/rdfunit_ontology_diagram.png"/>
+    <dc:description xml:lang="en">The RDFUnit ontology describes concepts used in RDFUnit, a test driven RDF Validation framework that can run automatically generated (based on a schema) and manually generated test cases against an endpoint.
+It's best described in "NLP data cleansing based on Linguistic Ontology constraints" (ESWC 2014) p5-7, http://jens-lehmann.org/files/2014/eswc_rdfunit_nlp.pdf, includes the ontology diagram.</dc:description>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-01</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-10</dc:modified>
+    <dc:rights xml:lang="en">This ontology is licensed under Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0) and CC-BY (http://creativecommons.org/licenses/by/3.0/)</dc:rights>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
+    <dcterms:title xml:lang="en">Test-Driven Data Validation Ontology</dcterms:title>
+    <ns1:changes xmlns:ns1="http://purl.org/vocab/vann/" rdf:resource="https://github.com/AKSW/RDFUnit/commits/master/ns"/>
+    <ns2:preferredNamespacePrefix xmlns:ns2="http://purl.org/vocab/vann/">rut</ns2:preferredNamespacePrefix>
+    <ns3:preferredNamespaceUri xmlns:ns3="http://purl.org/vocab/vann/">http://rdfunit.aksw.org/ns/core#</ns3:preferredNamespaceUri>
+    <rdfs:comment xml:lang="en">The RDFUnit ontology describes concepts used in RDFUnit, a test driven RDF Validation framework that can run automatically generated (based on a schema) and manually generated test cases against an endpoint.
+It's best described in "NLP data cleansing based on Linguistic Ontology constraints" (ESWC 2014) p5-7, http://jens-lehmann.org/files/2014/eswc_rdfunit_nlp.pdf, includes the ontology diagram.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfunit.aksw.org/ns/core.ttl"/>
+    <rdfs:label xml:lang="en">Test-Driven RDF Validation Ontology</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://rdfunit.aksw.org"/>
+    <owl:versionInfo>0.4.1</owl:versionInfo>
+  </owl:Ontology>
+  <dcterms:LicenseDocument rdf:about="http://creativecommons.org/licenses/by/3.0/"/>
+  <dcterms:LicenseDocument rdf:about="http://www.apache.org/licenses/LICENSE-2.0"/>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#Pattern">
+    <rdfs:comment xml:lang="en">Data Quality Test Pattern (DQTP): a query with embedded %%parameter's%% and a corresponding list of rut:parameter's</rdfs:comment>
+    <rdfs:label xml:lang="en">Pattern</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#sparqlWherePattern"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#sparqlPrevalencePattern"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#parameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#sparqlWherePattern">
+    <rdfs:comment xml:lang="en">The WHERE part of a sparql query with %%parameter%% placeholders. Must bind variables ?resource and ?message (see rut:sparqlWhere)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#Pattern"/>
+    <rdfs:label xml:lang="en">sparqlWherePattern</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#sparqlPrevalencePattern">
+    <rdfs:comment xml:lang="en">A sparql query to COUNT the number of instances being tested. May reuse %%parameter's%% from rut:sparqlWherePattern. May be empty but should be present (TODO: why?)</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#Pattern"/>
+    <rdfs:label xml:lang="en">sparqlPrevalencePattern</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#parameter">
+    <rdfs:comment xml:lang="en">List of Parameters for the Pattern</rdfs:comment>
+    <rdfs:label xml:lang="en">parameter</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#Parameter"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#Parameter">
+    <rdfs:comment xml:lang="en">A pattern parameter. Has dct:identifier equal to the %%parameter%% placeholder. rut:parameterConstraint and rut:constraintPattern determine the possible values</rdfs:comment>
+    <rdfs:label xml:lang="en">Parameter</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#parameterConstraint"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#constraintPattern"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#parameterConstraint">
+    <rdfs:comment xml:lang="en">What can be substituted for the parameter, one of None (means anything), Operator, Resource, Property, Class</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#Parameter"/>
+    <rdfs:label xml:lang="en">parameterConstraint</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#ParameterConstraint"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#constraintPattern">
+    <rdfs:comment xml:lang="en">Regexp that further qualifies a rut:parameterConstraint, e.g. '&lt;|&lt;=|&gt;|&gt;=|=|!=' for a rut:Operator</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#Parameter"/>
+    <rdfs:label xml:lang="en">constraintPattern</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#ParameterConstraint">
+    <rdfs:comment xml:lang="en">What can be substituted for a parameter, one of None (means anything), Operator, Resource, Property, Class</rdfs:comment>
+    <rdfs:label xml:lang="en">ParameterConstraint</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestGenerator">
+    <rdfs:comment xml:lang="en">Generates TestCases based on a Pattern and a SPARQL query that instantiates the pattern Parameters</rdfs:comment>
+    <rdfs:label xml:lang="en">TestGenerator</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#sparqlGenerator"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#basedOnPattern"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#sparqlGenerator">
+    <rdfs:comment xml:lang="en">SPARQL SELECT query that instantiates test cases based on a Pattern. Must return variables named the same as the Pattern's parameters, plus a ?DESCRIPTION</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestGenerator"/>
+    <rdfs:label xml:lang="en">sparqlGenerator</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#basedOnPattern">
+    <rdfs:comment xml:lang="en">The Pattern instantiated by a PatternBasedTestCase or a TestGenerator</rdfs:comment>
+    <rdfs:label xml:lang="en">basedOnPattern</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#Pattern"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestCase">
+    <rdfs:comment xml:lang="en">Superclass of all test cases. Defines properties that all cases should have, but concrete implementation occurs on subclasses.</rdfs:comment>
+    <rdfs:label xml:lang="en">TestCase</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#appliesTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#generated"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#source"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#references"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#appliesTo">
+    <rdfs:comment xml:lang="en">What does a test case apply to: Schema, EnrichedSchema, Dataset or Application</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+    <rdfs:label xml:lang="en">appliesTo</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#TestAppliesTo"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#generated">
+    <rdfs:comment xml:lang="en">How the test was created: Automatically generated or Manually made.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+    <rdfs:label xml:lang="en">generated</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#TestGenerationType"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#references">
+    <rdfs:comment xml:lang="en">The Classes and Properties involved in the described test case.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+    <rdfs:label xml:lang="en">references</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#source">
+    <rdfs:comment xml:lang="en">A schema (ontology), dataset or application that this test case was created for</rdfs:comment>
+    <rdfs:label xml:lang="en">source</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#testCaseLogLevel">
+    <rdfs:comment xml:lang="en">rlog:Level that this TestCase will return in case of failure, or StatusTestCaseResult has recorded.
+Analogous to rlog:level, which applies to rlog:Entry and rut:RLOGTestCaseResult</rdfs:comment>
+    <rdfs:label xml:lang="en">testCaseLogLevel</rdfs:label>
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#PatternBasedTestCase">
+    <rdfs:comment xml:lang="en">A test case that is based on a Pattern instantiated with Bindings for each Parameter</rdfs:comment>
+    <rdfs:label xml:lang="en">PatternBasedTestCase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#basedOnPattern"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#binding"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#binding">
+    <rdfs:comment xml:lang="en">Binding of a pattern Parameter to a value</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#PatternBasedTestCase"/>
+    <rdfs:label xml:lang="en">binding</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#Binding"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#Binding">
+    <rdfs:comment xml:lang="en">Binding of a pattern Parameter to a value</rdfs:comment>
+    <rdfs:label xml:lang="en">Binding</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#parameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#bindingValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <rdf:Property rdf:about="http://rdfunit.aksw.org/ns/core#bindingValue">
+    <rdfs:comment xml:lang="en">the value provided for the bound Parameter</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#Binding"/>
+    <rdfs:label xml:lang="en">bindingValue</rdfs:label>
+  </rdf:Property>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#ManualTestCase">
+    <rdfs:comment xml:lang="en">A test case where the SPARQL is defined manually</rdfs:comment>
+    <rdfs:label xml:lang="en">ManualTestCase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#sparqlWhere"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#sparqlPrevalence"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#sparqlWhere">
+    <rdfs:comment xml:lang="en">The WHERE part of a SPARQL query. Must be enclosed in brackets {} and bind the following variables:
+        ?resource: the instance (URI) where the constraint violation occurs;
+        ?message: a logging message.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ManualTestCase"/>
+    <rdfs:label xml:lang="en">sparqlWhere</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#sparqlPrevalence">
+    <rdfs:comment xml:lang="en">A SPARQL query to COUNT the number of instances being tested</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ManualTestCase"/>
+    <rdfs:label xml:lang="en">sparqlPrevalence</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestGenerationType">
+    <rdfs:comment xml:lang="en">How a test case was created: Automatically generated or Manually made</rdfs:comment>
+    <rdfs:label xml:lang="en">TestGenerationType</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestAppliesTo">
+    <rdfs:comment xml:lang="en">What does a test case apply to: Schema, EnrichedSchema, Dataset or Application</rdfs:comment>
+    <rdfs:label xml:lang="en">TestAppliesTo</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestSuite">
+    <rdfs:comment xml:lang="en">A suite of TestCases, linked to it using prov:hadMember</rdfs:comment>
+    <rdfs:label xml:lang="en">TestSuite</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadMember"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#testSuite">
+    <rdfs:comment xml:lang="en">Links an ontology to a TestSuite for validating data adhering to that ontology. 
+Usually each TestCase in the suite will have rut:appliesTo rut:Schema (or rut:EnrichedSchema), and link back to the ontology using rut:source</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">testSuite</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#TestSuite"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestCaseDependency">
+    <rdfs:comment xml:lang="en">A dependency between two test cases</rdfs:comment>
+    <rdfs:label xml:lang="en">TestCaseDependency</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#dependencyFrom">
+    <rdfs:comment xml:lang="en">Test case that preconditions the execution of another test case</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCaseDependency"/>
+    <rdfs:label xml:lang="en">dependencyFrom</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#dependencyTo">
+    <rdfs:comment xml:lang="en">Test case whose execution depends on another test case</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCaseDependency"/>
+    <rdfs:label xml:lang="en">dependencyTo</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#dependencyCondition">
+    <rdfs:comment xml:lang="en">The rut:ResultStatus of the dependencyFrom case that triggers this dependency</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCaseDependency"/>
+    <rdfs:label xml:lang="en">dependencyCondition</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#ResultStatus"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#dependencyExecute">
+    <rdfs:comment xml:lang="en">Whether to execute the dependencyTo case. 
+If a case has multiple dependencies, it is executed only if all dependencyCondition's are satisfied, and all dependencyExecute's are true.
+TODO: IS THIS TRUE? Else:
+Only useful while debugging test suites</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestCaseDependency"/>
+    <rdfs:label xml:lang="en">dependencyExecute</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestExecution">
+    <rdfs:comment xml:lang="en">Holds the TestCaseResults of a TestSuite execution against a dataset. The results are linked to TestExecution by prov:wasGeneratedBy</rdfs:comment>
+    <rdfs:label xml:lang="en">TestExecution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#startedAtTime"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#endedAtTime"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#source"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#testsRun">
+    <rdfs:comment xml:lang="en">Total tests run in a TestExecution</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestExecution"/>
+    <rdfs:label xml:lang="en">testsRun</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#testsSucceeded">
+    <rdfs:comment xml:lang="en">Total tests that succedded in a TestExecution</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestExecution"/>
+    <rdfs:label xml:lang="en">testsSucceeded</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#testsFailed">
+    <rdfs:comment xml:lang="en">Total tests that failed in a TestExecution</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestExecution"/>
+    <rdfs:label xml:lang="en">testsFailed</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#testsTimeout">
+    <rdfs:comment xml:lang="en">Total tests that timed out in a TestExecution</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestExecution"/>
+    <rdfs:label xml:lang="en">testsTimeout</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#testsError">
+    <rdfs:comment xml:lang="en">Total tests that raised an error in a TestExecution</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#TestExecution"/>
+    <rdfs:label xml:lang="en">testsError</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#TestCaseResult">
+    <rdfs:comment xml:lang="en">The result of a TestExecution. Each result links to the TestCase (rut:testCase) it originated from, and to the TestExecution (prov:wasGeneratedBy) it is part of</rdfs:comment>
+    <rdfs:label xml:lang="en">TestCaseResult</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#testCase"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#testCase">
+    <rdfs:comment xml:lang="en">The TestCase that this TestCaseResult originated from</rdfs:comment>
+    <rdfs:label xml:lang="en">testCase</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#TestCase"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#StatusTestCaseResult">
+    <rdfs:comment xml:lang="en">The status and log level of a single TestCaseResult.
+TODO: Why is rut:testCaseLogLevel mandatory, doesn't it apply only when resultStatus=Fail?
+It's optional in rut:TestCase</rdfs:comment>
+    <rdfs:label xml:lang="en">StatusTestCaseResult</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://rdfunit.aksw.org/ns/core#TestCaseResult"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#resultStatus"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#testCaseLogLevel"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#resultStatus">
+    <rdfs:comment xml:lang="en">result status. One of Success, Fail, Timeout, Error</rdfs:comment>
+    <rdfs:label xml:lang="en">resultStatus</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#ResultStatus"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#ResultStatus">
+    <rdfs:comment xml:lang="en">Result Status. One of Success, Fail, Timeout, Error</rdfs:comment>
+    <rdfs:label xml:lang="en">ResultStatus</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#AggregatedTestCaseResult">
+    <rdfs:comment xml:lang="en">Aggregated results of a single TestCase execution</rdfs:comment>
+    <rdfs:label xml:lang="en">AggregatedTestCaseResult</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://rdfunit.aksw.org/ns/core#StatusTestCaseResult"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#resultCount"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://rdfunit.aksw.org/ns/core#resultPrevalence"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#resultCount">
+    <rdfs:comment xml:lang="en">The number of results having the given rut:resultStatus in StatusTestCaseResult execution. -1 means there was a timeout and -2 an error.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#Result"/>
+    <rdfs:label xml:lang="en">resultCount</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfunit.aksw.org/ns/core#resultPrevalence">
+    <rdfs:comment xml:lang="en">The total COUNT of instances tested by a TestCase execution. -1 means there was a timeout and -2 an error.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#AggregatedTestCaseResult"/>
+    <rdfs:label xml:lang="en">resultPrevalence</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#RLOGTestCaseResult">
+    <rdfs:comment xml:lang="en">A TestCaseResult at the level of an individual rlog:resource (the resource that was tested), with rlog:message and rlog:level</rdfs:comment>
+    <rdfs:label xml:lang="en">RLOGTestCaseResult</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:subClassOf rdf:resource="http://rdfunit.aksw.org/ns/core#TestCaseResult"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#resource"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#level"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#ExtendedTestCaseResult">
+    <rdfs:comment xml:lang="en">An extended TestCaseResult that includes additional information: spin:violationRoot (offending resource), spin:violationPath (offending property), spin:violationValue (offending value), rut:errorPropertyContext (property also involved in the offense), and error classification, source and type. These are provided through rut:ResultAnotation</rdfs:comment>
+    <rdfs:label xml:lang="en">ExtendedTestCaseResult</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://rdfunit.aksw.org/ns/core#RLOGTestCaseResult"/>
+    <rdfs:subClassOf rdf:resource="http://spinrdf.org/spin#ConstraintViolation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://spinrdf.org/spin#violationRoot"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#errorPropertyContext">
+    <rdfs:comment xml:lang="en">Property(ies) that also contributed to the offense (e.g. dbo:deathDate when spin:violationPath is dbo:birthDate).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ExtendedTestCaseResult"/>
+    <rdfs:label xml:lang="en">errorPropertyContext</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#errorClassification">
+    <rdfs:comment xml:lang="en">High-level classification of the error. Usually a skos:Concept</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ExtendedTestCaseResult"/>
+    <rdfs:label xml:lang="en">errorClassification</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#errorSource">
+    <rdfs:comment xml:lang="en">Source of the error, eg data parsing, data publishing, mapping, pre processing, post processing (if known beforehand). Usually a skos:Concept</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ExtendedTestCaseResult"/>
+    <rdfs:label xml:lang="en">errorSource</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#errorType">
+    <rdfs:comment xml:lang="en">More specific error type, eg missing property, redundant property, inaccurate property. Usually a skos:Concept</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ExtendedTestCaseResult"/>
+    <rdfs:label xml:lang="en">errorType</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://rdfunit.aksw.org/ns/core#ResultAnnotation">
+    <rdfs:comment xml:lang="en">Used by a TestCase, TestAutoGenerator or Pattern to add properties to an ExtendedTestCaseResult.</rdfs:comment>
+    <rdfs:label xml:lang="en">ResultAnnotation</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#annotationProperty">
+    <rdfs:comment xml:lang="en">Property to add to ExtendedTestCaseResult, eg spin:violationPath, spin:violationValue, rut:errorPropertyContext</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ResultAnnotation"/>
+    <rdfs:label xml:lang="en">annotationProperty</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://rdfunit.aksw.org/ns/core#annotationValue">
+    <rdfs:comment xml:lang="en">Value to add to ExtendedTestCaseResult. Either constant (eg rlog:WARN) or a string designating the query '?variable' or pattern '%%parameter%%' to use</rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfunit.aksw.org/ns/core#ResultAnnotation"/>
+    <rdfs:label xml:lang="en">annotationValue</rdfs:label>
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="http://rdfunit.aksw.org/ns/core#resultAnnotation">
+    <rdfs:comment xml:lang="en">ResultAnnotation to apply to all results produced by a TestCase, TestAutoGenerator, or Pattern</rdfs:comment>
+    <rdfs:label xml:lang="en">resultAnnotation</rdfs:label>
+    <rdfs:range rdf:resource="http://rdfunit.aksw.org/ns/core#ResultAnnotation"/>
+  </owl:ObjectProperty>
+  <rut:ParameterConstraint rdf:about="http://rdfunit.aksw.org/ns/core#None">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The parameter can be anything, even a free variable (?var)</rdfs:comment>
+    <rdfs:label xml:lang="en">None</rdfs:label>
+  </rut:ParameterConstraint>
+  <rut:ParameterConstraint rdf:about="http://rdfunit.aksw.org/ns/core#Operator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The parameter can be an operator.</rdfs:comment>
+    <rdfs:label xml:lang="en">Operator</rdfs:label>
+  </rut:ParameterConstraint>
+  <rut:ParameterConstraint rdf:about="http://rdfunit.aksw.org/ns/core#Resource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The pattern can be a resource.</rdfs:comment>
+    <rdfs:label xml:lang="en">Resource</rdfs:label>
+  </rut:ParameterConstraint>
+  <rut:ParameterConstraint rdf:about="http://rdfunit.aksw.org/ns/core#Property">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The parameter is restricted to a property.</rdfs:comment>
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+  </rut:ParameterConstraint>
+  <rut:ParameterConstraint rdf:about="http://rdfunit.aksw.org/ns/core#Class">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The parameter is restricted to a Class.</rdfs:comment>
+    <rdfs:label xml:lang="en">Class</rdfs:label>
+  </rut:ParameterConstraint>
+  <rut:TestAppliesTo rdf:about="http://rdfunit.aksw.org/ns/core#Schema">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Schema: When the tests apply to an ontology / vocabulary</rdfs:comment>
+    <rdfs:label xml:lang="en">Schema</rdfs:label>
+  </rut:TestAppliesTo>
+  <rut:TestAppliesTo rdf:about="http://rdfunit.aksw.org/ns/core#Dataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Dataset: When the tests apply to a dataset only (i.e. a SPARQL Endpoint)</rdfs:comment>
+    <rdfs:label xml:lang="en">Dataset</rdfs:label>
+  </rut:TestAppliesTo>
+  <rut:TestAppliesTo rdf:about="http://rdfunit.aksw.org/ns/core#EnrichedSchema">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">EnrichedSchema: When the tests apply to an ontology / vocabulary enriched with external (semi-)automatic approaches</rdfs:comment>
+    <rdfs:label xml:lang="en">EnrichedSchema</rdfs:label>
+  </rut:TestAppliesTo>
+  <rut:TestAppliesTo rdf:about="http://rdfunit.aksw.org/ns/core#Application">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Application: When the tests are specific to an application only</rdfs:comment>
+    <rdfs:label xml:lang="en">Application</rdfs:label>
+  </rut:TestAppliesTo>
+  <rut:TestGenerationType rdf:about="http://rdfunit.aksw.org/ns/core#ManuallyGenerated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">ManuallyGenerated: This test was created manually</rdfs:comment>
+    <rdfs:label xml:lang="en">ManuallyGenerated</rdfs:label>
+  </rut:TestGenerationType>
+  <rut:TestGenerationType rdf:about="http://rdfunit.aksw.org/ns/core#AutoGenerated">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">AutoGenerated: This test was created automatically</rdfs:comment>
+    <rdfs:label xml:lang="en">AutoGenerated</rdfs:label>
+  </rut:TestGenerationType>
+  <rut:ResultStatus rdf:about="http://rdfunit.aksw.org/ns/core#ResultStatusSuccess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">ResultStatusSuccess: the test succeeded</rdfs:comment>
+    <rdfs:label xml:lang="en">ResultStatusSuccess</rdfs:label>
+  </rut:ResultStatus>
+  <rut:ResultStatus rdf:about="http://rdfunit.aksw.org/ns/core#ResultStatusFail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">ResultStatusFail: the test failed. rut:testCaseLogLevel further specifies the rlog:Level</rdfs:comment>
+    <rdfs:label xml:lang="en">ResultStatusFail</rdfs:label>
+  </rut:ResultStatus>
+  <rut:ResultStatus rdf:about="http://rdfunit.aksw.org/ns/core#ResultStatusTimeout">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">ResultStatusTimeout: the test timed out</rdfs:comment>
+    <rdfs:label xml:lang="en">ResultStatusTimeout</rdfs:label>
+  </rut:ResultStatus>
+  <rut:ResultStatus rdf:about="http://rdfunit.aksw.org/ns/core#ResultStatusError">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">ResultStatusError: the test raised an error (eg HTTP error code)</rdfs:comment>
+    <rdfs:label xml:lang="en">ResultStatusError</rdfs:label>
+  </rut:ResultStatus>
+</rdf:RDF>

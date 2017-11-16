@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://vocab.deri.ie/scsv">
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <dcterms:title>Schema.org CSV</dcterms:title>
+    <dcterms:description>Mapping vocabulary for CSV files that use Schema.org terms in the header.</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-12</dcterms:modified>
+    <vann:preferredNamespaceUri>http://purl.org/NET/schema-org-csv#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>scsv</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://vocab.deri.ie/scsv.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-10</dcterms:created>
+    <dcterms:publisher>http://vocab.deri.ie/scsv#LiDRC</dcterms:publisher>
+    <dcterms:partOf rdf:resource="http://vocab.deri.ie"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://vocab.deri.ie/scsv#Michael%20Hausenblas"/>
+  </owl:Ontology>
+
+  <adms:SemanticDistribution rdf:about="http://vocab.deri.ie/scsv#ttl">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://vocab.deri.ie/scsv.ttl</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <adms:SemanticDistribution rdf:about="http://vocab.deri.ie/scsv#rdf">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://vocab.deri.ie/scsv.rdf</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/scsv#Michael%20Hausenblas">
+    <foaf:name>Michael Hausenblas</foaf:name>
+    <foaf:homepage rdf:resource="http://sw-app.org/about.html"/>
+    <foaf:mbox rdf:resource="mailto:michael.hausenblas@deri.org"/>
+  </foaf:Person>
+
+  <dcterms:Agent rdf:about="http://vocab.deri.ie/scsv#LiDRC">
+    <foaf:member rdf:resource="http://vocab.deri.ie/scsv#Michael%20Hausenblas"/>
+    <foaf:name>LiDRC</foaf:name>
+    <foaf:homepage rdf:resource="http://linkeddata.deri.ie/"/>
+  </dcterms:Agent>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/schema-org-csv#Row">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>row</rdfs:label>
+    <rdfs:comment>A row (or record as of http://tools.ietf.org/html/rfc4180).</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/schema-org-csv#Table">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>table</rdfs:label>
+    <rdfs:comment>A CSV table as of http://tools.ietf.org/html/rfc4180.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/schema-org-csv#HeaderRow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>header row</rdfs:label>
+    <rdfs:comment>The header row, that is the first row of the table that contains the column heads that are matched against Schema.org terms.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/schema-org-csv#Row"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://purl.org/NET/schema-org-csv#cell">
+    <rdfs:label>has cell</rdfs:label>
+    <rdfs:comment>A row has one or more cells (or field as of http://tools.ietf.org/html/rfc4180), each of which is connected to the row with this property.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/NET/schema-org-csv#Row"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/schema-org-csv#row">
+    <rdfs:label>has row</rdfs:label>
+    <rdfs:comment>A table has one or more rows, each of which is connected to the table via this property.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/NET/schema-org-csv#Table"/>
+    <rdfs:range rdf:resource="http://purl.org/NET/schema-org-csv#Row"/>
+  </rdf:Property>
+
+</rdf:RDF>

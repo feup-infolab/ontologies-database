@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:ns4="http://purl.org/vocab/vann/"
+	xmlns:ns5="http://creativecommons.org/ns#" >
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/drugs" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/genericName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/brandName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/atcCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/drugs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>drugs</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#similarTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:comment>This property represents a similarity that is known between two drugs.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#Drug">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Drug</rdfs:label>
+    <rdfs:comment>This class represents a brand-name drug.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#dosageForm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <rdfs:comment>This property represents the dosage form of the medicine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <rdfs:comment>This is the ID that the medicine has in the local system of the Health Insurance Fund of Macedonia</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#manufacturer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <rdfs:comment>This property represents a manufacturer of a drug.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#notes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <rdfs:comment>This property represents additional notes related to a medicine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#packaging">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+    <rdfs:comment>This property represents the number of units per drug package.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#refPriceNoVAT">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <rdfs:comment>This property represents the referent price of the medicine in macedonian denars (MKD), with NO VAT calculated</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#refPriceWithVAT">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+    <rdfs:comment>This property represents the referent value of the medicine in macedonian denars (MKD), with VAT calculated</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#strength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://purl.org/net/hifm/ontology#Drug" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+    <rdfs:comment>This property represents the strength of the drug, in milligrams.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/net/hifm/ontology#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <dct:modified>2016-08-28</dct:modified>
+    <rdfs:label>DBM Ontology</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/net/hifm/ontology#" />
+    <rdfs:comment>An ontology for the Health Insurance Fund of Macedonia (HIFM).</rdfs:comment>
+    <owl:versionInfo>1.1</owl:versionInfo>
+    <dct:description>An ontology for describing brand-name drugs.</dct:description>
+    <dct:contributor rdf:resource="https://plus.google.com/+BojanNajdenov" />
+    <dct:creator rdf:resource="https://plus.google.com/+MilosJovanovik" />
+    <dct:issued>2014-04-01</dct:issued>
+    <dct:publisher rdf:resource="http://finki.ukim.mk/" />
+    <dct:title>HIFM Ontology</dct:title>
+    <ns4:preferredNamespacePrefix>hifm</ns4:preferredNamespacePrefix>
+    <ns4:preferredNamespaceUri>http://purl.org/net/hifm/ontology#</ns4:preferredNamespaceUri>
+    <ns5:license rdf:resource="https://creativecommons.org/licenses/by/3.0/" />
+    <dct:rights>Copyright 2014, Milos Jovanovik</dct:rights>
+  </rdf:Description>
+</rdf:RDF>

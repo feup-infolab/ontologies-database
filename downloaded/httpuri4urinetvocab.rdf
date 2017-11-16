@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab.rdf/">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <dcterms:title>URI Vocabulary</dcterms:title>
+    <foaf:primaryTopic rdf:resource="http://uri4uri.net/vocab#"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title>URI Vocabulary</dcterms:title>
+    <dcterms:description>This vocabulary describes the entities which may be derived from a URI and the relationships between them, such as Internet Domains, prototcols, file suffixes etc. It was initially issued as part of an April 1st gag, but has utility beyond the initial joke.</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-04-01</dcterms:issued>
+    <dcterms:creator rdf:resource="http://id.ecs.soton.ac.uk/person/1248"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://id.ecs.soton.ac.uk/person/1248">
+    <foaf:name>Christopher Gutteridge</foaf:name>
+    <foaf:homepage rdf:resource="http://users.ecs.soton.ac.uk/cjg/"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#account">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>account</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#connectsTo">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>connects to</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#delegationRecordPage">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>delegation record page</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Domain">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Internet Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#DomainDatatype">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Internet Domain Identifier</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Domain-Invalid">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Invalid Internet Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Domain-Valid">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Valid Internet Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#filename">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>filename</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Format">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>File Format</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#fragmentOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>fragment of</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#fragment">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>fragment</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#FragmentURI">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI with Fragement Identifier</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#host">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>host</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#HostPort">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Host and Port</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#IANAPage">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>IANA page</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#IANARef">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>IANA reference</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#identifiedBy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>identified by URI</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#key">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>key</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#length">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>length</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#md5">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>md5 hash</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Mimetype">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Mimetype</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#MimetypeDatatype">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Mimetype Identifier</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#noPortSpecified">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>No Port Specified</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#pass">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>password</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#path">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>path</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#port">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>port</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Query">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Query Part</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#QueryKey">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Query Key</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#QueryKVP">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Query Key-Value Pair</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#query">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>query</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#queryString">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>query string</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#QueryValue">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Query Value</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#scheme">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI scheme</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#sponsor">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>sponsor</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#subDom">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>subdomain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Suffix">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Filename Suffix</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#SuffixDatatype">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Filename Suffix Identifier</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#suffix">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>suffix</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain-CountryCode">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Country Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain-Generic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Generic Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain-GenericRestricted">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Restricted Generic Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain-Infrastructure">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Infrastructure Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain-Sponsored">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Sponsored Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#TopLevelDomain-Test">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Test Top-Level Domain</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#URI">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#URIDatatype">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Identifier</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#URIScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Scheme</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#URISchemeDatatype">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>URI Scheme Identifier</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#Statement">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Statement (reified)</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#object">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>object</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#predicate">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>predicate</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#subject">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>subject</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#trueAt">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>trueAt</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#usedForFormat">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>used for format</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#usedForSuffix">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>used for suffix</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#user">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>user</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#value">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>value</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#whoIsRecord">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>whois record</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#WhoisServer">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>Whois Server</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://uri4uri.net/vocab#hasWhoIsServer">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://uri4uri.net/vocab#"/>
+    <rdfs:label>whois server</rdfs:label>
+  </rdf:Description>
+
+</rdf:RDF>

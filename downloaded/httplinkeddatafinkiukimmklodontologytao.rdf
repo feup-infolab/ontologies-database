@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:ns4="http://purl.org/vocab/vann/"
+	xmlns:ns5="http://creativecommons.org/ns#" >
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#related">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Rest_Area" />
+    <rdfs:range rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Place_Info" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/places/road">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#latitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#longitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#cityName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Rest_Area" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <dct:modified>2016-08-28</dct:modified>
+    <rdfs:label>Transport Administration Ontology</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#" />
+    <rdfs:comment>Transport Administration Ontology (TAO) for describing data from Swedish Transport Administration Web site.</rdfs:comment>
+    <owl:versionInfo>1.1</owl:versionInfo>
+    <dct:description>Transport Administration Ontology (TAO) for describing data from Swedish Transport Administration Web site.</dct:description>
+    <dct:contributor rdf:resource="https://plus.google.com/+MilosJovanovik" />
+    <dct:creator rdf:resource="http://plus.google.com/+GoranPetkovski" />
+    <dct:issued>2015-06-17</dct:issued>
+    <dct:publisher rdf:resource="http://finki.ukim.mk/" />
+    <dct:title>Transport Administration Ontology</dct:title>
+    <ns4:preferredNamespacePrefix>tao</ns4:preferredNamespacePrefix>
+    <ns4:preferredNamespaceUri>http://linkeddata.finki.ukim.mk/lod/ontology/tao#</ns4:preferredNamespaceUri>
+    <ns5:license rdf:resource="https://creativecommons.org/licenses/by/3.0/" />
+    <dct:rights>Copyright 2014, Goran Petkovski</dct:rights>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Accident_Service">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Accident_Service</rdfs:label>
+    <rdfs:comment>Class that describe emergency information on traffic accidents, fallen trees and other obstructions that affect accessibility. Includes information on location, impact, causes and possible traffic restrictions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Ferry_Service">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Ferry_Service</rdfs:label>
+    <rdfs:comment>Class that contains information about reports of deviations and cancellations of the SwedishTransport Administration ferry services. Contains information on ferry routes, estimated duration and possible restrictions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Location</rdfs:label>
+    <rdfs:comment>Information about location where the Situation Record was generated. It contains several properties describing the Location. It contains geo:longitude and geo:latitude for creataing external links to othe datasets.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Place_Info">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Rest_Area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Rest_Area</rdfs:label>
+    <rdfs:comment>Class that describe rest areas with information on location, level of equipment, service and information functions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Road_Condition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Road_Condition</rdfs:label>
+    <rdfs:comment>Class that describe the conditions of the road surface which may affect driving conditions. These may be related to the weather (e.g. ice, snow etc.) or to other conditions (e.g. oil, mud, leaves etc. on the road)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Road_Work">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Road_Work</rdfs:label>
+    <rdfs:comment>Class that describe information about ongoing, planned and completed roadworks. Includes information on location, type of road work, impact and restrictions like closures of lanes, width restrictions, rerouting and traffic and speed reductions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+    <rdfs:label>Situation_Record</rdfs:label>
+    <rdfs:comment>Class describing the basic information about Situation Record instances. It contains  information about time when it occured and information status.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#areaPlaceName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Rest_Area" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#carriageway">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Road_Condition" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#countyNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#distanceNearestCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Rest_Area" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#ferryInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Ferry_Service" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#has_Location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+    <rdfs:range rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#information_Status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#lane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Road_Work" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#lanesRestricted">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Accident_Service" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#lengthAffected">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Accident_Service" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#location_Of_Situation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+    <owl:inverseOf rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#has_Location" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Location" />
+    <rdfs:range rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#locaton_Descriptor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Rest_Area" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#offsetDistance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Accident_Service" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#severity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#situationRecordTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Situation_Record" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#speedLimit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Road_Work" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#textDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+    <rdfs:domain rdf:resource="http://linkeddata.finki.ukim.mk/lod/ontology/tao#Road_Condition" />
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linkeddata.finki.ukim.mk/lod/ontology/tao#title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" />
+  </rdf:Description>
+</rdf:RDF>

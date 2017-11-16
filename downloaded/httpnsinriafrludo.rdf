@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <foaf:Organization rdf:about="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control">
+  </foaf:Organization>
+
+  <owl:Ontology rdf:about="http://nr.inria.fr/ludo/v1">
+  </owl:Ontology>
+
+  <owl:Ontology rdf:about="http://nr.inria.fr/ludo/v1#">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc11:creator>
+      <foaf:Person rdf:about="http://www.oscarrodriguez.me">
+      </foaf:Person>
+    </dc11:creator>
+
+    <dc11:creator>
+      <foaf:Person rdf:about="https://plus.google.com/106595696646939943813">
+      </foaf:Person>
+    </dc11:creator>
+
+    <dc11:description rdf:resource="http://ns.inria.fr/ludo/images/ludo_in_a_nutshell.png"/>
+    <dc11:description xml:lang="en">Ludo is an ontology created to enable the description and representation of Serious Games that use structured data published on the Web through the Linked Data as a knowledge base. From the representation of the players’ profile and their contextual information whithin the game, it is possible to generate personalized recommendations of related educational resources in order to stimulate the learning process while playing.</dc11:description>
+    <dc11:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-02-01</dc11:issued>
+    <dc11:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-08-09</dc11:modified>
+    <dc11:publisher rdf:resource="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/>
+    <dc11:rights xml:lang="en">This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0 .</dc11:rights>
+    <dc11:title xml:lang="en">Ludo Ontology</dc11:title>
+    <ns0:preferredNamespacePrefix>ludo</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://ns.inria.fr/ludo/v1/#</ns0:preferredNamespaceUri>
+    <rdfs:comment xml:lang="en">Given the increasing amount of structured data published on the Web, many possibilities are open for creating new types of games that use resources from the Web of Data. In particular, if we consider the subcategory of Serious Games in which the object of the game is to educate the user through the interactive discovery of real-life concepts (associated to Semantic Web resources), the inclusion of a semantic representation of the user profile and his contextual information becomes an important element to recommend the user more accurate concepts. Ludo is an ontology that allows the creation of Serious Games with those characteristics.</rdfs:comment>
+    <owl:imports rdf:resource="http://ns.inria.fr/ludo/v1/gamemodel"/>
+    <owl:imports rdf:resource="http://ns.inria.fr/ludo/v1/gamepresentation"/>
+    <owl:imports rdf:resource="http://ns.inria.fr/ludo/v1/virtualcontext"/>
+    <owl:imports rdf:resource="http://ns.inria.fr/ludo/v1/xapi"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+  </owl:Ontology>
+
+</rdf:RDF>

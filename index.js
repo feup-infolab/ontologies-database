@@ -8,32 +8,45 @@ var path = require("path");
 var async = require("async");
 var libxmljs = require("libxmljs");
 
-var possibleMimeTypes = ["application/xml", "application/rdf+xml"];
+var possibleMimeTypes = {
+    "owl": "application/xml",
+    "rdf" : "application/rdf+xml"
+};
 
 var OntologiesDatabase = function (options)
 {
     var self = this;
 
-    self._downloadsFolderName = "downloaded";
-    self._ontologiesListFilename = "ontologies_list.txt";
-    self._ontologiesMapFilename = "ontologies_map.json";
+    self.downloadsFolderName = "downloaded";
+    self.ontologiesListFilename = "ontologies_list.txt";
+    self.ontologiesMapFilename = "ontologies_map.json";
+    self.ontologiesAndFilesMapInTXT = "ontologies_map.txt";
 
-    if (options.downloadsFolderName)
+    if(options)
     {
-        self.downloadsFolderName = options.downloadsFolderName;
-    }
+        if (options.downloadsFolderName)
+        {
+            self.downloadsFolderName = options.downloadsFolderName;
+        }
 
-    if (options.ontologiesListFilename)
-    {
-        self.ontologiesListFilename = options.ontologiesListFilename;
-    }
+        if (options.ontologiesListFilename)
+        {
+            self.ontologiesListFilename = options.ontologiesListFilename;
+        }
 
-    if (options.ontologiesMapFilename)
-    {
-        self.ontologiesMapFilename = options.ontologiesMapFilename;
+        if (options.ontologiesMapFilename)
+        {
+            self.ontologiesMapFilename = options.ontologiesMapFilename;
+        }
+
+        if (options.ontologiesAndFilesMapInTXT)
+        {
+            self._ontologiesAndFilesMapInTXT = options.ontologiesAndFilesMapInTXT;
+        }
     }
 
     self._ontologiesAndFilesMap = {};
+    self._ontologiesAndFilesListTXT = "";
 };
 
 OntologiesDatabase.prototype.getMap = function ()
@@ -56,12 +69,13 @@ OntologiesDatabase.prototype.reload = function (callback)
         {
             var tryToDownloadOntology = function (cb)
             {
-                var newFileName = path.join(self.downloadsFolderName, slug(line, "_"));
-
-                rimraf.sync(newFileName);
-
-                async.detect(possibleMimeTypes, function (mimetype, callback)
+                async.map(Object.keys(possibleMimeTypes), function (extension, callback)
                 {
+                    var newFileName = path.join(self.downloadsFolderName, slug(line, "_")) + "." + extension;
+                    rimraf.sync(newFileName);
+
+                    var mimetype = possibleMimeTypes[extension];
+
                     console.log("Trying to download ontology " + line + " with mimetype " + mimetype + " ....");
                     var options = {
                         uri: line,
@@ -81,6 +95,7 @@ OntologiesDatabase.prototype.reload = function (callback)
                                 fs.writeFileSync(newFileName, response);
                                 fs.closeSync(fd);
                                 self._ontologiesAndFilesMap[line] = newFileName;
+                                self._ontologiesAndFilesListTXT += line + " " + newFileName + "\n";
                                 console.log(line + " ontology downloaded successfully with type " + mimetype);
                                 callback(null, true);
                             }
@@ -117,6 +132,7 @@ OntologiesDatabase.prototype.reload = function (callback)
                 tryToDownloadOntology(function (err, result)
                 {
                     fs.writeFileSync(self.ontologiesMapFilename, JSON.stringify(self._ontologiesAndFilesMap, null, 4));
+                    fs.writeFileSync(self.ontologiesAndFilesMapInTXT,self._ontologiesAndFilesMapInTXT);
                     cb(false); // stop reading
                     callback(null, path.resolve(self.downloadsFolderName), self._ontologiesAndFilesMap); // finish everything
                 });

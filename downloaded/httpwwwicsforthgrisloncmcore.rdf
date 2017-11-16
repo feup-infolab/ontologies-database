@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY onc "http://www.ics.forth.gr/isl/oncm/core#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ics.forth.gr/isl/oncm/core#"
+     xml:base="http://www.ics.forth.gr/isl/oncm/core"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:onc="http://www.ics.forth.gr/isl/oncm/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.ics.forth.gr/isl/oncm/core">
+        <rdfs:label xml:lang="en">Open NEE Configuration Model</rdfs:label>
+		<terms:modified rdf:datatype="&xsd;date">2015-04-03</terms:modified>
+        <terms:issued rdf:datatype="&xsd;date">2015-02-04</terms:issued>
+		<terms:rights>Copyright © FORTH ICS</terms:rights>
+		<terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+		<terms:publisher rdf:resource="http://www.ics.forth.gr/isl"/>
+        <terms:title xml:lang="en">The Open NEE Configuration Model</terms:title>
+        <rdfs:comment xml:lang="en">The Open NEE Configuration Model defines a Linked Data-based model for describing a configuration supported by a Named Entity Extraction (NEE) service. It is based on the model proposed in &quot;Configuring Named Entity Extraction through Real-Time Exploitation of Linked Data&quot; (http://dl.acm.org/citation.cfm?doid=2611040.2611085) for configuring such services, and allows a NEE service to describe and publish as Linked Data its entity mining capabilities, but also to be dynamically configured.</rdfs:comment>
+        <terms:description xml:lang="en">The Open NEE Configuration Model defines a Linked Data-based model for describing a configuration supported by a Named Entity Extraction (NEE) service. It is based on the model proposed in &quot;Configuring Named Entity Extraction through Real-Time Exploitation of Linked Data&quot; (http://dl.acm.org/citation.cfm?doid=2611040.2611085) for configuring such services, and allows a NEE service to describe and publish as Linked Data its entity mining capabilities, but also to be dynamically configured.</terms:description>
+        <rdfs:seeAlso rdf:resource="http://dl.acm.org/citation.cfm?doid=2611040.2611085"/>
+        <terms:creator rdf:resource="http://users.ics.forth.gr/~fafalios"/>
+		<terms:contributor rdf:resource="http://users.ics.forth.gr/~fafalios"/>
+        <terms:contributor rdf:resource="http://users.ics.forth.gr/~tzitzik"/>
+		<owl:versionInfo>1.0</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://www.ics.forth.gr/isl/oncm/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&terms;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#accessibleThrough -->
+
+    <owl:ObjectProperty rdf:about="&onc;accessibleThrough">
+        <rdfs:label xml:lang="en">accessible through</rdfs:label>
+        <terms:description xml:lang="en">Relates a NEE service to a resource, e.g. to a URL describing the API of a service.</terms:description>
+        <rdfs:domain rdf:resource="&onc;NEEService"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#endpoint -->
+
+    <owl:ObjectProperty rdf:about="&onc;endpoint">
+        <rdfs:label xml:lang="en">endpoint</rdfs:label>
+        <terms:description xml:lang="en">Relates a KBM to the URL of a SPARQL endpoint.</terms:description>
+        <rdfs:domain rdf:resource="&onc;KBM"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#entitiesSpecFrom -->
+
+    <owl:ObjectProperty rdf:about="&onc;entitiesSpecFrom">
+        <rdfs:label xml:lang="en">entities specification from</rdfs:label>
+        <terms:description xml:lang="en">Relates a category to a KBM.</terms:description>
+        <rdfs:domain rdf:resource="&onc;Category"/>
+        <rdfs:range rdf:resource="&onc;KBM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#isDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="&onc;isDefinedBy">
+        <rdfs:label xml:lang="en">is defined by</rdfs:label>
+        <terms:description xml:lang="en">Relates a ranking method to a resource, e.g. to a URL describing the ranking approach.</terms:description>
+        <rdfs:domain rdf:resource="&onc;RankingMethod"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#ranksEntitiesUsing -->
+
+    <owl:ObjectProperty rdf:about="&onc;ranksEntitiesUsing">
+        <rdfs:label xml:lang="en">ranks entities using</rdfs:label>
+        <terms:description xml:lang="en">Relates a configuration to a method for ranking entities.</terms:description>
+        <rdfs:domain rdf:resource="&onc;Configuration"/>
+        <rdfs:range rdf:resource="&onc;RankingMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#ranksResourcesUsing -->
+
+    <owl:ObjectProperty rdf:about="&onc;ranksResourcesUsing">
+        <rdfs:label xml:lang="en">ranks resources using</rdfs:label>
+        <terms:description xml:lang="en">Relates a configuration to a method for ranking resources.</terms:description>
+        <rdfs:domain rdf:resource="&onc;Configuration"/>
+        <rdfs:range rdf:resource="&onc;RankingMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#supports -->
+
+    <owl:ObjectProperty rdf:about="&onc;supports">
+        <rdfs:label xml:lang="en">supports</rdfs:label>
+        <terms:description xml:lang="en">Relates a NEE service to a configuration, or a configuration to a supported category.</terms:description>
+        <rdfs:range rdf:resource="&onc;Category"/>
+        <rdfs:range rdf:resource="&onc;Configuration"/>
+        <rdfs:domain rdf:resource="&onc;Configuration"/>
+        <rdfs:domain rdf:resource="&onc;NEEService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#usesEntityEnrichmentSpec -->
+
+    <owl:ObjectProperty rdf:about="&onc;usesEntityEnrichmentSpec">
+        <rdfs:label xml:lang="en">uses entity enrichment specification</rdfs:label>
+        <terms:description xml:lang="en">Relates a KBM to an entity-enrichment specification.</terms:description>
+        <rdfs:range rdf:resource="&onc;EntityEnrichmentSpec"/>
+        <rdfs:domain rdf:resource="&onc;KBM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#usesEntityLinkingSpec -->
+
+    <owl:ObjectProperty rdf:about="&onc;usesEntityLinkingSpec">
+        <rdfs:label xml:lang="en">uses entity linking specification</rdfs:label>
+        <terms:description xml:lang="en">Relates a KBM to an entity-linking specification.</terms:description>
+        <rdfs:range rdf:resource="&onc;EntityLinkingSpec"/>
+        <rdfs:domain rdf:resource="&onc;KBM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#usesEntityNamesSpec -->
+
+    <owl:ObjectProperty rdf:about="&onc;usesEntityNamesSpec">
+        <rdfs:label xml:lang="en">uses entity names specification</rdfs:label>
+        <terms:description xml:lang="en">Relates a KBM to specification of entity names.</terms:description>
+        <rdfs:range rdf:resource="&onc;EntityNamesSpec"/>
+        <rdfs:domain rdf:resource="&onc;KBM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#usesSparqlQuery -->
+
+    <owl:DatatypeProperty rdf:about="&onc;usesSparqlQuery">
+        <rdfs:label xml:lang="en">uses SPARQL query</rdfs:label>
+        <terms:description xml:lang="en">Relates a specification of entity names to a SPARQL query.</terms:description>
+        <rdfs:domain rdf:resource="&onc;EntityNamesSpec"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#usesSparqlTemplateParam -->
+
+    <owl:DatatypeProperty rdf:about="&onc;usesSparqlTemplateParam">
+        <rdfs:label xml:lang="en">uses SPARQL template parameter</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity-linking or entity-enrichment specification to a SPARQL template parameter.</terms:description>
+        <rdfs:domain rdf:resource="&onc;EntityEnrichmentSpec"/>
+        <rdfs:domain rdf:resource="&onc;EntityLinkingSpec"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#usesSparqlTemplateQuery -->
+
+    <owl:DatatypeProperty rdf:about="&onc;usesSparqlTemplateQuery">
+        <rdfs:label xml:lang="en">uses SPARQL template query</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity-linking or entity-enrichment specification to a SPARQL template query.</terms:description>
+        <rdfs:domain rdf:resource="&onc;EntityEnrichmentSpec"/>
+        <rdfs:domain rdf:resource="&onc;EntityLinkingSpec"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#Category -->
+
+    <owl:Class rdf:about="&onc;Category">
+        <rdfs:label xml:lang="en">category</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:description xml:lang="en">A category/class of entities supported by a configuration.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#Configuration -->
+
+    <owl:Class rdf:about="&onc;Configuration">
+        <rdfs:label xml:lang="en">configuration</rdfs:label>
+        <terms:description xml:lang="en">The configuration supported by a NEE service.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#EntityEnrichmentSpec -->
+
+    <owl:Class rdf:about="&onc;EntityEnrichmentSpec">
+        <rdfs:label xml:lang="en">entity enrichment specification</rdfs:label>
+        <terms:description xml:lang="en">Specification of the extra information that should be fetched for an entity URI.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#EntityLinkingSpec -->
+
+    <owl:Class rdf:about="&onc;EntityLinkingSpec">
+        <rdfs:label xml:lang="en">entity linking specification</rdfs:label>
+        <terms:description xml:lang="en">Specification of how an entity name corresponds to entity URIs.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#EntityNamesSpec -->
+
+    <owl:Class rdf:about="&onc;EntityNamesSpec">
+        <rdfs:label xml:lang="en">entity names specification</rdfs:label>
+        <terms:description xml:lang="en">Specification of the entity names of a category.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#KBM -->
+
+    <owl:Class rdf:about="&onc;KBM">
+        <rdfs:label xml:lang="en">knowledge base mirror</rdfs:label>
+        <terms:description xml:lang="en">A Knowledge Base Mirror (KBM): the gateway for accessing a Knowledge Base.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#NEEService -->
+
+    <owl:Class rdf:about="&onc;NEEService">
+        <rdfs:label xml:lang="en">named entity extraction service</rdfs:label>
+        <terms:description xml:lang="en">A Named Entity Extraction (NEE) service</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oncm/core#RankingMethod -->
+
+    <owl:Class rdf:about="&onc;RankingMethod">
+        <rdfs:label xml:lang="en">ranking method</rdfs:label>
+        <terms:description xml:lang="en">A method used for ranking the entities or the entity URIs.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="&rdfs;Resource"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

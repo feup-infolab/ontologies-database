@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:thors="http://resource.geosciml.org/ontology/timescale/thors#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://resource.geosciml.org/ontology/timescale/thors">
+  <voaf:Vocabulary rdf:about="">
+    <owl:priorVersion rdf:resource="https://www.seegrid.csiro.au/subversion/xmml/ontologies/tags/201402/Geoscience/GeologicTimeScale/thors.rdf"/>
+    <rdfs:seeAlso rdf:resource="http://www.geosciml.org"/>
+    <vann:preferredNamespacePrefix>thors</vann:preferredNamespacePrefix>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2011-01-01</dct:created>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <vann:preferredNamespaceUri rdf:resource="#"/>
+    <rdfs:seeAlso rdf:resource="http://dx.doi.org/10.1130/GES00022.1"/>
+    <dc:rights>Copyright © 2012-2017 CSIRO</dc:rights>
+    <skos:changeNote>2017-04-28 - removed imports of ISO ontologies </skos:changeNote>
+    <rdfs:comment>This model is related to the model for TORS in ISO 19108:2002, except that boundaries between eras are first class objects, supporting multiple properties, rather than being just time coordinates. It is also linked to the ISO 19108 Temporal Topology model. </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description>An OWL representation of the model for Temporal Ordinal Reference Systems defined in GeoSciML v3. </dc:description>
+    <dc:creator>Simon Jonathan David COX, CSIRO Australia</dc:creator>
+    <rdfs:seeAlso rdf:resource="doi:10.1130/GES00022.1"/>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <dc:title>Temporal Hierarchical Ordinal Reference System model</dc:title>
+    <owl:versionIRI rdf:resource="https://github.com/GeoscienceAustralia/geosciml.org/commit/24d302bf3f0fa315c1dddc2c734b84f52299cd02#diff-73b17e22072459ab7e06e9ab664a9d48"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-04-28</dct:modified>
+    <dc:source>Simon J.D. Cox and Stephen M. Richard, A formal model for the geologic time scale and global stratotype section and point, compatible with geospatial information transfer standards, Geosphere, 1, 119-137 (2005)</dc:source>
+    <rdfs:seeAlso rdf:resource="http://geosphere.gsapubs.org/cgi/doi/10.1130/GES00022.1"/>
+  </voaf:Vocabulary>
+  <owl:Class>
+    <owl:unionOf rdf:parseType="Resource">
+    </owl:unionOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Era">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="end"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="begin"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Time Ordinal Era or Interval</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+  </owl:Class>
+  <owl:Class rdf:ID="ReferenceSystem">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="referencePoint"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="component"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:label>Hierarchical Time Ordinal Reference System</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:comment>A temporal ordinal reference system is a constrained temporal topological complex, in which the edges are called 'eras'. Each era may be subdivided into one set of eras of the next finer rank. This constraint is required to establish a mono-hierarchy, so that a set of temporal positions defined relative to the reference system may be uniquely ordered.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="EraBoundary">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="previousEra"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="nextEra"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>Time Ordinal Era Boundary</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#end">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#previousEra"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:range rdf:resource="#EraBoundary"/>
+    <rdfs:label xml:lang="en">era end</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#Era"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#component">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="system"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    <rdfs:range rdf:resource="#Era"/>
+    <rdfs:label xml:lang="en">temporal reference system component</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#ReferenceSystem"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#begin">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="#nextEra"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:range rdf:resource="#EraBoundary"/>
+    <rdfs:label xml:lang="en">era beginning</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#Era"/>
+    <rdfs:comment>era or interval beginning or start</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="member">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+    <rdfs:range rdf:resource="#Era"/>
+    <rdfs:label xml:lang="en">era member / sub-era</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#Era"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#referencePoint">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    <rdfs:range rdf:resource="#EraBoundary"/>
+    <rdfs:label>reference point in timescale</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#ReferenceSystem"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#system">
+    <owl:inverseOf rdf:resource="#component"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+    <rdfs:range rdf:resource="#ReferenceSystem"/>
+    <rdfs:label xml:lang="en">system</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#Era"/>
+    <rdfs:comment>reference system that this era belongs to</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#nextEra">
+    <owl:inverseOf rdf:resource="#begin"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:range rdf:resource="#Era"/>
+    <rdfs:label xml:lang="en">next era</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#EraBoundary"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#previousEra">
+    <owl:inverseOf rdf:resource="#end"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:range rdf:resource="#Era"/>
+    <rdfs:label xml:lang="en">previous era</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:domain rdf:resource="#EraBoundary"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="positionalUncertainty">
+    <rdfs:label xml:lang="en">uncertainty in temporal position</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource=""/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+ <!ENTITY rdf  'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+ <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+ <!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+ <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+ <!ENTITY cc 'http://web.resource.org/cc/'> 
+ <!ENTITY dc 'http://purl.org/dc/elements/1.1/'>
+ <!ENTITY dcterms 'http://purl.org/dc/terms/'>
+ <!ENTITY foaf 'http://xmlns.com/foaf/0.1/'>
+ <!ENTITY sioc 'http://rdfs.org/sioc/ns#'>
+ <!ENTITY snarm 'http://rdf.myexperiment.org/ontologies/snarm/'>
+ <!ENTITY ore 'http://www.openarchives.org/ore/terms/'>
+ <!ENTITY dbpedia 'http://dbpedia.org/ontology/'>
+ <!ENTITY mebase 'http://rdf.myexperiment.org/ontologies/base/'>
+]>
+
+<rdf:RDF xml:base		="&mebase;"
+	 xmlns			="&mebase;"
+         xmlns:rdf	 	="&rdf;"
+         xmlns:rdfs		="&rdfs;"
+         xmlns:owl		="&owl;"
+         xmlns:cc               ="&cc;"
+         xmlns:dc		="&dc;"
+	 xmlns:dcterms		="&dcterms;"
+         xmlns:foaf		="&foaf;"
+	 xmlns:sioc   		="&sioc;"
+	 xmlns:snarm    	="&snarm;"
+         xmlns:ore		="&ore;"
+         xmlns:dbpedia		="&dbpedia;"
+         xmlns:xsd		="&xsd;"
+>
+  <!-- =============== Description ==================== -->
+
+  <owl:Ontology rdf:about="&mebase;">
+    <rdfs:label>myExperiment Base v1.0</rdfs:label>
+    <rdfs:comment>This provides the base elements required by myExperiment for content management, social networking and object annotation.</rdfs:comment>
+    <dc:language>en</dc:language>
+    <dc:title xml:lang="en">The myExperiment Base Ontology</dc:title>
+    <dc:creator rdf:resource="http://id.ecs.soton.ac.uk/person/9421"/>
+    <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David R Newman</dc:contributor>
+    <dc:publisher rdf:resource="http://rdf.myexperiment.org"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-01-28</dc:date>
+    <owl:versionInfo>$Date: 2013/03/26 $</owl:versionInfo>
+    <dc:format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf/xml</dc:format>
+    <owl:imports rdf:resource="&snarm;"/>
+  </owl:Ontology>
+
+<!-- =============== Annotation Properties ========= -->
+
+  <rdf:Description rdf:about="&dc;language">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dc;title">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dc;creator">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dc;contributor">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dc;publisher">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dc;date">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dc;format">
+    <rdf:type rdf:resource="&owl;AnnotationProperty"/>
+  </rdf:Description>
+
+
+  <!-- ========= OWL-DL Compliance statements ======== -->  
+  
+
+  <rdf:Description rdf:about="&dcterms;created">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;description">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;modified">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;title">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;type">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;identifier">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;Agent">
+    <rdf:type rdf:resource="&owl;Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;hasVersion">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+    <owl:inverseOf rdf:resource="&dcterms;isVersionOf"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dcterms;isVersionOf">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+    <owl:inverseOf rdf:resource="&dcterms;hasVersion"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&foaf;based_near">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&foaf;homepage">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&foaf;knows">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&foaf;mbox">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&foaf;mbox_sha1sum">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&foaf;name">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;avatar">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;Item">
+    <rdf:type rdf:resource="&owl;Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;name">
+    <rdf:type rdf:resource="&owl;DatatypeProperty"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;has_member">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+    <owl:inverseOf rdf:resource="&sioc;member_of"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;member_of">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+    <owl:inverseOf rdf:resource="&sioc;has_member"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;has_owner">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+    <owl:inverseOf rdf:resource="&sioc;owner_of"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;owner_of">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+    <owl:inverseOf rdf:resource="&sioc;has_owner"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;UserAccount">
+    <rdf:type rdf:resource="&owl;Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&sioc;UserGroup">
+    <rdf:type rdf:resource="&owl;Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&snarm;Policy">
+    <rdf:type rdf:resource="&owl;Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&cc;license">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&cc;License">
+    <rdf:type rdf:resource="&owl;Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&cc;requires">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+   <rdf:Description rdf:about="&cc;permits">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&cc;prohibits">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="&dbpedia;residence">
+    <rdf:type rdf:resource="&owl;ObjectProperty"/>
+  </rdf:Description>
+
+
+
+  <!-- ====================== Interfaces ====================== -->
+
+  <owl:Class rdf:about="Interface">
+    <rdfs:label>Interface</rdfs:label>
+    <rdfs:comment>Superclass for all Interface classes</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Annotatable">
+    <rdfs:label>Annotatable</rdfs:label>
+    <rdfs:comment>An object that can be annotated with Annotations</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Interface"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-annotation" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Versionable">
+    <rdfs:label>Versionable</rdfs:label>
+    <rdfs:comment>A Contribution that can be a Version</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Interface"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-version" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Version">
+    <rdfs:label>Version</rdfs:label>
+    <rdfs:comment>A Contribution may be a Version of another Contribution</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Interface"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="version-number" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;isVersionOf" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+
+  <!-- =================== Abstract Classes =================== -->
+
+  <owl:Class rdf:about="Actor">
+    <rdfs:label>Actor</rdfs:label>
+    <rdfs:comment>An object that can perform an action</rdfs:comment>
+    <owl:disjointWith rdf:resource="Submission"/>
+    <rdfs:subClassOf rdf:resource="&dcterms;Agent"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;created" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;modified" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;name" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;name" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;description" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Submission">
+    <rdfs:label>Submission</rdfs:label>
+    <rdfs:comment>An object that has been submitted.  This might be a Contribution, Annotation, Request or an Attibution/Creditation of an Upload</rdfs:comment>
+    <owl:disjointWith rdf:resource="Actor"/>
+    <owl:equivalentClass rdf:resource="&sioc;Item"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;created" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+ </owl:Class>
+
+ <owl:Class rdf:about="Annotation">
+    <rdfs:label>Annotation</rdfs:label>
+    <rdfs:comment>An Annotation of a Annotatable object</rdfs:comment>
+    <owl:disjointWith rdf:resource="Request"/>
+    <owl:disjointWith rdf:resource="Announcement"/>
+    <owl:disjointWith rdf:resource="Contribution"/>
+    <owl:disjointWith rdf:resource="Message"/>
+    <rdfs:subClassOf rdf:resource="Submission" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-annotator" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="annotates" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+ </owl:Class> 
+ 
+ <owl:Class rdf:about="Contribution">
+    <rdfs:label>Contribution</rdfs:label>
+    <rdfs:comment>An object that is contributed by a User</rdfs:comment>
+    <owl:disjointWith rdf:resource="Annotation"/>
+    <owl:disjointWith rdf:resource="Announcement"/>
+    <owl:disjointWith rdf:resource="Request"/>
+    <owl:disjointWith rdf:resource="Message"/>
+    <rdfs:subClassOf rdf:resource="Submission" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;modified" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;has_owner" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-policy" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;description" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Request">
+    <rdfs:label>Request</rdfs:label>
+    <rdfs:comment>A Request can be made by an Actor to another Actor</rdfs:comment>
+    <owl:disjointWith rdf:resource="Annotation"/>
+    <owl:disjointWith rdf:resource="Announcement"/>
+    <owl:disjointWith rdf:resource="Contribution"/>
+    <owl:disjointWith rdf:resource="Message"/>
+    <rdfs:subClassOf rdf:resource="Submission"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-requester" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-accepter" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="accepted-at" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;has_owner" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+   <owl:Class rdf:about="Invitation">
+    <rdfs:label>Invitation</rdfs:label>
+    <rdfs:comment>A Request could be an external Invitation</rdfs:comment>
+    <owl:disjointWith rdf:resource="Friendship"/>
+    <owl:disjointWith rdf:resource="Membership"/>
+    <rdfs:subClassOf rdf:resource="Request"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;has_owner" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;mbox_sha1sum" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Upload">
+    <rdfs:label>Upload</rdfs:label>
+    <rdfs:comment>An object that can be contributed by a User that requires uploading</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Contribution"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="content-url" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-content-type" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&cc;license" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;title" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <!-- =============== myExperiment Entity Classes ================= -->
+  
+  <owl:Class rdf:about="Announcement">
+    <rdfs:label>Announcement</rdfs:label>
+    <rdfs:comment>A public Announcement</rdfs:comment>
+    <owl:disjointWith rdf:resource="Annotation"/>
+    <owl:disjointWith rdf:resource="Contribution"/>
+    <owl:disjointWith rdf:resource="Message"/>
+    <owl:disjointWith rdf:resource="Request"/>
+    <rdfs:subClassOf rdf:resource="Submission"/> 
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="has-announcer" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;title" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="text" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;modified" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="ContentType">
+    <rdfs:label>ContentType</rdfs:label>
+    <rdfs:comment>The type of content for an Upload</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="&mebase;Contribution"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Friendship">
+    <rdfs:label>Friendship</rdfs:label>
+    <rdfs:comment>A Friendship between two Users</rdfs:comment>
+    <owl:disjointWith rdf:resource="Membership"/>
+    <owl:disjointWith rdf:resource="Invitation"/>
+    <rdfs:subClassOf rdf:resource="Request"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="FriendshipInvitation">
+    <rdfs:label>FriendshipInvitation</rdfs:label>
+    <rdfs:comment>A FriendshipInvitation to an external email address</rdfs:comment>
+    <owl:disjointWith rdf:resource="MembershipInvitation"/>
+    <rdfs:subClassOf rdf:resource="Invitation"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+ 
+  <owl:Class rdf:about="Group">
+    <rdfs:label>Group</rdfs:label>
+    <rdfs:comment>A Group of Users</rdfs:comment>
+    <owl:equivalentClass rdf:resource="&sioc;UserGroup"/>
+    <owl:disjointWith rdf:resource="User"/>
+    <rdfs:subClassOf rdf:resource="Actor" />
+     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;has_owner" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dcterms;description" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;has_member" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="GroupAnnouncement">
+    <rdfs:label>GroupAnnouncement</rdfs:label>
+    <rdfs:comment>An Announcement to a Group</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Announcement" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+         <owl:onProperty rdf:resource="public-announcement" />
+         <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="announced-to" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="License">
+    <rdfs:label>License</rdfs:label>
+    <rdfs:comment>A License under which an Upload is licensed under</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="Contribution" />
+    <rdfs:subClassOf rdf:resource="&cc;License" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+         <owl:onProperty rdf:resource="&dcterms;identifier" />
+         <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&cc;requires" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+       <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&cc;permits" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&cc;prohibits" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+
+   <owl:Class rdf:about="Membership">
+    <rdfs:label>Membership</rdfs:label>
+    <rdfs:comment>A Membership of a User to a Group</rdfs:comment>
+    <owl:disjointWith rdf:resource="Friendship"/>
+    <owl:disjointWith rdf:resource="Invitation"/>
+    <rdfs:subClassOf rdf:resource="Request"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="MembershipInvitation">
+    <rdfs:label>MembershipInvitation</rdfs:label>
+    <rdfs:comment>A MembershipInvitation to an external email address</rdfs:comment>
+    <owl:disjointWith rdf:resource="FriendshipInvitation"/>
+    <rdfs:subClassOf rdf:resource="Invitation"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="Message">
+    <rdfs:label>Message</rdfs:label>
+    <rdfs:comment>A Message sent between two Users</rdfs:comment>
+    <owl:disjointWith rdf:resource="Annotation"/>
+    <owl:disjointWith rdf:resource="Announcement"/>
+    <owl:disjointWith rdf:resource="Contribution"/>
+    <owl:disjointWith rdf:resource="Request"/>
+    <rdfs:subClassOf rdf:resource="Submission"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="text" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="User">
+    <rdfs:label>User</rdfs:label>
+    <rdfs:comment>A User</rdfs:comment>
+    <owl:equivalentClass rdf:resource="&sioc;UserAccount"/>
+    <owl:disjointWith rdf:resource="Group"/>
+    <rdfs:subClassOf rdf:resource="Actor" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="username" />
+        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;avatar" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;based_near" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf> 
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;mbox" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;mbox_sha1sum" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&foaf;homepage" />
+        <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&dbpedia;residence" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="&sioc;member_of" />
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:Class>
+
+  <!-- =============== Object Properties ============== -->
+
+  <owl:ObjectProperty rdf:about="has-annotator">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>has-annotator</rdfs:label>
+    <rdfs:comment>An Annotation has User as annotator</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="&sioc;has_owner"/>
+    <rdfs:domain rdf:resource="Annotation"/>
+    <rdfs:range rdf:resource="User"/>
+    <owl:inverseOf rdf:resource="annotator-of"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="annotator-of">
+    <rdfs:label>annotator</rdfs:label>
+    <rdfs:comment>A User is an annotator-of an Annotation</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="&sioc;owner_of"/>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="Annotation"/>
+    <owl:inverseOf rdf:resource="has-annotator"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="annotates"> 
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>annotates</rdfs:label>
+    <rdfs:comment>An Annotation is associated with a particular Contribution</rdfs:comment>
+    <rdfs:domain rdf:resource="Annotation"/>
+    <rdfs:range rdf:resource="Annotatable"/>
+    <owl:inverseOf rdf:resource="has-annotation"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-annotation">
+    <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    <rdfs:label>has-annotation</rdfs:label>
+    <rdfs:comment>An Annotable may have a Annotation</rdfs:comment>
+    <rdfs:domain rdf:resource="Annotatable"/>
+    <rdfs:range rdf:resource="Annotation"/>
+    <owl:inverseOf rdf:resource="annotates"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-announcer">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>has-announcer</rdfs:label>
+    <rdfs:comment>An Announcement has an annoucer that is a User</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="&sioc;has_owner"/>
+    <rdfs:domain rdf:resource="Announcement"/>
+    <rdfs:range rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="announced-to">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>announced-to</rdfs:label>
+    <rdfs:comment>The Group a GroupAnnouncement has been announced to</rdfs:comment>
+    <rdfs:domain rdf:resource="GroupAnnouncement"/>
+    <rdfs:range rdf:resource="Group"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-version">
+    <rdfs:subPropertyOf rdf:resource="&dcterms;hasVersion"/>
+    <rdfs:label>has-version</rdfs:label>
+    <rdfs:comment>A Versionable object has at least one version</rdfs:comment>
+    <rdfs:domain rdf:resource="Versionable"/>
+    <rdfs:range rdf:resource="Version"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="content-url">
+    <rdfs:label>content-url</rdfs:label>
+    <rdfs:comment>An Upload has content at a URL</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-current-version">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="has-version"/>
+    <rdfs:label>has-current-version</rdfs:label>
+    <rdfs:comment>A Versionable object has a current version</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-announcement">
+    <rdfs:label>has-announcement</rdfs:label>
+    <rdfs:comment>Groups may have GroupAnnouncements</rdfs:comment>
+    <rdfs:domain rdf:resource="Group"/>
+    <rdfs:range rdf:resource="GroupAnnouncement"/>
+    <owl:inverseOf rdf:resource="announced-to"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="email">
+    <rdfs:label>email</rdfs:label>
+    <rdfs:comment>A User has an email address</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="&foaf;mbox"/>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+ 
+  <owl:ObjectProperty rdf:about="is-friends-with">
+    <rdfs:subPropertyOf rdf:resource="&foaf;knows" />
+    <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    <rdfs:label>is-friends-with</rdfs:label>
+    <rdfs:comment>A User may be friends with another User</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="from">
+    <rdfs:label>from</rdfs:label>
+    <rdfs:comment>A Message is sent from a User</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-content-type">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>has-content-type</rdfs:label>
+    <rdfs:comment>An Upload has a ContentType</rdfs:comment>
+    <rdfs:domain rdf:resource="Upload"/>
+    <rdfs:range rdf:resource="ContentType"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="openid-url">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>openid-url</rdfs:label>
+    <rdfs:comment>A User may have an openid-url represented as a uri</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-policy">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>has-policy</rdfs:label>
+    <rdfs:comment>A Contribution has a Policy for access rights management</rdfs:comment>
+    <rdfs:domain rdf:resource="Contribution"/>
+    <rdfs:range rdf:resource="&snarm;Policy"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-accepter">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>has-accepter</rdfs:label>
+    <rdfs:comment>A Request must have an accepter that can accept</rdfs:comment>
+    <rdfs:domain rdf:resource="Request"/>
+    <rdfs:range rdf:resource="Actor"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="reply-to">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>reply-to</rdfs:label>
+    <rdfs:comment>A Message may have a Message it is a reply-to</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="Message"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-requester">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>has-requester</rdfs:label>
+    <rdfs:comment>A Request must have a requester</rdfs:comment>
+    <rdfs:domain rdf:resource="Request"/>
+    <rdfs:range rdf:resource="Actor"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-friendship">
+    <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    <rdfs:label>has-friendship</rdfs:label>
+    <rdfs:comment>A User has a Friendship (with another User)</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="Friendship"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-membership">
+    <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    <rdfs:label>has-membership</rdfs:label>
+    <rdfs:comment>A User has a Membership (of a Group)</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="Membership"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="has-shared-item">
+    <rdfs:label>has-shared-item</rdfs:label>
+    <rdfs:comment>Contributions that are shared within a Group</rdfs:comment>
+    <rdfs:domain rdf:resource="Group"/>
+    <rdfs:range rdf:resource="Contribution"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="to">
+    <rdfs:label>to</rdfs:label>
+    <rdfs:comment>A Message is sent to a User</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="unconfirmed-email">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>unconfirmed-email</rdfs:label>
+    <rdfs:comment>An email that has yet to be confirmed</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="uri">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>uri</rdfs:label>
+    <rdfs:comment>The URI for some object</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+<!-- =============== Datatype Properties ============== -->
+
+  <owl:DatatypeProperty rdf:about="accepted-at">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>accepted-at</rdfs:label>
+    <rdfs:comment>A Request can be accepted-at a certain dateTime</rdfs:comment>
+    <rdfs:domain rdf:resource="Request"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="activated-at">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>activated-at</rdfs:label>
+    <rdfs:comment>A User account is a activated-at certain dateTime</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="country">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>country</rdfs:label>
+    <rdfs:comment>A User is based in a country</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="count">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>count</rdfs:label>
+    <rdfs:comment>Certain Annotations may be a count of something</rdfs:comment>
+    <rdfs:domain rdf:resource="Annotation"/>
+    <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="contact-details">
+    <rdfs:label>contact-details</rdfs:label>
+    <rdfs:comment>A User has contact-details</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="deleted-by-sender">
+    <rdfs:label>deleted-by-sender</rdfs:label>
+    <rdfs:comment>The sender has deleted this Message from their inbox</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="&xsd;boolean"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="deleted-by-recipient">
+    <rdfs:label>deleted-by-recipient</rdfs:label>
+    <rdfs:comment>The recipient has deleted this Message from their inbox</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="&xsd;boolean"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="email-confirmed-at">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>email-confirmed-at</rdfs:label>
+    <rdfs:comment>An email is confirmed at a certain dateTime</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="field">
+    <rdfs:label>field</rdfs:label>
+    <rdfs:comment>A User works in a field</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="filename">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>filename</rdfs:label>
+    <rdfs:comment>A File has a filename</rdfs:comment>
+    <rdfs:domain rdf:resource="Upload"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="interests">
+    <rdfs:label>interests</rdfs:label>
+    <rdfs:comment>A User's interests</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="is-current-version">
+    <rdfs:label>is-current-version</rdfs:label>
+    <rdfs:comment>A User's interests</rdfs:comment>
+    <rdfs:domain rdf:resource="Versionable"/>
+    <rdfs:range rdf:resource="&xsd;boolean"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="last-seen-at">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>last-seen-at</rdfs:label>
+    <rdfs:comment>The last time a User was seen</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="membership-policy">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label></rdfs:label>
+    <rdfs:comment>The policy for Users joining a Group (e.g. open, invite only, etc.)</rdfs:comment>
+    <rdfs:domain rdf:resource="Group"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="request-token">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>request-token</rdfs:label>
+    <rdfs:comment>Requests may have a request-token as a string</rdfs:comment>
+    <rdfs:domain rdf:resource="Request"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="occupation">
+    <rdfs:label>occupation</rdfs:label>
+    <rdfs:comment>A User has an occupation</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="openid-url">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>openid-url</rdfs:label>
+    <rdfs:comment>A User may have an openid-url represented as a uri</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="organisation">
+    <rdfs:label>organisation</rdfs:label>
+    <rdfs:comment>A User is part of an organisation</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="public-announcement">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>public-announcement</rdfs:label>
+    <rdfs:comment>Is the GroupAnnouncement viewable (public) to those outside the Group</rdfs:comment>
+    <rdfs:domain rdf:resource="GroupAnnouncement"/>
+    <rdfs:range rdf:resource="&xsd;boolean"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="read-at">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>read-at</rdfs:label>
+    <rdfs:comment>A Message is a read-at a particular dateTime</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="receive-notifications">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>receive-notifications</rdfs:label>
+    <rdfs:comment>Does the user receive-notifications</rdfs:comment>
+    <rdfs:domain rdf:resource="User"/>
+    <rdfs:range rdf:resource="&xsd;boolean"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="revision-comments">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>revision-comments</rdfs:label>
+    <rdfs:comment>Comments may be associated with a particular Version of something</rdfs:comment>
+    <rdfs:domain rdf:resource="Version"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="subject">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>subject</rdfs:label>
+    <rdfs:comment>A Message has a subject</rdfs:comment>
+    <rdfs:domain rdf:resource="Message"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="text">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>text</rdfs:label>
+    <rdfs:comment>A Submission has some text associated with it</rdfs:comment>
+    <rdfs:domain rdf:resource="Submission"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="username">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>username</rdfs:label>
+    <rdfs:comment>A User may have a username represented as a string</rdfs:comment>
+    <rdfs:range rdf:resource="&xsd;string"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="version-number">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:label>version-number</rdfs:label>
+    <rdfs:comment>A Version has a version-number</rdfs:comment>
+    <rdfs:domain rdf:resource="Version"/>
+    <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    <rdfs:isDefinedBy rdf:resource="&mebase;"/>
+  </owl:DatatypeProperty>
+
+
+</rdf:RDF>

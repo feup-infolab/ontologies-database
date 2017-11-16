@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://vocab.lenka.no/geo-deling">
+    <dcterms:title>Landinndelingen i Norge</dcterms:title>
+    <dcterms:description>Dette er et vokabular for administrativ inndeling av Norge, matrikkelen, steder og andre geografiske ting.</dcterms:description>
+    <dc:license>http://creativecommons.org/licenses/by/3.0/</dc:license>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-10-11</dcterms:modified>
+    <vann:preferredNamespaceUri>http://vocab.lenka.no/geo-deling#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>geo-deling</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://vocab.lenka.no/geo-deling.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-18</dcterms:created>
+    <dcterms:publisher>http://vocab.lenka.no/geo-deling#Universitetet%20i%20Oslo</dcterms:publisher>
+    <dcterms:partOf rdf:resource="http://vocab.lenka.no"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://vocab.lenka.no/geo-deling#Kjetil%20Kjernsmo"/>
+  </owl:Ontology>
+
+  <rdf:Description rdf:about="http://vocab.lenka.no/geo-deling#ttl">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://vocab.lenka.no/geo-deling#rdf">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+  </rdf:Description>
+
+  <foaf:Person rdf:about="http://vocab.lenka.no/geo-deling#Kjetil%20Kjernsmo">
+    <foaf:name>Kjetil Kjernsmo</foaf:name>
+    <foaf:homepage rdf:resource="http://www.kjetil.kjernsmo.net/"/>
+  </foaf:Person>
+
+  <dcterms:Agent rdf:about="http://vocab.lenka.no/geo-deling#Universitetet%20i%20Oslo">
+    <foaf:member rdf:resource="http://vocab.lenka.no/geo-deling#Kjetil%20Kjernsmo"/>
+    <foaf:name>Universitetet i Oslo</foaf:name>
+    <foaf:homepage rdf:resource="http://www.ifi.uio.no/"/>
+  </dcterms:Agent>
+
+  <rdfs:Class rdf:about="http://vocab.lenka.no/geo-deling#Kommune">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Kommune</rdfs:label>
+    <rdfs:comment>En kommune er et område som utgjør en andreordens politisk og administrativ enhet.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.lenka.no/geo-deling#Sted">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Sted</rdfs:label>
+    <rdfs:comment>Et sted er et avgrenset område.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.lenka.no/geo-deling#Kommunesenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Kommunesenter</rdfs:label>
+    <rdfs:comment>Et kommunesenter er et sted som tjener som administrativt senter for en kommune.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocab.lenka.no/geo-deling#Sted"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.lenka.no/geo-deling#Fylke">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Fylke</rdfs:label>
+    <rdfs:comment>Et fylke er et område som utgjør en førsteordens politisk og administrativ enhet.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocab.lenka.no/geo-deling#Grunneiendom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Grunneiendom</rdfs:label>
+    <rdfs:comment>Grunneiendom er en geografisk del av landet som har et eget eierforhold.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#fylkenr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Fylkenummer</rdfs:label>
+    <rdfs:comment>Fylkenummer er et tosifret nummer (eks.: 01) som er unikt for hvert fylke i Norge. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Fylke"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#kommunenr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Kommunenummer </rdfs:label>
+    <rdfs:comment>Kommunenummer er et firesifret nummer (eks.: 0101) som er unikt for hver kommune i Norge. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Kommune"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#gnr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Gårdsnummer</rdfs:label>
+    <rdfs:comment>Gårdsnummer er nummeret på en gårdsenhet i matrikkelen og er unikt innenfor hver kommune. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Grunneiendom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#bnr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Bruksnummer</rdfs:label>
+    <rdfs:comment>Et bruksnummer er en del av en enhet i det norske eiendomsregisteret, matrikkelen.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Grunneiendom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#fnr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Festenummer</rdfs:label>
+    <rdfs:comment>Festenummeret er et nummer på et leid grunneiendom i matrikkelen.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Grunneiendom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#snr">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>Seksjonsnummer</rdfs:label>
+    <rdfs:comment>Et seksjonsnummer er et nummer i matrikkelen som benyttes der en eiendom består av flere selvstendige eierenheter som skal selges og pantsettes hver for seg.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Grunneiendom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#eier">
+    <rdfs:label>Eier</rdfs:label>
+    <rdfs:comment>Indikerer et eierforhold mellom en agent og en grunneiendom.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:range rdf:resource="http://vocab.lenka.no/geo-deling#Grunneiendom"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#eid-av">
+    <rdfs:label>Eid av</rdfs:label>
+    <rdfs:comment>Indikerer at en grunneiendom er eid av en agent.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocab.lenka.no/geo-deling#senter">
+    <rdfs:label>Senter</rdfs:label>
+    <rdfs:comment>For å linke en kommune med stedet som er kommunens senter.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocab.lenka.no/geo-deling#Kommune"/>
+    <rdfs:range rdf:resource="http://vocab.lenka.no/geo-deling#Kommunesenter"/>
+  </rdf:Property>
+
+</rdf:RDF>

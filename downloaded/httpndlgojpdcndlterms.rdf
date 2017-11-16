@@ -1,0 +1,1424 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- 
+   
+  RDF Schema declaration for NDL Metadata Terms
+  This Version
+  Created:  2010-06-21
+  Modified:  2011-12-01
+  Creator:  National Diet Library in Japan
+  
+ -->
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdfns 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY rdfsns 'http://www.w3.org/2000/01/rdf-schema#'>
+    <!ENTITY foafns 'http://xmlns.com/foaf/0.1/'>
+    <!ENTITY dcns 'http://purl.org/dc/elements/1.1/'>
+    <!ENTITY dctermsns 'http://purl.org/dc/terms/'>
+    <!ENTITY dctypens 'http://purl.org/dc/dcmitype/'>
+    <!ENTITY dcamns 'http://purl.org/dc/dcam/'>
+    <!ENTITY dcndlns 'http://ndl.go.jp/dcndl/terms/'>
+]>
+<rdf:RDF 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:dcam="http://purl.org/dc/dcam/"
+         xmlns:dcndl="http://ndl.go.jp/dcndl/terms/">
+
+
+<!-- 0.　NDL Metadata Termsそのものの定義 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/">
+  <dcterms:title>RDF Schemaによって定義したNDL Metadata Termsの語彙</dcterms:title>
+  <rdfs:comment>DC-NDLに関するお問い合わせは、standardization@ndl.go.jpまでお願いいたします。</rdfs:comment>
+  <dcterms:creator>
+   <foaf:Agent>
+    <rdf:value>国立国会図書館</rdf:value>
+    <dcndl:transcription>コクリツ　コッカイ　トショカン</dcndl:transcription>
+   </foaf:Agent>
+  </dcterms:creator>
+  <dcterms:issued>2010-06-21</dcterms:issued>
+  <dcterms:modified>2011-12-01</dcterms:modified>
+ </rdf:Description>
+
+
+<!-- 1.　標準的なプロパティ -->
+<!-- 1.1　情報資源の記述に使用する語彙 -->
+<!-- 1.1.1　複数の記述に共通して使用する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/transcription">
+ <rdfs:label>Transcription</rdfs:label>
+ <rdfs:comment>読み又は翻字形</rdfs:comment>
+ <dcterms:description>Title、Creator等の値とセットで表現できる場合に使用する。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.1.2　タイトルに関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/alternative">
+ <rdfs:label>Alternative</rdfs:label>
+ <rdfs:comment>別タイトル</rdfs:comment>
+ <dcterms:description>タイトルの別言語又は別文字の表示形等を収める。2010年10月に行われたDCMI Metadata Termsの改訂において、dcterms:alternativeの値域がリテラルに制約された。値域の制約をしない、別タイトルの記述語彙として当該語彙を定義する。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesTitle">
+ <rdfs:label>Series Title</rdfs:label>
+ <rdfs:comment>シリーズタイトル</rdfs:comment>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesAlternative">
+ <rdfs:label>Series Alternative</rdfs:label>
+ <rdfs:comment>別シリーズタイトル</rdfs:comment>
+ <dcterms:description>シリーズタイトルの別言語又は別文字の表示形を収める。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/partInformation">
+ <rdfs:label>Part Information</rdfs:label>
+ <rdfs:comment>単行書の構成レベルに相当する情報</rdfs:comment>
+ <dcterms:description>内容細目のタイトル及び責任表示をセットで記録する場合に使用する。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/partTitle">
+ <rdfs:label>Part Title</rdfs:label>
+ <rdfs:comment>単行書の構成レベルに相当する各著作のタイトル</rdfs:comment>
+ <dcterms:description>内容細目のタイトルと責任表示をセットでdcndl:partInformationとして記録せず、個別に記録する場合、内容細目のタイトルの表現に当該語彙を使用する。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volumeTitle">
+ <rdfs:label>Volume Title</rdfs:label>
+ <rdfs:comment>多巻ものの各巻タイトル又は逐次刊行物の部編名</rdfs:comment>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volume">
+ <rdfs:label>Volume</rdfs:label>
+ <rdfs:comment>巻次又は部編番号</rdfs:comment>
+ <dcterms:description>PRISM（Publishing Requirements for Industry Standard Metadata）のプロパティprism:volumeでは、プロパティそのものにURIが付与されていないため、独自に設定した。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/alternativeVolume">
+ <rdfs:label>Alternative Volume</rdfs:label>
+ <rdfs:comment>別タイトル部編番号</rdfs:comment>
+ <dcterms:description>Alternative Titleを記録する際、Alternative Titleの言語と同一の部編番号表記があればそれを収める。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/alternativeVolumeTitle">
+ <rdfs:label>Alternative Volume Title</rdfs:label>
+ <rdfs:comment>別タイトル部編名</rdfs:comment>
+ <dcterms:description>Alternative Titleを記録する際、Alternative Titleの言語と同一の部編名表記があればそれを収める。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/uniformTitle">
+ <rdfs:label>Uniform Title</rdfs:label>
+ <rdfs:comment>統一タイトル</rdfs:comment>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.1.3　作成者に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/creatorAlternative">
+ <rdfs:label>Creator Alternative</rdfs:label>
+ <rdfs:comment>Creatorの別名又は異なる形</rdfs:comment>
+ <dcterms:description>URIを持つ場合は、一律DCTERMS Creatorに収め、対象リソースへのURI参照を行う。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesCreator">
+ <rdfs:label>Series Creator</rdfs:label>
+ <rdfs:comment>当該情報資源が属するシリーズに対し著作責任を持つ実体</rdfs:comment>
+ <dcterms:description>URIを持つ場合は、一律DCTERMS Creatorに収め、対象リソースへのURI参照を行う。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/partCreator">
+ <rdfs:label>Part Creator</rdfs:label>
+ <rdfs:comment>単行書の構成レベルの各著作に著作責任を持つ実体</rdfs:comment>
+ <dcterms:description>内容細目のタイトルと責任表示をセットでdcndl:partInformationに記録せず、個別に記録する場合、内容細目の責任表示の表現に当該語彙を使用する。
+ただし、URIを持つ場合は、一律DCTERMS Creatorに収め、対象リソースへのURI参照を行う。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volumeCreator">
+ <rdfs:label>Volume Creator</rdfs:label>
+ <rdfs:comment>当該情報資源の当該する巻又は部編に対し著作責任を持つ実体</rdfs:comment>
+ <dcterms:description>URIを持つ場合は、一律DCTERMS Creatorに収め、対象リソースへのURI参照を行う。</dcterms:description>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<!-- 1.1.4　版に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/edition">
+ <rdfs:label>Edition</rdfs:label>
+ <rdfs:comment>当該情報資源が属する版</rdfs:comment>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/editionCreator">
+ <rdfs:label>Edition Creator</rdfs:label>
+ <rdfs:comment>当該情報資源が属する版に対し著作責任を持つ実体</rdfs:comment>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.1.5　出版に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/publicationPlace">
+ <rdfs:label>Publication Place</rdfs:label>
+ <rdfs:comment>出版地・頒布地</rdfs:comment>
+ <dcterms:description>記述対象とする情報資源の出版地・頒布地を記述する場合に使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.1.6　日付に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/dateCaptured">
+ <rdfs:label>Date Captured</rdfs:label>
+ <rdfs:comment>当該情報資源を採取・保存した日</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.1.7　言語に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/originalLanguage">
+ <rdfs:label>Original Language</rdfs:label>
+ <rdfs:comment>原文の言語</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/language"/>
+ <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.1.8　形態等に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/materialType">
+ <rdfs:label>Material Type</rdfs:label>
+ <rdfs:comment>資料種別</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+ <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/price">
+ <rdfs:label>Price</rdfs:label>
+ <rdfs:comment>販売価格</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.1.9　識別に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/sourceIdentifier">
+ <rdfs:label>Source Identifier</rdfs:label>
+ <rdfs:comment>原資料の識別子</rdfs:comment>
+ <dcterms:description>当該情報資源が複製資料である場合に、原資料の識別子をここに収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.1.10　逐次刊行物の特性に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/publicationPeriodicity">
+ <rdfs:label>Publication Periodicity</rdfs:label>
+ <rdfs:comment>逐次刊行物の刊行頻度</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <rdfs:range rdf:resource="http://purl.org/dc/terms/Frequency"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/publicationStatus">
+ <rdfs:label>Publication Status</rdfs:label>
+ <rdfs:comment>逐次刊行物の刊行状態</rdfs:comment>
+ <dcterms:description>継続刊行中、刊行終了等、逐次刊行物の刊行状態に関する情報をここに収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volumeRange">
+ <rdfs:label>Volume Range</rdfs:label>
+ <rdfs:comment>逐次刊行物の初号から終号までの巻次及び年月次</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<!-- 1.1.11　博士論文の特性に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/degreeName">
+ <rdfs:label>Degree Name</rdfs:label>
+ <rdfs:comment>博士論文の学位分野名</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/dissertationNumber">
+ <rdfs:label>Dissertation Number</rdfs:label>
+ <rdfs:comment>博士論文の報告番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/dateGranted">
+ <rdfs:label>Date Granted</rdfs:label>
+ <rdfs:comment>当該情報資源の作成者が博士号を授与された年月日</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/degreeGrantor">
+ <rdfs:label>Degree Grantor</rdfs:label>
+ <rdfs:comment>当該情報資源の作成者に博士号を授与した大学名</rdfs:comment>
+ <dcterms:description>博士号の授与大学名・大学コード等を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.1.12　雑誌記事の特性に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/issue">
+ <rdfs:label>Issue</rdfs:label>
+ <rdfs:comment>当該情報資源が属する刊行物の通号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/number">
+ <rdfs:label>Number</rdfs:label>
+ <rdfs:comment>当該情報資源が属する刊行物の号</rdfs:comment>
+ <dcterms:description>PRISM（Publishing Requirements for Industry Standard Metadata）のプロパティprism:volumeでは、プロパティそのものにURIが付与されていないため、独自に新設した。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/publicationName">
+ <rdfs:label>Publication Name</rdfs:label>
+ <rdfs:comment>当該情報資源の属する刊行物名</rdfs:comment>
+ <dcterms:description>当該情報資源が雑誌記事である場合、雑誌名をここに収める。
+PRISM（Publishing Requirements for Industry Standard Metadata）のプロパティprism:volumeでは、プロパティそのものにURIが付与されていないため、独自に新設した。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/publicationVolume">
+ <rdfs:label>Publication Volume</rdfs:label>
+ <rdfs:comment>当該情報資源の属する刊行物の巻</rdfs:comment>
+ <dcterms:description>当該情報資源が雑誌記事である場合、属する刊行物の巻をここに収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/pageRange">
+ <rdfs:label>Page Range</rdfs:label>
+ <rdfs:comment>当該情報資源が掲載されているページの範囲</rdfs:comment>
+ <dcterms:description>PRISM（Publishing Requirements for Industry Standard Metadata）のプロパティprism:volumeでは、プロパティそのものにURIが付与されていないため、独自に新設した。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.1.13　デジタル化した資料の特性に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/digitizedPublisher">
+ <rdfs:label>Digitized Publisher</rdfs:label>
+ <rdfs:comment>当該情報資源をデジタル化した実体</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/dateDigitized">
+ <rdfs:label>Date Digitized</rdfs:label>
+ <rdfs:comment>当該情報資源をデジタル化した日付</rdfs:comment>
+ <dcterms:description>非デジタル資料をデジタル化した年月日を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.1.14 情報資源の利用・入手に関する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/availability">
+ <rdfs:label>Availability</rdfs:label>
+ <rdfs:comment>当該情報資源の二次的・副次的な入手可能性</rdfs:comment>
+ <dcterms:description>「ＩＬＬ可」、「複写申込み可」、「オンライン利用可」等の情報を収める。情報資源そのものへのアクセス制限、プライバシーやセキュリティ等のポリシーはDublin Core Metadata TermsのAccess Rightsを使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.1.15　その他の語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/record">
+ <rdfs:label>Record</rdfs:label>
+ <rdfs:comment>参照先に関係のあるメタデータを持つ</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+
+<!-- 1.2.　情報資源の個体情報の記述に使用する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/holdingAgent">
+ <rdfs:label>Holding Agent</rdfs:label>
+ <rdfs:comment>当該情報資源の保有者</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/callNumber">
+ <rdfs:label>Call Number</rdfs:label>
+ <rdfs:comment>請求記号</rdfs:comment>
+ <dcterms:description>当該情報資源を保有する所蔵館における正請求記号を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/localCallNumber">
+ <rdfs:label>Local Call Number</rdfs:label>
+ <rdfs:comment>請求記号</rdfs:comment>
+ <dcterms:description>当該情報資源を保有する所蔵館におけるローカル請求記号を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+ <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/holdingIssues">
+ <rdfs:label>Holding Issues</rdfs:label>
+ <rdfs:comment>所蔵する逐次刊行物の巻次・年月次</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/absentIssues">
+ <rdfs:label>Absent Issues</rdfs:label>
+ <rdfs:comment>所蔵する逐次刊行物の欠号に関する情報</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+<!-- 1.3.　情報資源の管理情報の記述に使用する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/catalogingRule">
+ <rdfs:label>Cataloging Rule</rdfs:label>
+ <rdfs:comment>当該情報資源のメタデータ記述に採用した目録規則</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/recordStatus">
+ <rdfs:label>Record Status</rdfs:label>
+ <rdfs:comment>当該レコードの状態</rdfs:comment>
+ <dcterms:description>新規・更新等のレコードの状態に関する情報を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+ 
+<!-- 1.4　個人・団体等の実体の記述に使用する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/location">
+ <rdfs:label>Location</rdfs:label>
+ <rdfs:comment>出版者の所在に関する情報</rdfs:comment>
+ <dcterms:description>出版者を記述対象とし、その出版者の所在に関する情報を記録する場合に、当該語彙を使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent"/>
+ <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+
+ 
+<!-- 2.　拡張的なプロパティ -->
+<!-- 2.1　情報資源の記述に使用する語彙 -->
+<!-- 2.1.1　RDF形式で表現できない場合の語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/titleTranscription">
+ <rdfs:label>Title Transcription</rdfs:label>
+ <rdfs:comment>Titleの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/alternativeTranscription">
+ <rdfs:label>Alternative Transcription</rdfs:label>
+ <rdfs:comment>Alternativeの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesTitleTranscription">
+ <rdfs:label>Series Title Transcription</rdfs:label>
+ <rdfs:comment>Series Titleの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesAlternativeTranscription">
+ <rdfs:label>Series Alternative Transcription</rdfs:label>
+ <rdfs:comment>Series Alternativeの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesVolume">
+ <rdfs:label>Series Volume</rdfs:label>
+ <rdfs:comment>シリーズの巻次又は部編番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesVolumeTranscription">
+ <rdfs:label>Series Volume Transcription</rdfs:label>
+ <rdfs:comment>Series Volumeの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesVolumeTitle">
+ <rdfs:label>Series Volume Title</rdfs:label>
+ <rdfs:comment>シリーズの部編名</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesVolumeTitleTranscription">
+ <rdfs:label>Series Volume Title Transcription</rdfs:label>
+ <rdfs:comment>Series Volume Titleの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/partTitleTranscription">
+ <rdfs:label>Part Title Transcription</rdfs:label>
+ <rdfs:comment>Part Titleの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volumeTitleTranscription">
+ <rdfs:label>Volume Title Transcription</rdfs:label>
+ <rdfs:comment>Volume Titleの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volumeTranscription">
+ <rdfs:label>Volume Transcription</rdfs:label>
+ <rdfs:comment>Volumeの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/alternativeVolumeTranscription">
+ <rdfs:label>Alternative Volume Transcription</rdfs:label>
+ <rdfs:comment>Alternative Volumeの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/alternativeVolumeTitleTranscription">
+ <rdfs:label>Alternative Volume Title Transcription</rdfs:label>
+ <rdfs:comment>Alternative Volume Titleの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/creatorTranscription">
+ <rdfs:label>Creator Transcription</rdfs:label>
+ <rdfs:comment>Creatorの読み又は翻字形</rdfs:comment>
+ <dcterms:description>主に、著者標目の読みを表現する際に用いる。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/creatorAlternativeTranscription">
+ <rdfs:label>Creator Alternative Transcription</rdfs:label>
+ <rdfs:comment>Creator Alternativeの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/seriesCreatorTranscription">
+ <rdfs:label>Series Creator Transcription</rdfs:label>
+ <rdfs:comment>Series Creatorの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/partCreatorTranscription">
+ <rdfs:label>Part Creator Transcription</rdfs:label>
+ <rdfs:comment>Part Creatorの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/volumeCreatorTranscription">
+ <rdfs:label>Volume Creator Transcription</rdfs:label>
+ <rdfs:comment>Volume Creatorの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/editionCreatorTranscription">
+ <rdfs:label>Edition Creator Transcription</rdfs:label>
+ <rdfs:comment>Edition Creatorの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/contributorTranscription">
+ <rdfs:label>Contributor Transcription</rdfs:label>
+ <rdfs:comment>Contributorの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/publisherTranscription">
+ <rdfs:label>Publisher Transcription</rdfs:label>
+ <rdfs:comment>Publisherの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/subjectTranscription">
+ <rdfs:label>Subject Transcription</rdfs:label>
+ <rdfs:comment>Subjectの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/degreeGrantorTranscription">
+ <rdfs:label>Degree Grantor Transcription</rdfs:label>
+ <rdfs:comment>Degree Grantorの読み又は翻字形</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+
+ 
+<!-- 2.2. 情報資源の管理情報の記述に使用する語彙 -->
+<!-- 2.2.1　NDLのシステム要件による語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/bibRecordCategory">
+ <rdfs:label>Bibliographic Record Category</rdfs:label>
+ <rdfs:comment>メタデータのハーベスト元のデータベースに関する情報</rdfs:comment>
+ <dcterms:description>メタデータのハーベスト元であるデータベースに付与したリポジトリ番号等を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/bibRecordSubCategory">
+ <rdfs:label>Bibliographic Record Sub Category</rdfs:label>
+ <rdfs:comment>dcndl:bibRecordCategoryの下位区分にあたる情報</rdfs:comment>
+ <dcterms:description>メタデータのハーベスト元であるデータベースに付与したリポジトリ番号の下位に有用な情報がある場合、コード値等を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/cataloguingStatus">
+ <rdfs:label>Cataloguing Status</rdfs:label>
+ <rdfs:comment>書誌レコード作成のステータス</rdfs:comment>
+ <dcterms:description>書誌レコード作成の作業段階を示すコード値を収める。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+ 
+<!-- 2.3.　典拠情報の記述に使用する語彙 -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/previousName">
+ <rdfs:label>Previous Name</rdfs:label>
+ <rdfs:comment>をも見よ参照（旧称）</rdfs:comment>
+ <dcterms:description>当該典拠情報に対し、リンク先典拠情報の名称が「旧称」に相当する場合、「をも見よ参照」の記述に当該語彙を使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/laterName">
+ <rdfs:label>Later Name</rdfs:label>
+ <rdfs:comment>をも見よ参照（新称）</rdfs:comment>
+ <dcterms:description>当該典拠情報に対し、リンク先典拠情報の名称が「新称」に相当する場合、「をも見よ参照」の記述に当該語彙を使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/realName">
+ <rdfs:label>Real Name</rdfs:label>
+ <rdfs:comment>をも見よ参照（本名）</rdfs:comment>
+ <dcterms:description>当該典拠情報に対し、リンク先典拠情報の名称が「本名」に相当する場合、「をも見よ参照」の記述に当該語彙を使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/anotherName">
+ <rdfs:label>Another Name</rdfs:label>
+ <rdfs:comment>をも見よ参照（別名）</rdfs:comment>
+ <dcterms:description>当該典拠情報に対し、リンク先典拠情報の名称が「別名」に相当する場合、「をも見よ参照」の記述に当該語彙を使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+ <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+
+ 
+<!-- 3.　語彙符号化スキーム -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/BSH">
+ <rdfs:label>BSH</rdfs:label>
+ <rdfs:comment>基本件名標目表</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.jla.or.jp/bsh/index.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/GHQSCAP">
+ <rdfs:label>GHQSCAP</rdfs:label>
+ <rdfs:comment>GHQ/SCAP分類表</rdfs:comment>
+ <dcterms:description>国立国会図書館が、米国国立公文書館所蔵の連合国最高司令官総司令部（GHQ/SCAP）資料を収集するに当たり作成した分類表。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/MCJ">
+ <rdfs:label>MCJ</rdfs:label>
+ <rdfs:comment>MCJ地理コード</rdfs:comment>
+ <dcterms:description>国立国会図書館が、米海兵隊歴史センター所蔵の太平洋戦争関係資料を収集するに当たり作成した分類表。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDC">
+ <rdfs:label>NDC</rdfs:label>
+ <rdfs:comment>日本十進分類法</rdfs:comment>
+ <dcterms:description>日本十進分類法新訂7版以前、もしくは版が明確でない分類記号の表現に用いる。</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.jla.or.jp/bunrui/index.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDC8">
+ <rdfs:label>NDC(8)</rdfs:label>
+ <rdfs:comment>日本十進分類法新訂8版</rdfs:comment>
+ <dcterms:description>日本十進分類法新訂8版の分類記号の表現に用いる。</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.jla.or.jp/bunrui/index.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDLC">
+ <rdfs:label>NDLC</rdfs:label>
+ <rdfs:comment>国立国会図書館分類表</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://ndl.go.jp/jp/library/data/ndl_ndlc.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDLNA">
+ <rdfs:label>NDLNA</rdfs:label>
+ <rdfs:comment>国立国会図書館名称典拠（個人名、団体名、家族名、統一タイトル及び地名）</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://id.ndl.go.jp/auth/ndla"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ndlsh">
+ <rdfs:label>NDLSH</rdfs:label>
+ <rdfs:comment>国立国会図書館件名標目表</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://ndl.go.jp/jp/library/data/ndl_ndlsh.html"/>
+ <rdfs:seeAlso rdf:resource="http://id.ndl.go.jp/auth/ndla"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+ <dcterms:modified>2011-12-01</dcterms:modified>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDLType">
+ <rdfs:label>NDL Type</rdfs:label>
+ <rdfs:comment>NDL Typeで規定した情報資源の種別</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.ndl.go.jp/jp/library/data/meta.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NIISubject">
+ <rdfs:label>NII Subject</rdfs:label>
+ <rdfs:comment>国立情報学研究所メタデータ主題語彙集</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.nii.ac.jp/metadata/manual/NII-category.pdf"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NIIType">
+ <rdfs:label>NII Type</rdfs:label>
+ <rdfs:comment>国立情報学研究所メタデータ主題語彙集（資源タイプ）</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.nii.ac.jp/irp/archive/system/pdf/type_NII.pdf"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/USCAR">
+ <rdfs:label>USCAR</rdfs:label>
+ <rdfs:comment>USCAR資料分類表</rdfs:comment>
+ <dcterms:description>国立国会図書館が、米国国立公文書館所蔵の琉球列島米国民政府（USCAR）資料を収集するに当たり作成した分類表。</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://opac.ndl.go.jp/help/internet/senryob_uscar.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<!-- 4.　構文符号化スキーム -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/BRNO">
+ <rdfs:label>Braille And Audio Book Union Catalogue NO</rdfs:label>
+ <rdfs:comment>点字図書・録音図書全国総合目録番号</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://opac.ndl.go.jp/help/internet/ohelp2.html#kobrbango"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/CODEN">
+ <rdfs:label>CODEN</rdfs:label>
+ <rdfs:comment>Code Designated</rdfs:comment>
+ <dcterms:description>主に自然科学系で使われる学術雑誌番号</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.astm.org/index.shtml"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/DOI">
+ <rdfs:label>DOI</rdfs:label>
+ <rdfs:comment>Digital Object Identifier</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.doi.org/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ErrorISBN">
+ <rdfs:label>Error ISBN</rdfs:label>
+ <rdfs:comment>ISBNエラーコード</rdfs:comment>
+ <dcterms:description>誤登録されたISBNを収める。</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.isbn-international.org/"/>
+ <rdfs:seeAlso rdf:resource="http://www.isbn-center.jp/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/GPOCN">
+ <rdfs:label>GPO Control Number</rdfs:label>
+ <rdfs:comment>GPO管理番号</rdfs:comment>
+ <dcterms:description>米国政府印刷局（Government Printing Office）での管理番号</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://catalog.gpo.gov/F?RN=594478277"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/GPOBibNO">
+ <rdfs:label>GPO Bibliographic Number</rdfs:label>
+ <rdfs:comment>GPO書誌番号</rdfs:comment>
+ <dcterms:description>米国政府印刷局（Government Printing Office）が付与した書誌番号</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://catalog.gpo.gov/F?RN=594478277"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/IncorrectISSN">
+ <rdfs:label>Incorrect ISSN</rdfs:label>
+ <rdfs:comment>ISSNエラーコード</rdfs:comment>
+ <dcterms:description>誤登録されたISSNを収める。</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.issn.org/"/>
+ <rdfs:seeAlso rdf:resource="http://www.ndl.go.jp/jp/aboutus/issn.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/IncorrectISSNL">
+ <rdfs:label>Incorrect ISSN-L</rdfs:label>
+ <rdfs:comment>ISSN-Lエラーコード</rdfs:comment>
+ <dcterms:description>誤登録されたISSN-Lを収める。</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.issn.org/"/>
+ <rdfs:seeAlso rdf:resource="http://www.ndl.go.jp/jp/aboutus/issn.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ICNO">
+ <rdfs:label>International Chart NO</rdfs:label>
+ <rdfs:comment>国際海図番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ISBN">
+ <rdfs:label>ISBN</rdfs:label>
+ <rdfs:comment>International Standard Book Number : 国際標準図書番号</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.isbn-international.org/"/>
+ <rdfs:seeAlso rdf:resource="http://www.isbn-center.jp/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ISIL">
+ <rdfs:label>ISIL</rdfs:label>
+ <rdfs:comment>International standard identifier for libraries and related organizations : 図書館及び関連組織のための国際標準識別子</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://biblstandard.dk/isil/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ISMN">
+ <rdfs:label>ISMN</rdfs:label>
+ <rdfs:comment>International Standard Music Number : 国際標準楽譜番号</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.ismn-international.org/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ISRN">
+ <rdfs:label>ISRN</rdfs:label>
+ <rdfs:comment>International Standard technical Report Number : 国際標準テクニカルリポート番号</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.iso.org/iso/catalogue_detail.htm?csnumber=18506"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ISSN">
+ <rdfs:label>ISSN</rdfs:label>
+ <rdfs:comment>International Standard Serial Number : 国際標準逐次刊行物番号</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.issn.org/"/>
+ <rdfs:seeAlso rdf:resource="http://www.ndl.go.jp/jp/aboutus/issn.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/ISSNL">
+ <rdfs:label>ISSN-L</rdfs:label>
+ <rdfs:comment>Linking ISSN</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.issn.org/"/>
+ <rdfs:seeAlso rdf:resource="http://www.ndl.go.jp/jp/aboutus/issn.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/JISX0304">
+ <rdfs:label>JIS X 0304</rdfs:label>
+ <rdfs:comment>国名コード</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.jisc.go.jp/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/JISX0402">
+ <rdfs:label>JIS X 0402</rdfs:label>
+ <rdfs:comment>全国地方公共団体コード（5桁）</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.jisc.go.jp/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/JISX0408">
+ <rdfs:label>JIS X 0408</rdfs:label>
+ <rdfs:comment>大学・高等専門学校コード</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.jisc.go.jp/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/JISX0410">
+ <rdfs:label>JIS X 0410</rdfs:label>
+ <rdfs:comment>標準地域メッシュコード</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.jisc.go.jp/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/JPNO">
+ <rdfs:label>JP Number</rdfs:label>
+ <rdfs:comment>日本全国書誌番号（JP番号）</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://ndl.go.jp/jp/publication/jnbwl/jnb_top.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2007-05-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/KAKENHINO">
+ <rdfs:label>KAKENHI Number</rdfs:label>
+ <rdfs:comment>文部科学省科学研究費補助金研究の課題番号</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.jsps.go.jp/j-grantsinaid/index.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/KNMARCNO">
+ <rdfs:label>KN MARC Number</rdfs:label>
+ <rdfs:comment>紀伊国屋MARC番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NCNO">
+ <rdfs:label>National Chart Number</rdfs:label>
+ <rdfs:comment>各国国内海図番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDLBibID">
+ <rdfs:label>NDL Bibliographic ID</rdfs:label>
+ <rdfs:comment>国立国会図書館書誌ID</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NDLJP">
+ <rdfs:label>NDLJP</rdfs:label>
+ <rdfs:comment>国立国会図書館で付与した永続的識別子</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NIIBibID">
+ <rdfs:label>NII Bib ID</rdfs:label>
+ <rdfs:comment>NACSIS-CAT書誌レコード番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/NSMARCNO">
+ <rdfs:label>NS-MARC Number</rdfs:label>
+ <rdfs:comment>日販MARC番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/OCLCNO">
+ <rdfs:label>OCLC Number</rdfs:label>
+ <rdfs:comment>OCLC番号</rdfs:comment>
+ <dcterms:description>OCLC（Online Computer Library Center）が付与した書誌番号</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/OPLMARCNO">
+ <rdfs:label>OPL-MARC Number</rdfs:label>
+ <rdfs:comment>大阪屋MARC番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/PBNO">
+ <rdfs:label>PBNO</rdfs:label>
+ <rdfs:comment>出版者番号（楽譜）</rdfs:comment>
+ <dcterms:description>楽譜出版者が付けた販売目録の楽譜番号</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/PLNO">
+ <rdfs:label>PLNO</rdfs:label>
+ <rdfs:comment>プレート番号（楽譜）</rdfs:comment>
+ <dcterms:description>楽譜の各ページ下欄外に表示されて、ある版の印刷に用いられた金属板を特定する番号</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/RIS502">
+ <rdfs:label>RIS 502</rdfs:label>
+ <rdfs:comment>レコード商品番号体系</rdfs:comment>
+ <dcterms:description>日本レコード協会が規定したレコード表示に関する商品番号体系</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.riaj.or.jp/issue/ris/pdf/ris502.pdf"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/RLINNO">
+ <rdfs:label>RLIN Number</rdfs:label>
+ <rdfs:comment>RLIN番号</rdfs:comment>
+ <dcterms:description>RLIN（Research Libraries Information Network）が付与した書誌番号</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/SICI">
+ <rdfs:label>SICI</rdfs:label>
+ <rdfs:comment>Serial Item and Contributor Identifier。雑誌記事の識別子。</rdfs:comment>
+ <rdfs:seeAlso rdf:resource="http://www.niso.org/standards/resources/Z39-56.pdf"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/somokuBibID">
+ <rdfs:label>Somoku BibID</rdfs:label>
+ <rdfs:comment>総合目録参加館における管理番号</rdfs:comment>
+ <dcterms:description>総合目録参加館の各館において一意に付与される管理番号の記述に使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/somokuSubID">
+ <rdfs:label>Somoku SubID</rdfs:label>
+ <rdfs:comment>総合目録参加館における図書登録番号</rdfs:comment>
+ <dcterms:description>参加館の各館において一意には付与されない図書登録番号の記述に使用する。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/StandardNO">
+ <rdfs:label>Standard Number</rdfs:label>
+ <rdfs:comment>規格番号</rdfs:comment>
+ <dcterms:description>ISOやJIS等で定められた規格番号を収める際に用いる。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/TRCMARCNO">
+ <rdfs:label>TRC MARC Number</rdfs:label>
+ <rdfs:comment>TRC MARC番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/TRNO">
+ <rdfs:label>TR Number</rdfs:label>
+ <rdfs:comment>テクニカルリポート番号</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/UKMARCNO">
+ <rdfs:label>UK MARC Number</rdfs:label>
+ <rdfs:comment>UK MARC番号</rdfs:comment>
+ <dcterms:description>英国図書館が付与した書誌番号</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.bl.uk/ukmarc/index.html"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/UNDS">
+ <rdfs:label>United Nations Document Symbol</rdfs:label>
+ <rdfs:comment>国際連合ドキュメント記号</rdfs:comment>
+ <dcterms:description>国際連合の資料に付与される記号、及びその他の国際機関の資料に付与される記号</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.un.org/Depts/dhl/resguide/symbol.htm"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/UNSN">
+ <rdfs:label>United Nations Sales Number</rdfs:label>
+ <rdfs:comment>国際連合セールス番号</rdfs:comment>
+ <dcterms:description>国際連合の市販用刊行物に付与される番号</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/USMARCNO">
+ <rdfs:label>US MARC Number</rdfs:label>
+ <rdfs:comment>US MARC番号</rdfs:comment>
+ <dcterms:description>米国議会図書館が付与した書誌番号</dcterms:description>
+ <rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/"/>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/UTMNO">
+ <rdfs:label>Universal Transverse Mercator Number</rdfs:label>
+ <rdfs:comment>ユニバーサル横メルカトル図法区画番号</rdfs:comment>
+ <dcterms:description>赤道を基準とし、緯度4度ごとに区切った緯度帯に、赤道側から高緯度側に向けて採番した番号、UTM図法の座標帯の番号等を組み合わせて、地形図の縮尺や範囲を示したもの。</dcterms:description>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+ <dcterms:created>2010-06-21</dcterms:created>
+</rdf:Description>
+
+<!-- 5.　クラス -->
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/BibAdminResource">
+ <rdfs:label>Bib Admin Resource</rdfs:label>
+ <rdfs:comment>管理情報のクラス</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+ <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/BibResource">
+ <rdfs:label>Bib Resource</rdfs:label>
+ <rdfs:comment>書誌情報のクラス</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+ <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://ndl.go.jp/dcndl/terms/Item">
+ <rdfs:label>Item</rdfs:label>
+ <rdfs:comment>個体情報のクラス</rdfs:comment>
+ <rdfs:isDefinedBy rdf:resource="http://ndl.go.jp/dcndl/terms/"/>
+ <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+ <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+ <dcterms:created>2011-12-01</dcterms:created>
+</rdf:Description>
+</rdf:RDF>
+

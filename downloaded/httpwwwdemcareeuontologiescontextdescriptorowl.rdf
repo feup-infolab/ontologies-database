@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ctxdesc "http://www.demcare.eu/ontologies/contextdescriptor.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.demcare.eu/ontologies/contextdescriptor.owl#"
+     xml:base="http://www.demcare.eu/ontologies/contextdescriptor.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ctxdesc="http://www.demcare.eu/ontologies/contextdescriptor.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:cc="http://creativecommons.org/ns#">
+    <owl:Ontology rdf:about="http://www.demcare.eu/ontologies/contextdescriptor.owl">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">1.0</owl:versionInfo>
+        <dc:date>2015-09-17</dc:date>
+        <rdfs:seeAlso>http://www.demcare.eu/</rdfs:seeAlso>
+        <dc:title xml:lang="en">Context Descriptor Pattern</dc:title>
+        <dc:creator xml:lang="en">Georgios Meditskos</dc:creator>
+        <dc:description xml:lang="en">OWL pattern for describing activity models as abstract dependencies among classes.</dc:description>
+        <rdfs:comment xml:lang="en">The ontology provides the vocabulary to annotate complex (high-level) activity classes with low-level observations for complex activity recognition.
+
+Documentation regarding the ontology vocabulary can be found at http://www.demcare.eu/ontologies/ctxdesc.html</rdfs:comment>
+        <dc:rights xml:lang="en">This ontology is licensed under Creative Commons CC BY 3.0 It is developed in the framework of the Dem@Care project (http://www.demcare.eu/) and supported by the Information Technologies Institute (http://www.iti.gr) of the Centre for Research and Technology Hellas.</dc:rights>
+        <vann:preferredNamespacePrefix xml:lang="en">ctxdesc</vann:preferredNamespacePrefix>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <owl:versionIRI rdf:resource="http://www.demcare.eu/ontologies/contextdescriptor.owl/1.0"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <dc:description rdf:resource="https://dl.dropboxusercontent.com/u/15715767/pattern.png"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/contextdescriptor.owl#dependency -->
+
+    <owl:ObjectProperty rdf:about="&ctxdesc;dependency">
+        <rdfs:label xml:lang="en">dependency</rdfs:label>
+        <rdfs:comment xml:lang="en">This property is used for denoting the dependencies of a particular ontology class.
+
+The model also allows annotated classes to inherit the context dependencies of the superclasses through property chain axiom (OWL 2 RL Profile).</rdfs:comment>
+        <rdfs:domain rdf:resource="&ctxdesc;ContextDescriptor"/>
+        <rdfs:seeAlso rdf:resource="&ctxdesc;ContextDescriptor"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+        <rdfs:range rdf:resource="&owl;Class"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ctxdesc;describes"/>
+            <rdf:Description rdf:about="&rdfs;subClassOf"/>
+            <rdf:Description rdf:about="&ctxdesc;isDescribedBy"/>
+            <rdf:Description rdf:about="&ctxdesc;dependency"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <rdfs:comment xml:lang="en">The model allows annotated classes to inherit the context dependencies of the superclasses through this property chain axiom.</rdfs:comment>
+        <owl:annotatedSource rdf:resource="&ctxdesc;dependency"/>
+        <owl:annotatedProperty rdf:resource="&owl;propertyChainAxiom"/>
+        <owl:annotatedTarget rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ctxdesc;describes"/>
+            <rdf:Description rdf:about="&rdfs;subClassOf"/>
+            <rdf:Description rdf:about="&ctxdesc;isDescribedBy"/>
+            <rdf:Description rdf:about="&ctxdesc;dependency"/>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/contextdescriptor.owl#describes -->
+
+    <owl:ObjectProperty rdf:about="&ctxdesc;describes">
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+        <rdfs:comment xml:lang="en">This property is used for defining the higher level class of the ContextDescriptor</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&ctxdesc;ContextDescriptor"/>
+        <rdfs:domain rdf:resource="&ctxdesc;ContextDescriptor"/>
+        <rdfs:seeAlso rdf:resource="&ctxdesc;isDescribedBy"/>
+        <owl:inverseOf rdf:resource="&ctxdesc;isDescribedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+        <rdfs:range rdf:resource="&owl;Class"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/contextdescriptor.owl#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="&ctxdesc;isDescribedBy">
+        <rdfs:label xml:lang="en">is described by</rdfs:label>
+        <rdfs:seeAlso rdf:resource="&ctxdesc;describes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="&rdfs;subClassOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/contextdescriptor.owl#threshold -->
+
+    <owl:DatatypeProperty rdf:about="&ctxdesc;threshold">
+        <rdfs:label xml:lang="en">threshold</rdfs:label>
+        <rdfs:comment xml:lang="en">This property can be used to assign a threshold to the context descriptor of a certain complex activity, specifying a minimum value of confidence (plausability).</rdfs:comment>
+        <rdfs:domain rdf:resource="&ctxdesc;ContextDescriptor"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.demcare.eu/ontologies/contextdescriptor.owl#ContextDescriptor -->
+
+    <owl:Class rdf:about="&ctxdesc;ContextDescriptor">
+        <rdfs:label xml:lang="en">Context Descriptor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ctxdesc;describes"/>
+                <owl:onClass rdf:resource="&owl;Class"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ctxdesc;threshold"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ctxdesc;dependency"/>
+                <owl:someValuesFrom rdf:resource="&owl;Class"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A ContextDescriptor instance is a container class that allows the definition of relationships (dependencies) among ontology classes. 
+
+The goal is to define relations among classes, therefore, the proposed ontology treats classes as instances, allowing property assertions to be made among domain concepts. Intuitively, the ontology can be thought of as a conceptual (meta) layer that can be placed on top of any domain activity ontology. This way, instances of the ContextDescriptor are used to link domain activities (describes property) with one or more lower-level conceptualisations through dependency property assertions.
+
+The pattern has been used for building human activity models by defining the dependencies between low-level observations and high-level activities. 
+
+For more details, please see the relevant paper: 
+Georgios Meditskos, Efstratios Kontopoulos, Ioannis Kompatsiaris, &quot;Knowledge-driven Activity Recognition and Segmentation Using Context Connections&quot;, International Semantic Web Conference (ISWC), pp. 260-275, Riva del Garda, Trento, Italy, 19-23 October 2014 </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Class -->
+
+    <owl:Class rdf:about="&owl;Class"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,886 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owlx="http://www.w3.org/2003/05/owl-xml"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:san="http://www.irit.fr/recherches/MELODI/ontologies/SAN#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:msm="http://iserve.kmi.open.ac.uk/ns/msm/msm-2014-09-03.rdf"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:ioto="https://www.irit.fr/recherches/MELODI/ontologies/IoT-O#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
+     xmlns:wsmo-lite="http://www.wsmo.org/ns/wsmo-lite#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:ruleml="http://www.w3.org/2003/11/ruleml"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:swrlx="http://www.w3.org/2003/11/swrlx#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:hrests="http://www.wsmo.org/ns/hrests#"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <Ontology rdf:about="https://www.irit.fr/recherches/MELODI/ontologies/IoT-O">
+        <imports rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm/msm-2014-09-03.rdf"/>
+        <imports rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/SAN"/>
+        <imports rdf:resource="http://elite.polito.it/ontologies/poweront.owl"/>
+        <imports rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle"/>
+        <vann:preferredNamespaceURI>http://www.irit.fr/recherches/MELODI/ontologies/IoT-O</vann:preferredNamespaceURI>
+        <dc:title>IoT-O</dc:title>
+        <voaf:extends rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/SAN"/>
+        <voaf:extends rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm/msm-2014-09-03.rdf"/>
+        <terms:issued>2015-02-20</terms:issued>
+        <versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1.2</versionInfo>
+        <voaf:extends rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">Release note : added the raw value representation</rdfs:comment>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#hernandez"/>
+        <dc:publisher>LAAS-CNRS (https://www.laas.fr)</dc:publisher>
+        <foaf:primaryTopic>IoT</foaf:primaryTopic>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#drira"/>
+        <dc:publisher>IRIT (https://www.irit.fr/)</dc:publisher>
+        <dc:description>
+		IoT-O is a core domain Internet of Things ontology. It is intended to model horizontal knowledge about IoT systems and applications, and to be extended with vertical, application specific knowledge.
+It is constituted of different modules :
+ - A sensing module, based on W3C&apos;s SSN (http://purl.oclc.org/NET/ssnx/ssn)
+ - An acting module, based on SAN (http://www.irit.fr/recherches/MELODI/ontologies/SAN)
+ - A service module, based on MSM (http://iserve.kmi.open.ac.uk/ns/msm/msm-2014-09-03.rdf) and hRest (http://www.wsmo.org/ns/hrests)
+ - A lifecycle module, based on a lifecycle vocabulary (http://vocab.org/lifecycle/schema-20080603.rdf) and an iot-specific extension (http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle)
+ - An energy module, based on powerOnt (ttp://elite.polito.it/ontologies/poweront.owl)
+
+IoT-O developping team also contributes to the oneM2M IoT interoperability standard.</dc:description>
+		<rdfs:comment>There are currently issues with the DUL namespace (http://www.ontologydesignpatterns.org/ont/dul/DUL.owl), which is no longer dereferencable. It is however referenced by SSN, which is out of our control. In order to enforce consistency and to allow reasoning to happen successfully, we removed the import of SSN and DUL. The concepts from these ontologies are still referenced, but it is up to the users of IoT-O to import these ontologies as a whole if required.
+</rdfs:comment>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#ben_alaya"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016-06-29</terms:modified>
+        <dc:creator>Nicolas Seydoux, Mahdi Ben Alaya, Khalil Drira, Nathalie Hernandez, Thierry Monteil</dc:creator>
+        <voaf:extends rdf:resource="http://elite.polito.it/ontologies/poweront.owl"/>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#monteil"/>
+        <voaf:extends rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+        <dc:creator rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/contributors#seydoux"/>
+        <vann:preferredNamespacePrefix>ioto</vann:preferredNamespacePrefix>
+    </Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#hasInput -->
+
+    <ObjectProperty rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasInput"/>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#hasOperation -->
+
+    <ObjectProperty rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation"/>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#hasOutput -->
+
+    <ObjectProperty rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput"/>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#getsFeedbackFrom -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#getsFeedbackFrom">
+        <inverseOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#providesFeedbackTo"/>
+        <rdfs:domain rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ControlledSystem"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:comment>Relation between a controlled system and the entities that provide it with a feedback about its action, usually sensors.</rdfs:comment>
+        <rdfs:label>gets feedback from</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#grounds -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#grounds">
+        <inverseOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isGroundedBy"/>
+        <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:comment>Relationship between a Situation and its concrete implementation. For instance, an Operation can ground an Observation</rdfs:comment>
+        <rdfs:label>grounds</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasFeatureOfInterest -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasFeatureOfInterest">
+        <inverseOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:comment>Relationship between a Thing and a property of the environment. In a cyber-physical system, devices and software agents may have one to many feature of interest from the environment. This feature can be a property, another device, a person...</rdfs:comment>
+        <rdfs:label>has feature of interest</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasImpact -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasImpact">
+        <inverseOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isImpactOf"/>
+        <rdfs:domain rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation"/>
+        <rdfs:range rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ImpactOnProperty"/>
+        <rdfs:comment>Relationship between an operation and its impact on a property</rdfs:comment>
+        <rdfs:label>has impact</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasImpactonProperty -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasImpactonProperty">
+        <inverseOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#propertyIsImpactedBy"/>
+        <rdfs:domain rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ImpactOnProperty"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:comment>Relationship between an impact and the impacted property</rdfs:comment>
+        <rdfs:label>on property</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasRelationshipWithProperty -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasRelationshipWithProperty">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+        <rdfs:comment>Generic property that marks the relationship between some entity and some ssn:Property. Dependant on context, it can be sensing, acting or else. Useful to descrie a generic service offered by a complex system that aggregates both sensors and actuators.</rdfs:comment>
+        <rdfs:label>has relationship with property</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasService -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasService">
+        <inverseOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isServiceOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service"/>
+        <rdfs:comment>Relationship between an Entity and a service that is accessible through it.</rdfs:comment>
+        <rdfs:label>has service</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isFeatureOfInterestOf -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isFeatureOfInterestOf">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing"/>
+        <rdfs:comment>Indicates that the property is the feature of interest of some entity of an IoT system, that can measure it/act upon it.</rdfs:comment>
+        <rdfs:label>is feature of interest for</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isGroundedBy -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isGroundedBy">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/SAN#Actuation"/>
+                    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:comment>Inverse of grounds</rdfs:comment>
+        <rdfs:label>is grounded by</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isImpactOf -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isImpactOf">
+        <rdfs:label>is impact of</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isInputMessageOf -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isInputMessageOf">
+        <inverseOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#hasInputMessage"/>
+        <rdfs:label>is input message of</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isServiceOf -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#isServiceOf">
+        <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>Relationship between a service and an entity that accesses it.</rdfs:comment>
+        <rdfs:label>is service of</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#propertyIsImpactedBy -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#propertyIsImpactedBy">
+        <rdfs:label>property impacted by</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#providesFeedbackTo -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#providesFeedbackTo">
+        <rdfs:domain rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:range rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ControlledSystem"/>
+        <rdfs:comment>Relationship between an entity that provides informations to a system and this system, that interprets these informations as a feedback of its action.</rdfs:comment>
+        <rdfs:label>provides feedback to</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/SAN#impactsState -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/SAN#impactsState">
+        <rdfs:range rdf:resource="http://purl.org/vocab/lifecycle/schema#State"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy -->
+
+    <ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy"/>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#hasAddress -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasAddress">
+        <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+        <rdfs:range rdf:resource="http://www.wsmo.org/ns/hrests#URITemplate"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/hrests#hasAddress"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#hasMethod -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasMethod">
+		<rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/hrests#hasMethod"/>
+        <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#hasInputMessage -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasInputMessage">
+        <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+        <rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#hasInputMessage"/>
+        <rdfs:comment>Relationship between an Operation that requires some Message as its input</rdfs:comment>
+        <rdfs:label>has input message</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#hasOperation -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasOperation">
+        <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service"/>
+        <rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#hasOperation"/>
+        <rdfs:label>has operation</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage -->
+
+    <ObjectProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasOutputMessage">
+        <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+        <rdfs:range rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage"/>
+        <rdfs:comment>Relashionship between an Operation and the Message that it will output as the result of its processing</rdfs:comment>
+        <rdfs:label>has output message</rdfs:label>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasId -->
+
+    <DatatypeProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Characterizes a unique identifier for a thing</rdfs:comment>
+        <rdfs:label>has id</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasRawRepresentation -->
+
+    <DatatypeProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasRawRepresentation">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuatorInput"/>
+                    <rdf:Description rdf:about="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Links an entity derived from a raw representation to said representation. For instance, sensor observations are represented by xml documents and converted to knowledge instances.</rdfs:comment>
+        <rdfs:label>has raw representation</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasTimeStamp -->
+
+    <DatatypeProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasTimeStamp">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Associates an Instant individual with a timestamp</rdfs:comment>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue -->
+
+    <DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#hasAddress -->
+
+    <DatatypeProperty rdf:about="http://www.wsmo.org/ns/hrests#hasAddress"/>
+    
+
+
+    <!-- http://www.wsmo.org/ns/hrests#hasMethod -->
+
+    <DatatypeProperty rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasMethod">
+		<rdfs:subPropertyOf rdf:resource="http://www.wsmo.org/ns/hrests#hasMethod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#State">
+        <rdfs:subClassOf rdf:resource="http://delicias.dia.fi.upm.es/ontologies/ObjectWithStates.owl#State"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/lifecycle/schema#State"/>
+    </Class>
+    
+    
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#BuildingEnvironment">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
+    </Class>
+    
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#BuildingThing -->
+
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#BuildingThing">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#BuildingThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </Class>
+
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Command -->
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Command">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Command"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </Class>
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Functionality -->
+
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Functionality">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Functionality"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Abstract"/>
+    </Class>
+   
+    <!-- http://elite.polito.it/ontologies/dogont.owl#Notification -->
+
+
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Notification">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Notification"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+    </Class>
+
+    <!-- http://elite.polito.it/ontologies/dogont.owl#StateValue -->
+
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#State">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StateValue"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/lifecycle/schema#State"/>
+    </Class>
+    
+
+    <!-- http://elite.polito.it/ontologies/poweront.owl#PowerConsumption -->
+
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#PowerConsumption">
+        <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/poweront.owl#PowerConsumption"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAttribute"/>
+    </Class>
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#MessageContent -->
+
+    <Class rdf:about="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#MessagePart -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#MessagePart">
+		<rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+    </Class>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#Operation -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Operation">
+		<rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasInput"/>
+                <someValuesFrom rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasOutput"/>
+                <someValuesFrom rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.wsmo.org/ns/hrests#hasAddress"/>
+                <someValuesFrom rdf:resource="http://www.wsmo.org/ns/hrests#URITemplate"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An operation is a function provided by a service. It implements a functionnality, and can be accessed by an end user by any mean offered by the service.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://iserve.kmi.open.ac.uk/ns/msm#Service -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Service">
+		<rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#hasOperation"/>
+                <someValuesFrom rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A service is a set of operation, and provides a user a way to issu requests  through an interface. Underlying implementation needn&apos;t to be known by the end user.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/muo/muo#PhysicalQuality -->
+
+    <rdf:Description rdf:about="http://purl.oclc.org/NET/muo/muo#PhysicalQuality">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAttribute"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#State -->
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#State">
+		<rdfs:subClassOf rdf:resource="http://purl.org/vocab/lifecycle/schema#State"/>
+		<rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <someValuesFrom rdf:resource="http://elite.polito.it/ontologies/dogont.owl#StateValue"/>
+            </Restriction>
+        </rdfs:subClassOf>
+	</Class>
+	
+    <!-- http://qudt.org/schema/qudt#QuantityKind -->
+
+    <Class rdf:about="http://qudt.org/schema/qudt#QuantityKind"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt#Unit -->
+
+    <Class rdf:about="http://qudt.org/schema/qudt#Unit"/>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#BusinessOperation -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#BusinessOperation">
+        <rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:comment>Service operation that is relevant to the business function of the service (and the object underneath in the case of IoT). This type of functions may be linked to a property the object deals with (monitoring or modification)</rdfs:comment>
+        <rdfs:label>Business operation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#BusinessService -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#BusinessService">
+        <rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasRelationshipWithProperty"/>
+                <someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Property"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Service intended to be an interface for the functionnalities the object was designed to perform : measure temperature for a temperature sensor, switch on/off for a switch...</rdfs:comment>
+        <rdfs:label>Business service</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ControlledSystem -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ControlledSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#getsFeedbackFrom"/>
+                <someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>System implementing a control feedback loop in order to control an actuator thanks to the feedback of some sensors.</rdfs:comment>
+        <rdfs:label>Controlled system</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#DefectuousSystem -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#DefectuousSystem">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ControlledSystem"/>
+        <rdfs:comment>Controlled system that requires an operator attention, because it is not functionnig properly. Detected when the difference between the Observations and the Actuation made on the monitored property is out of its operating range.</rdfs:comment>
+        <rdfs:label>Defectuous System</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Device -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Device">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#DeviceManagementOperation -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#DeviceManagementOperation">
+        <rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+        <rdfs:comment>Service operation that deals with device management</rdfs:comment>
+        <rdfs:label>Device management operation</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#DeviceManagementService -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#DeviceManagementService">
+        <rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+        <rdfs:comment>This kind of service offers a set of operations regarding device management. That means it&apos;s not related to the functionnality of the object itsefl, but rather to its inner working : battery state, connectivity, firmware update...</rdfs:comment>
+        <rdfs:label>Device management service</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ImpactOnProperty -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#ImpactOnProperty">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/SAN#Effect"/>
+        <rdfs:comment>This class describes the impact an operation may have on a property. It makes sense in an IoT environement, where things can manage properties of their environment and modify them.</rdfs:comment>
+        <rdfs:label>Impact on property</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#hasService"/>
+                <someValuesFrom rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Service"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#implements"/>
+                <someValuesFrom rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Process"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Most general thing in an iot ontology, a Thing can either be a physical connected object, an application, an abstracted interface... The class Object of DUL, from whom it inherits, doen&apos;t only represent physical objects, and can cover a fonction for instance.</rdfs:comment>
+        <rdfs:label>IoT-Thing</rdfs:label>
+        <rdfs:label>Thing</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Manager -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#SoftwareAgent"/>
+        <rdfs:comment>A manager is an application that offers management capabilities as described in the OneM2M norm.</rdfs:comment>
+        <rdfs:label>Manager</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Network -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Network">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Virtual_space"/>
+        <rdfs:comment xml:lang="en">Set of communicating entities</rdfs:comment>
+        <rdfs:label xml:lang="en">Network</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Sensing_device -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Sensing_device">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Device"/>
+        <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#SoftwareAgent -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#SoftwareAgent">
+        <rdfs:subClassOf rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#IoT_Thing"/>
+        <rdfs:comment>Service or piece of software running in an IoT node. Can also be an abstracted device, issued from the composition of physical devices and abstract processing.</rdfs:comment>
+        <rdfs:label>Software agent</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Virtual_space -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Virtual_space">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
+        <rdfs:comment xml:lang="en">A region that is not defined in the physical world, but that can have a logical, existential or software definition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Virtual space</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationValue -->
+
+    <rdf:Description rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/SAN#ActuationValue">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.irit.fr/recherches/MELODI/ontologies/IoT-Lifecycle#triggersTransition"/>
+                <someValuesFrom rdf:resource="http://purl.org/vocab/lifecycle/schema#Transition"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+        
+    <!-- http://www.wsmo.org/ns/hrests#URITemplate -->
+    
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#URITemplate">
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/hrests#URITemplate"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity"/>
+    </Class>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#Condition -->
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Precondition">
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Condition"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </Class>
+ 
+    
+    <!-- http://www.wsmo.org/ns/wsmo-lite#Effect -->
+
+<Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Postcondition">
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Effect"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    </Class>
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#Message -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Message">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Object"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <someValuesFrom rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Message is a instance of data that is sent by a source and that is received by a target</rdfs:comment>
+        <rdfs:label>Message</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#Operation -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Operation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#FormalEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+    </Class>
+    
+    
+    
+
+
+    <!-- http://www.wsmo.org/ns/wsmo-lite#Service -->
+
+    <Class rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#Service">
+		<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#FormalEntity"/>
+        <rdfs:comment>A Service is the abstract representation of a set of data and requests processing functionnalities, generally linked by common traits (domain, service provider...)</rdfs:comment>
+        <rdfs:label>Service</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O -->
+
+    <NamedIndividual rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#EmptyMessage -->
+
+    <NamedIndividual rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#EmptyMessage">
+        <rdf:type rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+        <rdfs:comment>Specific message that has no content, its sole transfer achieves its purpose. For example, if an empty message is sent to the &quot;switch light on&quot; service of a light bulb, there is no need for an explicit content of the message asking the light to be turned on.</rdfs:comment>
+        <rdfs:label>Empty message</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#SimpleDataContent -->
+
+    <NamedIndividual rdf:about="http://www.irit.fr/recherches/MELODI/ontologies/IoT-O#SimpleDataContent">
+        <rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+        <rdfs:comment>This individual represents the body of a request containing simple data, such as a numerical value.</rdfs:comment>
+        <rdfs:label>Simple data content</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#ContinuousValue">
+        <rdfs:label>Continuous value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#DiscreteValue">
+        <rdfs:label>Discrete value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#NetworkSpecificStateValue">
+        <rdfs:label>Network specific state value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#hasState">
+        <rdfs:label>has state</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#hasStateValue">
+        <rdfs:label>has state value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/poweront.owl#PowerConsumptionValue">
+        <rdfs:label>Power consumption value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/poweront.owl#consumptionOf">
+        <rdfs:label>consumption of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/poweront.owl#consumptionValue">
+        <rdfs:label>Consumption value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/poweront.owl#hasConsumption">
+        <rdfs:label>has consumption</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://elite.polito.it/ontologies/poweront.owl#whenIn">
+        <rdfs:label>when in</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.wsmo.org/ns/hrests#URITemplate">
+        <rdfs:comment>Template providing information about the construction of the URI providing access to the service</rdfs:comment>
+        <rdfs:label>URI Template</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.wsmo.org/ns/hrests#hasAddress">
+        <rdfs:comment>Associates a ressource to a URI in compliance with REST principles</rdfs:comment>
+        <rdfs:label>has address</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.wsmo.org/ns/hrests#hasMethod">
+        <rdfs:label>has method</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,538 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY ontology "http://www.loted.eu/ontology#1-" >
+    <!ENTITY ontology5 "http://www.loted.eu/ontology#2-" >
+    <!ENTITY ontology7 "http://www.loted.eu/ontology#3-" >
+    <!ENTITY ontology6 "http://www.loted.eu/ontology#4-" >
+    <!ENTITY ontology2 "http://www.loted.eu/ontology#8-" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY ontology3 "http://www.loted.eu/ontology#6-" >
+    <!ENTITY ontology4 "http://www.loted.eu/ontology#7-" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY swrlx "http://www.w3.org/2003/11/swrlx#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY EuropeanInstitution "http://www.loted.eu/ontology#5-EuropeanInstitution/" >
+    <!ENTITY R-RegionalOrLocalAgency "http://www.loted.eu/ontology#R-RegionalOrLocalAgency/" >
+    <!ENTITY N-NationalOrFederalAgency "http://www.loted.eu/ontology#N-NationalOrFederalAgency/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.loted.eu/ontology#"
+     xml:base="http://www.loted.eu/ontology"
+     xmlns:ontology7="http://www.loted.eu/ontology#3-"
+     xmlns:swrlx="http://www.w3.org/2003/11/swrlx#"
+     xmlns:ontology4="http://www.loted.eu/ontology#7-"
+     xmlns:ontology3="http://www.loted.eu/ontology#6-"
+     xmlns:ontology6="http://www.loted.eu/ontology#4-"
+     xmlns:ontology5="http://www.loted.eu/ontology#2-"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:ontology="http://www.loted.eu/ontology#1-"
+     xmlns:ontology2="http://www.loted.eu/ontology#8-"
+     xmlns:EuropeanInstitution="http://www.loted.eu/ontology#5-EuropeanInstitution/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:N-NationalOrFederalAgency="http://www.loted.eu/ontology#N-NationalOrFederalAgency/"
+     xmlns:R-RegionalOrLocalAgency="http://www.loted.eu/ontology#R-RegionalOrLocalAgency/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loted.eu/ontology#AC -->
+
+    <owl:ObjectProperty rdf:about="#AC">
+        <rdfs:label xml:lang="de">Vergabekriterien</rdfs:label>
+        <rdfs:label xml:lang="en">Award criteria</rdfs:label>
+        <rdfs:label xml:lang="fr">Crit&#232;res d&#39;attribution</rdfs:label>
+        <rdfs:range rdf:resource="#AwardCriteria"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#AU -->
+
+    <owl:ObjectProperty rdf:about="#AU">
+        <rdfs:label xml:lang="de">Name des Auftraggebers.</rdfs:label>
+        <rdfs:label xml:lang="en">Authority name</rdfs:label>
+        <rdfs:label xml:lang="fr">Nom pourvoir adjudicateur</rdfs:label>
+        <rdfs:range rdf:resource="#Authority"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#CY -->
+
+    <owl:ObjectProperty rdf:about="#CY">
+        <rdfs:label xml:lang="de">Land</rdfs:label>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:label xml:lang="fr">Pays</rdfs:label>
+        <rdfs:range rdf:resource="#Country"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Authority"/>
+                    <rdf:Description rdf:about="#Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#MA -->
+
+    <owl:ObjectProperty rdf:about="#MA">
+        <rdfs:label xml:lang="de">Hauptt&#228;tigkeit</rdfs:label>
+        <rdfs:label xml:lang="en">Main activity</rdfs:label>
+        <rdfs:label xml:lang="fr">Activit&#233; principale</rdfs:label>
+        <rdfs:domain rdf:resource="#Authority"/>
+        <rdfs:range rdf:resource="#MainActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#NC -->
+
+    <owl:ObjectProperty rdf:about="#NC">
+        <rdfs:label xml:lang="de">Auftrag</rdfs:label>
+        <rdfs:label xml:lang="en">Contract</rdfs:label>
+        <rdfs:label xml:lang="fr">March&#233;</rdfs:label>
+        <rdfs:range rdf:resource="#Contract"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#OJ -->
+
+    <owl:ObjectProperty rdf:about="#OJ">
+        <rdfs:label xml:lang="de">ABl. S</rdfs:label>
+        <rdfs:label xml:lang="en">OJ S</rdfs:label>
+        <rdfs:label xml:lang="fr">JO S</rdfs:label>
+        <rdfs:range rdf:resource="#OfficialJournal"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#OL -->
+
+    <owl:ObjectProperty rdf:about="#OL">
+        <rdfs:label xml:lang="de">Originalsprache</rdfs:label>
+        <rdfs:label xml:lang="en">Original language</rdfs:label>
+        <rdfs:label xml:lang="fr">Langue originale</rdfs:label>
+        <rdfs:range rdf:resource="#Language"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#PR -->
+
+    <owl:ObjectProperty rdf:about="#PR">
+        <rdfs:label xml:lang="de">Verfahren</rdfs:label>
+        <rdfs:label xml:lang="en">Procedure</rdfs:label>
+        <rdfs:label xml:lang="fr">Proc&#233;dure</rdfs:label>
+        <rdfs:range rdf:resource="#Procedure"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#RP -->
+
+    <owl:ObjectProperty rdf:about="#RP">
+        <rdfs:label xml:lang="de">Verordnung</rdfs:label>
+        <rdfs:label xml:lang="en">Regulation</rdfs:label>
+        <rdfs:label xml:lang="fr">Organisation</rdfs:label>
+        <rdfs:range rdf:resource="#Regulation"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#TD -->
+
+    <owl:ObjectProperty rdf:about="#TD">
+        <rdfs:label xml:lang="de">Dokument</rdfs:label>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+        <rdfs:label xml:lang="fr">Document</rdfs:label>
+        <rdfs:range rdf:resource="#Document"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#TW -->
+
+    <owl:ObjectProperty rdf:about="#TW">
+        <rdfs:label xml:lang="de">Ort</rdfs:label>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+        <rdfs:label xml:lang="fr">Localit&#233;</rdfs:label>
+        <rdfs:range rdf:resource="#Place"/>
+        <rdfs:domain rdf:resource="#Tender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#TY -->
+
+    <owl:ObjectProperty rdf:about="#TY">
+        <rdfs:label xml:lang="de">Art des Angebots</rdfs:label>
+        <rdfs:label xml:lang="en">Type of bid</rdfs:label>
+        <rdfs:label xml:lang="fr">Type de proc&#233;dure</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="#TypeOfBid"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loted.eu/ontology#DR -->
+
+    <owl:DatatypeProperty rdf:about="#DR">
+        <rdfs:label xml:lang="de">Dokument empfangen</rdfs:label>
+        <rdfs:label xml:lang="en">Document received</rdfs:label>
+        <rdfs:label xml:lang="fr">Document re&#231;u</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#DS -->
+
+    <owl:DatatypeProperty rdf:about="#DS">
+        <rdfs:label xml:lang="de">Dokument abgeschickt</rdfs:label>
+        <rdfs:label xml:lang="en">Document sent</rdfs:label>
+        <rdfs:label xml:lang="fr">Document envoy&#233;</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#DT -->
+
+    <owl:DatatypeProperty rdf:about="#DT">
+        <rdfs:label xml:lang="de">Termin</rdfs:label>
+        <rdfs:label xml:lang="en">Deadline</rdfs:label>
+        <rdfs:label xml:lang="fr">Date limite</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#HD -->
+
+    <owl:DatatypeProperty rdf:about="#HD">
+        <rdfs:label xml:lang="de">Rubrik</rdfs:label>
+        <rdfs:label xml:lang="en">Heading</rdfs:label>
+        <rdfs:label xml:lang="fr">Heading</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#IA -->
+
+    <owl:DatatypeProperty rdf:about="#IA">
+        <rdfs:label xml:lang="de">Internetadresse (URL)</rdfs:label>
+        <rdfs:label xml:lang="en">Internet address (URL)</rdfs:label>
+        <rdfs:label xml:lang="fr">Adresse Internet (URL)</rdfs:label>
+        <rdfs:domain rdf:resource="#Authority"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#ND -->
+
+    <owl:DatatypeProperty rdf:about="#ND">
+        <rdfs:label xml:lang="de">Dok. Nummer</rdfs:label>
+        <rdfs:label xml:lang="en">Document Number</rdfs:label>
+        <rdfs:label xml:lang="fr">Num&#233;ro de document</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Num -->
+
+    <owl:DatatypeProperty rdf:about="#Num">
+        <rdfs:label xml:lang="de">ABl. S</rdfs:label>
+        <rdfs:label xml:lang="en">OJ S</rdfs:label>
+        <rdfs:label xml:lang="fr">JO S</rdfs:label>
+        <rdfs:domain rdf:resource="#OfficialJournal"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#OC -->
+
+    <owl:DatatypeProperty rdf:about="#OC">
+        <rdfs:label xml:lang="de">Urspr&#252;nglicher CPV-Code</rdfs:label>
+        <rdfs:label xml:lang="en">Original CPV code</rdfs:label>
+        <rdfs:label xml:lang="fr">Ancien code CPV</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#PC -->
+
+    <owl:DatatypeProperty rdf:about="#PC">
+        <rdfs:label xml:lang="de">CPV-Code</rdfs:label>
+        <rdfs:label xml:lang="en">CPV code</rdfs:label>
+        <rdfs:label xml:lang="fr">Code CPV</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#PD -->
+
+    <owl:DatatypeProperty rdf:about="#PD">
+        <rdfs:label xml:lang="de">Datum der Ver&#246;ffentlichung</rdfs:label>
+        <rdfs:label xml:lang="en">Pubblication date</rdfs:label>
+        <rdfs:label xml:lang="fr">Date de publication</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loted.eu/ontology#TI -->
+
+    <owl:DatatypeProperty rdf:about="#TI">
+        <rdfs:label xml:lang="de">Titel</rdfs:label>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <rdfs:label xml:lang="fr">Titre</rdfs:label>
+        <rdfs:domain rdf:resource="#Tender"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loted.eu/ontology#1-MinistryOrAnyOtherNationalOrFederalAuthority -->
+
+    <owl:Class rdf:about="#1-MinistryOrAnyOtherNationalOrFederalAuthority">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#2-ArmedForces -->
+
+    <owl:Class rdf:about="#2-ArmedForces">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#3-RegionalOrLocalAuthority -->
+
+    <owl:Class rdf:about="#3-RegionalOrLocalAuthority">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#4-Utilities -->
+
+    <owl:Class rdf:about="#4-Utilities">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#5-EuropeanInstitution/AgencyOrInternationalOrganization -->
+
+    <owl:Class rdf:about="#5-EuropeanInstitution/AgencyOrInternationalOrganization">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#6-BodyGovernedByPublicLaw -->
+
+    <owl:Class rdf:about="#6-BodyGovernedByPublicLaw">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#7-NotApplicable -->
+
+    <owl:Class rdf:about="#7-NotApplicable">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#8-Other -->
+
+    <owl:Class rdf:about="#8-Other">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Authority -->
+
+    <owl:Class rdf:about="#Authority"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#AwardCriteria -->
+
+    <owl:Class rdf:about="#AwardCriteria"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Contract -->
+
+    <owl:Class rdf:about="#Contract"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Country -->
+
+    <owl:Class rdf:about="#Country"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Document -->
+
+    <owl:Class rdf:about="#Document"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Language -->
+
+    <owl:Class rdf:about="#Language"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#MainActivity -->
+
+    <owl:Class rdf:about="#MainActivity"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#N-NationalOrFederalAgency/Office -->
+
+    <owl:Class rdf:about="#N-NationalOrFederalAgency/Office">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#OfficialJournal -->
+
+    <owl:Class rdf:about="#OfficialJournal"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Place -->
+
+    <owl:Class rdf:about="#Place"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Procedure -->
+
+    <owl:Class rdf:about="#Procedure"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#R-RegionalOrLocalAgency/Office -->
+
+    <owl:Class rdf:about="#R-RegionalOrLocalAgency/Office">
+        <rdfs:subClassOf rdf:resource="#Authority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Regulation -->
+
+    <owl:Class rdf:about="#Regulation"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#Tender -->
+
+    <owl:Class rdf:about="#Tender"/>
+    
+
+
+    <!-- http://www.loted.eu/ontology#TypeOfBid -->
+
+    <owl:Class rdf:about="#TypeOfBid"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0) http://owlapi.sourceforge.net -->
+

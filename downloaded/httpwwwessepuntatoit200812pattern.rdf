@@ -1,0 +1,1454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+>
+  <rdf:Description rdf:nodeID="Nb9e955692c654a528934b3c4bce53c36">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHomonymousElements"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3bffe82071104b89a1b8021c85cf334b">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46c5742e02e649f8a72219f38d478b9f">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce4ef544d7404ca0876ace32dc204d8b">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N248d33e9d5fc42b99702afec87419634">
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Milestone"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N79c123f87d0f40c8ac862c4cb0bd559e">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHeteronymousElements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naff003b7ce424807841c9892853a5c82">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N7c5b58e184d54b0cbe7f870212f66808"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Container">
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">container element</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nefbedcb924e34ca2a1571d17e9d1a0dc"/>
+    <owl:equivalentClass rdf:nodeID="N74eb0dff27284164b54ef39c09ea7976"/>
+    <rdfs:comment xml:lang="en">This class concerns the structural organization of a document. Elements following this pattern contain no textual content and contain only elements compliant with the patterns: Meta, Field, Block and any subtype of Container. It is disjointed with the pattern Popup, although they share the same content model.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Meta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">meta element</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="Na8b379975d6c4776b27be550908972bb"/>
+    <rdfs:comment xml:lang="en">This class describes elements that contain neither other elements nor textual content. Contrarily to the pattern Milestone, which was meant to describe markup elements that impact the document because of their location, the main feature of its disjoint sibling is the mere existence, independently from the position it has within the document. Meta elements convey metadata information about the document or part of it, independently of where they are. Thus, meta elements can be contained only within container elements.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Milestone"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7384f4bbd6514f6aa8154d8c8eb8a40b">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59d28c1636164e5abaf5d233bc42a73e">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Record"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0b1ea2844b5f46a6a4b47b9f937bfa51">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N606eb9b531674dae9a4db13fafc4bd93"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e89bd1d667245ba9476a4271e2ea708">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5cd48668c27e4b758d24b6f515e2e481">
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N598f1f75775d4ae28e6f2b85e1aca9a9">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:rest rdf:nodeID="N756560087bbc4bbe8d25a48163bbf19c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6828347fae9a46e786c13a1eae791c87">
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Table"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#isContainedByAsHeader">
+    <rdfs:label xml:lang="en">is contained by as header</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <rdfs:comment xml:lang="en">An element is contained by another structured element as part of its header.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc7b6e54fb55b4bf796f572491b8fc16a">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncb616c95b98d4e13abddcc08d18f3c4e">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="Nbbd2c8dbf61049fab6a13fe375263cf1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc559aad1de604202a22b48d0af839bc5">
+    <owl:unionOf rdf:nodeID="N1d0c35e912fb41c8a6205758efea9082"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nab41d8b6c7054481936ca1a0783d21cf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N8b2434126aea44fa8db51a18b2a94a3c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N33480f54b29c435492551f7ffa51eba4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N48c4352853b54637aca6acf42eee39d5">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Table"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf25f33a3f78b4e7a9eadbb5a67263183">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#y">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d9b809023984a5f989e03d408bc19a5">
+    <owl:unionOf rdf:nodeID="N25bfd4d541e146488f08d113a6e2d97f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N850a7b8a71384e32b3ab863aa48e112f">
+    <rdf:rest rdf:nodeID="N948eb29eaf974592a51179ad4d7a4819"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#HeadedContainer"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45434dc54e8840fb8ed797b43b591aba">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N6828347fae9a46e786c13a1eae791c87"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Bucket">
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Marker"/>
+    <rdfs:comment xml:lang="en">The class of elements that can contain other elements but no text nodes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#NonTextual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+    <rdfs:label xml:lang="en">bucket element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4429c81c90fa4451ad2d193912d64a77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nd4e43a6144ed4dd68cf9a12279346db0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8de384b6d00242878ca156a268e9fd8f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N9658ee54b6b64e8880079af85db64d7e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30febbd613b14adebb29e454eb03863c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N243056f95a5a4a9e8097327dfe2c830c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14086a83da6a466eabe97da257ba9039">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Meta"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N66a566ce29a64b6483f3136092fc13ac">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <owl:allValuesFrom rdf:nodeID="Nc559aad1de604202a22b48d0af839bc5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Milestone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">milestone element</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="Nce248ca4b7214ceb82e2dbb0617ecb08"/>
+    <rdfs:comment xml:lang="en">This class describe elements that contain neither other elements nor textual content. Moreover, similarly to Inline, elements following the Milestone pattern can only be contained within block or inline elements (and consequently they also cannot be used as root elements of documents).
+
+The distinctive characteristic of the pattern Milestone is the location it assumes within the document.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Ncb616c95b98d4e13abddcc08d18f3c4e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N120b6c2f55f941fb9c09fceb3fbd84c2">
+    <swrl:body rdf:nodeID="N60ec8457143a407da6a7f9b4095a7fc9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="Ncba2aaafcb5f4da189401b23d394c94e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N385b701f41464c2bae844378283b945c">
+    <rdf:rest rdf:nodeID="Na94287e6f97c4f708d1f513f36c31669"/>
+    <rdf:first rdf:nodeID="N248d33e9d5fc42b99702afec87419634"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd4e43a6144ed4dd68cf9a12279346db0">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Mixed"/>
+    <rdf:rest rdf:nodeID="N20868eaaf13b4e94883f44f115abba90"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a78f05ba49248309e52c09254a29b8c">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e38c3f4d8134fdf9e100860e2e14ade">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc7bbb073ae404c0392c46c3057f22f32">
+    <rdf:first rdf:nodeID="Naf821eb014224f61bfa80a11e06a53ee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N730b84f596324a07b556c3d9a75dddd0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74cba743a2104eacb2a6e69ba2f96d0a">
+    <rdf:first rdf:nodeID="N15196d4b34854dce95a3aae97145e536"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbd40194d777a4d10adfdab25dec26ec6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na04b8238a0aa49c0930604ebbb8b0ab6">
+    <owl:allValuesFrom rdf:nodeID="Nb06dd47c689b42a4bd71618e0f6d5889"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne016ad6d6b044e4a822bd8a006845893">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHomonymousElements"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Block">
+    <rdfs:label xml:lang="en">block element</rdfs:label>
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+    <owl:equivalentClass rdf:nodeID="N4429c81c90fa4451ad2d193912d64a77"/>
+    <rdfs:comment xml:lang="en">This class organise the document content as a sequence of nestable elements and text nodes. In particular, elements following this pattern can contain text and other elements compliant with the patterns Inline, Atom, Milestones and Popup, which will be introduced in the following. Furthermore, it is a requirement that block elements are contained only by container and popup elements</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N87519a1a76824d87adae59762c488ead"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na0bf562dd0314e2d8848f472d8416bcf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:someValuesFrom rdf:nodeID="N7cbb9414f1f04f58986a5e12b948786a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2de9eb106d7848f29fe0b863e92d76cb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#containsAsHeader"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74eb0dff27284164b54ef39c09ea7976">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ncfea2c5810754d9da50f25d9cf01786e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce248ca4b7214ceb82e2dbb0617ecb08">
+    <owl:intersectionOf rdf:nodeID="Nc4311158dd394b5581e734a86b07ee8a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#canContainHeteronymousElements">
+    <rdfs:comment xml:lang="en">A hierarchical-based entity contains al least two entities having different names.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">can contain heteronymous elements</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N87708fbe75df459fbd8f2bc78731dc39">
+    <owl:complementOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#canContainHomonymousElements">
+    <rdfs:label xml:lang="en">can contain homonymous elements</rdfs:label>
+    <rdfs:comment xml:lang="en">A hierarchical-based entity contains al least two entities that share the same name.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7cbb9414f1f04f58986a5e12b948786a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N6d0f936f60e040e99be8291f1a319448"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd398ceaba0ec4b66a5ca499d902aaff7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Nce4ef544d7404ca0876ace32dc204d8b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1227435249ef4cf4bfd93e10f707fa02">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <swrl:argument2 rdf:resource="urn:swrl#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4d8da7bc86424980a18ee615b5d6d015">
+    <rdf:rest rdf:nodeID="N7397e7ee00eb4d01b12bc7ba22b9bd8b"/>
+    <rdf:first rdf:nodeID="N03ccd69e80cb4dda90948549b2595ddb"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5abe3f733f8b451081568820ff2d6b24">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nefbedcb924e34ca2a1571d17e9d1a0dc">
+    <owl:allValuesFrom rdf:nodeID="N0d9b809023984a5f989e03d408bc19a5"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N15196d4b34854dce95a3aae97145e536">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:allValuesFrom rdf:nodeID="N9da4f177c5aa4de8957082823daf8229"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9dade55a377a4914baec12148cf8802a">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+    <rdf:rest rdf:nodeID="N886efdfa45d445e2aca05d7f0d5e6717"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#NonTextual">
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">non-textual element</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="N87708fbe75df459fbd8f2bc78731dc39"/>
+    <rdfs:comment xml:lang="en">The class of elements that cannot have textual content in their content models.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N077532623df14f49b9b86badcccda4ff">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Nf339e89d43c6463cbee71d0c47ac3c49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03ccd69e80cb4dda90948549b2595ddb">
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Marker">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#NonTextual"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#NonStructured"/>
+    <rdfs:label xml:lang="en">marker element</rdfs:label>
+    <rdfs:comment xml:lang="en">The class of elements that can contain neither text nodes nor elements.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne6bb4ff543bc4c579fff031f6f57ad29">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ed10a26462f46d58f137f6ee4b7d8a0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Ne24caa3d8fb84ac7b05f1b2cd5a88c46"/>
+    <rdf:rest rdf:nodeID="N18229a66485c40b2836470b25daee371"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naaee7bf6d2f5467a90dca4e0a15ceacc">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="N385b701f41464c2bae844378283b945c"/>
+    <swrl:head rdf:nodeID="N1bbd832d6646409ebe7cb24f401a6bb8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5886f6cae5354d7182342236c2d2aeb6">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#g"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N831bef44eec0434b98b557641c2d4e81">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc2dd2728dffa45ffb427bb4aa5c7b109">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:nodeID="N45f33848bfc74496b45a18425d49a5d6"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N06b1ba5781104f5ca7d90fb1c36b1f75">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:someValuesFrom rdf:nodeID="N2a8915989ecb431fb522a6c155348cad"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N451235fce47f42dabdd4e4dee75df2b1">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:rest rdf:nodeID="Nc6fe88c807a84e5486e8346a413d91fc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N36cbfd5b57134293a08cb08239d3185a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N8de384b6d00242878ca156a268e9fd8f"/>
+    <rdf:first rdf:nodeID="Nf25f33a3f78b4e7a9eadbb5a67263183"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05ccfa177f7e4f19a2468372d91ea2aa">
+    <rdf:rest rdf:nodeID="N7384f4bbd6514f6aa8154d8c8eb8a40b"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncbbdd447380e425d89708150fa115db7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd00c56527b08406793f556542cd9fb69">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#p"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d4776c2d91a4249a1be3f72487a70f0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Milestone"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6e05dae67f9847eeaeaccd18fe574bed">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N8ecb3ec562c64bb2a24d49c5d7a19a39"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N606eb9b531674dae9a4db13fafc4bd93">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Atom"/>
+    <rdf:rest rdf:nodeID="N6fd83bf014d04245be4b6f63cd2c0409"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#contains">
+    <rdfs:label xml:lang="en">contains</rdfs:label>
+    <rdfs:comment xml:lang="en">A structured element contains another generic element.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <rdfs:domain rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Mixed">
+    <rdfs:label xml:lang="en">mixed element</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+    <rdfs:comment xml:lang="en">The class of elements that can contain other elements and text nodes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8a15553bb21d454bb383ea68dfd345ac">
+    <swrl:body rdf:nodeID="Nd25f62b7cac54e3ab89245c931847507"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="N6d5d85f4229748118aa0432413fd0edb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1499738b19c240b7a625f929bf8ffe68">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N947eca5ec37c49dcb2f50019bd15bd84">
+    <rdf:first rdf:nodeID="N8d73275a6f6f493094d45ddea72d6042"/>
+    <rdf:rest rdf:nodeID="N377bd18e5bcd485f828f5d8949690d41"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8e97a92b7a8247f39dda786455649d77">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+    <rdf:rest rdf:nodeID="N0a0b9198f1c2465489a8525c3f7541db"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncba2aaafcb5f4da189401b23d394c94e">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N3c9af85d46aa419cb966cdf89b66d4d1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N24939524a8c3424e9aa6b48d37f031ef">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Table"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf66131e778647bc9dc354947da42d5d">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N5abe3f733f8b451081568820ff2d6b24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9da4f177c5aa4de8957082823daf8229">
+    <owl:unionOf rdf:nodeID="N4c1ddc7c4bb64e819ac537797a3236b0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd5031b0c4d04546887ecced75f2bb7b">
+    <rdf:first rdf:nodeID="N2de9eb106d7848f29fe0b863e92d76cb"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd5d8a90f3eeb4df5894f557ddecfb713">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:someValuesFrom rdf:nodeID="Nf04cdac1870a4dad87822f84fc009de6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb295e4870a0e429fb0a6df9be25158fe">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Ne016ad6d6b044e4a822bd8a006845893"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0e3f838e4d8c440dafe9ff00ae45aad8">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#z"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d5d85f4229748118aa0432413fd0edb">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N7eee72efbf57436c8805b2f230cc7171"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N67a6e3680bf947ca847a715bf3002f0a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N14086a83da6a466eabe97da257ba9039"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N074ef6aaa2f844fd86cc344242ffdcf6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Na4d33399b7854b5c8b594f4723426135"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N41a811549d7841eeacb436a83835ad26">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="N947eca5ec37c49dcb2f50019bd15bd84"/>
+    <swrl:head rdf:nodeID="N9ee8c2c8a74641c3920ffb275aafc3c2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N741c4808dfef41a6a8f0bda257a97f9a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N4544c48641bd4f70972e361904210267"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c97cd19f5a249788ac7b2d5b11094a0">
+    <rdf:first rdf:nodeID="Ne586e9da5f24469092168b51e72a6ff1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fd13b8302ab43ce83caa88c81e1dd53">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Nf3919c09811e4cec898fc1c33e743563"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4c8cc33ad1274b0986321f9853ad565e">
+    <rdf:first rdf:nodeID="Ncf150ea37a6f4bcbba004468637d07fa"/>
+    <rdf:rest rdf:nodeID="N6e05dae67f9847eeaeaccd18fe574bed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1bbd832d6646409ebe7cb24f401a6bb8">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N6d4776c2d91a4249a1be3f72487a70f0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a0d1163d2a54cf8aebcb92624dc2d50">
+    <rdf:first rdf:nodeID="N3e89bd1d667245ba9476a4271e2ea708"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N67a694e22ccf46589fb167667487b61f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfb14dd04651a4a1f943e0bc9767e5622">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="urn:swrl#y"/>
+    <swrl:argument2 rdf:resource="urn:swrl#s"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N054fe0ae3ba34b2dbe3da4f0c3efbf4a">
+    <rdf:rest rdf:nodeID="Naf66131e778647bc9dc354947da42d5d"/>
+    <rdf:first rdf:nodeID="N647c6c1638c0474a914d6e9024827066"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf04cdac1870a4dad87822f84fc009de6">
+    <owl:unionOf rdf:nodeID="N478454d9221e483baf15dec62b6761a5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd8d426b1ef8b47c2a25420a482e8fde5">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N5a78f05ba49248309e52c09254a29b8c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbf4a7e908c2c4f408ce007f92c767593">
+    <rdf:rest rdf:nodeID="N3bffe82071104b89a1b8021c85cf334b"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Milestone"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2a20e31b2d62465ebb1c2b362d5976db">
+    <swrl:body rdf:nodeID="N4d8da7bc86424980a18ee615b5d6d015"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="N72e2df59975a4ef3b310ad404ce856b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a282db47a0b42c9849a02d94970ef64">
+    <swrl:body rdf:nodeID="N4ae381b428b0434ebbc452fcc4451dd0"/>
+    <swrl:head rdf:nodeID="N67a6e3680bf947ca847a715bf3002f0a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#hasName">
+    <rdfs:comment xml:lang="en">The name of a particular element.</rdfs:comment>
+    <rdfs:label xml:lang="en">has name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e55ff9bc01d4a17a5e2bdbfa576d184">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:resource="urn:swrl#s"/>
+    <swrl:argument1 rdf:resource="urn:swrl#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc4311158dd394b5581e734a86b07ee8a">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Marker"/>
+    <rdf:rest rdf:nodeID="N938760870ccb4ec68c3e440d6dee1e65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:priorVersion rdf:resource="http://dwellonit.svn.sourceforge.net/viewvc/dwellonit/StructuralPattern/Pattern-1_4.owl"/>
+    <owl:backwardCompatibleWith rdf:resource="http://dwellonit.svn.sourceforge.net/viewvc/dwellonit/StructuralPattern/Pattern-1_4.owl"/>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabio Vitali</dc:creator>
+    <dc:title xml:lang="en">The Pattern Ontology
+Describing documents by means of their structural components</dc:title>
+    <dc:description xml:lang="en">The idea of using patterns to produce reusable and high-quality assets is not new in the literature. Software engineers, architects (as Alexander who first introduced this term) and designers very often use – or rather reuse – patterns to handle problems which recur over and over. Patterns have also been studied to modularize and customize web ontologies (http://ontologydesignpatterns.org). They guarantee the flexibility and maintainability of concepts and solutions in several heterogeneous scenarios.
+
+We've been investigating patterns for XML documents for some time. The overall goal of this research is to understand how the structure of digital documents can be segmented into atomic components, that can be manipulated independently and re-flowed in different contexts. Instead of defining a large number of complex and diversified structures, we have identified a small number of structures/patterns that are sufficient to express what most users need. Our idea is that a low number of patterns are enough to capture the most relevant document structures.</dc:description>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.4.2</owl:versionInfo>
+    <rdfs:comment xml:lang="en">An ontology defining formally patterns for segmenting a document into atomic components, in order to be manipulated independently and re-flowed in different contexts.</rdfs:comment>
+    <rdfs:label xml:lang="en">pattern ontology</rdfs:label>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angelo Di Iorio</dc:creator>
+    <dc:date>2013-07-16</dc:date>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1535dfefcd334dc69d546d19bc88c0b5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Nd0caf967e14044adb100a76efa30ac0b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f01e06d67144f18b5b26a2129fd4810">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0ee71f40bb0146bcab439545c2f8d161">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Record"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7107688d0214c3c95a3249d055e1d79">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Nd974da543bc24479a2ecfaa30caf5160"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfc995da1276849daad7f4b0853c66805">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Flat"/>
+    <rdf:rest rdf:nodeID="Nb7107688d0214c3c95a3249d055e1d79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na51575a903cb42b29f86f38e28786701">
+    <swrl:argument1 rdf:resource="urn:swrl#p"/>
+    <swrl:argument2 rdf:resource="urn:swrl#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60f2a9f5cc1b4165885556523773f2cf">
+    <rdf:first rdf:nodeID="Nb9e955692c654a528934b3c4bce53c36"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2098d945a46b4460a75086fa48207eea">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N86c44490c18c426fa666f6777f076486">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#g"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N17f2d460ea8046fca81e4b5efa832968">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne586e9da5f24469092168b51e72a6ff1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:allValuesFrom rdf:nodeID="N0143dba8ac6d4660be2ee5f21034b74c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7fec43d29a8c49a3a191c046a1422d8b">
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N79a728c48a7440a2a6dc64b6a9a36a88">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3afeedeb2bc84744ad99a058ba0bb70a">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="Nc9c25d5f7fdd4834a0c0a1d4229ff437"/>
+    <swrl:head rdf:nodeID="N60f2a9f5cc1b4165885556523773f2cf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2a8915989ecb431fb522a6c155348cad">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N05ccfa177f7e4f19a2468372d91ea2aa"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ed9ebe0dc9f4f69934e5c78188cc8be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N451235fce47f42dabdd4e4dee75df2b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndfc268377ad041f2b04c44866bf6ded0">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Nea37515d7b6c458f9ada0ae56d327c5f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5161690bf5248ec89627a9712e65f0b">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Milestone"/>
+    <rdf:rest rdf:nodeID="Ncbaba7a44f1c434398c12a74f5b22064"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6a40d7cbbecc4ca293fc4ec5a9298ef7">
+    <owl:unionOf rdf:nodeID="N124983cb35b54b8c86298a7bb6207e8d"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#containsAsHeader">
+    <rdfs:label xml:lang="en">contains as header</rdfs:label>
+    <rdfs:comment xml:lang="en">A structured element contains another generic element as part of its header.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <owl:inverseOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedByAsHeader"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N377bd18e5bcd485f828f5d8949690d41">
+    <rdf:rest rdf:nodeID="Ndfc268377ad041f2b04c44866bf6ded0"/>
+    <rdf:first rdf:nodeID="N1bac2fd044eb4cbcac90e49000b956f1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25bfd4d541e146488f08d113a6e2d97f">
+    <rdf:rest rdf:nodeID="N8e97a92b7a8247f39dda786455649d77"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Flat">
+    <rdfs:comment xml:lang="en">The class of elements that can contain text nodes but no elements.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">flat element</rdfs:label>
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Mixed"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#NonStructured"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfca28818c94f42f79f57db6dc57c7569">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Na51575a903cb42b29f86f38e28786701"/>
+    <rdf:rest rdf:nodeID="N3c7f517d6d8b441991b81d23f5da93a6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4544c48641bd4f70972e361904210267">
+    <rdf:rest rdf:nodeID="N09aa8771865843979997d12c1307f64c"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9658ee54b6b64e8880079af85db64d7e">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Table">
+    <owl:equivalentClass rdf:nodeID="Na896217e814e4d11b376c1992da07f03"/>
+    <rdfs:comment xml:lang="en">This class describes container elements that must contain only homogeneous elements (but they can be repeated).</rdfs:comment>
+    <rdfs:label xml:lang="en">table element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N124983cb35b54b8c86298a7bb6207e8d">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:rest rdf:nodeID="Nbd40194d777a4d10adfdab25dec26ec6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3fc9599625e549d3b67b06d15d0b6695">
+    <rdf:rest rdf:nodeID="N71bcad8710534a4cb0b17dc5c3721044"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Marker"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8d73275a6f6f493094d45ddea72d6042">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Record"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nea37515d7b6c458f9ada0ae56d327c5f">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#NonStructured">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N472554b3f656487da0dfe324846aef33"/>
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+    <rdfs:comment xml:lang="en">The class of elements that cannot contain other elements.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
+    <rdfs:label xml:lang="en">non-structured element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Inline">
+    <rdfs:subClassOf rdf:nodeID="Na0bf562dd0314e2d8848f472d8416bcf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N66a566ce29a64b6483f3136092fc13ac"/>
+    <rdfs:comment xml:lang="en">This class has the same use and content model of the pattern Block, but differing primarily because a) inline elements can contain other elements compliant with the same pattern while block elements cannot, and b) inline elements must always be contained by other block or inline elements and by no other type of element.
+
+These constraints also imply that inline elements cannot be used as root elements of documents and that the class Block is disjoint with the class Inline (i.e., a markup element cannot be a block and an inline at the same time).</rdfs:comment>
+    <owl:equivalentClass rdf:nodeID="N074ef6aaa2f844fd86cc344242ffdcf6"/>
+    <rdfs:label xml:lang="en">inline element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf8aa898ef1a74f07911a4e30329aa5c9">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Table"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N09aa8771865843979997d12c1307f64c">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#p">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Popup">
+    <rdfs:subClassOf rdf:nodeID="N06b1ba5781104f5ca7d90fb1c36b1f75"/>
+    <owl:equivalentClass rdf:nodeID="N3b2357524c5a478e8276fac7031b46e8"/>
+    <rdfs:label xml:lang="en">popup element</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Na04b8238a0aa49c0930604ebbb8b0ab6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">This class defines bucket elements that are only present within block and inline elements. Popup elements are used whenever complex structures need to be placed within content elements such as paragraphs. </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4c1ddc7c4bb64e819ac537797a3236b0">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+    <rdf:rest rdf:nodeID="Nc7bf1d97bf154a8ebbb0a7c23182aec8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6319efef7bfd4ddb900687316fce9d86">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#z"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8fb846a820334b2790d8f8dbed602301">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHeteronymousElements"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c03ddad48064c58997c4bd076bcc810">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Meta"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Field">
+    <rdfs:label xml:lang="en">field element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N106586b500a34369a14b160e94092c18"/>
+    <rdfs:comment xml:lang="en">This class is defined to describe literal metadata or text that is not really part of the document body, contrarily to its disjointed sibling Atom. Its main difference with Meta is that Field can contain textual content.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd0caf967e14044adb100a76efa30ac0b">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#s">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb535bec60d954e20a5afebd8e9e9f620">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N5cd48668c27e4b758d24b6f515e2e481"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne24caa3d8fb84ac7b05f1b2cd5a88c46">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#t"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Pattern">
+    <rdfs:label xml:lang="en">pattern-based element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A structural pattern is an atomic component of a document, that is able to capture a recurrent and well knwon structure of a document.
+
+Any entity belonging to this class is compliant with exactly one structural pattern.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6638f4e3f3df468a8e3ffc068e003b4d">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N3e55ff9bc01d4a17a5e2bdbfa576d184"/>
+    <rdf:rest rdf:nodeID="N8266b3ea5c2e4d1ab948027f89bb5a3e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N726385f8816d47ee9fae9e7806415a97">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Textual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c5b58e184d54b0cbe7f870212f66808">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1b8adc93ce6435c9c173cc1ed7a3448">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N71bcad8710534a4cb0b17dc5c3721044">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Nc2dd2728dffa45ffb427bb4aa5c7b109"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Atom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.essepuntato.it/2008/12/pattern#Field"/>
+    <rdfs:label xml:lang="en">atom element</rdfs:label>
+    <rdfs:comment xml:lang="en">This class is defined to describe literal text that is part of the document body. Moreover, similarly to Inline, elements following the Atom pattern can only be contained within block or inline elements (and consequently they also cannot be used as root elements of documents). It can contain textual content and no other elements.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Nd5d8a90f3eeb4df5894f557ddecfb713"/>
+    <owl:equivalentClass rdf:nodeID="Nff2096682bf9447599c3e15e6f06bad1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N647c6c1638c0474a914d6e9024827066">
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Record">
+    <rdfs:comment xml:lang="en">This class describes container elements that can only contain heterogeneous and non repeatable elements.</rdfs:comment>
+    <owl:equivalentClass rdf:nodeID="N30febbd613b14adebb29e454eb03863c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">record element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1bac2fd044eb4cbcac90e49000b956f1">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf339e89d43c6463cbee71d0c47ac3c49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHomonymousElements"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b752329d0af4f26ab25629fbdc3e006">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N3843c7ab3c564c00bbc0299533d8c532"/>
+    <rdf:rest rdf:nodeID="N4a1899d2940349c992f08c006931e645"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N948eb29eaf974592a51179ad4d7a4819">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Record"/>
+    <rdf:rest rdf:nodeID="N24939524a8c3424e9aa6b48d37f031ef"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3264a8b48640408c9db079de18c768f6">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N102354f6991c4075bd3394b52fa94db4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N44342b705eb74e85a97e53998ab00cf7"/>
+    <rdf:first rdf:nodeID="N6319efef7bfd4ddb900687316fce9d86"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N70e28511f61b41ed873e84f9535b2e08">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N8fb846a820334b2790d8f8dbed602301"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61c10beeacb34f3abdc1a18718a617eb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N9dade55a377a4914baec12148cf8802a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncae2c14ae4b64421a1fa5bb625017127">
+    <rdf:rest rdf:nodeID="N4c8cc33ad1274b0986321f9853ad565e"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9ee8c2c8a74641c3920ffb275aafc3c2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N0ee71f40bb0146bcab439545c2f8d161"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c975000be8f4087accc52bef036237b">
+    <swrl:head rdf:nodeID="N4fd921b0d65446c29ed61fb46de56091"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="N584d466842cf463c99d65ec34e8ae13c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N33749cc136dc4c3b8c3269666256aa91">
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98682caea14549859519a66030210ef7">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Meta"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b2357524c5a478e8276fac7031b46e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N49169a3688a346d2a45579e27318c758"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9c25d5f7fdd4834a0c0a1d4229ff437">
+    <rdf:first rdf:nodeID="N59d28c1636164e5abaf5d233bc42a73e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf4c252e01af64148be6b062f0d33a5fa">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Na1b2f39c442d464a9d4283485e4294de"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf150ea37a6f4bcbba004468637d07fa">
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHeteronymousElements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N66f57f24fd404f4b98daa00748a0c2f6">
+    <owl:allValuesFrom rdf:nodeID="N3ed9ebe0dc9f4f69934e5c78188cc8be"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59216d76c6124a9f9ef1e29b8bc34f9a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Na7c6b0b69d324719be615dd40acb72de"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a467d9cfa594fb88bfa98c0f4ada374">
+    <rdf:rest rdf:nodeID="N3c97cd19f5a249788ac7b2d5b11094a0"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Flat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7397e7ee00eb4d01b12bc7ba22b9bd8b">
+    <rdf:first rdf:nodeID="N5e38c3f4d8134fdf9e100860e2e14ade"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N6ae1f05efc7f43749d603f7008eecfd7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na7f9a68605734973be638c40d6ee70b2">
+    <rdf:first rdf:nodeID="N79c123f87d0f40c8ac862c4cb0bd559e"/>
+    <rdf:rest rdf:nodeID="N077532623df14f49b9b86badcccda4ff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Textual">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
+    <rdfs:label xml:lang="en">textual element</rdfs:label>
+    <rdfs:comment xml:lang="en">The class of elements that can have textual content in their content models.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N68954d40aaea48ab91fb75c7e5164bdc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:allValuesFrom rdf:nodeID="N61c10beeacb34f3abdc1a18718a617eb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8b379975d6c4776b27be550908972bb">
+    <owl:intersectionOf rdf:nodeID="N3fc9599625e549d3b67b06d15d0b6695"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fd83bf014d04245be4b6f63cd2c0409">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+    <rdf:rest rdf:nodeID="Nc5161690bf5248ec89627a9712e65f0b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25f403645fbd452eb9f7ee0978437672">
+    <rdf:rest rdf:nodeID="N36cbfd5b57134293a08cb08239d3185a"/>
+    <rdf:first rdf:nodeID="N79a728c48a7440a2a6dc64b6a9a36a88"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N938760870ccb4ec68c3e440d6dee1e65">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N7dac32c198104abe9756a872d59706ca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbe8c886908b4414989073359720f2c9e">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf9db0a3b956447dda4bf24f1ed42f822">
+    <rdf:first rdf:nodeID="N17f2d460ea8046fca81e4b5efa832968"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N102354f6991c4075bd3394b52fa94db4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7eee72efbf57436c8805b2f230cc7171">
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHeteronymousElements"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#p"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8ecb3ec562c64bb2a24d49c5d7a19a39">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#canContainHomonymousElements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N078c13c9baf04672ab75567f2dccdfdc">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Meta"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N730b84f596324a07b556c3d9a75dddd0">
+    <rdf:rest rdf:nodeID="Nd398ceaba0ec4b66a5ca499d902aaff7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Ncbbdd447380e425d89708150fa115db7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N72e2df59975a4ef3b310ad404ce856b8">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N726385f8816d47ee9fae9e7806415a97"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N019f9ac962544e878acfa5527701dff5">
+    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#notEqual"/>
+    <swrl:arguments rdf:nodeID="N598f1f75775d4ae28e6f2b85e1aca9a9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44342b705eb74e85a97e53998ab00cf7">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N0e3f838e4d8c440dafe9ff00ae45aad8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8266b3ea5c2e4d1ab948027f89bb5a3e">
+    <rdf:first rdf:nodeID="Nfb14dd04651a4a1f943e0bc9767e5622"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1586e1234af84f11a8ce4c0b6ffa4385">
+    <rdf:first rdf:nodeID="N66f57f24fd404f4b98daa00748a0c2f6"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ae381b428b0434ebbc452fcc4451dd0">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N054fe0ae3ba34b2dbe3da4f0c3efbf4a"/>
+    <rdf:first rdf:nodeID="N8c03ddad48064c58997c4bd076bcc810"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#HeadedContainer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">headed-container element</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N59216d76c6124a9f9ef1e29b8bc34f9a"/>
+    <rdfs:comment xml:lang="en">This class describes container elements whose content model need to begin with one or more block elements (the heading), specified through the property containsAsHeader.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc6fe88c807a84e5486e8346a413d91fc">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N67a694e22ccf46589fb167667487b61f">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N6ed10a26462f46d58f137f6ee4b7d8a0"/>
+    <rdf:first rdf:nodeID="N1499738b19c240b7a625f929bf8ffe68"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#Structured">
+    <rdfs:comment xml:lang="en">The class of elements that can contain other elements.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Pattern"/>
+    <rdfs:label xml:lang="en">structured element</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N185f543c3cb34ed1875179107774033e">
+    <swrl:body rdf:nodeID="N25f403645fbd452eb9f7ee0978437672"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="N5bd17241848c443e926b199d2b9a06e5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18229a66485c40b2836470b25daee371">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N019f9ac962544e878acfa5527701dff5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1b2f39c442d464a9d4283485e4294de">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+    <swrl:argument2 rdf:resource="http://www.essepuntato.it/2008/12/pattern#s"/>
+    <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#hasName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne24f39e80e6a45b9b6918cba9723fff1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="N70e28511f61b41ed873e84f9535b2e08"/>
+    <swrl:body rdf:nodeID="N45434dc54e8840fb8ed797b43b591aba"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc346fe01d5d342da9da84092c75b9908">
+    <swrl:body rdf:nodeID="Nfca28818c94f42f79f57db6dc57c7569"/>
+    <swrl:head rdf:nodeID="Nb295e4870a0e429fb0a6df9be25158fe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44eca76a96194a9d8a9d247a5e54e0ab">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:rest rdf:nodeID="N33480f54b29c435492551f7ffa51eba4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3ebaab9ef5a417c8029277189c19d67">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N5886f6cae5354d7182342236c2d2aeb6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N106586b500a34369a14b160e94092c18">
+    <owl:intersectionOf rdf:nodeID="N7a467d9cfa594fb88bfa98c0f4ada374"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c9af85d46aa419cb966cdf89b66d4d1">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Field"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#y"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N584d466842cf463c99d65ec34e8ae13c">
+    <rdf:first rdf:nodeID="N831bef44eec0434b98b557641c2d4e81"/>
+    <rdf:rest rdf:nodeID="N2bfa2040dbcc4904837b8039bb3905e8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nddd083e78f404442b6caf24839b76347">
+    <swrl:body rdf:nodeID="Nf15d86deb3ab441ba2ea9eb1df36972f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:head rdf:nodeID="Naff003b7ce424807841c9892853a5c82"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf821eb014224f61bfa80a11e06a53ee">
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf3919c09811e4cec898fc1c33e743563">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <owl:allValuesFrom rdf:nodeID="N6a40d7cbbecc4ca293fc4ec5a9298ef7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#isContainedBy">
+    <rdfs:label xml:lang="en">is contained by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">An element that is contained by another structured element.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N41f80173c3e24e888789273dfb005ebf">
+    <rdf:first rdf:nodeID="N48c4352853b54637aca6acf42eee39d5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N886efdfa45d445e2aca05d7f0d5e6717">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncb44f97ce7ee4e8d9c5685e245c24fff">
+    <swrl:head rdf:nodeID="N41f80173c3e24e888789273dfb005ebf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="N3b752329d0af4f26ab25629fbdc3e006"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8b2434126aea44fa8db51a18b2a94a3c">
+    <rdf:rest rdf:nodeID="Nbe8c886908b4414989073359720f2c9e"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N243056f95a5a4a9e8097327dfe2c830c">
+    <rdf:rest rdf:nodeID="Na7f9a68605734973be638c40d6ee70b2"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#g">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3843c7ab3c564c00bbc0299533d8c532">
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Table"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na94287e6f97c4f708d1f513f36c31669">
+    <rdf:first rdf:nodeID="N33749cc136dc4c3b8c3269666256aa91"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="N1535dfefcd334dc69d546d19bc88c0b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N756560087bbc4bbe8d25a48163bbf19c">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#t"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N472554b3f656487da0dfe324846aef33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:resource="http://www.essepuntato.it/2008/12/pattern#Structured"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6600dd93f0e94a2ea649c5da26ccc022">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Field"/>
+    <rdf:rest rdf:nodeID="N078c13c9baf04672ab75567f2dccdfdc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0f07e58fe84495dac7c788b11c73b87">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+    <rdf:rest rdf:nodeID="N05aae11022d146fcb8e6577fec31088d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2bfa2040dbcc4904837b8039bb3905e8">
+    <rdf:rest rdf:nodeID="Nabcd8af646054749baeeb01afb0b5ba3"/>
+    <rdf:first rdf:nodeID="Nc7b6e54fb55b4bf796f572491b8fc16a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7dac32c198104abe9756a872d59706ca">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="N741c4808dfef41a6a8f0bda257a97f9a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5bd17241848c443e926b199d2b9a06e5">
+    <rdf:first rdf:nodeID="N7f01e06d67144f18b5b26a2129fd4810"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd974da543bc24479a2ecfaa30caf5160">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Nab41d8b6c7054481936ca1a0783d21cf"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#isContainedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4d33399b7854b5c8b594f4723426135">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Mixed"/>
+    <rdf:rest rdf:nodeID="N1586e1234af84f11a8ce4c0b6ffa4385"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N90aac8f213e2413aab7c4338b23cd83e">
+    <rdf:rest rdf:nodeID="Nbf4a7e908c2c4f408ce007f92c767593"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0c55705061ce430cb5c003ca780ff22b">
+    <rdf:rest rdf:nodeID="N6600dd93f0e94a2ea649c5da26ccc022"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc7bf1d97bf154a8ebbb0a7c23182aec8">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbbd2c8dbf61049fab6a13fe375263cf1">
+    <owl:unionOf rdf:nodeID="N44eca76a96194a9d8a9d247a5e54e0ab"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f66f9b1dbff4a0183e5b407d90525b8">
+    <rdf:rest rdf:nodeID="N0c55705061ce430cb5c003ca780ff22b"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a1899d2940349c992f08c006931e645">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Nb1b8adc93ce6435c9c173cc1ed7a3448"/>
+    <rdf:rest rdf:nodeID="Nd8d426b1ef8b47c2a25420a482e8fde5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05aae11022d146fcb8e6577fec31088d">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ae1f05efc7f43749d603f7008eecfd7">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:rest rdf:nodeID="Ne3ebaab9ef5a417c8029277189c19d67"/>
+    <rdf:first rdf:nodeID="N86c44490c18c426fa666f6777f076486"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d0c35e912fb41c8a6205758efea9082">
+    <rdf:rest rdf:nodeID="N90aac8f213e2413aab7c4338b23cd83e"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Atom"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f63e0c410914cebbd831349d60139b0">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Inline"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5896cc546ca0499aac8e6b125feacb8c">
+    <rdf:first rdf:nodeID="N2098d945a46b4460a75086fa48207eea"/>
+    <rdf:rest rdf:nodeID="Nf4c252e01af64148be6b062f0d33a5fa"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncfea2c5810754d9da50f25d9cf01786e">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Bucket"/>
+    <rdf:rest rdf:nodeID="N74cba743a2104eacb2a6e69ba2f96d0a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N01027e50dcdf4743990bb084ade74e4d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="N850a7b8a71384e32b3ab863aa48e112f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf15d86deb3ab441ba2ea9eb1df36972f">
+    <rdf:rest rdf:nodeID="Nf9db0a3b956447dda4bf24f1ed42f822"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Nf8aa898ef1a74f07911a4e30329aa5c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4fd921b0d65446c29ed61fb46de56091">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N7fec43d29a8c49a3a191c046a1422d8b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2cc6a9dd3e1646e8a08b4de3448410b2">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="Nc7bbb073ae404c0392c46c3057f22f32"/>
+    <swrl:head rdf:nodeID="Nb535bec60d954e20a5afebd8e9e9f620"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nabcd8af646054749baeeb01afb0b5ba3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="Ne6bb4ff543bc4c579fff031f6f57ad29"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0143dba8ac6d4660be2ee5f21034b74c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nd916c53c680a4b178546bb1d0acd714d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49169a3688a346d2a45579e27318c758">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Bucket"/>
+    <rdf:rest rdf:nodeID="N6fd13b8302ab43ce83caa88c81e1dd53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N20868eaaf13b4e94883f44f115abba90">
+    <rdf:first rdf:nodeID="N68954d40aaea48ab91fb75c7e5164bdc"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d0f936f60e040e99be8291f1a319448">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:rest rdf:nodeID="N3264a8b48640408c9db079de18c768f6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N87519a1a76824d87adae59762c488ead">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2008/12/pattern#contains"/>
+    <owl:allValuesFrom rdf:nodeID="N0b1ea2844b5f46a6a4b47b9f937bfa51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff2096682bf9447599c3e15e6f06bad1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nfc995da1276849daad7f4b0853c66805"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd25f62b7cac54e3ab89245c931847507">
+    <rdf:rest rdf:nodeID="N0a0d1163d2a54cf8aebcb92624dc2d50"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Nd00c56527b08406793f556542cd9fb69"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb06dd47c689b42a4bd71618e0f6d5889">
+    <owl:unionOf rdf:nodeID="N4f66f9b1dbff4a0183e5b407d90525b8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c7f517d6d8b441991b81d23f5da93a6">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="N1227435249ef4cf4bfd93e10f707fa02"/>
+    <rdf:rest rdf:nodeID="N6638f4e3f3df468a8e3ffc068e003b4d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncbaba7a44f1c434398c12a74f5b22064">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Popup"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N478454d9221e483baf15dec62b6761a5">
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Block"/>
+    <rdf:rest rdf:nodeID="N5f63e0c410914cebbd831349d60139b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na896217e814e4d11b376c1992da07f03">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ncae2c14ae4b64421a1fa5bb625017127"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na7c6b0b69d324719be615dd40acb72de">
+    <rdf:rest rdf:nodeID="Nfd5031b0c4d04546887ecced75f2bb7b"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45f33848bfc74496b45a18425d49a5d6">
+    <owl:unionOf rdf:nodeID="Nc0f07e58fe84495dac7c788b11c73b87"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#t">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#y">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60ec8457143a407da6a7f9b4095a7fc9">
+    <rdf:rest rdf:nodeID="N5896cc546ca0499aac8e6b125feacb8c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+    <rdf:first rdf:nodeID="Nf50c90b884cf4c75979d6070ddc1f4d4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd916c53c680a4b178546bb1d0acd714d">
+    <rdf:rest rdf:nodeID="N46c5742e02e649f8a72219f38d478b9f"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Container"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a0b9198f1c2465489a8525c3f7541db">
+    <rdf:rest rdf:nodeID="N98682caea14549859519a66030210ef7"/>
+    <rdf:first rdf:resource="http://www.essepuntato.it/2008/12/pattern#Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#s">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf50c90b884cf4c75979d6070ddc1f4d4">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+    <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2008/12/pattern#Field"/>
+    <swrl:argument1 rdf:resource="http://www.essepuntato.it/2008/12/pattern#x"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#z">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:swrl#x">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2008/12/pattern#x">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+  </rdf:Description>
+</rdf:RDF>

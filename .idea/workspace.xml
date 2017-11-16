@@ -2,7 +2,541 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd230998-a8b3-464a-bd7c-f2856d58b871" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/ontologies_map.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ontologies_map.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/run.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/upload.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpadveneorgnscinelabld" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpaimsfaoorgaosgeopoliticalowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httparchiviibcregioneemilia_romagnaitontologyeac_cpf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpbblfishnetworkatom_owl2006_06_06" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpbibframeorgvocab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpcedriccnamfrisidontologiesPersonLinkowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpcode_researcheuontologyvisual_analytics" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpcomicmetaorgcbo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpcontsemunizaresdefsector_publicopproc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpcreativecommonsorgns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpd_nbinfostandardselementsetagrelonowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpd_nbinfostandardselementsetgnd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataarchiveshubacukdef" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataignfrdefgeofla" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataignfrdefgeometrie" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataignfrdefignf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataignfrdeftopo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatalirmmfrontologiesfood" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatalirmmfrontologiesoan" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatalirmmfrontologiesosp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatalirmmfrontologiespassim" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatalirmmfrontologiesposte" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatalirmmfrontologiesvdpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataopendiscoveryspaceeulom_ontology_odsowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataordnancesurveycoukontology50kGazetteer" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataordnancesurveycoukontologyadmingeo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataordnancesurveycoukontologygeometry" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataordnancesurveycoukontologypostcode" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdataordnancesurveycoukontologyspatialrelations" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatapressnetontologyasset" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatapressnetontologyclassification" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatapressnetontologyevent" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatapressnetontologyidentifier" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatapressnetontologystuff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatapressnetontologytag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatatotlnetgame" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatibeniculturaliitcultural_ONcultural_ONowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdaticameraitocd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdaticdecitlodshoah" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatiisprambienteitontologycore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdatisanbeniculturaliitSAN" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdbpediaorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191032005basic" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191072003geometry" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191082002temporal" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191092005feature" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191152003dataquality" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191152003extent" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191152003lineage" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191152003metadata" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso19150_22012basic" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191562011observation" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauisotc211iso191562011sampling" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauontologyomom_lite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdefseegridcsiroauontologyomsam_lite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdeliciasdiafiupmesontologiesObjectWithStatesowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpdevpoderopediacomvocabschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpelitepolitoitontologiesdogontowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpenvironmentdatagovaudefop" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpeprintsorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httperlangen_crmorgcurrent" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpgeovocaborggeometry" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpgeovocaborgspatial" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpgovgenealogynetontologyowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpguavaiissinicaedutwithr4r" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpidlocgovvocabularyrelators" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpiflastandardsinfonsfrfrad" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpiflastandardsinfonsfrfrbrfrbrer" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpiflastandardsinfonsisbdelements" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpinference_weborg20dsowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpinference_weborg20pml_provenanceowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpiservekmiopenacuknshrests" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpiservekmiopenacuknsmsm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpkmiopenacukprojectssmartproductsontologiesfoodowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplawdinfoontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplemon_modelnetlemon" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplexvoorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkeddatacenterkeesv1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkeddatafinkiukimmklodontologycfrl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkeddatafinkiukimmklodontologytao" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkeddatafinkiukimmklodontologyveo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkedearthontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkedeventsorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkedopendataczontologyldvm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkedscienceorglscns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplinkedscienceorgteachns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplodgeodannlvocabbag" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplodnlgokrontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplodtaxonconceptorgontologysci_peopleowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplodtaxonconceptorgontologytxnowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplodxdamsorgreloadoad" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplotedeuontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplsdiscsugaeduprojectssemdisopus" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httplsqaksworgvocab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpmetadataregistryorgurischemaRDARelationshipsGR2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpmexaksworgmex_algo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpmexaksworgmex_core" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpmexaksworgmex_perf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpndlgojpdcndlterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsbergnetorgtac01triple_access_control" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrastsql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafremoca" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrludo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrludov1gamemodel" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrludov1gamepresentation" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrludov1virtualcontext" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrludov1xapi" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrnicetag20100909voc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrnrv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrprissmav2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrprovoc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsinriafrs4acv2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpnsnaturecomterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpogpmens" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontodm2eeuschemasdm2e" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepeduELSEWebelseweb_dataowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepeduELSEWebelseweb_edacowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepeduELSEWebelseweb_lifemapper_parametersowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepeduELSEWebelseweb_lifemapperowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepeduELSEWebelseweb_modellingowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepeduELSEWebmappingselseweb_mappingsowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologycybershareutepedudbowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologyeilutorontocaGCIFoundationGCI_Foundationowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologyeilutorontocaISO37120owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologyeilutorontocaicontactowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologyeilutorontocaopen311owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpontologyititsmov1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpopen_servicesnetnsasset" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpopen_servicesnetnscore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpopenprovenanceorgmodelopmo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpopenvocaborgterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppaulstarochnamethesisSmartHomeWeatherowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppersistenceuni_leipzigorgnlp2rdfontologiesnif_core" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppersistenceuni_leipzigorgnlp2rdfontologiesrlog" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppremonfbkeuontologyfn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppremonfbkeuontologynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppremonfbkeuontologypb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppremonfbkeuontologyvn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpprivatealphacomontologycertification1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlobolibraryorgoboobiowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurloclcorgNETUNISfiwareiot_lite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurloclcorgNETldrns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurloclcorgNETmvcoowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurloclcorgNETssnxcfcf_property" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurloclcorgNETssnxmeteoaws" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurloclcorgNETssnxququ" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgNETbiolbotany" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgNETbiolns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgNETc4dmeventowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgNETc4dmkeysowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgNETc4dmtimelineowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgaccons" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgbiodiversitytaxon" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgbiotopbiotopowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgceriffrapo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgcldcdtype" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgcldterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgco" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgconfigurationontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgcoons" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgcwmo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdcdcam" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdcdcmitype" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdcelements11" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdcterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgditans" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdpn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdqm_vocabularyv1dqm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgdsnotifyvocabeventset" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgeisvocabdaq" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgessglobalvocab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorggen01" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorggoodrelationsv1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorghealthcarevocabv1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorghpipatchr" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgimbiru_metaowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorginnovationns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgiotontologyfiesta_iot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgiotvocabm3_lite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgipocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglimo_ontologylimo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglinguisticsgold" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglinked_datacube" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglinked_datasdmx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglinked_datasdmx2009code" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglinked_datasdmx2009dimension" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglinkingyou" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorglobidlv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgmedia" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgmutocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetVideoGameOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetdbmontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnethifmontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetlio" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetnknoufnsbibtex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetnsex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetnsontology_annot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetopmvns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetp_plan" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetpo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetprovenancens" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetprovenancetypes" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetstep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetwf_invocation" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgnetwf_motifs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgoliaubyCatowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyaf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyaocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologybibo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyccocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologychord" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologycocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologydvia" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyecpo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyholding" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyiscore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologymo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyolocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologypbocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologypo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyprvcore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyreccore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologyservice" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologysimilarity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologystoryline" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologywicore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologywo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgontologywocore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgopdmrefrigerator" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgoslonslocalgov" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgpav" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgprocurementpublic_contracts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgqb4olapcubes" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgreco" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgrss10" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsawsontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparbiro" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparc4o" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparcito" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgspardatacite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgspardeo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgspardoco" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparpro" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparpso" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparpwo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgsparscoro" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgstuffrev" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgtheatre" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgtions" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgtwcontologycdmowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgtwcvocabconversion" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgucons" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgumuuneskos" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabaiisoschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabbio01" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabchangesetschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabfrbrcore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabfrbrextended" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocablifecycleschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabparticipationschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabrelationship" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocabvann" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocommonsvoaf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvocsumma" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvsons" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgvvons" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgwai" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgwf4everro" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgwf4everwfdesc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgwf4everwfprov" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurlorgxapiontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httppurluniprotorgcore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementsa" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementsc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementse" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementsi" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementsm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementsu" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdaregistryinfoElementsw" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdf_vocabularyddiallianceorgdiscovery" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdf_vocabularyddiallianceorgphdd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdf_vocabularyddiallianceorgxkos" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfinseefrdefdemo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfinseefrdefgeo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfmuninn_projectorgontologiesappearances" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfmuninn_projectorgontologiesmilitary" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfmyexperimentorgontologiesbase" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfmyexperimentorgontologiessnarm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfscobevon" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfscojuso" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfscojusokr" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfsorgscotns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfsorgsiocns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfsorgsioctypes" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdfunitaksworgnscore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdvocabinfoElements" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdvocabinfoElementsGr2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdvocabinfoElementsGr3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdvocabinfoRDARelationshipsWEMI" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdvocabinforoles" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprdvocabinfourischemaFRBRentitiesRDA" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpreegleinfoschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpreferencedatagovukdefcentral_government" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpreferencedatagovukdefintervals" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpreferencedatagovukdeforganogram" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpreferencedatagovukdefparliament" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpreferencedatagovukdefpayment" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpresourcegeoscimlorgontologytimescalegts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpresourcegeoscimlorgontologytimescalethors" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httprhizomiknetontologiescopyrightontoowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsbmaketh_brandenburgdespv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpschemaorg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpschematheodiorgodrs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsecuritytoolboxappspotcomMASO" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsecuritytoolboxappspotcomsecurityAlgorithms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsecuritytoolboxappspotcomsecurityMain" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsecuritytoolboxappspotcomstac" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemanticscienceorgontologysioowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemanticwebcsvunl200911sem" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemwebmmlabbensapps4X" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemwebmmlabbensodapps" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemwebmmlabbensoh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemwebmmlabbensstoptimesOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsemwebqualityorgontologiesdq_constraints" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsensormeasurementappspotcomonthomehomeActivity" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsimilemitedu200310ontologiesvraCore3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsoftengpolitoitrsctx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsparqlcwrccaontologiescwrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsparqlssturu3030speciality" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpspinrdforgsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpspinrdforgspin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpspitfire_projecteuontologyns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsrawgithubusercontentcomairs_linked_datalovlatestsrcairs_vocabularyttl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpstreamreasoningorgontologiesfrappe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsvocabeccencacompubsub" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsvocabeccencacomrevision" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgBCI_ontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgi40aml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgi40rami" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgi40sto" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgmultidimensional_interfaceontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgpep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgrdfp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgsaref" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseas" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasBatteryOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasBuildingOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasDeviceOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasEvaluationOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasFeatureOfInterestOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasForecastingOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasOperatingOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasQUDTAlignment" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasStatisticsOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasSystemOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasTimeOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgseasTradingOntology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpsw3idorgvocabxbrll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpswacefrielitontologiesbotdcat_ap" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpswrcontowareorgontology_07" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpswwwautotuwienacatdownloadsthinkhomeontologyWeatherOntologyowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpswwww3orgnsssn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httptour_pediaorgdownloadtpowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpumbelorgumbel" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpuri4urinetvocab" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpusefulinccomnsdoap" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvcharpenaygithubiohtohtoxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvivoweborgontologycore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabdatagovdefdrm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabdatagovdeffea" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabdatagovgd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabdatagovhosp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabdatexorgterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiebr" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiec4n" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiecogs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiecsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiedady" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiieodapp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiieorca" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiepdo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiieppo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiieraul" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiierooms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiescovo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiescsv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiiesearch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiietao" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabderiievoid" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabgettyeduontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabgtfsorgterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocablenkanogeo_deling" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocaborgwhiskyterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabrescinfocommunication" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpvocabrescinfoincident" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpw3idorgcharta77jup" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpw3idorgmedredmedred" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwaglsgovauaglsterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwbbccoukontologiesbbc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwbbccoukontologiescoreconcepts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwbbccoukontologiescreativework" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwbbccoukontologiesprovenance" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwbbccoukontologiessport" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwbiopaxorgreleasebiopax_level3owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwblukschemasbibliographicblterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwcidoc_crmorgcidoc_crm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwdemcareeuontologiescontextdescriptorowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwdemcareeuontologiesdemlabowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwdisitorgkm4cityschema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwebuchmetadataontologiesebucoreebucore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwebusiness_unibworgontologiesconsumerelectronicsv1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwessepuntatoit200812pattern" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwessepuntatoit201204tvc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwessepuntatoit201303cito_functions" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwessepuntatoit201310vagueness" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwweuropeanaeuschemasedm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwgeonamesorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwgsiditupmesontologiesmarlns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwgsiditupmesontologiesonyxns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwholygoatcoukowlredwood01tags" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwicsforthgrislMarineTLOv4marinetloowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwicsforthgrislVoIDWarehouseVoID_Extension_Schemaowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwicsforthgrisloaecore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwicsforthgrisloncmcore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwiritfrrecherchesMELODIontologiesIoT_Lifecycle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwiritfrrecherchesMELODIontologiesIoT_O" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwiritfrrecherchesMELODIontologiesSAN" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwkanzakicomnsmusic" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwkanzakicomnswhois" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlexinfonetontology20lexinfo" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlingvojorgolca" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlingvojorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlingvojorgsemiordf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlinkedmodelorgschemadtype" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlinkedmodelorgschemavaem" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlinklionorgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlocgovmadsrdfv1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwlocgovpremisrdfv1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwmindswaporg2003owlgeogeoFeatures20040307owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwobservedchangecommoacns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwobservedchangecomtiscns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgcpowlinformationrealizationowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgcpowlparticipationowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgcpowlsequenceowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgcpowlsituationowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgcpowltimeindexedsituationowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgcpowltimeintervalowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgontdulDULowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgontdulIOLiteowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgontdulontopicowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgontlmmLMM_L1owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgontlmmLMM_L2owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgontwebirwowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontologydesignpatternsorgschemascpannotationschemaowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontotextcomprotonprotonext" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwontotextcomprotonprotontop" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwopengisnetontgeosparql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwopengisnetontgml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwopengisnetontsf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwopmworgontology" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwpurlorgnetremetca" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwsensormeasurementappspotcomonttransporttraffic" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwtelepwedupl~sims_ontoConnectivityTypeowl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org19990222_rdf_syntax_ns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200001rdf_schema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200010swaplog" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200010swappimcontact" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200010swappimdoc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200102pdrec54" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2001XMLSchema" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200207owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200212calical" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200306sw_vocab_statusns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200312exifns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2003gdata_view" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200402skoscore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200403trixrdfg_1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200403trixswp_1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200409fresnel" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2005Incubatorssnssnxssn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200603test_description" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2006genont" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2006time" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2006time_entry" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2006timezone" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2006vcardns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200705powder_s" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org200805skos_xl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2011content" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3org2011http" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgTR2003PR_owl_guide_20031209wine" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgTR2003PR_owl_guide_20031215food" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsadms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsauthacl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsauthcert" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnscsvw" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsdcat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsdqv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsduv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsearl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnshydracore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsldp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnslocn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsma_ont" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsmls" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsoa" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsodrl2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsorg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsperson" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsprov" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsr2rml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsradion" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsrdfa" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsregorg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnssosa" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnssparql_service_description" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsssn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwww3orgnsui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpwwwwsmoorgnswsmo_lite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpxmlnscomfoaf01" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/downloaded/httpxmlnscomwot01" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/test/downloaded_tests/httppurlorgdcdcmitype" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/downloaded_tests/httppurlorgdcelements11" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/downloaded_tests/httppurlorgdcterms" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/downloaded_tests/httpwwww3org200207owl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/downloaded_tests/httpxmlnscomfoaf01" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/ontologies_map.json" afterPath="$PROJECT_DIR$/test/ontologies_map.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +556,31 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="352">
+              <caret line="78" column="112" lean-forward="false" selection-start-line="78" selection-start-column="112" selection-end-line="78" selection-end-column="112" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="371">
+                <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ontologies_list.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ontologies_list.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -49,11 +606,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="195">
+              <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,7 +629,7 @@
       <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
+            <state relative-caret-position="1140">
               <caret line="76" column="73" lean-forward="false" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
               <folding>
                 <marker date="1510774951000" expanded="true" signature="275787:275793" ph="{&quot;version&quot;: &quot;2.1.2&quot;...}" />
@@ -74,8 +641,8 @@
       <file leaf-file-name="index.Test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/index.Test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-382">
-              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state relative-caret-position="279">
+              <caret line="68" column="4" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -104,6 +671,8 @@
       <find>su</find>
       <find>map</find>
       <find>map.json</find>
+      <find>scripts</find>
+      <find>{}</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -119,9 +688,11 @@
         <option value="$PROJECT_DIR$/map.json" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/test/ontologies_list.txt" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/test/index.Test.js" />
+        <option value="$PROJECT_DIR$/run.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -136,8 +707,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1601" />
-    <option name="height" value="874" />
+    <option name="width" value="960" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -157,8 +728,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,6 +739,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,6 +753,9 @@
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test" />
     </key>
@@ -198,7 +772,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.Unnamed">
+  <component name="RunManager" selected="Node.js.Unnamed">
     <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="$USER_HOME$/.nvm/versions/node/v8.9.0/bin/node" path-to-js-file="index.js" working-dir="$PROJECT_DIR$" />
     <configuration name="Unnamed" type="mocha-javascript-test-runner" factoryName="Mocha">
       <node-interpreter>$USER_HOME$/.nvm/versions/node/v8.9.0/bin/node</node-interpreter>
@@ -242,29 +816,13 @@
       <workItem from="1510674291612" duration="398000" />
       <workItem from="1510764533955" duration="3718000" />
       <workItem from="1510771500304" duration="2794000" />
-      <workItem from="1510774334982" duration="733000" />
+      <workItem from="1510774334982" duration="1280000" />
+      <workItem from="1510829622721" duration="1434000" />
+      <workItem from="1510833811564" duration="2116000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unnamed - 2017.11.15 at 19h 24m 04s.xml">
-      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.15 at 19h 27m 36s.xml">
-      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.15 at 19h 27m 56s.xml">
-      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.15 at 19h 28m 10s.xml">
-      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.15 at 19h 28m 54s.xml">
-      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.15 at 19h 30m 35s.xml">
-      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="Unnamed - 2017.11.15 at 19h 30m 56s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -277,22 +835,41 @@
     <history-entry file="Unnamed - 2017.11.15 at 19h 34m 54s.xml">
       <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="Unnamed - 2017.11.16 at 11h 07m 26s.xml">
+      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.16 at 12h 33m 11s.xml">
+      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.16 at 12h 33m 33s.xml">
+      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.16 at 12h 33m 54s.xml">
+      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.16 at 12h 34m 03s.xml">
+      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.16 at 12h 34m 21s.xml">
+      <configuration name="Unnamed" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15176000" />
+    <option name="totallyTimeSpent" value="19273000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1600" height="873" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11779607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34175882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.5018431" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40788072" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40788072" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39072847" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.49815693" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25239617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.49815693" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -311,17 +888,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.5018431" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="100" y="123" width="1720" height="857" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40788072" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40788072" sideWeight="0.49815693" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.314164" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11690363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25239617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.081095316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.399361" sideWeight="0.49815693" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.49815693" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,21 +912,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.js</url>
-          <line>41</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/index.js</url>
-          <line>43</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/index.Test.js</url>
-          <line>68</line>
-          <option name="timeStamp" value="54" />
+          <line>78</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="mocha-javascript-test-runner">
@@ -367,6 +935,141 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontologies_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="73" lean-forward="false" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+          <folding>
+            <marker date="1510774951000" expanded="true" signature="275787:275793" ph="{&quot;version&quot;: &quot;2.1.2&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/index.Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ontologies_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="73" lean-forward="false" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+          <folding>
+            <marker date="1510774951000" expanded="true" signature="275787:275793" ph="{&quot;version&quot;: &quot;2.1.2&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/index.Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ontologies_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -509,6 +1212,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/ontologies_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ontologies_map.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="73" lean-forward="false" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+          <folding>
+            <marker date="1510774951000" expanded="true" signature="275787:275793" ph="{&quot;version&quot;: &quot;2.1.2&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -525,76 +1267,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ontologies_list.txt">
+    <entry file="file://$PROJECT_DIR$/ontologies_map.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ontologies_list.txt">
+    <entry file="file://$PROJECT_DIR$/test/index.Test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ontologies_map.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="279">
+          <caret line="68" column="4" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        <state relative-caret-position="352">
+          <caret line="78" column="112" lean-forward="false" selection-start-line="78" selection-start-column="112" selection-end-line="78" selection-end-column="112" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+    <entry file="file://$PROJECT_DIR$/run.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="76" column="73" lean-forward="false" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
-          <folding>
-            <marker date="1510774951000" expanded="true" signature="275787:275793" ph="{&quot;version&quot;: &quot;2.1.2&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/index.Test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-382">
-          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="195">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ontologies_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="371">
+            <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding />
         </state>
       </provider>

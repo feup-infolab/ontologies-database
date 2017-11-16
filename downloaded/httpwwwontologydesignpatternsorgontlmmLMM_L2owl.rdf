@@ -1,0 +1,842 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY IOLite "http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#" >
+    <!ENTITY LMM_L2 "http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#" >
+    <!ENTITY LMM_L1 "http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#"
+     xml:base="http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:IOLite="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:LMM_L1="http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#"
+     xmlns:LMM_L2="http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >Lexical MetaModel Level 2</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An ontology for aligning existing linguistic ontologies, and for describing the research objects of NLP.
+It uses the ontology IOLite.owl, a plugin of DOLCE-Ultralite for information objects; it imports LMM_L1.owl, a design pattern for the basic semiotic categories.
+The ontology also includes a proposal to match term types to referenced entity types, as an example of the usage of this ontology in NER and sense tagging applications.</rdfs:comment>
+        <owl:versionInfo
+            >1.2
+1.1
+- Edited annotations
+- Added class: Gloss
+- Added property: hasCoInterpretant
+1.2
+- Simplified several restrictions (in non-lossy way) in order to reduce complexity of reasoning</owl:versionInfo>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasMember"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasPart"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasRole"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConceptUsedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isConceptUsedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isMemberOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRoleOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isRoleOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isUnifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isUnifiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#specializes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;specializes"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isLexicalizedBy -->
+
+    <owl:ObjectProperty rdf:about="&IOLite;isLexicalizedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#lexicalizes -->
+
+    <owl:ObjectProperty rdf:about="&IOLite;lexicalizes"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#denotes -->
+
+    <owl:ObjectProperty rdf:about="&LMM_L1;denotes"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#isDenotedBy -->
+
+    <owl:ObjectProperty rdf:about="&LMM_L1;isDenotedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#isInterpretantFor -->
+
+    <owl:ObjectProperty rdf:about="&LMM_L1;isInterpretantFor"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#relatedMeaning -->
+
+    <owl:ObjectProperty rdf:about="&LMM_L1;relatedMeaning"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#OEisLexicalizedBy -->
+
+    <owl:ObjectProperty rdf:about="#OEisLexicalizedBy">
+        <rdfs:label xml:lang="en"
+            >OEis lexicalized by</rdfs:label>
+        <rdfs:domain rdf:resource="&IOLite;FormalExpression"/>
+        <rdfs:range rdf:resource="&IOLite;LinguisticObject"/>
+        <rdfs:subPropertyOf rdf:resource="&IOLite;isLexicalizedBy"/>
+        <owl:inverseOf rdf:resource="#lexicalizesOE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#hasCoInterpretant -->
+
+    <owl:ObjectProperty rdf:about="#hasCoInterpretant">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label
+            >has co-interpretant</rdfs:label>
+        <rdfs:comment
+            >A relation between two meanings that are both interpretant for a same information object.</rdfs:comment>
+        <rdfs:domain rdf:resource="&LMM_L1;Meaning"/>
+        <rdfs:range rdf:resource="&LMM_L1;Meaning"/>
+        <rdfs:subPropertyOf rdf:resource="&LMM_L1;relatedMeaning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#hasInstance -->
+
+    <owl:ObjectProperty rdf:about="#hasInstance">
+        <rdfs:label xml:lang="en">has instance</rdfs:label>
+        <rdfs:domain rdf:resource="&DUL;Concept"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;classifies"/>
+        <rdfs:range rdf:resource="&LMM_L1;Reference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#hasSyntacticFunction -->
+
+    <owl:ObjectProperty rdf:about="#hasSyntacticFunction">
+        <rdfs:label xml:lang="en"
+            >has syntactic function</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRole"/>
+        <rdfs:range rdf:resource="&IOLite;LinguisticFunction"/>
+        <rdfs:domain rdf:resource="&IOLite;LinguisticObject"/>
+        <owl:inverseOf rdf:resource="#isSyntacticFunctionOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#isInstanceOf -->
+
+    <owl:ObjectProperty rdf:about="#isInstanceOf">
+        <rdfs:label xml:lang="en">is instance of</rdfs:label>
+        <rdfs:range rdf:resource="&DUL;Concept"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isClassifiedBy"/>
+        <rdfs:domain rdf:resource="&LMM_L1;Reference"/>
+        <owl:inverseOf rdf:resource="#hasInstance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#isSyntacticFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="#isSyntacticFunctionOf">
+        <rdfs:label xml:lang="en"
+            >is syntactic function of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isRoleOf"/>
+        <rdfs:domain rdf:resource="&IOLite;LinguisticFunction"/>
+        <rdfs:range rdf:resource="&IOLite;LinguisticObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#lexicalizesOE -->
+
+    <owl:ObjectProperty rdf:about="#lexicalizesOE">
+        <rdfs:label xml:lang="en">lexicalizes oE</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Lexicalization for ontology elements.</rdfs:comment>
+        <rdfs:range rdf:resource="&IOLite;FormalExpression"/>
+        <rdfs:domain rdf:resource="&IOLite;LinguisticObject"/>
+        <rdfs:subPropertyOf rdf:resource="&IOLite;lexicalizes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection -->
+
+    <owl:Class rdf:about="&DUL;Collection"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept -->
+
+    <owl:Class rdf:about="&DUL;Concept">
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Meaning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="&DUL;Description">
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Meaning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="&DUL;InformationObject"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalArtifact -->
+
+    <owl:Class rdf:about="&DUL;PhysicalArtifact">
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Reference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan -->
+
+    <owl:Class rdf:about="&DUL;Plan"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role -->
+
+    <owl:Class rdf:about="&DUL;Role"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="&DUL;Situation">
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Reference"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TypeCollection -->
+
+    <owl:Class rdf:about="&DUL;TypeCollection"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#FormalExpression -->
+
+    <owl:Class rdf:about="&IOLite;FormalExpression"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#LinguisticFunction -->
+
+    <owl:Class rdf:about="&IOLite;LinguisticFunction">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isSyntacticFunctionOf"/>
+                <owl:allValuesFrom rdf:resource="&IOLite;LinguisticObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#LinguisticObject -->
+
+    <owl:Class rdf:about="&IOLite;LinguisticObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSyntacticFunction"/>
+                <owl:allValuesFrom rdf:resource="&IOLite;LinguisticFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#Term -->
+
+    <owl:Class rdf:about="&IOLite;Term"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#Text -->
+
+    <owl:Class rdf:about="&IOLite;Text"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#CoText -->
+
+    <owl:Class rdf:about="&LMM_L1;CoText"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#ConstructionRule -->
+
+    <owl:Class rdf:about="&LMM_L1;ConstructionRule"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#Expression -->
+
+    <owl:Class rdf:about="&LMM_L1;Expression">
+        <rdfs:label xml:lang="en">Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#Meaning -->
+
+    <owl:Class rdf:about="&LMM_L1;Meaning">
+        <rdfs:label xml:lang="en">Meaning</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;specializes"/>
+                <owl:allValuesFrom rdf:resource="&LMM_L1;Meaning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl#Reference -->
+
+    <owl:Class rdf:about="&LMM_L1;Reference">
+        <rdfs:label xml:lang="en">Reference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#AnalyticFeature -->
+
+    <owl:Class rdf:about="#AnalyticFeature">
+        <rdfs:label xml:lang="en"
+            >Analytic feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isConceptUsedIn"/>
+                <owl:someValuesFrom rdf:resource="#ExperimentalSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Any &#39;feature&#39; used in automatic classification, learning, and in general in all feature-based analyses.
+In NLP, this role can be applied to a LinguisticFunction, a PartOfSpeech, a graphical feature, etc.
+A feature role holds in the context of an ExperimentalSetting, where also parameters and operations on the featured enities can be defined.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#AssociativeContext -->
+
+    <owl:Class rdf:about="#AssociativeContext">
+        <rdfs:label xml:lang="en"
+            >Associative context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;CoText"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isUnifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#AssociativeRule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An associative rule is a lmm1:CoText where a neighborhood of a chunk of text is built out of the terms related to the chunk across the texts of a corpus, e.g. given a certain statistical threshold.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#AssociativeRule -->
+
+    <owl:Class rdf:about="#AssociativeRule">
+        <rdfs:label xml:lang="en"
+            >Associative rule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;ConstructionRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ConceptExpression -->
+
+    <owl:Class rdf:about="#ConceptExpression">
+        <rdfs:label xml:lang="en"
+            >Concept expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&IOLite;Term"/>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSyntacticFunction"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;denotes"/>
+                <owl:someValuesFrom rdf:resource="#MultipleReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#ContextualExpression"/>
+        <owl:disjointWith rdf:resource="#Name"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A Term that expresses a Meaning, and denotes a MultipleReference, e.g. &#39;Dog&#39;, &#39;Black box&#39;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ConceptReference -->
+
+    <owl:Class rdf:about="#ConceptReference">
+        <rdfs:label xml:lang="en"
+            >Concept reference</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DUL;TypeCollection"/>
+        <rdfs:subClassOf rdf:resource="#MultipleReference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;isDenotedBy"/>
+                <owl:someValuesFrom rdf:resource="#ConceptExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A MultipleReference that is also a TypeCollection, i.e. a Collection whose members constitute the maximal set of individuals that share the same (named) type, i.e. a Concept . 
+E.g. &#39;the Italians&#39;, &#39;the nurses&#39;, &#39;the automotive workers&#39;. 
+
+The Expressions that denote such references are typically composed by a determiner (&#39;the&#39; in English), and a noun phrase in plural form.
+
+Concept references can be empty collections, e.g. &#39;the square circles&#39;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualExpression -->
+
+    <owl:Class rdf:about="#ContextualExpression">
+        <rdfs:label xml:lang="en"
+            >Contextual expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&IOLite;Term"/>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;denotes"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#ContextualReference"/>
+                            <rdf:Description rdf:about="#ExtensionalReference"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSyntacticFunction"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="#Name"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A Term that denotes a Reference via anaphora or deixis, e.g. &#39;the dog over there&#39;, &#39;all my family&#39;, &#39;the current ACME employees&#39;, &#39;the lion described above&#39;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualReference -->
+
+    <owl:Class rdf:about="#ContextualReference">
+        <rdfs:label xml:lang="en"
+            >Contextual reference</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#IndividualReference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;isDenotedBy"/>
+                <owl:someValuesFrom rdf:resource="#ContextualExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An IndividualReference that is denoted by a ContextualExpression (anaphoric or deictic), e.g. &#39;the book in my bag&#39;, &#39;the book mentioned at the beginning of the story&#39;.
+The extensional interpretation of Named and Contextual references in a de-reified model can be equivalent, reflecting the paraphrastic property of natural languages, e.g. the extensional interpretations of &#39;Linosa&#39; and &#39;the Italian most southern island&#39; are equivalent. This corresponds to saying that names and contextual expressions can denote the same entities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#EnumeratedExpression -->
+
+    <owl:Class rdf:about="#EnumeratedExpression">
+        <rdfs:label xml:lang="en"
+            >Enumerated expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ContextualExpression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;denotes"/>
+                <owl:someValuesFrom rdf:resource="#ExtensionalReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#ContextualExpression"/>
+                            <rdf:Description rdf:about="#Name"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An AnaphoricExpression that denotes an enumerated PluralReference, e.g. &#39;John, Mary, and me&#39;. Enumerated expressions typically have names and anaphoric expressions (e.g. pronouns) as parts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ExperimentalSetting -->
+
+    <owl:Class rdf:about="#ExperimentalSetting">
+        <rdfs:label
+            >Experimental setting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DUL;Plan"/>
+        <rdfs:comment
+            >A plan modeled in order to carry out experiments. Roles (&#39;features&#39;) can be defined for featured entities that provide evidence for classifying an entity, describing a behavior, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ExtensionalReference -->
+
+    <owl:Class rdf:about="#ExtensionalReference">
+        <rdfs:label xml:lang="en"
+            >Extensional reference</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MultipleReference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasMember"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#IndividualReference"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;hasSetting"/>
+                                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;isDenotedBy"/>
+                <owl:someValuesFrom rdf:resource="#ContextualExpression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Extensional references are collections that require an extensional enumeration (e.g. &#39;John and Mary&#39;), or an anaphora that allows to extract an implicit enumeration (e.g. &#39;the books on my table&#39;). Hence, extensional references have individual references as members.
+
+Individual references in the extensional reference must be in the setting of some Situation, which means that extensional references only exist if some fact is described by an observer/interpreter.
+
+The terms expressing extensional references can be names or contextual expressions.
+
+The extensional interpretation of Concept and Extensional references in a de-reified (abstract) model can be equivalent, reflecting the paraphrastic property of natural languages, e.g. the extensional interpretations of &#39;IberianCountry&#39; and {Spain, Portugal, Andorra, Gibraltar} are equivalent. This corresponds to saying that concept expressions and contextual expressions can denote the same entities, while having different intensional interpretations (meanings).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#Gloss -->
+
+    <owl:Class rdf:about="#Gloss">
+        <rdfs:label>Gloss</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&IOLite;Text"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;isInterpretantFor"/>
+                <owl:someValuesFrom rdf:resource="&DUL;InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment
+            >A text used as an informal definition or comment to a term, lexeme, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#IndividualReference -->
+
+    <owl:Class rdf:about="#IndividualReference">
+        <rdfs:label xml:lang="en"
+            >Individual reference</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Reference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isInstanceOf"/>
+                <owl:someValuesFrom rdf:resource="&DUL;Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="#MultipleReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Any LMM1:Reference that isInstanceOf a dul:Concept</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#LSARule -->
+
+    <owl:Class rdf:about="#LSARule">
+        <rdfs:label xml:lang="en">LSA rule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AssociativeRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#LatentContext -->
+
+    <owl:Class rdf:about="#LatentContext">
+        <rdfs:label xml:lang="en">Latent context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AssociativeContext"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isUnifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#LSARule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#MultipleReference -->
+
+    <owl:Class rdf:about="#MultipleReference">
+        <rdfs:label xml:lang="en"
+            >Multiple reference</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&DUL;Collection"/>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Reference"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Any LMM1:Reference that is also a dul:Collection, and can have members that are individual references.
+As a collection, a multiple reference can be covered by a dul:Concept, whose instances are the members of the MultipleReference . For example, JohnDoe (an IndividualReference) isMemberOf ACMEEmployees (a MultipleReference), that dul:isCoveredBy the Employee concept. It also holds that JohnDoe isInstanceOf Employee</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#Name -->
+
+    <owl:Class rdf:about="#Name">
+        <rdfs:label xml:lang="en">Name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&IOLite;Term"/>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;denotes"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#ExtensionalReference"/>
+                            <rdf:Description rdf:about="#NamedEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSyntacticFunction"/>
+                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A proper noun that denotes an IndividualReference, e.g. &#39;John Zorn&#39;, &#39;Daimler Benz&#39;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#NamedEntity -->
+
+    <owl:Class rdf:about="#NamedEntity">
+        <rdfs:label xml:lang="en">Named entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#IndividualReference"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;isDenotedBy"/>
+                <owl:someValuesFrom rdf:resource="#Name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An IndividualReference that is denoted by a Name, e.g. &#39;John_Zorn&#39; (as an Entity).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#PolyrhematicConceptExpression -->
+
+    <owl:Class rdf:about="#PolyrhematicConceptExpression">
+        <rdfs:label xml:lang="en"
+            >Polyrhematic concept expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ConceptExpression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;denotes"/>
+                <owl:someValuesFrom rdf:resource="#MultipleReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A complex ConceptExpression that denotes a MultipleReference, e.g. &#39;the antique books&#39;.
+A polyrhematic expression usually has an associated &#39;head word&#39;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#SimpleConceptExpression -->
+
+    <owl:Class rdf:about="#SimpleConceptExpression">
+        <rdfs:label xml:lang="en"
+            >Simple concept expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ConceptExpression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&LMM_L1;denotes"/>
+                <owl:someValuesFrom rdf:resource="#ConceptReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A simple ConceptExpression that denotes a ClassReference, e.g. &#39;the nurses&#39;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#SyntacticContext -->
+
+    <owl:Class rdf:about="#SyntacticContext">
+        <rdfs:label xml:lang="en"
+            >Syntactic context</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&LMM_L1;CoText"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isUnifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#SyntacticRule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A lmm1:CoText that is equivalent to a neighborhood of a certain chunk of text, which can be built based on a syntagmatic rule, e.g. all words from the sentence where the chunk occurs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#SyntacticRule -->
+
+    <owl:Class rdf:about="#SyntacticRule">
+        <rdfs:subClassOf rdf:resource="&LMM_L1;ConstructionRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

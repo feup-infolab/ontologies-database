@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://data.lirmm.fr/ontologies/vdpp">
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <dcterms:title>Vocabulary for Dataset Publication Projects</dcterms:title>
+    <dcterms:description>The Vocabulary of Dataset Publication Projects (VDPP) allows to represent the status of a dataset publication project. It is mainly based on the Provenance Vocabulary (PRV), the Dataset Provenance Vocabulary (VOIDP), the Vocabulary of Interlinked Datasets (VoID), and the Description of a Project (DOAP) vocabulary.</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-27</dcterms:modified>
+    <vann:preferredNamespaceUri>http://data.lirmm.fr/ontologies/vdpp#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>vdpp</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://data.lirmm.fr/ontologies/vdpp.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-27</dcterms:created>
+    <dcterms:publisher>http://data.lirmm.fr/ontologies/vdpp#LIRMM</dcterms:publisher>
+    <dcterms:partOf rdf:resource="http://data.lirmm.fr/ontologies"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://data.lirmm.fr/ontologies/vdpp#fran%C3%A7ois"/>
+  </owl:Ontology>
+
+  <adms:SemanticDistribution rdf:about="http://data.lirmm.fr/ontologies/vdpp#ttl">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://data.lirmm.fr/ontologies/vdpp.ttl</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <adms:SemanticDistribution rdf:about="http://data.lirmm.fr/ontologies/vdpp#rdf">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://data.lirmm.fr/ontologies/vdpp.rdf</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </adms:SemanticDistribution>
+
+  <foaf:Person rdf:about="http://data.lirmm.fr/ontologies/vdpp#fran%C3%A7ois">
+    <foaf:name>François Scharffe</foaf:name>
+    <foaf:homepage rdf:resource="http://www.scharffe.fr"/>
+  </foaf:Person>
+
+  <dcterms:Agent rdf:about="http://data.lirmm.fr/ontologies/vdpp#LIRMM">
+    <foaf:member rdf:resource="http://data.lirmm.fr/ontologies/vdpp#fran%C3%A7ois"/>
+    <foaf:name>LIRMM</foaf:name>
+    <foaf:homepage rdf:resource="http://www.lirmm.fr"/>
+  </dcterms:Agent>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/vdpp#Project">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Dataset publication project</rdfs:label>
+    <rdfs:comment>Datasets publication projects. This class makes the link between a DOAP project, and VoIDP provenance events.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/vdpp#Selection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Selection</rdfs:label>
+    <rdfs:comment>Describe the process of a selection of vocabularies to represent a dataset. This selection will result in a set of vocabularies that will be used to describe the published data.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/vdpp#Convertion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Convertion</rdfs:label>
+    <rdfs:comment>Describe the process of a converting the source data. The result of the transformation will be a new datset that can be further processed, published and interlinked.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/vdpp#Publication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Publication</rdfs:label>
+    <rdfs:comment>Describe the process of publishing a RDF dataset on the Web. The result of the publication is a URI where the dataset is accessible as linked-data.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/vdpp#Interlinking">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Interlinking</rdfs:label>
+    <rdfs:comment>Describe the process of interlinking a vocabulary with another. The result of the interlinking will be a void:Linkset containing links between the two datasets.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/vdpp#process">
+    <rdfs:label>Process</rdfs:label>
+    <rdfs:comment>A process performed during a dataset publication project.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/vdpp#Project"/>
+  </rdf:Property>
+
+</rdf:RDF>

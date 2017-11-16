@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/terms/" xmlns:hr="http://iserve.kmi.open.ac.uk/ns/hrests#" xmlns:http="http://www.w3.org/2011/http#" xmlns:msm="http://iserve.kmi.open.ac.uk/ns/msm#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-03-10</dc:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-03-10</dc:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:description xml:lang="en">This is a description of the Web API Grounding Model, a simple model for capturing Web API details relevant for invocation support</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:creator rdf:resource="http://vitvar.com/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:creator rdf:resource="http://kmi.open.ac.uk/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:creator rdf:resource="http://identifiers.kmi.open.ac.uk/people/carlos-pedrinaci/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:creator rdf:resource="http://jacek.cz/#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-12-03</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-14</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-08</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-03</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <rdfs:label xml:lang="en">Web API Grounding Model</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <owl:versionInfo>1.2</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <owl:priorVersion rdf:resource="http://purl.org/hrests/v2#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <owl:imports rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <owl:imports rdf:resource="http://www.w3.org/2011/http"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests">
+    <owl:imports rdf:resource="http://www.w3.org/2011/http-methods"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2011/http#Method">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2011/http#Method">
+    <rdfs:subClassOf rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#Method"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#URITemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#URITemplate">
+    <rdfs:label xml:lang="en">URI Template</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#URITemplate">
+    <rdfs:description xml:lang="en">URI template for use as a service address, possibly with parameters</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#URITemplate">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#OutputFormatParameter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#OutputFormatParameter">
+    <rdfs:label xml:lang="en">Output Format Parameter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#OutputFormatParameter">
+    <rdfs:description xml:lang="en">an input parameter that dictates the output format that the service should return (this class is intended for use in sawsdl:modelReference on msm:MessagePart)</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#OutputFormatParameter">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#AuthenticationCredential">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#AuthenticationCredential">
+    <rdfs:label xml:lang="en">Authentication Credential</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#AuthenticationCredential">
+    <rdfs:description xml:lang="en">an input parameter that carries an authentication credential (this class is intended for use in sawsdl:modelReference on msm:MessagePart)</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#AuthenticationCredential">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#acceptsContentType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#acceptsContentType">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#MediaType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#acceptsContentType">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#acceptsContentType">
+    <rdfs:label xml:lang="en">accepts Content Type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#acceptsContentType">
+    <rdfs:description xml:lang="en">the content type accepted by the operation</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#acceptsContentType">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#producesContentType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#producesContentType">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#MediaType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#producesContentType">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#producesContentType">
+    <rdfs:label xml:lang="en">produces Content Type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#producesContentType">
+    <rdfs:description xml:lang="en">the content type produced by the operation</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#producesContentType">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasAddress">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasAddress">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#URITemplate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasAddress">
+    <rdfs:label xml:lang="en">has Address</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasAddress">
+    <rdfs:description xml:lang="en">the address of the operation or service (expected to be used on msm:Service or msm:Operation)</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasAddress">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasMethod">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasMethod">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#Operation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasMethod">
+    <rdfs:range rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#Method"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasMethod">
+    <rdfs:label xml:lang="en">has Method</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasMethod">
+    <rdfs:description xml:lang="en">the method of an operation</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasMethod">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#isGroundedIn">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#isGroundedIn">
+    <rdfs:domain rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessagePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#isGroundedIn">
+    <rdfs:label xml:lang="en">is Grounded In</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#isGroundedIn">
+    <rdfs:description xml:lang="en">the URI template parameter in which a message part is grounded (may be accompanied by sawsdl lowering schema mapping)</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#isGroundedIn">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasComment">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasComment">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasComment">
+    <rdfs:label xml:lang="en">has Comment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#hasComment">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#automaticallyExtractedDescription">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#automaticallyExtractedDescription">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#automaticallyExtractedDescription">
+    <rdfs:label xml:lang="en">automatically Extracted Description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#automaticallyExtractedDescription">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#MediaType">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#MediaType">
+    <rdfs:label xml:lang="en">Media Type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#MediaType">
+    <rdfs:description xml:lang="en">a data type for literals that specify media types</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iserve.kmi.open.ac.uk/ns/hrests#MediaType">
+    <rdfs:isDefinedBy rdf:resource="http://iserve.kmi.open.ac.uk/ns/hrests#"/>
+  </rdf:Description>
+</rdf:RDF>

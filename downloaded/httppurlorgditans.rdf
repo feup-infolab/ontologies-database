@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dgfr="http://colin.maudry.com/ontologies/dgfr#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:void="http://rdfs.org/ns/void#"
+   xml:base="http://dydra.com/">
+  <rdf:Description rdf:about="http://colin.maudry/rdf/colin-maudry#me">
+    <ns1:mbox xmlns:ns1="http://xmlns.com/foaf/0.1/"
+       rdf:resource="mailto:colin@maudry.com"/>
+    <ns2:name xmlns:ns2="http://xmlns.com/foaf/0.1/">Colin Maudry</ns2:name>
+  </rdf:Description>
+  <ns3:Ontology xmlns:ns3="http://www.w3.org/2002/07/owl#"
+     rdf:about="http://purl.org/dita/ns#">
+    <ns4:license xmlns:ns4="http://creativecommons.org/ns#"
+       rdf:resource="http://unlicense.org"/>
+    <ns5:created xmlns:ns5="http://purl.org/dc/terms/"
+       rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-04</ns5:created>
+    <ns6:creator xmlns:ns6="http://purl.org/dc/terms/"
+       rdf:resource="http://colin.maudry/rdf/colin-maudry#me"/>
+    <ns7:description xmlns:ns7="http://purl.org/dc/terms/">The DITA RDF ontology translates the semantics of a subset of the vocabulary described in the DITA 1.2 specification in a format that can be understood in the semantic Web of data. By Colin Maudry, licensed under the terms of the Unlicense (public domain).</ns7:description>
+    <ns8:modified xmlns:ns8="http://purl.org/dc/terms/"
+       rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-03</ns8:modified>
+    <ns9:title xmlns:ns9="http://purl.org/dc/terms/">DITA RDF ontology</ns9:title>
+    <ns10:preferredNamespacePrefix xmlns:ns10="http://purl.org/vocab/vann/">dita</ns10:preferredNamespacePrefix>
+    <ns11:preferredNamespaceUri xmlns:ns11="http://purl.org/vocab/vann/"
+       rdf:resource="http://purl.org/dita/ns#"/>
+    <ns12:seeAlso xmlns:ns12="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/DITA1.2-spec.html"/>
+    <ns13:depiction xmlns:ns13="http://xmlns.com/foaf/0.1/"
+       rdf:resource="http://bit.ly/DitaRdfLucidChart"/>
+  </ns3:Ontology>
+  <ns14:Class xmlns:ns14="http://www.w3.org/2000/01/rdf-schema#"
+     rdf:about="http://purl.org/dita/ns#Audience">
+    <ns14:comment xml:lang="en-US">The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.</ns14:comment>
+    <ns14:label>Audience</ns14:label>
+    <ns14:seeAlso rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html"/>
+  </ns14:Class>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Bookmap">
+    <ns15:comment xmlns:ns15="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The DITA bookmap specialization represents the key markup requirements for managing DITA content through book-oriented publication processes, including book metadata and book structures for organizing content.</ns15:comment>
+    <ns16:label xmlns:ns16="http://www.w3.org/2000/01/rdf-schema#">Bookmap</ns16:label>
+    <ns17:seeAlso xmlns:ns17="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"/>
+    <ns18:subClassOf xmlns:ns18="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Map"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Coderef">
+    <ns19:comment xmlns:ns19="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The coderef element references an external file that contains literal code.</ns19:comment>
+    <ns20:label xmlns:ns20="http://www.w3.org/2000/01/rdf-schema#">Coderef</ns20:label>
+    <ns21:seeAlso xmlns:ns21="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/coderef.html"/>
+    <ns22:subClassOf xmlns:ns22="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Concept">
+    <ns23:comment xmlns:ns23="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The DITA concept document type uses the concept information type.</ns23:comment>
+    <ns24:label xmlns:ns24="http://www.w3.org/2000/01/rdf-schema#">Concept</ns24:label>
+    <ns25:seeAlso xmlns:ns25="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_concept_topic.html"/>
+    <ns26:subClassOf xmlns:ns26="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Conkeyref">
+    <ns27:comment xmlns:ns27="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics.</ns27:comment>
+    <ns28:label xmlns:ns28="http://www.w3.org/2000/01/rdf-schema#">Conkeyref</ns28:label>
+    <ns29:seeAlso xmlns:ns29="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html"/>
+    <ns30:subClassOf xmlns:ns30="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Conref">
+    <ns31:comment xmlns:ns31="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">This attribute is used to reference content that can be reused.</ns31:comment>
+    <ns32:label xmlns:ns32="http://www.w3.org/2000/01/rdf-schema#">Conref</ns32:label>
+    <ns33:seeAlso xmlns:ns33="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html"/>
+    <ns34:subClassOf xmlns:ns34="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <ns35:Class xmlns:ns35="http://www.w3.org/2000/01/rdf-schema#"
+     rdf:about="http://purl.org/dita/ns#Doctype">
+    <ns35:comment xml:lang="en-US">All the DITA document types.</ns35:comment>
+    <ns35:label>Doctype</ns35:label>
+  </ns35:Class>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Image">
+    <ns36:comment xmlns:ns36="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Include artwork or images in a DITA topic by using the image element.</ns36:comment>
+    <ns37:label xmlns:ns37="http://www.w3.org/2000/01/rdf-schema#">Image</ns37:label>
+    <ns38:seeAlso xmlns:ns38="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/image.html"/>
+    <ns39:subClassOf xmlns:ns39="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <ns40:Class xmlns:ns40="http://www.w3.org/2000/01/rdf-schema#"
+     rdf:about="http://purl.org/dita/ns#Key">
+    <ns40:comment xml:lang="en-US">The DITA key-reference mechanism provides a layer of abstraction so that the resources addressed by references can be defined globally at the DITA map level instead of locally in each topic.</ns40:comment>
+    <ns40:label>Key</ns40:label>
+    <ns40:seeAlso rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/key-based_addressing.html"/>
+  </ns40:Class>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Keydef">
+    <ns41:comment xmlns:ns41="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a topicref element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.</ns41:comment>
+    <ns42:label xmlns:ns42="http://www.w3.org/2000/01/rdf-schema#">Keydef</ns42:label>
+    <ns43:seeAlso xmlns:ns43="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef.html"/>
+    <ns44:subClassOf xmlns:ns44="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns45:subClassOf xmlns:ns45="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Keyref">
+    <ns46:comment xmlns:ns46="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.</ns46:comment>
+    <ns47:label xmlns:ns47="http://www.w3.org/2000/01/rdf-schema#">Keyref</ns47:label>
+    <ns48:seeAlso xmlns:ns48="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html"/>
+    <ns49:subClassOf xmlns:ns49="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <ns50:Class xmlns:ns50="http://www.w3.org/2000/01/rdf-schema#"
+     rdf:about="http://purl.org/dita/ns#Keyword">
+    <ns50:comment xml:lang="en-US">The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.</ns50:comment>
+    <ns50:label>Keyword</ns50:label>
+    <ns50:seeAlso rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html"/>
+  </ns50:Class>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningAssessment">
+    <ns51:comment xmlns:ns51="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">A Learning Assessment presents questions or interactions that measure progress, encourage recollection, and stimulate reinforcement of the learning content, and can be presented before the content as a pre-assessment or as a post-assessment test.</ns51:comment>
+    <ns52:label xmlns:ns52="http://www.w3.org/2000/01/rdf-schema#">LearningAssessment</ns52:label>
+    <ns53:seeAlso xmlns:ns53="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningAssessment.html"/>
+    <ns54:subClassOf xmlns:ns54="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningBase">
+    <ns55:comment xmlns:ns55="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The learningBase topic type is not used to deliver any actual learning content, but instead provides a set of common elements for use in the other more specific learning content types.</ns55:comment>
+    <ns56:label xmlns:ns56="http://www.w3.org/2000/01/rdf-schema#">LearningBase</ns56:label>
+    <ns57:seeAlso xmlns:ns57="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningBase.html"/>
+    <ns58:subClassOf xmlns:ns58="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningContent">
+    <ns59:comment xmlns:ns59="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">A Learning Content topic provides the learning content itself, and enables direct use of content from DITA task, concept, and reference topics, as well as additional content of any topic type that supports specific objectives declared in the Learning Overview topic type.</ns59:comment>
+    <ns60:label xmlns:ns60="http://www.w3.org/2000/01/rdf-schema#">LearningContent</ns60:label>
+    <ns61:seeAlso xmlns:ns61="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContent.html"/>
+    <ns62:subClassOf xmlns:ns62="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningContentComponentRef">
+    <ns63:comment xmlns:ns63="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a learningContentComponentRef element to include a topic reference to a topic that acts as a subtopic of a learningContent topic.</ns63:comment>
+    <ns64:label xmlns:ns64="http://www.w3.org/2000/01/rdf-schema#">LearningContentComponentRef</ns64:label>
+    <ns65:seeAlso xmlns:ns65="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentComponentRef.html"/>
+    <ns66:subClassOf xmlns:ns66="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns67:subClassOf xmlns:ns67="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningContentRef">
+    <ns68:comment xmlns:ns68="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a learningContentRef element to include a topic reference to a learning content topic as part of a DITA learningObject.</ns68:comment>
+    <ns69:label xmlns:ns69="http://www.w3.org/2000/01/rdf-schema#">LearningContentRef</ns69:label>
+    <ns70:seeAlso xmlns:ns70="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningContentRef.html"/>
+    <ns71:subClassOf xmlns:ns71="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns72:subClassOf xmlns:ns72="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningObject">
+    <ns73:comment xmlns:ns73="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">learningObject organizes topic references to DITA learning topics as a learning object. </ns73:comment>
+    <ns74:label xmlns:ns74="http://www.w3.org/2000/01/rdf-schema#">LearningObject</ns74:label>
+    <ns75:seeAlso xmlns:ns75="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningObject.html"/>
+    <ns76:subClassOf xmlns:ns76="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns77:subClassOf xmlns:ns77="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningOverview">
+    <ns78:comment xmlns:ns78="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">A Learning Overview topic identifies the learning objectives, includes other information helpful to the learner, such as prerequisites, duration, intended audience, and can include information and strategies that seeks to gain attention and stimulate recall of prior learning.</ns78:comment>
+    <ns79:label xmlns:ns79="http://www.w3.org/2000/01/rdf-schema#">LearningOverview</ns79:label>
+    <ns80:seeAlso xmlns:ns80="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverview.html"/>
+    <ns81:subClassOf xmlns:ns81="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningOverviewRef">
+    <ns82:comment xmlns:ns82="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a learningOverviewRef element to include a topic reference to a learning overview topic as part of a learningObject.</ns82:comment>
+    <ns83:label xmlns:ns83="http://www.w3.org/2000/01/rdf-schema#">LearningOverviewRef</ns83:label>
+    <ns84:seeAlso xmlns:ns84="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningOverviewRef.html"/>
+    <ns85:subClassOf xmlns:ns85="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns86:subClassOf xmlns:ns86="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningPlan">
+    <ns87:comment xmlns:ns87="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">A Learning Plan topic describes learning needs and goals, instructional design models, task analyses, learning taxonomies, and other information necessary to the lesson planning process.</ns87:comment>
+    <ns88:label xmlns:ns88="http://www.w3.org/2000/01/rdf-schema#">LearningPlan</ns88:label>
+    <ns89:seeAlso xmlns:ns89="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlan.html"/>
+    <ns90:subClassOf xmlns:ns90="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningPlanRef">
+    <ns91:comment xmlns:ns91="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a learningPlanRef element to include a topic reference to a learning plan topic as part of a learningObject.</ns91:comment>
+    <ns92:label xmlns:ns92="http://www.w3.org/2000/01/rdf-schema#">LearningPlanRef</ns92:label>
+    <ns93:seeAlso xmlns:ns93="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPlanRef.html"/>
+    <ns94:subClassOf xmlns:ns94="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns95:subClassOf xmlns:ns95="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningPostAssessmentRef">
+    <ns96:comment xmlns:ns96="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a learningPostAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject.</ns96:comment>
+    <ns97:label xmlns:ns97="http://www.w3.org/2000/01/rdf-schema#">LearningPostAssessmentRef</ns97:label>
+    <ns98:seeAlso xmlns:ns98="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPostAssessmentRef.html"/>
+    <ns99:subClassOf xmlns:ns99="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns100:subClassOf xmlns:ns100="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningPreAssessmentRef">
+    <ns101:comment xmlns:ns101="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a learningPreAssessmentRef element to include a topic reference to a learning assessment topic as part of a DITA learningObject.</ns101:comment>
+    <ns102:label xmlns:ns102="http://www.w3.org/2000/01/rdf-schema#">LearningPreAssessmentRef</ns102:label>
+    <ns103:seeAlso xmlns:ns103="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningPreAssessmentRef.html"/>
+    <ns104:subClassOf xmlns:ns104="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns105:subClassOf xmlns:ns105="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningSummary">
+    <ns106:comment xmlns:ns106="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">A Learning Summary recaps and provides context for the achievement or accomplishment of learning objectives, provides guidance to reinforce learning and long-term memory, and may pose questions to enhance encoding and verification of the learning content.</ns106:comment>
+    <ns107:label xmlns:ns107="http://www.w3.org/2000/01/rdf-schema#">LearningSummary</ns107:label>
+    <ns108:seeAlso xmlns:ns108="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummary.html"/>
+    <ns109:subClassOf xmlns:ns109="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#LearningBase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#LearningSummaryRef">
+    <ns110:comment xmlns:ns110="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use a &lt;learningSummaryRef&gt; to include topic reference to a learning summary topic in a DITA learning object.</ns110:comment>
+    <ns111:label xmlns:ns111="http://www.w3.org/2000/01/rdf-schema#">LearningSummaryRef</ns111:label>
+    <ns112:seeAlso xmlns:ns112="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/learningSummaryRef.html"/>
+    <ns113:subClassOf xmlns:ns113="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns114:subClassOf xmlns:ns114="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Link">
+    <ns115:comment xmlns:ns115="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The link element defines a relationship to another topic. Links are typically sorted when displayed based on their attributes, which define the type or role of the link's target in relation to the current topic.</ns115:comment>
+    <ns116:label xmlns:ns116="http://www.w3.org/2000/01/rdf-schema#">Link</ns116:label>
+    <ns117:seeAlso xmlns:ns117="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/link.html"/>
+    <ns118:subClassOf xmlns:ns118="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Map">
+    <ns119:comment xmlns:ns119="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">DITA maps are documents that organize topics and other resources into structured collections of information. DITA maps specify hierarchy and the relationships among the topics; they also provide the context in which keys are defined and resolved.</ns119:comment>
+    <ns120:label xmlns:ns120="http://www.w3.org/2000/01/rdf-schema#">Map</ns120:label>
+    <ns121:seeAlso xmlns:ns121="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/definition-of-ditamaps.html"/>
+    <ns122:subClassOf xmlns:ns122="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Mapref">
+    <ns123:comment xmlns:ns123="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The mapref element is a convenience element that is equivalent to a topicref element with the format attribute set to 'ditamap'.</ns123:comment>
+    <ns124:label xmlns:ns124="http://www.w3.org/2000/01/rdf-schema#">Mapref</ns124:label>
+    <ns125:seeAlso xmlns:ns125="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html"/>
+    <ns126:subClassOf xmlns:ns126="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns127:subClassOf xmlns:ns127="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Parmname">
+    <ns128:comment xmlns:ns128="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">When referencing the name of an application programming interface parameter within the text flow of your topic, use the parameter name (&lt;parmname&gt;) element to mark up the parameter.</ns128:comment>
+    <ns129:label xmlns:ns129="http://www.w3.org/2000/01/rdf-schema#">Parmname</ns129:label>
+    <ns130:seeAlso xmlns:ns130="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/parmname.html"/>
+    <ns131:subClassOf xmlns:ns131="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Keyword"/>
+  </rdf:Description>
+  <ns132:Class xmlns:ns132="http://www.w3.org/2000/01/rdf-schema#"
+     rdf:about="http://purl.org/dita/ns#Prodinfo">
+    <ns132:comment xml:lang="en-US">The prodinfo metadata element contains information about the product or products that are the subject matter of the current topic.</ns132:comment>
+    <ns132:label>Prodinfo</ns132:label>
+    <ns132:seeAlso rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html"/>
+  </ns132:Class>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Reference">
+    <ns133:comment xmlns:ns133="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The DITA reference document type uses the reference information type.</ns133:comment>
+    <ns134:label xmlns:ns134="http://www.w3.org/2000/01/rdf-schema#">Reference</ns134:label>
+    <ns135:seeAlso xmlns:ns135="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_reference_topic.html"/>
+    <ns136:subClassOf xmlns:ns136="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topic"/>
+  </rdf:Description>
+  <ns137:Class xmlns:ns137="http://www.w3.org/2000/01/rdf-schema#"
+     rdf:about="http://purl.org/dita/ns#ReferenceObject">
+    <ns137:comment xml:lang="en-US">The DITA reference object is used to link, fetch or push content in relation with another file or object.</ns137:comment>
+    <ns137:label xml:lang="en-US">DITA base reference object</ns137:label>
+  </ns137:Class>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Task">
+    <ns138:comment xmlns:ns138="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The strict task document type supports the development of instructions for the completion of a procedure.</ns138:comment>
+    <ns139:label xmlns:ns139="http://www.w3.org/2000/01/rdf-schema#">Task</ns139:label>
+    <ns140:seeAlso xmlns:ns140="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/dita_task_topic.html"/>
+    <ns141:subClassOf xmlns:ns141="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Topic">
+    <ns142:comment xmlns:ns142="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">DITA topics are the basic units of DITA content and the basic units of reuse. Each topic contains a single subject. Topics may be of specific specialized information types, such as task, concept, or reference, or may be generic, that is, without a specified information type.</ns142:comment>
+    <ns143:label xmlns:ns143="http://www.w3.org/2000/01/rdf-schema#">Topic</ns143:label>
+    <ns144:seeAlso xmlns:ns144="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/topicdefined.html"/>
+    <ns145:subClassOf xmlns:ns145="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Topicref">
+    <ns146:comment xmlns:ns146="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The topicref element identifies a topic (such as a concept, task, or reference) or other resource.</ns146:comment>
+    <ns147:label xmlns:ns147="http://www.w3.org/2000/01/rdf-schema#">Topicref</ns147:label>
+    <ns148:seeAlso xmlns:ns148="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"/>
+    <ns149:subClassOf xmlns:ns149="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Varname">
+    <ns150:comment xmlns:ns150="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The variable name (varname) element defines a variable that must be supplied to a software application.</ns150:comment>
+    <ns151:label xmlns:ns151="http://www.w3.org/2000/01/rdf-schema#">Varname</ns151:label>
+    <ns152:seeAlso xmlns:ns152="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/varname.html"/>
+    <ns153:subClassOf xmlns:ns153="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Keyword"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#Xref">
+    <ns154:comment xmlns:ns154="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use the cross-reference (xref) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.</ns154:comment>
+    <ns155:label xmlns:ns155="http://www.w3.org/2000/01/rdf-schema#">Xref</ns155:label>
+    <ns156:seeAlso xmlns:ns156="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"/>
+    <ns157:subClassOf xmlns:ns157="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#audience">
+    <ns158:comment xmlns:ns158="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The audience metadata element indicates, through the value of its type attribute, the intended audience for a topic.</ns158:comment>
+    <ns159:domain xmlns:ns159="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns160:label xmlns:ns160="http://www.w3.org/2000/01/rdf-schema#">audience</ns160:label>
+    <ns161:range xmlns:ns161="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Audience"/>
+    <ns162:seeAlso xmlns:ns162="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html"/>
+    <ns163:subPropertyOf xmlns:ns163="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#element"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#audienceType">
+    <ns164:comment xmlns:ns164="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Indicates the kind of person for whom the content of the topic is intended. Note that this differs from the type attribute on many other DITA elements.</ns164:comment>
+    <ns165:domain xmlns:ns165="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Audience"/>
+    <ns166:label xmlns:ns166="http://www.w3.org/2000/01/rdf-schema#">type</ns166:label>
+    <ns167:range xmlns:ns167="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns168:seeAlso xmlns:ns168="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#author">
+    <ns169:comment xmlns:ns169="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The author metadata element contains the name of the topic's author.</ns169:comment>
+    <ns170:domain xmlns:ns170="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns171:label xmlns:ns171="http://www.w3.org/2000/01/rdf-schema#">author</ns171:label>
+    <ns172:range xmlns:ns172="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns173:seeAlso xmlns:ns173="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/author.html"/>
+    <ns174:subPropertyOf xmlns:ns174="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/author"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#backmatter">
+    <ns175:comment xmlns:ns175="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The backmatter element contains the material that follows the main body of a document and any appendices. It may include items such as a colophon, legal notices, and various types of book lists such as a glossary or an index.</ns175:comment>
+    <ns176:label xmlns:ns176="http://www.w3.org/2000/01/rdf-schema#">backmatter</ns176:label>
+    <ns177:seeAlso xmlns:ns177="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/backmatter.html"/>
+    <ns178:subPropertyOf xmlns:ns178="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns179:subPropertyOf xmlns:ns179="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#booklibrary">
+    <ns180:comment xmlns:ns180="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The booklibrary element contains the library information for a book. Library entries contain information about the series, library, or collection of documents to which the book belongs. </ns180:comment>
+    <ns181:label xmlns:ns181="http://www.w3.org/2000/01/rdf-schema#">booklibrary</ns181:label>
+    <ns182:range xmlns:ns182="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns183:seeAlso xmlns:ns183="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/booklibrary.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#booktitlealt">
+    <ns184:comment xmlns:ns184="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The booktitlealt element contains the alternative title, subtitle, or short title for a book. It may be specialized into a specific element for those or other purposes.</ns184:comment>
+    <ns185:label xmlns:ns185="http://www.w3.org/2000/01/rdf-schema#">booktitlealt</ns185:label>
+    <ns186:range xmlns:ns186="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns187:seeAlso xmlns:ns187="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/booktitlealt.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#category">
+    <ns188:comment xmlns:ns188="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The category element represents any category by which a topic might be classified for retrieval or navigation.</ns188:comment>
+    <ns189:label xmlns:ns189="http://www.w3.org/2000/01/rdf-schema#">category</ns189:label>
+    <ns190:range xmlns:ns190="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns191:seeAlso xmlns:ns191="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/category.html"/>
+    <ns192:subPropertyOf xmlns:ns192="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#element"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#chapter">
+    <ns193:comment xmlns:ns193="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The chapter element references a topic or map as a chapter within a book.</ns193:comment>
+    <ns194:label xmlns:ns194="http://www.w3.org/2000/01/rdf-schema#">chapter</ns194:label>
+    <ns195:seeAlso xmlns:ns195="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/chapter.html"/>
+    <ns196:subPropertyOf xmlns:ns196="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns197:subPropertyOf xmlns:ns197="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#class">
+    <ns198:comment xmlns:ns198="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Attribute used to store the class attribute and identify the nature of the Conref/Conkeyref.</ns198:comment>
+    <ns199:domain xmlns:ns199="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Conkeyref"/>
+    <ns200:domain xmlns:ns200="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Conref"/>
+    <ns201:label xmlns:ns201="http://www.w3.org/2000/01/rdf-schema#">class</ns201:label>
+    <ns202:range xmlns:ns202="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns203:seeAlso xmlns:ns203="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/classatt.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#conkeyref">
+    <ns204:comment xmlns:ns204="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The conkeyref attribute provides an indirect content reference to topic elements, map elements, or elements within maps or topics.</ns204:comment>
+    <ns205:domain xmlns:ns205="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Conkeyref"/>
+    <ns206:label xmlns:ns206="http://www.w3.org/2000/01/rdf-schema#">conkeyref</ns206:label>
+    <ns207:range xmlns:ns207="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Key"/>
+    <ns208:seeAlso xmlns:ns208="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconkeyrefattribute.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#conref">
+    <ns209:comment xmlns:ns209="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">This attribute is used to reference content that can be reused.</ns209:comment>
+    <ns210:domain xmlns:ns210="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Conref"/>
+    <ns211:label xmlns:ns211="http://www.w3.org/2000/01/rdf-schema#">conref</ns211:label>
+    <ns212:range xmlns:ns212="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns213:seeAlso xmlns:ns213="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/theconrefattribute.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#copyright">
+    <ns214:comment xmlns:ns214="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The copyright element specifies legal ownership of the content.</ns214:comment>
+    <ns215:domain xmlns:ns215="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns216:label xmlns:ns216="http://www.w3.org/2000/01/rdf-schema#">copyright</ns216:label>
+    <ns217:range xmlns:ns217="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns218:seeAlso xmlns:ns218="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/copyright.html"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#created">
+    <ns219:comment xmlns:ns219="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The created element specifies the document creation date using the date attribute.</ns219:comment>
+    <ns220:domain xmlns:ns220="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns221:label xmlns:ns221="http://www.w3.org/2000/01/rdf-schema#">created</ns221:label>
+    <ns222:range xmlns:ns222="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/W3CDTF"/>
+    <ns223:seeAlso xmlns:ns223="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html"/>
+    <ns224:subPropertyOf xmlns:ns224="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/created"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#createdExpiry">
+    <ns225:comment xmlns:ns225="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The date when the information should be retired or refreshed, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31.</ns225:comment>
+    <ns226:domain xmlns:ns226="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns227:label xmlns:ns227="http://www.w3.org/2000/01/rdf-schema#">created (expiry)</ns227:label>
+    <ns228:range xmlns:ns228="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/W3CDTF"/>
+    <ns229:seeAlso xmlns:ns229="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#createdGolive">
+    <ns230:comment xmlns:ns230="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The publication or general availability (GA) date, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31.</ns230:comment>
+    <ns231:domain xmlns:ns231="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns232:label xmlns:ns232="http://www.w3.org/2000/01/rdf-schema#">created (golive)</ns232:label>
+    <ns233:range xmlns:ns233="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/W3CDTF"/>
+    <ns234:seeAlso xmlns:ns234="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#element">
+    <ns235:comment xmlns:ns235="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Indicates that the file contains the target element.</ns235:comment>
+    <ns236:domain xmlns:ns236="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns237:label xmlns:ns237="http://www.w3.org/2000/01/rdf-schema#">element</ns237:label>
+    <ns238:range xmlns:ns238="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#experiencelevel">
+    <ns239:comment xmlns:ns239="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Indicates the level of experience the audience is assumed to possess.</ns239:comment>
+    <ns240:domain xmlns:ns240="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Audience"/>
+    <ns241:label xmlns:ns241="http://www.w3.org/2000/01/rdf-schema#">experiencelevel</ns241:label>
+    <ns242:range xmlns:ns242="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns243:seeAlso xmlns:ns243="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#format">
+    <ns244:comment xmlns:ns244="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The format attribute identifies the format of the resource being cross referenced.</ns244:comment>
+    <ns245:domain xmlns:ns245="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns246:label xmlns:ns246="http://www.w3.org/2000/01/rdf-schema#">format</ns246:label>
+    <ns247:range xmlns:ns247="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns248:seeAlso xmlns:ns248="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/theformatattribute.html"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#frontmatter">
+    <ns249:comment xmlns:ns249="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The frontmatter element contains the material that precedes the main body of a document. It may include items such as an abstract, a preface, and various types of book lists such as a toc, tablelist, or figurelist. </ns249:comment>
+    <ns250:label xmlns:ns250="http://www.w3.org/2000/01/rdf-schema#">frontmatter</ns250:label>
+    <ns251:seeAlso xmlns:ns251="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/frontmatter.html"/>
+    <ns252:subPropertyOf xmlns:ns252="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns253:subPropertyOf xmlns:ns253="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#href">
+    <ns254:comment xmlns:ns254="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The href attribute is used by many elements to provide a reference to another DITA topic or map, to a specific element inside a DITA topic or map, or to an external Web page or other non-DITA resource.</ns254:comment>
+    <ns255:domain xmlns:ns255="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns256:label xmlns:ns256="http://www.w3.org/2000/01/rdf-schema#">href</ns256:label>
+    <ns257:seeAlso xmlns:ns257="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thehrefattribute.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#id">
+    <ns258:comment xmlns:ns258="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The DITA identity attribute provides a mechanism for identifying content for linking. </ns258:comment>
+    <ns259:label xmlns:ns259="http://www.w3.org/2000/01/rdf-schema#">id</ns259:label>
+    <ns260:range xmlns:ns260="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns261:seeAlso xmlns:ns261="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/archSpec/id.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#job">
+    <ns262:comment xmlns:ns262="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Indicates the high-level task the audience for the topic is trying to accomplish.</ns262:comment>
+    <ns263:domain xmlns:ns263="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Audience"/>
+    <ns264:label xmlns:ns264="http://www.w3.org/2000/01/rdf-schema#">job</ns264:label>
+    <ns265:range xmlns:ns265="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns266:seeAlso xmlns:ns266="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/audience.html"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#keydef">
+    <ns267:comment xmlns:ns267="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The keydef element is a convenience element that is used to define keys without any of the other effects that occur when using a topicref element: no content is included in output, no title is included in the table of contents, and no linking or other relationships are defined.</ns267:comment>
+    <ns268:domain xmlns:ns268="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Map"/>
+    <ns269:label xmlns:ns269="http://www.w3.org/2000/01/rdf-schema#">keydef</ns269:label>
+    <ns270:range xmlns:ns270="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Key"/>
+    <ns271:seeAlso xmlns:ns271="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keydef"/>
+    <ns272:subPropertyOf xmlns:ns272="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns273:subPropertyOf xmlns:ns273="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#keyname">
+    <ns274:comment xmlns:ns274="http://www.w3.org/2000/01/rdf-schema#">The name of the key.</ns274:comment>
+    <ns275:domain xmlns:ns275="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Key"/>
+    <ns276:label xmlns:ns276="http://www.w3.org/2000/01/rdf-schema#">keyname</ns276:label>
+    <ns277:range xmlns:ns277="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#keyref">
+    <ns278:comment xmlns:ns278="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The keyref attribute provides an indirect, late-bound reference to topics, to collections of topics (ditabase), to maps, to referenceable portions of maps, to non-DITA documents, to external URIs, or to XML content contained within a key definition topic reference.</ns278:comment>
+    <ns279:label xmlns:ns279="http://www.w3.org/2000/01/rdf-schema#">keyref</ns279:label>
+    <ns280:range xmlns:ns280="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Key"/>
+    <ns281:seeAlso xmlns:ns281="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeyrefattribute.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#keys">
+    <ns282:comment xmlns:ns282="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">This attribute is used to reference content that can be reused.</ns282:comment>
+    <ns283:domain xmlns:ns283="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Keydef"/>
+    <ns284:domain xmlns:ns284="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topicref"/>
+    <ns285:label xmlns:ns285="http://www.w3.org/2000/01/rdf-schema#">keys</ns285:label>
+    <ns286:range xmlns:ns286="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Key"/>
+    <ns287:seeAlso xmlns:ns287="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thekeysattribute.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#keyword">
+    <ns288:comment xmlns:ns288="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The keyword element identifies a keyword or token, such as a single value from an enumerated list, the name of a command or parameter, product name, or a lookup key for a message.</ns288:comment>
+    <ns289:label xmlns:ns289="http://www.w3.org/2000/01/rdf-schema#">keyword</ns289:label>
+    <ns290:range xmlns:ns290="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Keyword"/>
+    <ns291:range xmlns:ns291="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns292:seeAlso xmlns:ns292="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/keyword.html"/>
+    <ns293:subPropertyOf xmlns:ns293="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#element"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#lang">
+    <ns294:comment xmlns:ns294="http://www.w3.org/2000/01/rdf-schema#">The language of the file as specified in @xml:lang, and supposed to conform to RFC 1766.</ns294:comment>
+    <ns295:label xmlns:ns295="http://www.w3.org/2000/01/rdf-schema#">language</ns295:label>
+    <ns296:range xmlns:ns296="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#link">
+    <ns297:comment xmlns:ns297="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The link element defines a relationship to another topic. Links are typically sorted when displayed based on their attributes, which define the type or role of the link's target in relation to the current topic.</ns297:comment>
+    <ns298:label xmlns:ns298="http://www.w3.org/2000/01/rdf-schema#">link</ns298:label>
+    <ns299:seeAlso xmlns:ns299="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/link.html"/>
+    <ns300:subPropertyOf xmlns:ns300="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#mainbooktitle">
+    <ns301:comment xmlns:ns301="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The mainbooktitle element contains the primary title information for a book.</ns301:comment>
+    <ns302:label xmlns:ns302="http://www.w3.org/2000/01/rdf-schema#">mainbooktitle</ns302:label>
+    <ns303:range xmlns:ns303="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns304:seeAlso xmlns:ns304="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mainbooktitle.html"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#mapref">
+    <ns305:comment xmlns:ns305="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The mapref element is a convenience element that is equivalent to a &lt;topicref&gt; element with the format attribute set to 'ditamap'. The hierarchy of the referenced map is merged into the container map at the position of the reference, and the relationship tables of the child map are added to the parent map.</ns305:comment>
+    <ns306:label xmlns:ns306="http://www.w3.org/2000/01/rdf-schema#">mapref</ns306:label>
+    <ns307:seeAlso xmlns:ns307="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/mapref.html"/>
+    <ns308:subPropertyOf xmlns:ns308="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns309:subPropertyOf xmlns:ns309="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#notices">
+    <ns310:comment xmlns:ns310="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The notices element references a topic containing special notice information, for example, legal notices about supplementary copyrights and trademarks associated with the book.</ns310:comment>
+    <ns311:label xmlns:ns311="http://www.w3.org/2000/01/rdf-schema#">notices</ns311:label>
+    <ns312:seeAlso xmlns:ns312="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/notices.html"/>
+    <ns313:subPropertyOf xmlns:ns313="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns314:subPropertyOf xmlns:ns314="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#othermeta">
+    <ns315:comment xmlns:ns315="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The othermeta element can be used to identify properties not otherwise included in &lt;metadata&gt; and to assign name/content values to those properties.</ns315:comment>
+    <ns316:label xmlns:ns316="http://www.w3.org/2000/01/rdf-schema#">othermeta</ns316:label>
+    <ns317:seeAlso xmlns:ns317="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/othermeta.html"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#part">
+    <ns318:comment xmlns:ns318="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The part element references a part topic or a map that references part topics for the book. A new part is started. Use &lt;part&gt; to divide a document's chapters into logical groupings. For example, in a document that contains both guide and reference information, you can define two parts, one containing the guide information and the other containing the reference information.</ns318:comment>
+    <ns319:label xmlns:ns319="http://www.w3.org/2000/01/rdf-schema#">part</ns319:label>
+    <ns320:seeAlso xmlns:ns320="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/part.html"/>
+    <ns321:subPropertyOf xmlns:ns321="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+    <ns322:subPropertyOf xmlns:ns322="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#topicref"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#permissions">
+    <ns323:comment xmlns:ns323="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The permissions prolog element specifies the level of entitlement needed to access the content.</ns323:comment>
+    <ns324:domain xmlns:ns324="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns325:label xmlns:ns325="http://www.w3.org/2000/01/rdf-schema#">permissions	</ns325:label>
+    <ns326:range xmlns:ns326="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns327:seeAlso xmlns:ns327="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/permissions.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#platform">
+    <ns328:comment xmlns:ns328="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The platform metadata element contains a description of the operating system and/or hardware related to the product being described by the prodinfo element.</ns328:comment>
+    <ns329:domain xmlns:ns329="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Prodinfo"/>
+    <ns330:label xmlns:ns330="http://www.w3.org/2000/01/rdf-schema#">platform</ns330:label>
+    <ns331:range xmlns:ns331="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns332:seeAlso xmlns:ns332="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/platform.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#prodinfo">
+    <ns333:comment xmlns:ns333="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Connects a DITA file with the product information that it is related to.</ns333:comment>
+    <ns334:domain xmlns:ns334="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns335:label xmlns:ns335="http://www.w3.org/2000/01/rdf-schema#">prodinfo</ns335:label>
+    <ns336:range xmlns:ns336="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Prodinfo"/>
+    <ns337:seeAlso xmlns:ns337="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodinfo.html"/>
+    <ns338:subPropertyOf xmlns:ns338="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#element"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#prodname">
+    <ns339:comment xmlns:ns339="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The prodname metadata element contains the name of the product that is supported by the information in this topic.</ns339:comment>
+    <ns340:domain xmlns:ns340="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Prodinfo"/>
+    <ns341:label xmlns:ns341="http://www.w3.org/2000/01/rdf-schema#">prodname</ns341:label>
+    <ns342:range xmlns:ns342="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns343:seeAlso xmlns:ns343="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/prodname.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#publisher">
+    <ns344:comment xmlns:ns344="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The publisher metadata element contains the name of the person, company, or organization responsible for making the content or subject of the topic available.</ns344:comment>
+    <ns345:domain xmlns:ns345="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns346:label xmlns:ns346="http://www.w3.org/2000/01/rdf-schema#">publisher</ns346:label>
+    <ns347:range xmlns:ns347="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns348:seeAlso xmlns:ns348="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/publisher.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#referenceObject">
+    <ns349:comment xmlns:ns349="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Describes a reference object that is part of a DITA file.</ns349:comment>
+    <ns350:domain xmlns:ns350="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns351:label xmlns:ns351="http://www.w3.org/2000/01/rdf-schema#">referenceObject</ns351:label>
+    <ns352:range xmlns:ns352="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns353:subPropertyOf xmlns:ns353="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#element"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#revised">
+    <ns354:comment xmlns:ns354="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The revised element in the prolog is used to maintain tracking dates that are important in a topic development cycle, such as the last modification date, the original availability date, and the expiration date.</ns354:comment>
+    <ns355:domain xmlns:ns355="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns356:label xmlns:ns356="http://www.w3.org/2000/01/rdf-schema#">revised</ns356:label>
+    <ns357:range xmlns:ns357="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/W3CDTF"/>
+    <ns358:seeAlso xmlns:ns358="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/revised.html"/>
+    <ns359:subPropertyOf xmlns:ns359="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/revised"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#revisedExpiry">
+    <ns360:comment xmlns:ns360="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The date when the information should be retired or refreshed, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31.</ns360:comment>
+    <ns361:domain xmlns:ns361="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns362:label xmlns:ns362="http://www.w3.org/2000/01/rdf-schema#">revised (expiry)</ns362:label>
+    <ns363:range xmlns:ns363="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/W3CDTF"/>
+    <ns364:seeAlso xmlns:ns364="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/revised.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#revisedGolive">
+    <ns365:comment xmlns:ns365="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The publication or general availability (GA) date, entered as YYYY-MM-DD, where YYYY is the year, MM is the month from 01 to 12, and DD is the day from 01-31.</ns365:comment>
+    <ns366:domain xmlns:ns366="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns367:label xmlns:ns367="http://www.w3.org/2000/01/rdf-schema#">revised (golive)</ns367:label>
+    <ns368:range xmlns:ns368="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/W3CDTF"/>
+    <ns369:seeAlso xmlns:ns369="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/revised.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#scope">
+    <ns370:comment xmlns:ns370="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The scope attribute identifies the closeness of the relationship between the current document and the target resource.</ns370:comment>
+    <ns371:domain xmlns:ns371="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#ReferenceObject"/>
+    <ns372:label xmlns:ns372="http://www.w3.org/2000/01/rdf-schema#">scope</ns372:label>
+    <ns373:range xmlns:ns373="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns374:seeAlso xmlns:ns374="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/thescopeattribute.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#searchtitle">
+    <ns375:comment xmlns:ns375="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The searchtitle element is used to specify a title that should be displayed by search tools that locate the topic.</ns375:comment>
+    <ns376:domain xmlns:ns376="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns377:label xmlns:ns377="http://www.w3.org/2000/01/rdf-schema#">searchtitle</ns377:label>
+    <ns378:range xmlns:ns378="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns379:seeAlso xmlns:ns379="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/searchtitle.html"/>
+    <ns380:subPropertyOf xmlns:ns380="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#metadata"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#shortdesc">
+    <ns381:comment xmlns:ns381="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The short description (shortdesc) element occurs between the topic title and the topic body, as the initial paragraph-like content of a topic, or it can be embedded in an abstract element.</ns381:comment>
+    <ns382:domain xmlns:ns382="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns383:label xmlns:ns383="http://www.w3.org/2000/01/rdf-schema#">shortdesc</ns383:label>
+    <ns384:range xmlns:ns384="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns385:seeAlso xmlns:ns385="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/shortdesc.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#source">
+    <ns386:comment xmlns:ns386="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The source element identifies a resource from which the present topic is derived, either completely or in part.</ns386:comment>
+    <ns387:domain xmlns:ns387="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Doctype"/>
+    <ns388:label xmlns:ns388="http://www.w3.org/2000/01/rdf-schema#">source</ns388:label>
+    <ns389:range xmlns:ns389="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns390:seeAlso xmlns:ns390="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/source.html"/>
+    <ns391:subPropertyOf xmlns:ns391="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/source"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#subtopic">
+    <ns392:comment xmlns:ns392="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Topics can be nested.</ns392:comment>
+    <ns393:domain xmlns:ns393="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topic"/>
+    <ns394:label xmlns:ns394="http://www.w3.org/2000/01/rdf-schema#">subtopic</ns394:label>
+    <ns395:range xmlns:ns395="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Topic"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#text">
+    <ns396:comment xmlns:ns396="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The text contained in the element</ns396:comment>
+    <ns397:domain xmlns:ns397="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <ns398:range xmlns:ns398="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#title">
+    <ns399:comment xmlns:ns399="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The title element contains a heading or label for the main parts of a topic, including the topic as a whole, its sections and examples, and its labelled content, such as figures and tables.</ns399:comment>
+    <ns400:label xmlns:ns400="http://www.w3.org/2000/01/rdf-schema#">title</ns400:label>
+    <ns401:range xmlns:ns401="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns402:seeAlso xmlns:ns402="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/title.html"/>
+    <ns403:subPropertyOf xmlns:ns403="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dc/terms/title"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#topicref">
+    <ns404:comment xmlns:ns404="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The topicref element identifies a topic (such as a concept, task, or reference) or other resource.</ns404:comment>
+    <ns405:label xmlns:ns405="http://www.w3.org/2000/01/rdf-schema#">topicref</ns405:label>
+    <ns406:seeAlso xmlns:ns406="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/topicref.html"/>
+    <ns407:subPropertyOf xmlns:ns407="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#vrmModification">
+    <ns408:comment xmlns:ns408="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.</ns408:comment>
+    <ns409:domain xmlns:ns409="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Prodinfo"/>
+    <ns410:label xmlns:ns410="http://www.w3.org/2000/01/rdf-schema#">vrm Modification</ns410:label>
+    <ns411:range xmlns:ns411="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <ns412:seeAlso xmlns:ns412="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#vrmRelease">
+    <ns413:comment xmlns:ns413="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.</ns413:comment>
+    <ns414:domain xmlns:ns414="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Prodinfo"/>
+    <ns415:label xmlns:ns415="http://www.w3.org/2000/01/rdf-schema#">vrm Release</ns415:label>
+    <ns416:range xmlns:ns416="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <ns417:seeAlso xmlns:ns417="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#vrmVersion">
+    <ns418:comment xmlns:ns418="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">The vrm element contains information about a single product's version, modification, and release, to which the current topic applies.</ns418:comment>
+    <ns419:domain xmlns:ns419="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#Prodinfo"/>
+    <ns420:label xmlns:ns420="http://www.w3.org/2000/01/rdf-schema#">vrm Version</ns420:label>
+    <ns421:range xmlns:ns421="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <ns422:seeAlso xmlns:ns422="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/vrm.html"/>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://purl.org/dita/ns#xref">
+    <ns423:comment xmlns:ns423="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">Use the cross-reference (xref) element to link to a different location within the current topic, or a different topic within the same help system, or to external sources, such as Web pages, or to a location in another topic.</ns423:comment>
+    <ns424:label xmlns:ns424="http://www.w3.org/2000/01/rdf-schema#">xref</ns424:label>
+    <ns425:seeAlso xmlns:ns425="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/langref/xref.html"/>
+    <ns426:subPropertyOf xmlns:ns426="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://purl.org/dita/ns#referenceObject"/>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://purl.org/dita/ns#xtrf">
+    <ns427:comment xmlns:ns427="http://www.w3.org/2000/01/rdf-schema#"
+       xml:lang="en-US">xml-trace-filename, the original filename</ns427:comment>
+    <ns428:label xmlns:ns428="http://www.w3.org/2000/01/rdf-schema#">xtrf</ns428:label>
+    <ns429:range xmlns:ns429="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <ns430:seeAlso xmlns:ns430="http://www.w3.org/2000/01/rdf-schema#"
+       rdf:resource="http://docs.oasis-open.org/dita/v1.2/os/spec/common/global-atts.html"/>
+  </rdf:Property>
+</rdf:RDF>

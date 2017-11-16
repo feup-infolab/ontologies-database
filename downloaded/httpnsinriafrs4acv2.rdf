@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+         <!ENTITY sioc	"http://rdfs.org/sioc/ns#">
+         <!ENTITY acl	"http://www.w3.org/ns/auth/acl#">
+         <!ENTITY sp	"http://spinrdf.org/sp#">
+         <!ENTITY skos  "http://www.w3.org/2004/02/skos/core#">
+         <!ENTITY foaf	"http://xmlns.com/foaf/0.1/">
+         <!ENTITY rdfs	"http://www.w3.org/2000/01/rdf-schema#">     
+         <!ENTITY prissma	"http://ns.inria.fr/prissma/v2#">           
+             ]> 
+<rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="&rdfs;"
+        xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xml:base="http://ns.inria.fr/s4ac/v2"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:sioc="&sioc;"
+        xmlns:ma="http://www.w3.org/ns/ma-ont"
+		xmlns:foaf="&foaf;"
+		xmlns:ademe="http://www.ademe.fr/2009/svic-schema.rdfs#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+		xmlns:nicetag="http://ns.inria.fr/nicetag/2010/09/09/voc"
+        xmlns:irw="http://www.ontologydesignpatterns.org/ont/web/irw.owl#"
+       	xmlns:isicil="http://ns.inria.fr/isicil#"
+       	xmlns:skos="&skos;"
+       	xmlns:prissma="&prissma;"
+       	xmlns:sp="&sp;"
+       	xmlns:vann="http://purl.org/vocab/vann/"
+       	xmlns:cc="http://creativecommons.org/ns#"
+       	xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+	<owl:Ontology rdf:about="http://ns.inria.fr/s4ac/v2">
+		<dc:title xml:lang="en">Social Semantic SPARQL Security For Access Control (S4AC) Ontology</dc:title>
+		<dc:description xml:lang="en">A vocabulary to describe the access policies which protect an RDF data store.</dc:description>
+		<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-28</dc:issued> 
+ 		<dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-10-06</dc:modified> 
+		<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
+     	<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
+        <dc:publisher> 
+        <foaf:Organization rdf:about="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/> 
+        </dc:publisher> 
+		<foaf:page rdf:resource="http://ns.inria.fr/s4ac/v2/s4ac_v2.html"/>
+		<vann:preferredNamespacePrefix>s4ac</vann:preferredNamespacePrefix> 
+	    <vann:preferredNamespaceUri>http://ns.inria.fr/s4ac/v2#</vann:preferredNamespaceUri>
+	</owl:Ontology>
+	
+		
+	<!-- ACCESS POLICY -->
+	
+	<owl:Class rdf:ID="AccessPolicy">		
+		<rdfs:label xml:lang="en">AccessPolicy</rdfs:label>
+		<rdfs:comment xml:lang="en">An Access Policy (AP) is a composed by an Access Condition Set, a Subject, an Access Evaluation Context, an Access Privilege, and a URI of the resource to which it is applied. </rdfs:comment>
+		<vs:term_status>stable</vs:term_status> 
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>		
+	
+	<owl:ObjectProperty rdf:ID="hasAccessConditionSet">
+		<rdfs:domain rdf:resource="#AccessPolicy"/>		
+		<rdfs:range rdf:resource="#AccessConditionSet"/>		
+		<rdfs:label xml:lang="en">hasAccessConditionSet</rdfs:label>
+		<rdfs:comment xml:lang="en">This property defines whether the Access Condition Set (ACS) of an Access Policy is a Conjunctive ACS, or a Disjunctive ACS.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	
+	<owl:ObjectProperty rdf:ID="hasAccessEvaluationContext">
+		<rdfs:domain rdf:resource="#AccessPolicy"/>
+		<rdfs:range rdf:resource="#AccessEvaluationContext"/>		
+		<rdfs:label xml:lang="en">hasAccessEvaluationContext</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates an Access Policy with an Access Evaluation Context.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="appliesTo">
+		<rdfs:domain rdf:resource="#AccessPolicy"/>		
+		<rdfs:label xml:lang="en">appliesTo</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates the Access Policy to the URI of the resource to which the policy is applied.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<!-- ACCESS EVALUATION CONTEXT -->
+	
+	<owl:Class rdf:ID="AccessEvaluationContext">			
+		<rdfs:label xml:lang="en">AccessEvaluationContext</rdfs:label>
+		<rdfs:comment xml:lang="en">An Access Evaluation Context (AEC) is a list L of predetermined bound variables names of the form (var1, val1) for which a SPARQL 1.1 Binding Clause constrains the ASK query evaluation (i.e., the evaluation of the Access Conditions) when verifying the Access Conditions.</rdfs:comment>
+		<owl:isEquivalentTo rdf:resource="&prissma;Context"/>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>
+	
+	<!-- VARIABLE -->
+	
+	<owl:Class rdf:ID="Variable">
+		<rdfs:label xml:lang="en">Variable</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to describe the variables used in the Access Conditions.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:ID="hasDescription">
+		<rdfs:domain rdf:resource="#Variable"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>		
+		<rdfs:label xml:lang="en">hasDescription</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates a description of the variable used in the Access Condition Set to explain their use in the definition of the policies. </rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="hasVarName">
+		<rdfs:domain rdf:resource="#Variable"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>		
+		<rdfs:label xml:lang="en">hasVarName</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates a name to the variable used in the Access Conditions.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="hasValue">
+		<rdfs:domain rdf:resource="#Variable"/>	
+		<rdfs:range rdf:resource="#Value"/>	
+		<rdfs:label xml:lang="en">hasValue</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates a value to the variable used in the Access Conditions.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:Class rdf:ID="Value">
+		<rdfs:label xml:lang="en">Value</rdfs:label>
+		<rdfs:comment xml:lang="en">This class is used to describe the value assigned to the variables used in the Access Conditions.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>
+	
+	
+	<!-- ACCESS PRIVILEGES -->
+	
+	<owl:Class rdf:ID="AccessPrivilege">
+	<rdfs:subClassOf rdf:resource="&sioc;Item"/>
+		<rdfs:label xml:lang="en">AccessPrivilege</rdfs:label>
+		<rdfs:comment xml:lang="en">This class represents the kind of access privileges which is granted to the user (Create, Read, Update, Delete).</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>	
+	
+	 <owl:ObjectProperty rdf:ID="hasAccessPrivilege"> 
+		<rdfs:domain rdf:resource="#AccessPolicy"/>
+		<rdfs:range rdf:resource="#AccessPrivilege"/>
+		<rdfs:label xml:lang="en">hasAccessPrivilege</rdfs:label>
+		<rdfs:comment xml:lang="en">This property associates the Access Privileges to the Access Policies.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	
+	<!-- CRUD : CREATE READ UPDATE DELETE-->	
+	
+	<owl:Class rdf:ID="Create">
+	 	<owl:equivalentClass rdf:resource="&acl;Append"/>
+	 	<skos:related rdf:resource="&sp;InsertData"/>
+	 	<skos:related rdf:resource="&sp;Create"/>
+	 	<skos:related rdf:resource="&sp;Load"/>
+		<rdfs:subClassOf rdf:resource="#AccessPrivilege" />
+		<rdfs:label xml:lang="en">Create</rdfs:label>
+		<rdfs:comment xml:lang="en">This class represents a create access on the resource. This class is equivalent to acl:Append.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>	
+	
+	<owl:Class rdf:ID="Read">
+		<skos:related rdf:resource="&sp;Ask"/>
+	  	<owl:equivalentClass rdf:resource="&acl;Read"/>
+	 	<skos:related rdf:resource="&sp;Select"/>
+	 	<skos:related rdf:resource="&sp;Describe"/>
+	 	<skos:related rdf:resource="&sp;Construct"/>
+		<rdfs:subClassOf rdf:resource="#AccessPrivilege" />
+		<rdfs:label xml:lang="en">Read</rdfs:label>
+		<rdfs:comment xml:lang="en">This class represents a read access on the resource. This class is equivalent to acl:Read.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>	
+	
+	<owl:Class rdf:ID="Update">
+		<skos:related rdf:resource="&sp;Modify"/>
+		<rdfs:subClassOf rdf:resource="#AccessPrivilege" />
+		<rdfs:label xml:lang="en">Update</rdfs:label>
+		<rdfs:comment xml:lang="en">This class represents an update access on the resource.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>	
+	
+	<owl:Class rdf:ID="Delete">
+		<skos:related rdf:resource="&sp;DeleteData"/>
+	 	<skos:related rdf:resource="&sp;DeleteWhere"/>
+	 	<skos:related rdf:resource="&sp;Clear"/>
+	 	<skos:related rdf:resource="&sp;Drop"/>
+		<rdfs:subClassOf rdf:resource="#AccessPrivilege" />
+		<rdfs:label xml:lang="en">Delete</rdfs:label>
+		<rdfs:comment xml:lang="en">This class represents a delete access on the resource.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>	
+	
+	<!-- ACCESS CONDITION : allow people to access specific resources -->
+	
+	<owl:Class rdf:ID="AccessCondition">
+		<rdfs:subClassOf rdf:resource="&sioc;Item" />
+		<rdfs:label xml:lang="en">AccessCondition</rdfs:label>
+		<rdfs:comment xml:lang="en">The Access Condition (AC) allows the users to access specific resources. An AC is a SPARQL 1.1 ASK query. If a solution exists, the ASK query returns true, and the AC is said to be verified. If no solution exists, the ASK query returns false, and the AC is said not to be verified.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:ID="hasName"> 
+	   	<rdfs:domain rdf:resource="#AccessCondition"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<rdfs:label xml:lang="en">hasName</rdfs:label>
+		<rdfs:comment xml:lang="en">This property assigns a name to an Access Condition.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="hasQueryAsk">
+		<rdfs:domain rdf:resource="#AccessCondition"/>
+		<rdfs:range rdf:resource="&rdfs;Literal"/>		
+		<rdfs:label xml:lang="en">hasQueryAsk</rdfs:label>
+		<rdfs:comment xml:lang="en">This property defines the SPARQL 1.1 ASK queries which represent the Access Conditions.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<!-- ACCESS CONDITION SET -->
+	
+	<owl:Class rdf:ID="AccessConditionSet">
+		<rdfs:subClassOf rdf:resource="&sioc;Container"/>
+		<rdfs:label xml:lang="en">AccessConditionSet</rdfs:label>
+		<rdfs:comment xml:lang="en">An Access Condition Set (ACS) represents a set of Access Conditions which can be either Conjunctive or Disjunctive.
+		</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="DisjunctiveAccessConditionSet">
+		<rdfs:subClassOf rdf:resource="#AccessConditionSet" />
+		<owl:disjointWith rdf:resource="#ConjunctiveAccessConditionSet"/>		
+		<rdfs:label xml:lang="en">DisjontiveAccessConditionSet</rdfs:label>
+		<rdfs:comment xml:lang="en">A Disjunctive ACS (DACS) is a logical disjunction of Access Conditions, and it is said to be verified if and only if at least one Access Condition it contains is verified.
+		</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:ID="ConjunctiveAccessConditionSet">
+		<rdfs:subClassOf rdf:resource="#AccessConditionSet" />
+		<owl:disjointWith rdf:resource="#DisjunctiveAccessConditionSet"/>		
+		<rdfs:label xml:lang="en">ConjontiveAccessConditionSet</rdfs:label>
+		<rdfs:comment xml:lang="en">A Conjunctive ACS (CACS) is a logical conjunction of Access Conditions, and it is said to be verified if and only if every Access Condition it contains is verified.
+		</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:Class>	
+	
+	 <owl:ObjectProperty rdf:ID="hasAccessCondition"> 
+	   	<owl:inverseOf>
+        	<owl:ObjectProperty rdf:about="#isAccessConditionOf" />
+     	</owl:inverseOf>	 
+		<rdfs:domain rdf:resource="#AccessConditionSet"/>
+		<rdfs:range rdf:resource="#AccessCondition"/>
+		<rdfs:label xml:lang="en">hasAccessCondition</rdfs:label>
+		<rdfs:comment xml:lang="en">This property adds an Access Condition to an Access Condition Set.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	 <owl:ObjectProperty rdf:ID="isAccessConditionOf"> 
+		  <owl:inverseOf>
+        		<owl:ObjectProperty rdf:about="#hasAccessCondition" />
+     	</owl:inverseOf>	
+		<rdfs:domain rdf:resource="#AccessCondition"/>
+		<rdfs:range rdf:resource="#AccessConditionSet"/>
+		<rdfs:label xml:lang="en">isAccessConditionOf</rdfs:label>
+		<rdfs:comment xml:lang="en">This property says that an Access Condition is part of an Access Condition Set.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="hasVariable"> 
+		<rdfs:domain rdf:resource="#AccessConditionSet"/>
+		<rdfs:range rdf:resource="#Variable"/>
+		<rdfs:label xml:lang="en">hasVariable</rdfs:label>
+		<rdfs:comment xml:lang="en">The property associates the variables and the Access Condition Set where they are used.</rdfs:comment>
+		<vs:term_status>stable</vs:term_status>
+		<rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/s4ac/v2#"/>
+	</owl:ObjectProperty>
+	
+
+</rdf:RDF>

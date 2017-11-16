@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+	<license xmlns="http://creativecommons.org/ns#" rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+	<license xmlns="http://creativecommons.org/ns#" rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:nodeID="node1bmu26bkrx2"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:nodeID="node1bmu26bkrx3"/>
+	<contributor xmlns="http://purl.org/dc/terms/" rdf:nodeID="node1bmu26bkrx1"/>
+	<description xmlns="http://purl.org/dc/terms/" xml:lang="fr">Ontologie des objets géographiques de l'INSEE, en particulier des territoires administratifs de la France</description>
+	<issued xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-08-13</issued>
+	<modified xmlns="http://purl.org/dc/terms/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-19</modified>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/INSEE"/>
+	<title xmlns="http://purl.org/dc/terms/" xml:lang="fr">Ontologie géographique de l'INSEE</title>
+	<preferredNamespacePrefix xmlns="http://purl.org/vocab/vann/">igeo</preferredNamespacePrefix>
+	<preferredNamespaceUri xmlns="http://purl.org/vocab/vann/" rdf:resource="http://rdf.insee.fr/def/geo#"/>
+	<rights xmlns="http://purl.org/dc/elements/1.1/">Copyright © 2013 INSEE</rights>
+	<classNumber xmlns="http://purl.org/vocommons/voaf#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</classNumber>
+	<propertyNumber xmlns="http://purl.org/vocommons/voaf#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</propertyNumber>
+	<owl:incompatibleWith rdf:resource="http://rdf.insee.fr/geo/ontologie-geo-2006.rdf"/>
+	<owl:versionInfo>Version 3.0.0 - 2017-04-19</owl:versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1bmu26bkrx2">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<name xmlns="http://xmlns.com/foaf/0.1/">Antoine Dreyer</name>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1bmu26bkrx3">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<name xmlns="http://xmlns.com/foaf/0.1/">Franck Cotton</name>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1bmu26bkrx1">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<name xmlns="http://xmlns.com/foaf/0.1/">Bernard Vatant</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#AireUrbaine">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Arrondissement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TerritoireAdministratif">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Departement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionDe">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ArrondissementMunicipal">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Canton">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CantonOuVille">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TerritoireStatistique">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Commune">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivision">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CollectiviteTerritoriale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#LAU2">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#chefLieu">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Region">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionDirecte">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#GrandQuartier">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#IRIS">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#PaysOuTerritoire">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#LAU">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#LAU1">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#NUTS">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#NUTS1">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#NUTS2">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Pays">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TerritoireFrancais">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#UniteUrbaine">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ZoneDEmploi">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeArrondissement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeINSEE">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeCanton">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeCommune">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeDepartement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeIRIS">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeISO">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codePays">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeRegion">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#nom">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#vivant">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#prefecture">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#prefectureDeRegion">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#sousPrefecture">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#valeurAvantSuppression">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Suppression">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TerritoireStatistiqueEuropeen">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#IRISdivers">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TerritoireStatistiqueFrançais">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CollectiviteDOutreMer">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#EspaceUrbain">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#territtoireReceveuseParcelles">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CessionParcelle">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionPartitionDe">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionPartition">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CirconscriptionLegislative">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CirconscriptionElectorale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#MetropoleOuAssimilee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TerritoireAutonomeOuASouveraineteSpeciale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionDirecteDe">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#IRISactivite">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#chefLieuCanton">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Canton_CantonOuVille">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#populationCedee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#SectionCirconscriptionElectionsEuropeennes">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#mouvementTerritoire">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ClasseMouvementBaseModification">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TypeTexteMouvement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Canton_CantonOuVille_Canton2015_CantonOuVille2015">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionIndirecte">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#subdivisionIndirecteDe">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommuneDeleguee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommuneOuAssimilee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#typeNomCharniereClair">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommunauteUrbaine">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Ilot">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommuneFusionnee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommuneSupprimee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CantonOuVille2015">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Canton2015_CantonOuVille2015">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#NUTS0">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#PaysEtTerritoiresDOutreMer">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CirconscriptionAdministrative">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CollectiviteTerritorialeDeCollectiviteOutreMerOuAssimile">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Canton2015">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#valeurApresChangement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Changement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codePaysCourt">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#URIApres">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TransfertURI">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ClasseMouvementBase">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#referenceMouvement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Mouvement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#mouvementPropriete">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ProvinceNouvelleCaledonie">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Creation">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#FractionCirconscriptionLegislative">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ReferenceMouvement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeCommuneDeleguee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#AutresTerritoiresAssocies">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommunauteAgglomeration">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#DistrictTAAF">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#RoyaumeCoutumier">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommuneAssociee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#SubdivisionPolynesieFrancaise">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#FractionCanton2015">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#dateEffet">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#URIAvant">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#dateIntroduction">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#Etat">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#estLieChangement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#codeMouvement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#dateJO">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#chefLieuCollectiviteDepartementaleOuCollectiviteTerritorialeEquivalente">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CollectiviteDepartementaleOuCollectiviteTerritorialeEquivalente">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#mouvementBase">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#referenceMouvementBase">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CirconscriptionWallisFutuna">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommunauteCommunes">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ZoneUrbaineSensible">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#IRIShabitat">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#communePole">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#valeurApresCreation">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#territoireCommunAvec">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ZonePays">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CirconscriptionAdministrativeRegionale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#IRIScommuneNonIrisee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TRIRISpseudoDiffusion">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#SubdivisionNouvelleCaledonie">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#typeTexte">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ZonePostale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#DepartementRegionOutreMerOuAssimile">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#memeTerritoire">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#TRIRISdiffusion">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#RegionUltraPeripherique">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ConseilDArrondissement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#valeurAvantChangement">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CommuneEnDouble">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#bureauCentralisateurCanton">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#territoireCedanteParcelles">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ZoneFrancheUrbaine">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#FractionCanton">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#surfaceCedee">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#nomCharniereClair">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#CirconscriptionElectionsEuropeennes">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#ZoneDEtudesEtDAmenagementDuTerritoire">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#dateTexte">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#EtablissementPublicDeCooperationIntercommunale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/geo#BassinVie">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/geo"/>
+</rdf:Description>
+
+</rdf:RDF>

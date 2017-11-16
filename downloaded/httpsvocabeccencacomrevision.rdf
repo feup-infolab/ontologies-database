@@ -1,0 +1,1519 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.1="http://usefulinc.com/ns/doap#"
+    xmlns:j.2="https://ns.eccenca.com/"
+    xmlns:j.3="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.4="http://purl.org/vocab/vann/"
+    xmlns:j.5="http://creativecommons.org/ns#"
+    xmlns:j.6="http://xmlns.com/foaf/0.1/"
+    xmlns:j.7="http://rdfs.org/ns/void#">
+  <owl:Ontology rdf:about="https://vocab.eccenca.com/revision/">
+    <j.1:wiki rdf:resource="https://github.com/eccenca/eccrev-vocab/wiki"/>
+    <j.1:homepage rdf:resource="https://github.com/eccenca/eccrev-vocab"/>
+    <j.7:vocabulary rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:versionInfo>v1.1.0</owl:versionInfo>
+    <j.0:rights>Copyright © 2014 - 2016 eccenca GmbH</j.0:rights>
+    <j.2:vowlSpecification>
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.1), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://vocab.eccenca.com/revision", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
+    "iri" : "https://vocab.eccenca.com/revision/",
+    "version" : "SNAPSHOT",
+    "author" : [ "http://sebastian.tramp.name", "https://ns.eccenca.com/rnavarropiris" ],
+    "labels" : {
+      "en" : "eccrev: RDF changes and revisions vocabulary"
+    },
+    "comments" : {
+      "en" : "A vocabulary &amp; data model for describing RDF changes and revisions. It defines the Commit &amp; Revision classes together with their expected properties."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "http://sebastian.tramp.name",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://ns.eccenca.com/rnavarropiris",
+        "type" : "iri"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "wiki" : [ {
+        "identifier" : "wiki",
+        "language" : "undefined",
+        "value" : "https://github.com/eccenca/eccrev-vocab/wiki",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "SNAPSHOT",
+        "type" : "label"
+      } ],
+      "repository" : [ {
+        "identifier" : "repository",
+        "language" : "undefined",
+        "value" : "https://github.com/eccenca/eccrev-vocab.git",
+        "type" : "iri"
+      } ],
+      "bug-database" : [ {
+        "identifier" : "bug-database",
+        "language" : "undefined",
+        "value" : "https://github.com/eccenca/eccrev-vocab/issues",
+        "type" : "iri"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/3.0/",
+        "type" : "iri"
+      } ],
+      "usageNote" : [ {
+        "identifier" : "usageNote",
+        "language" : "en",
+        "value" : "The expressiveness of the vocabulary is compliant with the OWL 2 DL profile, but in order to achieve this, used ontologies (dct, prov, vann) are not directly imported (since that leads to non-conformance with the OWL 2 DL profile). Instead, their classes and properties are declared (with the corresponding necessary OWL property type) with a reference to the original ontology that defined them.",
+        "type" : "label"
+      } ],
+      "vocabulary" : [ {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      }, {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://purl.org/vocab/vann/",
+        "type" : "iri"
+      }, {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      }, {
+        "identifier" : "vocabulary",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "http://aksw.org/MarvinFrommhold",
+        "type" : "iri"
+      } ],
+      "download-page" : [ {
+        "identifier" : "download-page",
+        "language" : "undefined",
+        "value" : "https://github.com/eccenca/eccrev-vocab/releases",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "eccrev",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Copyright © 2014 - 2016 eccenca GmbH",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://ns.eccenca.com/eccenca-GmbH",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2016-03-11",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ],
+      "homepage" : [ {
+        "identifier" : "homepage",
+        "language" : "undefined",
+        "value" : "https://github.com/eccenca/eccrev-vocab",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 12,
+    "objectPropertyCount" : 11,
+    "datatypePropertyCount" : 3,
+    "individualCount" : 5
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#Activity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#InstantaneousEvent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InstantaneousEvent"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "instances" : 0,
+    "union" : [ "11", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#base64Binary",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "base64Binary"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "8" ],
+    "attributes" : [ "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Organization",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization"
+    },
+    "individuals" : [ {
+      "iri" : "https://ns.eccenca.com/eccenca-GmbH",
+      "baseIri" : "https://ns.eccenca.com",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "eccenca GmbH",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "eccenca-GmbH"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/Branch",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-30",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-22",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Branch",
+      "en" : "Branch"
+    },
+    "comment" : {
+      "en" : "Represents a branch"
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/Tag",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-30",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-22",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Tag",
+      "en" : "Tag"
+    },
+    "comment" : {
+      "en" : "Represents a tag"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/Commit",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-30",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Commit",
+      "en" : "Commit"
+    },
+    "comment" : {
+      "en" : "Represents a modification of the datastore. A commit consists typically on a collection of :Revision (connected with a :hasRevision relationship"
+    },
+    "id" : "1",
+    "superClasses" : [ "0", "18" ]
+  }, {
+    "iri" : "http://purl.org/dc/terms/Agent",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "individuals" : [ {
+      "iri" : "http://aksw.org/MarvinFrommhold",
+      "baseIri" : "http://aksw.org",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Marvin Frommhold",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "MarvinFrommhold"
+      }
+    }, {
+      "iri" : "https://ns.eccenca.com/eccenca-GmbH",
+      "baseIri" : "https://ns.eccenca.com",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "eccenca GmbH",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "eccenca-GmbH"
+      }
+    }, {
+      "iri" : "http://sebastian.tramp.name",
+      "baseIri" : "http:/",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sebastian Tramp",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "sebastian.tramp.name"
+      }
+    }, {
+      "iri" : "https://ns.eccenca.com/rnavarropiris",
+      "baseIri" : "https://ns.eccenca.com",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Rubén Navarro Piris",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "rnavarropiris"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/Revision",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-30",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Revision",
+      "en" : "Revision"
+    },
+    "comment" : {
+      "en" : "Represents a modification on a specific named graph"
+    },
+    "id" : "8",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "3",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "https://vocab.eccenca.com/revision/",
+      "baseIri" : "https://vocab.eccenca.com",
+      "labels" : { }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "individuals" : [ {
+      "iri" : "http://aksw.org/MarvinFrommhold",
+      "baseIri" : "http://aksw.org",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Marvin Frommhold",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "MarvinFrommhold"
+      }
+    }, {
+      "iri" : "http://sebastian.tramp.name",
+      "baseIri" : "http:/",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Sebastian Tramp",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "sebastian.tramp.name"
+      }
+    }, {
+      "iri" : "https://ns.eccenca.com/rnavarropiris",
+      "baseIri" : "https://ns.eccenca.com",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Rubén Navarro Piris",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "rnavarropiris"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "26",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "13",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasDerivedFrom"
+    },
+    "domain" : "3",
+    "subproperty" : [ "4" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#atTime",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "atTime"
+    },
+    "cardinality" : "1",
+    "domain" : "3",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/deltaInsert",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-16",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "deltaInsert",
+      "en" : "insert delta"
+    },
+    "cardinality" : "1",
+    "domain" : "8",
+    "comment" : {
+      "en" : "The IRI of the named graph containing the inserted triples of a revision (compared to its previous revision)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "10"
+  }, {
+    "range" : "1",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/referencesCommit",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-22",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-22",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "referencesCommit",
+      "en" : "references commit"
+    },
+    "cardinality" : "1",
+    "domain" : "15",
+    "comment" : {
+      "en" : "The commit to which this branch or tag references"
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/hasRevisionGraph",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-29",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-29",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRevisionGraph",
+      "en" : "has revision graph"
+    },
+    "superproperty" : [ "17" ],
+    "cardinality" : "1",
+    "domain" : "8",
+    "comment" : {
+      "en" : "The named graph the revision refers to"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "8",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/hasRevision",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-16",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-16",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRevision",
+      "en" : "has revision"
+    },
+    "superproperty" : [ "21" ],
+    "minCardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "A named graph revision belonging to the commit"
+    },
+    "attributes" : [ "inverse functional", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/commitAuthor",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "26",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-30",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-29",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commitAuthor",
+      "en" : "commit author"
+    },
+    "superproperty" : [ "27" ],
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "The author of the commit"
+    },
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/commitMessage",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "23",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-30",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commitMessage",
+      "en" : "commit message"
+    },
+    "maxCardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "A message describing the commit"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "29"
+  }, {
+    "range" : "1",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "8",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasAssociatedWith"
+    },
+    "domain" : "3",
+    "subproperty" : [ "25" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasRevisionOf"
+    },
+    "domain" : "3",
+    "subproperty" : [ "16" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/previousCommit",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-16",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "previousCommit",
+      "en" : "previous commit"
+    },
+    "superproperty" : [ "2" ],
+    "maxCardinality" : "2",
+    "domain" : "1",
+    "comment" : {
+      "en" : "Connects to the previous commit (or pair of commits in the case of a merge commit)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/deltaDelete",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-16",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-15",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "deltaDelete",
+      "en" : "delete delta"
+    },
+    "cardinality" : "1",
+    "domain" : "8",
+    "comment" : {
+      "en" : "The IRI of the named graph containing the deleted triples of a revision (compared to its previous revision)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#generated",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-o#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "generated"
+    },
+    "domain" : "3",
+    "subproperty" : [ "20" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "18",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "28",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://vocab.eccenca.com/revision/sha256",
+    "baseIri" : "https://vocab.eccenca.com/revision",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://vocab.eccenca.com/revision/",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2014-12-19",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2014-12-19",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://link.springer.com/chapter/10.1007%2F978-3-540-39718-2_24",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sha256",
+      "en" : "sha256 digest"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A sha256 digest of a commit based on the RDF NC14 algorithm described in 'Signing RDF Graphs' by Jeremy J. Carroll (DOI: 10.1007/F978-3-540-39718-2_24)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  } ]
+}</j.2:vowlSpecification>
+    <j.1:repository rdf:resource="https://github.com/eccenca/eccrev-vocab.git"/>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <j.4:usageNote xml:lang="en">The expressiveness of the vocabulary is compliant with the OWL 2 DL profile, but in order to achieve this, used ontologies (dct, prov, vann) are not directly imported (since that leads to non-conformance with the OWL 2 DL profile). Instead, their classes and properties are declared (with the corresponding necessary OWL property type) with a reference to the original ontology that defined them.</j.4:usageNote>
+    <j.7:vocabulary rdf:resource="http://purl.org/vocab/vann/"/>
+    <rdfs:label xml:lang="en">eccrev: RDF changes and revisions vocabulary</rdfs:label>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-03-11</j.0:modified>
+    <j.0:publisher>
+      <j.6:Organization rdf:about="https://ns.eccenca.com/eccenca-GmbH">
+        <j.6:name>eccenca GmbH</j.6:name>
+        <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+      </j.6:Organization>
+    </j.0:publisher>
+    <j.1:bug-database rdf:resource="https://github.com/eccenca/eccrev-vocab/issues"/>
+    <j.7:vocabulary rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <j.4:preferredNamespaceUri>https://vocab.eccenca.com/revision/</j.4:preferredNamespaceUri>
+    <j.1:download-page rdf:resource="https://github.com/eccenca/eccrev-vocab/releases"/>
+    <j.7:vocabulary rdf:resource="http://www.w3.org/ns/prov#"/>
+    <j.0:creator>
+      <j.0:Agent rdf:about="http://sebastian.tramp.name">
+        <j.6:name>Sebastian Tramp</j.6:name>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+      </j.0:Agent>
+    </j.0:creator>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <j.0:creator>
+      <j.0:Agent rdf:about="https://ns.eccenca.com/rnavarropiris">
+        <j.6:name>Rubén Navarro Piris</j.6:name>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+      </j.0:Agent>
+    </j.0:creator>
+    <j.0:contributor>
+      <j.0:Agent rdf:about="http://aksw.org/MarvinFrommhold">
+        <j.6:name>Marvin Frommhold</j.6:name>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+      </j.0:Agent>
+    </j.0:contributor>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <j.4:preferredNamespacePrefix>eccrev</j.4:preferredNamespacePrefix>
+    <rdfs:comment xml:lang="en">A vocabulary &amp; data model for describing RDF changes and revisions. It defines the Commit &amp; Revision classes together with their expected properties.</rdfs:comment>
+    <j.5:license>
+      <rdf:Description rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <rdfs:label>Creative Commons Attribution 3.0 Unported</rdfs:label>
+      </rdf:Description>
+    </j.5:license>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://vocab.eccenca.com/revision/Commit">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/hasRevision"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/commitAuthor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://vocab.eccenca.com/revision/Revision"/>
+    </owl:disjointWith>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://vocab.eccenca.com/revision/Tag"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">Represents a modification of the datastore. A commit consists typically on a collection of :Revision (connected with a :hasRevision relationship</rdfs:comment>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >2</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/previousCommit"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://vocab.eccenca.com/revision/Branch"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Commit</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://vocab.eccenca.com/revision/commitMessage"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-30</j.0:modified>
+  </owl:Class>
+  <owl:Class rdf:about="https://vocab.eccenca.com/revision/Branch">
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-30</j.0:modified>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://vocab.eccenca.com/revision/Revision"/>
+    </owl:disjointWith>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-22</j.0:issued>
+    <rdfs:label xml:lang="en">Branch</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://vocab.eccenca.com/revision/Tag"/>
+    </owl:disjointWith>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">Represents a branch</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/referencesCommit"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://vocab.eccenca.com/revision/Revision">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="https://vocab.eccenca.com/revision/hasRevisionGraph"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-30</j.0:modified>
+    <owl:disjointWith rdf:resource="https://vocab.eccenca.com/revision/Branch"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#atTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://vocab.eccenca.com/revision/Tag"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/deltaDelete"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Revision</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/deltaInsert"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <rdfs:comment xml:lang="en">Represents a modification on a specific named graph</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://vocab.eccenca.com/revision/Tag">
+    <owl:disjointWith rdf:resource="https://vocab.eccenca.com/revision/Revision"/>
+    <owl:disjointWith rdf:resource="https://vocab.eccenca.com/revision/Branch"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-30</j.0:modified>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/referencesCommit"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">Represents a tag</rdfs:comment>
+    <rdfs:label xml:lang="en">Tag</rdfs:label>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-22</j.0:issued>
+    <owl:disjointWith rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/previousCommit">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-16</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">Connects to the previous commit (or pair of commits in the case of a merge commit)</rdfs:comment>
+    <rdfs:label xml:lang="en">previous commit</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#generated">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/hasRevision">
+    <rdfs:comment xml:lang="en">A named graph revision belonging to the commit</rdfs:comment>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-16</j.0:issued>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:range rdf:resource="https://vocab.eccenca.com/revision/Revision"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-16</j.0:modified>
+    <rdfs:label xml:lang="en">has revision</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/commitAuthor">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-30</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-29</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">The author of the commit</rdfs:comment>
+    <rdfs:label xml:lang="en">commit author</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/referencesCommit">
+    <rdfs:range rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="https://vocab.eccenca.com/revision/Branch"/>
+        <owl:Class rdf:about="https://vocab.eccenca.com/revision/Tag"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-22</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-22</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">The commit to which this branch or tag references</rdfs:comment>
+    <rdfs:label xml:lang="en">references commit</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/deltaDelete">
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Revision"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-16</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">The IRI of the named graph containing the deleted triples of a revision (compared to its previous revision)</rdfs:comment>
+    <rdfs:label xml:lang="en">delete delta</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://vocab.eccenca.com/revision/deltaInsert">
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Revision"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-16</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">The IRI of the named graph containing the inserted triples of a revision (compared to its previous revision)</rdfs:comment>
+    <rdfs:label xml:lang="en">insert delta</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://vocab.eccenca.com/revision/commitMessage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-30</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-15</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">A message describing the commit</rdfs:comment>
+    <rdfs:label xml:lang="en">commit message</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://vocab.eccenca.com/revision/sha256">
+    <rdfs:seeAlso rdf:resource="http://link.springer.com/chapter/10.1007%2F978-3-540-39718-2_24"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Commit"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-19</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-19</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">A sha256 digest of a commit based on the RDF NC14 algorithm described in "Signing RDF Graphs" by Jeremy J. Carroll (DOI: 10.1007/F978-3-540-39718-2_24).</rdfs:comment>
+    <rdfs:label xml:lang="en">sha256 digest</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#atTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="https://vocab.eccenca.com/revision/hasRevisionGraph">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+    <rdfs:domain rdf:resource="https://vocab.eccenca.com/revision/Revision"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-29</j.0:modified>
+    <j.0:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-29</j.0:issued>
+    <rdfs:isDefinedBy rdf:resource="https://vocab.eccenca.com/revision/"/>
+    <rdfs:comment xml:lang="en">The named graph the revision refers to</rdfs:comment>
+    <rdfs:label xml:lang="en">has revision graph</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license">
+    <rdfs:isDefinedBy rdf:resource="http://creativecommons.org/ns"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+  </owl:AnnotationProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+  </owl:AnnotationProperty>
+</rdf:RDF>

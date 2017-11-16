@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:org="http://www.w3.org/ns/org#">
+
+  <owl:Ontology rdf:about="http://data.lirmm.fr/ontologies/poste">
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <dcterms:title>Ontologie de la Poste</dcterms:title>
+    <dcterms:description>Vocabulaire décrivant la répartition des points de contact du réseau postal en France métropolitaine, Guadeloupe, Guyane, La Réunion, Martinique, Mayotte, Monaco, Monte-Carlo et Saint-Pierre et Miquelon.</dcterms:description>
+    <dc:license>http://creativecommons.org/licenses/by-sa/3.0/</dc:license>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-21</dcterms:modified>
+    <vann:preferredNamespaceUri>http://data.lirmm.fr/ontologies/poste#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>poste</vann:preferredNamespacePrefix>
+    <foaf:homepage rdf:resource="http://data.lirmm.fr/ontologies/poste.html"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-09-28</dcterms:created>
+    <dcterms:partOf rdf:resource="http://data.lirmm.fr/ontologies"/>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+    <dc:creator rdf:resource="http://data.lirmm.fr/ontologies/poste#ghislain"/>
+  </owl:Ontology>
+
+  <adms:SemanticDistribution rdf:about="http://data.lirmm.fr/ontologies/poste#ttl">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://data.lirmm.fr/ontologies/poste.ttl</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+  </adms:SemanticDistribution>
+
+  <adms:SemanticDistribution rdf:about="http://data.lirmm.fr/ontologies/poste#rdf">
+    <dcterms:FileFormat></dcterms:FileFormat>
+    <adms:accessURL>http://data.lirmm.fr/ontologies/poste.rdf</adms:accessURL>
+    <adms:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+  </adms:SemanticDistribution>
+
+  <foaf:Person rdf:about="http://data.lirmm.fr/ontologies/poste#ghislain">
+    <foaf:nick>ghislain</foaf:nick>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/poste#PosteOrganisation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Organisation de la poste</rdfs:label>
+    <rdfs:comment>Organisation de la poste en France</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/poste#BureauPoste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Bureau de poste</rdfs:label>
+    <rdfs:comment>Site représentant un bureau de poste</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/poste#RelaisCommercant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Relais commerçant</rdfs:label>
+    <rdfs:comment>Site représentant un relais poste commerçant</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://data.lirmm.fr/ontologies/poste#AgencePostaleCommunale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Agence postale communale</rdfs:label>
+    <rdfs:comment>Site représentant une agence communale</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#changeurMonnaie">
+    <rdfs:label>changeur monnaie</rdfs:label>
+    <rdfs:comment>changeur de monnaie</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#photocopieur">
+    <rdfs:label>Photocopieur</rdfs:label>
+    <rdfs:comment>Présence ou non d'un photocopieur accessible au public.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#distributeur">
+    <rdfs:label>Distributeur de billets automatique</rdfs:label>
+    <rdfs:comment>Présence ou non d'un distributeur automatique de billets (DAB).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#affranchissementLibreService">
+    <rdfs:label>Affranchissement libre service</rdfs:label>
+    <rdfs:comment>Présence ou non d'un automate d'affranchissement libre service.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#rechargeMoneo">
+    <rdfs:label>Recharge moneo</rdfs:label>
+    <rdfs:comment>Présence ou non de chargeurs de monnaie. Ils permettent aux clients de s'approvisionner en monnaie.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#monnaieParis">
+    <rdfs:label>Monnaie Paris</rdfs:label>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#codePostal">
+    <rdfs:label>Code postal</rdfs:label>
+    <rdfs:comment>code postal du point de contact</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://data.lirmm.fr/ontologies/poste#complementAdresse">
+    <rdfs:label>Complement Adresse</rdfs:label>
+    <rdfs:comment>Indication de precisant la structure d'accueil de l'agence, MAIRIE, HOTEL, TABAC</rdfs:comment>
+    <rdfs:domain rdf:resource="http://data.lirmm.fr/ontologies/poste#PosteOrganisation"/>
+  </rdf:Property>
+
+  <owl:Ontology rdf:about="http://data.lirmm.fr/ontologies/poste#">
+    <owl:versionInfo>0.3</owl:versionInfo>
+    <rdfs:label xml:lang="fr">Ontologie de la Poste</rdfs:label>
+    <rdfs:comment xml:lang="fr">Vocabulaire décrivant la répartition des points de contact du réseau postal en France métropolitaine, Guadeloupe, Guyane, La Réunion, Martinique, Mayotte, Monaco, Monte-Carlo et Saint-Pierre et Miquelon</rdfs:comment>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-09-25</dcterms:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-09-26</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-09-27</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-09-28</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-02</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-25</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-02-03</dcterms:modified>
+    <dcterms:creator rdf:resource="http://data.semanticweb.org/person/raphael-troncy"/>
+    <dcterms:creator rdf:resource="http://www.eurecom.fr/~atemezin"/>
+    <dcterms:publisher rdf:resource="http://data.semanticweb.org/organization/eurecom"/>
+    <dcterms:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
+    <rdfs:seeAlso rdf:resource="http://data.lirmm.fr/ontologies/poste.html"/>
+    <rdfs:seeAlso rdf:resource="http://www.data.gouv.fr/var/download/fbd8ad620e37a6cf8165e5619a687ccd.pdf"/>
+    <rdfs:seeAlso rdf:resource="http://www.data.gouv.fr/donnees/view/Liste-des-points-de-contact-du-r%C3%A9seau-postal-fran%C3%A7ais-551640?xtmc=paris&amp;xtcr=7"/>
+  </owl:Ontology>
+
+  <foaf:Person rdf:about="http://www.eurecom.fr/~atemezin">
+    <foaf:name>Ghislain Auguste Atemezing</foaf:name>
+  </foaf:Person>
+
+  <foaf:Person rdf:about="http://data.semanticweb.org/person/raphael-troncy">
+    <foaf:name>Raphael Troncy</foaf:name>
+  </foaf:Person>
+
+  <org:Organization rdf:about="http://data.semanticweb.org/organization/eurecom">
+    <foaf:name>EURECOM</foaf:name>
+  </org:Organization>
+
+</rdf:RDF>

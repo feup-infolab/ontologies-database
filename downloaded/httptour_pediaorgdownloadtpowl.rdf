@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://tour-pedia.org/download/tp.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://tour-pedia.org/download/tp.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://schema.org/</Import>
+    <Import>http://purl.org/vocommons/voaf</Import>
+    <Import>http://purl.org/acco/ns#</Import>
+    <Import>http://www.semanticweb.org/ontologies/2012/4/accommodation-17042012.owl</Import>
+    <Import>http://www.w3.org/ns/prov#</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Angelica Lo Duca</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">tp</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://tour-pedia.org/download/tp.owl</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">testing</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tourpedia Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2014-06-08</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Copyright © 2015 Tourpedia</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/modified"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2015-06-08</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://creativecommons.org/licenses/by/1.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A vocabulary to describe touristic places: accommodations, points of interest, restaurants and attractions.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tourpedia Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A vocabulary to describe touristic places: accommodations, points of interest, restaurants and attractions.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://schema.org/TouristAttraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accommodation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attraction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#POI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/wikiPageExternalLink"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/marl/0.2/ns#hasPolarity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#related"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://dbpedia.org/ontology/address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#fn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#hasPhoto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/acco/ns#Accommodation"/>
+        <Class IRI="#Accommodation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://schema.org/CivicStructure"/>
+        <Class IRI="#POI"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://schema.org/LodgingBusiness"/>
+        <Class IRI="#Accommodation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://schema.org/Restaurant"/>
+        <Class IRI="#Restaurant"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://schema.org/TouristAttraction"/>
+        <Class IRI="#Attraction"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Accommodation"/>
+        <Class IRI="http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#Accommodation"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Place"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Accommodation"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attraction"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#POI"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restaurant"/>
+        <Class IRI="#Place"/>
+    </SubClassOf>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#fn"/>
+        <AnonymousIndividual nodeID="_:http://tour-pedia.org/download/tp.owl#genid1433522358743357000"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/location"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://dbpedia.org/ontology/wikiPageExternalLink"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.org/marl/0.2/ns#hasPolarity"/>
+        <Class IRI="http://www.w3.org/ns/prov#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://schema.org/sameAs"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2004/02/skos/core#related"/>
+        <Class IRI="#Accommodation"/>
+    </ObjectPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://dbpedia.org/ontology/address"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#fn"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#hasPhoto"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.w3.org/2006/vcard/ns#hasTelephone"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Accommodation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Accommodation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Attraction</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Attraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#POI</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">POI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The generic class for a touristic place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Restaurant</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Restaurant</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

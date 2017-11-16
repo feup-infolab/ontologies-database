@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#">
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+	<license xmlns="http://creativecommons.org/ns#" rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
+	<creator xmlns="http://purl.org/dc/terms/" rdf:nodeID="node1blai7t6tx29171"/>
+	<description xmlns="http://purl.org/dc/terms/" xml:lang="fr">Ontologie des classes et propriétés utilisées pour la démographie, notamment le recensement de la population</description>
+	<issued xmlns="http://purl.org/dc/terms/">2012-08-14</issued>
+	<modified xmlns="http://purl.org/dc/terms/">2012-12-26</modified>
+	<publisher xmlns="http://purl.org/dc/terms/" rdf:resource="http://dbpedia.org/resource/INSEE"/>
+	<title xmlns="http://purl.org/dc/terms/" xml:lang="fr">Ontologie démographique de l'INSEE</title>
+	<preferredNamespacePrefix xmlns="http://purl.org/vocab/vann/">idemo</preferredNamespacePrefix>
+	<preferredNamespaceUri xmlns="http://purl.org/vocab/vann/" rdf:resource="http://rdf.insee.fr/def/demo#"/>
+	<rights xmlns="http://purl.org/dc/elements/1.1/">Copyright © 2013 INSEE</rights>
+	<classNumber xmlns="http://purl.org/vocommons/voaf#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</classNumber>
+	<propertyNumber xmlns="http://purl.org/vocommons/voaf#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</propertyNumber>
+	<owl:versionInfo>Version 0.3 - 2012-12-26</owl:versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1blai7t6tx29171">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<name xmlns="http://xmlns.com/foaf/0.1/">Franck Cotton</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo#PopulationLegale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/demo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo#populationMunicipale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/demo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo#populationCompteeAPart">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/demo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo#populationTotale">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/demo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo#date">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/demo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://rdf.insee.fr/def/demo#population">
+	<rdfs:isDefinedBy rdf:resource="http://rdf.insee.fr/def/demo"/>
+</rdf:Description>
+
+</rdf:RDF>

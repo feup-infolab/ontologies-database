@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl#" xmlns:wl="http://www.wsmo.org/ns/wsmo-lite#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<!-- this file is not intended as human-readable; see http://www.wsmo.org/ns/wsmo-lite/index.n3 instead -->
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-22</dc:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-22</dc:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <dc:description xml:lang="en">This is a lightweight ontology for semantic annotations of services, intended for use with SAWSDL and the Minimal Service Model.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <dc:creator rdf:resource="http://vitvar.com/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <dc:creator rdf:resource="http://jacek.cz/#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-30</dc:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <rdfs:label xml:lang="en">WSMO-Lite</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <owl:versionInfo>2013-05-30</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <owl:imports rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#">
+    <owl:imports rdf:resource="http://www.w3.org/ns/sawsdl#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot">
+    <rdfs:label xml:lang="en">Functional Classification Root</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot">
+    <rdfs:description xml:lang="en">instances of this class are roots of functionality classification hierarchies</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#FunctionalClassificationRoot">
+    <rdfs:isDefinedBy rdf:resource="http://www.wsmo.org/ns/wsmo-lite#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter">
+    <rdfs:label xml:lang="en">Nonfunctional Parameter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter">
+    <rdfs:description xml:lang="en">instances of this class are concrete nonfunctional properties of services</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#NonfunctionalParameter">
+    <rdfs:isDefinedBy rdf:resource="http://www.wsmo.org/ns/wsmo-lite#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition">
+    <rdfs:label xml:lang="en">Condition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition">
+    <rdfs:description xml:lang="en">preconditions of services and operations</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Condition">
+    <rdfs:isDefinedBy rdf:resource="http://www.wsmo.org/ns/wsmo-lite#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect">
+    <rdfs:label xml:lang="en">Effect</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect">
+    <rdfs:description xml:lang="en">effects (postconditions) of services and operations</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Effect">
+    <rdfs:isDefinedBy rdf:resource="http://www.wsmo.org/ns/wsmo-lite#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+    <rdfs:label xml:lang="en">Ontology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+    <rdfs:description xml:lang="en">information model ontology (deprecated)</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#Ontology">
+    <rdfs:isDefinedBy rdf:resource="http://www.wsmo.org/ns/wsmo-lite#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <rdfs:domain rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Service"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <rdfs:label xml:lang="en">uses Ontology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <rdfs:description xml:lang="en">pointer from a semantic description to an ontology that it uses (deprecated)</rdfs:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wsmo.org/ns/wsmo-lite#usesOntology">
+    <rdfs:isDefinedBy rdf:resource="http://www.wsmo.org/ns/wsmo-lite#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sawsdl#modelReference">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sawsdl#liftingSchemaMapping">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sawsdl#loweringSchemaMapping">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</rdf:RDF>

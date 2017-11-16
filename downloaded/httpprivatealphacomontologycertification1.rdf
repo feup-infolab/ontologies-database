@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:acrt="https://privatealpha.com/ontology/certification/1#"
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns="http://www.w3.org/1999/xhtml">
+  <rdf:Description rdf:about="http://doriantaylor.com/person/dorian-taylor#me">
+    <foaf:name xml:lang="en">Dorian Taylor</foaf:name>
+  </rdf:Description>
+  <owl:Ontology rdf:about="https://privatealpha.com/ontology/certification/1#">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T23:40:28Z</dct:created>
+    <dct:creator rdf:resource="http://doriantaylor.com/person/dorian-taylor#me"/>
+    <dct:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">This document specifies a vocabulary for asserting the existence of official endorsements or certifications of &lt;em xmlns="http://www.w3.org/1999/xhtml" xmlns:acrt="https://privatealpha.com/ontology/certification/1#" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"&gt;agents&lt;/em&gt;, such as people and organizations.</dct:description>
+    <dct:title xml:lang="en">An Agent Certification Ontology</dct:title>
+    <bibo:uri rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <vann:preferredNamespacePrefix xml:lang="en">acrt</vann:preferredNamespacePrefix>
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Webpage"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">This document specifies a vocabulary for asserting the existence of official endorsements or certifications of &lt;em xmlns="http://www.w3.org/1999/xhtml" xmlns:acrt="https://privatealpha.com/ontology/certification/1#" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"&gt;agents&lt;/em&gt;, such as people and organizations.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-adms/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/community/odrl/two/model/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/auth/cert"/>
+    <skos:editorialNote rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Note that this assertion says only in &lt;em xmlns="http://www.w3.org/1999/xhtml" xmlns:acrt="https://privatealpha.com/ontology/certification/1#" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"&gt;informal&lt;/em&gt; terms what the certification is, and what it allows me to do. This vocabulary is intended neither to describe the privileges granted by the certification, nor to describe the artifact that embodies the certification. It simply connects the subject of the certification to the issuing authority and their official serial number of the account.</skos:editorialNote>
+    <skos:scopeNote xml:lang="en">The purpose of this vocabulary is record-keeping and exchange, and likewise is its application context. The actual vetting mechanisms of the certifications in question are out of scope.</skos:scopeNote>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://privatealpha.com/ontology/certification/1#Certification">
+    <rdfs:comment xml:lang="en">This class represents the abstract notion of certification, of an agent, by another agent, that the first agent possesses some property or set of properties implied by the certification, potentially within some spatiotemporal scope, and which may or may not be designated by some identifier.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">Certification</rdfs:label>
+    <skos:example xml:lang="en">A mandatory professional status, e.g. bar association membership</skos:example>
+    <skos:example xml:lang="en">A pet license, where the principal is an animal</skos:example>
+    <skos:example xml:lang="en">A private certification of achievement, e.g. CISSP</skos:example>
+    <skos:example xml:lang="en">An award (e.g. 2014 Nobel Prize in physics)</skos:example>
+    <skos:example xml:lang="en">An errors and omissions insurance policy</skos:example>
+    <skos:example xml:lang="en">An officially-recognized trade qualification, e.g. a welding ticket</skos:example>
+    <skos:example xml:lang="en">The issuance of a government-regulated privilege, e.g. driver's license</skos:example>
+    <skos:example xml:lang="en">The issuance of an academic degree to a particular person</skos:example>
+    <skos:example xml:lang="en">The notarization of an affadavit</skos:example>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#authority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">This property specifies who (or what) is doing the certifying.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">authority</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:inverseOf rdf:resource="https://privatealpha.com/ontology/certification/1#certifies"/>
+    <skos:note xml:lang="en">The issuing authority can, once again, be a person, business, institution, or any other kind of agent.</skos:note>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#certifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:comment xml:lang="en">This property specifies that its subject, an agent, has issued a certification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">certifies</rdfs:label>
+    <rdfs:range rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <owl:inverseOf rdf:resource="https://privatealpha.com/ontology/certification/1#authority"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#has-certification">
+    <rdfs:comment xml:lang="en">This property specifies that an agent possesses a given certification.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">has-certification</rdfs:label>
+    <rdfs:range rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <owl:inverseOf rdf:resource="https://privatealpha.com/ontology/certification/1#principal"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#principal">
+    <rdfs:comment xml:lang="en">This property specifies who or what agent is being certified.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">principal</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:inverseOf rdf:resource="https://privatealpha.com/ontology/certification/1#has-certification"/>
+    <skos:note xml:lang="en">The principal of the certification can be any agent, like a person, company, animal, AI, whatever.</skos:note>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#proof">
+    <rdfs:comment xml:lang="en">This property points to some proof of the certification, like a scan of an official document or a page on the issuing authority's website that corroborates the certification.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">proof</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/auth/cert"/>
+    <owl:inverseOf rdf:resource="https://privatealpha.com/ontology/certification/1#proves"/>
+    <skos:note xml:lang="en">The range of this term is left open, but should probably reference a document. It could even point to an actual cryptographic certificate.</skos:note>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#proves">
+    <rdfs:comment xml:lang="en">This property asserts that its subject is somehow proof of a given certification.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">proves</rdfs:label>
+    <rdfs:range rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <owl:inverseOf rdf:resource="https://privatealpha.com/ontology/certification/1#proof"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://privatealpha.com/ontology/certification/1#qualification">
+    <rdfs:comment xml:lang="en">This property specifies what achievement, skill, or fact is being certified.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://privatealpha.com/ontology/certification/1#Certification"/>
+    <rdfs:isDefinedBy rdf:resource="https://privatealpha.com/ontology/certification/1#"/>
+    <rdfs:label xml:lang="en">qualification</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/#org:Role"/>
+    <skos:note xml:lang="en">The range of this term is left open, but should probably reference something abstract like a skos:Concept, an org:Role (itself a subclass of skos:Concept), or a skill, such as modeled by the Cognitive Characteristics Ontology.</skos:note>
+  </owl:ObjectProperty>
+</rdf:RDF>

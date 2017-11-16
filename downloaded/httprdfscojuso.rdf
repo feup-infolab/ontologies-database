@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dbpedia="http://dbpedia.org/ontology/"
+   xmlns:dcam="http://purl.org/dc/dcam/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:gn="http://www.geonames.org/ontology#"
+   xmlns:gsp="http://www.opengis.net/ont/geosparql#"
+   xmlns:ic="http://ontology.eil.utoronto.ca/icontact.owl#"
+   xmlns:juso="http://rdfs.co/juso/"
+   xmlns:lgdo="http://linkedgeodata.org/ontology/"
+   xmlns:locn="http://www.w3.org/ns/locn#"
+   xmlns:ngeo="http://geovocab.org/geometry#"
+   xmlns:org="http://www.w3.org/ns/org#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema="http://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:spatial="http://geovocab.org/spatial#"
+   xmlns:status="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+   xmlns:voaf="http://purl.org/vocommons/voaf#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <foaf:Person rdf:about="http://jayg.me/">
+    <owl:sameAs rdf:resource="http://listinc.kr/id/member/jgkim"/>
+    <org:memberOf rdf:resource="http://listinc.kr/id/listinc"/>
+    <foaf:homepage rdf:resource="http://jayg.org/"/>
+    <foaf:mbox_sha1sum>f03421e94730da58e8943d3a1d2c4c6b02898e14</foaf:mbox_sha1sum>
+    <foaf:name xml:lang="en">James G. Kim</foaf:name>
+    <foaf:name xml:lang="ko">김보람</foaf:name>
+  </foaf:Person>
+  <rdf:Description rdf:about="http://linkedgeodata.org/ontology/Place">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+  </rdf:Description>
+  <foaf:Organization rdf:about="http://listinc.kr/id/listinc">
+    <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <foaf:homepage rdf:resource="http://li-st.com/"/>
+    <foaf:homepage rdf:resource="http://listinc.kr/"/>
+    <foaf:mbox_sha1sum>de068365487dd2da1f2e88f1eaad0217bff79b40</foaf:mbox_sha1sum>
+    <foaf:member rdf:resource="http://listinc.kr/id/member/jgkim"/>
+    <foaf:name xml:lang="en">LiST Inc.</foaf:name>
+    <foaf:name xml:lang="ko">주식회사 리스트</foaf:name>
+  </foaf:Organization>
+  <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/icontact.owl#hasPostalCode">
+    <owl:propertyChainAxiom>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://rdfs.co/juso/postal_code"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+      </rdf:Description>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/icontact.owl#hasState">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/first_level_administrative_division"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ontology.eil.utoronto.ca/icontact.owl#hasStreetNumber">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/thoroughfare_address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+  </rdf:Description>
+  <owl:Ontology rdf:about="http://rdfs.co/juso/0.1.2">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:creator rdf:resource="http://jayg.me/"/>
+    <dcterms:description xml:lang="en">
+    Juso Ontology is a Web vocabulary for describing geographical addresses and
+    features.
+    </dcterms:description>
+    <dcterms:hasFormat rdf:resource="http://rdfs.co/juso/0.1.2/html"/>
+    <dcterms:hasFormat rdf:resource="http://rdfs.co/juso/0.1.2/rdf"/>
+    <dcterms:hasFormat rdf:resource="http://rdfs.co/juso/0.1.2/ttl"/>
+    <dcterms:identifier>http://rdfs.co/juso/0.1.2</dcterms:identifier>
+    <dcterms:isVersionOf rdf:resource="http://rdfs.co/juso/"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:modified>
+    <dcterms:publisher rdf:resource="http://listinc.kr/id/listinc"/>
+    <dcterms:replaces rdf:resource="http://rdfs.co/juso/0.1.1"/>
+    <dcterms:rights>Copyright © 2015 LiST Inc. Some Rights Reserved.</dcterms:rights>
+    <dcterms:title xml:lang="en">Juso Ontology</dcterms:title>
+    <dcterms:title xml:lang="ko">주소 온톨로지</dcterms:title>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <vann:example>
+      <rdf:Description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+    &lt;pre&gt;&lt;code&gt;_:YangyongBldg a juso:Feature ;
+  juso:name "Yangyong Building"@en , "양용빌딩"@ko ;
+  juso:geometry &amp;lt;http://geohash.org/wydjrzg6ece9&amp;gt; .
+
+_:LiSTInc a juso:SpatialThing , foaf:Organization ;
+  juso:name "LiST Inc."@en , "주식회사 리스트"@ko ;
+  juso:within _:YangyongBldg ;
+  juso:historical_address [
+    a juso:Address ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 당산동 121-17 양용빌딩 9층 150-040"@ko ,
+      "9th Floor, Yangyong Building, 121-17, Dangsan-dong, Yeongdeungpo-gu, Seoul, 150-040, South Korea"@en ;
+    juso:country &amp;lt;http://sws.geonames.org/1835841/&amp;gt; ;
+    juso:first_level_administrative_division &amp;lt;http://sws.geonames.org/1835847/&amp;gt; ;
+    juso:second_level_administrative_division &amp;lt;http://sws.geonames.org/1832536/&amp;gt; ;
+    juso:third_level_administrative_division &amp;lt;http://sws.geonames.org/8692617/&amp;gt; ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso:PostalCode ;
+      rdf:value "150-040"
+    ]
+  ] ;
+  juso:address [
+    a juso:Address ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 버드나루로19길 3 (당산동) 양용빌딩 9층 07229"@ko ,
+      "9th Floor, Yangyong Building, 3, Beodeunaru-ro 19-gil, Yeongdeungpo-gu, Seoul, 07229, South Korea"@en ;
+    juso:country &amp;lt;http://sws.geonames.org/1835841/&amp;gt; ;
+    juso:first_level_administrative_division &amp;lt;http://sws.geonames.org/1835847/&amp;gt; ;
+    juso:second_level_administrative_division &amp;lt;http://sws.geonames.org/1832536/&amp;gt; ;
+    juso:third_level_administrative_division &amp;lt;http://sws.geonames.org/8692617/&amp;gt; ;
+    juso:thoroughfare [
+      a juso:Street ;
+      juso:name "Beodeunaru-ro 19-gil"@en , "버드나루로19길"@ko ;
+      juso:parent &amp;lt;http://sws.geonames.org/8692617/&amp;gt;
+    ] ;
+    juso:thoroughfare_address "3" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso:PostalCode ;
+      rdf:value "07229"
+    ]
+  ] .&lt;/code&gt;&lt;/pre&gt;
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">LiST Inc.</rdfs:label>
+      </rdf:Description>
+    </vann:example>
+    <vann:preferredNamespacePrefix>juso</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://rdfs.co/juso/</vann:preferredNamespaceUri>
+    <vann:termGroup rdf:resource="http://rdfs.co/juso/AddressGroup"/>
+    <vann:termGroup rdf:resource="http://rdfs.co/juso/CoreGroup"/>
+    <vann:termGroup rdf:resource="http://rdfs.co/juso/PoliticalDivisionGroup"/>
+    <rdf:type rdf:resource="http://creativecommons.org/ns#Work"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+    &lt;div&gt;
+      The master version of this vocabulary is maintained in &lt;a
+      href="https://github.com/listinc/juso-ontology"&gt;the GitHub repository&lt;/a&gt;
+      so others can contribute edits and improvements.
+    &lt;/div&gt;
+    </rdfs:comment>
+    <rdfs:comment xml:lang="en">
+    Most of the descriptions given here are from Wikipedia or from the related
+    ontologies and vocabularies.
+    </rdfs:comment>
+    <rdfs:comment xml:lang="ko">
+    There is an extension to this ontology with some country-specific terms for
+    &lt;a href="http://rdfs.co/juso/kr/"&gt;South Korea&lt;/a&gt;.
+    </rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://github.com/listinc/juso-ontology"/>
+    <owl:versionInfo>0.1.2</owl:versionInfo>
+    <skos:changeNote>
+      <rdf:Description>
+        <dcterms:creator rdf:resource="http://jayg.me/"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-07+09:00</dcterms:date>
+        <rdf:value xml:lang="en">
+      Fixed the wrong use of rdf:XMLLiteral
+      </rdf:value>
+      </rdf:Description>
+    </skos:changeNote>
+    <skos:historyNote>
+      <rdf:Description>
+        <dcterms:creator rdf:resource="http://jayg.me/"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:date>
+        <rdf:value xml:lang="en">
+      Added juso:Point, juso:wgs84_lat, juso:wgs84_long,
+      juso:itrf2000_lat, and juso:itrf2000_long
+      </rdf:value>
+      </rdf:Description>
+    </skos:historyNote>
+    <skos:historyNote>
+      <rdf:Description>
+        <dcterms:creator rdf:resource="http://jayg.me/"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:date>
+        <rdf:value xml:lang="en">
+      Added juso:official_name, juso:alternate_name, juso:short_name
+      </rdf:value>
+      </rdf:Description>
+    </skos:historyNote>
+    <adms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://rdfs.co/juso/0.1.2/html">
+    <dcterms:format>
+      <dcterms:MediaType>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+        <rdf:value>text/html</rdf:value>
+        <rdfs:label xml:lang="en">HTML</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+        <owl:sameAs rdf:resource="https://w3id.org/spar/mediatype/text/html"/>
+      </dcterms:MediaType>
+    </dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.co/juso/0.1.2/rdf">
+    <dcterms:format>
+      <dcterms:MediaType>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+        <rdf:value>application/rdf+xml</rdf:value>
+        <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/application/rdf+xml"/>
+        <owl:sameAs rdf:resource="https://w3id.org/spar/mediatype/application/rdf%2Bxml"/>
+      </dcterms:MediaType>
+    </dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.co/juso/0.1.2/ttl">
+    <dcterms:format>
+      <dcterms:MediaType>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+        <rdf:value>text/turtle</rdf:value>
+        <rdfs:label xml:lang="en">Turtle</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/turtle"/>
+        <owl:sameAs rdf:resource="https://w3id.org/spar/mediatype/text/turtle"/>
+      </dcterms:MediaType>
+    </dcterms:format>
+  </rdf:Description>
+  <owl:Class rdf:about="http://rdfs.co/juso/Address">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Address_(geography)"/>
+    <owl:sameAs rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#Address"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#Address"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:altLabel xml:lang="en">Geographical Address</skos:altLabel>
+    <skos:altLabel xml:lang="en">Postal Address</skos:altLabel>
+    <skos:definition xml:lang="en">
+    An address is a collection of information, presented in a mostly fixed
+    format, used for describing the location of a building, apartment, or other
+    structure or a plot of land, generally using political boundaries and
+    street names as references, along with other identifiers such as house or
+    apartment numbers. Some addresses also contain special codes to aid routing
+    of mail and packages, such as a ZIP code or post code.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">주소</skos:prefLabel>
+  </owl:Class>
+  <rdf:Bag rdf:about="http://rdfs.co/juso/AddressGroup">
+    <rdf:_1 rdf:resource="http://rdfs.co/juso/full_address"/>
+    <rdf:_10 rdf:resource="http://rdfs.co/juso/thoroughfare"/>
+    <rdf:_11 rdf:resource="http://rdfs.co/juso/thoroughfare_address"/>
+    <rdf:_12 rdf:resource="http://rdfs.co/juso/locator"/>
+    <rdf:_13 rdf:resource="http://rdfs.co/juso/locator_address"/>
+    <rdf:_14 rdf:resource="http://rdfs.co/juso/po_box"/>
+    <rdf:_15 rdf:resource="http://rdfs.co/juso/PostalCode"/>
+    <rdf:_16 rdf:resource="http://rdfs.co/juso/postal_code"/>
+    <rdf:_2 rdf:resource="http://rdfs.co/juso/country"/>
+    <rdf:_3 rdf:resource="http://rdfs.co/juso/first_level_administrative_division"/>
+    <rdf:_4 rdf:resource="http://rdfs.co/juso/second_level_administrative_division"/>
+    <rdf:_5 rdf:resource="http://rdfs.co/juso/third_level_administrative_division"/>
+    <rdf:_6 rdf:resource="http://rdfs.co/juso/fourth_level_administrative_division"/>
+    <rdf:_7 rdf:resource="http://rdfs.co/juso/fifth_level_administrative_division"/>
+    <rdf:_8 rdf:resource="http://rdfs.co/juso/Thoroughfare"/>
+    <rdf:_9 rdf:resource="http://rdfs.co/juso/Street"/>
+    <rdfs:comment xml:lang="en">
+    These classes and properties are used to describe addresses.
+    </rdfs:comment>
+    <rdfs:label xml:lang="en">Address Terms</rdfs:label>
+  </rdf:Bag>
+  <owl:Class rdf:about="http://rdfs.co/juso/AdministrativeDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#A.ADMD"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Administrative_division"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/PoliticalDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Administrative Entity</skos:altLabel>
+    <skos:altLabel xml:lang="en">Administrative Unit</skos:altLabel>
+    <skos:altLabel xml:lang="en">Country Subdivision</skos:altLabel>
+    <skos:altLabel xml:lang="en">Geopolitical Division</skos:altLabel>
+    <skos:altLabel xml:lang="en">Subnational Entity</skos:altLabel>
+    <skos:definition xml:lang="en">
+    An administrative division is a portion of a country or other region
+    delineated for the purpose of administration. Administrative divisions are
+    each granted a certain degree of autonomy and are usually required to
+    manage themselves through their own local governments.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Administrative Division</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/CapitalDistrict">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Capital_districts_and_territories"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Capital Territory</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A capital district or capital territory is normally a specially designated
+    administrative division where a country's seat of government is located.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Capital District</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/City">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/City"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/City"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/City"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A city is a large and permanent human settlement. Although there is no
+    agreement on how a city is distinguished from a town in general English
+    language meanings, many cities have a particular administrative, legal, or
+    historical status based on local law.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ja">市</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">시</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/ConsolidatedCityCounty">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Consolidated_city-county"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/County"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A consolidated city-county is a city and county that have been merged into
+    one unified jurisdiction. As such it is simultaneously a city, which is a
+    municipal corporation, and a county, which is an administrative division of
+    a state. It has the powers and responsibilities of both types of entities.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Consolidated City-county</skos:prefLabel>
+  </owl:Class>
+  <rdf:Bag rdf:about="http://rdfs.co/juso/CoreGroup">
+    <rdf:_1 rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdf:_10 rdf:resource="http://rdfs.co/juso/within"/>
+    <rdf:_11 rdf:resource="http://rdfs.co/juso/endonym"/>
+    <rdf:_12 rdf:resource="http://rdfs.co/juso/exonym"/>
+    <rdf:_13 rdf:resource="http://rdfs.co/juso/geometry"/>
+    <rdf:_14 rdf:resource="http://rdfs.co/juso/address"/>
+    <rdf:_15 rdf:resource="http://rdfs.co/juso/historical_address"/>
+    <rdf:_2 rdf:resource="http://rdfs.co/juso/Feature"/>
+    <rdf:_3 rdf:resource="http://rdfs.co/juso/Geometry"/>
+    <rdf:_4 rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdf:_5 rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdf:_6 rdf:resource="http://rdfs.co/juso/name"/>
+    <rdf:_7 rdf:resource="http://rdfs.co/juso/official_name"/>
+    <rdf:_8 rdf:resource="http://rdfs.co/juso/alternate_name"/>
+    <rdf:_9 rdf:resource="http://rdfs.co/juso/short_name"/>
+    <rdfs:comment xml:lang="en">
+    These classes and properties form the core of Juso Ontology. They describe
+    fundamental characteristics of geography in relatively broad terms.
+    </rdfs:comment>
+    <rdfs:label xml:lang="en">Core Terms</rdfs:label>
+  </rdf:Bag>
+  <owl:Class rdf:about="http://rdfs.co/juso/Country">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Country"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/PoliticalDivision"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/Country"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/Country"/>
+    <owl:sameAs rdf:resource="http://schema.org/Country"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="ja">国家</skos:altLabel>
+    <skos:altLabel xml:lang="ko">국가</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A country is a region that is identified as a distinct entity in political
+    geography. A country may be an independent sovereign state or one that is
+    occupied by another state, as a non-sovereign or formerly sovereign
+    political division, or a geographic region associated with sets of
+    previously independent or differently associated people with distinct
+    political characteristics.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Country</skos:prefLabel>
+    <skos:prefLabel xml:lang="ja">国</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">나라</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/County">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/County"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/County"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en-US">Cnty.</skos:altLabel>
+    <skos:altLabel xml:lang="en-GB">Co.</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A county is a geographical region of a country used for administrative or
+    other purposes, in certain modern nations.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">County</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">군</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/District">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/District"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/District"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A district is a type of administrative division that, in some countries, is
+    managed by local government. Across the world, areas known as "districts"
+    vary greatly in size, spanning entire regions or counties, several
+    municipalities, subdivisions of municipalities, school district, or
+    political district.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">District</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">구</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Feature">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Geographical_feature"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/Geometry"/>
+    <owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    <owl:sameAs rdf:resource="http://geovocab.org/spatial#Feature"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Feature</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Geographical features are man-made or naturally-created features associated
+    with a location relative to the Earth.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Geographical Feature</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/FederatedState">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Federated_state"/>
+    <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/State"/>
+    <rdfs:subClassOf rdf:resource="http://linkedgeodata.org/ontology/State"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/State"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">State</skos:altLabel>
+    <skos:altLabel xml:lang="ko">주</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A federated state is a territorial and constitutional community forming
+    part of a federal union (federation) such as the United States and
+    Australia.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Federated State</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">연방주</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/FifthLevelAdministrativeDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#A.ADM5"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Fifth Administrative Level</skos:altLabel>
+    <skos:altLabel xml:lang="en">Fifth-order Administrative Division</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A subdivision of a fourth-level administrative division.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Fifth-level Administrative Division</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/FirstLevelAdministrativeDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#A.ADM1"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">First Administrative Level</skos:altLabel>
+    <skos:altLabel xml:lang="en">First-order Administrative Division</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A primary administrative division of a country, such as a state in the
+    United States.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">First-level Administrative Division</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/FourthLevelAdministrativeDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#A.ADM4"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Fourth Administrative Level</skos:altLabel>
+    <skos:altLabel xml:lang="en">Fourth-order Administrative Division</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A subdivision of a third-level administrative division.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Fourth-level Administrative Division</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Geometry">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Geometry"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/Feature"/>
+    <owl:sameAs rdf:resource="http://geovocab.org/geometry#Geometry"/>
+    <owl:sameAs rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Geometry provides "the means for the quantitative description, by means of
+    coordinates and mathematical functions, of the spatial characteristics of
+    features, including dimension, position, size, shape, and orientation", as
+    defined in ISO 19107.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">기하</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Hamlet">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Hamlet_(place)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/Hamlet"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A hamlet is a type of settlement. The definition of hamlet varies by
+    country. It usually refers to a small settlement, with a small population
+    that is usually under 100, in a rural area, or a component of a larger
+    settlement or municipality. Hamlets are typically unincorporated
+    communities.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Hamlet</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Municipality">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Municipality"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/Municipality"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/Municipality"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A municipality is usually an urban administrative division having corporate
+    status and usually powers of self-government or jurisdiction.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Municipality</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Neighborhood">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Neighbourhood"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A neighborhood, or neighbourhood, is a geographically localised community
+    within a larger city, town, suburb or rural area.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en-US">Neighborhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="en-GB">Neighbourhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">동</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Parish">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Parish_(administrative_division)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en-GB">Civil Parish</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A parish is an administrative division used by several countries. In parts
+    of the British Isles it is known as a civil parish to distinguish it from
+    the ecclesiastical parish.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Parish</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Point">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Point_(geometry)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Geometry"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A point is a geographical point on the surface of the Earth, typically
+    described using a coordinate system relative to the Earth, such as WGS84.
+  </skos:definition>
+    <skos:prefLabel xml:lang="en">Point</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">점</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/PoliticalDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Political_division"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Feature"/>
+    <owl:equivalentClass rdf:resource="http://schema.org/AdministrativeArea"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A political division is a geographic region accepted to be in the
+    jurisdiction of a particular governmental entity. The particular government
+    entity varies as each organizes its operations by further divisions
+    (subdivisions of the state) to further its tasks and satisfy its
+    responsibilities.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Political Division</skos:prefLabel>
+  </owl:Class>
+  <rdf:Bag rdf:about="http://rdfs.co/juso/PoliticalDivisionGroup">
+    <rdf:_1 rdf:resource="http://rdfs.co/juso/PoliticalDivision"/>
+    <rdf:_10 rdf:resource="http://rdfs.co/juso/Province"/>
+    <rdf:_11 rdf:resource="http://rdfs.co/juso/County"/>
+    <rdf:_12 rdf:resource="http://rdfs.co/juso/Parish"/>
+    <rdf:_13 rdf:resource="http://rdfs.co/juso/Borough"/>
+    <rdf:_14 rdf:resource="http://rdfs.co/juso/CapitalDistrict"/>
+    <rdf:_15 rdf:resource="http://rdfs.co/juso/City"/>
+    <rdf:_16 rdf:resource="http://rdfs.co/juso/ConsolidatedCityCounty"/>
+    <rdf:_17 rdf:resource="http://rdfs.co/juso/Municipality"/>
+    <rdf:_18 rdf:resource="http://rdfs.co/juso/District"/>
+    <rdf:_19 rdf:resource="http://rdfs.co/juso/Town"/>
+    <rdf:_2 rdf:resource="http://rdfs.co/juso/Country"/>
+    <rdf:_20 rdf:resource="http://rdfs.co/juso/Township"/>
+    <rdf:_21 rdf:resource="http://rdfs.co/juso/Neighborhood"/>
+    <rdf:_22 rdf:resource="http://rdfs.co/juso/Village"/>
+    <rdf:_23 rdf:resource="http://rdfs.co/juso/Hamlet"/>
+    <rdf:_24 rdf:resource="http://rdfs.co/juso/political_division"/>
+    <rdf:_25 rdf:resource="http://rdfs.co/juso/parent"/>
+    <rdf:_3 rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <rdf:_4 rdf:resource="http://rdfs.co/juso/FirstLevelAdministrativeDivision"/>
+    <rdf:_5 rdf:resource="http://rdfs.co/juso/SecondLevelAdministrativeDivision"/>
+    <rdf:_6 rdf:resource="http://rdfs.co/juso/ThirdLevelAdministrativeDivision"/>
+    <rdf:_7 rdf:resource="http://rdfs.co/juso/FourthLevelAdministrativeDivision"/>
+    <rdf:_8 rdf:resource="http://rdfs.co/juso/FifthLevelAdministrativeDivision"/>
+    <rdf:_9 rdf:resource="http://rdfs.co/juso/FederatedState"/>
+    <rdfs:comment xml:lang="en">
+    These classes and properties are used to describe political and
+    administrative divisions.
+    </rdfs:comment>
+    <rdfs:label xml:lang="en">Political Division Terms</rdfs:label>
+  </rdf:Bag>
+  <owl:Class rdf:about="http://rdfs.co/juso/PostalCode">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Postal_code"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Eircode</skos:altLabel>
+    <skos:altLabel xml:lang="en">PIN Code</skos:altLabel>
+    <skos:altLabel xml:lang="en">Post Code</skos:altLabel>
+    <skos:altLabel xml:lang="en">Postcode</skos:altLabel>
+    <skos:altLabel xml:lang="en">ZIP Code</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A postal code is a series of letters and/or digits, sometimes including
+    spaces or punctuation, included in a postal address for the purpose of
+    sorting mail.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Postal Code</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">우편번호</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Province">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Province"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/State"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/Province"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A province is almost always an administrative division, within a country or
+    state.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Province</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">도</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/SecondLevelAdministrativeDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#A.ADM2"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Second Administrative Level</skos:altLabel>
+    <skos:altLabel xml:lang="en">Second-order Administrative Division</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A subdivision of a first-level administrative division.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Second-level Administrative Division</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/SpatialThing">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <owl:sameAs rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:altLabel xml:lang="en">Spatial Object</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Anything that has a spatial representation, i.e. size, shape, or position.
+    e.g. people, places, objects, as well as abstract areas like cubes.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Spatial Thing</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Street">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#R.ST"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Street"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Thoroughfare"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A street is a public thoroughfare (usually paved) in a built environment.
+    Practically all public streets in Western countries and the majority
+    elsewhere (though not in Japan) are given a street or road name or at least
+    a number to identify them and any addresses located along the streets.
+    Alleys in some places do not have names.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Street</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/ThirdLevelAdministrativeDivision">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#A.ADM3"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Third Administrative Level</skos:altLabel>
+    <skos:altLabel xml:lang="en">Third-order Administrative Division</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A subdivision of a second-level administrative division.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Third-level Administrative Division</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Thoroughfare">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Thoroughfare"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Feature"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A passage or way through from one location to another, which is usually
+    used a component of an address. A thoroughfare is not necessarily a road,
+    it might be a waterway or some other feature.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Thoroughfare</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Town">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Town"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/Town"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/Town"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A town is a human settlement larger than a village but smaller than a city.
+    The size definition for what constitutes a "town" varies considerably in
+    different parts of the world.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Town</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">읍</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Township">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Township"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The word township is used to refer to different kinds of settlements in
+    different countries.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Township</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">면</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/Village">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Village"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/AdministrativeDivision"/>
+    <owl:sameAs rdf:resource="http://dbpedia.org/ontology/Village"/>
+    <owl:sameAs rdf:resource="http://linkedgeodata.org/ontology/Village"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A village is a clustered human settlement or community, larger than a
+    hamlet but smaller than a town, with a population ranging from a few
+    hundred to a few thousand.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Village</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">리</skos:prefLabel>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/address">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:subPropertyOf rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#address"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#address"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property associates anything with its address.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">address</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/alternate_name">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#alternateName"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/name"/>
+    <owl:propertyDisjointWith rdf:resource="http://rdfs.co/juso/official_name"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property indicates the alternate name of the spatial thing.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">alternate name</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">대체 이름</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/country">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/Country"/>
+    <owl:sameAs rdf:resource="http://ontology.eil.utoronto.ca/icontact.owl#hasCountry"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The uppermost politial division for the address, almost always a country.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">country</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/endonym">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Feature"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Exonym_and_endonym"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/name"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.geonames.org/ontology#officialName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The endonym is a name given by members of a particular ethnolinguistic
+    group to its homeland or a specific place within it.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">endonym</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/exonym">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Feature"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Exonym_and_endonym"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/name"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.geonames.org/ontology#alternateName"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The exonym is an external name for a geographical place: a common name used
+    only outside the place in question, usually for historical reasons.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">exonym</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/fifth_level_administrative_division">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/FifthLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The fifth-level administrative division of the address, if any.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">fifth-level administrative division</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/first_level_administrative_division">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/FirstLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The first-level administrative division (region) of the address, usually a
+    county, state or other such area that typically encompasses several
+    localities.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">first-level administrative division</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/fourth_level_administrative_division">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/FourthLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The fourth-level administrative division of the address, if any.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">fourth-level administrative division</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/full_address">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#fullAddress"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:definition xml:lang="en">
+    The complete address written as a string, with or without formatting.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">full address</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/geometry">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Feature"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/Geometry"/>
+    <rdfs:subPropertyOf rdf:resource="http://geovocab.org/geometry#geometry"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property associates any feature with the corresponding geometry.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">geometry</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/historical_address">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/Address"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property associates anything with one of its historical address.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">historical address</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/itrf2000_lat">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The ITRF2000 latitude of a point (decimal degrees).
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">latitude (ITRF2000)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">위도(ITRF2000)</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/itrf2000_long">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The ITRF2000 longitude of a point (decimal degrees).
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">longitude (ITRF2000)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">경도(ITRF2000)</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/locator">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/Feature"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The real world entity identified by the address. The locator could be the
+    property or complex, of the building or part of the building, of it could
+    be a room inside a building.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">locator</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/locator_address">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property is used to describe a number or a sequence of characters that
+    uniquely identifies the exact locator within the relevant scope(s), that is
+    described by juso:locator.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">locator address</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/name">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/name"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:definition xml:lang="en">
+    This property indicates the name of the spatial thing.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">name</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">이름</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/official_name">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#officialName"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/name"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property indicates the official name of the spatial thing.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">official name</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">공식 이름</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/parent">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Feature"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/PoliticalDivision"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/political_division"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.geonames.org/ontology#parentFeature"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A politial or administrative division that is a direct parent of the
+    current feature.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">parent politial division</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:about="http://rdfs.co/juso/political_division">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Feature"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/PoliticalDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A politial or administrative division that contain the current feature.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">political division</skos:prefLabel>
+  </owl:TransitiveProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/post_office_box">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:sameAs rdf:resource="http://schema.org/postOfficeBoxNumber"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/ns/locn#poBox"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property describes the post office box number for PO box addresses.
+    A post-office box or post office box (commonly referred to as a PO box or a
+    postal box) is a uniquely addressable lockable box located on the premises
+    of a post office station.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">post office box</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/postal_code">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/PostalCode"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property associates any address with its postal code.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">postal code</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/second_level_administrative_division">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/SecondLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The second-level administrative division (locality) of the address, usually
+    a city.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">second-level administrative division</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/short_name">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-30+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="http://www.geonames.org/ontology#shortName"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/alternate_name"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property indicates the relatively short name of the spatial thing.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">short name</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">짧은 이름</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/third_level_administrative_division">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/ThirdLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The third-level administrative division of the address, if any.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">third-level administrative division</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/thoroughfare">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/Thoroughfare"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    An address component that represents the name of a passage or way through
+    from one location to another. A thoroughfare is not necessarily a road, it
+    might be a waterway or some other feature.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">thoroughfare</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/thoroughfare_address">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Address"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/House_numbering"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    This property is used to describe a unique number given to each building
+    (residential or not) or vacant lot with a mailbox in a street or other
+    thoroughfares.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">thoroughfare address</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/wgs84_lat">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The WGS84 latitude of a point (decimal degrees).
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">latitude (WGS84)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">위도(WGS84)</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/wgs84_long">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:sameAs rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The WGS84 longitude of a point (decimal degrees).
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">longitude (WGS84)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">경도(WGS84)</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:about="http://rdfs.co/juso/within">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/locn#location"/>
+    <owl:inverseOf rdf:resource="http://geovocab.org/spatial#Pi"/>
+    <owl:inverseOf rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
+    <owl:sameAs rdf:resource="http://geovocab.org/spatial#P"/>
+    <owl:sameAs rdf:resource="http://www.opengis.net/ont/geosparql#sfWithin"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:definition xml:lang="en">
+    A spatial thing that contains the current one within the borders of its own
+    region.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">within</skos:prefLabel>
+  </owl:TransitiveProperty>
+  <rdf:Description rdf:about="http://schema.org/GeoCoordinates">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/GeoShape">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/Place">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SpatialThing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/PostalAddress">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/address">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/containedIn">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/within"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/geo">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/postalCode">
+    <owl:propertyChainAxiom>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://rdfs.co/juso/postal_code"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+      </rdf:Description>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.geonames.org/ontology#alternateName">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/alternate_name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.geonames.org/ontology#name">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.geonames.org/ontology#officialName">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/official_name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.geonames.org/ontology#shortName">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/short_name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/geometry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <owl:propertyChainAxiom>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://rdfs.co/juso/postal_code"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+      </rdf:Description>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#postCode">
+    <owl:propertyChainAxiom>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://rdfs.co/juso/postal_code"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+      </rdf:Description>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+</rdf:RDF>

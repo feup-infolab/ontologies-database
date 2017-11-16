@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?><rdf:RDF
+    xml:base="http://metadataregistry.org/uri/schema/RDARelationshipsGR2"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:reg="http://metadataregistry.org/uri/profile/regap/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<!-- Element Set: RDA Relationships for Persons, Corporate Bodies, Families (deprecated) -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2">
+  <dc:title xml:lang="en">RDA Relationships for Persons, Corporate Bodies, Families (deprecated)</dc:title>
+</rdf:Description>
+
+<!-- Properties -->
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/alternateIdentity">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">alternateIdentity</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">andere Identität</rdfs:label>
+  <skos:definition xml:lang="de">Das Pseudonym bzw. die andere Identität, welche die Person annimmt.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/descendantFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">descendantFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamily" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:label xml:lang="de">Abstammende Familie</rdfs:label>
+  <skos:definition xml:lang="de">Die Familie, die von der anderen Familie abstammt.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/descendants">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">descendants</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:label xml:lang="de">Nachkommen</rdfs:label>
+  <skos:definition xml:lang="de">Die Familie, die von der bestimmten Person abstammt.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/employee">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">employee</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">Arbeitnehmer</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, die bei einer Körperschaft beschäftigt ist.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/employer">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">employer</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">Arbeitgeber</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, welche die Person beschäftigt.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/explanationOfRelationship">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">explanationOfRelationship</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Agent" />
+  <skos:definition xml:lang="de">Informationen, die die Beziehung zwischen einer Entität, die durch eine Ansetzungsform des Sucheinstiegs und/oder Identifier repräsentiert wird, und einer damit in Beziehung stehenden Entität herausstellt oder erläutert. </skos:definition>
+  <rdfs:label xml:lang="de">Erläuterung der Beziehung</rdfs:label>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/familyMember">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">familyMember</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/progenitor" />
+  <rdfs:label xml:lang="de">Familienmitglied</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, die ein Mitglied der Familie ist.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/foundedOrganization">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">foundedOrganization</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">gegründete Organisation</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, welche die Familie gründete.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/founder">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">founder</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyPerson" />
+  <rdfs:label xml:lang="de">Gründer</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, welche die Körperschaft gegründet hat.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/foundingFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">foundingFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:label xml:lang="de">Gründerfamilie</rdfs:label>
+  <skos:definition xml:lang="de">Die Familie, welche die Körperschaft gegründet hat.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/groupMember">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">groupMember</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">Gruppenmitglied</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, die ein Mitglied der aufführenden Gruppe, einer Expedition, etc. ist.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/hierarchicalSubordinate">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">hierarchicalSubordinate</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">untergeordnete Körperschaft</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die einer anderen Körperschaft untergeordnet ist (z. B. der Muttergesellschaft).</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/hierarchicalSuperior">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">hierarchicalSuperior</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">übergeordnete Körperschaft</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die einer anderen Körperschaft übergeordnet ist.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/incumbent">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">incumbent</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">Amtsinhaber</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, die ihren Amtssitz in der Körperschaft hat (z.B. der amtierende Präsident).</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/mergee">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">mergee</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">fusionierte Körperschaft</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die mit der anderen Körperschaft fusioniert hat.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/predecessor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">predecessor</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">Vorgänger</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die einer anderen Körperschaft vorausgeht.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/productOfAMerger">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">productOfAMerger</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">Ergebnis einer Fusion</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die aus der Fusion einer oder mehrerer Körperschaften entsteht.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/productOfASplit">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">productOfASplit</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">Ergebnis einer Teilung</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die aus einer Spaltung oder Teilung von der anderen Körperschaft entsteht.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/progenitor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">progenitor</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/familyMember" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">Vorfahre, Stammvater</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, von der die Familie abstammt.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/realIdentity">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">realIdentity</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">wirkliche Identität</rdfs:label>
+  <skos:definition xml:lang="de">Die reale Person, die die andere Identität annimmt.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedCorporateBody</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyFamily" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/foundingFamily" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/sponsoringFamily" />
+  <rdfs:label xml:lang="de">In Beziehung stehende Körperschaft </rdfs:label>
+  <skos:definition xml:lang="de">Eine Körperschaft, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z.B. eine Musikgruppe, der eine Person angehört, eine Tochterfirma). Zu den in Beziehung stehenden  Körperschaften gehören auch Körperschaften, die der Institution, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird, als Ergebnis einer Namensänderung vorangeht oder nachfolgt. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedCorporateBodyCorporateBody</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/hierarchicalSuperior" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/mergee" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/predecessor" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/productOfAMerger" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/productOfASplit" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/successor" />
+  <rdfs:label xml:lang="de">In Beziehung stehende Körperschaft (Körperschaft)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Körperschaft, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z.B. eine Musikgruppe, der eine Person angehört, eine Tochterfirma). Zu den in Beziehung stehenden  Körperschaften gehören auch Körperschaften, die der Institution, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird, als Ergebnis einer Namensänderung vorangeht oder nachfolgt. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedCorporateBodyFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:label xml:lang="de">In Beziehung stehende Körperschaft (Familie)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Körperschaft, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z.B. eine Musikgruppe, der eine Person angehört, eine Tochterfirma). Zu den in Beziehung stehenden  Körperschaften gehören auch Körperschaften, die der Institution, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird, als Ergebnis einer Namensänderung vorangeht oder nachfolgt. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyPerson">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedCorporateBodyPerson</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/alternateIdentity" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/realIdentity" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/employee" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/founder" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/groupMember" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/incumbent" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/sponsor" />
+  <rdfs:label xml:lang="de">In Beziehung stehende Körperschaft (Person)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Körperschaft, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z.B. eine Musikgruppe, der eine Person angehört, eine Tochterfirma). Zu den in Beziehung stehenden  Körperschaften gehören auch Körperschaften, die der Institution, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird, als Ergebnis einer Namensänderung vorangeht oder nachfolgt. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/descendantFamily" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyFamily" />
+  <rdfs:label xml:lang="de">in Beziehung stehende Familie</rdfs:label>
+  <skos:definition xml:lang="de">Eine Familie, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z. B. die Familie einer Person, eine Familie, die die Kapitalmehrheit in einer Körperschaft hat). </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedFamilyCorporateBody</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/foundedOrganization" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/sponsoredOrganization" />
+  <rdfs:label xml:lang="de">in Beziehung stehende Familie</rdfs:label>
+  <skos:definition xml:lang="de">Eine Familie, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z. B. die Familie einer Person, eine Familie, die die Kapitalmehrheit in einer Körperschaft hat). </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedFamilyFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamily" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <skos:definition xml:lang="de">Eine Familie, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z. B. die Familie einer Person, eine Familie, die die Kapitalmehrheit in einer Körperschaft hat). </skos:definition>
+  <rdfs:label xml:lang="de">in Beziehung stehende Familie (Familie)</rdfs:label>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyPerson">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedFamilyPerson</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/familyMember" />
+  <rdfs:label xml:lang="de">in beziehung stehende Familie (Person)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Familie, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder einen Identifier repräsentiert wird (z. B. die Familie einer Person, eine Familie, die die Kapitalmehrheit in einer Körperschaft hat). </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPerson">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedPerson</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonFamily" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/descendants" />
+  <rdfs:label xml:lang="de">In Beziehung stehende Person</rdfs:label>
+  <skos:definition xml:lang="de">Eine Person, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder Identifier repräsentiert wird (z. B. ein Mitarbeiter, ein Familienmitglied, ein Gründer einer Körperschaft). Zu den in Beziehung stehenden Personen gehören auch getrennte Identitäten, die durch ein Individuum begründet wurden. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonCorporateBody">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedPersonCorporateBody</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/employer" />
+  <rdfs:label xml:lang="de">in Beziehung stehende Person (Körperschaft)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Person, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder Identifier repräsentiert wird (z.B. ein Mitarbeiter, ein Familienmitglied, ein Gründer einer Körperschaft).Zu den in Beziehung stehenden Personen gehören auch getrennte Identitäten, die durch ein Individuum begründet wurden. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedPersonFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:label xml:lang="de">in Beziehung stehende Person (Familie)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Person, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder Identifier repräsentiert wird (z. B. ein Mitarbeiter, ein Familienmitglied, ein Gründer einer Körperschaft).Zu den in Beziehung stehenden Personen gehören auch getrennte Identitäten, die durch ein Individuum begründet wurden. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedPersonPerson">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">relatedPersonPerson</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/alternateIdentity" />
+  <reg:hasSubproperty rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/realIdentity" />
+  <rdfs:label xml:lang="de">in Beziehung stehende Person (Person)</rdfs:label>
+  <skos:definition xml:lang="de">Eine Person, die mit der Person, Familie oder Körperschaft in Verbindung steht, die durch eine Ansetzungsform des Sucheinstiegs und/oder Identifier repräsentiert wird (z. B. ein Mitarbeiter, ein Familienmitglied, ein Gründer einer Körperschaft).Zu den in Beziehung stehenden Personen gehören auch getrennte Identitäten, die durch ein Individuum begründet wurden. </skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/sponsor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">sponsor</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyPerson" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person" />
+  <rdfs:label xml:lang="de">Sponsor</rdfs:label>
+  <skos:definition xml:lang="de">Die Person, welche die Körperschaft fördert.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/sponsoredOrganization">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">sponsoredOrganization</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedFamilyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">geförderte Organisation</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, welche von der Familie gefördert wird.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/sponsoringFamily">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">sponsoringFamily</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/Family" />
+  <rdfs:label xml:lang="de">Sponsorenfamilie</rdfs:label>
+  <skos:definition xml:lang="de">Die Familie, welche die Körperschaft fördert.</skos:definition>
+</rdf:Description>
+
+<!-- Property: DEPRECATED -->
+<rdf:Description rdf:about="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/successor">
+  <rdfs:isDefinedBy rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2" />
+  <reg:status rdf:resource="http://metadataregistry.org/uri/RegStatus/1008" />
+  <reg:name xml:lang="en">successor</reg:name>
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property" />
+  <rdfs:subPropertyOf rdf:resource="http://metadataregistry.org/uri/schema/RDARelationshipsGR2/relatedCorporateBodyCorporateBody" />
+  <rdfs:domain rdf:resource="http://rdvocab.info/uri/schema/FRBRentitiesRDA/CorporateBody" />
+  <rdfs:label xml:lang="de">Nachfolger</rdfs:label>
+  <skos:definition xml:lang="de">Die Körperschaft, die einer anderen Körperschaft nachfolgt oder aus ihr hervorgeht.</skos:definition>
+</rdf:Description>
+
+
+<!-- Status properties used in this document  -->
+    <skos:Concept rdf:about="http://metadataregistry.org/uri/RegStatus/1008">
+        <skos:prefLabel xml:lang="en">Deprecated</skos:prefLabel>
+    </skos:Concept>
+</rdf:RDF>

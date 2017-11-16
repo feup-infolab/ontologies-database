@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ns0 "http://protege.stanford.edu/plugins/owl/protege#" >
+]>
+
+
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl"
+	 xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ns0="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.2</owl:versionInfo>
+        <dc:issued rdf:datatype="&xsd;date">2014-05-01</dc:issued>
+        <terms:modified rdf:datatype="&xsd;date">2015-09-24</terms:modified>
+        <dc:contributor rdf:datatype="&xsd;string">Contributors are those that engage in discussions during the development of this ontology (in alphabetical order):
+karl benedict
+luis garnica
+cj grady
+bill hudspeth
+deana pennington
+soren scott
+aimee stewart</dc:contributor>
+        <dc:rights rdf:datatype="&xsd;string">free to use,share,modify. modify with attribution [http://creativecommons.org/licenses/by/3.0/].</dc:rights>
+        <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
+        <dc:creator rdf:datatype="&xsd;anyURI">http://cybershare.utep.edu</dc:creator>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;string">http://ontology.cybershare.utep.edu/ELSEWeb/</vann:preferredNamespaceUri>
+        <dc:creator xml:lang="en">ELSEWeb team</dc:creator>
+        <terms:identifier>elseweb-modelling.owl</terms:identifier>
+        <dc:title xml:lang="en">ELSEWeb Modelling Ontology</dc:title>
+        <dc:creator xml:lang="en">Natalia Villanueva-Rosales</dc:creator>
+        <dc:creator xml:lang="en">Nicholas del Rio</dc:creator>
+        <dc:description xml:lang="en">The ELSEWeb Modelling ontology provides simple classes for describing data models. This project provides foundational support for the ELSEWeb project(http://elseweb.cybershare.utep.edu/).
+website: http://elseweb.cybershare.utep.edu/ontologies
+email: nvillanuevarosales@utep.edu
+</dc:description>
+        <vann:preferredNamespacePrefix xml:lang="en">elseweb-modelling</vann:preferredNamespacePrefix>
+        <ns0:defaultLanguage>en</ns0:defaultLanguage>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl"/>
+        <owl:versionIRI rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/example -->
+
+    <owl:AnnotationProperty rdf:about="&resource;example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#behaviorControlledBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#behaviorControlledBy">
+        <rdfs:label>behaviour controlled by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#controlsBehaviorOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#controlsBehaviorOf">
+        <rdfs:label>controls behavior of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasParameterMember -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasParameterMember">
+        <rdfs:label>has parameter member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#implementedIn -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#implementedIn">
+        <rdfs:label>implemented in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#boundToValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#boundToValue">
+        <rdfs:label>bound to value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasAlgorithmName -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasAlgorithmName">
+        <rdfs:label>has algorithm name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasParameterName -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasParameterName">
+        <rdfs:label>has parameter name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingAlgorithm -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingAlgorithm">
+        <rdfs:label rdf:datatype="&xsd;string">species modelling algorithm</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#behaviorControlledBy"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingParameters"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#implementedIn"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingSoftware"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasAlgorithmName"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:example rdf:datatype="&xsd;string">Bioclim</resource:example>
+        <rdfs:comment rdf:datatype="&xsd;string">Following SIO&apos;s definition of algorithm, a species modelling algorithm is an effective method expressed as a finite list of well-defined instructions for calculating a model about species.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingParameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingParameter">
+        <rdfs:label rdf:datatype="&xsd;string">species modelling parameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#boundToValue"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasParameterName"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">Following SIO&apos;s definition of parameter, a species modelling parameter  is variable whose value changes the characteristics of a species model.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">Standard deviation cutoff</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingParameters -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingParameters">
+        <rdfs:label rdf:datatype="&xsd;string">species modelling parameters</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#hasParameterMember"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingParameter"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A set of modelling parameter(s) required by a specific species modeling algorithm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingSoftware -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#SpeciesModellingSoftware">
+        <rdfs:label rdf:datatype="&xsd;string">species modelling software</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Following SIO&apos;s definition of software application, a species modelling software is a software that can be directly executed by some processing unit and offers species modelling services.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

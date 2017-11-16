@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dcam="http://purl.org/dc/dcam/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:gn="http://www.geonames.org/ontology#"
+   xmlns:juso.kr="http://rdfs.co/juso/kr/"
+   xmlns:juso="http://rdfs.co/juso/"
+   xmlns:org="http://www.w3.org/ns/org#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:status="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:voaf="http://purl.org/vocommons/voaf#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <foaf:Person rdf:about="http://jayg.me/">
+    <owl:sameAs rdf:resource="http://listinc.kr/id/member/jgkim"/>
+    <org:memberOf rdf:resource="http://listinc.kr/id/listinc"/>
+    <foaf:homepage rdf:resource="http://jayg.org/"/>
+    <foaf:mbox_sha1sum>f03421e94730da58e8943d3a1d2c4c6b02898e14</foaf:mbox_sha1sum>
+    <foaf:name xml:lang="en">James G. Kim</foaf:name>
+    <foaf:name xml:lang="ko">김보람</foaf:name>
+  </foaf:Person>
+  <foaf:Organization rdf:about="http://listinc.kr/id/listinc">
+    <rdf:type rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <foaf:homepage rdf:resource="http://li-st.com/"/>
+    <foaf:homepage rdf:resource="http://listinc.kr/"/>
+    <foaf:mbox_sha1sum>de068365487dd2da1f2e88f1eaad0217bff79b40</foaf:mbox_sha1sum>
+    <foaf:member rdf:resource="http://listinc.kr/id/member/jgkim"/>
+    <foaf:name xml:lang="en">LiST Inc.</foaf:name>
+    <foaf:name xml:lang="ko">주식회사 리스트</foaf:name>
+  </foaf:Organization>
+  <owl:Ontology rdf:about="http://rdfs.co/juso/kr/0.1.1">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:creator rdf:resource="http://jayg.me/"/>
+    <dcterms:description xml:lang="en">
+    South Korea Extension to Juso Ontology is a Web vocabulary that extends
+    &lt;a href="http://rdfs.co/juso/"&gt;Juso Ontology&lt;/a&gt; to descrbe geographical
+    addresses and features in South Korea.
+    </dcterms:description>
+    <dcterms:hasFormat rdf:resource="http://rdfs.co/juso/kr/0.1.1/html"/>
+    <dcterms:hasFormat rdf:resource="http://rdfs.co/juso/kr/0.1.1/rdf"/>
+    <dcterms:hasFormat rdf:resource="http://rdfs.co/juso/kr/0.1.1/ttl"/>
+    <dcterms:identifier>http://rdfs.co/juso/kr/0.1.1</dcterms:identifier>
+    <dcterms:isVersionOf rdf:resource="http://rdfs.co/juso/kr/"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <dcterms:publisher rdf:resource="http://listinc.kr/id/listinc"/>
+    <dcterms:replaces rdf:resource="http://rdfs.co/juso/kr/0.1"/>
+    <dcterms:rights>Copyright © 2015 LiST Inc. Some Rights Reserved.</dcterms:rights>
+    <dcterms:title xml:lang="en">South Korea Extension to Juso Ontology</dcterms:title>
+    <dcterms:title xml:lang="ko">대한민국 주소 온톨로지</dcterms:title>
+    <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <vann:example>
+      <rdf:Description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+    &lt;pre&gt;&lt;code&gt;_:YangyongBldg a juso.kr:Building ;
+  juso:name "Yangyong Building"@en , "양용빌딩"@ko ;
+  juso:geometry &amp;lt;http://geohash.org/wydjrzg6ece9&amp;gt; ;
+  juso.kr:administrative_building_number "1156011700101210017028596" .
+
+_:LiSTInc a juso:SpatialThing , foaf:Organization ;
+  juso:name "LiST Inc."@en , "주식회사 리스트"@ko ;
+  juso:within _:YangyongBldg ;
+  juso:historical_address [
+    a juso.kr:EastAsianAddress ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 당산동 121-17 양용빌딩 9층 150-040"@ko ,
+      "9th Floor, Yangyong Building, 121-17, Dangsan-dong, Yeongdeungpo-gu, Seoul, 150-040, South Korea"@en ;
+    juso:country &amp;lt;http://sws.geonames.org/1835841/&amp;gt; ;
+    juso.kr:si_do &amp;lt;http://sws.geonames.org/1835847/&amp;gt; ;
+    juso.kr:si_gun_gu &amp;lt;http://sws.geonames.org/1832536/&amp;gt; ;
+    juso.kr:eup_myeon_dong &amp;lt;http://sws.geonames.org/8692617/&amp;gt; ;
+    juso.kr:beonji "121" ;
+    juso.kr:ho "17" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso.kr:PostalCode1988 ;
+      rdf:value "150-040"
+    ]
+  ] ;
+  juso:address [
+    a juso.kr:RoadNameAddress ;
+    juso:full_address
+      "대한민국 서울특별시 영등포구 버드나루로19길 3 (당산동) 양용빌딩 9층 07229"@ko ,
+      "9th Floor, Yangyong Building, 3, Beodeunaru-ro 19-gil, Yeongdeungpo-gu, Seoul, 07229, South Korea"@en ;
+    juso:country &amp;lt;http://sws.geonames.org/1835841/&amp;gt; ;
+    juso.kr:si_do &amp;lt;http://sws.geonames.org/1835847/&amp;gt; ;
+    juso.kr:si_gun_gu &amp;lt;http://sws.geonames.org/1832536/&amp;gt; ;
+    juso.kr:eup_myeon_dong &amp;lt;http://sws.geonames.org/8692617/&amp;gt; ;
+    juso:thoroughfare [
+      a juso.kr:Road ;
+      juso:name "Beodeunaru-ro 19-gil"@en , "버드나루로19길"@ko ;
+      juso:parent &amp;lt;http://sws.geonames.org/8692617/&amp;gt;
+      juso.kr:road_name_number "4154419" ;
+      juso.kr:parent_road [
+        a juso.kr:Street ;
+        juso:name "Beodeunaru-ro"@en , "버드나루로"@ko ;
+        juso:parent &amp;lt;http://sws.geonames.org/8692617/&amp;gt;
+        juso.kr:road_name_number "3118010" ;
+      ]
+    ] ;
+    juso.kr:building_number "3" ;
+    juso:locator _:YangyongBldg ;
+    juso:locator_address "9층"@ko , "9th Floor"@en ;
+    juso:postal_code [
+      a juso.kr:PostalCode2015 ;
+      rdf:value "07229"
+    ] ;
+    juso.kr:landform &amp;lt;http://dbpedia.org/resource/Land_lot&amp;gt; ;
+    juso.kr:floor &amp;lt;http://dbpedia.org/resource/Storey&amp;gt; ;
+    juso.kr:eup_myeon_dong_serial_number "1"
+  ] .
+
+&amp;lt;http://sws.geonames.org/1832536/&amp;gt; a juso.kr:AutonomousDistrict ;
+  juso.kr:si_gun_gu_code "11560" .
+
+&amp;lt;http://sws.geonames.org/8692617/&amp;gt; a juso.kr:LegalStatusNeighborhood ;
+  juso.kr:legal_status_neighborhood_code "1156011700" ;
+  juso.kr:eup_myeon_dong_code "117" .&lt;/code&gt;&lt;/pre&gt;
+    </rdfs:comment>
+        <rdfs:label xml:lang="ko">LiST Inc.</rdfs:label>
+      </rdf:Description>
+    </vann:example>
+    <vann:preferredNamespacePrefix>juso.kr</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://rdfs.co/juso/kr/</vann:preferredNamespaceUri>
+    <vann:termGroup rdf:resource="http://rdfs.co/juso/kr/AddressGroup"/>
+    <vann:termGroup rdf:resource="http://rdfs.co/juso/kr/AdministrativeDivisionGroup"/>
+    <rdf:type rdf:resource="http://creativecommons.org/ns#Work"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAsset"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+    &lt;div&gt;
+      The master version of this vocabulary is maintained in &lt;a
+      href="https://github.com/listinc/juso-ontology/tree/master/kr"&gt;the GitHub
+      repository&lt;/a&gt; so others can contribute edits and improvements.
+    &lt;/div&gt;
+    </rdfs:comment>
+    <rdfs:comment xml:lang="en">
+    Most of the descriptions given here are from Wikipedia or from the related
+    ontologies and vocabularies.
+    </rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://github.com/listinc/juso-ontology/tree/master/kr"/>
+    <owl:versionInfo>0.1.1</owl:versionInfo>
+    <skos:changeNote>
+      <rdf:Description>
+        <dcterms:creator rdf:resource="http://jayg.me/"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-07+09:00</dcterms:date>
+        <rdf:value xml:lang="en">
+      Fixed the wrong use of rdf:XMLLiteral
+      </rdf:value>
+      </rdf:Description>
+    </skos:changeNote>
+    <skos:historyNote>
+      <rdf:Description>
+        <dcterms:creator rdf:resource="http://jayg.me/"/>
+        <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:date>
+        <rdf:value xml:lang="en">
+      Added juso:congnamul_x and juso:congnamul_y
+      </rdf:value>
+      </rdf:Description>
+    </skos:historyNote>
+    <adms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://rdfs.co/juso/kr/0.1.1/html">
+    <dcterms:format>
+      <dcterms:MediaType>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+        <rdf:value>text/html</rdf:value>
+        <rdfs:label xml:lang="en">HTML</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/html"/>
+        <owl:sameAs rdf:resource="https://w3id.org/spar/mediatype/text/html"/>
+      </dcterms:MediaType>
+    </dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.co/juso/kr/0.1.1/rdf">
+    <dcterms:format>
+      <dcterms:MediaType>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+        <rdf:value>application/rdf+xml</rdf:value>
+        <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/application/rdf+xml"/>
+        <owl:sameAs rdf:resource="https://w3id.org/spar/mediatype/application/rdf%2Bxml"/>
+      </dcterms:MediaType>
+    </dcterms:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.co/juso/kr/0.1.1/ttl">
+    <dcterms:format>
+      <dcterms:MediaType>
+        <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+        <rdf:value>text/turtle</rdf:value>
+        <rdfs:label xml:lang="en">Turtle</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/turtle"/>
+        <owl:sameAs rdf:resource="https://w3id.org/spar/mediatype/text/turtle"/>
+      </dcterms:MediaType>
+    </dcterms:format>
+  </rdf:Description>
+  <rdf:Bag rdf:about="http://rdfs.co/juso/kr/AddressGroup">
+    <rdf:_1 rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+    <rdf:_10 rdf:resource="http://rdfs.co/juso/kr/Street"/>
+    <rdf:_11 rdf:resource="http://rdfs.co/juso/kr/Road"/>
+    <rdf:_12 rdf:resource="http://rdfs.co/juso/kr/road_name_number"/>
+    <rdf:_13 rdf:resource="http://rdfs.co/juso/kr/parent_road"/>
+    <rdf:_14 rdf:resource="http://rdfs.co/juso/kr/Building"/>
+    <rdf:_15 rdf:resource="http://rdfs.co/juso/kr/administrative_building_number"/>
+    <rdf:_16 rdf:resource="http://rdfs.co/juso/kr/MultiFamilyResidentialBuilding"/>
+    <rdf:_17 rdf:resource="http://rdfs.co/juso/kr/PostalCode1970"/>
+    <rdf:_18 rdf:resource="http://rdfs.co/juso/kr/PostalCode1988"/>
+    <rdf:_19 rdf:resource="http://rdfs.co/juso/kr/PostalCode2015"/>
+    <rdf:_2 rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+    <rdf:_20 rdf:resource="http://rdfs.co/juso/kr/landform"/>
+    <rdf:_21 rdf:resource="http://rdfs.co/juso/kr/floor"/>
+    <rdf:_22 rdf:resource="http://rdfs.co/juso/kr/building_number"/>
+    <rdf:_23 rdf:resource="http://rdfs.co/juso/kr/building_extra_number"/>
+    <rdf:_24 rdf:resource="http://rdfs.co/juso/kr/eup_myeon_dong_serial_number"/>
+    <rdf:_3 rdf:resource="http://rdfs.co/juso/kr/si_do"/>
+    <rdf:_4 rdf:resource="http://rdfs.co/juso/kr/si_gun_gu"/>
+    <rdf:_5 rdf:resource="http://rdfs.co/juso/kr/eup_myeon_dong"/>
+    <rdf:_6 rdf:resource="http://rdfs.co/juso/kr/ri"/>
+    <rdf:_7 rdf:resource="http://rdfs.co/juso/kr/beonji"/>
+    <rdf:_8 rdf:resource="http://rdfs.co/juso/kr/ho"/>
+    <rdf:_9 rdf:resource="http://rdfs.co/juso/kr/Boulevard"/>
+    <rdfs:comment xml:lang="en">
+     These classes and properties are used to describe addresses in South Korea.
+     </rdfs:comment>
+    <rdfs:label xml:lang="en">Address Terms</rdfs:label>
+  </rdf:Bag>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/AdministrativeCity">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Since Jeju was given more autonomy, cities in Jeju could not be defined by
+    the Local Autonomy Law so this new class of city was created for Jeju.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cities_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/행정시"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SecondLevelAdministrativeDivision"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/City"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    An Administrative city is a type of municipal city that are created in 1
+    July 2006 after the 2005 referendum in Jeju and the province was given
+    extensive administrative powers that had previously been reserved for the
+    central government.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    행정시(行政市)는 대한민국의 행정 구역 중 하나로, 지방자치법 시행 이후 기초자치단체인 자치시로
+    전환되면서 사실상 행정시의 기능은 완전히 사라졌다가 특별자치도 제도의 도입으로 제주특별자치도가
+    2006년 7월 1일 출범하면서 행정시가 다시 나타났다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Administrative City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">행정시</skos:prefLabel>
+  </owl:Class>
+  <rdf:Bag rdf:about="http://rdfs.co/juso/kr/AdministrativeDivisionGroup">
+    <rdf:_1 rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <rdf:_10 rdf:resource="http://rdfs.co/juso/kr/AdministrativeCity"/>
+    <rdf:_11 rdf:resource="http://rdfs.co/juso/kr/County"/>
+    <rdf:_12 rdf:resource="http://rdfs.co/juso/kr/AutonomousDistrict"/>
+    <rdf:_13 rdf:resource="http://rdfs.co/juso/kr/NonAutonomousDistrict"/>
+    <rdf:_14 rdf:resource="http://rdfs.co/juso/kr/si_gun_gu_code"/>
+    <rdf:_15 rdf:resource="http://rdfs.co/juso/kr/Town"/>
+    <rdf:_16 rdf:resource="http://rdfs.co/juso/kr/Township"/>
+    <rdf:_17 rdf:resource="http://rdfs.co/juso/kr/LegalStatusNeighborhood"/>
+    <rdf:_18 rdf:resource="http://rdfs.co/juso/kr/legal_status_neighborhood_code"/>
+    <rdf:_19 rdf:resource="http://rdfs.co/juso/kr/AdministrativeNeighborhood"/>
+    <rdf:_2 rdf:resource="http://rdfs.co/juso/kr/Province"/>
+    <rdf:_20 rdf:resource="http://rdfs.co/juso/kr/administrative_neighborhood_code"/>
+    <rdf:_21 rdf:resource="http://rdfs.co/juso/kr/eup_myeon_dong_code"/>
+    <rdf:_22 rdf:resource="http://rdfs.co/juso/kr/LegalStatusVillage"/>
+    <rdf:_23 rdf:resource="http://rdfs.co/juso/kr/AdministrativeVillage"/>
+    <rdf:_3 rdf:resource="http://rdfs.co/juso/kr/SpecialAutonomousProvince"/>
+    <rdf:_4 rdf:resource="http://rdfs.co/juso/kr/SpecialCity"/>
+    <rdf:_5 rdf:resource="http://rdfs.co/juso/kr/MetropolitanCity"/>
+    <rdf:_6 rdf:resource="http://rdfs.co/juso/kr/MetropolitanAutonomousCity"/>
+    <rdf:_7 rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+    <rdf:_8 rdf:resource="http://rdfs.co/juso/kr/City"/>
+    <rdf:_9 rdf:resource="http://rdfs.co/juso/kr/SpecificCity"/>
+    <rdfs:comment xml:lang="en">
+    These classes and properties are used to describe administrative divisions
+    in South Korea.
+    </rdfs:comment>
+    <rdfs:label xml:lang="en">Administrative Division Terms</rdfs:label>
+    <rdfs:label xml:lang="ko">행정 구역 용어</rdfs:label>
+  </rdf:Bag>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/AdministrativeNeighborhood">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    In some cases, a single legal-status neighborhood is divided into several
+    administrative neighborhoods. In such cases, each administrative dong has
+    its own office and staff.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Dong_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/동_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Neighborhood"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/ThirdLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    An administrative neighborhood is the smallest level of urban government to
+    have its own office and staff in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    행정동(行政洞)은 대한민국의 행정 구역의 하나로 구 또는 시의 하부 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Administrative Neighborhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">행정동</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/AdministrativeVillage">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    A legal-status village can be subdivided into one or more administrative
+    villages.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Ri_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/리_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/FourthLevelAdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Village"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A administrative village is an administrative unit in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국의 리(里)는 읍(邑)·면(面)의 하부 행정 구역이며, 행정리(行政里)는 인구와 생활권을 고려하여
+    법정리에 1개 또는 여러 개로 설치한 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Administrative Village</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">행정리</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/AutonomousDistrict">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Gu_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/구_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/District"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/NonAutonomousDistrict"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    An autonomous district of special and metropolitan cities is a municipal
+    entity similar to a city with its own mayor along with its own
+    legislative council.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    자치구(自治區)는 특별시, 광역시의 하위 행정 구역으로서 시, 군과 동급인 기초자치단체이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Autonomous District</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">자치구</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/BasicLocalGovernment">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Non-autonomous districts of municipal cities and administrative cities in
+    Jeju are not basic local governments.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Administrative_divisions_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/기초지방자치단체"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SecondLevelAdministrativeDivision"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Lower-level Local Autonomy</skos:altLabel>
+    <skos:altLabel xml:lang="en">Municipal Government</skos:altLabel>
+    <skos:altLabel xml:lang="en">Municipality</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Basic local governments are the municipal-level administrative division
+    within South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국의 기초지방자치단체(基礎地方自治團體)는 지방자치단체에서 광역지방자치단체의 하부의
+    조직으로서 광역지방자치단체보다 좁은 지역을 관할하는 지방 행정 조직이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Basic Local Government</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">기초지방자치단체</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Boulevard">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Street"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    In the Road Name Address system, the word boulevard (daero) is used to
+    describe two-way roads that have more than 40m width or 8 lanes.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    도로명주소에서 대로(大路)는 폭이 40m 이상이거나 왕복 8차선 이상의 도로를 의미한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Boulevard</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">대로</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Building">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Building"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/건축물"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Feature"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="ko">건축물</skos:altLabel>
+    <skos:altLabel xml:lang="ko">구축물</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A building is a man-made structure with a roof and walls standing more or
+    less permanently in one place, such as a house or factory.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    일반적으로 건물(建物)이란 일정 기간 동안 그 형상이 필요하기 때문에, 혹은 그것이 제공하는 공간이
+    필요하기 때문에, 인간이 지은 지면에 고정되는 구조물을 뜻한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Building</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">건물</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/City">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Cities are ranked on the same level as county and autonomous district.
+  </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cities_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/시_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/AdministrativeCity"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A city is a municipal administrative unit in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    시(市)는 대한민국 행정 구역의 하나로 행정시와 달리 기초지방자치단체에 해당한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">시</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/County">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    In South Korea, a county has a population of less than 150,000 (more than
+    that would make it a city), is less densely populated than a district, and
+    is more rural in character than either of the other 2 divisions.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Gun_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/군_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/County"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A county is an administrative unit in South Korea similar.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    군(郡)은 행정 구역의 하나로, 대한민국의 군은 도 및 광역시의 하부 행정 구역이자 기초지방자치단체이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">County</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">군</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/EastAsianAddress">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Addresses_in_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Address"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:definition xml:lang="en">
+    The previous addressing system used in South Korea was the the East Asian
+    system, which is also used in Japan and North Korea (but not within the
+      Chinese-speaking world), but although still commonly used, is no longer
+    officially recognized since December 31, 2013.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    기존 대한민국에서 사용되던 지번 주소 체계는 토지 구획을 정리한 지번을 구분자로 이용하는 주소 체계로
+    아직 널리 사용되고 있으나 2014년 1월 1일부터 도로명주소로 대체되어 공식적으로 폐지되었다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">East Asian Address</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">지번 주소</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/LegalStatusNeighborhood">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Dong_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/법정동"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Neighborhood"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/ThirdLevelAdministrativeDivision"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A legal-status neighborhood is a submunicipal level administrative unit of
+    a city and of those cities which are not divided into districts throughout
+    Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    법정동(法定洞)은 대한민국 법정 구역으로, 법률(관습법)로 지정된 일정한 명칭과 영역을 지닌
+    구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Legal-status Neighborhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">법정동</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/LegalStatusVillage">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Ri_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/리_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/FourthLevelAdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Village"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A legal-status village is an administrative unit in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국의 리(里)는 읍(邑)·면(面)의 하부 행정 구역이며, 법정리(法定里)는 법령으로 정하여진 리로
+    지번의 기준이 된다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Legal-status Village</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">법정리</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/MetropolitanAutonomousCity">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    The only metropolitan autonomous city in South Korea called Sejong opened 2
+    July 2012.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Special_cities_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/특별자치시"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/MetropolitanCity"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/SpecialCity"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    In early 2007, the South Korean government created a special administrative
+    district from parts of South Chungcheong and North Chungcheong provinces,
+    near Daejeon, to relocate nine ministries and four national agencies from
+    Seoul.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    특별자치시(特別自治市)는 대한민국의 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Metropolitan Autonomous City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">특별자치시</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/MetropolitanCity">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    They were called "directly-administered city" before 1995. These cities
+    have equal status to the provinces.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Special_cities_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/광역시"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/MetropolitanAutonomousCity"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/SpecialCity"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Metropolitan cities are the highest-ranked administrative divisions in
+    South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    광역시(廣域市)는 대한민국의 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Metropolitan City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">광역시</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/MultiFamilyResidentialBuilding">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Multi-family_residential"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/공동_주택"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/Building"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">MDU Building</skos:altLabel>
+    <skos:altLabel xml:lang="en">Multi-dwelling Unit Building</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A multifamily residential building is a building that contain multiple
+    separate housing units for residential inhabitants.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    공동 주택(共同住宅)은 하나의 건물 내에 서로 독립적인 여러 세대가 공동으로 거주하는 주거의
+    형태이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Multi-family Residential Building</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">공동 주택</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/NonAutonomousDistrict">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Gu_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/구_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/District"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/SecondLevelAdministrativeDivision"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/AutonomousDistrict"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Administrative District</skos:altLabel>
+    <skos:altLabel xml:lang="ko">행정구</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Cities with over 500,000 people are allowed to have non-autonomous
+    districts (notable exceptions to this rule are the cities of Gimhae,
+    Hwaseong, and Namyangju).
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    자치구가 아닌 일반구(一般區)는 인구 50만 명 이상인 시(기초자치단체)의 하위 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Non-autonomous District</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">일반구</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/PostalCode1970">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/List_of_postal_codes"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_우편번호"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/PostalCode"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="ko">
+    1970년 7월 1일에 도입되어 1988년 1월 31일까지 사용된 대한민국 최초의 5자리 우편번호.
+    </skos:definition>
+    <skos:definition xml:lang="en">
+    The first 5-digit postal code system in South Korea that was rolled out on
+    July 1, 1970, and used until January 31, 1988.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Postal Code (1970 - 1988)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">우편번호(1970 ~ 1988)</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/PostalCode1988">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/List_of_postal_codes"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_우편번호"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/PostalCode"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="ko">
+    1988년 2월 1일에 도입되어 2015년 7월 31일까지 사용된 대한민국의 6자리 우편번호.
+    </skos:definition>
+    <skos:definition xml:lang="en">
+    The 6-digit postal code system in South Korea that was rolled out on
+    February 1, 1988, and used until July 31, 2015.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Postal Code (1988 - 2015)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">우편번호(1988 ~ 2015)</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/PostalCode2015">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/List_of_postal_codes_in_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_우편번호"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/PostalCode"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="ko">
+    2015년 8월 1일에 도입된 도로명주소 체계 기반 5자리 대한민국 우편번호.
+    </skos:definition>
+    <skos:definition xml:lang="en">
+    The 5-digit postal code system based on the road name address system in
+    South Korea, which has been rolled out on August 1, 2015.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Postal Code (1988 - 2015)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">우편번호(1988 ~ 2015)</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Province">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Provinces_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/도_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Province"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/SpecialAutonomousProvince"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="ko">일반도</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A province are the highest-ranked administrative divisions in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    도(道)는 대한민국의 행정 구역 이름으로 특별자치도와 구분된다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Province</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">도</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/RegionalLocalGovernment">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Administrative_divisions_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/광역자치단체"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/FirstLevelAdministrativeDivision"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Metropolitan Government</skos:altLabel>
+    <skos:altLabel xml:lang="en">Upper-level Local Autonomy</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Regional local governments are the highest-ranked administrative division
+    within South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국의 광역지방자치단체(廣域地方自治團體)는 지방자치단체 중 기초지방자치단체에 비해 넓은 구역과
+    많은 주민을 관할하는 기초지방자치단체 상위의 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Regional Local Government</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">광역지방자치단체</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Road">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Street"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    In the Road Name Address system, the word road (gil) is used to describe
+    roads that have less than 12m width or 2 lanes.
+    width or 2 lanes.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    도로명주소에서 길은 폭이 12m 미만이거나 2차로 미만인 도로를 의미한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Road</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">길</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/RoadNameAddress">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Addresses_in_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Address"/>
+    <status:term_status xml:lang="en">testing</status:term_status>
+    <skos:definition xml:lang="en">
+    The Road Name Address system, rolled out on January 1, 2014, uses street
+    names and house numbers, and is similar to the systems used by the United
+    States, Canada, and Europe.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국의 도로명주소란 부여된 도로명, 기초번호, 건물번호, 상세주소에 의하여 건물의 주소를 표기하는
+    방식으로 2014년부터 사용되고 있다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Road Name Address</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">도로명주소</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/SpecialAutonomousProvince">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Jeju is the only special autonomous province in South Korea.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Provinces_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/특별자치도"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Province"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/Province"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">Special Self-governing Province</skos:altLabel>
+    <skos:definition xml:lang="en">
+    A special autonomous province is a province with more autonomy over its
+    economy and more powers are given to the provincial government.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    특별자치도(特別自治道)는 대한민국의 행정 구역으로, 일반 도(道)와 기능적으로 거의 동일하지만,
+    관련 법률에 의거해 고도의 자치권이 보장된다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Special Autonomous Province</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">특별자치도</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/SpecialCity">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Special_cities_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/특별시"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/City"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/MetropolitanAutonomousCity"/>
+    <owl:disjointWith rdf:resource="http://rdfs.co/juso/kr/MetropolitanCity"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Seoul was designated a "special free city" separate from Gyeonggi Province
+    on August 15, 1946; it became a "special city" on August 15, 1949.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    특별시(特別市)는 대한민국의 행정 구역으로 서울특별시가 유일하다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Special City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">특별시</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/SpecificCity">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Specific city are given powers to subdivide themselves into non-autonomous
+    districts but, not all Specific city are subdivided into non-autonomous
+    districts.
+  </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Cities_of_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/특정시"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/kr/City"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A Specific city is a municipal city that has a population greater than
+    500,000 and has been designated as such by an order of the National
+    Government under Article 175 of the Local Autonomy Law.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    특정시(特定市)는 대한민국의 광역자치단체인 도에 소속된 기초자치단체 중 지방자치법 제175조에 따라
+    도지사의 권한 일부가 시장에게 위임된 시를 비공식적으로 일컫는 명칭으로 지방자치법에서는 이를 인구
+    50만 이상 대도시라고 규정하고 있다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Specific City</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">특정시</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Street">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Street"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    In the Road Name Address system, the word street (ro) is used to
+    describe two-way roads that are narrower than roads but have more than 12m
+    width or 2 lanes.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    도로명주소에서 로(路)는 대로보다 작지만 폭이 12m 이상이거나 왕복 2차선 이상의 도로를
+    의미한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Street</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">로</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Town">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Along with "township", a town is one of the divisions of a county, and of
+    some cities with a population of less than 500,000. Towns are subdivided
+    into villages.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Eup_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/읍"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/ThirdLevelAdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Town"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A town is an administrative unit in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국의 읍(邑)은 시·군·구의 하부 행정 구역이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Town</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">읍</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://rdfs.co/juso/kr/Township">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Along with town, township is of a county and some cities of fewer than
+    500,000 population. Townships have smaller populations than towns and
+    represent the rural areas of a county or city. Townships are subdivided
+    into villages.
+    </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Myeon_(administrative_division)"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/면_(행정_구역)"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/ThirdLevelAdministrativeDivision"/>
+    <rdfs:subClassOf rdf:resource="http://rdfs.co/juso/Township"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A township is an administrative unit in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    면(面)은 대한민국의 자치시·군 또는 행정시의 하부 행정 구역 이름이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">Township</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">면</skos:prefLabel>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/administrative_building_number">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/Building"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Each building is given a number for administration.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    건물은 관리 번호를 부여 받는다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">administrative building number</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">건물 관리 번호</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/administrative_neighborhood_code">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/AdministrativeNeighborhood"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The unique administrative code for the administrative neighborhood.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    행정동에 부여된 행정 표준 코드.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">administrative neighborhood code</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">행정동코드</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/beonji">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/지번_(토지)"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Each neighborhood is divided into city blocks (beonji), which can range
+    from several dozen to several thousand per neighborhood.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    번지(番地)는 토지를 구획할 때 어떤 특정한 토지에 붙이는 번호를 의미하는 지번이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">beonji</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">번지</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/building_extra_number">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Addresses_in_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/thoroughfare_address"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="ko">건물 부 번</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Buildings on a street or alley that is too small or too short to receive
+    a name of its own share the same building number, followed by a hyphen,
+    followed by a unique extra number afterwards.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    건물 번호는 본 번과 부 번으로 구성되는데, 한 건물이 두 개의 도로와 인접해 있을 경우, 보다 넓은
+    도로로 건물 번호를 부여하고, 한 구간 내 여러 건물이 위치하고 있을 경우 -1, -2, -3처럼 부
+    번을 부여하여 본 번을 부여받은 건물과 구별한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">building extra number</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">건물 부 번호</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/building_number">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Addresses_in_South_Korea"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/thoroughfare_address"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:altLabel xml:lang="en">building main number</skos:altLabel>
+    <skos:altLabel xml:lang="ko">건물 본 번</skos:altLabel>
+    <skos:altLabel xml:lang="ko">건물 본 번호</skos:altLabel>
+    <skos:definition xml:lang="en">
+    Buildings are numbered along a street with even numbers on one side and odd
+    numbers on the other, as in most European countries.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    건물 번호는 건물마다 부여된 번호로 건물번호 도로의 시작점으로부터 왼편에는 홀수를, 오른편에는 짝수를
+    대로(Boulevard) 및 로(Street)의 경우 매20미터마다, 길(Road)의 경우 매10미터마다 2씩
+    증가시키면서 부여한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">building number</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">건물 번호</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/congnamul_x">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The x coordinate of a point in the Congnamul coordination system.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    콩나물 지도와 다음 지도에서 사용하는 좌표계의 x 좌표.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">x coordinate (Congnamul)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">x 좌표(Congnamul)</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/congnamul_y">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-11-10+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/Point"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The y coordinate of a point in the Congnamul coordination system.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    콩나물 지도와 다음 지도에서 사용하는 좌표계의 y 좌표.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">y coordinate (Congnamul)</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">y 좌표(Congnamul)</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/eup_myeon_dong">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/Town"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/Township"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://rdfs.co/juso/kr/LegalStatusNeighborhood"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://rdfs.co/juso/kr/AdministrativeNeighborhood"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+                  </rdf:Description>
+                </rdf:rest>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/third_level_administrative_division"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The third-level administrative division of the address in South Korea,
+    one of the four types of submunicipal-level divisions: towns (eup),
+    townships (myeon), legal-status neighborhoods (beopjeongdong), and
+    administrative neighborhoods (haengjeongdong).
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국 주소의 읍면동급 행정 구역으로 읍, 면, 법정동, 행정동 중 하나에 해당한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">town, township, or neighborhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">읍/면/동</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/eup_myeon_dong_code">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/Town"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/Township"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://rdfs.co/juso/kr/LegalStatusNeighborhood"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="http://rdfs.co/juso/kr/AdministrativeNeighborhood"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+                  </rdf:Description>
+                </rdf:rest>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Each of towns (eup), townships (myeon), or neighborhoods (dong) is given a
+    3-number code.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    읍, 면, 동은 3자리 코드를 부여 받는다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">code for town, township, neighborhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">읍면동 코드</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/eup_myeon_dong_serial_number">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A serial number for town, township, or neighborhood to distinguish
+    addresses that share the same code for city, county, or district, and
+    the same road name number.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    시군구 코드와 도로명 번호가 중복되는 주소를 구분하기 위한 읍면동 일련 번호.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">serial number for town, township, or neighborhood</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">읍면동 일련 번호</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/floor">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:oneOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://dbpedia.org/resource/Storey"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://dbpedia.org/resource/Basement"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://dbpedia.org/resource/Sky"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:oneOf>
+      </owl:Class>
+    </rdfs:range>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Whether the address locates a place on the ground, under the ground, or in
+    the air.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    주소가 가리키는 곳이 지상인지, 지하인지, 공중인지 여부.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">floor</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">층 구분</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/ho">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:comment xml:lang="en">
+    Usually, the words "번지" and "호" are not included in the written address;
+    instead, only their numbers, separated by a hyphen, are written.
+    </rdfs:comment>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/House_numbering"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/지번_(토지)"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The building itself is given a house number (ho) within the city block.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    호(戶)는 건물에 부여된 각 번지 내 건물 번호이다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">ho</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">호</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/landform">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:oneOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://dbpedia.org/resource/Land_lot"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://dbpedia.org/resource/Mountain"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:oneOf>
+      </owl:Class>
+    </rdfs:range>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Whether the address locates a land lot or a mountain.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    주소 필지의 산 여부.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">landform</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">필지 구분</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/legal_status_neighborhood_code">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain rdf:resource="http://rdfs.co/juso/kr/LegalStatusNeighborhood"/>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The unique administrative code for the legal-status neighborhood.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    법정동에 부여된 행정 표준 코드.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">legal-status neighborhood code</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">법정동코드</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/parent_road">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/Boulevard"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/Street"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://rdfs.co/juso/kr/Road"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/Boulevard"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/Street"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://rdfs.co/juso/kr/Road"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="http://www.geonames.org/ontology#parentFeature"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A boulevard, street, or road that is a direct parent of the current one.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    이 도로의 상위에 있는 대로, 로, 길.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">parent boulevard, street, or road</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">상위 도로</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/ri">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/LegalStatusVillage"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/AdministrativeVillage"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/fourth_level_administrative_division"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    A legal-status village (beopjeongri) or administrative village
+    (haengjeongri) for the fourth-level administrative division of the address
+    in South Korea.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국 주소의 리통급 행정 구역 중 현재는 거의 사용되지 않는 통을 제외한 법정리 또는 행정리에
+    해당한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">village</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">리</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/road_name_number">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/Boulevard"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/Street"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://rdfs.co/juso/kr/Road"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Each of boulevards, streets, or roads is given a 7-number code.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대로, 로, 길은 7자리 코드를 부여 받는다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">road name number</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">도로명 번호</skos:prefLabel>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/si_do">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://rdfs.co/juso/kr/RegionalLocalGovernment"/>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/first_level_administrative_division"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The top tier of administrative division of the address in South Korea,
+    one of the five types of provincial-level divisions: provinces (do),
+    special autonomous provinces (teukbyeol-jachido), special cities
+    (teukbyeolsi), metropolitan cities (gwangyeoksi) and metropolitan
+    autonomous cities (teukbyeol-jachisi).
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국 주소의 시도급 행정 구역으로 1개의 특별시, 6개의 광역시, 8개의 도, 1개의 특별자치시,
+    1개의 특별자치도 중 하나에 해당한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">city or province</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">시/도</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://rdfs.co/juso/kr/si_gun_gu">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/EastAsianAddress"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/RoadNameAddress"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/NonAutonomousDistrict"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="http://rdfs.co/juso/second_level_administrative_division"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    The second-level administrative division of the address in South Korea,
+    one of the six types of municipal-level divisions: cities (si), specific
+    cities (teukjeongsi), administrative cities (haengjeongsi), county (gun),
+    autonomous districts (jachigu), and non-autonomous districts (ilbangu).
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    대한민국 주소의 시군구급 행정 구역으로 시, 특정시, 행정시, 군, 자치구, 일반구 중 하나에
+    해당한다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">city, county, or district</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">시/군/구</skos:prefLabel>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://rdfs.co/juso/kr/si_gun_gu_code">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-02+09:00</dcterms:modified>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://rdfs.co/juso/kr/BasicLocalGovernment"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://rdfs.co/juso/kr/NonAutonomousDistrict"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+          </rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:isDefinedBy rdf:resource="http://rdfs.co/juso/kr/"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:seeAlso rdf:resource="https://ko.wikipedia.org/wiki/대한민국의_주소"/>
+    <status:term_status xml:lang="en">unstable</status:term_status>
+    <skos:definition xml:lang="en">
+    Each of cities (si), counties (gun), or districts (gu) is given a 5-number
+    code.
+    </skos:definition>
+    <skos:definition xml:lang="ko">
+    시, 군, 구는 5자리 코드를 부여받는다.
+    </skos:definition>
+    <skos:prefLabel xml:lang="en">code for city, county, or district</skos:prefLabel>
+    <skos:prefLabel xml:lang="ko">시군구 코드</skos:prefLabel>
+  </owl:DatatypeProperty>
+</rdf:RDF>

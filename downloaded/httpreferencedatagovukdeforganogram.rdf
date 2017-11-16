@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:gov="http://reference.data.gov.uk/def/central-government/"
+   xmlns:grade="http://reference.data.gov.uk/def/civil-service-grade/"
+   xmlns:intervals="http://reference.data.gov.uk/def/intervals/"
+   xmlns:job="http://reference.data.gov.uk/def/civil-service-job/"
+   xmlns:opmv="http://purl.org/net/opmv/ns#"
+   xmlns:org="http://www.w3.org/ns/org#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:profession="http://reference.data.gov.uk/def/civil-service-profession/"
+   xmlns:qb="http://purl.org/linked-data/cube#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:sdmx-concept="http://purl.org/linked-data/sdmx/2009/concept#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:time="http://www.w3.org/2006/time#"
+   xmlns:void="http://rdfs.org/ns/void#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns="http://reference.data.gov.uk/def/organogram/">
+  <owl:Ontology rdf:about="http://reference.data.gov.uk/def/organogram">
+    <dct:contributor>
+      <rdf:Description>
+        <foaf:mbox>jeni@jenitennison.com</foaf:mbox>
+        <foaf:name>Jeni Tennison</foaf:name>
+      </rdf:Description>
+    </dct:contributor>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-17</dct:created>
+    <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-11</dct:modified>
+    <dct:title xml:lang="en">Organogram Data Vocabulary</dct:title>
+    <void:vocabulary rdf:resource="http://purl.org/linked-data/cube#"/>
+    <void:vocabulary rdf:resource="http://purl.org/net/opmv/ns#"/>
+    <void:vocabulary rdf:resource="http://reference.data.gov.uk/def/central-government/"/>
+    <void:vocabulary rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2006/time#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/ns/org#"/>
+    <void:vocabulary rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:label xml:lang="en">Organogram Data Vocabulary</rdfs:label>
+  </owl:Ontology>
+  <qb:AttributeProperty rdf:about="http://reference.data.gov.uk/def/organogram/currency">
+    <qb:concept rdf:resource="http://purl.org/linked-data/sdmx/2009/concept#currency"/>
+    <rdfs:comment xml:lang="en">Currency in which the salary is paid, typically attached to the dataset for single currency datasets.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">currency</rdfs:label>
+  </qb:AttributeProperty>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/date">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The date that the observation relates to.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Date</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/intervals/CalendarDay"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/grade">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The grade of the junior posts.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Grade</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/civil-service-grade/Grade"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/job">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The job performed by the junior posts.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Job</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/civil-service-job/Job"/>
+  </rdf:Property>
+  <qb:DataStructureDefinition rdf:about="http://reference.data.gov.uk/def/organogram/junior-posts">
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/unit"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/reportingTo"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/grade"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/job"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/profession"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/date"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:measure rdf:resource="http://reference.data.gov.uk/def/organogram/fullTimeEquivalent"/>
+      </rdf:Description>
+    </qb:component>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment>The structure of a cube containing data about the number of junior staff of different grades that report to a particular post from within a particular unit, with a particular job and a particular profession, on a particular day.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Junior Posts Data Structure</rdfs:label>
+  </qb:DataStructureDefinition>
+  <qb:DataStructureDefinition rdf:about="http://reference.data.gov.uk/def/organogram/number-of-posts">
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/post"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/grade"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/date"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:measure rdf:resource="http://reference.data.gov.uk/def/organogram/numberOfPosts"/>
+      </rdf:Description>
+    </qb:component>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment>The structure of a cube containing data about the number of posts of different grades that report to a particular post on a particular day.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Number of Posts Data Structure</rdfs:label>
+  </qb:DataStructureDefinition>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/numberOfPosts">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The number of posts with this grade that report to the given post, as a full-time equivalent.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Number of Posts</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/post">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The post whose subordinates this statistic relates to.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Post</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/central-government/Post"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/profession">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The profession of the junior posts.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Profession</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/civil-service-profession/Profession"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/reportingTo">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The post to which the junior posts report.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Reporting To</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/central-government/Post"/>
+  </rdf:Property>
+  <qb:DataStructureDefinition rdf:about="http://reference.data.gov.uk/def/organogram/salary-costs-of-reports">
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/post"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/date"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:measure rdf:resource="http://reference.data.gov.uk/def/organogram/salaryCostOfReports"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:attribute rdf:resource="http://reference.data.gov.uk/def/organogram/currency"/>
+      </rdf:Description>
+    </qb:component>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment>The structure of a cube containing data about the salary costs of the reports to a particular post on a particular day.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Salary Costs Data Structure</rdfs:label>
+  </qb:DataStructureDefinition>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/salaryCostOfReports">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The total salary cost of each Deputy Director/SCS Pay Band 1 and 1A member and the non-SCS staff that report to this post. Salary costs are base pay (excluding bonuses and allowances) as at the date of the observation. To ensure that individual salaries cannot be identified from this information (for Deputy Director/SCS Pay Band 1 and 1A level and non-SCS grades), where the team is less than five people, the cost is rounded to the nearest £100,000. Where the team is one person only, the salary cost may be rounded to the nearest £100,000 or merged with the costs of another team.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Salary Cost of Reports</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/tenure">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The tenure through which pay was given.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Tenure</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/central-government/Tenure"/>
+  </rdf:Property>
+  <qb:DataStructureDefinition rdf:about="http://reference.data.gov.uk/def/organogram/total-pay">
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/tenure"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:dimension rdf:resource="http://reference.data.gov.uk/def/organogram/date"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:measure rdf:resource="http://reference.data.gov.uk/def/organogram/totalPay"/>
+      </rdf:Description>
+    </qb:component>
+    <qb:component>
+      <rdf:Description>
+        <qb:attribute rdf:resource="http://reference.data.gov.uk/def/organogram/currency"/>
+      </rdf:Description>
+    </qb:component>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment>The structure of a cube containing data about the total pay received for a particular tenure (a person in a post) on a particular day.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Total Pay Data Structure</rdfs:label>
+  </qb:DataStructureDefinition>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/totalPay">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The total pay received.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Total Pay</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/organogram/unit">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The unit to which the junior posts belong.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/organogram/"/>
+    <rdfs:label xml:lang="en">Unit</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+  </rdf:Property>
+</rdf:RDF>

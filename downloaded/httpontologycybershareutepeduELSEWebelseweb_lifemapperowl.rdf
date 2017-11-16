@@ -1,0 +1,1045 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ns0 "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY elseweb-data "http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#" >
+    <!ENTITY elseweb-modelling "http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl"
+	 xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:elseweb-modelling="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl#"
+     xmlns:elseweb-data="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ns0="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.2</owl:versionInfo>
+        <dc:issued rdf:datatype="&xsd;date">2014-05-01</dc:issued>
+        <terms:modified rdf:datatype="&xsd;date">2015-09-24</terms:modified>
+        <dc:contributor rdf:datatype="&xsd;string">Contributors are those that engage in discussions during the development of this ontology (in alphabetical order):
+karl benedict
+luis garnica
+cj grady
+bill hudspeth
+deana pennington
+soren scott
+aimee stewart</dc:contributor>
+        <dc:rights rdf:datatype="&xsd;string">free to use,share,modify. modify with attribution [http://creativecommons.org/licenses/by/3.0/].</dc:rights>
+        <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
+        <dc:creator rdf:datatype="&xsd;anyURI">http://cybershare.utep.edu</dc:creator>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;string">http://ontology.cybershare.utep.edu/ELSEWeb/</vann:preferredNamespaceUri>
+        <dc:title xml:lang="en">ELSEWeb Lifemapper Ontology</dc:title>
+        <dc:creator xml:lang="en">ELSEWeb team</dc:creator>
+        <dc:creator xml:lang="en">Natalia Villanueva-Rosales</dc:creator>
+        <dc:description xml:lang="en">The ELSEWeb Lifemapper ontology provides classes for describing biodiversity modelling services provided by Lifemapper. This project provides  support for the ELSEWeb project(http://elseweb.cybershare.utep.edu/).
+website: http://elseweb.cybershare.utep.edu/ontologies
+email: nvillanuevarosales@utep.edu
+</dc:description>
+        <terms:identifier>elseweb-lifemapper.owl</terms:identifier>
+        <dc:creator xml:lang="en">Nicholas del Rio</dc:creator>
+        <ns0:defaultLanguage>en</ns0:defaultLanguage>
+        <vann:preferredNamespacePrefix xml:lang="en">elseweb-lifemapper</vann:preferredNamespacePrefix>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper-parameters.owl"/>
+        <owl:versionIRI rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl"/>
+        <owl:imports rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-modelling.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#containsFeatureSet -->
+
+    <owl:ObjectProperty rdf:about="&elseweb-data;containsFeatureSet">
+        <rdfs:label>contains feature set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversRegion -->
+
+    <owl:ObjectProperty rdf:about="&elseweb-data;coversRegion">
+        <rdfs:label>covers region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLayer -->
+
+    <owl:ObjectProperty rdf:about="&elseweb-data;hasLayer">
+        <rdfs:label>has layer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity -->
+
+    <owl:ObjectProperty rdf:about="&elseweb-data;representsEntity">
+        <rdfs:label>represents entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#describesBehaviorOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#describesBehaviorOf">
+        <rdfs:label>describes behavior of</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescriptions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResult -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResult">
+        <rdfs:label>has experiment result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExtractedPayload -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExtractedPayload">
+        <rdfs:label>has extracted payload</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasInputWCSDataset -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasInputWCSDataset">
+        <rdfs:label>has input wcs dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasModellingScenario -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasModellingScenario">
+        <rdfs:label>has modelling scenario</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isModellingScenarioOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasOccurrenceOfSpecies -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasOccurrenceOfSpecies">
+        <rdfs:label>has occurrence of species</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&elseweb-data;representsEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterDescription -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterDescription">
+        <rdfs:label>has parameter description</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescription"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescriptions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasPublishedLayer -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasPublishedLayer">
+        <rdfs:label>has published layer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasPublishedScenario -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasPublishedScenario">
+        <rdfs:label>has published scenario</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioLayer -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioLayer">
+        <rdfs:label>has scenario layer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasWCSResponse -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasWCSResponse">
+        <rdfs:label>has wcs response</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isModellingScenarioOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isModellingScenarioOf">
+        <rdfs:label>is modelling scenaio of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isScenarioLayerOf -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isScenarioLayerOf">
+        <rdfs:label>is scenario layer of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesModellingAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesModellingAlgorithm">
+        <rdfs:label>specifies modelling algorithm</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesModellingScenario -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesModellingScenario">
+        <rdfs:label>specifies modelling scenario</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesOccurrenceSet -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesOccurrenceSet">
+        <rdfs:label>specifies occurrence set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesProjectionScenario -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesProjectionScenario">
+        <rdfs:label>specifies projection scenario</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasAlgorithmCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasAlgorithmCode">
+        <rdfs:label>has algorithm code</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasDefaultValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasDefaultValue">
+        <rdfs:label>has default value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultID -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultID">
+        <rdfs:label>has experiment result id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultURL">
+        <rdfs:label>has experiment result url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasGenusName -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasGenusName">
+        <rdfs:label>has genus name</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Species"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL">
+        <rdfs:label>has json experiment specification  url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerID -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerID">
+        <rdfs:label>has layer id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerURL">
+        <rdfs:label>has layer url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerUnits -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerUnits">
+        <rdfs:label>has layer units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLowerBoundInclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLowerBoundInclusive">
+        <rdfs:label>has lower bound inclusive</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasNumberOfOccurrences -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasNumberOfOccurrences">
+        <rdfs:label>has number of occurrences</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceSet"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasOccurrenceSetID -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasOccurrenceSetID">
+        <rdfs:label>has occurrence set id</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceSet"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterClass -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterClass">
+        <rdfs:label>has parameter class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterCollectionClass -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterCollectionClass">
+        <rdfs:label>has parameter collection class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioID -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioID">
+        <rdfs:label>has scenario id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioURL">
+        <rdfs:label>has scenario url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasTypeCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasTypeCode">
+        <rdfs:label>has type code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasUpperBoundInclusive -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasUpperBoundInclusive">
+        <rdfs:label>has upper bound inclusive</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion -->
+
+    <owl:Class rdf:about="&elseweb-data;BoxedGeographicRegion"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FeatureSet -->
+
+    <owl:Class rdf:about="&elseweb-data;FeatureSet"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation -->
+
+    <owl:Class rdf:about="&elseweb-data;FileManifestation"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Layer -->
+
+    <owl:Class rdf:about="&elseweb-data;Layer"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#VectorDataset -->
+
+    <owl:Class rdf:about="&elseweb-data;VectorDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSResponseManifestation -->
+
+    <owl:Class rdf:about="&elseweb-data;WCSResponseManifestation"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutableExperimentSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutableExperimentSpecification">
+        <rdfs:label rdf:datatype="&xsd;string">executable experiment specification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesModellingAlgorithm"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesModellingScenario"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ModellingScenario"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#specifiesOccurrenceSet"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceSet"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">An executable experiment specification specifies a modelling algorithm, a modelling scenario and an ocurrence set to generate a species distribution model.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutedExperimentSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutedExperimentSpecification">
+        <rdfs:label rdf:datatype="&xsd;string">executed experiment specification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResult"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExperimentResult"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutableExperimentSpecification"/>
+        <resource:comment rdf:datatype="&xsd;string">An executed experiment specification provides an experiment result.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutedWCSDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutedWCSDataset">
+        <rdfs:label rdf:datatype="&xsd;string">executed wcs dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasWCSResponse"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#WCSResponse"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#InputWCSDataset"/>
+        <resource:comment rdf:datatype="&xsd;string">A dataset that is the output of a WCS service.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExperimentResult -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExperimentResult">
+        <rdfs:label rdf:datatype="&xsd;string">experiment result</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultID"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExperimentResultURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">An experiment result provides a result ID and a URL where the result of an experiment can be retrieved.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExtractedWCSResponse -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExtractedWCSResponse">
+        <rdfs:label rdf:datatype="&xsd;string">extracted wcs response</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasExtractedPayload"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#TIFFDataset"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#WCSResponse"/>
+        <resource:comment rdf:datatype="&xsd;string">The TIFF dataset that contains the extracted payload from a WCS response.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#InputWCSDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#InputWCSDataset">
+        <rdfs:label rdf:datatype="&xsd;string">input wcs dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-data;coversRegion"/>
+                        <owl:someValuesFrom rdf:resource="&elseweb-data;BoxedGeographicRegion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-data;hasManifestation"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISWCSManifestation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerUnits"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasTypeCode"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">A dataset that is required as an input to a WCS service.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#InputWCSDatasetExperimentSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#InputWCSDatasetExperimentSpecification">
+        <rdfs:label rdf:datatype="&xsd;string">input wcs dataset experiment specification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasInputWCSDataset"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#InputWCSDataset"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#JSONExperimentSpecification"/>
+        <resource:comment rdf:datatype="&xsd;string">An experiment specification that provides an input wcs dataset.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#JSONExperimentSpecification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#JSONExperimentSpecification">
+        <rdfs:label rdf:datatype="&xsd;string">json experiment specification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">The location of an experiment specification in the JSON format.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Layer -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Layer">
+        <rdfs:label rdf:datatype="&xsd;string">layer</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerID"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">A unit of data (i.e. dataset) that is used as a component of a scenario specification.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm">
+        <rdfs:label rdf:datatype="&xsd;string">lifemapper algorithm</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-modelling;behaviorControlledBy"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperParameters"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasAlgorithmCode"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-modelling;SpeciesModellingAlgorithm"/>
+        <resource:comment rdf:datatype="&xsd;string">A species modelling algorithm provided by lifemapper that is controlled by lifemapper parameters.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperParameter -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperParameter">
+        <rdfs:label rdf:datatype="&xsd;string">lifemapper parameter</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-modelling;boundToValue"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-modelling;hasParameterName"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-modelling;SpeciesModellingParameter"/>
+        <resource:comment rdf:datatype="&xsd;string">A species modelling parameter that controls the behavior of a lifemapper algorithm.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperParameters -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperParameters">
+        <rdfs:label rdf:datatype="&xsd;string">lifemapper parameters</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elseweb-modelling;hasParameterMember"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperParameter"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-modelling;SpeciesModellingParameters"/>
+        <resource:comment rdf:datatype="&xsd;string">A set of parameters that controls the behaviour of a specific lifemapper algorithm.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperSoftware -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperSoftware">
+        <rdfs:label rdf:datatype="&xsd;string">lifemapper software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&elseweb-modelling;SpeciesModellingSoftware"/>
+        <resource:comment rdf:datatype="&xsd;string">A species modelling software provided by lifemapper.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ModellingScenario -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ModellingScenario">
+        <rdfs:label rdf:datatype="&xsd;string">modelling scenario</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isModellingScenarioOf"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ExecutableExperimentSpecification"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Scenario"/>
+        <resource:comment rdf:datatype="&xsd;string">A modelling scenario provides the specification of an experiment that can be executed.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescription -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescription">
+        <rdfs:label rdf:datatype="&xsd;string">parameter description</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterClass"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLowerBoundInclusive"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasUpperBoundInclusive"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">The description of an algorithm parameter.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescriptions -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescriptions">
+        <rdfs:label rdf:datatype="&xsd;string">parameter descriptions</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#describesBehaviorOf"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#LifemapperAlgorithm"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterDescription"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ParameterDescription"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasParameterCollectionClass"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">A set of parameter descriptions.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#PostedScenario -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#PostedScenario">
+        <rdfs:label rdf:datatype="&xsd;string">posted scenario</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasPublishedScenario"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Scenario"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#UnpostedScenario"/>
+        <resource:comment rdf:datatype="&xsd;string">A scenario that has been posted.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#PostedTIFFDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#PostedTIFFDataset">
+        <rdfs:label rdf:datatype="&xsd;string">posted tiff dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasPublishedLayer"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Layer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#TIFFDataset"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A TIFF dataset with information about the layers it contains.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Scenario -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Scenario">
+        <rdfs:label rdf:datatype="&xsd;string">scenario</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioID"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Scenario"/>
+        <resource:comment rdf:datatype="&xsd;string">A modelling scenario that provides the URL of the specification, an scenario ID and a URL where it can be retrieved.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ScenarioLayer -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ScenarioLayer">
+        <rdfs:label rdf:datatype="&xsd;string">scenario layer</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#isScenarioLayerOf"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#UnpostedScenario"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Layer"/>
+        <resource:comment rdf:datatype="&xsd;string">A layer that composes a scenario.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Species -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Species">
+        <rdfs:label rdf:datatype="&xsd;string">species</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasGenusName"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-data;Entity"/>
+        <resource:comment rdf:datatype="&xsd;string">A group of living organisms which is the principal natural taxonomic unit.</resource:comment>
+        <resource:comment rdf:datatype="&xsd;string">Erinus alpinus</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceDataset">
+        <rdfs:label>species occurrence dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elseweb-data;hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceLayer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-data;VectorDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceLayer -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceLayer">
+        <rdfs:label>species occurrence layer</rdfs:label>
+        <rdfs:label>A layer containing data about species ocurrence.</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&elseweb-data;containsFeatureSet"/>
+                <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceSet"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-data;Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceSet -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#SpeciesOccurrenceSet">
+        <rdfs:label rdf:datatype="&xsd;string">species ocurrence set</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasOccurrenceOfSpecies"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#Species"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasNumberOfOccurrences"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasOccurrenceSetID"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&elseweb-data;FeatureSet"/>
+        <resource:comment rdf:datatype="&xsd;string">An species ocurrence set provides a set of species ocurrences required to generate a disctibution model.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#TIFFDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#TIFFDataset">
+        <rdfs:label rdf:datatype="&xsd;string">tiff dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-data;hasManifestation"/>
+                        <owl:someValuesFrom rdf:resource="&elseweb-data;FileManifestation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerUnits"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasTypeCode"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">A dataset that is represented in TIFF format and provides the location where it can be retrieved, the units of the layers and the type code.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#UnpostedScenario -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#UnpostedScenario">
+        <rdfs:label rdf:datatype="&xsd;string">unposted scenario</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasScenarioLayer"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#ScenarioLayer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">A scenario that has not been posted and is composed by some scenario layer and has a JSON experiment specification URL.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#WCSResponse -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#WCSResponse">
+        <rdfs:label rdf:datatype="&xsd;string">wcs response</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&elseweb-data;hasManifestation"/>
+                        <owl:someValuesFrom rdf:resource="&elseweb-data;WCSResponseManifestation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasJSONExperimentSpecificationURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasLayerUnits"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-lifemapper.owl#hasTypeCode"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">A response obtained from a WCS server, including the response manifestation, the experiment specification URL, layer units and type code.</resource:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

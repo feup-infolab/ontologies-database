@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:opmv="http://purl.org/net/opmv/ns#"
+   xmlns:org="http://www.w3.org/ns/org#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:parl="http://reference.data.gov.uk/def/parliament/"
+   xmlns:payband="http://reference.data.gov.uk/def/senior-civil-service-pay-band/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:void="http://rdfs.org/ns/void#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://reference.data.gov.uk/def/parliament">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-06-17</dct:created>
+    <dct:title xml:lang="en">Parliament Ontology</dct:title>
+    <void:exampleResource rdf:resource="http://reference.data.gov.uk/def/parliament/Chamber"/>
+    <void:exampleResource rdf:resource="http://reference.data.gov.uk/def/parliament/DevolvedParliament"/>
+    <void:exampleResource rdf:resource="http://reference.data.gov.uk/def/parliament/Leader"/>
+    <void:exampleResource rdf:resource="http://reference.data.gov.uk/def/parliament/Parliament"/>
+    <void:exampleResource rdf:resource="http://reference.data.gov.uk/def/parliament/Seat"/>
+    <void:vocabulary rdf:resource="http://reference.data.gov.uk/def/parliament/"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2002/07/owl#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+    <void:vocabulary rdf:resource="http://www.w3.org/ns/org#"/>
+    <void:vocabulary rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:label xml:lang="en">Parliament Ontology</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.direct.gov.uk/en/Governmentcitizensandrights/UKgovernment/Parliament/DG_073479"/>
+    <rdfs:seeAlso rdf:resource="http://www.direct.gov.uk/en/Governmentcitizensandrights/UKgovernment/Parliament/DG_073604"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/Parliament">
+    <rdfs:comment xml:lang="en">Defines a parliament, the law-making assembly of a nation.  Examples are Westminster, The Welsh Assembly, The Scottish Parliament and Northern Ireland Assembly.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Parliament</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+    <skos:note rdf:resource="http://en.wikipedia.org/wiki/Parliament_of_the_United_Kingdom"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/DevolvedParliament">
+    <rdfs:comment xml:lang="en">Defines an administration to which independent law-making powers have been delegated.  Example instances are The Scottish Parliament and The Welsh Assembly</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Devolved administration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://reference.data.gov.uk/def/parliament/Parliament"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/Chamber">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defines the chambers with instances like The House of Commons and The House of Lords.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Chamber</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/PoliticalParty">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Political party such as The Conservative Party or The Labour Party.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Political party</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.direct.gov.uk/en/Governmentcitizensandrights/UKgovernment/Politicalpartiesandelections/DG_073226"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/Post">
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Post</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/Seat">
+    <rdfs:comment>A seat in a Parliament</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Seat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://reference.data.gov.uk/def/parliament/Post"/>
+    <skos:note rdf:resource="http://en.wikipedia.org/wiki/List_of_United_Kingdom_Parliament_constituencies"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://reference.data.gov.uk/def/parliament/Leader">
+    <rdfs:comment xml:lang="en">Represents the leader of the political party</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Party Leader</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://reference.data.gov.uk/def/parliament/Post"/>
+    <skos:note rdf:resource="http://en.wikipedia.org/wiki/Party_leader"/>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/devolvedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property linking a Devolved Assembly to the Parliament from which it was devolved.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/DevolvedParliament"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">devolved from</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/Parliament"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/devolvesTo"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/devolvesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Links a Parliament to a Devolved Assembly to which has devolved powers.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/Parliament"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">devolves to</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/DevolvedParliament"/>
+    <rdfs:seeAlso rdf:resource="http://www.direct.gov.uk/en/Governmentcitizensandrights/UKgovernment/Devolvedgovernment/DG_073306"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/devolvedFrom"/>
+    <skos:note rdf:resource="http://www.scottish.parliament.uk/corporate/history/aDevolvedParliament/index.htm"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/hasMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A member of this parliament.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/Parliament"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Member</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/memberOf"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/memberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The parliament this person or post is a member of.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Member of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Parliament"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/hasMember"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/represents">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The constituency that the MP holding this seat in parliament represents.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/Seat"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Represents</rdfs:label>
+    <skos:editorialNote xml:lang="en">No range set on this though for the House of Commons it will be a &lt;http://data.ordnancesurvey.co.uk/ontology/admingeo/WestminsterConstituency&gt;.</skos:editorialNote>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/holdsSeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates the seat in parliament that this person holds.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Seat</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/Seat"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/seatHeldBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates the person holding this seat in parliament.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/Seat"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Held By</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/partyMemberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Member of</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/PoliticalParty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/hasPartyMember"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/hasPartyMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates that a political party has a person as member.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/PoliticalParty"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Member</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/partyMemberOf"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/partyLeaderOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates that a Leader is the leader of a political party.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/Leader"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Leader of</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/PoliticalParty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#headOf"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/hasPartyLeader"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/hasPartyLeader">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Indicates the Leader of this political party.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/PoliticalParty"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Leader</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/Leader"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/partyLeaderOf"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/holdsLeadership">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">This property indicates that a person holds the leadership of a political party.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Holds Leadership</rdfs:label>
+    <rdfs:range rdf:resource="http://reference.data.gov.uk/def/parliament/Leader"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/leadershipHeldBy"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://reference.data.gov.uk/def/parliament/leadershipHeldBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">This property indicates that a person holds the leadership of a political party.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://reference.data.gov.uk/def/parliament/Leader"/>
+    <rdfs:isDefinedBy rdf:resource="http://reference.data.gov.uk/def/parliament"/>
+    <rdfs:label xml:lang="en">Holds Leadership</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
+    <owl:inverseOf rdf:resource="http://reference.data.gov.uk/def/parliament/holdsLeadership"/>
+  </rdf:Property>
+</rdf:RDF>

@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY situation "http://www.ontologydesignpatterns.org/cp/owl/situation.owl#" >
+    <!ENTITY timeinterval "http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#" >
+    <!ENTITY timeindexedsituation "http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.essepuntato.it/2012/04/tvc/"
+     xml:base="http://www.essepuntato.it/2012/04/tvc/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:timeinterval="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#"
+     xmlns:timeindexedsituation="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:situation="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#">
+    <owl:Ontology rdf:about="http://www.essepuntato.it/2012/04/tvc">
+        <rdfs:label xml:lang="en">time-indexed value in context</rdfs:label>
+        <dc:creator>Silvio Peroni</dc:creator>
+        <dc:date>2012-06-08</dc:date>
+        <dc:contributor>Fabio Vitali</dc:contributor>
+        <dc:contributor>David Shotton</dc:contributor>
+        <rdfs:comment xml:lang="en">A pattern for the description of scenarios that involve entities having some value during a particular time and within a particular context.</rdfs:comment>
+        <dc:description xml:lang="en">Sometimes, we need to describe scenarios in which someone (e.g., a person) has a value (e.g., a particular role) during a particular time and for a particular context. Four different things are involved in these kinds of scenarios:
+
+1. the entity having some value, e.g. a person or a document possessing a role or a status;
+
+2. the value had by someone, e.g. a role or a status;
+
+3. the time period during which the entity has that value, e.g. from April 2008 to September 2008;
+
+4. the particular context that characterises the act of having that value, e.g. being a member of an institution or an editor of a particular journal.
+
+Thought as natural extension of the Time-indexed Situation pattern (http://ontologydesignpatterns.org/wiki/Submissions:TimeIndexedSituation), this ontological pattern, called Time-indexed Value in Context (TVC), is able to describe these kinds of scenarios.</dc:description>
+        <dc:title xml:lang="en">The Time-indexed Value in Context</dc:title>
+        <dc:description rdf:resource="http://dwellonit.svn.sourceforge.net/svnroot/dwellonit/TimeIndexedValueInContext/tvc.png"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.essepuntato.it/2012/04/tvc/atTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2012/04/tvc/atTime">
+        <rdfs:label>at time</rdfs:label>
+        <rdfs:comment xml:lang="en">It specifies the particular temporal instant or time period in which the situation takes place.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+        <rdfs:subPropertyOf rdf:resource="&situation;isSettingFor"/>
+        <rdfs:range rdf:resource="&time;TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2012/04/tvc/hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2012/04/tvc/hasValue">
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+        <rdfs:comment xml:lang="en">It links an entity (e.g., a Person) to a particular ValueInTime situation;</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+        <rdfs:subPropertyOf rdf:resource="&timeindexedsituation;hasTimeIndexedSetting"/>
+        <rdfs:domain rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2012/04/tvc/withValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2012/04/tvc/withValue">
+        <rdfs:label xml:lang="en">with value</rdfs:label>
+        <rdfs:comment xml:lang="en">It holds the value had by the entity taking part to the situation.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+        <rdfs:subPropertyOf rdf:resource="&timeindexedsituation;forEntity"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.essepuntato.it/2012/04/tvc/withinContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.essepuntato.it/2012/04/tvc/withinContext">
+        <rdfs:label xml:lang="en">within context</rdfs:label>
+        <rdfs:comment xml:lang="en">It links to the specific context within which the fact of the entity having the value is relevant.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+        <rdfs:subPropertyOf rdf:resource="&timeindexedsituation;forEntity"/>
+        <rdfs:range rdf:resource="&owl;Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.essepuntato.it/2012/04/tvc/ValueInTime -->
+
+    <owl:Class rdf:about="http://www.essepuntato.it/2012/04/tvc/ValueInTime">
+        <rdfs:label xml:lang="en">value in time</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&timeindexedsituation;TimeIndexedSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/withValue"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&time;Instant"/>
+                            <rdf:Description rdf:about="&time;Interval"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/withinContext"/>
+                <owl:someValuesFrom rdf:resource="&owl;Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Having the role &quot;graduate student&quot; in a specific time (e.g., now) and context (e.g., &quot;University of Bologna&quot;).</dc:description>
+        <rdfs:comment xml:lang="en">It defines a particular kind of time-indexed situation that represents a hub linking the entity having a particular value, the value itself and the temporal and contextual extents from which the entity-value relationship depends.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval -->
+
+    <rdf:Description rdf:about="&timeinterval;TimeInterval">
+        <owl:equivalentClass rdf:resource="&time;Interval"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <rdf:Description rdf:about="&time;Interval"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <swrl:Variable rdf:about="urn:swrl#x"/>
+    <swrl:Variable rdf:about="urn:swrl#t"/>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&timeinterval;TimeInterval"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="&timeindexedsituation;atTime"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="&timeindexedsituation;atTime"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

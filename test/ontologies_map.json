@@ -1,7 +1,7 @@
 {
-    "http://www.w3.org/2002/07/owl": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httpwwww3org200207owl",
-    "http://purl.org/dc/dcmitype/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httppurlorgdcdcmitype",
-    "http://purl.org/dc/elements/1.1/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httppurlorgdcelements11",
-    "http://purl.org/dc/terms/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httppurlorgdcterms",
-    "http://xmlns.com/foaf/0.1/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httpxmlnscomfoaf01"
+    "http://www.w3.org/2002/07/owl": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httpwwww3org200207owl.rdf",
+    "http://purl.org/dc/dcmitype/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httppurlorgdcdcmitype.rdf",
+    "http://purl.org/dc/elements/1.1/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httppurlorgdcelements11.rdf",
+    "http://purl.org/dc/terms/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httppurlorgdcterms.rdf",
+    "http://xmlns.com/foaf/0.1/": "/Users/joaorocha/Desktop/Dendro/ontologies-database/test/downloaded_tests/httpxmlnscomfoaf01.owl"
 }

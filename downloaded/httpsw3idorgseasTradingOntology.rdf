@@ -1,0 +1,466 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:pep="https://w3id.org/pep/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:qudt="http://data.qudt.org/qudt/owl/1.0.0/qudt.owl#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="NegativeLoadShifting">
+    <rdfs:isDefinedBy>
+      <voaf:Vocabulary rdf:about="TradingOntology">
+        <vann:preferredNamespaceUri rdf:resource=""/>
+        <dcterms:title xml:lang="en">The SEAS Trading ontology</dcterms:title>
+        <dcterms:contributor>
+          <foaf:Person>
+            <foaf:name>Gabriel Santos</foaf:name>
+          </foaf:Person>
+        </dcterms:contributor>
+        <dcterms:contributor rdf:resource="http://www.vtt.fi/JarmoKalaoja"/>
+        <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+        <owl:imports rdf:resource="PlayerOntology"/>
+        <owl:versionInfo>v1.1</owl:versionInfo>
+        <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-11-15</dcterms:issued>
+        <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+        <dcterms:contributor>
+          <foaf:Person>
+            <foaf:name>Antoine Zimmermann</foaf:name>
+          </foaf:Person>
+        </dcterms:contributor>
+        <owl:imports rdf:resource="/pep/"/>
+        <owl:priorVersion rdf:resource="TradingOntology-1.0"/>
+        <dcterms:contributor>
+          <foaf:Person>
+            <foaf:name>Erkki Siira</foaf:name>
+          </foaf:Person>
+        </dcterms:contributor>
+        <owl:imports rdf:resource="ElectricPowerSystemOntology"/>
+        <owl:imports rdf:resource="OfferingOntology"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+        <dcterms:description xml:lang="en">The Seas Trading Ontology defines concepts and relations to describe ownership, trading, bilateral contracts and market licenses:&#xD;
+&#xD;
+- players own systems and trade commodities, which have a price;&#xD;
+- bilateral electricity contracts are connections between electricity traders at which they exchange&#xD;
+electricity;&#xD;
+- electricity markets are connections between electricity traders at which they exchange electricity,&#xD;
+using a market license;&#xD;
+- electricity markets can be cleared, and balanced;&#xD;
+- evaluations can have a traded volume validity context&#xD;
+&#xD;
+  </dcterms:description>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2016-11-15</dcterms:modified>
+        <owl:versionIRI rdf:resource="TradingOntology-1.1"/>
+      </voaf:Vocabulary>
+    </rdfs:isDefinedBy>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="LoadShifting"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Negative Load Shifting is a Load Shifting which occurs when the load is less than the initial request.</rdfs:comment>
+    <rdfs:label xml:lang="en">Negative Load Shifting</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="AncillaryService">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Service"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Ancillary services are the specialty services and functions provided by the electric grid that facilitate and support the continuous flow of electricity so that supply will continually meet demand (source: Wikipedia).&#xD;
+&#xD;
+    These include black start capability (the ability to restart a grid following a blackout); frequency response (to maintain system frequency with automatic and very fast responses); fast reserve (which can provide additional energy when needed); the provision of reactive power and various other services. (source: Entso-e)</rdfs:comment>
+    <rdfs:label xml:lang="en">Ancillary Service</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="BalancingExecution">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Balancing"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Balancing"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="TransmissionSystemOperator"/>
+      <owl:onProperty rdf:resource="/pep/madeBy"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecution"/>
+    <rdfs:comment xml:lang="en">The execution of some balancing procedure on a market.</rdfs:comment>
+    <rdfs:label xml:lang="en">Balancing Execution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="NegativeLoadShiftingExecution">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="NegativeLoadShifting"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="NegativeLoadShifting"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="LoadShiftingExecution"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The execution of some Negative Load Shifting procedure on a market.</rdfs:comment>
+    <rdfs:label xml:lang="en">Negative Load Shifting Execution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Clearing">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="/pep/Procedure"/>
+    <rdfs:comment xml:lang="en">In economics, market clearing is the procedure by which, in an economic market, the supply of whatever is traded is equated to the demand, so that there is no leftover supply or demand (source: Wikipedia).&#xD;
+  </rdfs:comment>
+    <rdfs:label xml:lang="en">Clearing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Commodity">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="PriceProperty"/>
+      <owl:onProperty rdf:resource="price"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="ConnectionPoint"/>
+      <owl:onProperty rdf:resource="isPropertyOf"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="Property"/>
+    <rdfs:comment xml:lang="en">In economics, a commodity is a marketable item produced to satisfy wants or needs. Often the item is fungible. Economic commodities comprise goods and services (source: Wikipedia).&#xD;
+&#xD;
+For instance, the electric energy outgoing of a certain connection point can be a commodity, and have a price:&#xD;
+&#xD;
+```&#xD;
+[] seas:outgoingElectricEnergy  [&#xD;
+  a seas:ElectricEnergyProperty ;&#xD;
+  seas:price [ &#xD;
+    a seas:Price ;&#xD;
+    seas:evaluation [ &#xD;
+      a seas:Evaluation ;&#xD;
+      seas:evaluatedValue "200 €"^^xsd:ucum ;&#xD;
+      seas:hasTradedVolumeContext "12 €/MWh"^^xsd:ucum&#xD;
+    ]&#xD;
+  ]&#xD;
+]&#xD;
+``` &#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">Commodity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ElectricityMarketLicense">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="ConnectionPoint"/>
+    <rdfs:comment xml:lang="en">An Electricity Market License is a connection point between a player and a market.</rdfs:comment>
+    <rdfs:label xml:lang="en">Electricity Market License</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ElectricityBilateralContract">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Player"/>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:about="operatedBy"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:allValuesFrom rdf:resource="ElectricityTrader"/>
+      <owl:onProperty rdf:resource="connectsSystem"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="Contract"/>
+    <rdfs:subClassOf rdf:resource="Connection"/>
+    <rdfs:comment xml:lang="en">An electricity bilateral contract is both a connection between electricity players, and a contract. It only connects electricity traders.&#xD;
+&#xD;
+It is linked to some player that validates each trade.</rdfs:comment>
+    <rdfs:label xml:lang="en">Electricity Bilateral Contract</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="LoadShifting">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Balancing"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Load Shifting is the procedure of balancing the supply of electricity on the network with the electrical load by adjusting or &#xD;
+                controlling the load rather than the power station output. (source:Wikipedia) .</rdfs:comment>
+    <rdfs:label xml:lang="en">Load Shifting</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PositiveLoadShifting">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="LoadShifting"/>
+    <rdfs:comment xml:lang="en">Positive Load Shifting is a Load Shifting which occurs when the load is greater than the initial request. </rdfs:comment>
+    <rdfs:label xml:lang="en">Positive Load Shifting</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="LoadShiftingExecution">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="LoadShifting"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="LoadShifting"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="TransmissionSystemOperator"/>
+      <owl:onProperty rdf:resource="/pep/madeBy"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="BalancingExecution"/>
+    <rdfs:comment xml:lang="en">The execution of some Load Shifting procedure on a market.</rdfs:comment>
+    <rdfs:label xml:lang="en">Load Shifting Execution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Service">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:disjointWith>
+      <owl:Class rdf:about="Good"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="Commodity"/>
+    <rdfs:comment xml:lang="en">In economics, a service is an economic activity where an immaterial exchange of value occurs. When a service such as labor is performed the buyer does not take exclusive ownership of that which is purchased, unless agreed upon by buyer and seller. The benefits of such a service, if priced, are held to be self-evident in the buyer's willingness to pay for it (source: Wikipedia).&#xD;
+    </rdfs:comment>
+    <rdfs:label xml:lang="en">Service</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="PositiveLoadShiftingExecution">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="PositiveLoadShifting"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="PositiveLoadShifting"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="LoadShiftingExecution"/>
+    <rdfs:comment xml:lang="en">The execution of some Positive Load Shifting procedure on a market.</rdfs:comment>
+    <rdfs:label xml:lang="en">Positive Load Shifting Execution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Good">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:disjointWith rdf:resource="Service"/>
+    <rdfs:subClassOf rdf:resource="Commodity"/>
+    <rdfs:comment xml:lang="en">In economics, a good is a material that satisfies human wants and provides utility, for example, to a consumer making a purchase while getting an enough-satisfying product. A common distinction is made between 'goods' that are tangible property, and services, which are non-physical (source: Wikipedia).</rdfs:comment>
+    <rdfs:label xml:lang="en">Good</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="ClearingExecution">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Clearing"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Clearing"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Player"/>
+      <owl:onProperty rdf:resource="/pep/madeBy"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecution"/>
+    <rdfs:comment xml:lang="en">A procedure executed by some player. The execution of some clearing procedure on an electricity market.</rdfs:comment>
+    <rdfs:label xml:lang="en">Clearing Execution</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Balancing">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="/pep/Procedure"/>
+    <rdfs:comment xml:lang="en">Balancing refers to the procedure in which a Balance responsible party acts to ensure that demand is equal to supply after markets have closed, in and near real time (source: Entso-e).</rdfs:comment>
+    <rdfs:label xml:lang="en">Balancing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:ObjectProperty rdf:about="tax">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:domain rdf:resource="Commodity"/>
+    <rdfs:subPropertyOf rdf:resource="hasProperty"/>
+    <rdfs:comment xml:lang="en">Tax for the commodity, quantified as a percentage of something.&#xD;
+&#xD;
+Functional sub properties of `seas:tax` must precise what that _something_ is.</rdfs:comment>
+    <rdfs:label xml:lang="en">tax</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="operatedBy">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="Player"/>
+    <rdfs:domain rdf:resource="Connection"/>
+    <rdfs:comment xml:lang="en">Links some connection to a player that regulates what's happening through that connection.</rdfs:comment>
+    <rdfs:label xml:lang="en">operated by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="hasElectricityMarketLicense">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="ElectricityMarketLicense"/>
+    <rdfs:domain rdf:resource="ElectricityTrader"/>
+    <rdfs:subPropertyOf rdf:resource="connectsAt"/>
+    <rdfs:comment xml:lang="en">Links an electricity player to its electricity market license.</rdfs:comment>
+    <rdfs:label xml:lang="en">has electricity market license</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="tradesElectricityOn">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range>
+      <rdf:Description rdf:about="ElectricityMarket">
+        <rdfs:subClassOf rdf:parseType="Resource">
+          <owl:allValuesFrom rdf:resource="ElectricityMarketLicense"/>
+          <owl:onProperty rdf:resource="connectsSystemAt"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:parseType="Resource">
+          <owl:allValuesFrom rdf:resource="ElectricityTrader"/>
+          <owl:onProperty rdf:resource="connectsSystem"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="Connection"/>
+      </rdf:Description>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="ElectricityTrader"/>
+    <rdfs:subPropertyOf rdf:resource="connectedThrough"/>
+    <rdfs:comment xml:lang="en">An Electricity Player can trade electricity on an Electricity Market.&#xD;
+&#xD;
+For example,&#xD;
+&#xD;
+```&#xD;
+&lt;http://market.com/&gt; a seas:ElectricityMarket .&#xD;
+&#xD;
+&lt;http://agregator.com&gt; a seas:ElectricityTrader ;&#xD;
+  seas:tradesElectricityOn &lt;http://market.com/&gt; .&#xD;
+&#xD;
+&lt;http://otheragregator.com&gt; a seas:ElectricityTrader ;&#xD;
+  seas:tradesElectricityOn &lt;http://market.com/&gt; .&#xD;
+```&#xD;
+&#xD;
+These connections are qualified with class `seas:ElectricityMarketLicense`.&#xD;
+&#xD;
+&#xD;
+For example,&#xD;
+&#xD;
+```&#xD;
+&lt;http://agregator.com&gt; seas:hasElectricityMarketLicense &lt;http://market.com/license12&gt; .&#xD;
+&lt;http://otheragregator.com&gt; seas:hasElectricityMarketLicense &lt;http://market.com/license32&gt; .&#xD;
+&#xD;
+&lt;http://market.com/&gt; seas:connectsSystem &lt;http://agregator.com&gt; , &lt;http://otheragregator.com&gt; .&#xD;
+&lt;http://market.com/&gt; seas:connectsSystemAt &lt;http://market.com/license12&gt; , &lt;http://market.com/license32&gt; .&#xD;
+```&#xD;
+&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">trades electricity on</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="tradesElectricityWith">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="ElectricityTrader"/>
+    <rdfs:domain rdf:resource="ElectricityTrader"/>
+    <rdfs:subPropertyOf rdf:resource="connectedTo"/>
+    <rdfs:comment xml:lang="en">An Electricity Player can trade electricity directly with another electricity player, through an electricity bilateral contract. They then exchange some of the commodities they trade.&#xD;
+&#xD;
+These connections are qualified with class `seas:ElectricityBilateralContract`.</rdfs:comment>
+    <rdfs:label xml:lang="en">trades electricity with</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:FunctionalProperty rdf:about="isOwnedBy">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="owns"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="Player"/>
+    <rdfs:domain rdf:resource="System"/>
+    <rdfs:comment xml:lang="en">Links a system to the one and only player that owns it.</rdfs:comment>
+    <rdfs:label xml:lang="en">is owned by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="hasTradedVolumeContext">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="ElectricEnergyProperty"/>
+    <rdfs:domain rdf:resource="Evaluation"/>
+    <rdfs:subPropertyOf rdf:resource="hasValidityContext"/>
+    <rdfs:comment xml:lang="en">Links an evaluation to its traded volume validity context.&#xD;
+&#xD;
+  for instance .&#xD;
+&#xD;
+```&#xD;
+&lt;myConnectionPoint&gt; seas:outgoingElectricEnergy &lt;whatIGive&gt; .&#xD;
+&#xD;
+&lt;whatIGive&gt; seas:price &lt;priceOfWhatIGive&gt; .&#xD;
+&#xD;
+&lt;priceOfWhatIGive&gt; seas:evaluation &lt;evaluationOfThePriceOfWhatIGive&gt; .&#xD;
+&#xD;
+&lt;evaluationOfThePriceOfWhatIGive&gt; a seas:Evaluation ;&#xD;
+  seas:evaluatedValue "200 €"^^cdt:ucum ;&#xD;
+  seas:hasTradedVolumeContext "12 €/MWh"^^cdt:ucum .&#xD;
+```&#xD;
+&#xD;
+This concept needs polishing ... please ping me if necessary.</rdfs:comment>
+    <rdfs:label xml:lang="en">has traded volume context</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="valueAddedTax">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:domain rdf:resource="Commodity"/>
+    <rdfs:subPropertyOf rdf:resource="hasProperty"/>
+    <rdfs:subPropertyOf rdf:resource="tax"/>
+    <rdfs:comment xml:lang="en">A value-added tax (VAT), known in some countries as a goods and services tax (GST), is a type of general consumption tax that is collected incrementally, based on the value added, at each stage of production and is usually implemented as a destination-based tax, where the tax rate is based on the location of the customer (source: Wikipedia).&#xD;
+&#xD;
+      The value added tax is quantified as a percentage of the nett price.</rdfs:comment>
+    <rdfs:label xml:lang="en">value added tax</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="isTradedBy">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="trades"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="Player"/>
+    <rdfs:domain rdf:resource="Commodity"/>
+    <rdfs:comment xml:lang="en">Links a commodity to the one and only player that trades it.</rdfs:comment>
+    <rdfs:label xml:lang="en">is traded by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="owns">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf rdf:resource="isOwnedBy"/>
+    <rdfs:range rdf:resource="System"/>
+    <rdfs:domain rdf:resource="Player"/>
+    <rdfs:comment xml:lang="en">Links a player to a system it owns.</rdfs:comment>
+    <rdfs:label xml:lang="en">owns</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="trades">
+    <rdfs:isDefinedBy rdf:resource="TradingOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:inverseOf rdf:resource="isTradedBy"/>
+    <rdfs:range rdf:resource="Commodity"/>
+    <rdfs:domain rdf:resource="Player"/>
+    <rdfs:comment xml:lang="en">Links a player to a commodity it trades.</rdfs:comment>
+    <rdfs:label xml:lang="en">trades</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+</rdf:RDF>

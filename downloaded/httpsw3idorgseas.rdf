@@ -1,0 +1,150 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:pep="https://w3id.org/pep/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:void="https://www.w3.org/TR/void/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdfp="https://w3id.org/rdfp/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <voaf:Vocabulary rdf:about="">
+    <owl:imports rdf:resource="TimeOntology-1.0"/>
+    <dcterms:title xml:lang="en">SEAS Ontology</dcterms:title>
+    <owl:imports rdf:resource="FeatureOfInterestOntology-1.0"/>
+    <owl:versionInfo>v1.1</owl:versionInfo>
+    <owl:imports rdf:resource="DeviceOntology-1.1"/>
+    <owl:imports rdf:resource="BooleanPropertyOntology-1.0"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Takoua Ghariani</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <dcterms:description xml:lang="en">The main SEAS ontology glues together all of the SEAS modules.&#xD;
+&#xD;
+**To cite the SEAS ontologies:**&#xD;
+&#xD;
+&gt; Maxime Lefrançois, Planned ETSI SAREF Extensions based on the W3C&amp;OGC SOSA/SSN-compatible SEAS Ontology Patterns. In Proceedings of Workshop on Semantic Interoperability and Standardization in the IoT, SIS-IoT, Amsterdam, Netherlands, July 2017 ([PDF](http://www.maxime-lefrancois.info/docs/Lefrancois-SIS-IoT2017-Planned.pdf) - [BibTex](SEAS-SIS-IoT-2017.bib))&#xD;
+&#xD;
+&gt; Maxime Lefrançois, Jarmo Kalaoja, Takoua Ghariani, Antoine Zimmermann, The SEAS Knowledge Model, ITEA2 12004 Smart Energy Aware Systems Deliverable 2.2, Jan 2017 ([PDF](http://www.maxime-lefrancois.info/docs/SEAS-D2_2-SEAS-Knowledge-Model.pdf) - [BibTex](SEAS-D2_2-SEAS-Knowledge-Model.bib))&#xD;
+&#xD;
+SEAS ontology modules are organized on top of a core of three main modules:&#xD;
+&#xD;
+- the [seas:FeatureOfInterestOntology](https://w3id.org/seas/FeatureOfInterestOntology) describes feature of interests and their properties;&#xD;
+- the [seas:EvaluationOntology](https://w3id.org/seas/EvaluationOntology) describes evaluations of these properties;&#xD;
+- the [seas:SystemOntology](https://w3id.org/seas/SystemOntology) describes virtually isolated systems that share connections with other systems;&#xD;
+&#xD;
+On top of the seas:SystemOntology module, various vertical domain ontologies are defined for specific sub classes of systems and why they may be connected:&#xD;
+&#xD;
+- the [`seas:AreaOntology`](https://w3id.org/seas/AreaOntology) describes Zone systems:&#xD;
+    - a zone may be linked by a crossable connection with another zone;&#xD;
+    - a zone may be a sub-zone of another zone;&#xD;
+    - zones are quantified in terms of area, population, and humidity.&#xD;
+- more module descriptions to come soon...&#xD;
+&#xD;
+We furthermore encourage the use of the following external ontologies:&#xD;
+&#xD;
+- [the RDFP Presentation ontology](https://w3id.org/rdfp/) describes how RDF graphs can be validated, interpreted from web resource representations, or serialized as resource representations;&#xD;
+- [the Process Execution Platform ontology](https://w3id.org/pep/) generalizes the core of the [SSN](http://www.w3.org/TR/vocab-ssn/) and the [SAN](https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl) ontologies.&#xD;
+</dcterms:description>
+    <owl:imports rdf:resource="TradingOntology-1.1"/>
+    <owl:imports rdf:resource="SmartMeterOntology-1.1"/>
+    <owl:imports rdf:resource="GenericPropertyOntology-1.0"/>
+    <owl:imports rdf:resource="ZoneLightingOntology-1.0"/>
+    <owl:imports rdf:resource="StatisticsOntology-1.0"/>
+    <owl:imports rdf:resource="PlayerOntology-1.1"/>
+    <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+    <owl:imports rdf:resource="PeriodicSignalOntology-1.0"/>
+    <owl:imports rdf:resource="PhotovoltaicOntology-1.0"/>
+    <owl:imports rdf:resource="ThermodynamicSystemOntology-1.0"/>
+    <owl:imports rdf:resource="ComfortOntology-1.0"/>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <owl:imports rdf:resource="BatteryOntology-1.0"/>
+    <owl:imports rdf:resource="OfferingOntology-1.1"/>
+    <owl:imports rdf:resource="ArchitectureOntology-2.0"/>
+    <owl:imports rdf:resource="EnergyFormOntology-1.0"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Lynda Temal</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <owl:imports rdf:resource="ZoneOntology-1.0"/>
+    <owl:imports rdf:resource="ElectricLightSourceOntology-1.0"/>
+    <owl:imports rdf:resource="BuildingOntology-1.0"/>
+    <dcterms:creator rdf:resource="http://maxime-lefrancois.info/me#"/>
+    <owl:imports rdf:resource="FailableSystemOntology-1.0"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Gabriel Santos</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Francisco Silva</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <owl:imports rdf:resource="ElectricPowerSystemOntology-1.0"/>
+    <owl:imports rdf:resource="CommunicationOntology-1.0"/>
+    <owl:priorVersion rdf:resource="seas-1.0"/>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Erkki Siira</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <owl:imports rdf:resource="OperatingOntology-1.0"/>
+    <owl:imports rdf:resource="GreenKPIOntology-1.0"/>
+    <owl:imports rdf:resource="OptimizationOntology-1.1"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Hannu Järvinen</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Brigida Teixeira</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <owl:imports rdf:resource="EvaluationOntology-1.0"/>
+    <owl:imports rdf:resource="PricingOntology-1.0"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Antoine Zimmermann</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <owl:imports rdf:resource="FlexibilityOntology-1.0"/>
+    <owl:imports rdf:resource="ComplexOntology-1.0"/>
+    <owl:imports rdf:resource="ForecastingOntology-1.1"/>
+    <dcterms:contributor>
+      <foaf:Person>
+        <foaf:name>Marc Girod-Genet</foaf:name>
+      </foaf:Person>
+    </dcterms:contributor>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-08-29</dcterms:issued>
+    <dcterms:contributor rdf:resource="http://www.vtt.fi/JarmoKalaoja"/>
+    <owl:imports rdf:resource="CityOntology-1.0"/>
+    <owl:imports rdf:resource="StreetLightSystemOntology-1.0"/>
+    <owl:imports rdf:resource="ElectricVehicleOntology-1.0"/>
+    <owl:versionIRI rdf:resource="seas-1.1"/>
+    <owl:imports rdf:resource="SystemOntology-1.1"/>
+  </voaf:Vocabulary>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+</rdf:RDF>

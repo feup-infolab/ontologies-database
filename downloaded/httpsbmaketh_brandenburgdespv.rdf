@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema="https://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactSystem">
+    <rdfs:comment xml:lang="en">complex object whose parts interact and form a desing-related and functional whole</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:label xml:lang="en">System</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#researchArtifact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Is used in combination with research action type to indicate a research objective of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchObjective"/>
+    <rdfs:label xml:lang="en">research artifact</rdfs:label>
+    <rdfs:range rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethLabExperiment">
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The laboratory experiment investigates causal relationships in a controlled environment by manipulating an experimental variable in a repetitive manner and measuring the effect of manipulation. The object to be investigated is examined in an artificial environment (in the 'laboratory'), whereby the possibilities of environmental control are significantly influenced.</rdfs:comment>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:label xml:lang="en">Laboratory Experiment (Wilde/Hess)</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactWorkflow">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:label xml:lang="en">Workflow</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment xml:lang="en">clearly specified sequence of activities to achieve a desired target state</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/url">
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+    <rdfs:comment xml:lang="en">General datatype property, potentially usable for specifying the URL of a resource.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">url</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchObjective">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:label xml:lang="en">Research Objective</rdfs:label>
+    <rdfs:comment xml:lang="en">Abstract class for modeling an elicited research objective comprising a specific research activity and a research artifact to which the activity is applied.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/StructuredValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchActionType">
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">The activity aspect of an elecited research objective taken from the list of types of research &amp; development actions applied in Information Systems.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Research Action Type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/author">
+    <rdfs:comment xml:lang="en">Is used to indicate a author of a scientific paper.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">author</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/legalName">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">legal name</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/Organization"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:comment xml:lang="en">The legal name of an organization.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/startTime">
+    <rdfs:range rdf:resource="https://schema.org/DateTime"/>
+    <rdfs:label xml:lang="en">start time</rdfs:label>
+    <rdfs:comment xml:lang="en">The start time of some event.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://schema.org/Event"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb4">
+    <rdf:first rdf:resource="https://schema.org/Event"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/additionalName">
+    <rdfs:label xml:lang="en">additional name</rdfs:label>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:comment xml:lang="en">The additional name for person, can be used for a middle name.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethEthnography">
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:label xml:lang="en">Ethnography (Wilde/Hess)</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:comment xml:lang="en">Ethnography would like to generate insights through participatory observation. The difference to the case study lies in the very high extent in which the researcher is integrated into the investigated social environment. There is a very small objective distance.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/alternateName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">alternative name</rdfs:label>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:comment xml:lang="en">General datatype property, potentially usable for specifying alternative names of a resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactDevFramework">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:comment xml:lang="en">complex (technical) environment for the development of applications and IT systems</rdfs:comment>
+    <rdfs:label xml:lang="en">Development Framework</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeImplement">
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:label xml:lang="en">implement</rdfs:label>
+    <rdfs:comment xml:lang="en">implement a designed object technically</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#FutureWork">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">Unformalized list of future work announced in an analyzed scientific paper.</rdfs:comment>
+    <rdfs:label xml:lang="en">Future Work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeElicit">
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment xml:lang="en">capture characteristics of objects under examination (eg by measurement)</rdfs:comment>
+    <rdfs:label xml:lang="en">elicit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Event">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">Event</rdfs:label>
+    <rdfs:comment xml:lang="en">Here used primarily for scientific conferences.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb2">
+    <rdf:first rdf:resource="https://schema.org/Organization"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/jobTitle">
+    <rdfs:comment xml:lang="en">The job title of the person (for example, Knowledge Engineer).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:label xml:lang="en">job title</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeProvide">
+    <rdfs:label xml:lang="en">provide</rdfs:label>
+    <rdfs:comment xml:lang="en">provide an object in a suitable manner for use</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethPrototyping">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Prototyping (Wilde/Hess)</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <rdfs:comment xml:lang="en">A preliminary version of an application system is developed and evaluated. Both steps can generate new insights.</rdfs:comment>
+    <vs:term_status>stable</vs:term_status>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z&gt;</schema:url>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/DateTime">
+    <rdfs:comment xml:lang="en">General class for all literals indicating a data and a time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">Date and Time</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/isPartOf">
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/CreativeWorkSeries"/>
+    <rdfs:comment xml:lang="en">Is used to indicate the proceedings where a scientific paper is published.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">is part of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.th-brandenburg.de/mitarbeiterseiten/fbw/vera-meister/">
+    <rdf:type rdf:resource="https://schema.org/Person"/>
+    <schema:email>vera.meister@th-brandenburg.de</schema:email>
+    <schema:name>Vera G. Meister</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchFindings">
+    <rdfs:subClassOf rdf:resource="https://schema.org/ItemList"/>
+    <rdfs:label xml:lang="en">Research Findings</rdfs:label>
+    <rdfs:comment xml:lang="en">Unformalized list of research findings documented in an analyzed scientific paper.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#">
+    <dc:publisher rdf:resource="http://www.wikidata.org/entity/Q1391182"/>
+    <vann:preferredNamespaceUri>https://bmake.th-brandenburg.de/spv#</vann:preferredNamespaceUri>
+    <skos:prefLabel xml:lang="en">spv ontology</skos:prefLabel>
+    <owl:versionInfo xml:lang="en">v 0.3 - refinement for SemSci2017 workshop.</owl:versionInfo>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-06-05</dc:issued>
+    <vann:preferredNamespacePrefix>spv</vann:preferredNamespacePrefix>
+    <dc:creator rdf:resource="https://www.th-brandenburg.de/mitarbeiterseiten/fbw/vera-meister/"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-08-08</dc:modified>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">spv vocabulary (BMaKE)</rdfs:label>
+    <dc:rights>Copyright © 2017 BMaKE, THB</dc:rights>
+    <dc:title>Scholarly Papers Vocabulary with Focus on Qualtitative Analysis</dc:title>
+    <rdfs:comment xml:lang="en">This vocabulary is mainly defined under the reuse of schema.org classes, relations and attributes. It is aimed at the support of research groups in the field of Business Modeling and Knowledge Engineering (BMaKE) in their collaborative work for qualitatively analyzing scholarly papers as well as sharing the results of that analyses and judgements. The vocabulary is meant to be used at first as schema for OntoWiki. Since this system doesn't process blank nodes in the intended way, the abstract nodes for specifying qualitative aspects of scholarly papers shall be modeled explicitely.</rdfs:comment>
+    <dc:description rdf:resource="https://bmake.th-brandenburg.de/downloads/scholarlyPapers_schema.svg"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dc:description xml:lang="en">The main contribution of this vocabulary are five specific classes for structuring and collecting the following qualitative characteristics of scholarly papers: research objectives, research methods, research findings, future work, critique. An additional inner structure is proposed for research objectives, qualifying them as schema:StructuredValue and combining them from two lists: research action types and research artifacts. The specific classes are subclasses of schema:ItemList. In addition, the classes for research methods, research action types and research artifacts are declared as subclasses of enumeration. Thus the typical methods, activities and research artifacts of the research area can be listed in the vocabulary itself.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Text">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataType"/>
+    <rdfs:comment xml:lang="en">General class for all literals being of any textual Datatype.</rdfs:comment>
+    <rdfs:label xml:lang="en">Text</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethReferenceModeling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The reference modeling produces inductively (out of observations) or deductively (eg from theories or models) mostly simplified and optimized projections (ideal concepts) of systems, in order to deepen existing knowledge and generate design templates from this.</rdfs:comment>
+    <rdfs:label xml:lang="en">Reference Modeling (Wilde/Hess)</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>stable</vs:term_status>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethActionResearch">
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Action Research (Wilde/Hess)</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <rdfs:comment xml:lang="en">Solving a practice problem by a mixed group of scientists and practical experts. Several cycles of analysis, action and evaluation steps, each with a low level of structured instruments such as group discussions or planning games, are conducted.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethLiteratureAnalysis">
+    <schema:url>https://lccn.loc.gov/2015048510</schema:url>
+    <rdfs:comment xml:lang="en">A literature review is a written document that presents a logically argued case founded on a comprehensive understanding of the current state of knowledge about a topic of study. This case establishes a convincing thesis to answer the study’s question.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Literature Analysis (Machi/McEvoy)</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Language">
+    <rdfs:label xml:lang="en">Language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">Natural languages such as Spanish, German, Hindi, English, etc.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethQualitativeResearch">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <rdfs:comment xml:lang="en">This method integrates survey techniques such as questionnaires, interviews, Delphi method, content analyzes, etc. into an aggregate. It comprises a one-time survey over several individuals, which is subsequently coded and evaluated qualitatively. The result is a cross-section profile characteristic for the sample participants, which usually allows conclusions to be drawn on the total population.</rdfs:comment>
+    <rdfs:label xml:lang="en">Qualitative Research (Wilde/Hess)</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/CreativeWork">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">Here used primarily for scientific papers, conference proceeding and related creative work.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Creative Work</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeStructure">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">structure</rdfs:label>
+    <rdfs:comment xml:lang="en">systematically organize parts, aspects or the like of a complex object</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/about">
+    <rdfs:comment xml:lang="en">Is used to relate to subject matters of a creative work, mainly a scientific paper. Here mainly used to relate to blank or abstract nodes of type schema:ItemList for specifying lists of characteristics of a scientific paper, like research findings, research methods and research objectives.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:label xml:lang="en">about</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/name">
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">General datatype property, potentially usable for specifying the name of a resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/StructuredValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+    <rdfs:comment xml:lang="en">Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing. Here used for specifying research objectives characterized by research actions applied to research artifacts.</rdfs:comment>
+    <rdfs:label xml:lang="en">Structured Value</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchMethods">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Research Methods</rdfs:label>
+    <rdfs:comment xml:lang="en">List of formalized research methods applied in an analyzed scientific paper.</rdfs:comment>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:subClassOf rdf:resource="https://schema.org/ItemList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/recordedIn">
+    <rdfs:comment xml:lang="en">Is used to relate a conference to the corresponding proceedings.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">recorded in</rdfs:label>
+    <rdfs:range rdf:resource="https://schema.org/CreativeWorkSeries"/>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/editor">
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+    <rdfs:label xml:lang="en">editor</rdfs:label>
+    <rdfs:comment xml:lang="en">Is used to indicate an editor of a scientific paper or conference proceedings.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/PublicationEvent">
+    <rdfs:subClassOf rdf:resource="https://schema.org/Event"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">Publication Event</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The class of scientific conferences.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/email">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:label xml:lang="en">email</rdfs:label>
+    <rdfs:comment xml:lang="en">Email address of a person or an organization.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="ub10bL484C16"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL297C17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/citation">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">Is used to create references of a scientific paper to other items of creative work (particularly other papers).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:label xml:lang="en">citation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/pageEnd">
+    <rdfs:label xml:lang="en">end page</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The page on which the scientific paper ends.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Intangible">
+    <rdfs:label xml:lang="en">Intangible</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc. (taken from schema.org).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactApplication">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Application</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment xml:lang="en">software artifact with a certain range of functions</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/itemListElement">
+    <rdfs:domain rdf:resource="https://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">item list element</rdfs:label>
+    <rdfs:comment xml:lang="en">For itemListElement values can be used simple strings or existing entities.</rdfs:comment>
+    <rdfs:range rdf:nodeID="ub10bL297C17"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb6">
+    <rdf:first rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethDesignScience">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>stable</vs:term_status>
+    <schema:url>http://doi.org/10.1007/978-1-4419-5653-8_2</schema:url>
+    <rdfs:comment xml:lang="en">Design Science is an outcome-based information technology research methodology, which offers specific guidelines for evaluation and iteration within research projects.</rdfs:comment>
+    <rdfs:label xml:lang="en">Design Science (Hevner)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeDesign">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:comment xml:lang="en">basically design an object, mostly according to appropriate design principles</rdfs:comment>
+    <rdfs:label xml:lang="en">design</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeDefine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">define</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:comment xml:lang="en">unambiguously describe or explain a concept</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethFormalDedAnalysis">
+    <vs:term_status>stable</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Formal Deductive Analysis (Wilde/Hess)</rdfs:label>
+    <rdfs:comment xml:lang="en">Logic-deductive inferencing using mathematical-formal models</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/attendee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">Is used to indicate a person attending a conference.</rdfs:comment>
+    <rdfs:label xml:lang="en">attendee</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Enumeration">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">Enumeration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Enumerations of aspects specifying a scientific paper, like research methods, research artifacts and research action types.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactBusinessProcess">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">set of interacting and interdependent activities that converts input to output</rdfs:comment>
+    <rdfs:label xml:lang="en">Business Process</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeEvaluate">
+    <rdfs:label xml:lang="en">evaluate</rdfs:label>
+    <rdfs:comment xml:lang="en">assess a quantitative or qualitative property of an object</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>testing</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/dateCreated">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:range rdf:resource="https://schema.org/Date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The date on which the CreativeWork was created or the item was added to a DataFeed.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:label xml:lang="en">date created</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb5">
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb6"/>
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/keywords">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:label xml:lang="en">keywords</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:comment xml:lang="en">Keywords or tags used to describe the content of a creative work. Multiple entries in a keywords list are typically delimited by commas.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/dateModified">
+    <rdfs:range rdf:resource="https://schema.org/Date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">date modified</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">The date on which the CreativeWork was modified or the item's entry was modified within a DataFeed.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/inLanguage">
+    <rdfs:comment xml:lang="en">The language of the content or performance or used in an event.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Language"/>
+    <rdfs:label xml:lang="en">in language</rdfs:label>
+    <rdfs:domain rdf:nodeID="ub10bL387C16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethCaseStudy">
+    <rdfs:comment xml:lang="en">The case study usually examines complex, difficult-to-distinguish phenomena in their natural context. It represents a special form of the qualitative-empirical methodology, which is investigated intensively by a few feature-bearers. It is either the objective examination of theses (behavioral approach) or the interpretation of behavioral patterns as the phenotypes of the realities constructed by the subjects (construction-oriented access).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">Case Study (Wilde/Hess)</rdfs:label>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/award">
+    <rdfs:comment xml:lang="en">An award won by or for this scientific paper.</rdfs:comment>
+    <rdfs:label xml:lang="en">award</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/location">
+    <rdfs:comment xml:lang="en">Is used for different purposes to refer to a geographical place, e. g. for event locations (termporal) or for organization locations (permanent).</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Place"/>
+    <rdfs:label xml:lang="en">location</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="ub10bL289C16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactStandard">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:label xml:lang="en">Standard, Guideline</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:comment xml:lang="en">specific reference or prescription for actions in a particular field of action</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/affiliation">
+    <rdfs:label xml:lang="en">affiliation</rdfs:label>
+    <rdfs:comment xml:lang="en">Is used to indicate the affiliation of a person to an organization.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethSimulation">
+    <rdfs:comment xml:lang="en">The simulation models the behavior of the system to be investigated formally and compares environmental conditions with certain assignments of the model parameters. Both the model construction and the observation of the endogenous model parameters allow to gain insights.</rdfs:comment>
+    <rdfs:label xml:lang="en">Simulation (Wilde/Hess)</rdfs:label>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/endTime">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/DateTime"/>
+    <rdfs:label xml:lang="en">end time</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/Event"/>
+    <rdfs:comment xml:lang="en">The end time of some event.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactMethod">
+    <rdfs:label xml:lang="en">Method</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">prescription of procedures or activities which is aimed at a specific result under appropriate conditions</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/image">
+    <rdfs:comment xml:lang="en">General datatype property, potentially usable for relating an image of a resource.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+    <rdfs:label xml:lang="en">image</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Organization"/>
+    <rdfs:label xml:lang="en">publisher</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:comment xml:lang="en">Is used to indicate a publishing organization of a scientific paper or conference proceedings.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethArgumentDedAnalysis">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdfs:comment xml:lang="en">Pure-language logical-deductive inferencing (as, for example, in philosophy)</rdfs:comment>
+    <rdfs:label xml:lang="en">Argumentative Deductive Analysis (Wilde/Hess)</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchArtifact">
+    <rdfs:label xml:lang="en">Rresearch Artifact</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+    <rdfs:comment xml:lang="en">The artifact aspect of an elicited research objective taken from the list of all types of research &amp; development artifacts characteristic for Information Systems.</rdfs:comment>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchObjectives">
+    <rdfs:label xml:lang="en">Research Objectives</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">List of formalized research objectives targeted in an analyzed scientific paper.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/ItemList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/headline">
+    <rdfs:label xml:lang="en">headline</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:comment xml:lang="en">Headline or title of a scientific paper.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactRequirements">
+    <rdfs:label xml:lang="en">Requirements</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">characteristics or features of an object required by potential users</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethFieldExperiment">
+    <rdfs:label xml:lang="en">Field Experiment (Wilde/Hess)</rdfs:label>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z&gt;</schema:url>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">The field experiment investigates causal relationships in a controlled environment by manipulating an experimental variable in a repeatable manner and measuring the effect of manipulation. The object to be investigated is examined in its natural environment (in the 'field'), whereby the possibilities of environmental control are significantly influenced.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/DataType">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">Encompasses basic data types for typing literals.</rdfs:comment>
+    <rdfs:label xml:lang="en">Data Type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeEnhance">
+    <rdfs:label xml:lang="en">enhance</rdfs:label>
+    <rdfs:comment xml:lang="en">improve an object in certain features or aspects</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/ScholarlyArticle">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Scholarly Article</rdfs:label>
+    <rdfs:comment xml:lang="en">The class of scientific papers.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/contributor">
+    <rdfs:range rdf:resource="https://schema.org/Person"/>
+    <rdfs:comment xml:lang="en">Is used to indicate a person contributing to a conference.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:label xml:lang="en">contributor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL498C16">
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/text">
+    <rdfs:label xml:lang="en">text</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">The textual content of this creative work.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/CreativeWork"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/faxNumber">
+    <rdfs:label xml:lang="en">fax number</rdfs:label>
+    <rdfs:comment xml:lang="en">Fax number of a person or an organization.</rdfs:comment>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:domain rdf:nodeID="ub10bL498C16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactModelingLanguage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">collection of syntactic rules (grammar) and semantic specifications for representing objects of a particular domain</rdfs:comment>
+    <rdfs:label xml:lang="en">Modeling Language</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/familyName">
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">The last name of a person.</rdfs:comment>
+    <rdfs:label xml:lang="en">family name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeAnalyze">
+    <rdfs:comment xml:lang="en">examine something systematically and in detail</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:label xml:lang="en">analyze</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResearchMethod">
+    <rdfs:comment xml:lang="en">Research method applied in an analyzed scientific paper taken from a list of all relevant research methods used in Information Systems.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Research Method</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/alternativeHeadline">
+    <rdfs:label xml:lang="en">alternative headline</rdfs:label>
+    <rdfs:comment xml:lang="en">A secondary title of a scientific paper.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb14">
+    <rdf:first rdf:resource="https://schema.org/Organization"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeConceptualize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">define the essential terms (concepts) and relations of a domain</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">conceptualize</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL484C16">
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/logo">
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+    <rdfs:label xml:lang="en">logo</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/Organization"/>
+    <rdfs:comment xml:lang="en">An associated logo of an organization.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactInfrastructure">
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:comment xml:lang="en">a combined set of hardware, software, networks, facilities, etc. (including all of the information technology), in order to develop, test, deliver, monitor, control or support IT services</rdfs:comment>
+    <rdfs:label xml:lang="en">IT Infrastructure</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+    <rdfs:comment xml:lang="en">Mainly used for identifying authors, editors, attendees, contributers, organizers and other human agents.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/sameAs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/URL"/>
+    <rdfs:label xml:lang="en">same as</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">General datatype property, potentially usable for relating one resource to a URL representing the same resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/organizer">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">organizer</rdfs:label>
+    <rdfs:comment xml:lang="en">Is used to indicate a person or an organization organizing a conference.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/PublicationEvent"/>
+    <rdfs:range rdf:nodeID="ub10bL276C15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/CreativeWorkSeries">
+    <rdfs:comment xml:lang="en">The class of Conference proceedings - regardless of the publication format.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Creative Work Series</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethQuantitativeResearch">
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">This method integrates survey techniques such as questionnaires, interviews, Delphi method, content analyzes, etc. into an aggregate. It comprises a one-time survey over several individuals, which is subsequently coded and evaluated quantatively. The result is a cross-section profile characteristic for the sample participants, which usually allows conclusions to be drawn on the total population.</rdfs:comment>
+    <rdfs:label xml:lang="en">Quantitative Research (Wilde/Hess)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactBlueprint">
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">model or technical design of an object</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Blueprint</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/telephone">
+    <rdfs:domain rdf:nodeID="ub10bL491C16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:comment xml:lang="en">Telephone number of a person or an organization.</rdfs:comment>
+    <rdfs:label xml:lang="en">telephone</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeDevelop">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">develop</rdfs:label>
+    <rdfs:comment xml:lang="en">create something new, mostly using specialist methods and tools</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeConstruct">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">construct</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">create something according to certain design or architectural principles</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethGroundedTheory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Grounded Theory (Wilde/Hess)</rdfs:label>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <rdfs:comment xml:lang="en">The Grounded Theory aims at the inductive acquisition of new theories by intensive observation of the object of investigation in the field. The various procedures for coding and evaluating the predominantly qualitative data are precisely specified.</rdfs:comment>
+    <vs:term_status>stable</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/ItemList">
+    <rdfs:label xml:lang="en">Item List</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Lists of aspects specifying a scientific paper, like research methods, research findings, research objectives, and future work.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactDocumentation">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">technical, formal or semi-formal description of an object and the circumstances of its development or function</rdfs:comment>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:label xml:lang="en">Documentation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb3">
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb4"/>
+    <rdf:first rdf:resource="https://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactLinkedData">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">standard-based, structured data, mostly based on the Semantic Web stack</rdfs:comment>
+    <rdfs:label xml:lang="en">Linked Data</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/honoricSuffix">
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">An honorific suffix preceding a person's name such as M.D. /PhD/MSCSW.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">honoric suffix</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb8">
+    <rdf:first rdf:resource="https://schema.org/CreativeWork"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/URL">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:comment xml:lang="en">General class for all literals being an URL.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label xml:lang="en">URL</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#researchActionType">
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:label xml:lang="en">research action type</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Is used in combination with research action type to indicate a research objective of a scientific paper.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:domain rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchObjective"/>
+    <rdfs:range rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/givenName">
+    <rdfs:comment xml:lang="en">The first name of a person.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:label xml:lang="en">given name</rdfs:label>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#Critique">
+    <rdfs:comment xml:lang="en">Unformalized list of critical issues observed in an analyzed scientific paper.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:label xml:lang="en">Critique</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://schema.org/ItemList"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb7">
+    <rdf:first rdf:resource="https://schema.org/Event"/>
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeExtend">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">extend an object by properties or in its scope of functions or services</rdfs:comment>
+    <rdfs:label xml:lang="en">extend</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/honoricPrefix">
+    <rdfs:comment xml:lang="en">An honorific prefix preceding a person's name such as Dr/Mrs/Mr.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Person"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">honoric prefix</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeCollect">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">collect</rdfs:label>
+    <rdfs:comment xml:lang="en">collect all parts or aspects of a complex object</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb12">
+    <rdf:first rdf:resource="https://schema.org/Organization"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactNLPArtifact">
+    <rdfs:label xml:lang="en">NLP Artifact</rdfs:label>
+    <rdfs:comment xml:lang="en">result of a process of manipulation of natural language objects</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb11">
+    <rdf:first rdf:resource="https://schema.org/Person"/>
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL276C15">
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Date">
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">Date</rdfs:label>
+    <rdfs:comment xml:lang="en">General class for all literals indicating a data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeIntegrate">
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:label xml:lang="en">integrate</rdfs:label>
+    <rdfs:comment xml:lang="en">merge several objects into a single unit</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:range rdf:resource="https://schema.org/Text"/>
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:comment xml:lang="en">General datatype property, potentially usable for description of all resources.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeProve">
+    <vs:term_status>testing</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:comment xml:lang="en">investigate how an object meets certain requirements; whether a statement (about an object) is true</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:label xml:lang="en">prove</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactOntology">
+    <rdfs:comment xml:lang="en">semantic network of different configuration stages; up to formally specified conceptualizations of a domain</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:label xml:lang="en">Ontology</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wikidata.org/entity/Q1391182">
+    <rdfs:label xml:lang="de">THB - Technische Hochschule Brandenburg</rdfs:label>
+    <rdfs:label xml:lang="en">BUAS - Brandenburg University of Applied Sciences</rdfs:label>
+    <schema:url>http://th-brandenburg.de</schema:url>
+    <rdf:type rdf:resource="https://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Place">
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Place</rdfs:label>
+    <rdfs:comment xml:lang="en">Here used for specifying the locations of conferences and organizations.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResMethConceptualDedAnalysis">
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchMethod"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <schema:url>http://doi.org/10.1007/s11576-007-0064-z</schema:url>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Conceptual Deductive Analysis (Wilde/Hess)</rdfs:label>
+    <rdfs:comment xml:lang="en">Logic-deductive inferencing using semiformal models</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactPolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">basic precepts in a particular field of action</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdfs:label xml:lang="en">Policy</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb10">
+    <rdf:first rdf:resource="https://schema.org/Organization"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/Organization">
+    <rdfs:comment xml:lang="en">Here used for two objectives: (i) to denote the affiliations of authors and other person and (ii) to indicate publishers and conference organizers.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactTermDefinition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">Unambiguously described or explained technical or business term</rdfs:comment>
+    <rdfs:label xml:lang="en">Term Definition</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL387C16">
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/pageStart">
+    <rdfs:label xml:lang="en">start page</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+    <rdfs:domain rdf:resource="https://schema.org/ScholarlyArticle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The page on which the scientific paper starts.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResArtifactITSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">IT System</rdfs:label>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchArtifact"/>
+    <rdfs:comment xml:lang="en">complex object of information technology whose parts interact and form a desing-related and functional whole</rdfs:comment>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="https://bmake.th-brandenburg.de/spv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://bmake.th-brandenburg.de/spv#ResActTypeExtract">
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:comment xml:lang="en">separate defined parts of a complex object and provide them in a suitable form</rdfs:comment>
+    <rdf:type rdf:resource="https://bmake.th-brandenburg.de/spv#ResearchActionType"/>
+    <rdfs:label xml:lang="en">extract</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb1">
+    <rdf:first rdf:resource="https://schema.org/Person"/>
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb9">
+    <rdf:first rdf:resource="https://schema.org/Person"/>
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb13">
+    <rdf:first rdf:resource="https://schema.org/Person"/>
+    <rdf:rest rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL289C16">
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="ub10bL491C16">
+    <owl:unionOf rdf:nodeID="f37b9d86aa24a4087a04277aa83c8544bb11"/>
+  </rdf:Description>
+</rdf:RDF>
+

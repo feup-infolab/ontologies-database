@@ -1,0 +1,324 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:pep="https://w3id.org/pep/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:seas="https://w3id.org/seas/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:saref="https://w3id.org/saref#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="DeviceOntology">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-09-26</dcterms:modified>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-05-10</dcterms:issued>
+    <dcterms:title xml:lang="en">The SEAS Device ontology</dcterms:title>
+    <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+    <rdf:type>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </rdf:type>
+    <vann:preferredNamespacePrefix>seas</vann:preferredNamespacePrefix>
+    <owl:versionInfo>v1.1</owl:versionInfo>
+    <dcterms:creator rdf:resource="http://www.maxime-lefrancois.info/me#"/>
+    <dcterms:description xml:lang="en">The SEAS Device ontology defines `seas:Device` as physical system that are designed to execute one or more procedures that involve the physical world.&#xD;
+&#xD;
+&#xD;
+Figure below provides an overview of the concepts in this ontology:&#xD;
+&#xD;
+[![Overview of the Device ontology](https://w3id.org/seas/device.png)](https://w3id.org/seas/device.png)&#xD;
+&#xD;
+This ontology extends the [Procedure Execution Ontology (PEP)](https://w3id.org/pep/) and defines:&#xD;
+&#xD;
+- `seas:Actuator`s implements `seas:Actuating` procedures and do `seas:Actuation`s;&#xD;
+- `seas:Sensor`s implements `seas:Sensing` procedures and do `seas:Observation`s.&#xD;
+&#xD;
+Sub types of `seas:Actuator`, `seas:Actuating`, and `seas:Actuation`, may constrain the type of the value of the property. For instance ontology `seas:BooleanOntology` defines `seas:BooleanActuator`,  `seas:BooleanActuating`, and  `seas:BooleanActuation`, that constrain the acted upon property to be a `seas:BooleanProperty`. Other ontologies may define many more.&#xD;
+&#xD;
+Similarly, sub types of `seas:Sensor`, `seas:Sensing`, and `seas:Observation`, may constrain the type of the value of the property. For instance ontology `seas:BooleanOntology` defines `seas:BooleanSensor`,  `seas:BooleanSensing`, and  `seas:BooleanObservation`, that constrain the observed property to be a `seas:BooleanProperty`. Other ontologies may define many more.&#xD;
+&#xD;
+&#xD;
+Alignments to the [SSN ontology](http://www.w3.org/ns/ssn/) is proposed in [SSNAlignment](https://w3id.org/seas/SSNAlignment).&#xD;
+&#xD;
+</dcterms:description>
+    <vann:preferredNamespaceUri rdf:resource=""/>
+    <owl:priorVersion rdf:resource="DeviceOntology-1.0"/>
+    <owl:versionIRI rdf:resource="DeviceOntology-1.1"/>
+    <owl:imports rdf:resource="SystemOntology"/>
+    <owl:imports rdf:resource="/pep/"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="Actuator">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Actuating"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/implements"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Actuating"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/implements"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Device"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An actuator is a device that implements some actuating procedure, and has thus an impact on the physical world.</rdfs:comment>
+    <rdfs:label xml:lang="en">Actuator</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Sensor">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Sensing"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/implements"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom>
+        <owl:Class rdf:about="Sensing"/>
+      </owl:someValuesFrom>
+      <owl:onProperty rdf:resource="/pep/implements"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="Device"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A sensor is a device that implements some sensing procedure, and hence uses stimuli from the physical world to produce outputs.</rdfs:comment>
+    <rdfs:label xml:lang="en">Sensor</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Sensing">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="/pep/Procedure"/>
+    <rdfs:comment xml:lang="en">Sensing is a procedure where stimuli from the physical world are used to produce outputs.</rdfs:comment>
+    <rdfs:label xml:lang="en">Sensing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Observation">
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Sensing"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Observation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Sensor"/>
+      <owl:onProperty rdf:resource="/pep/madeBy"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecution"/>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Sensing"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Property"/>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:about="observesProperty"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An observation is the execution of some sensing procedure by some sensor.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="Actuating">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="/pep/Procedure"/>
+    <rdfs:comment xml:lang="en">Actuating is a procedure that has an impact on the physical world.</rdfs:comment>
+    <rdfs:label xml:lang="en">Actuating</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="Device">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecutor"/>
+    <rdfs:comment xml:lang="en">Device is a physical system designed to execute one or more procedures that invove the physical world.&#xD;
+&#xD;
+A `seas:Device` is also a `pep:ProcedureExecutor` from the [Procedure Execution Ontology (PEP)](https://w3id.org/pep/). As such, it may implement procedures, and generate procedure executions.&#xD;
+&#xD;
+If SEAS was to be aligned to the SAREF ontology, `seas:Device` would be more generic than `saref:Device`.&#xD;
+&#xD;
+A `seas:Device` may also be aligned with the SSN `ssn:Device`.</rdfs:comment>
+    <rdfs:label xml:lang="en">Device</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="Actuation">
+    <rdfs:comment xml:lang="en">An actuation is the execution of some actuating procedure by some actuator, and has an impact on the physical world.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="/pep/ProcedureExecution"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:equivalentClass rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Actuating"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Actuator"/>
+      <owl:onProperty rdf:resource="/pep/madeBy"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Actuating"/>
+      <owl:onProperty rdf:resource="/pep/usedProcedure"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Actuation</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <owl:someValuesFrom rdf:resource="Property"/>
+      <owl:onProperty>
+        <owl:ObjectProperty rdf:about="actsOnProperty"/>
+      </owl:onProperty>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="actsOnProperty">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/implements"/>
+      <owl:ObjectProperty rdf:about="actsOnProperty"/>
+    </owl:propertyChainAxiom>
+    <rdfs:range rdf:resource="Property"/>
+    <rdfs:label xml:lang="en">acts on property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/madeBy"/>
+      <owl:ObjectProperty rdf:about="actsOnProperty"/>
+    </owl:propertyChainAxiom>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Actuating"/>
+        <owl:Class rdf:about="Actuator"/>
+        <owl:Class rdf:about="Actuation"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">Links an actuating, actuator, or actuation, to the property it acts on.&#xD;
+&#xD;
+If a acting acts on a property, then any actuator that implements this acting also acts on this property, and any actuation that used this acting also acts on this property. Furthermore, if a actuator acts on a property, then any actuation executed by this actuator also acts on this property:&#xD;
+&#xD;
+```&#xD;
+seas:actsOnProperty &lt; pep:implements o seas:actsOnProperty .&#xD;
+seas:actsOnProperty &lt; pep:usedProcedure o seas:actsOnProperty .&#xD;
+seas:actsOnProperty &lt; pep:madeBy o seas:actsOnProperty .&#xD;
+```</rdfs:comment>
+    <vs:term_status>testing</vs:term_status>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/usedProcedure"/>
+      <owl:ObjectProperty rdf:about="actsOnProperty"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="observes">
+    <rdfs:comment xml:lang="en">Links a sensing, sensor, or observation, to the feature of interest a property of which it observes.&#xD;
+&#xD;
+If `x` observes a property, then it also observes the feature of interest of this property:&#xD;
+&#xD;
+```&#xD;
+seas:observes &lt; seas:observesProperty o seas:isPropertyOf .&#xD;
+```&#xD;
+&#xD;
+If a sensing observes a feature of interest, then any sensor that implements this sensing also observes this feature of interest, and any observation that used this sensing also observes this feature of interest. Furthermore, if a sensor observes a feature of interest, then any observation executed by this sensor also observes this feature of interest:&#xD;
+&#xD;
+```&#xD;
+seas:observes &lt; pep:usedProcedure o seas:observes .&#xD;
+seas:observes &lt; pep:usedProcedure o seas:observes .&#xD;
+seas:observes &lt; pep:madeBy o seas:observes .&#xD;
+```&#xD;
+  &#xD;
+</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/usedProcedure"/>
+      <owl:ObjectProperty rdf:about="observes"/>
+    </owl:propertyChainAxiom>
+    <rdfs:range rdf:resource="FeatureOfInterest"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/madeBy"/>
+      <owl:ObjectProperty rdf:about="observes"/>
+    </owl:propertyChainAxiom>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Sensing"/>
+        <owl:Class rdf:about="Sensor"/>
+        <owl:Class rdf:about="Observation"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <rdfs:label xml:lang="en">observes</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/implements"/>
+      <owl:ObjectProperty rdf:about="observes"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="actsOn">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:range rdf:resource="FeatureOfInterest"/>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Actuating"/>
+        <owl:Class rdf:about="Actuator"/>
+        <owl:Class rdf:about="Actuation"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">Links an actuating, actuator, or actuation, to the feature of interest a property of which it acts on.&#xD;
+&#xD;
+If `x` acts on a property, then it also acts on the feature of interest of this property:&#xD;
+&#xD;
+```&#xD;
+seas:actsOnProperty &lt; seas:actsOn o seas:isPropertyOf .&#xD;
+```&#xD;
+&#xD;
+If a acting acts on a feature of interest, then any actuator that implements this acting also acts on this feature of interest, and any actuation that used this acting also acts on this feature of interest. Furthermore, if a actuator acts on a feature of interest, then any actuation executed by this actuator also acts on this feature of interest:&#xD;
+&#xD;
+```&#xD;
+seas:actsOn &lt; pep:usedProcedure o seas:actsOn .&#xD;
+seas:actsOn &lt; pep:usedProcedure o seas:actsOn .&#xD;
+seas:actsOn &lt; pep:madeBy o seas:actsOn .&#xD;
+```&#xD;
+</rdfs:comment>
+    <rdfs:label xml:lang="en">acts on</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="observesProperty">
+    <rdfs:isDefinedBy rdf:resource="DeviceOntology"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/usedProcedure"/>
+      <owl:ObjectProperty rdf:about="observesProperty"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/implements"/>
+      <owl:ObjectProperty rdf:about="observesProperty"/>
+    </owl:propertyChainAxiom>
+    <rdfs:comment xml:lang="en">Links a sensing, sensor, or observation, to a property it observes.&#xD;
+&#xD;
+If a sensing observes a property, then any sensor that implements this sensing also observes this property, and any observation that used this sensing also observes this property. Furthermore, if a sensor observes a property, then any observation executed by this sensor also observes this property:&#xD;
+&#xD;
+```&#xD;
+seas:observesProperty &lt; pep:implements o seas:observesProperty .&#xD;
+seas:observesProperty &lt; pep:usedProcedure o seas:observesProperty .&#xD;
+seas:observesProperty &lt; pep:madeBy o seas:observesProperty .&#xD;
+```&#xD;
+</rdfs:comment>
+    <rdfs:domain rdf:parseType="Resource">
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class rdf:about="Sensing"/>
+        <owl:Class rdf:about="Sensor"/>
+        <owl:Class rdf:about="Observation"/>
+      </owl:unionOf>
+    </rdfs:domain>
+    <vs:term_status>testing</vs:term_status>
+    <rdfs:label xml:lang="en">observes property</rdfs:label>
+    <rdfs:range rdf:resource="Property"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="/pep/madeBy"/>
+      <owl:ObjectProperty rdf:about="observesProperty"/>
+    </owl:propertyChainAxiom>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+</rdf:RDF>

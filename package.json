@@ -31,7 +31,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "fix": "eslint --fix . --config .eslintrc.json"
+    "fix": "eslint --fix . --config .eslintrc.json",
+    "start" : "node run.js"
   },
   "repository": {
     "type": "git",

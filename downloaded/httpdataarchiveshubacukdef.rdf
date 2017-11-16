@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" 
+>
+
+<rdf:Description rdf:about="http://data.archiveshub.ac.uk/def/">
+	<rdfs:label xml:lang="en">The LOCAH RDF Vocabulary</rdfs:label>
+	<skos:prefLabel xml:lang="en">The LOCAH RDF Vocabulary</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The LOCAH RDF Vocabulary</rdfs:comment>
+	<event:produced_in>
+		<foaf:Project rdf:about="http://data.archiveshub.ac.uk/id/project/locah">
+			<rdfs:label xml:lang="en">LOCAH Project</rdfs:label>
+			<skos:prefLabel xml:lang="en">LOCAH Project</skos:prefLabel>
+			<foaf:name xml:lang="en">LOCAH Project</foaf:name>
+		</foaf:Project>
+	</event:produced_in>
+</rdf:Description>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/FindingAid">
+	<rdfs:label xml:lang="en">Finding Aid</rdfs:label>
+	<skos:prefLabel xml:lang="en">Finding Aid</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A document describing an archival resource.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document" />
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/EAD">
+	<rdfs:label xml:lang="en">EAD Document</rdfs:label>
+	<skos:prefLabel xml:lang="en">EAD Document</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A document conforming to the Encoded Archival Description standard.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Document" />
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/BiographicalHistory">
+	<rdfs:label xml:lang="en">Biographical History</rdfs:label>
+	<skos:prefLabel xml:lang="en">Biographical History</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A narrative or chronology that places archival materials in context by providing information about their creator(s). A finding aid may contain several such narratives or chronologies pertaining to different archival materials and their creators.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart" />
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Repository">
+	<rdfs:label xml:lang="en">Repository</rdfs:label>
+	<skos:prefLabel xml:lang="en">Repository</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An institution or agency responsible for providing access to archival materials.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization" />
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/ArchivalResource">
+	<rdfs:label xml:lang="en">Archival Resource</rdfs:label>
+	<skos:prefLabel xml:lang="en">Archival Resource</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Recorded information in any form or medium, created or received and maintained, by an organization or person(s) in the transaction of business or the conduct of affairs, and maintained for its long-term research value. An archival resource may be an individual item, such as a letter or photograph, or (more commonly) some aggregation of such items managed and described as a unit.</rdfs:comment>
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Level">
+	<rdfs:label xml:lang="en">Level</rdfs:label>
+	<skos:prefLabel xml:lang="en">Level</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An indicator of the part of an archival collection constituted by an archival resource, whether it is the whole collection or a sub-section of it.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Extent">
+	<rdfs:label xml:lang="en">Extent</rdfs:label>
+	<skos:prefLabel xml:lang="en">Extent</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The size of an archival resource.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/SizeOrDuration" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Creation">
+	<rdfs:label xml:lang="en">Creation</rdfs:label>
+	<skos:prefLabel xml:lang="en">Creation</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An event that resulted in the creation or accumulation of an archival resource.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event" />
+	<rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Floruit">
+	<rdfs:label xml:lang="en">Floruit</rdfs:label>
+	<skos:prefLabel xml:lang="en">Floruit</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An event corresponding to the activity of an agent.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event" />
+	<rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Family">
+	<rdfs:label xml:lang="en">Family</rdfs:label>
+	<skos:prefLabel xml:lang="en">Family</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A group of people affiliated by consanguinity, affinity, or co-residence.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group" />
+	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:equivalentClass rdfs:resource="http://purl.org/archival/vocab/arch#Family" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/Function">
+	<rdfs:label xml:lang="en">Function</rdfs:label>
+	<skos:prefLabel xml:lang="en">Function</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A sphere of activity or process.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://data.archiveshub.ac.uk/def/GenreForm">
+	<rdfs:label xml:lang="en">Genre or Form</rdfs:label>
+	<skos:prefLabel xml:lang="en">Genre or Form</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A category of archival material, defined either by style or technique of intellectual content, order of information or object function, or physical characteristics.</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdfs:Class>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/maintenanceAgency">
+	<rdfs:label xml:lang="en">Maintenance Agency</rdfs:label>
+	<skos:prefLabel xml:lang="en">Maintenance Agency</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A repository responsible for the maintenance of the archival finding aid.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/FindingAid" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/Repository" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/isMaintenanceAgencyOf" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isMaintenanceAgencyOf">
+	<rdfs:label xml:lang="en">Is Maintenance Agency Of</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Maintenance Agency Of</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An archival finding aid for which the repository is responsible for the maintenance.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/Repository" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/FindingAid" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/maintenanceAgency" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/encodedAs">
+	<rdfs:label xml:lang="en">Encoded As</rdfs:label>
+	<skos:prefLabel xml:lang="en">Encoded As</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An EAD document that is an encoding of the archival finding aid.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/FindingAid" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/EAD" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/encodingOf" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/encodingOf">
+	<rdfs:label xml:lang="en">Encoding Of</rdfs:label>
+	<skos:prefLabel xml:lang="en">Encoding Of</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An archival finding aid of which the EAD document is an encoding.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/EAD" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/FindingAid" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/encodedAs" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/administers">
+	<rdfs:label xml:lang="en">Administers</rdfs:label>
+	<skos:prefLabel xml:lang="en">Administers</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A resource which the agent manages.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/isAdministeredBy" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isAdministeredBy">
+	<rdfs:label xml:lang="en">Is Administered By</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Administered By</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An agent that manages the resource.</rdfs:comment>
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:range rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/administers" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/providesAccessTo">
+	<rdfs:label xml:lang="en">Provides Access To</rdfs:label>
+	<skos:prefLabel xml:lang="en">Provides Access To</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A resource to which the agent provides access.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/accessProvidedBy" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/accessProvidedBy">
+	<rdfs:label xml:lang="en">Access Provided By</rdfs:label>
+	<skos:prefLabel xml:lang="en">Access Provided By</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An agent that provides access to the resource.</rdfs:comment>
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:range rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/providesAccessTo" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isPublisherOf">
+	<rdfs:label xml:lang="en">Is Publisher Of</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Publisher Of</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A resource which the agent makes available.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:inverseOf rdf:resource="http://purl.org/dc/terms/publisher" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/level">
+	<rdfs:label xml:lang="en">Level</rdfs:label>
+	<skos:prefLabel xml:lang="en">Level</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An indicator of the part of an archival collection constituted by an archival resource.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/Level" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isRepresentedBy">
+	<rdfs:label xml:lang="en">Is Represented By</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Represented By</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A resource which represents the archival resource, such as an image of a text page, a transcription of text, an audio or video clip, or an aggregation of such resources.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isRepresentedBy">
+	<rdfs:label xml:lang="en">Is Represented By</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Represented By</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An archival resourcce represented by the resource.</rdfs:comment>
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<!-- Subproperty of dcterms:creator? dcterms:contributor? -->
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/origination">
+	<rdfs:label xml:lang="en">Origination</rdfs:label>
+	<skos:prefLabel xml:lang="en">Origination</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An agent responsible for the creation or accumulation of the archival resource.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:range rdf:resource="http://purl.org/dc/terms/Agent" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/isOriginationOf" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isOriginationOf">
+	<rdfs:label xml:lang="en">Is Origination Of</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Origination Of</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An archival resource for which the agent is responsible for the creation or accumulation.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+	<rdfs:domain rdf:resource="http://purl.org/dc/terms/Agent" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/origination" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/hasBiographicalHistory">
+	<rdfs:label xml:lang="en">Has Biographical History</rdfs:label>
+	<skos:prefLabel xml:lang="en">Has Biographical History</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A narrative or chronology that places archival materials in context by providing information about their creator(s).</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/BiographicalHistory" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/isBiographicalHistoryFor" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/isBiographicalHistoryFor">
+	<rdfs:label xml:lang="en">Is Biographical History For</rdfs:label>
+	<skos:prefLabel xml:lang="en">Is Biographical History For</skos:prefLabel>
+	<rdfs:comment xml:lang="en">An archival resource that the narrative or chronology places in context by providing information about their creator(s).</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/BiographicalHistory" />
+	<rdfs:range rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<owl:inverseOf rdf:resource="http://data.archiveshub.ac.uk/def/hasBiographicalHistory" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/associatedWith">
+	<rdfs:label xml:lang="en">Associated With</rdfs:label>
+	<skos:prefLabel xml:lang="en">Associated With</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A concept adjudged by a cataloguer to have an association with an archival resource which they consider useful for the purposes of discovering that resource.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/members">
+	<rdfs:label xml:lang="en">Members</rdfs:label>
+	<skos:prefLabel xml:lang="en">Members</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Members</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+
+<!-- Literal -->
+
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/countryCode">
+	<rdfs:label xml:lang="en">Country Code</rdfs:label>
+	<skos:prefLabel xml:lang="en">Country Code</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The ISO 3166-1 code for the country of the repository.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/Repository" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/maintenanceAgencyCode">
+	<rdfs:label xml:lang="en">Maintenance Agency Code</rdfs:label>
+	<skos:prefLabel xml:lang="en">Maintenance Agency Code</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The ISO 15511 code for the repository.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/Repository" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/body">
+	<rdfs:label xml:lang="en">Body</rdfs:label>
+	<skos:prefLabel xml:lang="en">Body</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A literal representation of the content of the document.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://purl.org/ontology/bibo/Document" />
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<!-- Are these subproperties of dcterms:created or not? -->
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString">
+	<rdfs:label xml:lang="en">Date created or accumulated</rdfs:label>
+	<skos:prefLabel xml:lang="en">Date created or accumulated</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The date, represented as a string, of a time interval during which the archival resource was created or accumulated.</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dateCreatedAccumulated">
+	<rdfs:label xml:lang="en">Date created or accumulated</rdfs:label>
+	<skos:prefLabel xml:lang="en">Date created or accumulated</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The date, represented as a typed literal, of a time interval during which the archival resource was created or accumulated.</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedStart">
+	<rdfs:label xml:lang="en">Date created or accumulated (start)</rdfs:label>
+	<skos:prefLabel xml:lang="en">Date created or accumulated (start)</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The start date, represented as a typed literal, of a time interval during which the archival resource was created or accumulated.</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedEnd">
+	<rdfs:label xml:lang="en">Date created or accumulated (end)</rdfs:label>
+	<skos:prefLabel xml:lang="en">Date created or accumulated (end)</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The end date, represented as a typed literal, of a time interval during which the archival resource was created or accumulated.</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dateBirth">
+	<rdfs:label xml:lang="en">Date of Birth</rdfs:label>
+	<skos:prefLabel xml:lang="en">Date of Birth</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The date of birth of the person.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dateDeath">
+	<rdfs:label xml:lang="en">Date of Death</rdfs:label>
+	<skos:prefLabel xml:lang="en">Date of Death</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The date of death of the person.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/extent">
+	<rdfs:label xml:lang="en">Extent</rdfs:label>
+	<skos:prefLabel xml:lang="en">Extent</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The size of the archival resource.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/custodialHistory">
+	<rdfs:label xml:lang="en">Custodial History</rdfs:label>
+	<skos:prefLabel xml:lang="en">Custodial History</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Custodial History</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/acquisitions">
+	<rdfs:label xml:lang="en">Acquisitions</rdfs:label>
+	<skos:prefLabel xml:lang="en">Acquisitions</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Acquisitions</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/scopecontent">
+	<rdfs:label xml:lang="en">Scope and Content</rdfs:label>
+	<skos:prefLabel xml:lang="en">Scope and Content</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Scope and Content</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/appraisal">
+	<rdfs:label xml:lang="en">Appraisal</rdfs:label>
+	<skos:prefLabel xml:lang="en">Appraisal</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Appraisal</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/accruals">
+	<rdfs:label xml:lang="en">Accruals</rdfs:label>
+	<skos:prefLabel xml:lang="en">Accruals</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Accruals</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/accessRestrictions">
+	<rdfs:label xml:lang="en">Access Restrictions</rdfs:label>
+	<skos:prefLabel xml:lang="en">Access Restrictions</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Access Restrictions</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/useRestrictions">
+	<rdfs:label xml:lang="en">Use Restrictions</rdfs:label>
+	<skos:prefLabel xml:lang="en">Use Restrictions</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Use Restrictions</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/physicalTechnicalRequirements">
+	<rdfs:label xml:lang="en">Physical and Technical Requirements</rdfs:label>
+	<skos:prefLabel xml:lang="en">Physical and Technical Requirements</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Physical and Technical Requirements</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/otherFindingAids">
+	<rdfs:label xml:lang="en">Other Finding Aids</rdfs:label>
+	<skos:prefLabel xml:lang="en">Other Finding Aids</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Other Finding Aids</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/locationOfOriginals">
+	<rdfs:label xml:lang="en">Location of Originals</rdfs:label>
+	<skos:prefLabel xml:lang="en">Location of Originals</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Location of Originals</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/alternateFormsAvailable">
+	<rdfs:label xml:lang="en">Alternate Forms Available</rdfs:label>
+	<skos:prefLabel xml:lang="en">Alternate Forms Available</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Alternate Forms Available</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/relatedMaterial">
+	<rdfs:label xml:lang="en">Related Material</rdfs:label>
+	<skos:prefLabel xml:lang="en">Related Material</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Related Material</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/bibliography">
+	<rdfs:label xml:lang="en">Bibliography</rdfs:label>
+	<skos:prefLabel xml:lang="en">Bibliography</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Bibliography</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/note">
+	<rdfs:label xml:lang="en">Note</rdfs:label>
+	<skos:prefLabel xml:lang="en">Note</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Note</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/processing">
+	<rdfs:label xml:lang="en">Processing</rdfs:label>
+	<skos:prefLabel xml:lang="en">Processing</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Processing</rdfs:comment>
+	<rdfs:domain rdf:resource="http://data.archiveshub.ac.uk/def/ArchivalResource" />
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/name">
+	<rdfs:label xml:lang="en">Name</rdfs:label>
+	<skos:prefLabel xml:lang="en">Name</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Name</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/dates">
+	<rdfs:label xml:lang="en">Dates</rdfs:label>
+	<skos:prefLabel xml:lang="en">Dates</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Dates</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/location">
+	<rdfs:label xml:lang="en">Location</rdfs:label>
+	<skos:prefLabel xml:lang="en">Location</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Location</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/other">
+	<rdfs:label xml:lang="en">Other</rdfs:label>
+	<skos:prefLabel xml:lang="en">Other</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Other</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/surname">
+	<rdfs:label xml:lang="en">Surname</rdfs:label>
+	<skos:prefLabel xml:lang="en">Surname</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The surname of a person who is the focus of the concept</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/forename">
+	<rdfs:label xml:lang="en">Forename</rdfs:label>
+	<skos:prefLabel xml:lang="en">Forename</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The forename of a person who is the focus of the concept</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/title">
+	<rdfs:label xml:lang="en">Title</rdfs:label>
+	<skos:prefLabel xml:lang="en">Title</skos:prefLabel>
+	<rdfs:comment xml:lang="en">The title of a person who is the focus of the concept</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/epithet">
+	<rdfs:label xml:lang="en">Epithet</rdfs:label>
+	<skos:prefLabel xml:lang="en">Epithet</skos:prefLabel>
+	<rdfs:comment xml:lang="en">Epithet</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/archbox" >
+	<rdfs:label xml:lang="en">Archival Box</rdfs:label>
+	<skos:prefLabel xml:lang="en">Archival Box</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of archival boxes</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/metre">
+	<rdfs:label xml:lang="en">Metre</rdfs:label>
+	<skos:prefLabel xml:lang="en">Metre</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of metres</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/cubicmetre">
+	<rdfs:label xml:lang="en">Cubic Metre</rdfs:label>
+	<skos:prefLabel xml:lang="en">Cubic Metre</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of cubic metres</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/folder">
+	<rdfs:label xml:lang="en">Folder</rdfs:label>
+	<skos:prefLabel xml:lang="en">Folder</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of folders</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/envelope">
+	<rdfs:label xml:lang="en">Envelope</rdfs:label>
+	<skos:prefLabel xml:lang="en">Envelope</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of envelopes</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/volume">
+	<rdfs:label xml:lang="en">Volume</rdfs:label>
+	<skos:prefLabel xml:lang="en">Volume</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of volumes</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/file">
+	<rdfs:label xml:lang="en">File</rdfs:label>
+	<skos:prefLabel xml:lang="en">File</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of files</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/item">
+	<rdfs:label xml:lang="en">Item</rdfs:label>
+	<skos:prefLabel xml:lang="en">Item</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of items</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/page">
+	<rdfs:label xml:lang="en">Page</rdfs:label>
+	<skos:prefLabel xml:lang="en">Page</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of pages</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://data.archiveshub.ac.uk/def/paper">
+	<rdfs:label xml:lang="en">Paper</rdfs:label>
+	<skos:prefLabel xml:lang="en">Paper</skos:prefLabel>
+	<rdfs:comment xml:lang="en">A number of papers</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
+	<rdfs:isDefinedBy rdf:resource="http://data.archiveshub.ac.uk/def/" />
+	<vs:term_status>unstable</vs:term_status>
+</rdf:Property>
+
+</rdf:RDF>

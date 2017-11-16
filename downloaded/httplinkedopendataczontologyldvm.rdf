@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:ns4="http://purl.org/vocab/vann/"
+	xmlns:ns5="http://creativecommons.org/ns#" >
+  <rdf:Description rdf:about="http://linked.opendata.cz/ontology/ldvm/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary" />
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-15+01:00</dcterms:modified>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+    <dcterms:creator rdf:resource="http://purl.org/klimek#me" />
+    <dcterms:creator rdf:resource="http://helmich.cz/#me" />
+    <dcterms:description xml:lang="en">Vocabulary for Linked Data Visualization Model (LDVM) serves for description and configuration of components and pipelines according to LDVM</dcterms:description>
+    <dcterms:publisher rdf:resource="http://opendata.cz" />
+    <dcterms:title xml:lang="en">Vocabulary for Linked Data Visualization Model</dcterms:title>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-02-15+01:00</dcterms:issued>
+    <ns4:preferredNamespacePrefix>ldvm</ns4:preferredNamespacePrefix>
+    <ns4:preferredNamespaceUri>http://linked.opendata.cz/ontology/ldvm/</ns4:preferredNamespaceUri>
+    <ns5:licence rdf:resource="http://creativecommons.org/licenses/by/4.0" />
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:rlog="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#">
+    <dc:contributor>TODO</dc:contributor>
+    <dc:creator>Sebastian Hellmann</dc:creator>
+    <dc:description xml:lang="en">We built this ontology by looking at log4j version 1.2 and version 2 beta: http://logging.apache.org/log4j/2.x/manual/layouts.html, http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html 
+	Is this complete? No! But it will be sufficient for most use cases, please feel free to extend and adapt the ontology, if you need more. 
+    Loglevels: TRACE, DEBUG, INFO, WARN, ERROR and FATAL
+    
+    Feedback
+	If you'd like to leave feedback, please open an issue on GitHub (https://github.com/NLP2RDF/ontologies/issues) and read the README (https://github.com/NLP2RDF/ontologies#readme) or write an email to the mailing list: http://lists.informatik.uni-leipzig.de/mailman/listinfo/nlp2rdf
+
+	Versioning process is explained here: http://persistence.uni-leipzig.org/nlp2rdf/specification/version.html
+    
+    Changelog:
+    * 1.0.0 initial version
+    * 1.0.1 added Error Code class and errcode property
+    * 1.1.0 change Error Code class to Status Code
+    </dc:description>
+    <dc:publisher>AKSW, University Leipzig</dc:publisher>
+    <dc:rights xml:lang="en">This ontology is licensed under Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0) and CC-BY (http://creativecommons.org/licenses/by/3.0/)</dc:rights>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
+    <dcterms:title xml:lang="en">RLOG - an RDF Logging Ontology</dcterms:title>
+    <vann:changes rdf:resource="https://github.com/NLP2RDF/persistence.uni-leipzig.org/commits/master/ontologies/rlog"/>
+    <vann:preferredNamespacePrefix>rlog</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#</vann:preferredNamespaceUri>
+    <rdfs:comment xml:lang="en">This is a helper ontology for NIF 2.0 to be able to log errors and warning messages.</rdfs:comment>
+    <rdfs:label xml:lang="en">RLOG - an RDF Logging Ontology</rdfs:label>
+    <owl:versionIRI rdf:resource="https://github.com/NLP2RDF/ontologies/blob/master/rlog/rlog.ttl"/>
+    <owl:versionInfo>1.1.0</owl:versionInfo>
+  </owl:Ontology>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#ALL">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The ALL has the lowest possible rank and is intended to turn on all logging.</rdfs:comment>
+    <rdfs:label xml:lang="en">ALL</rdfs:label>
+  </rlog:Level>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#DEBUG">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The DEBUG Level designates fine-grained informational events that are most useful to debug an application.</rdfs:comment>
+    <rdfs:label xml:lang="en">DEBUG</rdfs:label>
+  </rlog:Level>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#ERROR">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The ERROR level designates error events that might still allow the application to continue running.</rdfs:comment>
+    <rdfs:label xml:lang="en">ERROR</rdfs:label>
+  </rlog:Level>
+  <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry">
+    <rdfs:comment xml:lang="en">An entry in a log.</rdfs:comment>
+    <rdfs:label xml:lang="en">Log Entry</rdfs:label>
+  </owl:Class>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#FATAL">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The FATAL level designates very severe error events that will presumably lead the application to abort.</rdfs:comment>
+    <rdfs:label xml:lang="en">FATAL</rdfs:label>
+  </rlog:Level>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#INFO">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The INFO level designates informational messages that highlight the progress of the application at coarse-grained level.</rdfs:comment>
+    <rdfs:label xml:lang="en">INFO</rdfs:label>
+  </rlog:Level>
+  <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level">
+    <rdfs:comment xml:lang="en">look here: http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html </rdfs:comment>
+    <rdfs:label xml:lang="en">Log Level</rdfs:label>
+  </owl:Class>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#OFF">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The OFF has the highest possible rank and is intended to turn off logging.</rdfs:comment>
+    <rdfs:label xml:lang="en">OFF</rdfs:label>
+  </rlog:Level>
+  <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode">
+    <rdfs:comment xml:lang="en">A status code which can occur in an application. Instances of this class must put the name of the status as rdfs:label and describe it with rdfs:comment.</rdfs:comment>
+    <rdfs:label xml:lang="en">Status Code</rdfs:label>
+  </owl:Class>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#TRACE">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The TRACE Level designates finer-grained informational events than the DEBUG.</rdfs:comment>
+    <rdfs:label xml:lang="en">TRACE</rdfs:label>
+  </rlog:Level>
+  <rlog:Level rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#WARN">
+    <rlog:priority rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</rlog:priority>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The WARN level designates potentially harmful situations.</rdfs:comment>
+    <rdfs:label xml:lang="en">WARN</rdfs:label>
+  </rlog:Level>
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#className">
+    <rdfs:comment xml:lang="en">Outputs the fully qualified class name of the caller issuing the logging request.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">class name</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId">
+    <rdfs:comment xml:lang="en">The numerical value of the code, e.g. 200, 404 or 42.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
+    <rdfs:label xml:lang="en">code id</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#date">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">Logging datetime (or just date)</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#hasCode">
+    <rdfs:comment xml:lang="en">Links a log message to a status code.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">has code</rdfs:label>
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#level">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">logLevel</rdfs:label>
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">Logging message</rdfs:label>
+  </owl:DatatypeProperty>
+  <rlog:Entry rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#mylog1">
+    <rlog:className>org.nlp2rdf.core.SPARQLValidator</rlog:className>
+    <rlog:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-06-08T17:00:00Z</rlog:date>
+    <rlog:level rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#INFO"/>
+    <rlog:message xml:lang="en">Example log message, put whatever you want.</rlog:message>
+    <rlog:resource rdf:resource="http://example.org/aResourceRelatedToThisLogEntry"/>
+  </rlog:Entry>
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#priority">
+    <rdfs:comment xml:lang="en">Attention: the ids here can change, they are just used to define an order over the levels!</rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level"/>
+    <rdfs:label xml:lang="en">logLevel</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#resource">
+    <rdfs:comment xml:lang="en">If we mix normal and log output, this can be used to refer to the resource in the RDF the error is connected to. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">an associated resource</rdfs:label>
+  </owl:ObjectProperty>
+</rdf:RDF>

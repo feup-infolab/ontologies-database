@@ -1,0 +1,1170 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+	<!ENTITY cc "http://creativecommons.org/ns#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY resource "http://semanticscience.org/resource/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ns0 "http://protege.stanford.edu/plugins/owl/protege#" >
+]>
+
+
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl"
+	 xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ns0="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl">
+        <owl:versionInfo rdf:datatype="&xsd;string">1.2</owl:versionInfo>
+        <dc:issued rdf:datatype="&xsd;date">2014-05-01</dc:issued>
+        <terms:modified rdf:datatype="&xsd;date">2015-09-24</terms:modified>
+        <dc:contributor rdf:datatype="&xsd;string">Contributors are those that engage in discussions during the development of this ontology (in alphabetical order):
+karl benedict
+luis garnica
+cj grady
+bill hudspeth
+deana pennington
+soren scott
+aimee stewart</dc:contributor>
+        <dc:rights rdf:datatype="&xsd;string">free to use,share,modify. modify with attribution [http://creativecommons.org/licenses/by/3.0/].</dc:rights>
+        <cc:license rdf:datatype="&xsd;anyURI">http://creativecommons.org/licenses/by/3.0/</cc:license>
+        <dc:creator rdf:datatype="&xsd;anyURI">http://cybershare.utep.edu</dc:creator>
+        <vann:preferredNamespaceUri rdf:datatype="&xsd;string">http://ontology.cybershare.utep.edu/ELSEWeb/</vann:preferredNamespaceUri>
+        <dc:description xml:lang="en">The ELSEWeb Data ontology provides simple classes for describing datasets. This project provides foundational support for the ELSEWeb project(http://elseweb.cybershare.utep.edu/).
+website: http://elseweb.cybershare.utep.edu/ontologies
+email: nvillanuevarosales@utep.edu
+</dc:description>
+        <ns0:defaultLanguage>en</ns0:defaultLanguage>
+        <dc:title xml:lang="en">ELSEWeb Data Ontology</dc:title>
+        <dc:creator xml:lang="en">ELSEWeb team</dc:creator>
+        <dc:creator xml:lang="en">Natalia Villanueva-Rosales</dc:creator>
+        <dc:creator xml:lang="en">Nicholas del Rio</dc:creator>
+        <vann:preferredNamespacePrefix xml:lang="en">elseweb-data</vann:preferredNamespacePrefix>
+        <terms:identifier>elseweb-data.owl</terms:identifier>
+        <owl:versionIRI rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/comment -->
+
+    <owl:AnnotationProperty rdf:about="&resource;comment"/>
+    
+
+
+    <!-- http://semanticscience.org/resource/example -->
+
+    <owl:AnnotationProperty rdf:about="&resource;example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#capturesCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#capturesCharacteristic">
+        <rdfs:label>captures characteristic</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Characteristic"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#containsFeatureSet -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#containsFeatureSet">
+        <rdfs:label>contains feature set</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FeatureSet"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Layer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversRegion -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversRegion">
+        <rdfs:label>covers region</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversTimePeriod -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversTimePeriod">
+        <rdfs:label>covers time period</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat">
+        <rdfs:label>enconded in format</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandIdentification -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandIdentification">
+        <rdfs:label>has band identification</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Band"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDataBand -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDataBand">
+        <rdfs:label>has data band</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#RasterDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDate">
+        <rdfs:label>has date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEndDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEndDate">
+        <rdfs:label>has end date</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasGeospatialProjection -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasGeospatialProjection">
+        <rdfs:label>has geospatial projection</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLayer -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLayer">
+        <rdfs:label>has layer</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Layer"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#VectorDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation">
+        <rdfs:label>has manifestation</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasPayloadFormat -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasPayloadFormat">
+        <rdfs:label>has payload format</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ContainerFormat"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasStartDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasStartDate">
+        <rdfs:label>has start date</rdfs:label>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasTheme -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasTheme">
+        <rdfs:label>has theme</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUnits -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUnits">
+        <rdfs:label>has units</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity">
+        <rdfs:label>represents entity</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:range rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandName -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandName">
+        <rdfs:label>has band name</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasCapabilitiesDocumentURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasCapabilitiesDocumentURL">
+        <rdfs:label>has capabilities document url</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCServiceManifestation"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDateTime">
+        <rdfs:label>has date time</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEPSGCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEPSGCode">
+        <rdfs:label>has epsg code</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasFileDownloadURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasFileDownloadURL">
+        <rdfs:label>has file download url</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLandingPageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLandingPageURL">
+        <rdfs:label>has landing page url</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLatitude">
+        <rdfs:label>has latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLeftLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLeftLongitude">
+        <rdfs:label>has left longitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLatitude"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLongitude">
+        <rdfs:label>has longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude">
+        <rdfs:label>has lower latitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLongitude"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasMaximumValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasMaximumValue">
+        <rdfs:label>has maximum value</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasMinimumValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasMinimumValue">
+        <rdfs:label>has minimum value</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasNoDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasNoDataValue">
+        <rdfs:label>has no data value</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasResolution -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasResolution">
+        <rdfs:label>has resolution</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude">
+        <rdfs:label>has right longitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLatitude"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude">
+        <rdfs:label>has upper latitude</rdfs:label>
+        <rdfs:domain rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+        <rdfs:subPropertyOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLongitude"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Band -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Band">
+        <rdfs:label rdf:datatype="&xsd;string">band</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandIdentification"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A band is one component of a multi-characteristic dataset.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">A satellite image composed of more than one measured value at different wavelengths of the electromagnetic spectrum for each pixel in the image.</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification">
+        <rdfs:label rdf:datatype="&xsd;string">band identification</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandName"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <resource:comment rdf:datatype="&xsd;string">An identifier used to identify a specific band.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion">
+        <rdfs:label rdf:datatype="&xsd;string">boxed geographic region</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLeftLongitude"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude"/>
+                        <owl:someValuesFrom rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A geographic region that is specified by left longitude, lower latitude, right longitude and upper latitude.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">The region specified by the bounds (N,E,S,W): 49.39, -78.75, 32.25, -120.24</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Characteristic -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Characteristic">
+        <rdfs:label rdf:datatype="&xsd;string">characteristic</rdfs:label>
+        <resource:comment rdf:datatype="&xsd;string">A characteristic, following OBOE guidelines,  represents a property of an entity that can be measured. </resource:comment>
+        <resource:example rdf:datatype="&xsd;string">Temperature of air.</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ComplexDerivedUnit -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ComplexDerivedUnit">
+        <rdfs:label rdf:datatype="&xsd;string">complexed derived unit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A unit that is calculated from defined operations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ContainerFormat -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ContainerFormat">
+        <rdfs:label rdf:datatype="&xsd;string">container format</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasPayloadFormat"/>
+                <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes how the data and metadata are included in a file.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand">
+        <rdfs:label rdf:datatype="&xsd;string">data band</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#capturesCharacteristic"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Characteristic"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUnits"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasMaximumValue"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasMinimumValue"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasNoDataValue"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasResolution"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Band"/>
+        <resource:example rdf:datatype="&xsd;string">A databand can capture air temperature in Farenheit degrees with a resolution of 250m.</resource:example>
+        <resource:comment rdf:datatype="&xsd;string">A databand will contain data about a specific characteristic of an entity. It uses a specific unit and resolution.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">dataset manifestation</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A dataset manifestation, that follows the description of a DCAT Distribution, provides the information to retrieve a dataset, including the fomat, endpoint, etc.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">A donwnloadable RGIS WCS data set.</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date">
+        <rdfs:label rdf:datatype="&xsd;string">date</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDateTime"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Instant"/>
+        <resource:comment rdf:datatype="&xsd;string">A period of time with the same start and end time.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange">
+        <rdfs:label rdf:datatype="&xsd;string">date range</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEndDate"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasStartDate"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Duration"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Time period defined by an start and end date.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Duration -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Duration">
+        <rdfs:label rdf:datatype="&xsd;string">duration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Time period defined by a start and end time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity">
+        <rdfs:label rdf:datatype="&xsd;string">entity</rdfs:label>
+        <resource:example rdf:datatype="&xsd;string">Air</resource:example>
+        <rdfs:comment rdf:datatype="&xsd;string">Following the definition of OBOE and SIO, an entity denotes a concrete or conceptual object that has been observed (e.g., a tree, a community, an ecological process). </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FeatureSet -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FeatureSet">
+        <rdfs:label rdf:datatype="&xsd;string">feature set</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Entity"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A set of geometric features or characteristics observed from an entity. This class is equivalent to the notion of an ArcGIS feature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">file manifestation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLandingPageURL"/>
+                        <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasFileDownloadURL"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A file manifestation provides the information required to retrieve a file over the web, including the format and the URL where the file is available.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format">
+        <rdfs:label rdf:datatype="&xsd;string">format</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">The arrangement of data for computer input or output.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">tiff</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion">
+        <rdfs:label rdf:datatype="&xsd;string">geographic region</rdfs:label>
+        <resource:comment rdf:datatype="&xsd;string">A geographic region, aligned to DCAT location, is a spatial region or named place.</resource:comment>
+        <resource:example rdf:datatype="&xsd;string">America</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset">
+        <rdfs:label rdf:datatype="&xsd;string">geospatial dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversRegion"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasTheme"/>
+                        <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Theme"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversTimePeriod"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasGeospatialProjection"/>
+                        <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A geospatial dataset contains data that covers a specified geographic region and specifies how a measured characteristic varies across that region, for a specific date range. It has a specific manifestation, a theme, and a geospatial projection</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Instant -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Instant">
+        <rdfs:label rdf:datatype="&xsd;string">instant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod"/>
+        <resource:comment rdf:datatype="&xsd;string">A time period with the same start and end time.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Layer -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Layer">
+        <rdfs:label rdf:datatype="&xsd;string">layer</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#containsFeatureSet"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FeatureSet"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">A layer is a set of environmental information quantifying the value of a single characteristic through space, used to compose a climate scenario to generate a model.</rdfs:comment>
+        <resource:example>A dataset that quanifies temperature at many spatial locations</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#MetadataFormat -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#MetadataFormat">
+        <rdfs:label rdf:datatype="&xsd;string">metadata format</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes the format of the metadata included in a file.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">XML, RDF.</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#NamedGeographicRegion -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#NamedGeographicRegion">
+        <rdfs:label rdf:datatype="&xsd;string">named geographic region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeographicRegion"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A geographic region specified by a name.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">North America, Great Lakes, Indonesia</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCResponseManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCResponseManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">ogc response manifestation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat"/>
+                <owl:onClass rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ContainerFormat"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Provides information about a file that is returned from a web service using OGC standards, including the container format.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCServiceManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCServiceManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">OGC  service manifestation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasCapabilitiesDocumentURL"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ServiceManifestation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Provides information about a service that can be executed over the web  using OGC standards, including the URL where the service is located.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat">
+        <rdfs:label rdf:datatype="&xsd;string">payload format</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Format"/>
+        <resource:comment rdf:datatype="&xsd;string">Describes the format of a payload.</resource:comment>
+        <resource:example rdf:datatype="&xsd;string">tiff, hdf5</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection">
+        <rdfs:label rdf:datatype="&xsd;string">projection</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEPSGCode"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string">Processing of datasets, where a set of rules generated by a model are applied onto a climate scenario of related environmental layers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#RasterDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#RasterDataset">
+        <rdfs:label rdf:datatype="&xsd;string">raster dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDataBand"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DataBand"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A raster dataset is a geospatial dataset that organizes information as the value of a single characteristic at every location in space, such as temperature. Multiple raster datasets can be combined into a single dataset as bands of information.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">satellite imagery, aerial photographs.</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ServiceManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ServiceManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">service manifestation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DatasetManifestation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A service manifestation provides the information required to execute a service over the web. In particular, a service that will return a dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Theme -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Theme">
+        <rdfs:label rdf:datatype="&xsd;string">theme</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Metadata describing the information captured in a dataset.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">vegetation</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#TimePeriod">
+        <rdfs:label rdf:datatype="&xsd;string">time period</rdfs:label>
+        <resource:comment rdf:datatype="&xsd;string">Following DCAT&apos;s descriptions, a time period is a temporal period that the dataset covers.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Unit">
+        <rdfs:label rdf:datatype="&xsd;string">unit</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">A subclass of SIO&apos;s class unit of measurement. A unit is a a definite magnitude of a physical quantity.</rdfs:comment>
+        <resource:example rdf:datatype="&xsd;string">Meter</resource:example>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#VectorDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#VectorDataset">
+        <rdfs:label rdf:datatype="&xsd;string">vector dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Layer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeospatialDataset"/>
+        <resource:comment rdf:datatype="&xsd;string">A dataset that represents values using points, lines and polygons.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSDataset">
+        <rdfs:label rdf:datatype="&xsd;string">wcs raster dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#RasterDataset"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A WCS raster dataset is composed by all possible datasets provided by a WCS service manifestation depending on the parameters set in a service call. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">wcs service manifestation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCServiceManifestation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A WCS service, located in a specific URL, that will return a dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSResponse -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSResponse">
+        <rdfs:label rdf:datatype="&xsd;string">wcs raster response</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSResponseManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#RasterDataset"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A specific raster dataset returned by calling a WCS service with specific parameters.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSResponseManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSResponseManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">wcs response manifestation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCResponseManifestation"/>
+        <resource:example rdf:datatype="&xsd;string">A WCS service, in a described URL, will return a MODIS dataset encoded in a specific format.</resource:example>
+        <rdfs:comment rdf:datatype="&xsd;string">Provides information about the file that is returned by a Web coverage service, including the format.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSDataset">
+        <rdfs:label rdf:datatype="&xsd;string">wfs vector dataset</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#VectorDataset"/>
+        <resource:comment rdf:datatype="&xsd;string">A WFS vector dataset is composed by all possible datasets provided by a WFS service manifestation depending on the parameters set in a service call. </resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">wfs service manifestation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCServiceManifestation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A WCS service, located in a specific URL, that will return a dataset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSResponse -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSResponse">
+        <rdfs:label rdf:datatype="&xsd;string">wfs vector response</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation"/>
+                <owl:someValuesFrom rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSResponseManifestation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#VectorDataset"/>
+        <resource:comment rdf:datatype="&xsd;string">A specific vector dataset returned by calling a WFS service with specific parameters.</resource:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSResponseManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WFSResponseManifestation">
+        <rdfs:label rdf:datatype="&xsd;string">wfs response manifestation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#OGCResponseManifestation"/>
+        <resource:example rdf:datatype="&xsd;string">A MODIS dataset, encoded in a specific format, and returned by a WFS service.</resource:example>
+        <rdfs:comment rdf:datatype="&xsd;string">Provides information about the file that is returned by a Web coverage service, including the format.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeoTIFF -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeoTIFF">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#esri-grid -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#esri-grid">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#esri-shapefile -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#esri-shapefile">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#tiff-container -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#tiff-container">
+        <hasPayloadFormat rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/image/gif -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/gif">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/image/jpeg -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/jpeg">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/image/png -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/png">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/image/tiff -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/tiff">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/image/vnd.wap.wbmp -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/vnd.wap.wbmp">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/text/csv -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/text/csv">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/text/xml -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/text/xml">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#MetadataFormat"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

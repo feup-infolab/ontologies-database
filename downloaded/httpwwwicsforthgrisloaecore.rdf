@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY oae "http://www.ics.forth.gr/isl/oae/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY onc "http://www.ics.forth.gr/isl/oncm/core#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.ics.forth.gr/isl/oae/core#"
+     xml:base="http://www.ics.forth.gr/isl/oae/core"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:onc="http://www.ics.forth.gr/isl/oncm/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oae="http://www.ics.forth.gr/isl/oae/core#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.ics.forth.gr/isl/oae/core">
+        <rdfs:label xml:lang="en">Open NEE Model</rdfs:label>
+        <owl:versionInfo>1.0</owl:versionInfo>
+		<owl:versionIRI rdf:resource="http://www.ics.forth.gr/isl/oae/core"/>
+		<terms:modified rdf:datatype="&xsd;date">2015-04-03</terms:modified>
+        <terms:issued rdf:datatype="&xsd;date">2015-02-04</terms:issued>
+		<terms:rights>Copyright © FORTH ICS</terms:rights>
+		<terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+		<terms:publisher rdf:resource="http://www.ics.forth.gr/isl"/>
+        <terms:title xml:lang="en">Open NEE Model (Open Annotation Extension)</terms:title>
+        <rdfs:comment xml:lang="en">The Open NEE Model defines an extension of the Open Annotation Data Model (http://www.openannotation.org/spec/core) that allows describing in RDF the result of a Named Entity Extraction (NEE) process, enabling thereby an application to run advanced (SPARQL) queries over the annotated data. The model also exploits the Open NEE Configuration Model (http://www.ics.forth.gr/isl/oncm) for relating the output of a NEE process with an applied configuration (serving provenance information to the output of the entire NEE process).</rdfs:comment>
+        <terms:description xml:lang="en">The Open NEE Model defines an extension of the Open Annotation Data Model (http://www.openannotation.org/spec/core) that allows describing in RDF the result of a Named Entity Extraction (NEE) process, enabling thereby an application to run advanced (SPARQL) queries over the annotated data. The model also exploits the Open NEE Configuration Model (http://www.ics.forth.gr/isl/oncm) for relating the output of a NEE process with an applied configuration (serving provenance information to the output of the entire NEE process).</terms:description>
+        <terms:creator rdf:resource="http://users.ics.forth.gr/~fafalios"/>
+		<terms:contributor rdf:resource="http://users.ics.forth.gr/~fafalios"/>
+        <terms:contributor rdf:resource="http://users.ics.forth.gr/~tzitzik"/>
+        <rdfs:seeAlso rdf:resource="http://users.ics.forth.gr/~fafalios/files/pubs/fafalios_2015_ijait.pdf"/>
+        <owl:imports rdf:resource="http://www.ics.forth.gr/isl/oncm/core"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/oa#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="&oae;belongsTo">
+        <rdfs:label xml:lang="en">belongs to</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to a category.</terms:description>
+        <rdfs:domain rdf:resource="&oae;Entity"/>
+        <rdfs:range rdf:resource="&onc;Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#hasMatchedURI -->
+
+    <owl:ObjectProperty rdf:about="&oae;hasMatchedURI">
+        <rdfs:label xml:lang="en">has matched URI</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to a URI.</terms:description>
+        <rdfs:domain rdf:resource="&oae;Entity"/>
+        <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#usingConfiguration -->
+
+    <owl:ObjectProperty rdf:about="&oae;usingConfiguration">
+        <rdfs:label xml:lang="en">using configuration</rdfs:label>
+        <terms:description xml:lang="en">Relates the annotation process to a configuration.</terms:description>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+		<rdfs:range rdf:resource="&onc;Configuration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#confidence -->
+
+    <owl:DatatypeProperty rdf:about="&oae;confidence">
+        <rdfs:label xml:lang="en">confidence</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to a literal representing the confidence of an ambiguous entity.</terms:description>
+        <rdfs:domain rdf:resource="&oae;Entity"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#detectedAs -->
+
+    <owl:DatatypeProperty rdf:about="&oae;detectedAs">
+        <rdfs:label xml:lang="en">detected as</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to a literal representing the string in the document that was detected and considered an entity.</terms:description>
+        <rdfs:domain rdf:resource="&oae;Entity"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#position -->
+
+    <owl:DatatypeProperty rdf:about="&oae;position">
+        <rdfs:label xml:lang="en">position</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to one or more literals representing the positions in the document in which the entity name was detected.</terms:description>
+        <rdfs:domain rdf:resource="&oae;Entity"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#regardsEntityName -->
+
+    <owl:DatatypeProperty rdf:about="&oae;regardsEntityName">
+        <rdfs:label xml:lang="en">regards entity name</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to a literal representing the actual entity name that exists in a gazetteer of the NEE system.</terms:description>
+        <rdfs:domain rdf:resource="&oae;Entity"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#score -->
+
+    <owl:DatatypeProperty rdf:about="&oae;score">
+        <rdfs:label xml:lang="en">score</rdfs:label>
+        <terms:description xml:lang="en">Relates an entity to a literal (or a URI to a literal) representing the score of an entity (or of URI).</terms:description>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#Entity -->
+
+    <owl:Class rdf:about="&oae;Entity">
+        <rdfs:label xml:lang="en">entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/oa#SemanticTag"/>
+        <terms:description xml:lang="en">Represents an identified entity.</terms:description>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ics.forth.gr/isl/oae/core#NEE -->
+
+    <owl:NamedIndividual rdf:about="&oae;NEE">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Motivation"/>
+        <rdfs:label xml:lang="en">Named Entity Extraction (NEE)</rdfs:label>
+        <terms:description xml:lang="en">Represents the result of the Named Entity Extraction (NEE) process.</terms:description>
+        <skos:prefLabel xml:lang="en">Result of Named Entity Extraction (NEE) process.</skos:prefLabel>
+        <skos:broader rdf:resource="http://www.w3.org/ns/oa#tagging"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

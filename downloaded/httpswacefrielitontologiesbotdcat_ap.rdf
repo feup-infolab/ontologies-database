@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+
+<!-- Vocabulary -->
+  
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dc:title xml:lang="en">BotDCAT-AP - Data Catalogue vocabulary Application Profile for chatbots</dc:title>
+    <dc:description xml:lang="en">A vocabulary to describe data sources in a way they can be easily reused and accessed by chatbots.</dc:description>
+    <rdfs:comment xml:lang="en">A vocabulary to describe data sources in a way they can be easily reused and accessed by chatbots.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-01</dc:date>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-01</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-01</dc:modified>
+    <vann:preferredNamespaceUri>http://swa.cefriel.it/ontologies/botdcat-ap#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>bot</vann:preferredNamespacePrefix>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dc:rights>Copyright © 2017 Cefriel</dc:rights>
+    <dc:creator>Irene Celino</dc:creator>
+    <dc:creator>Paolo Cappello</dc:creator>
+    <dc:creator>Marco Comerio</dc:creator>
+    <dc:contributor>Marco Comerio</dc:contributor>
+    <dc:contributor>Irene Celino</dc:contributor>
+    <dc:contributor>Paolo Cappello</dc:contributor>
+    <dc:publisher rdf:resource="http://www.cefriel.com"/>
+    <owl:imports rdf:resource="https://joinup.ec.europa.eu/site/core_vocabularies/registry/dcat-ap/DCAT-AP_v1.1.rdf"/>
+    <owl:imports rdf:resource="https://www.w3.org/ns/dcat"/>
+  </rdf:Description>
+  
+<!-- Classes -->
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#Intent">
+    <rdfs:label xml:lang="en">Intent</rdfs:label>
+    <vann:usageNote xml:lang="en">Mandatory class. An Intent exposed by the Dataset.</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment xml:lang="en">Mandatory class. An Intent exposed by the Dataset.</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#EntitiesCatalog">
+    <vann:usageNote xml:lang="en">Optional class. Represents a list of all the entities that can be associated to an Intent.</vann:usageNote>
+    <rdfs:label xml:lang="en">Entities Catalog</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment xml:lang="en">Optional class. Represents a list of all the entities that can be associated to an Intent.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+  </rdf:Description>
+
+<!-- Object Properties -->
+  
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasEntityConcept">
+    <rdfs:label xml:lang="en">has Entity Concept</rdfs:label>
+    <rdfs:comment xml:lang="en">Optional property. Cardinality [0..n]. This property refers to an entity specified as a Concept. Note that only one of bot:hasEntity, bot:hasEntityConcept and bot:hasEntityCatalog property for each entity must be used.</rdfs:comment>
+    <vann:usageNote xml:lang="en">Optional property. Cardinality [0..n]. This property refers to an entity specified as a Concept. Note that only one of bot:hasEntity, bot:hasEntityConcept and bot:hasEntityCatalog property for each entity must be used.</vann:usageNote>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#EntitiesCatalog"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasMethodURL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:comment xml:lang="en">Optional property. Cardinality [0..1]. This property contains the access URL provided by an API service handling the Intent.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#Intent"/>
+    <rdfs:label xml:lang="en">has Method URL</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <vann:usageNote xml:lang="en">Optional property. Cardinality [0..1]. This property contains the access URL provided by an API service handling the Intent.</vann:usageNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasEntityDataset">
+    <rdfs:comment xml:lang="en">Optional property. Cardinality [0..n]. This property refers to a Dataset containing all the istances of an entity. Note that only one of bot:hasEntity, bot:hasEntityConcept and bot:hasEntityCatalog property for each entity must be used.</rdfs:comment>
+    <rdfs:label xml:lang="en">has Entity Dataset</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#EntitiesCatalog"/>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <vann:usageNote xml:lang="en">Optional property. Cardinality [0..n]. This property refers to a Dataset containing all the istances of an entity. Note that only one of bot:hasEntity, bot:hasEntityConcept and bot:hasEntityCatalog property for each entity must be used.</vann:usageNote>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasIntent">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <rdfs:label xml:lang="en">has Intent</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <vann:usageNote xml:lang="en">Mandatory property. Cardinality [1..n]. This property refers to an Intent handled by the Dataset.</vann:usageNote>
+    <rdfs:comment xml:lang="en">Mandatory property. Cardinality [1..n]. This property refers to an Intent handled by the Dataset.</rdfs:comment>
+    <rdfs:range rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#Intent"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasEntitiesList">
+    <rdfs:comment xml:lang="en">Optional property. Cardinality [0..n]. This property refers to an Entities Catalog connected to an Intent.</rdfs:comment>
+    <vann:usageNote xml:lang="en">Optional property. Cardinality [0..n]. This property refers to an Entities Catalog describing the entities connected to an Intent.</vann:usageNote>
+    <rdfs:range rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#EntitiesCatalog"/>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#Intent"/>
+    <rdfs:label xml:lang="en">has Entities List</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasAssetURL">
+    <rdfs:comment xml:lang="en">Optional property. Cardinality [0..1]. This property contains the access URL provided by a SPARQL endpoint handling the Intent.</rdfs:comment>
+    <vann:usageNote xml:lang="en">Optional property. Cardinality [0..1]. This property contains the access URL provided by a SPARQL endpoint handling the Intent.</vann:usageNote>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#Intent"/>
+    <rdfs:label xml:lang="en">has Asset URL</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasEntity">
+    <rdfs:comment xml:lang="en">Optional property. Cardinality [0..n]. This property refers to an entity. Note that only one of bot:hasEntity, bot:hasEntityConcept and bot:hasEntityCatalog property for each entity must be used.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has Entity</rdfs:label>
+    <vann:usageNote xml:lang="en">Optional property. Cardinality [0..n]. This property refers to an entity. Note that only one of bot:hasEntity, bot:hasEntityConcept and bot:hasEntityCatalog property for each entity must be used.</vann:usageNote>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#EntitiesCatalog"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://swa.cefriel.it/ontologies/botdcat-ap#hasDocumentation">
+    <rdfs:label xml:lang="en">has Documentation</rdfs:label>
+    <rdfs:comment xml:lang="en">Recommended property. Cardinality [0..1]. This property refers to a Resource containg information about an Intent.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <vann:usageNote xml:lang="en">Recommended property. Cardinality [0..1]. This property refers to a Resource containg information about an Intent.</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap"/>
+    <rdfs:domain rdf:resource="http://swa.cefriel.it/ontologies/botdcat-ap#Intent"/>
+  </rdf:Description>
+
+</rdf:RDF>
+
