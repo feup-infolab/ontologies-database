@@ -26,7 +26,7 @@ cd ontologies-database
 Then, run the loading script:
 
 ````bash
-./load_ontologies.sh ontologies_list.txt
+./load_ontologies_into_virtuoso.sh ontologies_list.txt
 ````
 
 Your Virtuoso instance will then be loaded with all the ontologies in the `downloaded/` folder, each in its own graph.
