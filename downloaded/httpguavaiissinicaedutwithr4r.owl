@@ -419,6 +419,6 @@ URI: http://guava.iis.sinica.edu.tw/r4r/inReusingContext </pre>
 
 <!--<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">  <Work rdf:about="">    <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/tw/" />    <dc:title>guava.iis.sinica.edu.tw</dc:title>    <dc:date>2007</dc:date>    <dc:description>lab 603/604 IIS, Academia Sinica</dc:description>    <dc:creator>      <Agent>        <dc:title>[作者]</dc:title>      </Agent>    </dc:creator>    <dc:rights>      <Agent>        <dc:title>[著作權持有人]</dc:title>      </Agent>    </dc:rights>  </Work>  <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/tw/">    <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>    <permits rdf:resource="http://web.resource.org/cc/Distribution"/>    <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>    <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />    <requires rdf:resource="http://web.resource.org/cc/Notice"/>    <requires rdf:resource="http://web.resource.org/cc/Attribution"/>    <requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>  </License></rdf:RDF>-->
 
-<div class="no"><img src="/lib/exe/indexer.php?id=r4r&amp;1510847057" width="1" height="1" alt=""  /></div>
+<div class="no"><img src="/lib/exe/indexer.php?id=r4r&amp;1510852301" width="1" height="1" alt=""  /></div>
 </body>
 </html>

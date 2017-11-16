@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/under-review">
+    <rdfs:label xml:lang="en">under review</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a document that has been received from the author(s) by an editor or a publisher for potential publication, and then has been sent to independent reviewers for their comments as to its suitability for publication, prior to receipt of such reviews.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/published">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of material (for example a document or a dataset) that has been published, i.e. made available for people to access, read or use, either freely or for a purchase price or an access fee.</rdfs:comment>
+    <rdfs:label xml:lang="en">published</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/final-draft">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a pre-publication work (for example a document or a dataset) when in the authors' opinion it has been brought to a stage of development that renders it suitable for publication.</rdfs:comment>
+    <rdfs:label xml:lang="en">final draft</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/APC-paid">
+    <rdfs:label xml:lang="en">APC paid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of an article for which the article processing charge has been paid to the publisher by the author or his/her institution.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/ArticleProcessingChargeStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/APC-partially-waived">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/ArticleProcessingChargeStatus"/>
+    <rdfs:comment xml:lang="en">The status of an article for which payment of the article processing charge has been partially waived by the publisher.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">APC partially waived</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/gratis-open-access">
+    <rdfs:comment xml:lang="en">The status of a published work which is free to read on-line, in contrast to subscription-access works, but to which licensing restrictions apply, limiting the possibilities for downloading, text mining, modification, re-publication or re-use of the published work.  The term Gratis Open Access thus signifies absence of a price barrier to view.  While both imply ‘free’ (a potentially ambiguous word), Gratis Open Access equates to ‘free as in beer’ while Libre Open Access (q.v.) equates to ‘free as in speech’.  Gratis Open Access is thus a necessary but not a sufficient condition for true Libre Open Access.   Many ‘open access’ publications by commercial scholarly publishers are only Gratis Open Access, while almost all publications by ‘pure’ Open Access scholarly publishers are Libre Open Access. [See also: pso:open-access, pso:libre-open-access, pso:gold-open-access, pso:green-open-access, pso:embargoed and pso:subscription-access.]</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">gratis open access</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/initial-draft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a pre-publication work (for example a document or a dataset) when in its initial stage of development.</rdfs:comment>
+    <rdfs:label xml:lang="en">initial draft</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/closed-access">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">closed access</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work (typically a private or secret paper or a confidential dataset) that is typically held unpublished in a 'dark' archive whose existence is unknown by the wider world, and that is only available to the owner or copyright holder of the asset.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/isLostAsConsequenceOf">
+    <rdfs:comment xml:lang="en">The property relating a particular publishing status to the event that causes its loss.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is lost as consequence of</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pso/StatusInTime"/>
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withinContext"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18858697f06645709b384aacca67036c">
+    <rdf:rest rdf:nodeID="N6fcddd6bfb5f43b28dee2b0e778f550a"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/StatusInTime">
+    <rdfs:subClassOf rdf:nodeID="N90ad3c752a63433c947bf6429a3df233"/>
+    <rdfs:label xml:lang="en">status in time</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Na4ebe6291b93414d94e56b5944897105"/>
+    <rdfs:subClassOf rdf:nodeID="N49bbfa19e23f4dd6b0c23cc9b7b5ab51"/>
+    <dc:description xml:lang="en">A status in time describes always:
+- a particular status S
+- a particular document D holding S
+- a particular time interval T in which D holds S
+- a particular event that causes the acquisition of S by D</dc:description>
+    <rdfs:subClassOf rdf:nodeID="N30f5666747ec4466be9c1dd25d8594ff"/>
+    <rdfs:comment xml:lang="en">A particular situation that describe a state or condition some documents may have at a particular time as consequence of one or more events.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N4a11a5cc8bdf4d0d9fafc5f785e1d53b"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/republished">
+    <rdfs:label xml:lang="en">republished</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a publication (for example a book) that has been republished in a different edition or in translation, or of a work (for example a journal article or a poem) that is republished as part of a collection or an anthology, or of material (for example a figure from an existing publication) that is republished as part of a quite different publication.  Where the publisher of the new work is different from the original publisher, such republication typically includes an acknowledgement of the source and copyright of the original material, and is undertaken after obtaining permission of the original copyright holder.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/subscription-access">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a published work, typically an article in a journal issue, that is not available to read without payment of an article access fee or a journal subscription fee for that publication.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">subscription access</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4ebe6291b93414d94e56b5944897105">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pso/withStatus"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pso/Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">
+    <rdfs:label xml:lang="en">at time</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment xml:lang="en">A time interval during which a status is held by a document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/resultsInLosing">
+    <rdfs:comment xml:lang="en">The property relating an event to the consequential loss of a particular publishing status.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+    <rdfs:label xml:lang="en">results in losing</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pso/isLostAsConsequenceOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30f5666747ec4466be9c1dd25d8594ff">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Nc1a1d97d0e2e44cf97aa8ae872d5d639"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a11a5cc8bdf4d0d9fafc5f785e1d53b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pso/isAcquiredAsConsequenceOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/isAcquiredAsConsequenceOf">
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event"/>
+    <rdfs:label xml:lang="en">is acquired as consequence of</rdfs:label>
+    <rdfs:comment xml:lang="en">The property relating a particular publishing status to the event that causes its acquisition.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pso/StatusInTime"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withinContext"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/catalogued">
+    <rdfs:label xml:lang="en">catalogued</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) concerning which metadata has been stored in a physical or electronic catalogue.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/proof">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">proof</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pso/corrected"/>
+    <rdfs:comment xml:lang="en">The status of a pre-publication document late in the publication process, once it has been accepted for publication by a publisher, after the inclusion of any author corrections required by the editor following peer-review, following copy editing and formatting to bring the manuscript into the house style, and prior to final checking by the editor, proof-reader and author to detect and eliminate any errors prior to publication.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso">
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-02-01</dc:date>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+    <dc:description rdf:resource="http://sempublishing.svn.sourceforge.net/svnroot/sempublishing/PSO/pso.png"/>
+    <owl:imports rdf:resource="http://www.essepuntato.it/2012/04/tvc"/>
+    <dc:description xml:lang="en">PSO, the Publishing Status Ontology, is an ontology written in OWL 2 DL for characterizing the publication status of a document or other publication entity at each of the various stages in the publishing process (e.g.  draft, submitted, under review, rejected, accepted for publication, proof, published, Version of Record, catalogued, archived).
+
+Because it is based on the Time-indexed Value in Context ontology pattern (http://www.essepuntato.it/2012/04/tvc), it is easy to extends the set of specified statuses, simply by adding new individual to the class pso:Status or its sub-class pso:PublicationStatus.
+</dc:description>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+    <rdfs:comment xml:lang="en">PSO, the Publishing Status Ontology, is an ontology for describing the status held by a bibliographic document or other publication entity at each of the various stages in the publishing process.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title xml:lang="en">PSO, the Publishing Status Ontology</dc:title>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.7.1</owl:versionInfo>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl"/>
+    <owl:imports rdf:resource="http://purl.org/swan/2.0/foaf-essential/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/revised">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">revised</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of s work (for example a document or a dataset) that has been altered or improved, typically by the original author.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/isStatusHeldBy">
+    <rdfs:domain rdf:resource="http://purl.org/spar/pso/StatusInTime"/>
+    <rdfs:label xml:lang="en">is status held by</rdfs:label>
+    <rdfs:comment xml:lang="en">A property relating a status held at a specific time to the document, dataset or other thing holding that status.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pso/holdsStatusInTime"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N90ad3c752a63433c947bf6429a3df233">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pso/isStatusHeldBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/archived">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">archived</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) that has been saved for long-term preservation in a physical or electronic archive.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/resultsInAcquiring">
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">The property relating an event to the consequential acquisition of a particular publishing status.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pso/isAcquiredAsConsequenceOf"/>
+    <rdfs:label xml:lang="en">results in acquiring</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/submitted">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">submitted</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) that has been submitted for publication by the author to a publisher or a data repository, prior to its being accepted or rejected.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/rejected-for-publication">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of material (for example a document or a dataset) after it has been rejected for publication by a publisher or data repository.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">rejected for publication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/version-of-record">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">version of record</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The final version of a document that has been formally published as a peer-reviewed journal article, citable via a permanent identifier, and forming an abiding component of the scholarly record.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">
+    <rdfs:label xml:lang="en">time interval</rdfs:label>
+    <rdfs:comment xml:lang="en">Two (starting and ending) points in time that define a particular period of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/Agent">
+    <rdfs:comment xml:lang="en">An entity, such as a person, a group, an organization or a software agent, involved in one or more events.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Object"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">agent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/draft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">draft</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) prior to completion and publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/green-open-access">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a published work made available by the author, by self-archiving a version of the work for free and open public use in their institutional repository, in a central repository, or elsewhere, in parallel with publication of a subscription-access Version of Record of the work by a publisher.  The green open-access version of the work may be a preprint (the version of the article as first submitted for publication) or a postprint (the pre-publication version of the article after incorporation of authors’ responses to peer reviewers’ comments).  Its availability may have an embargo restriction imposed by the publisher of the subscription-access version of the work, that prevents the green open-access version from being freely available until some substantial time after publication of the subscription-access journal issue containing that article.  A green open-access work should be accompanied by a license explicitly defining usage rights, for example a Creative Commons Attribution License.  [See also: pso:open-access, pso:gratis-open-access, pso:libre-open-access, pso:gold-open-access, pso:embargoed and pso:subscription-access.]</rdfs:comment>
+    <rdfs:label xml:lang="en">green open access</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/open-access">
+    <rdfs:label xml:lang="en">open access</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a published work (typically a scholarly publication or a dataset) that is freely available via the Internet for third parties to read without payment of access or subscription fees, and (in the case of a work published under a full open-access license) that is freely available to download and reuse for any purposes including commercial ones, including modification of the original work, its integration with other material, and its re-publication, subject typically to a requirement that the original authors and the source of the original work are acknowledged in compliance with scholarly citation norms. [See also: pso:gratis-open-access, pso:libre-open-access, pso:gold-open-access, pso:green-open-access, pso:embargoed and pso:subscription-access.]</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/peer-reviewed">
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pso/reviewed"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">peer reviewed</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a work, typically a scholarly journal article, that has been peer reviewed, i.e. subjected to review by two or more independent reviewers (also know as referees) who are academic peers of the author(s), and judged by them to be of sufficient quality to merit publication, usually after further revision by the author to incorporate the reviewers' suggested modifications and improvements.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/participation.owl#Event">
+    <rdfs:label xml:lang="en">event</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An event that may happen during a publishing process, such as writing a draft, sending a preprint, publishing a paper, etc.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/intermediate-draft">
+    <rdfs:label xml:lang="en">intermediate draft</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a pre-publication work (for example a document or a dataset) part-way through its development.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
+    <rdfs:comment xml:lang="en">An abstract class defining any kinds of publishing work.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/copy-edited">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">copy-edited</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a document that has been subjected to copy editing, i.e. alterations to the text undertaken by someone other than the author that are designed to improve the formatting, style and accuracy of text, or to bring the text into the house style of the publisher (e.g. Americanization of British spelling), but that are not designed to alter the substance or meaning of the text.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/in-press">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">in press</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a document after it has been accepted for publication and prior to its formal publication in print.  (Note that for many journal articles that are published electronically, this status rarely exists, since there is commonly no delay between acceptance and publication.)</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/APC-not-required">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">APC not required</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/ArticleProcessingChargeStatus"/>
+    <rdfs:comment xml:lang="en">The status of an article for which an article processing charge is not required by the publisher.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/retracted-from-publication">
+    <rdfs:label xml:lang="en">retracted from publication</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a publication that has been subsequently retracted by the publisher, for example because it was subsequently found to contain erroneous or fraudulent information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/unpublished">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) that has not been published by the author, a publisher or a data repository.</rdfs:comment>
+    <rdfs:label xml:lang="en">unpublished</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/confidential">
+    <rdfs:label xml:lang="en">confidential</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a document containing information that must be kept confidential.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/APC-not-charged">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/ArticleProcessingChargeStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of an article for which an article processing charge is not charged by the publisher.</rdfs:comment>
+    <rdfs:label xml:lang="en">APC not charged</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49bbfa19e23f4dd6b0c23cc9b7b5ab51">
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/anonymized">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a document or dataset that has been subjected to anonymization, so that individual persons, for example the authors and/or people that are the subjects described in the document or dataset, cannot be identified.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">anonymized</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/isStatusIn">
+    <rdfs:range rdf:resource="http://purl.org/spar/pso/StatusInTime"/>
+    <rdfs:label xml:lang="en">is status in</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pso/withStatus"/>
+    <rdfs:comment xml:lang="en">The property relating the definition of a specific status to the situation of the document, a dataset or something else holding that status at a specific time.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/holdsStatusInTime">
+    <rdfs:range rdf:resource="http://purl.org/spar/pso/StatusInTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property relating a document, a dataset or some other thing to a status that it holds at a specific time.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/hasValue"/>
+    <rdfs:label xml:lang="en">holds status in time</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/enhanced">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">enhanced</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) that has been updated or enhanced, for example by the provision of additional or supplementary material.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/corrected">
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">corrected</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) in which errors, that may have introduced by the author, by a publisher, or by some automated process, have been corrected.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc1a1d97d0e2e44cf97aa8ae872d5d639">
+    <owl:intersectionOf rdf:nodeID="N18858697f06645709b384aacca67036c"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/accepted-for-publication">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">accepted for publication</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work (for example a document or a dataset) once it has been accepted for publication by a publisher or data repository.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/PublicationStatus">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pso/Status"/>
+    <rdfs:comment xml:lang="en">A state or condition that a document may have that relates to the publication of such document.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">publishing status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/reviewed">
+    <rdfs:label xml:lang="en">reviewed</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a published work, for example a book or a journal article, that has been subjected to a written review giving critical analysis of its content, scope and quality.  [See also pso:peer-reviewed.]</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pso/peer-reviewed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/APC-fully-waived">
+    <rdfs:label xml:lang="en">APC fully waived</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of an article for which payment of the article processing charge has been fully waived by the publisher.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/ArticleProcessingChargeStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/embargoed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">embargoed</rdfs:label>
+    <rdfs:comment xml:lang="en">The status of a work that is subjected to an embargo, which means that the work cannot be published, or in the case of a press release that it cannot be reported on, until a particular date known as the embargo date.  For open-access journal articles, an embargoed article is one in which availability of the open-access version of the article is delayed by the publisher for a substantial embargo period, typically of six or twelve months, after subscription-access availability of the published work.  
+
+</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/libre-open-access">
+    <rdfs:label xml:lang="en">libre open access</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a published work which is both free to read on-line, and to which additional usage rights apply, for example the right to text mine, make derivative works, re-use and re-publish the published work, such rights frequently being defined by application of an explicit license such as a Creative Commons license.  [See also: pso:open-access, pso:gratis-open-access, pso:gold-open-access, pso:green-open-access, pso:embargoed and pso:subscription-access.]</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d856e98b4084c639f4e93679615f904">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/ArticleProcessingChargeStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pso/Status"/>
+    <rdfs:label xml:lang="en">article processing charge status</rdfs:label>
+    <rdfs:comment xml:lang="en">A state or condition that a document may have that relates to a fee levied by a publisher on an author or an institution to cover the cost of publishing an Open Access journal article.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/gold-open-access">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a published work, typically a journal article, made available by the publisher on the publisher's own web site for third parties to read without payment of access or subscription fees.  Gold open access has the benefit that the article is findable where you expect it to be, but licensing restrictions may limit the possibilities for downloading, text mining, modification, re-publication or re-use of the published work.  Gold open-access publication typically involves payment by the author or his/her institution to the publisher of an article processing charge (aka an author publishing charge).  [See also: pso:open-access, pso:gratis-open-access, pso:libre-open-access, pso:green-open-access, pso:embargoed and pso:subscription-access.]</rdfs:comment>
+    <rdfs:label xml:lang="en">gold open access</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/Status">
+    <rdfs:label xml:lang="en">status</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A state or condition that a document may have.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/non-confidential">
+    <rdfs:label xml:lang="en">non-confidential</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a document containing information that may be shared publicly.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/restricted-access">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:comment xml:lang="en">The status of a work (typically a scholarly paper or a dataset) to which access is restricted.  For example, confidential information to which access is made available only to those who have been approved by the owner or copyright holder of the asset after personal application, or to those with appropriate security clearance, or to those within a partnership.</rdfs:comment>
+    <rdfs:label xml:lang="en">restricted access</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/withdrawn-from-submission">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The status of a work (for example a pre-publication document or dataset) that has been voluntarily withdrawn by the author, having previously been submitted for publication, perhaps because the revisions requested by the peer-reviewers were considered impossible to achieve, or because the author wishes to submit it for publication elsewhere.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pso/PublicationStatus"/>
+    <rdfs:label xml:lang="en">withdrawn from submission</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pso/withStatus">
+    <rdfs:label xml:lang="en">with status</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pso/StatusInTime"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withValue"/>
+    <rdfs:comment xml:lang="en">The property relating the holding of a status by a document, a dataset or something else at a specific time to the definition of that status.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fcddd6bfb5f43b28dee2b0e778f550a">
+    <rdf:first rdf:nodeID="N3d856e98b4084c639f4e93679615f904"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/withValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/atTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/ValueInTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/withinContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>

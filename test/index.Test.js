@@ -14,11 +14,13 @@ var _ = require("underscore");
 var testDownloadsFolder = path.resolve("test/downloaded_tests");
 var ontologiesListFilename = path.resolve("test/ontologies_list.txt");
 var ontologiesMapFilename = path.resolve("test/ontologies_map.json");
+var ontologiesAndFilesMapInTXTFileName = path.resolve("test/ontologies_map.txt");
 
 var database = new OntologiesDatabase({
     downloadsFolderName: testDownloadsFolder,
     ontologiesListFilename: ontologiesListFilename,
-    ontologiesMapFilename: ontologiesMapFilename
+    ontologiesMapFilename: ontologiesMapFilename,
+    ontologiesAndFilesMapInTXTFileName : ontologiesAndFilesMapInTXTFileName
 });
 
 var mockMap = {
@@ -48,7 +50,7 @@ describe("Get all ontologies", function ()
             should.not.exist(err);
             fs.readdir(downloadDirectory, function (err, files)
             {
-                files.length.should.equal(5);
+                files.length.should.equal(6);
                 try
                 {
                     for (var i = 0; i < files.length; i++)

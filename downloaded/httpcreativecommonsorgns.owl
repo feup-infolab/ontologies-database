@@ -7,7 +7,7 @@
 <base href="https://creativecommons.org/ns" />
 <script type="text/javascript">
 //<![CDATA[
-window.__mirage2 = {petok:"86a497a930d89466d0abf930c1e8ce9801321c71-1510835714-1800"};
+window.__mirage2 = {petok:"24dd124898d3d2102449a3cb9c02ba028409b0d0-1510840971-1800"};
 //]]>
 </script>
 <script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/0e574bed/cloudflare-static/mirage2.min.js"></script>
@@ -77,7 +77,7 @@ asked not to do</span>
 <h2>Permissions</h2>
 <div id="Reproduction" about="#Reproduction" typeof="cc:Permission">
 <h4 property="rdfs:label">Reproduction</h4>
- <span property="rdfs:comment">making multiple
+<span property="rdfs:comment">making multiple
 copies</span>
 <span rev="owl:equivalentClass" resource="http://web.resource.org/cc/Reproduction"></span>
 </div>

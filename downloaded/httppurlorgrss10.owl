@@ -1,0 +1,212 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:rddl="http://www.rddl.org/"
+      xml:lang="en">
+<head>
+      <title>RDF Site Summary (RSS) 1.0</title>
+      <link href="http://purl.org/rss/1.0/style" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<h1>RDF Site Summary (RSS) 1.0</h1>
+
+<h2>Official Specification</h2>
+
+<rddl:resource
+  xlink:href="http://purl.org/rss/1.0/spec"
+  xlink:title="RDF Site Summary (RSS) 1.0 Specification"
+  xlink:arcrole="http://www.rddl.org/purposes#normative-specification"
+><p>The <a href="http://purl.org/rss/1.0/spec">RSS 1.0 specification</a> was released on 2000-12-06.</p>
+</rddl:resource>
+
+<rddl:resource
+  xlink:href="http://purl.org/rss/1.0/modules/"
+  xlink:title="RDF Site Summary (RSS) 1.0 Modules"
+  xlink:arcrole="http://www.rddl.org/purposes#normative-specification"
+><p>It was published along with <a href="http://purl.org/rss/1.0/modules/">guidelines for the design of RSS Modules</a> so that RSS can be easily extended.</p>
+</rddl:resource>
+
+<h2>Modules</h2>
+<rddl:resource
+  xlink:href="http://purl.org/rss/1.0/modules/"
+  xlink:title="RDF Site Summary (RSS) 1.0 Module"
+  xlink:role="http://www.rddl.org/natures#term"
+  xlink:arcrole="http://www.rddl.org/purposes#definition"
+><p>The URI <code>http://purl.org/rss/1.0/modules/</code> can be used to represent the class of RSS modules.</p>
+</rddl:resource>
+
+<p>The following modules are official modules of the RSS-DEV working group:</p>
+<ul>
+<li>
+<rddl:resource
+  xlink:href="http://purl.org/rss/1.0/modules/dc/"
+  xlink:title="RSS Dublin Core Module"
+  xlink:role="http://purl.org/rss/1.0/modules/"
+><a href="http://purl.org/rss/1.0/modules/dc/">Dublin Core</a></rddl:resource></li>
+<li><rddl:resource
+  xlink:href="http://purl.org/rss/1.0/modules/syndication/"
+  xlink:title="RSS Syndication Module"
+  xlink:role="http://purl.org/rss/1.0/modules/"
+><a href="http://purl.org/rss/1.0/modules/syndication/">Syndication</a></rddl:resource></li>
+<li><rddl:resource
+  xlink:href="http://purl.org/rss/1.0/modules/content/"
+  xlink:title="RSS Content Module"
+  xlink:role="http://purl.org/rss/1.0/modules/"
+><a href="http://purl.org/rss/1.0/modules/content/">Content</a></rddl:resource></li>
+</ul>
+
+<p>In addition there are a number of <a href="modules/proposed.html">proposed modules</a>.</p>
+
+
+<h2>Schemas</h2>
+
+<rddl:resource
+  xlink:href="http://purl.org/rss/1.0/schema.rdf"
+  xlink:title="RDF Site Summary (RSS) 1.0 RDF Schema"
+  xlink:role="http://www.w3.org/2000/01/rdf-schema#">
+<p>RSS has an <a href="http://purl.org/rss/1.0/schema.rdf">RDF Schema</a> available. A copy is also embedded in this document.</p>
+</rddl:resource>
+
+<!-- 
+RDF Schema declaration for Rich Site Summary (RSS) 1.0 <http://purl.org/rss/1.0/>
+
+note: This schema currently is defining RSS-specific constructs 
+(resource and relationship types) only. No contraints have been 
+introduced.
+
+Note: this schema is represented in the RDF M&S abbreviated 
+syntax <http://www.w3.org/TR/REC-rdf-syntax/#abbreviatedSyntax> for 
+syntactic inclusion in an HTML/XHTML document
+ --> 
+
+<rdf:RDF 
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+ <!--  Class declarations   --> 
+
+ <rdfs:Class rdf:about="http://purl.org/rss/1.0/channel"
+   rdfs:label="Channel"
+   rdfs:comment="An RSS information channel.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdfs:Class>
+
+ <rdfs:Class rdf:about="http://purl.org/rss/1.0/image"
+   rdfs:label="Image"
+   rdfs:comment="An RSS image.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdfs:Class>
+
+ <rdfs:Class rdf:about="http://purl.org/rss/1.0/item"
+   rdfs:label="Item"
+   rdfs:comment="An RSS item.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdfs:Class>
+
+ <rdfs:Class rdf:about="http://purl.org/rss/1.0/textinput"
+   rdfs:label="Text Input"
+   rdfs:comment="An RSS text input.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdfs:Class>
+
+  <!--  Property declarations   --> 
+
+ <rdfs:Property rdf:about="http://purl.org/rss/1.0/items"
+   rdfs:label="Items"
+   rdfs:comment="Points to a list of rss:item elements that are members of the subject channel.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdfs:Property>
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/title"
+    rdfs:label="Title"
+    rdfs:comment="A descriptive title for the channel.">
+   <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/title" /> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdf:Property>
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/link"
+    rdfs:label="Link"
+    rdfs:comment="The URL to which an HTML rendering of the subject will link.">
+   <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier" /> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdf:Property>
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/url"
+    rdfs:label="URL"
+    rdfs:comment="The URL of the image to used in the 'src' attribute of the channel's image tag when rendered as HTML.">
+   <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier" /> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdf:Property>
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/description"
+    rdfs:label="Description"
+    rdfs:comment="A short text description of the subject.">
+   <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description" /> 
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdf:Property>
+
+ <rdf:Property rdf:about="http://purl.org/rss/1.0/name"
+    rdfs:label="Name"
+    rdfs:comment="The text input field's (variable) name.">
+   <rdfs:isDefinedBy rdf:resource="http://purl.org/rss/1.0/" /> 
+ </rdf:Property>
+
+</rdf:RDF>
+
+<rddl:resource
+  xlink:title="RSS 1.0 Schematron Schema"
+  xlink:role="http://www.ascc.net/xml/schematron"
+  xlink:href="http://www.ldodds.com/rss_validator/1.0/rss_1_0_validator.xml"
+><p>Leigh Dodds has created a <a href="http://www.ldodds.com/rss_validator/1.0/">Schematron Schema</a>  and <a href="http://www.ldodds.com/rss_validator/1.0/validator.html">validator</a> for RSS 1.0</p></rddl:resource>
+
+<h2>More Information</h2>
+
+<rddl:resource
+  xlink:title="RSS-DEV Mailing List"
+  xlink:arcrole="http://www.rddl.org/purposes#mailing-list"
+  xlink:href="http://purl.org/rss/1.0/mailinglist/"
+><p>Development and discussion of RSS takes place on the <a href="http://purl.org/rss/1.0/mailinglist/">RSS-DEV Mailing List</a>. Feel free to email the list with any questions regarding RSS that you may have. This is also the place to mail your suggestions or corrections to this namespace.</p>
+</rddl:resource>
+
+<p>The following sites also provide more information on RSS:</p>
+
+<ul>
+<li><rddl:resource
+  xlink:title="RSS Info"
+  xlink:arcrole="http://www.rddl.org/purposes#reference"
+  xlink:href="http://blogspace.com/rss/"
+><a href="http://blogspace.com/rss/">RSS Info</a> - News and information on the RSS format.
+</rddl:resource></li>
+<li><rddl:resource
+  xlink:title="Dmoz RSS Links"
+  xlink:arcrole="http://www.rddl.org/purposes#reference"
+  xlink:href="http://dmoz.org/Reference/Libraries/Library_and_Information_Science/Technical_Services/Cataloguing/Metadata/RDF/Applications/RSS/"
+><a href="http://dmoz.org/Reference/Libraries/Library_and_Information_Science/Technical_Services/Cataloguing/Metadata/RDF/Applications/RSS/">Dmoz RSS Links</a>
+ - A large collection of links to RSS resources. 
+</rddl:resource></li>
+</ul>
+
+<p>These sites have RSS tutorials:</p>
+
+<ul>
+<li><rddl:resource
+  xlink:title="RSS Tutorial"
+  xlink:arcrole="http://www.rddl.org/purposes#reference"
+  xlink:href="http://www.mnot.net/rss/tutorial/"
+><a href="http://www.mnot.net/rss/tutorial/">RSS Tutorial</a> - 
+RSS Tutorial for Content Publishers and Webmasters
+</rddl:resource></li>
+<li><rddl:resource
+  xlink:title="WebReference.com"
+  xlink:arcrole="http://www.rddl.org/purposes#reference"
+  xlink:href="http://www.webreference.com/authoring/languages/xml/rss/"
+><a href="http://www.webreference.com/authoring/languages/xml/rss/">WebReference.com</a> - 
+RSS articles, tutorials, software and tools. 
+</rddl:resource></li>
+</ul>
+
+<h2>Ownership</h2>
+<p>This document is maintained by <a href="http://www.aaronsw.com/">Aaron Swartz</a> of <a href="http://watchdog.net/">watchdog.net</a> on behalf of the RSS-DEV Working Group (as governed by <a href="process">the process document</a>).</p>
+
+</body>
+</html>

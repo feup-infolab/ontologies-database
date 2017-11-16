@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:dc="http://purl.org/dc/terms/"
+	xmlns:dc-elem="http://purl.org/dc/elements/1.1/"
+	xmlns:dpn="http://purl.org/dpn#"
+	xmlns:ds="http://purl.org/dpn/dataset#"
+	xmlns:hr="http://www.wsmo.org/ns/hrests#"
+	xmlns:msm="http://iserve.kmi.open.ac.uk/ns/msm#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:wl="http://www.wsmo.org/ns/wsmo-lite#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<rdf:Description rdf:about="http://purl.org/dpn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<cc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;http://creativecommons.org/licenses/by/4.0/&gt;</cc:license>
+	<dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Provider Node ontology</dc:title>
+	<vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dpn</vann:preferredNamespacePrefix>
+	<vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.org/dpn#</vann:preferredNamespaceUri>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology is being developed by CSIRO under the eReefs project for describing data provider nodes, web services available and datasets that are hosted by them. This ontology features a module for describing Datasets. It does not however describe geospatial, temporal, organisational or domain concepts as these are intended to be included from other ontologies via the imports statement. Other modules complementary to the DPN ontology are     http://purl.org/dpn/dataset and http://purl.org/dpn/services. This version aligns DCAT and DC terms and imports DPN services.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Provider Node ontology</rdfs:label>
+	<owl:imports rdf:resource="http://purl.org/dpn/dataset"/>
+	<owl:imports rdf:resource="http://purl.org/dpn/services"/>
+	<owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns"/>
+	<owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
+	<owl:imports rdf:resource="http://www.w3.org/ns/org"/>
+	<owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+	<owl:priorVersion rdf:resource="http://purl.org/dpn/v0.4"/>
+	<owl:versionIRI rdf:resource="http://purl.org/dpn/v0.6.1"/>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v 0.6.1 5/8/2015 Jonathan Yu</owl:versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Catalog">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A catalog is a curated set of metadata about datasets</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#DataServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract class of data service interfaces</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Service Interface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Dataset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Class to represent datasets, which are collections of data. Datasets are accessed via a means of a Distribution, e.g. via a service which can be defined as a type of distribution method or a direct download.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dataset</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#distribution"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Dataset">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#hostedBy"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/ns/org#Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Dataset">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#manager"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/ns/org#Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Dataset">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x3"/>
+	<owl:equivalentClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#FeatureTypeCatalogue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Feature Type Catalogue (FTC) gives an informative overview of the spatial object types (features) and data types. Generally an FTC implements a registry of feature types which allow features to be described.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feature Type Catalogue</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#InfoModelServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Html">
+	<rdf:type rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#IdentifierService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persistent Identifier Service allows registry and deferencing identifier handles.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persistent Identifier Service</rdfs:label>
+	<rdfs:seeAlso rdf:resource="https://www.seegrid.csiro.au/wiki/Siss/PIDService"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#Service"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#InfoModelServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract interface for information model services</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information Model Service Interface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#JSON">
+	<rdf:type rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#LinkedDataApiOperation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of a Linked Data API operation</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linked Data API Operation</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Operation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.wsmo.org/ns/wsmo-lite#hasOutputMessage"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x6">
+	<rdf:first rdf:resource="http://purl.org/dpn#Html"/>
+	<rdf:rest rdf:nodeID="node19ru685h3x7"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x7">
+	<rdf:first rdf:resource="http://purl.org/dpn#JSON"/>
+	<rdf:rest rdf:nodeID="node19ru685h3x8"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x8">
+	<rdf:first rdf:resource="http://purl.org/dpn#RDF"/>
+	<rdf:rest rdf:nodeID="node19ru685h3x9"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x9">
+	<rdf:first rdf:resource="http://purl.org/dpn#XML"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x5">
+	<owl:oneOf rdf:nodeID="node19ru685h3x6"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x4">
+	<owl:someValuesFrom rdf:nodeID="node19ru685h3x5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#LinkedDataApiOperation">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#MessageContent_1">
+	<rdf:type rdf:resource="http://iserve.kmi.open.ac.uk/ns/msm#MessageContent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#MetadataServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract interface for metadata services</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metadata Service Interface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Node">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A data provider node is a class of things that exposes concrete service implementations and/or describes a number of service interfaces that it supports. This allows discovery of services or service capabilities for a given data provider node.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data provider node</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x10">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/publisher"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/ns/org#Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Node">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x10"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x11">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#exposesService"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#Service"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Node">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x11"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x12">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#providesServiceInterface"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Node">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x12"/>
+	<owl:disjointWith rdf:resource="http://purl.org/dpn#Service"/>
+	<owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#ProvenanceServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract interface for provenance services</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provenance Service Interface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#RDF">
+	<rdf:type rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Service">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lightweight description for a Web Service through which data may be accessed</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Service</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x13">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#endpoint"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Service">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x14">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#hostsDataset"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#Dataset"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Service">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x14"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x15">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#implements"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Service">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x15"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x16">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#node"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#Node"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#Service">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x16"/>
+	<owl:disjointWith rdf:resource="http://purl.org/dpn#Catalog"/>
+	<owl:disjointWith rdf:resource="http://purl.org/dpn#Node"/>
+	<owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#ServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract class for defining service interface standards for which services may implement</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service Interface Standard</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x17">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#hasImplementation"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#Service"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#ServiceInterface">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x17"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#VocabularyServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract interface or API for a vocabulary service, which typically hosts a set of well-governed controlled vocabularies.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vocabulary Service Interface</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#XML">
+	<rdf:type rdf:resource="http://www.wsmo.org/ns/wsmo-lite#Message"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#contactPoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link a resource to a relevant contact provided using VCard</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+	<skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contact point</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#endpoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to associate a resource with a resolvable endpoint URL. e.g. to a URL of a catalog or a GetCapabilities description.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://purl.org/dpn#Service"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endpoint</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#exposesService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property allows a resource to specify the services that it exposes. e.g. a Data provider node may expose a data service. The complement of this could be dpn:node to specify a Service's data provider node</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposes service</rdfs:label>
+	<rdfs:range rdf:resource="http://purl.org/dpn#Service"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#hasImplementation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property captures the association between a service interface specification and resources that has its service implementations</rdfs:comment>
+	<rdfs:domain rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has implementation</rdfs:label>
+	<rdfs:range rdf:resource="http://purl.org/dpn#Service"/>
+	<owl:inverseOf rdf:resource="http://purl.org/dpn#implements"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#hostedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to express the entity which hosts a given resource. This is the inverse of dpn:hosts</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hosted by</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#hosts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to express the resource which the entity hosts. This is the inverse of dpn:hostedBy.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hosts</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#hostsDataset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property allows association of a service to datasets that it hosts.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://purl.org/dpn#Service"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hosts dataset</rdfs:label>
+	<rdfs:range rdf:resource="http://purl.org/dpn#Dataset"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#hostsNode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organisation can host a data provider node</rdfs:comment>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hosts node</rdfs:label>
+	<rdfs:range rdf:resource="http://purl.org/dpn#Node"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#implements">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property captures the association between a service and its interface specification. This is the inverse to hasImplementation.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">implements</rdfs:label>
+	<owl:inverseOf rdf:resource="http://purl.org/dpn#hasImplementation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#manager">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to describe who the manager of the resource is.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#manages">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A property to describe what entities are managed by a resource</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manages</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#node">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">node</rdfs:label>
+	<rdfs:range rdf:resource="http://purl.org/dpn#Node"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#owner">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to express the owner of a resource. This is the inverse to dpn:owns</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#owns">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to express what is owned by a resource in the context of a data provider node and its datasets. This is the inverse of dpn:owner</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owns</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#providesServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:range rdf:resource="http://purl.org/dpn#ServiceInterface"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#related">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to express relationship between resources in a data provider node context</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn#service">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property to express the related service resource</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service</rdfs:label>
+	<rdfs:range rdf:resource="http://purl.org/dpn#Service"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn/dataset#ObservationalDataset">
+	<rdfs:subClassOf rdf:resource="http://purl.org/dpn#Dataset"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x18">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#owner"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dpn/dataset#ObservationalDataset">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x18"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x19">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#contactPoint"/>
+	<owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x19"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x20">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#hostsNode"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#Node"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x20"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x21">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dpn#owns"/>
+	<owl:someValuesFrom rdf:resource="http://purl.org/dpn#Dataset"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x21"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19ru685h3x22">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/org#hasMember"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/org#Organization">
+	<rdfs:subClassOf rdf:nodeID="node19ru685h3x22"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+</rdf:Description>
+
+</rdf:RDF>

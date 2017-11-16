@@ -20,7 +20,7 @@ var OntologiesDatabase = function (options)
     self.downloadsFolderName = "downloaded";
     self.ontologiesListFilename = "ontologies_list.txt";
     self.ontologiesMapFilename = "ontologies_map.json";
-    self.ontologiesAndFilesMapInTXT = "ontologies_map.txt";
+    self.ontologiesAndFilesMapInTXTFileName = "ontologies_map.txt";
 
     if(options)
     {
@@ -39,14 +39,14 @@ var OntologiesDatabase = function (options)
             self.ontologiesMapFilename = options.ontologiesMapFilename;
         }
 
-        if (options.ontologiesAndFilesMapInTXT)
+        if (options.ontologiesAndFilesMapInTXTFileName)
         {
-            self._ontologiesAndFilesMapInTXT = options.ontologiesAndFilesMapInTXT;
+            self._ontologiesAndFilesMapInTXT = options.ontologiesAndFilesMapInTXTFileName;
         }
     }
 
     self._ontologiesAndFilesMap = {};
-    self._ontologiesAndFilesListTXT = "";
+    self._ontologiesAndFilesMapInTXT = "";
 };
 
 OntologiesDatabase.prototype.getMap = function ()
@@ -82,7 +82,7 @@ OntologiesDatabase.prototype.reload = function (callback)
                         headers: {
                             Accept: mimetype
                         },
-                        timeout: 3000
+                        timeout: 10000
                     };
 
                     rp(options)
@@ -94,8 +94,8 @@ OntologiesDatabase.prototype.reload = function (callback)
                                 var fd = fs.openSync(newFileName, "a");
                                 fs.writeFileSync(newFileName, response);
                                 fs.closeSync(fd);
-                                self._ontologiesAndFilesMap[line] = newFileName;
-                                self._ontologiesAndFilesListTXT += line + " " + newFileName + "\n";
+                                self._ontologiesAndFilesMap[line] = path.join(path.relative(process.cwd(), self.downloadsFolderName), path.basename(newFileName));
+                                self._ontologiesAndFilesMapInTXT += line + " " + path.join(path.relative(process.cwd(), self.downloadsFolderName), path.basename(newFileName)) + "\n";
                                 console.log(line + " ontology downloaded successfully with type " + mimetype);
                                 callback(null, true);
                             }
@@ -132,7 +132,7 @@ OntologiesDatabase.prototype.reload = function (callback)
                 tryToDownloadOntology(function (err, result)
                 {
                     fs.writeFileSync(self.ontologiesMapFilename, JSON.stringify(self._ontologiesAndFilesMap, null, 4));
-                    fs.writeFileSync(self.ontologiesAndFilesMapInTXT,self._ontologiesAndFilesMapInTXT);
+                    fs.writeFileSync(self.ontologiesAndFilesMapInTXTFileName,self._ontologiesAndFilesMapInTXT);
                     cb(false); // stop reading
                     callback(null, path.resolve(self.downloadsFolderName), self._ontologiesAndFilesMap); // finish everything
                 });

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+  <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+  <!ENTITY dcam 'http://purl.org/dc/dcam/'>
+  <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+  <!ENTITY dc 'http://purl.org/dc/elements/1.1/'>
+  <!ENTITY dcterms 'http://purl.org/dc/terms/'>
+  <!ENTITY dcmitype 'http://purl.org/dc/dcmitype/'>
+  <!ENTITY skos 'http://www.w3.org/2004/02/skos/core#'>
+  <!ENTITY cld 'http://purl.org/cld/terms/'>
+  <!ENTITY cdtype 'http://purl.org/cld/cdtype/'>
+  <!ENTITY freq 'http://purl.org/cld/freq/'>
+  <!ENTITY accmeth 'http://purl.org/cld/accmeth/'>
+  <!ENTITY accpol 'http://purl.org/cld/accpol/'>
+]>
+<rdf:RDF xmlns:rdf="&rdf;"
+	xmlns:rdfs="&rdfs;"
+	xmlns:dcam="&dcam;"
+	xmlns:dc="&dc;"
+	xmlns:dcterms="&dcterms;"
+	xmlns:dcmitype="&dcmitype;"
+	xmlns:skos="&skos;"
+	xmlns:cld="&cld;"
+	xmlns:cdtype="&cdtype;"
+	xmlns:freq="&freq;"
+	xmlns:accmeth="&accmeth;"
+	xmlns:accpol="&accpol;"
+>
+
+
+<rdf:Description rdf:about="&cld;">
+	<dcterms:title  xml:lang="en">The Collection Description Terms</dcterms:title>
+	<dcterms:creator rdfs:label="Dublin Core Collection Description Working Group" />
+	<dcterms:modified rdf:datatype="&dcterms;W3CDTF">2013-06-26</dcterms:modified>
+	<skos:changeNote xml:lang="en">2013-08-20: added missing VES, CDType.</skos:changeNote>
+</rdf:Description>
+
+
+<rdf:Property rdf:about="&cld;itemType">
+	<rdfs:label xml:lang="en">Item Type</rdfs:label>
+	<rdfs:comment xml:lang="en">The nature or genre of the content of one or more items within the collection.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+<!--	<rdfs:range rdf:resource="" /> -->
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;itemFormat">
+	<rdfs:label xml:lang="en">Item Format</rdfs:label>
+	<rdfs:comment xml:lang="en">The media type, physical or digital, of one or more items within the collection.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+<!--	<rdfs:range rdf:resource="" /> -->
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;dateItemsCreated">
+	<rdfs:label xml:lang="en">Date Items Created</rdfs:label>
+	<rdfs:comment xml:lang="en">A range of dates over which the individual items within the collection were created.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+<!--	<rdfs:range rdf:resource="" /> -->
+	<rdfs:subPropertyOf rdf:resource="&dc;date" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;isLocatedAt">
+	<rdfs:label xml:lang="en">Is Located At</rdfs:label>
+	<rdfs:comment xml:lang="en">A location where the collection is held.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+<!--	<rdfs:range rdf:resource="" /> -->
+	<rdfs:subPropertyOf rdf:resource="&dc;relation" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;isAccessedVia">
+	<rdfs:label xml:lang="en">Is Accessed Via</rdfs:label>
+	<rdfs:comment xml:lang="en">A service that provides access to the items within the collection.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+	<rdfs:range rdf:resource="&dcmitype;Service" /> 
+	<rdfs:subPropertyOf rdf:resource="&dc;relation" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;catalogueOrIndex">
+	<rdfs:label xml:lang="en">Catalogue or Index</rdfs:label>
+	<rdfs:comment xml:lang="en">A catalogue for, or index of, the collection.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+	<rdfs:range rdf:resource="&dcmitype;Collection" /> 
+	<rdfs:range rdf:resource="&cdtype;CatalogueOrIndex" /> 
+	<rdfs:subPropertyOf rdf:resource="&dc;description" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;associatedCollection">
+	<rdfs:label xml:lang="en">Associated Collection</rdfs:label>
+	<rdfs:comment xml:lang="en">A second collection that is associated with the current collection.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+	<rdfs:range rdf:resource="&dcmitype;Collection" /> 
+	<rdfs:subPropertyOf rdf:resource="&dc;relation" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<rdf:Property rdf:about="&cld;describedCollection">
+	<rdfs:label xml:lang="en">Described Collection</rdfs:label>
+	<rdfs:comment xml:lang="en">A collection that is described by the current collection.</rdfs:comment>
+	<rdfs:domain rdf:resource="&dcmitype;Collection" />
+	<rdfs:domain rdf:resource="&cdtype;CatalogueOrIndex" /> 
+	<rdfs:range rdf:resource="&dcmitype;Collection" /> 
+	<rdfs:subPropertyOf rdf:resource="&dc;relation" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Property>
+
+<dcam:VocabularyEncodingScheme rdf:about="&cld;AccrualMethod">
+	<rdf:type rdf:resource="&skos;ConceptScheme" />
+	<rdfs:label xml:lang="en">Collection Description Accrual Method Vocabulary</rdfs:label>
+	<rdfs:comment xml:lang="en">A set of methods by which items are added to a collection.</rdfs:comment>
+	<rdfs:seeAlso rdf:resource="&accmeth;" />
+	<rdfs:seeAlso rdf:resource="http://dublincore.org/groups/collections/accrual-method/" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</dcam:VocabularyEncodingScheme>
+
+<dcam:VocabularyEncodingScheme rdf:about="&cld;Frequency">
+	<rdf:type rdf:resource="&skos;ConceptScheme" />
+	<rdfs:label xml:lang="en">Collection Description Frequency Vocabulary</rdfs:label>
+	<rdfs:comment xml:lang="en">A set of frequencies with which a repeatable event occurs..</rdfs:comment>
+	<dc:description xml:lang="en">The Collection Description Frequency Vocabulary is based on the set of codes used for publication frequency in the MARC 21 Concise Format for Holdings Data.</dc:description>
+	<rdfs:seeAlso rdf:resource="&freq;" />
+	<rdfs:seeAlso rdf:resource="http://dublincore.org/groups/collections/frequency/" />
+	<rdfs:seeAlso rdf:resource="http://www.loc.gov/marc/holdings/echdcapt.html" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</dcam:VocabularyEncodingScheme>
+
+<dcam:VocabularyEncodingScheme rdf:about="&cld;AccrualPolicy">
+	<rdf:type rdf:resource="&skos;ConceptScheme" />
+	<rdfs:label xml:lang="en">Collection Description Accrual Policy Vocabulary</rdfs:label>
+	<rdfs:comment xml:lang="en">A set of policies governing the addition of items are added to a collection.</rdfs:comment>
+	<rdfs:seeAlso rdf:resource="&accpol;" />
+	<rdfs:seeAlso rdf:resource="http://dublincore.org/groups/collections/accrual-policy/" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</dcam:VocabularyEncodingScheme>
+
+<dcam:VocabularyEncodingScheme rdf:about="&cld;CDType">
+	<rdf:type rdf:resource="&skos;ConceptScheme" />
+	<rdfs:label xml:lang="en">Collection Description Type Vocabulary</rdfs:label>
+	<rdfs:comment xml:lang="en">A set of types of collection description.</rdfs:comment>
+	<rdfs:seeAlso rdf:resource="&cdtype;" />
+	<rdfs:seeAlso rdf:resource="http://dublincore.org/groups/collections/colldesc-type/" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</dcam:VocabularyEncodingScheme>
+
+<rdf:Description rdf:about="&cld;RKMS-ISO8601">
+	<rdfs:label xml:lang="en">Recordkeeping Metadata Schema Extension to ISO8601</rdfs:label>
+	<rdfs:comment xml:lang="en">Instances of this datatype are dates or periods of time represented as literals according to the rules specified in Recordkeeping Metadata Schema Extension to ISO8601.</rdfs:comment>
+	<rdfs:seeAlso rdf:resource="http://www.sims.monash.edu.au/research/rcrg/research/spirt/deliver/schemes.html#rkmsextension" />
+	<rdfs:isDefinedBy rdf:resource="&cld;" />
+</rdf:Description>
+
+</rdf:RDF>

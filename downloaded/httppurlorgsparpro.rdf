@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval">
+    <rdfs:comment xml:lang="en">Two (starting and ending) points in time that define a particular period of time.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">time interval</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/withRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">An object property connecting an agent's role in time to a definition of the type of role held by this agent, specified as an instance of the class pro:Role or of one of its sub-classes.</rdfs:comment>
+    <rdfs:label xml:lang="en">with role</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/RoleInTime">
+    <dc:description xml:lang="en">A role in time describes always:
+- a particular role R
+- a particular agent A holding R
+- a particular time interval T in which A holds R (optional)
+- one or more entities (e.g. a particular bibliographic entity or a specific institution) that defines a context for R held by A. (At least one contextual entity should be specified for a particular role).</dc:description>
+    <rdfs:subClassOf rdf:nodeID="N2b607c1bb85049e8a986a3c137cbdcbf"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A particular situation that describe a role an agent may have, that can be restricted to a particular time interval.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N577ee0efe2164964a86bdfca83fab134"/>
+    <rdfs:label xml:lang="en">role in time</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nb043c162e63d46e088523ac042f27fc2"/>
+    <rdfs:subClassOf rdf:nodeID="Nbeb563acbee444199b9600207406637f"/>
+    <rdfs:subClassOf rdf:nodeID="N0853545f822d40ec94d11e1f09d3a856"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/relatesToEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property relating a time-indexed situation to an entity representing the context for that situation.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withinContext"/>
+    <rdfs:label xml:lang="en">relates to</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/reader">
+    <rdfs:label xml:lang="en">reader</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of a person who reads publications.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbeb563acbee444199b9600207406637f">
+    <owl:allValuesFrom rdf:nodeID="Nf4634c3cae314918b522f3808465bda1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/journalist">
+    <rdfs:label xml:lang="en">journalist</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of an author who writes newspaper or magazine news reports or articles.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/PublishingRole">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:comment xml:lang="en">A role an agent may have with respect to the publishing process.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:label xml:lang="en">publishing role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/isRelatedToRoleInTime">
+    <rdfs:label xml:lang="en">is related to role in time</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pro/relatesToEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property relating an entity to the role for which that entity provides the context.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N577ee0efe2164964a86bdfca83fab134">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pro/withRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/managing-editor">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">managing editor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of an editor who has management responsibility for the production of particular publication, usually acting under the authority of the Executive Editor and the Editor-in-Chief.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/production-editor">
+    <rdfs:comment xml:lang="en">The role of an editor who takes responsibility for the passage of a document through the various stages of the publication workflow from the submitted manuscript to the final publication, including responsibility for scheduling and budget.</rdfs:comment>
+    <rdfs:label xml:lang="en">production editor</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb043c162e63d46e088523ac042f27fc2">
+    <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pro/isHeldBy"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/isDocumentContextFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pro/isRelatedToRoleInTime"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <rdfs:comment xml:lang="en">A property relating a document to the role for which that document provides the context (e.g. relating a document to the role of author or peer-reviewer of that document).</rdfs:comment>
+    <rdfs:label xml:lang="en">is document context for</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pro/relatesToDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/copy-editor">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of an editor who undertakes alterations to the text of a document submitted for publication to improve the formatting, style and accuracy of text, or to bring the text into the house style of the publisher (e.g. Americanization of British spelling), without intentionally altering the substance or meaning of the text.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">copy editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/executive-editor">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of an editor who has executive responsibility for the production of particular publication, usually acting under the authority of the Editor-in-Chief.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">executive editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/Role">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A role an agent may have.  Individual members of this class or its sub-classes are used to specify particular roles.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en">role</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/relatesToPerson">
+    <rdfs:label xml:lang="en">relates to person</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pro/relatesToEntity"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property relating a time-indexed situation to a person who represents the context for that situation (e.g. relating the role of an supervisor with respect to the graduate student being supervised).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/distributor">
+    <rdfs:label xml:lang="en">distributor</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of a person who distributes or disseminates publications or other resources.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/holdsRoleInTime">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pro/isHeldBy"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/hasValue"/>
+    <rdfs:label xml:lang="en">holds role in time</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="en">A property relating an agent to a role that the agent holds.  This is done via the indirection: foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime ; pro:withRole pro:Role ] .  The ontology permits one to specify the time period over which a role is held, and the other contextual entities to which that agent's role relates.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/ghost-writer">
+    <rdfs:label xml:lang="en">ghost writer</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of a professional writer who assists an aspiring author lacking authorship skills to write a book or article for publication, for example by helping the author to create grammatically correct and lucid prose, or who writes the book on behalf of the named author, without himself/herself claiming authorship.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">Since roles have contexts and times that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the PRO ontology permit these contexts to be specified, using an ontological design pattern called the time-indexed value in context (TVC) (http://www.essepuntato.it/2012/04/tvc/) which is imported into PRO. 
+ 
+This ontology design pattern permits one to construct the following RDF statements:
+       foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime pro:withRole pro:editor ] .
+
+Thus the domain of pro:withRole is not foaf:Agent, but rather an anonymous member of the class pro:RoleInTime, which itself is the range of the property pro:holdsRoleInTime, for which the domain is foaf:Agent. 
+
+The range of pro:withRole is the class pro:Role, whose members permit specific roles to be specified.  
+   
+This single step of indirection permits other contextual and temporal attributes (not shown here) to be specified for this member of the class pro:RoleInTime, putting that role into context.
+
+Exemplar usage: 
+
+ foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime pro:withRole pro:editor ] .</dc:description>
+    <dc:title xml:lang="en">PRO, the Publishing Roles Ontology</dc:title>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-09-04</dc:date>
+    <owl:imports rdf:resource="http://www.essepuntato.it/2012/04/tvc"/>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+    <rdfs:comment xml:lang="en">This ontology is available at http://purl.org/spar/pro, and uses the namespace prefix pro.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5.4</owl:versionInfo>
+    <owl:imports rdf:resource="http://purl.org/swan/2.0/foaf-essential/"/>
+    <dc:description xml:lang="en">PRO, the Publishing Roles Ontology, is an ontology written in OWL 2 DL for the characterization of the roles of agents (people, corporate bodies and computational agents) in the publication process.  It permits one to specify how an agent has a role relating to a contextual entity, and the period of time during which that role is held.
+
+It is based on the Time-indexed Value in Context (TVC) ontology pattern (http://www.essepuntato.it/2012/04/tvc).
+
+It is easy to extend the set of specified roles, simply by adding new individuals to the class pro:PublishingRole.
+
+This ontology is imported into SCoRO, the Scholarly Contribution and Roles Ontology (http://purl.org/spar/scoro/), where it is used similarly to enable the description of a wider range of contributions and roles relating to other scholarly activities and entities, including academic administration, funded projects, research investigations, data and authorship, and to define their temporal extents and contexts, as for publishing roles in PRO.</dc:description>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+    <dc:description rdf:resource="http://sempublishing.svn.sourceforge.net/svnroot/sempublishing/PRO/pro.png"/>
+    <rdfs:comment xml:lang="en">PRO, the Publishing Roles Ontology, is an ontology for describing roles in the publication process, or in other scholarly activities or situations, held by particular agent.  The role can be specified to exist over a defined period of time, and within a specific context, e.g. with respect to a particular document. 
+
+PRO forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/.</rdfs:comment>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/guest-editor">
+    <rdfs:label xml:lang="en">guest editor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of someone who is a guest editor, for example for a special themed issue of a journal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/isRoleIn">
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pro/withRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:comment xml:lang="en">The property relating the definition of a specific role to the situation of an agent holding that role.</rdfs:comment>
+    <rdfs:label xml:lang="en">is role in</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/isHeldBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property relating a role in time that an agent holds, or a contribution situation that an agent makes, to that agent.</rdfs:comment>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdfs:label xml:lang="en">is role held by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/deputy-editor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of a senior editor of a publication who deputizes for the Editor-in-Chief.</rdfs:comment>
+    <rdfs:label xml:lang="en">deputy editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/isPersonContextFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A property relating a person to the role for which that person provides the context (e.g. relating a graduate student to the role of supervisor held by a faculty member).</rdfs:comment>
+    <rdfs:label xml:lang="en">is person context for</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pro/isRelatedToRoleInTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N140bca380ae44a1b952b584741e45d67">
+    <rdf:first rdf:nodeID="N706fa31b04f74898b1bdaf91e9e74a97"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/producer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of someone who acts as a producer.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:label xml:lang="en">producer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/proof-reader">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">proof reader</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person who reads the proofs of documents to detect any errors prior to final publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/reviewer">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of a person who subjects a publication to a written review and critical analysis of its content, scope and quality.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">reviewer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/ValueInTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/isOrganizationContextFor">
+    <rdfs:comment xml:lang="en">A property relating an organization to the role for which that organization provides the context (e.g. relating an institution to the role of member held by a person).</rdfs:comment>
+    <rdfs:label xml:lang="it">is organization context for</rdfs:label>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/pro/relatesToOrganization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pro/isRelatedToRoleInTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/critic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an author who writes evaluations and criticisms of, for example, plays or other works of art.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:label xml:lang="en">critic</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/reviewer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/relatesToDocument">
+    <rdfs:comment xml:lang="en">A property relating a time-indexed situation describing a publishing role to a document that represents the context for that situation (e.g. relating the role of editor or peer-reviewer to the document being edited or peer-reviewed).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">relates to document</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pro/relatesToEntity"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/relatesToOrganization">
+    <rdfs:comment xml:lang="en">A property relating a time-indexed situation to an organization that represents the context for that situation (e.g. relating the role of member to the institution of which that person is a member).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/pro/relatesToEntity"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdfs:label xml:lang="en">relates to organization</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/peer-reviewer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an academic peer in evaluating a manuscript submitted by an author for publication as a journal article on behalf of the journal editor, or a conference paper on behalf of the conference programme committee, and in deciding whether it is suitable for acceptance, usually subject to revisions suggested by the peer-reviewer.</rdfs:comment>
+    <rdfs:label xml:lang="en">peer reviewer</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:seeAlso rdf:resource="http://purl.org/spar/pro/reviewer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalEndDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/biographer">
+    <rdfs:comment xml:lang="en">The role of an author who writes biographies.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">biographer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/compiler">
+    <rdfs:label xml:lang="en">compiler</rdfs:label>
+    <rdfs:comment xml:lang="en">The role an agent has of compiling a number of items into a compilation or collection.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/series-editor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">series editor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of the person who has editorial responsibility for publication series, for example a book series.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/commissioning-editor">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an editor who actively commissions authors to write books to be published by the publishing house for which the commissioning editor works.</rdfs:comment>
+    <rdfs:label xml:lang="en">commissioning editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/editor-in-chief">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of the person who has final responsibility for the editorial operations and policies for a particular publication.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">editor-in-chief</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/illustrator">
+    <rdfs:label xml:lang="en">illustrator</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of an agent that illustrates a document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/translator">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an agent that translates a document into another language.</rdfs:comment>
+    <rdfs:label xml:lang="en">translator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/authors-agent">
+    <rdfs:comment xml:lang="en">A person who finds work for professional authors, manages their contracts, and works to advance their careers, charging their clients as fees for their services a percentage of the money made from the authors' writings.</rdfs:comment>
+    <rdfs:label xml:lang="en">author's agent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime">
+    <rdfs:comment xml:lang="en">A time interval during which a role is held or a contribution is made by an agent.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">at time</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/copyright-owner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:label xml:lang="en">copyright owner</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of owning the copyright to a publication, usually held by the author or by the publishing house that publishes the author's work.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalStartDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <rdfs:comment xml:lang="en">An abstract class defining any kind of agents, such as a person, a group, an organization or a software agent.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">agent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/blogger">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">blogger</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of an author who writes blog posts.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/archivist">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">archivist</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person who manages, undertakes and supervises the work of an archive.  [This term is typically used with respect to a document archive, whereas the term data curator is used with respect to a data archive.]</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/publisher">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of a person or an organization that published material, or of a publisher's employee who has responsibility for such publications.</rdfs:comment>
+    <rdfs:label xml:lang="en">publisher</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/contributor">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:label xml:lang="en">contributor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role an agent has of contribution of some material (for example an article to a magazine).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N981b45867d57471faf02c0ab282d2fe7">
+    <rdf:rest rdf:nodeID="N140bca380ae44a1b952b584741e45d67"/>
+    <rdf:first rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf4634c3cae314918b522f3808465bda1">
+    <owl:intersectionOf rdf:nodeID="N981b45867d57471faf02c0ab282d2fe7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b607c1bb85049e8a986a3c137cbdcbf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/pro/relatesToEntity"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An abstract class defining any kinds of publishing work.</rdfs:comment>
+    <rdfs:label xml:lang="en">document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/atTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/editor">
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of a person who selects and prepares for publication material created and submitted by authors, having oversight of its content, format and presentation.</rdfs:comment>
+    <rdfs:label xml:lang="en">editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/author">
+    <rdfs:label xml:lang="en">author</rdfs:label>
+    <rdfs:comment xml:lang="en">The role a person has of authorship of some material (for example a document).</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/librarian">
+    <rdfs:label xml:lang="en">librarian</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:comment xml:lang="en">The role of a person who manages, undertakes and supervises the work of a library.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/senior-editor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of the person who has senior responsibility for the editorial operations and policies for a particular publication, usually acting under the authority of the Editor-in-Chief.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:label xml:lang="en">senior editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N706fa31b04f74898b1bdaf91e9e74a97">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/printer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an agent involved in printing documents, either a company providing printing services or an individual engaged in the process of printing documents.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/pro/PublishingRole"/>
+    <rdfs:label xml:lang="en">printer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/withValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0853545f822d40ec94d11e1f09d3a856">
+    <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#TimeInterval"/>
+    <owl:onProperty rdf:resource="http://www.essepuntato.it/2012/04/tvc/atTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#TimeIndexedSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/withinContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl#hasIntervalDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>

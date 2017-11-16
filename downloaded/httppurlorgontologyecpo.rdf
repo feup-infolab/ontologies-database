@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ecpo="http://purl.org/ontology/ecpo#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <owl:versionInfo>0.1+2</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <rdfs:label xml:lang="en">Enumeration and Chronology of Periodicals Ontology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <rdfs:label>ECPO</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <vann:preferredNamespacePrefix>ecpo</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <vann:preferredNamespaceUri>http://purl.org/ontology/ecpo#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <dc:title xml:lang="en">Enumeration and Chronology of Periodicals Ontology</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <dc:description xml:lang="en">Defines the common bibliographic terms for the description of enumeration and chronology</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-06</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:first rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:first rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:rest rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <owl:unionOf rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdfs:label xml:lang="en">enumeration and chronology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdfs:label xml:lang="de">Bestandsverlauf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdfs:comment xml:lang="en">A Chronology is the description of enumeration and chronology.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdfs:subClassOf rdf:nodeID="genid5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdfs:label xml:lang="en">current chronology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdfs:label xml:lang="de">Bestandsverlauf laufend</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdfs:comment xml:lang="en">A Chronology without an ending group.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <owl:disjointWith rdf:resource="http://purl.org/ontology/ecpo#ClosedChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdfs:subClassOf rdf:nodeID="genid6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#CurrentChronology">
+    <rdfs:subClassOf rdf:nodeID="genid7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdfs:label xml:lang="en">closed chronology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdfs:label xml:lang="de">Bestandsverlauf abgeschlossen</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdfs:comment xml:lang="en">A Chronology having an ending group.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <owl:disjointWith rdf:resource="http://purl.org/ontology/ecpo#CurrentChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdfs:subClassOf rdf:nodeID="genid8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#ClosedChronology">
+    <rdfs:subClassOf rdf:nodeID="genid9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronology">
+    <rdfs:label xml:lang="en">has chronology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronology">
+    <rdfs:label xml:lang="de">hat Bestandsverlauf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronology">
+    <rdfs:range rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronology">
+    <rdfs:comment xml:lang="en">Relation between a thing and a Chronology</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronologyGap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronologyGap">
+    <rdfs:label xml:lang="en">has chronology gap</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronologyGap">
+    <rdfs:label xml:lang="de">hat Bestandsverlauflücke</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronologyGap">
+    <rdfs:range rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasChronologyGap">
+    <rdfs:comment xml:lang="en">Relation between a thing and a Chronology, indicating the Chronology is a gap</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBegin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBegin">
+    <rdfs:label xml:lang="en">has begin</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBegin">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBegin">
+    <rdfs:comment xml:lang="en">Super-property to all properties of the beginning group</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeCaption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeCaption">
+    <rdfs:label xml:lang="en">has begin volume caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeCaption">
+    <rdfs:label xml:lang="de">hat beginnende Bandbeschriftung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeCaption">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeCaption">
+    <rdfs:comment xml:lang="en">The caption of the beginning volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeCaption">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeNumbering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeNumbering">
+    <rdfs:label xml:lang="en">has begin volume numbering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeNumbering">
+    <rdfs:label xml:lang="de">hat beginnende Bandzählung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeNumbering">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeNumbering">
+    <rdfs:comment xml:lang="en">The numbering of the beginning volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeNumbering">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeExtension">
+    <rdfs:label xml:lang="en">has begin volume extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeExtension">
+    <rdfs:label xml:lang="de">has beginnende Bandergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeExtension">
+    <rdfs:comment xml:lang="en">A textual descrimination of the beginning volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginVolumeExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueCaption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueCaption">
+    <rdfs:label xml:lang="en">has begin issue caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueCaption">
+    <rdfs:label xml:lang="de">hat beginnende Ausgabenbeschriftung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueCaption">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueCaption">
+    <rdfs:comment xml:lang="en">The caption of the beginning issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueCaption">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueNumbering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueNumbering">
+    <rdfs:label xml:lang="en">has begin issue numbering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueNumbering">
+    <rdfs:label xml:lang="de">hat beginnende Ausgabenzählung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueNumbering">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueNumbering">
+    <rdfs:comment xml:lang="en">The numbering of the beginning issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueNumbering">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueExtension">
+    <rdfs:label xml:lang="en">has begin issue extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueExtension">
+    <rdfs:label xml:lang="de">hat beginnende Ausgabenergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueExtension">
+    <rdfs:comment xml:lang="en">A textual descrimination of the beginning issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginIssueExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdfs:label xml:lang="en">has begin temporal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdfs:label xml:lang="de">hat beginnende Zeit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdfs:comment xml:lang="en">A temporal information for the beginning group, like a year, a season, a month or a day</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporal">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdfs:label xml:lang="en">has begin temporal extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdfs:label xml:lang="de">hat beginnende Zeit Ergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdfs:comment xml:lang="en">Refines the value of the property hasBeginTemporal</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasBeginTemporalExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEnd">
+    <rdfs:label xml:lang="en">has end</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEnd">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#ClosedChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEnd">
+    <rdfs:comment xml:lang="en">Super-property to all properties of the ending group</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeCaption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeCaption">
+    <rdfs:label xml:lang="en">has end volume caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeCaption">
+    <rdfs:label xml:lang="de">hat endende Bandbeschriftung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeCaption">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeCaption">
+    <rdfs:comment xml:lang="en">The caption of the ending volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeCaption">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeNumbering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeNumbering">
+    <rdfs:label xml:lang="en">has end volume numbering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeNumbering">
+    <rdfs:label xml:lang="de">hat endende Bandzählung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeNumbering">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeNumbering">
+    <rdfs:comment xml:lang="en">The numbering of the ending volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeNumbering">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeExtension">
+    <rdfs:label xml:lang="en">has end volume extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeExtension">
+    <rdfs:label xml:lang="de">hat endende Bandergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeExtension">
+    <rdfs:comment xml:lang="en">A textual descrimination of the endning volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndVolumeExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueCaption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueCaption">
+    <rdfs:label xml:lang="en">has end issue caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueCaption">
+    <rdfs:label xml:lang="de">hat endende Ausgabenbeschriftung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueCaption">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueCaption">
+    <rdfs:comment xml:lang="en">The caption of the ending issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueCaption">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueNumbering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueNumbering">
+    <rdfs:label xml:lang="en">has end issue numbering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueNumbering">
+    <rdfs:label xml:lang="de">hat endende Ausgabenzählung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueNumbering">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueNumbering">
+    <rdfs:comment xml:lang="en">The numbering of the ending issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueNumbering">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueExtension">
+    <rdfs:label xml:lang="en">has end issue extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueExtension">
+    <rdfs:label xml:lang="de">hat endende Ausgabenergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueExtension">
+    <rdfs:comment xml:lang="en">A textual descrimination of the ending issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndIssueExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdfs:label xml:lang="en">has end temporal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdfs:label xml:lang="de">has endende Zeit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdfs:comment xml:lang="en">A temporal information for the ending group, like a year, a season, a month or a day</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporal">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdfs:label xml:lang="en">has end temporal extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdfs:label xml:lang="de">hat endende Zeit Ergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdfs:comment xml:lang="en">Refines the value of the property hasEndTemporal</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasEndTemporalExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemized">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemized">
+    <rdfs:label xml:lang="en">has itemized</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemized">
+    <rdfs:label xml:lang="de">hat einzelne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemized">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemized">
+    <rdfs:comment xml:lang="en">Super-property to all properties of a itemized Chronology</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeCaption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeCaption">
+    <rdfs:label xml:lang="en">has itemized volume caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeCaption">
+    <rdfs:label xml:lang="de">hat einzelne Bandbeschriftung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeCaption">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeCaption">
+    <rdfs:comment xml:lang="en">The caption of the volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeCaption">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeNumbering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeNumbering">
+    <rdfs:label xml:lang="en">has itemized volume numbering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeNumbering">
+    <rdfs:label xml:lang="de">hat einzelne Bandzählung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeNumbering">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeNumbering">
+    <rdfs:comment xml:lang="en">The numbering of the volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeNumbering">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeExtension">
+    <rdfs:label xml:lang="en">has itemized volume extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeExtension">
+    <rdfs:label xml:lang="de">hat einzelne Bandergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeExtension">
+    <rdfs:comment xml:lang="en">A textual descrimination of the volume</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedVolumeExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueCaption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueCaption">
+    <rdfs:label xml:lang="en">has itemized issue caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueCaption">
+    <rdfs:label xml:lang="de">hat einzelne Ausgabenbeschriftung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueCaption">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueCaption">
+    <rdfs:comment xml:lang="en">The caption of the issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueCaption">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueNumbering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueNumbering">
+    <rdfs:label xml:lang="en">has itemized issue numbering</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueNumbering">
+    <rdfs:label xml:lang="de">hat einzelne Ausgabenzählung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueNumbering">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueNumbering">
+    <rdfs:comment xml:lang="en">The numbering of the issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueNumbering">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueExtension">
+    <rdfs:label xml:lang="en">has itemized issue extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueExtension">
+    <rdfs:label xml:lang="de">hat einzelne Ausgabenergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueExtension">
+    <rdfs:comment xml:lang="en">A textual descrimination of the issue</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedIssueExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdfs:label xml:lang="en">has itemized temporal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdfs:label xml:lang="de">has einzelne Zeit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdfs:comment xml:lang="en">A temporal information, like a year, a season, a month or a day</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporal">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdfs:label xml:lang="en">has temporal extension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdfs:label xml:lang="de">hat Zeit Ergänzung</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdfs:comment xml:lang="en">Refines the value of the property hasItemizedTemporal</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#hasItemizedTemporalExtension">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/temporal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+    <skos:scopeNote xml:lang="en">Used to transport the whole source description of a chronology.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+    <rdfs:definedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+    <skos:scopeNote xml:lang="en">Used to give information about the frequency with which items are added to the collection.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+    <rdfs:definedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <skos:scopeNote xml:lang="en">Used to transport the whole source description of a chronology.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdfs:definedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/extend">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/extend">
+    <skos:scopeNote xml:lang="en">Used to give information about the number of units in the chronology.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/extend">
+    <rdfs:definedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+    <skos:scopeNote xml:lang="en">Used to relate a chronology to a sub chronology.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+    <rdfs:definedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <rdf:type rdf:resource="http://purl.org/ontology/ecpo#CurrentChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <rdfs:label xml:lang="en">current</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <rdfs:label xml:lang="de">laufend</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <owl:differentFrom rdf:resource="http://purl.org/ontology/ecpo#Closed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <rdfs:comment xml:lang="en">A current Chronology.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Current">
+    <ecpo:hasBegin rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ecpo:hasBegin>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <rdf:type rdf:resource="http://purl.org/ontology/ecpo#ClosedChronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <rdfs:label xml:lang="en">closed</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <rdfs:label xml:lang="de">abgeschlossen</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <owl:differentFrom rdf:resource="http://purl.org/ontology/ecpo#Current"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <rdfs:comment xml:lang="en">A closed Chronology.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <ecpo:hasBegin rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ecpo:hasBegin>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Closed">
+    <ecpo:hasEnd rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ecpo:hasEnd>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <rdf:first rdf:resource="http://purl.org/ontology/ecpo#Current"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <rdf:first rdf:resource="http://purl.org/ontology/ecpo#Closed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <rdf:rest rdf:nodeID="genid11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <owl:distinctMembers rdf:nodeID="genid12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasItemized"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <rdf:first rdf:nodeID="genid14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <rdf:first rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <rdf:rest rdf:nodeID="genid15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid17">
+    <owl:intersectionOf rdf:nodeID="genid16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid20">
+    <rdf:first rdf:nodeID="genid19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid20">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid21">
+    <rdf:first rdf:nodeID="genid18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid21">
+    <rdf:rest rdf:nodeID="genid20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid22">
+    <owl:unionOf rdf:nodeID="genid21"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid23">
+    <rdf:first rdf:nodeID="genid22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid23">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid24">
+    <rdf:first rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid24">
+    <rdf:rest rdf:nodeID="genid23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <owl:disjointWith rdf:nodeID="genid17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <owl:intersectionOf rdf:nodeID="genid24"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid26">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasBegin"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid26">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid27">
+    <owl:onProperty rdf:resource="http://purl.org/ontology/ecpo#hasEnd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid27">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid28">
+    <rdf:first rdf:nodeID="genid27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid28">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid29">
+    <rdf:first rdf:resource="http://purl.org/ontology/ecpo#Chronology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid29">
+    <rdf:rest rdf:nodeID="genid28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid25">
+    <rdfs:subClassOf rdf:nodeID="genid26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid25">
+    <owl:intersectionOf rdf:nodeID="genid29"/>
+  </rdf:Description>
+</rdf:RDF>

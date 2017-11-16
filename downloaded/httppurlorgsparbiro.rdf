@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/BibliographicList">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+    <rdfs:label xml:lang="en">bibliographic list</rdfs:label>
+    <dc:description xml:lang="en">A bibliographic list is composed only of items containing bibliographic references.  Moreover, it is always a realization of a bibliographic collection.</dc:description>
+    <rdfs:subClassOf rdf:nodeID="Nab55dfeff3e34f25a0a029b29faa4666"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/co/List"/>
+    <rdfs:comment xml:lang="en">An ordered list of bibliographic items, each of which contains a bibliographic reference.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N3bc6912954814d8b914dba17a70f34d9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro">
+    <dc:description rdf:resource="https://svn.code.sf.net/p/sempublishing/code/BiRO/BiRO.png"/>
+    <owl:imports rdf:resource="http://purl.org/spar/frbr"/>
+    <rdfs:comment xml:lang="en">BiRO, the Bibliographic Reference Ontology is an ontology for describing bibliographic records and references, and their compilation into bibliographic collections and reference lists. It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/.</rdfs:comment>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+    <dc:date>2013-05-11</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BiRO, the Bibliographic Reference Ontology, is an ontology structured according to the FRBR model to define bibliographic records (as subclasses of frbr:Work) and bibliographic references (as subclasses of frbr:Expression), and their compilations into bibliographic collections such as library catalogues, and into bibliographic lists such as reference lists in journal articles, respectively.
+
+It provides a logical system for relating an individual bibliographic reference, such as appears in the reference list of a published article (which may lack the title of the cited article, the full names of the listed authors, or indeed the full list of authors):
+- to the full bibliographic record for that cited article, which in addition to missing reference fields may also include the name of the publisher, and the ISSN or ISBN of the publication;
+- to collections of bibliographic records such as library catatlogues; and
+- to bibliographic lists, such as reference lists.</dc:description>
+    <dc:title xml:lang="en">BiRO, the Bibliographic Reference Ontology</dc:title>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+    <rdfs:comment xml:lang="en">This ontology is available at http://purl.org/spar/biro, and uses the namespace prefix biro.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1.1</owl:versionInfo>
+    <owl:imports rdf:resource="http://purl.org/co"/>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf1ca268c5e764cba95af3652b0c598b0">
+    <rdf:first rdf:resource="http://purl.org/spar/biro/BibliographicReference"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3bc6912954814d8b914dba17a70f34d9">
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realizationOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/BibliographicRecord">
+    <rdfs:label xml:lang="en">bibliographic record</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+    <rdfs:comment xml:lang="en">A record that uniquely describes a particular textual or data publication (or a work in preparation for publication). Each bibliographic record is a set of entities describing aspects of the referenced work, including, for example, but not restricted to: authors, title, journal, publication year, DOI, ISSN, publisher and copyright information, or, in the case of a data publication: creators, title, version, archive, publication year, DOI or other identifier). The FRBR expression of a bibliographic record is a bibliographic reference, which usually contains only a sub-set of these entities, ordered in a particular way that corresponds to the house style of the publication in which it occurs.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Ne4e2d9882c31492b9ca94a0b77f3d50a"/>
+    <dc:description xml:lang="en">A bibliographic record is realized only through bibliographic references.</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/co/Set"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/BibliographicCollection">
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+    <dc:description xml:lang="en">A bibliographic collection is composed only of items containing bibliographic records.  Moreover, it cannot be part of other bibliographic collections, and it is realized only by bibliographic lists. </dc:description>
+    <rdfs:label xml:lang="en">bibliographic collection</rdfs:label>
+    <rdfs:comment xml:lang="en">A collection of bibliographic records, each of which references a publication (or a work in preparation for publication). Examples of bibliographic collections include a collection of the bibliographic records of all the publications that a single individual has authored, or a collection of those bibliographic records to be included in a research paper, where they are expressed as a reference list.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N90e041fc0b3d4e3fae05120f991b5ee4"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/co/Set"/>
+    <rdfs:subClassOf rdf:nodeID="N73b401363c394dfdb8b9fa8c8a11d3dc"/>
+    <rdfs:subClassOf rdf:nodeID="Nce953363868c4225846c68f53949d854"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndcc61c43b1bc475cba41f3a9d6616d85">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realizationOf"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/BibliographicReference">
+    <rdfs:subClassOf rdf:nodeID="Nff619fafde774b4f829b90224e350cc3"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dc:description xml:lang="en">A bibliographic reference is a realization of a bibliographic record. Moreover, it can contain only items referring to elements contained by the bibliographic record it realizes.</dc:description>
+    <rdfs:comment xml:lang="en">An expression of a bibliographic record in a specific format, that references a particular textual or data publication (or a work in preparation for publication). Each bibliographic reference is a list of items containing entities that describe aspects of the referenced work - for example authors, title, journal, publication year - selected from the bibliographic record.  Note that because different journal styles may require omission of elements of the bibliographic record in references included in a paper's reference list (e.g. the title, the identifier, the names of the eighth and subsequent authors), and because errors can be introduced when an author creates a bibliographic reference, the bibliographic reference to a published work may not be a complete or fully accurate expression of the information contained within the authoritative bibliographic record for that work.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Ndcc61c43b1bc475cba41f3a9d6616d85"/>
+    <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/co/List"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Work">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d56fb94fb444c148bdfed0ebf75aa5f">
+    <rdf:rest rdf:nodeID="Nf1ca268c5e764cba95af3652b0c598b0"/>
+    <rdf:first rdf:resource="http://purl.org/spar/biro/BibliographicRecord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/references">
+    <rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Endeavour"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Ncbfc08fffd4a43eeb9b9fdd1b94ef1f1"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/biro/isReferencedBy"/>
+    <rdfs:label xml:lang="en">references</rdfs:label>
+    <rdfs:comment xml:lang="en">The relation between a bibliographic record or a bibliographic reference and the publication being referenced.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N73b401363c394dfdb8b9fa8c8a11d3dc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="Nd38c5656d48f4328bc59d983753fa8f2"/>
+    <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#part"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/LibraryCatalogue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">library catalogue</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/biro/BibliographicCollection"/>
+    <rdfs:comment xml:lang="en">A catalogue of the bibliographic holdings of a library.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N70921605d1524f8589c630bde83f591b">
+    <owl:onProperty rdf:resource="http://purl.org/co/elementOf"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicRecord"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce953363868c4225846c68f53949d854">
+    <owl:onProperty rdf:resource="http://purl.org/co/element"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicRecord"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#realization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4466181eb35544d2b8a541d283244095">
+    <rdf:first rdf:resource="http://purl.org/spar/biro/BibliographicReference"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7827bb0283304f1780f1f73da6b19f15">
+    <rdf:first rdf:resource="http://purl.org/spar/biro/BibliographicRecord"/>
+    <rdf:rest rdf:nodeID="N4466181eb35544d2b8a541d283244095"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/ReferenceList">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/biro/BibliographicList"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">reference list</rdfs:label>
+    <rdfs:comment xml:lang="en">A list used to describe the bibliography of a research paper, a journal article, a book, a book chapter or similar publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nab55dfeff3e34f25a0a029b29faa4666">
+    <owl:onProperty rdf:resource="http://purl.org/co/element"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicReference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N90e041fc0b3d4e3fae05120f991b5ee4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicList"/>
+    <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff619fafde774b4f829b90224e350cc3">
+    <owl:allValuesFrom rdf:nodeID="N70921605d1524f8589c630bde83f591b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/co/element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne4e2d9882c31492b9ca94a0b77f3d50a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
+    <owl:allValuesFrom rdf:resource="http://purl.org/spar/biro/BibliographicReference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#realizationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/biro/isReferencedBy">
+    <rdfs:range rdf:nodeID="Nfdc6279f865c4d6db8923c8a4bbea12e"/>
+    <rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Endeavour"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:label xml:lang="en">is referenced by</rdfs:label>
+    <rdfs:comment xml:lang="en">The relation between a publication and the bibliographic record or bibliographic reference describing it.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncbfc08fffd4a43eeb9b9fdd1b94ef1f1">
+    <owl:unionOf rdf:nodeID="N5d56fb94fb444c148bdfed0ebf75aa5f"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfdc6279f865c4d6db8923c8a4bbea12e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7827bb0283304f1780f1f73da6b19f15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd38c5656d48f4328bc59d983753fa8f2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:resource="http://purl.org/spar/biro/BibliographicCollection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Endeavour">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

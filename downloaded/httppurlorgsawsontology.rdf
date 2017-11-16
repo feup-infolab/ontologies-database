@@ -1,0 +1,3280 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://purl.org/saws/ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://purl.org/saws/ontology">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="ecrm" IRI="http://erlangen-crm.org/current/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="efrbroo" IRI="http://erlangen-crm.org/efrbroo/"/>
+    <Import>http://erlangen-crm.org/efrbroo/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ontology for the Sharing Ancient Wisdoms (SAWS) project, to represent the information and knowledge available in medieval gnomologia (collections of wise sayings). SAWS concentrates mainly on Ancient Greek and Arabic manuscripts containing wisdom literature. All class descriptions are provided by domain experts and the ontology has been developed through collaboration between these experts and ontology developers.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.ancientwisdoms.ac.uk</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Version 2.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="&xsd;double">2.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AbstractManuscriptText"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttributedAuthor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CollectionInstance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Comment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContentItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DecorativeItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Definition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Editor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EditorSection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EditorTitle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Epilogue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HypothesisedInstance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Institution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lacuna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Locus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManuscriptPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marginalia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Narrative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OriginalMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherContentItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalManuscript"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prologue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReconstructedManuscript"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scribe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScribeSection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScribeTitle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Section"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transmitter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#areMarginaliaOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commentMadeBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsTextInLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#decorationAddedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fallsWithin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#follows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#formsPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddedDecoration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAddedMarginalia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAncestor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasChild"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDescendant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMadeComment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMarginalia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMember"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOwned"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUsed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWritten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAncestorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAttributedAuthorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAttributedToAuthor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBySameScribeAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isChildOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCloseRenderingOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCloseTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCommentOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCopiedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCopierOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDescendantOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDifferentTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDirectCopyOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDirectTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEditedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isEditorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFromSamePlaceAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIdentifiedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocatedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocationForWritingOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLongerTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLongerVersionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLooseRenderingOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLooseTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNotPresentIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOlderThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isParentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReferencedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSequentiallySameAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSequentiallySimilarTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isShorterTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isShorterVersionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSiblingOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSourceFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSubSequenceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTransliterationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTransmittedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTransmitterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isTwinOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isUnrelatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVariantOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVariantTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVerbatimOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVerbatimTranslationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isVersionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWrittenAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isWrittenBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isYoungerThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#marginaliaAddedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ownedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#physicalLocationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#physicallyLocatedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#precedes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refersTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usedBy"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AbstractManuscriptText"/>
+        <Class IRI="#OriginalMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttributedAuthor"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CollectionInstance"/>
+        <Class IRI="#OriginalMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comment"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <Class abbreviatedIRI="efrbroo:F23_Expression_Fragment"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContentItem"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <Class abbreviatedIRI="efrbroo:F23_Expression_Fragment"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DecorativeItem"/>
+        <Class abbreviatedIRI="ecrm:E36_Visual_Item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Definition"/>
+        <Class IRI="#ContentItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edition"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EditorSection"/>
+        <Class IRI="#Section"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EditorTitle"/>
+        <Class abbreviatedIRI="ecrm:E35_Title"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Epilogue"/>
+        <Class IRI="#Section"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family"/>
+        <Class abbreviatedIRI="efrbroo:F15_Complex_Work"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HypothesisedInstance"/>
+        <Class IRI="#OriginalMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HypothesisedInstance"/>
+        <ObjectUnionOf>
+            <Class IRI="#AbstractManuscriptText"/>
+            <Class IRI="#CollectionInstance"/>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Institution"/>
+        <Class abbreviatedIRI="ecrm:E74_Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lacuna"/>
+        <Class abbreviatedIRI="ecrm:E53_Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Locus"/>
+        <Class abbreviatedIRI="ecrm:E53_Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManuscriptPart"/>
+        <Class IRI="#Locus"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marginalia"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <Class abbreviatedIRI="efrbroo:F23_Expression_Fragment"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <Class abbreviatedIRI="efrbroo:F22_Self-Contained_Expression"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Narrative"/>
+        <Class IRI="#ContentItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OriginalMaterial"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherContentItem"/>
+        <Class IRI="#ContentItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhysicalManuscript"/>
+        <Class abbreviatedIRI="efrbroo:F4_Manifestation_Singleton"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prologue"/>
+        <Class IRI="#Section"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReconstructedManuscript"/>
+        <Class abbreviatedIRI="efrbroo:F4_Manifestation_Singleton"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scribe"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScribeSection"/>
+        <Class IRI="#Section"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScribeTitle"/>
+        <Class abbreviatedIRI="ecrm:E35_Title"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Section"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <Class abbreviatedIRI="efrbroo:F22_Self-Contained_Expression"/>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Statement"/>
+        <Class IRI="#ContentItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transmitter"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AttributedAuthor"/>
+        <Class IRI="#Editor"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Comment"/>
+        <Class IRI="#Marginalia"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Definition"/>
+        <Class IRI="#Narrative"/>
+        <Class IRI="#OtherContentItem"/>
+        <Class IRI="#Statement"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Edition"/>
+        <Class IRI="#OriginalMaterial"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Editor"/>
+        <Class IRI="#Scribe"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Editor"/>
+        <Class IRI="#Transmitter"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EditorSection"/>
+        <Class IRI="#ScribeSection"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#EditorTitle"/>
+        <Class IRI="#ScribeTitle"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Epilogue"/>
+        <Class IRI="#Prologue"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PhysicalManuscript"/>
+        <Class IRI="#ReconstructedManuscript"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="ecrm:P148_has_component"/>
+        <ObjectProperty IRI="#hasMember"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#areMarginaliaOn"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#commentMadeBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P10i_contains"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#decorationAddedBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fallsWithin"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P10_falls_within"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fallsWithin"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#follows"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#formsPartOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P46i_forms_part_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#formsPartOf"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddedDecoration"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAddedMarginalia"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAncestor"/>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#hasDescendant"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComment"/>
+        <ObjectProperty IRI="#isReferencedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComponent"/>
+        <ObjectProperty abbreviatedIRI="efrbroo:R5_has_component"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDescendant"/>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMadeComment"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMarginalia"/>
+        <ObjectProperty IRI="#isReferencedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMember"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOwned"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasParent"/>
+        <ObjectProperty IRI="#hasAncestor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P46_is_composed_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUsed"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWritten"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAncestorOf"/>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAttributedAuthorOf"/>
+        <ObjectProperty IRI="#hasWritten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAttributedToAuthor"/>
+        <ObjectProperty IRI="#isWrittenBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isBySameScribeAs"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isChildOf"/>
+        <ObjectProperty IRI="#isDescendantOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCloseRenderingOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCloseTranslationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCommentOn"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <ObjectProperty abbreviatedIRI="efrbroo:R5i_is_component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCopiedBy"/>
+        <ObjectProperty IRI="#isWrittenBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isCopierOf"/>
+        <ObjectProperty IRI="#hasWritten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDescendantOf"/>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDirectCopyOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDirectTranslationOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P73i_is_translation_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEditedBy"/>
+        <ObjectProperty IRI="#isWrittenBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isEditorOf"/>
+        <ObjectProperty IRI="#hasWritten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isFromSamePlaceAs"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isIdentifiedBy"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P94i_was_created_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isInLanguage"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P72_has_language"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocatedAt"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P53_has_former_or_current_location"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocatedAt"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocationForWritingOf"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocationOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P53i_is_former_or_current_location_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLocationOf"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLongerTranslationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLongerVersionOf"/>
+        <ObjectProperty IRI="#isVersionOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLooseRenderingOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isLooseTranslationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isOlderThan"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isParentOf"/>
+        <ObjectProperty IRI="#isAncestorOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isReferencedBy"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P67i_is_referred_to_by"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isReferencedBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSequentiallySameAs"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSequentiallySimilarTo"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isShorterTranslationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isShorterVersionOf"/>
+        <ObjectProperty IRI="#isVersionOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSiblingOf"/>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSourceFor"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSubSequenceOf"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTransliterationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTransmittedBy"/>
+        <ObjectProperty IRI="#isWrittenBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTransmitterOf"/>
+        <ObjectProperty IRI="#hasWritten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isTwinOf"/>
+        <ObjectProperty IRI="#isSiblingOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVariantOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVariantTranslationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVerbatimOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVerbatimTranslationOf"/>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isVersionOf"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P130_shows_features_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWrittenAt"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isWrittenBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isYoungerThan"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#marginaliaAddedBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ownedBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#physicalLocationOf"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#physicallyLocatedAt"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#precedes"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#refersTo"/>
+        <ObjectProperty abbreviatedIRI="ecrm:P67_refers_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#refersTo"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#usedBy"/>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="ecrm:P72i_is_language_of"/>
+        <ObjectProperty IRI="#isInLanguage"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMarginalia"/>
+        <ObjectProperty IRI="#areMarginaliaOn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#commentMadeBy"/>
+        <ObjectProperty IRI="#hasMadeComment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#fallsWithin"/>
+        <ObjectProperty IRI="#contains"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAddedDecoration"/>
+        <ObjectProperty IRI="#decorationAddedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#precedes"/>
+        <ObjectProperty IRI="#follows"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#formsPartOf"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasAddedMarginalia"/>
+        <ObjectProperty IRI="#marginaliaAddedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAncestorOf"/>
+        <ObjectProperty IRI="#hasAncestor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#isChildOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isCommentOn"/>
+        <ObjectProperty IRI="#hasComment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <ObjectProperty IRI="#hasComponent"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasDescendant"/>
+        <ObjectProperty IRI="#isDescendantOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasMember"/>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ownedBy"/>
+        <ObjectProperty IRI="#hasOwned"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParent"/>
+        <ObjectProperty IRI="#isParentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasUsed"/>
+        <ObjectProperty IRI="#usedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isWrittenBy"/>
+        <ObjectProperty IRI="#hasWritten"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isAttributedToAuthor"/>
+        <ObjectProperty IRI="#isAttributedAuthorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <ObjectProperty IRI="#isSourceFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isCopiedBy"/>
+        <ObjectProperty IRI="#isCopierOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isEditedBy"/>
+        <ObjectProperty IRI="#isEditorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isLocationOf"/>
+        <ObjectProperty IRI="#isLocatedAt"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isWrittenAt"/>
+        <ObjectProperty IRI="#isLocationForWritingOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isOlderThan"/>
+        <ObjectProperty IRI="#isYoungerThan"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isReferencedBy"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isTransmitterOf"/>
+        <ObjectProperty IRI="#isTransmittedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#physicallyLocatedAt"/>
+        <ObjectProperty IRI="#physicalLocationOf"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isBySameScribeAs"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isDifferentTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isFromSamePlaceAs"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isRelatedTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isSequentiallySameAs"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isSequentiallySimilarTo"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isSiblingOf"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isTwinOf"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isUnrelatedTo"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isDirectTranslationOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isShorterTranslationOf"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isVariantTranslationOf"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI="ecrm:P86i_contains"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#follows"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasAncestor"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasDescendant"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasMember"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isAncestorOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isBySameScribeAs"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isDescendantOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isFromSamePlaceAs"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isMemberOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isSequentiallySameAs"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isSiblingOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isSubSequenceOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#isTwinOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#precedes"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#areMarginaliaOn"/>
+        <Class IRI="#Marginalia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#commentMadeBy"/>
+        <Class IRI="#Comment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsTextInLanguage"/>
+        <ObjectUnionOf>
+            <Class IRI="#ManuscriptPart"/>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#decorationAddedBy"/>
+        <Class IRI="#DecorativeItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#follows"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#formsPartOf"/>
+        <Class IRI="#ManuscriptPart"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAddedDecoration"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAddedMarginalia"/>
+        <Class IRI="#Scribe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComment"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class abbreviatedIRI="efrbroo:F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMadeComment"/>
+        <Class IRI="#Editor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMarginalia"/>
+        <Class IRI="#OriginalMaterial"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMember"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOwned"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="ecrm:E21_Person"/>
+            <Class IRI="#Institution"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectUnionOf>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUsed"/>
+        <Class abbreviatedIRI="efrbroo:F10_Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWritten"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAttributedAuthorOf"/>
+        <Class IRI="#AttributedAuthor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAttributedToAuthor"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <ObjectComplementOf>
+                <Class IRI="#Edition"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <Class IRI="#Edition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBySameScribeAs"/>
+        <ObjectUnionOf>
+            <Class IRI="#ManuscriptPart"/>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCloseRenderingOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCloseTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCommentOn"/>
+        <Class IRI="#Comment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class abbreviatedIRI="efrbroo:F2_Expression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCopiedBy"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <ObjectComplementOf>
+                <Class IRI="#Edition"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCopierOf"/>
+        <Class IRI="#Scribe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDifferentTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDirectCopyOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDirectTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEditedBy"/>
+        <Class IRI="#Edition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isEditorOf"/>
+        <Class IRI="#Editor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFromSamePlaceAs"/>
+        <ObjectUnionOf>
+            <Class IRI="#ManuscriptPart"/>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isIdentifiedBy"/>
+        <ObjectUnionOf>
+            <Class IRI="#Editor"/>
+            <Class IRI="#Scribe"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInLanguage"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+        <Class IRI="#OriginalMaterial"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocatedAt"/>
+        <Class abbreviatedIRI="ecrm:E18_Physical_Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocationForWritingOf"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="ecrm:E53_Place"/>
+            <Class IRI="#Institution"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLocationOf"/>
+        <Class abbreviatedIRI="ecrm:E53_Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLongerTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLongerVersionOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLooseRenderingOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isLooseTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isNotPresentIn"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOlderThan"/>
+        <Class abbreviatedIRI="ecrm:E18_Physical_Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isReferencedBy"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRelatedTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSequentiallySameAs"/>
+        <ObjectUnionOf>
+            <Class IRI="#CollectionInstance"/>
+            <Class IRI="#Section"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSequentiallySimilarTo"/>
+        <ObjectUnionOf>
+            <Class IRI="#CollectionInstance"/>
+            <Class IRI="#Section"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isShorterTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isShorterVersionOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSourceFor"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSubSequenceOf"/>
+        <Class IRI="#Section"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTransliterationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTransmittedBy"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <ObjectComplementOf>
+                <Class IRI="#Edition"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isTransmitterOf"/>
+        <Class IRI="#Transmitter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isUnrelatedTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVariantOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVariantTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVerbatimOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVerbatimTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVersionOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWrittenAt"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isWrittenBy"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isYoungerThan"/>
+        <Class abbreviatedIRI="ecrm:E18_Physical_Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#marginaliaAddedBy"/>
+        <Class IRI="#Marginalia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ownedBy"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#physicalLocationOf"/>
+        <Class IRI="#Locus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#physicallyLocatedAt"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usedBy"/>
+        <Class IRI="#OriginalMaterial"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#areMarginaliaOn"/>
+        <Class IRI="#OriginalMaterial"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commentMadeBy"/>
+        <Class IRI="#Editor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsTextInLanguage"/>
+        <Class abbreviatedIRI="ecrm:E56_Language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#decorationAddedBy"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#follows"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#formsPartOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddedDecoration"/>
+        <Class IRI="#DecorativeItem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAddedMarginalia"/>
+        <Class IRI="#Marginalia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComment"/>
+        <Class IRI="#Comment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class abbreviatedIRI="efrbroo:F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMadeComment"/>
+        <Class IRI="#Comment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMarginalia"/>
+        <Class IRI="#Marginalia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMember"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOwned"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPart"/>
+        <Class IRI="#ManuscriptPart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUsed"/>
+        <Class IRI="#OriginalMaterial"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWritten"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAttributedAuthorOf"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <ObjectComplementOf>
+                <Class IRI="#Edition"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAttributedToAuthor"/>
+        <Class IRI="#AttributedAuthor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBySameScribeAs"/>
+        <ObjectUnionOf>
+            <Class IRI="#ManuscriptPart"/>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCloseRenderingOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCloseTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCommentOn"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComponentOf"/>
+        <Class abbreviatedIRI="efrbroo:F2_Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCopiedBy"/>
+        <Class IRI="#Scribe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCopierOf"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <ObjectComplementOf>
+                <Class IRI="#Edition"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDifferentTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDirectCopyOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDirectTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEditedBy"/>
+        <Class IRI="#Editor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isEditorOf"/>
+        <Class IRI="#Edition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFromSamePlaceAs"/>
+        <ObjectUnionOf>
+            <Class IRI="#ManuscriptPart"/>
+            <Class IRI="#PhysicalManuscript"/>
+            <Class IRI="#ReconstructedManuscript"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isIdentifiedBy"/>
+        <ObjectUnionOf>
+            <Class IRI="#EditorSection"/>
+            <Class IRI="#ScribeSection"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInLanguage"/>
+        <Class abbreviatedIRI="ecrm:E56_Language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInSameFamilyAs"/>
+        <Class IRI="#OriginalMaterial"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocatedAt"/>
+        <Class abbreviatedIRI="ecrm:E53_Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocationForWritingOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLocationOf"/>
+        <Class abbreviatedIRI="ecrm:E18_Physical_Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLongerTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLongerVersionOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLooseRenderingOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isLooseTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isMemberOf"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isNotPresentIn"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOlderThan"/>
+        <Class abbreviatedIRI="ecrm:E18_Physical_Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isReferencedBy"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRelatedTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSequentiallySameAs"/>
+        <ObjectUnionOf>
+            <Class IRI="#CollectionInstance"/>
+            <Class IRI="#Section"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSequentiallySimilarTo"/>
+        <ObjectUnionOf>
+            <Class IRI="#CollectionInstance"/>
+            <Class IRI="#Section"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isShorterTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isShorterVersionOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSourceFor"/>
+        <Class IRI="#Edition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSubSequenceOf"/>
+        <Class IRI="#Section"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTransliterationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTransmittedBy"/>
+        <Class IRI="#Transmitter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isTransmitterOf"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+            <ObjectComplementOf>
+                <Class IRI="#Edition"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isUnrelatedTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVariantOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVariantTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVerbatimOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVerbatimTranslationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVersionInAnotherLanguageOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVersionOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWrittenAt"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="ecrm:E53_Place"/>
+            <Class IRI="#Institution"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isWrittenBy"/>
+        <Class abbreviatedIRI="ecrm:E21_Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isYoungerThan"/>
+        <Class abbreviatedIRI="ecrm:E18_Physical_Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#marginaliaAddedBy"/>
+        <Class IRI="#Scribe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ownedBy"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="efrbroo:F10_Person"/>
+            <Class IRI="#Institution"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#physicalLocationOf"/>
+        <Class abbreviatedIRI="ecrm:E33_Linguistic_Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#physicallyLocatedAt"/>
+        <Class IRI="#Locus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class abbreviatedIRI="ecrm:E1_CRM_Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usedBy"/>
+        <Class abbreviatedIRI="efrbroo:F10_Person"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty abbreviatedIRI="ecrm:P148i_is_component_of"/>
+        <ObjectProperty IRI="#isNotPresentIn"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#commentMadeBy"/>
+        <ObjectProperty IRI="#decorationAddedBy"/>
+        <ObjectProperty IRI="#marginaliaAddedBy"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasAddedDecoration"/>
+        <ObjectProperty IRI="#hasAddedMarginalia"/>
+        <ObjectProperty IRI="#hasMadeComment"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasAncestor"/>
+        <ObjectProperty IRI="#hasDescendant"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasChild"/>
+        <ObjectProperty IRI="#hasParent"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isAncestorOf"/>
+        <ObjectProperty IRI="#isDescendantOf"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isChildOf"/>
+        <ObjectProperty IRI="#isParentOf"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isRelatedTo"/>
+        <ObjectProperty IRI="#isUnrelatedTo"/>
+    </DisjointObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ecrm:E21_Person</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Note for SAWS: this includes any human being, named or otherwise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E21_Person</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E35_Title</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ecrm:E39_Actor</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Note for SAWS: we can use Actor to refer to any living being (not necessarily a person, not necessarily still alive) who is identified/named/referred to within a linguistic object, though we may wish to use a more specific class such as Person, AttributedAuthor, Scribe etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E39_Actor</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ecrm:E41_Appellation</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Note for SAWS: we can use Appellation to state a person’s name or other name of interest e.g. of a church</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E41_Appellation</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">appellation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E51_Contact_Point</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">contact point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E53_Place</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>ecrm:E56_Language</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Note for SAWS: This represents language in which a material is written - this is put in the TEI header. 
+
+NB in the TEI header we should use standards for languages, e.g. the more detailed ISO standards at http://www.loc.gov/standards/iso639-2/ , so use “http://id.loc.gov/vocabulary/iso639-2/grc” for Ancient Greek rather than “Greek”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ecrm:E56_Language</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AbstractManuscriptText</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The text that is written in an manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AbstractManuscriptText</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">abstract manuscript text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AttributedAuthor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person to whom original authorship of a linguistic object is attributed, as the source of that linguistic object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AttributedAuthor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">attributed author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CollectionInstance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The gnomologium or other compilation/collection on which we are working</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CollectionInstance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">collection instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Comment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Comment on a part of the material, usually from the modern editor. 
+
+N.B. The Comment class is for comments on a material that do not physically exist on that material. If a comment has been physically written on a material (usually in the margin), then this should be represented as an instance of Marginalia. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Comment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ContentItem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A basic unit of interest within the Material: a division of a collection instance/section, for more exact reference than when using a section – this identifies basic units of interest in the material for SAWS (marked in TEI as &lt;seg&gt;)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ContentItem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">content item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DecorativeItem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Decorative element (picture, ornamentation, etc) within the material, either meaning-bearing or non meaning-bearing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DecorativeItem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">decorative item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Definition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A content item that is defining a concept or term used in the material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Definition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Edition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any edited material, known or unknown, including texts such as the Bible and Kekaumenos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Edition</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">edition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Editor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A modern scholar editing material to produce an edition, in the age of printing and beyond</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Editor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">editor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EditorSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any division within a linguistic object created by an editor, e.g. to make the navigation of the text clearer or to mark a region of interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EditorSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">editor section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EditorTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Indicates a title that was assigned outside the manuscript by an editor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EditorTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">editor title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Epilogue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">epilogue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Family</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A grouping of related Materials - this is a concept, an interpretation, rather than a physical thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Family</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HypothesisedInstance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The physical instance of an abstract manuscript text or collection instance which we hypothesise may have existed, but which we do not have - it is presumed lost or destroyed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HypothesisedInstance</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hypothesised instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Institution</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An Institution can own materials, be located at places, and include persons as members</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Institution</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">institution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lacuna</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A physical gap in the physical manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lacuna</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">lacuna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Locus</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A physical location within a physical manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Locus</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">locus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ManuscriptPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A physical section of a physical manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ManuscriptPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">manuscript part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Marginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Remark(s) physically written in the margin of the material by a scribe, not necessarily the original scribe. 
+
+N.B. If a comment has been physically written on a material (usually in the margin), then this should be represented as an instance of Marginalia. The Comment class is for comments on a material that don’t physically exist on that material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Marginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Material</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any of the texts we are working on in SAWS or that we are referring to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Material</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Narrative</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Narrative text that is not a saying itself, that either stands alone or is the text surrounding or immediately preceding or following the Statement (saying), e.g. &apos;Aristotle says...&apos;, &apos;The frogs asked for a king.’, ‘Aristotle is a lover of knowledge’</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Narrative</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">narrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OriginalMaterial</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A material produced by scribe transcription rather than being edited in modern times</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OriginalMaterial</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">original material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OtherContentItem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A unit of the material within a content item, as identified by the modern editor, which isn’t a narrative, statement, or definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OtherContentItem</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">other content item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysicalManuscript</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The physical object on which the material we are working on exists</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhysicalManuscript</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">physical manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Prologue</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">prologue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ReconstructedManuscript</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Manuscript whose parts are now distributed as separate manuscript parts, so no longer exists as a whole, but can still be identified</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ReconstructedManuscript</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">reconstructed manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Scribe</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The producer / author / copier of a linguistic object (excluding editions), in the medieval age. The scribe can be named or unnamed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scribe</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ScribeSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any division within a linguistic object indicated by a scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScribeSection</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">scribe section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ScribeTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Indicates a title that was assigned within the manuscript by a scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScribeTitle</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">scribe title</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Section</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A division of a linguistic object e.g. chapter, verse, for larger-scale reference than when using a content item. These can be nested/numbered</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Section</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Statement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The actual saying, e.g. &apos;All men are mortal&apos;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Statement</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">statement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Transmitter</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person who is described in the text content as having transmitted a content item or other linguistic objects, for example ‘[Transmitter] said that [AttributedAuthor] said … (ContentItem)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Transmitter</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">transmitter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#areMarginaliaOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To indicate that Marginalia have been written on the manuscript,e .g. in the margins</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#areMarginaliaOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">are marginalia on</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#commentMadeBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A comment has been made by a modern-day scholar/editor. 
+
+NB to represent marginalia physically written in the margins of the manuscript, use: Marginalia marginaliaAddedBy Scribe.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#commentMadeBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">comment made by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#commentMadeBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LinguisticObject isWrittenBy Person
+Marginalia marginaliaAddedBy Scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#decorationAddedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A DecorativeItem has been physically added onto the manuscript by a Person
+
+NB to represent marginalia notes (text) physically written in the margins of the manuscript, use: Marginalia marginaliaAddedBy Scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#decorationAddedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">decoration added by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#decorationAddedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Marginalia marginaliaAddedBy Scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#follows</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Section/ContentItem/CollectionInstance comes after another Section/ContentItem/CollectionInstance in the document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#follows</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">follows</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#formsPartOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Physical Manuscripts can be composed of many Manuscript Parts – this relationship would be stated once for each part. This relationship can be used both for existing Manuscript Parts or for Manuscript Parts which used to be parts of a manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#formsPartOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">forms part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAddedDecoration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Person has physically added a DecorativeItem onto the manuscript
+
+NB to represent where scribes have written marginalia notes (text) physically onto the manuscript, use: Scribe hasAddedMarginalia Marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAddedDecoration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has added decoration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#hasAddedDecoration</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Scribe hasAddedMarginalia Marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAddedMarginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Scribe has physically added Marginalia onto a manuscript.
+
+NB to represent where a modern-day scholar/editor makes a comment, not written onto the manuscript, use: Editor hasMadeComment Comment </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAddedMarginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has added marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#hasAddedMarginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person hasWritten LinguisticObject
+Editor hasMadeComment Comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAncestor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ancestor OriginalMaterial is a source material (direct or indirect) for the production of part or all of the descendant OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAncestor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has ancestor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasChild</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The parent OriginalMaterial is a direct source for the production of part or all of the child OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasChild</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasChild</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasComment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To indicate that something has been commented about in an editorial Comment </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDescendant</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ancestor OriginalMaterial is a source material (direct or indirect) for the production of part or all of the descendant OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDescendant</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has descendant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMadeComment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A modern-day scholar/editor has made a comment. 
+
+NB to represent scribes physically writing marginalia on the manuscript, use: Scribe hasAddedMarginalia.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMadeComment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has made comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#hasMadeComment</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person hasWritten LinguisticObject
+Scribe hasAddedMarginalia Marginalia </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMarginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To indicate that a manuscript has had Marginalia written on it, e.g. in the margins</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMarginalia</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">We use hasMember to indicate:
+- A Family contains the specified original material (i.e. one
+produced by Scribe transcription rather than being edited in modern times)
+- An Institution has as a member this Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#hasMember</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dct:hasPart
+efrbroo:R10_has_member
+ecrm:P107_has_current_or_former_member</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasOwned</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Person has owned (either currently or in the past) the Material of Interest. This would normally be based on a specific statement/mark of ownership.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasOwned</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has owned</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasParent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The parent OriginalMaterial is a known direct source for the production of part or all of the child OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasParent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Physical Manuscripts can be composed of many Manuscript Parts – this relationship would be stated once for each part. This relationship can be used both for existing Manuscript Parts or for Manuscript Parts which used to be parts of a manuscript</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasUsed</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Person has used (either currently or in the past) the OriginalMaterial in their work. Interaction is other than ownership.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasUsed</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has used</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasWritten</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Person has written (or has transcribed) a LinguisticObject.
+NB This also includes:
+Editor hasWritten Comment
+Scribe hasWritten Marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasWritten</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has written</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#hasWritten</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Editor hasMadeComment Comment
+Scribe hasAddedMarginalia Marginalia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAncestorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ancestor OriginalMaterial is a source material (direct or indirect) for the production of part or all of the descendant OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAncestorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is ancestor of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAttributedAuthorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An author has been attributed as the author of this LinguisticObject (any Linguistic Object except Edition)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAttributedAuthorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is attributed author of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isAttributedToAuthor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject (except Edition) is attributed to this AttributedAuthor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isAttributedToAuthor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is attributed to author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isBasedOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is based upon one or more textual materials (manuscripts, collections etc). One &lt;relation&gt; per each textual material)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBasedOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is based on</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isBySameScribeAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The two manuscripts (or parts of the manuscripts) have been copied/produced by the same Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBySameScribeAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is by same scribe as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isBySameScribeAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person hasWritten LinguisticObject
+LinguisticObject isWrittenBy Person
+
+PhysicalManuscript/ReconstructedManuscript/ManuscriptPart isFromSamePlaceAs PhysicalManuscript/ReconstructedManuscript/ManuscriptPart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isChildOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The parent OriginalMaterial is a direct source for the production of part or all of the child OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isChildOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is child of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCloseRenderingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property specifies the source and target LinguisticObject involved (respectively) when rendering one LinguisticObject instance to express it in a related but different way (not necessarily in a different Language), resulting in a new LinguisticObject e.g. poetry into prose, or from one dialect to another, or a paraphrase being made.  This property indicates that the new LinguisticObject is a close rendering of the original LinguisticObject. This need not imply that one is a direct copy of the other, nor which is the earlier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCloseRenderingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is close rendering of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isCloseRenderingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isCloseTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCloseTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property indicates that the translated text is a close interpretation of the original text. This need not imply that one is a direct translation of the other, nor which is the earlier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCloseTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is close translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isCloseTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLooseTranslationOf
+isCloseRenderingOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCommentOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To indicate that an editorial Comment is being made about something</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCommentOn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is comment on</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCopiedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject (except Edition) is copied by this Scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCopiedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is copied by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isCopierOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Scribe has written or copied this LinguisticObject (any Linguistic Object except Edition)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isCopierOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is copier of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDescendantOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ancestor OriginalMaterial is a source material (direct or indirect) for the production of part or all of the descendant OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDescendantOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is descendant of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDifferentTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To explicitly say that two things are different from each other</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDifferentTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is different to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDirectCopyOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To say explicitly that one Linguistic Object is a direct copy of another Linguistic Object. This relationship can be used in conjunction with other relationships which specify more details about the copying, e.g. isLooseRenderingOf, isVersionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDirectCopyOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is direct copy of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isDirectCopyOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isDirectTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isDirectTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">the translator worked directly from an MS or text which we have identified. This does imply that the first Linguistic Object is a direct translation of the second Linguistic Object, meaning that the second Linguistic Object existed first. This relationship can be used in conjunction with other relationships which specify more details about the translation, e.g. isLooseTranslationOf, isLongerTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDirectTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is direct translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isDirectTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isDirectTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isEditedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An Edition is edited by an Editor (someone from the SAWS team or another modern-day scholar)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEditedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is edited by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isEditorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An Editor (a modern-day scholar, e.g. someone from the SAWS team) has edited an Edition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isEditorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is editor of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isFromSamePlaceAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The two manuscripts (or parts of the manuscripts) have been copied/produced in the same Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isFromSamePlaceAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is from same place as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isFromSamePlaceAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">(Place or Institution) isLocationForWritingOf Material
+Material isWrittenAt (Place or Institution)
+
+PhysicalManuscript/ReconstructedManuscript/ManuscriptPart isBySameScribeAs  PhysicalManuscript/ReconstructedManuscriptPart</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isIdentifiedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A ScribeSection of text within the source isIdentifiedBy a Scribe/An EditorSection of text within the source isIdentifiedBy a modern-day Editor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isIdentifiedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is identified by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isInLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is text in the specified Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isInLanguage</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is in language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isInSameFamilyAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Two OriginalMaterials are related by being part of the same Family of Original Materials</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isInSameFamilyAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is in same family as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLocatedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A physical thing is (or was) located at a particular location (Place or Locus)
+
+NB Use this relation if you are talking about a physically-existing object being located at a physical place. Use physicallyLocatedAt if you are talking about an abstract linguistic object being found at a particular locus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocatedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is located at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLocatedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">physicallyLocatedAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLocationForWritingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Place is the location witnessing the writing (or transcription) of a LinguisticObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocationForWritingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is location for writing of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLocationForWritingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLocationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A particular Place or Locus is (or was) the location of a physical thing.
+
+NB Use this relation if you are talking about the physical location of a physically-existing object. Use physicalLocationOf if you are talking about the physical location for an abstract linguistic object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is location of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">physicalLocationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLongerTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Linguistic Object is a enhanced or expanded version of another Linguistic Object, in a different language. This need not imply that one is a direct translation of the other, nor which is the earlier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLongerTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is longer translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLongerTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLongerVersionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLongerVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is related to another LinguisticObject in that it conveys the same ideas (FRBRoo: Work), but is expressed in an expanded or enhanced version of the text (FRBRoo: a different and longer Expression). This need not imply that one is a direct copy of the other, nor which is the earlier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLongerVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is longer version of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLongerVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLongerTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLooseRenderingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property specifies the source and target LinguisticObject involved (respectively) when rendering one LinguisticObject instance to express it in a related but different way (not necessarily in a different Language), resulting in a new LinguisticObject e.g. poetry into prose, or from one dialect to another, or a paraphrase being made. This property indicates that the new LinguisticObject is a loose rendering of the original LinguisticObject. This need not imply that one is a direct copy of the other, nor which is the earlier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLooseRenderingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is loose rendering of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLooseRenderingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLooseTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isLooseTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property indicates that the translated text is a loose interpretation of the original text. This need not imply that one is a direct translation of the other, nor which is the earlier].</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isLooseTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is loose translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isLooseTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isCloseTranslationOf
+isLooseRenderingOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isMemberOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">We use isMemberOf to indicate:
+- An OriginalMaterial is member of a Family of related
+OriginalMaterials
+- A Person is member of an Institution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isMemberOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is member of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isMemberOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dct:isPartOf
+efrbroo:R10i_is_member_of
+ecrm:P107i_is_current_or_former_member_of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isNotPresentIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To specify that a piece of text is missing from a LinguisticObject, for example if this text appears in a corresponding part of a manuscript from the same Family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isNotPresentIn</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is not present in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isOlderThan</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Physical man-made thing (physical manuscript) is older than (i.e. was produced earlier in time than) another specified Physical man-made thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isOlderThan</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is older than</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isParentOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The parent OriginalMaterial is a direct source for the production of part or all of the child OriginalMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isParentOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is parent of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isReferencedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property allows you to say that an object or some text (internal to that document or from an external source) is referred to in the text of a LinguisticObject, e.g. by being described or being alluded to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isReferencedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is referenced by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isRelatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Two things are related in some way. This relation may be used where the details of the link are to be refined at a later date, or where some relation is seen but the annotater cannot be more specific than to indicate that this relationship exists.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isRelatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is related to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSequentiallySameAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A CollectionInstance or Section has the same sequential structure as another CollectionInstance or Section. N.B. CollectionInstances contain sequences of ordered Sections. Sections contain sequences of ordered ContentItems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSequentiallySameAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is sequentially same as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isSequentiallySameAs</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSequentiallySimilarTo
+isSubSequenceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSequentiallySimilarTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A CollectionInstance or Section has a slightly different but related sequential structure to another CollectionInstance or Section. N.B. CollectionInstances contain sequences of ordered Sections. Sections contain sequences of ordered ContentItems</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSequentiallySimilarTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is sequentially similar to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isSequentiallySimilarTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSequentiallySameAs
+isSubSequenceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isShorterTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Linguistic Object is a condensed version of another Linguistic Object, in a different language. This need not imply that one is a direct translation of the other, nor which is the earlier]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isShorterTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is shorter translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isShorterTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isShorterVersionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isShorterVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is related to another LinguisticObject in that it conveys the same ideas (FRBRoo: Work), but is expressed in a more concise version (FRBRoo: a different and shorter Expression)]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isShorterVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is shorter version of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isShorterVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isShorterTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSiblingOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The two OriginalMaterials are produced using the same source(s) OriginalMaterial(s) (as indirect or direct source)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSourceFor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A textual material (manuscripts, collections etc) is one of the source documents on which a Linguistic Object is based. One &lt;relation&gt; per each textual material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSourceFor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is source for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isSubSequenceOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Section is formed of a sequence of ContentItems that is a subsequence of the sequence of ContentItems in another Section</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isSubSequenceOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is sub sequence of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isSubSequenceOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSequentiallySameAs
+isSequentiallySimilarTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTransliterationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is a transliteration of another LinguisticObject, i.e. same words but using a different set of characters, e.g. kai isTransliterationOf και . This need not imply that one is a direct translation of the other, nor which is the earlier]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTransliterationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is transliteration of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isTransliterationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isDirectTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTransmittedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject (except Edition) is transmitted by this Transmitter (Person)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTransmittedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is transmitted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTransmitterOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Transmitter (Person) has transmitted this LinguisticObject (any Linguistic Object except Edition)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTransmitterOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is transmitter of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isTwinOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The two OriginalMaterials are produced using the same direct source OriginalMaterial(s)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isTwinOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is twin of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isUnrelatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">To explicitly say two things are not at all related but are completely independent of each other</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isUnrelatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is unrelated to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVariantOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is a linguistically modified copy of a second LinguisticObject, in the same language/genre, and of the same length, with only small variation in use or order of words, e.g. one or two words substituted for another, or a connective inserted. This may or may not have different conceptual function. This need not imply that one is a direct copy of the other, nor which is the earlier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isVariantOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is variant of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isVariantOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isVariantTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVariantTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is a slightly modified copy of another LinguisticObject.
+
+For comparing between different languages (where a translation act is known to have taken place directly between those documents, in a particular direction)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isVariantTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is variant translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isVariantTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isVariant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVerbatimOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is a verbatim, word-for-word copy of another LinguisticObject. This need not imply that one is a direct copy of the other, nor which is the earlier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isVerbatimOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is verbatim of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isVerbatimOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isVerbatimTranslationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVerbatimTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">word-for-word translation (ad pedem). This need not imply that one is a direct translation of the other, nor which is the earlier]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isVerbatimTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is verbatim translation of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isVerbatimTranslationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isVerbatimOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVersionInAnotherLanguageOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is a version of another LinguisticObject in another language. This need not imply that one is a direct translation of the other, nor which is the earlier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isVersionInAnotherLanguageOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is version (in another language) of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isVersionInAnotherLanguageOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isVersionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is a version in the same language of another LinguisticObject. This relates to the other object, but matches less closely than isVariantOf. This need not imply that one is a direct copy of the other, nor which is the earlier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is version of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isVersionOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isVersionInAnotherLanguageOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isWrittenAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is written (or transcribed) at a specified Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isWrittenAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is written at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isWrittenAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLocatedAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isWrittenBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A LinguisticObject is written (or transcribed) by a specified Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isWrittenBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is written by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isWrittenBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Comment commentMadeBy Editor
+Marginalia marginaliaAddedBy Scribe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isYoungerThan</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Physical man-made thing (physical manuscript) is younger than (i.e. was produced later in time than) another specified Physical man-made thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isYoungerThan</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is younger than</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#marginaliaAddedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Marginalia have been physically added onto the manuscript by a Scribe
+
+NB to represent where a comment has been made by a modern-day scholar/editor, not written onto the manuscript, use: Comment commentMadeBy Editor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#marginaliaAddedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">marginalia added by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#marginaliaAddedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LinguisticObject isWrittenBy Person
+Comment commentMadeBy Editor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ownedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Material of interest has been owned (in the past or currently) by this particular Person. This would normally be based on a specific statement/mark of ownership.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ownedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">owned by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#physicalLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This lets you describe the physical location of the LinguisticObject, e.g. a particular piece of text, or Marginalia, by recording the Locus that the notes are physically written on in a Material. You can describe the Locus (e.g. folio number, or position on the page) in free text, in as much detail as required, if there is no formal way to describe the location of the text/marginalia] 
+
+NB Use this relation if you are talking about the physical location for an abstract linguistic object. Use isLocationOf if you are talking about the physical location of a physically-existing object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#physicalLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">physical location of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#physicalLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLocationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#physicallyLocatedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This lets you describe the physical location of the LinguisticObject, e.g. a particular piece of text, or Marginalia, by recording the Locus that the notes are physically written on in a Material. You can describe the Locus (e.g. folio number, or position on the page) in free text, in as much detail as required, if there is no formal way to describe the location of the text/marginalia
+
+NB Use this relation if you are talking about an abstract linguistic object which is to be found at a particular locus. Use isLocatedAt if you are talking about a physically-existing object being located at a physical place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#physicallyLocatedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">physically located at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#physicallyLocatedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isLocatedAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#precedes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Section/ContentItem/CollectionInstance comes before another Section/ContentItem/CollectionInstance in the document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#precedes</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">precedes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refersTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This property allows you to say that the text of a LinguisticObject makes a reference to (or mentions) some other text or object, either within the text (e.g. as allusion) or external to the text (for external things, please give a URI for that object) This can include references to summaries (eg ToC).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refersTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">refers to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#usedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Original Material of interest has been used by this particular Person in their work. Interaction is other than ownership.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#usedBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">used by</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

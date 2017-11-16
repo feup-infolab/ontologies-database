@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bf="http://bibframe.org/vocab/" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:cc="http://creativecommons.org/ns#" xmlns:daia="http://purl.org/ontology/daia/" xmlns:dct="http://purl.org/dc/terms/" xmlns:dso="http://purl.org/ontology/dso#" xmlns:ecpo="http://purl.org/ontology/ecpo#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:frbr="http://purl.org/vocab/frbr/core#" xmlns:gr="http://purl.org/goodrelations/v1#" xmlns:holding="http://purl.org/ontology/holding#" xmlns:org="http://www.w3.org/ns/org#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdaa="http://rdaregistry.info/Elements/a/" xmlns:rdac="http://rdaregistry.info/Elements/c/" xmlns:rdai="http://rdaregistry.info/Elements/i/" xmlns:rdam="http://rdaregistry.info/Elements/m/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:service="http://purl.org/ontology/service#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:ssso="http://purl.org/ontology/ssso#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <dct:title xml:lang="en">Holding Ontology</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <rdfs:label xml:lang="en">Holding Ontology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <vann:preferredNamespacePrefix>holding</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <vann:preferredNamespaceUri>http://purl.org/ontology/holding#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <dct:description>A vocabulary to express (library) holdings in RDF</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-12-08</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <owl:versionInfo>0.1.2+35</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <dct:creator>Carsten Klee</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding">
+    <dct:creator>Jakob Voß</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:first rdf:resource="http://rdaregistry.info/Elements/c/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:first rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:rest rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:first rdf:resource="http://bibframe.org/vocab/HeldItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:rest rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Item">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Item">
+    <rdfs:label xml:lang="en">Item</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Item">
+    <rdfs:comment xml:lang="en">Use one of bf:HeldItem frbr:Item rdac:Item</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Item">
+    <owl:unionOf rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:first rdf:resource="http://rdaregistry.info/Elements/c/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:first rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:rest rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:first rdf:resource="http://schema.org/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:rest rdf:nodeID="genid5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <rdf:rest rdf:nodeID="genid6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <rdf:first rdf:resource="http://bibframe.org/vocab/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <rdf:rest rdf:nodeID="genid7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Agent">
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Agent">
+    <rdfs:comment xml:lang="en">Use one of bf:Agent or foaf:Agent</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Agent">
+    <owl:unionOf rdf:nodeID="genid8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:first rdf:resource="http://schema.org/CreativeWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:first rdf:resource="http://bibframe.org/vocab/Instance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:rest rdf:nodeID="genid9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <rdf:first rdf:resource="http://bibframe.org/vocab/Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <rdf:rest rdf:nodeID="genid10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <rdf:first rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <rdf:rest rdf:nodeID="genid11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <rdf:first rdf:resource="http://purl.org/ontology/bibo/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <rdf:rest rdf:nodeID="genid12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Document">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Document">
+    <rdfs:label xml:lang="en">Document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Document">
+    <rdfs:comment xml:lang="en">Use one of bibo:Document, foaf:Document, bf:Work or bf:Instance</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#Document">
+    <owl:unionOf rdf:nodeID="genid13"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <rdf:first rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <rdf:first rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <rdf:rest rdf:nodeID="genid14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <owl:unionOf rdf:nodeID="genid15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <rdfs:label xml:lang="en">collected by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <rdfs:comment xml:lang="en">Relates a document and/or item to an agent who collects it.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <rdfs:domain rdf:nodeID="genid16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#collects"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collectedBy">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/collector"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid17">
+    <rdf:first rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid17">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <rdf:first rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <rdf:rest rdf:nodeID="genid17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <owl:unionOf rdf:nodeID="genid18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <rdfs:label xml:lang="en">collects</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <rdfs:comment xml:lang="en">Relates an agent to a document and/or item that is collected by the agent.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <rdfs:range rdf:nodeID="genid19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#collectedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#collects">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/collectorOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:label xml:lang="en">held by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:comment xml:lang="en">Relates an item to an agent who holds the item.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#holds"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:seeAlso rdf:resource="http://bibframe.org/vocab/heldBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/currentOwner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/owner"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#heldBy">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/holding#collectedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:label xml:lang="en">holds</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:comment xml:lang="en">Relates an agent to an item which the agent holds.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/a/currentOwnerOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/a/ownerOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/holding#collects"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#holds">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#heldBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdfs:label xml:lang="en">has exemplar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdfs:comment xml:lang="en">Relates a document to an item that is an exemplar of the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdfs:seeAlso rdf:resource="http://purl.org/vocab/frbr/core#exemplar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/m/exemplarOfManifestation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplar">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#exemplarOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdfs:label xml:lang="en">is examplar of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdfs:comment xml:lang="en">Relates an item to the document that is exemplified by the item.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdfs:seeAlso rdf:resource="http://bibframe.org/vocab/holdingFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/manifestationExemplified"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#exemplarOf">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#exemplar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <rdfs:label xml:lang="en">broader exemplar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <rdfs:comment xml:lang="en">Relates a document to an item that contains an exemplar of the document as part.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/containedInItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplar">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#broaderExemplarOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <rdfs:label xml:lang="en">broader exemplar of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <rdfs:comment xml:lang="en">Relates an item to a document which is partly exemplified by the item.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/containsItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#broaderExemplarOf">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#broaderExemplar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <rdfs:label xml:lang="en">narrower exemplar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <rdfs:comment xml:lang="en">Relates a document to an item that is an exemplar of a part of the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/containsItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplar">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#narrowerExemplarOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <rdfs:label xml:lang="en">narrower exemplar of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <rdfs:comment xml:lang="en">Relates an item to a document which is partly exemplified by the item.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <rdfs:range rdf:resource="http://purl.org/ontology/holding#Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/containedInItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#narrowerExemplarOf">
+    <owl:inverseOf rdf:resource="http://purl.org/ontology/holding#narrowerExemplar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:label xml:lang="en">label</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:comment xml:lang="en">A call number, shelf mark or similar label of an item</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/holding#Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:seeAlso rdf:resource="http://bibframe.org/vocab/label"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:seeAlso rdf:resource="http://bibframe.org/vocab/shelfMark"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:seeAlso rdf:resource="http://rdaregistry.info/Elements/i/identifierForTheItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:seeAlso rdf:resource="http://purl.org/goodrelations/v1#hasStockKeepingUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:seeAlso rdf:resource="http://schema.org/sku"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:seeAlso rdf:resource="http://schema.org/name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/holding#label">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdfs:label xml:lang="en">Chronology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/ecpo#Chronology">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ecpo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Location">
+    <rdfs:label xml:lang="en">Location</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Location">
+    <owl:equivalentClass rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/goodrelations/v1#Location">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/goodrelations/v1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#DocumentService">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#DocumentService">
+    <rdfs:label>DocumentService</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/dso#DocumentService">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/dso"/>
+  </rdf:Description>
+</rdf:RDF>

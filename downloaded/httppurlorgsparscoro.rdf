@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/technician">
+    <rdfs:comment xml:lang="en">The role a person has of being a technician, providing technical assistance in some endeavour such as a research investigation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">technician</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/participant">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by an agent who takes part in something, for example a conference, a private meeting or a public event.</rdfs:comment>
+    <rdfs:label xml:lang="en">participant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/designs-experiments">
+    <rdfs:comment xml:lang="en">The contribution of experimental design and planning.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdfs:label xml:lang="en">designs experiments</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/solo-effort">
+    <rdfs:label xml:lang="en">contributed all the effort</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ContributionEffort"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contributor was the only person who provided effort in achieving this contribution, which was entirely due to this contributor.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/researcher">
+    <rdfs:comment xml:lang="en">The role a person has of being a researcher involved in a research investigation, for example by conducting experiments, collecting and analyzing data, or undertaking formal study.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">researcher</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/patent-holder">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role held by an agent who holds a patent.
+
+[See also http://purl.org/spar/scoro/rights-holder and http://purl.org/spar/pro/copyright-owner].</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">patent holder</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/corresponding-author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">corresponding author</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+    <rdfs:comment xml:lang="en">The role an author has of being the corresponding author of the document, with whom editors and readers should correspond concerning it. </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/hasORCID">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">has ORCID</rdfs:label>
+    <rdfs:comment xml:lang="en">A data property relating an individual to his/her Open Researcher and Contributor ID (ORCID), an alphanumeric identifier for individual scholars described at http://about.orcid.org/.</rdfs:comment>
+    <dc:description xml:lang="en">owl:equivalentProperty &lt;http://purl.org/spar/frapo/hasORCID&gt; .</dc:description>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/spar/scoro/hasPersonalIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ContributionSituation">
+    <rdfs:label xml:lang="en">contribution situation</rdfs:label>
+    <dc:description xml:lang="en">A contribution situation describes always:
+- a particular contribution C
+- a particular agent A making contribution C
+- a particular time interval T in which A makes C (optional)
+- a particular contribution effort E 
+- one or more entities (e.g. an investigation or data) that defines a context for C contributed by A. (At least one contextual entity should be specified for a particular contribution).</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/ValueInTime"/>
+    <rdfs:subClassOf rdf:nodeID="N4fc23b8c531b467d9196c17540361528"/>
+    <rdfs:comment xml:lang="en">The situation an agent has of making a contribution to realizing a goal or completing a task relating to a scholarly activity or entity such as journal article.  The type or nature of the contribution is defined by the object of the object property scoro:withContribution, which is an individual in the class scoro:Contribution or one of its sub-classes.  The entity to which the contribution relates is specified using the object property scoro:relatesToEntity or one of its sub-properties, and the effort expended in making that contribution is specified using the object property scoro:withContributionEffort.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/OrganizationalContribution">
+    <rdfs:comment xml:lang="en">Defines the type or nature of an organizational or administrative contribution.  Individual members of this class are used to specify particular contributions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">organizational contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/workpackage-leader">
+    <rdfs:label xml:lang="en">workpackage leader</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+    <rdfs:comment xml:lang="en">The role a person or institution has of being leader for a workpackage or sub-project within a project such as a research project, with responsibility for ensuring that the proposed work is undertaken and documented, the generated data are properly curated and archived, and the results are published and reported to the funding agency.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/college-head">
+    <rdfs:label xml:lang="en">college head</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role held by a senior academic who heads a college and acts as its CEO.  Among the many alternative titles give to this role, the most common are President or Master of the college.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/sponsor">
+    <rdfs:comment xml:lang="en">The role held by an agent that provides funds or support for a person, project or activity, often in return for access to the exploitable commercial potential associated with that person’s work, or that project or activity’s output, for example through equity sharing or publicity.
+
+[Note: there are also several other non-financial meaning of 'sponsor'.]</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">sponsor</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/inventor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">inventor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role a person has of being the inventor or some entity (for example a computer algorithm, or an experimental procedure).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/funding-recipient">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">funding recipient</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent who is the official recipient of funding, for example the university of which a funded research project leader is a member.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/research-student">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being a research student, namely someone engaged in research as part of studying for a higher degree at a university or research institute, whose research will be presented in a thesis in part fulfilment of the requirements of that degree.</rdfs:comment>
+    <rdfs:label xml:lang="en">research student</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/makesContribution">
+    <rdfs:label xml:lang="en">makes contribution</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="en">An object property linking an agent to a contribution.  This is done via the indirection: foaf:Agent scoro:makesContribution [ a scoro:ContributionSituation ; scoro:withContribution scoro:Contribution ; scoro:withEffort scoro:ContributionEffort ] .  The ontology permits one to specify the time period over which a contribution is made, and the other contextual entities to which that agent's contribution relates.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/hasValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/programme-manager">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">programme manager</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by a person who is in charge of a programme of related activities or projects, for example on behalf of a funding agency.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/EducationalRole">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to an educational organization or activity.  Individual members of this class are used to specify particular educational roles.</rdfs:comment>
+    <rdfs:label xml:lang="en">educational role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/contractor">
+    <rdfs:comment xml:lang="en">The role held by an agent who enters into a contract to undertake specified work or to supply specified services in return for payment.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">contractor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/computer-programmer">
+    <rdfs:comment xml:lang="en">The role a person has of being someone who develops computer software.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">computer programmer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/maintains-IT-Infrastructure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of maintaining the IT infrastructure required for the research.</rdfs:comment>
+    <rdfs:label xml:lang="en">maintains IT infrastructure</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/withEffort">
+    <rdfs:domain rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/scoro/ContributionEffort"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
+    <rdfs:comment xml:lang="en">An object property connecting an agent's contribution with respect to a particular entity to the amount of effort exerted by this agent in making that contribution, defined by individuals of the class scoro:ContributionEffort.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">with contribution effort</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/chief-executive-officer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by a person who is the chief executive officer of an organization, responsible for directing and managing the business of that organization.</rdfs:comment>
+    <rdfs:label xml:lang="en">chief executive officer</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">CEO</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/data-manager">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">data manager</rdfs:label>
+    <rdfs:comment xml:lang="en">The role a person has of being a data manager, responsible for day-to-day management, maintenance and back-up of data, for example those arising from the research project or held in a repository.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/">
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-09-04</dc:date>
+    <dc:description xml:lang="en">SCoRO, the Scholarly Contributions and Roles Ontology, is an ontology for use by authors and publishers for describing the contributions that may be made and the roles that may be held by a person with respect to a journal article or other publication, and by research administrators for describing contributions and roles with respect to other aspects of scholarly research.
+
+In this ontology, the object properties (e.g. scoro:makesContribution) and the individuals within classes (e.g. scoro:conducts-experiments) are expressed in the present tense, as is conventional for ontologies, but should be taken as potentially referring to past, present or future roles and contributions.
+
+Since roles have contexts and times that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the SCORO ontology permit these contexts to be specified, using an ontological design pattern called the time-indexed value in context (TVC) (http://www.essepuntato.it/2012/04/tvc/) which is part of the PRO ontology (http://purl.org/spar/pro/) imported by SCORO. 
+ 
+This ontology design pattern permits one to construct the following RDF statements:
+       foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime pro:withRole pro:editor ] .
+
+Thus the domain of pro:withRole is not foaf:Agent, but rather an anonymous member of the class pro:RoleInTime, which itself is the range of the property pro:holdsRoleInTime, for which the domain is foaf:Agent. 
+
+The range of pro:withRole is the class pro:Role, and its sub-classes pro:PublishingRole, scoro:InvestigationalRole, scoro:OrganizationalRole, etc., whose members permit specific roles to be specified.  
+   
+This single step of indirection permits other contextual and temporal attributes (not shown here) to be specified for this member of the class pro:RoleInTime, putting that role into context.
+
+Exemplar usage: 
+
+	fabio:Dataset  dcterms:contributor  [ rdf:type foaf:Organization ; 
+	   foaf:name "Met Office" ;  
+	   foaf:homepage &lt;http://www.metoffice.gov.uk/&gt;  ; 
+	   pro:holdsRoleInTime [ a pro:RoleInTime 
+		  pro:withRole  scoro:data-creator ]  ] .
+
+Exactly the same use of TVC and of individuals within the class scoro:Contribution and its sub-classes is used for scoro:withContribution, enabling contributions to be time-limited and given contexts.
+</dc:description>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.9.1</owl:versionInfo>
+    <rdfs:comment xml:lang="en">SCoRO is written in OWL 2 DL, and imports FOAF, the Friend of a Friend Ontology (http://xmlns.com/foaf/spec/) and PRO the Publishing Roles Ontology (http://purl.org/spar/pro/).   This ontology is available at http://purl.org/spar/scoro/, and uses the namespace prefix 'scoro'.
+
+It is designed to be used in conjunction with FRAPO, the Funding, Research Administration and Projects Ontology (http://purl.org/spar/frapo/), and with FaBiO, the FRBR-aligned Bibliographic Ontology (http://purl.org/spar/fabio/).
+
+A Web-based scholarly contributions report form based on this ontology, for use in creating metadata to describe authorship roles and scholarly contributions to journal articles and their underlying research, is available from http://purl.org/spar/scoro/**** (to be created).
+
+Alternatively, an Excel Scholarly Contributions Report Form based on this ontology, created using RightField (http://www.sysmo-db.org/rightfield) also for use in creating metadata to describe authorship roles and scholarly contributions to journal articles and their underlying research, is available from http://purl.org/spar/scoro/SCoRF.xls.</rdfs:comment>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+    <owl:imports rdf:resource="http://purl.org/spar/pro"/>
+    <owl:priorVersion rdf:resource="https://svn.code.sf.net/p/sempublishing/code/SCoRO/2016-01-19-SCoRO-1_9.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title xml:lang="en">SCoRO, the Scholarly Contributions and Roles Ontology</dc:title>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/FinancialRole">
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to academic and project finance.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:label xml:lang="en">financial role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/prepares-illustrations">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of selecting the data and preparing the figures and tables presenting these data for inclusion in the publication. </rdfs:comment>
+    <rdfs:label xml:lang="en">prepares illustrations</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/manager">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by a person responsible for managing the day-to-day activities of an activity, enterprise or organization.</rdfs:comment>
+    <rdfs:label xml:lang="en">manager</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/head-of-department">
+    <rdfs:comment xml:lang="en">The role held by a person who is the chief executive officer of a department within a larger organization, for example a senior academic who is head of a university academic department.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">head of department</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/withContribution">
+    <rdfs:range rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdfs:comment xml:lang="en">An object property connecting an agent's contribution situation to a definition of the contribution made by this agent, specified as an instance of the class scoro:Contribution or of one of its sub-classes.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">with contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nabd8e294dc044c90aaf4e364142baf8f">
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdf:rest rdf:nodeID="N458a00cb799f40cd99bf566f3ff29147"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/withJobTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdfs:label xml:lang="en">with job title</rdfs:label>
+    <rdfs:comment xml:lang="en">A data property connecting an agent's role in time to a job title that characterizes that role.  This data property complements the definition of that role in time specified by scoro:Role.  For example, for the scoro:OrganizationalRole 'Head of Department', the specific Job Title might be 'Linacre Professor of Zoology' or 'Regius Professor of Moral Philosophy'. </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/maintains-organisms-or-cells">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of maintaining multicellular organisms (plants, animals or fungi) or cell cultures used as experimental subjects, and of breeding these where appropriate.  
+
+[Note that there may be occasions when it is inappropriate to acknowledge such contributions, for fear of personal reprisals on the individuals involved from animal rights activists].</rdfs:comment>
+    <rdfs:label xml:lang="en">maintains organisms or cell cultures</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/departmental-administrator">
+    <rdfs:label xml:lang="en">departmental administrator</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by a person who is the administrator of a department within a larger organization, for example of a university academic department.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/agent">
+    <rdfs:comment xml:lang="en">An agent that acts on behalf of another agent.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">agent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25f418bef68647ad90adbc7dc2853c4e">
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdf:rest rdf:nodeID="N44b17df7744441b686a22a1eb60193da"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/percentageFTE">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A data property permitting specification of the proportion of a person's full time activity that is dedicated to a particular role (e.g. for part-time employment, 50% FTE).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdfs:label xml:lang="en">percentage full-time equivalent</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/leads-investigation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">leads investigation</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of providing intellectual leadership and direction for the research.  
+
+Note that an individual other than the principal investigator and the co-investigators may make considerable leadership contributions to a research investigation.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/AuthorshipContribution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <rdfs:comment xml:lang="en">Defines the type or nature of a contribution made with respect to the authorship of a publication such as a journal article.  Individual members of this class are used to specify particular authorship contributions.</rdfs:comment>
+    <rdfs:label xml:lang="en">authorship contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-tools-equipment-or-facilities">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:label xml:lang="en">provides tools, equipment or facilities</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of providing tools, equipment or facilities for the research, while not actively participating in the work.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/Contribution">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Defines the type or nature of a contribution made by an agent.  Individual members of this class or its sub-classes are used to specify particular contributions.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://purl.org/spar/scoro/ContributionEffort"/>
+    <rdfs:label xml:lang="en">contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/data-creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdfs:label xml:lang="en">data creator</rdfs:label>
+    <rdfs:comment xml:lang="en">The role a person has of being a creator, originator, gatherer or collector of new data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ExperimentalContribution">
+    <rdfs:label xml:lang="en">experimental contribution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Defines the type or nature of a practical or experimental contribution made to the research.  Individual members of this class are used to specify particular contributions.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/isRelatedToContributionSituation">
+    <rdfs:label xml:lang="en">is related to contribution situation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+    <rdfs:comment xml:lang="en">A property relating an entity to the contribution situation for which that entity provides the context.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/chief-technology-officer">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">chief technology officer</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">CTO</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by a person who is the chief technology officer of an organization, responsible for directing and managing technical developments for that organization.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/data-publisher">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of an agent who publishes data.</rdfs:comment>
+    <rdfs:label xml:lang="en">data publisher</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/approves-final-manuscript">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of approving the final version of the manuscript, prior to submission for publication. </rdfs:comment>
+    <rdfs:label xml:lang="en">approves final manuscript</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4fc23b8c531b467d9196c17540361528">
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <owl:onProperty rdf:resource="http://purl.org/spar/scoro/withContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/processes-data">
+    <rdfs:comment xml:lang="en">The contribution of processing, cleaning, assembling, condensing or refining the data.</rdfs:comment>
+    <rdfs:label xml:lang="en">processs data</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/analyses-data">
+    <rdfs:comment xml:lang="en">The contribution of data analysis.  This might include statistical analysis, bioinformatics analysis, or image analysis.</rdfs:comment>
+    <rdfs:label xml:lang="en">analyses data</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/DataRole">
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to data.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:label xml:lang="en">data role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/writes-manuscript-draft">
+    <rdfs:label xml:lang="en">writes manuscript draft</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of writing the initial draft of the manuscript of the research paper.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-exising-data">
+    <rdfs:label xml:lang="en">provides existing data</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of providing pre-existing data for re-use in the research.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2288b33db4141fb8f8a314e289e778b">
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+    <rdf:rest rdf:nodeID="N7946edaa4791446e9f86f537e7655289"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/isMadeBy">
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is made by</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/scoro/makesContribution"/>
+    <rdfs:comment xml:lang="en">A property relating a contribution situation that an agent makes, to that agent.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/doctoral-student">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/EducationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">doctoral student</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person registerd for a Ph.D. degree at a university.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2cfe33691f6f464b92c2d63bf1de0d17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="Na2380a750d84400c9c672997ec7131a1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/service-engineer">
+    <rdfs:comment xml:lang="en">The role held by a person who services, maintains and repairs equipment, facilities or technical infrastructure. </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">service engineer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-technical-support">
+    <rdfs:comment xml:lang="en">The contribution of providing technical support that facilitates research.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:label xml:lang="en">provides technical support</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/manages-project">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">manages project</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of project management.  
+
+Note that an individual other than the person holding the formal role of project manager may make considerable contributions to the management of a research project.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/accountant">
+    <rdfs:label xml:lang="en">accountant</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by a person whose job is to manage financial accounts, for example the accounts of an organization, or of a particular funded project or activity of that organization.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/controls-project-finances">
+    <rdfs:comment xml:lang="en">The contribution of controlling the financial aspects of the research project, including authorizing expenditure, creating and managing budgets, and submitting financial reports to the funding agency.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+    <rdfs:label xml:lang="en">controls project finances</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ensures-regulatory-compliance">
+    <rdfs:comment xml:lang="en">The contribution of ensuring regulatory compliance for the research undertaken, for example in obtaining informed consent from patients, approval from research ethics or radiation safety committees, or a license for animal experimentation.  </rdfs:comment>
+    <rdfs:label xml:lang="en">ensures regulatory compliance</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/InvestigationRole">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to an investigation.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:label xml:lang="en">investigation role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/isEqualToContributionSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">is equal to contribution situation</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:comment xml:lang="en">This property allows the link of two contribution situations that are equals for particular aspects (i.e. for type of contribution, contribution effort and context).</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/access-provider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdfs:comment xml:lang="en">The role of an agent who provides access to a resource, for example an online data repository.</rdfs:comment>
+    <rdfs:label xml:lang="en">access provider</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/isEqualToRoleInTime">
+    <rdfs:comment xml:lang="en">This property allows the link of two roles in time as being equal, and is particularly useful for specifying that two principal authorship roles are equal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/pro/RoleInTime"/>
+    <rdfs:label xml:lang="en">is equal to role in time</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/affiliate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">affiliate</rdfs:label>
+    <dc:description xml:lang="en">The affiliation of a person to an organization or institution can be specified by using the property pro:relatesToEntity, as shown in the following example:
+
+foaf:Person scoro:holdsOrganizationalRole [ pro:withRole pro:affiliate ; pro:relatesToEntity _:aff ] .
+
+_:aff a foaf:Organization ; vcard:extended-address 'Department of Zoology, University of Oxford, United Kingdom' .</dc:description>
+    <rdfs:comment xml:lang="en">The role an agent has of being affiliated to some organization or institution in a context of some entity or activity, for example a document, a project or an internship.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/postdoctoral-researcher">
+    <rdfs:label xml:lang="en">postdoctoral researcher</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being a post-doctoral researcher involved in a research investigation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/performs-experiments">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of performing experiments.</rdfs:comment>
+    <rdfs:label xml:lang="en">performs experiments</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-reagents-specimens-or-materials">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of providing reagents, specimens or materials, including living organisms and cells, for example those not readily obtainable from commercial sources, to make possible the research.</rdfs:comment>
+    <rdfs:label xml:lang="en">provides reagents, specimens or materials</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ComputationalAgent">
+    <rdfs:comment xml:lang="en">A computer system or software program whose action has an effect on external events, for example a laboratory robot that undertakes your experiments, or the financial control system that controls an institution's payrole, or that, following programmed business rules, prevents the principal investigator from placing an order for research equipment because there is insufficient money left in the project budget.</rdfs:comment>
+    <rdfs:label xml:lang="en">computational agent</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/project-leader">
+    <rdfs:comment xml:lang="en">The role a person or an institution has of being project leader for a resource or a project such as a research project.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">project leader</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/withinContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/vice-chancellor">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">vice-chancellor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by the chief executive officer of a university, responsible for directing and managing its business and academic activities.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/revises-manuscript">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+    <rdfs:label xml:lang="en">revises manuscript</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of critically reviewing and revising drafts of the manuscript of the research paper.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/collects-data">
+    <rdfs:label xml:lang="en">collects data</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of making experimental observations and collecting data, for example using a telescope, a microscope or an analytical instrument.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/photographer">
+    <rdfs:label xml:lang="en">photographer</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being a photographer of, or for, some entity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/curator">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdfs:comment xml:lang="en">The role of an agent that documents, cares for and manages collections of objects (for example in a museum) or of data (as in a data repository or database).  [A data curator is a curator who specializes in digital data, while a librarian is a type of curator specializing in textual publications.]</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">curator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/administrator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">administrator</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent responsible for the day-to-day management and running of an organization or activity.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/supervises-colleagues">
+    <rdfs:label xml:lang="en">Supervises, mentors or trains colleagues</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of supervising, mentoring, instructing or training colleagues, particularly junior research assistants and research students, in aspects of the research or its methodologies.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/supervisor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/EducationalRole"/>
+    <rdfs:label xml:lang="en">supervisor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person who guides and oversees the research activities of a team member, or who formally supervises a student during that student's research project undertaken as part of a degree course at a university.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/embargo-controller">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of the person who has responsibility for setting and lifting embargos that restrict access to a dataset (or a document) for a specified period of time.</rdfs:comment>
+    <rdfs:label xml:lang="en">embargo controller</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/data-curator">
+    <rdfs:comment xml:lang="en">The role a person has of being a data curator, responsible reviewing, enhancing, cleaning, or standardizing data and their associated metadata, for example those arising from the research project, and for their long-term preservation.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdfs:label xml:lang="en">data curator</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ProjectRole">
+    <rdfs:label xml:lang="en">project role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to a project.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/undergraduate-student">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/EducationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">undergraduate student</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person registerd for an undergraduate degree at a university.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by an agent of belonging to a group or organization.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">member</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/spokesperson">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">spokesperson</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by a person who makes statements on behalf of another individual, a group, a project or an institution</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/creates-novel-organisms-or-cells">
+    <rdfs:label xml:lang="en">creates novel organisms or cells</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of creating novel organisms (e.g. mouse mutants) or cells (e.g. tranformed cell lines), either for use in the research, or as a research output of use to others.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/director">
+    <rdfs:comment xml:lang="en">The role held by a person who is in charge of an organization or activity, for example a research institute or a dramatic performance.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">director</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/maintains-research-facility">
+    <rdfs:label xml:lang="en">maintains research facility</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of managing and operating a research facility, for example a confocal microscopy facility.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/rights-holder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">rights holder</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent who holds, owns and manages the legal rights to a project or activity and its products and outcomes, for example the exploitation, licensing and intellectual property rights.  
+
+[See also http://purl.org/spar/scoro/patent-holder and http://purl.org/spar/pro/copyright-owner].</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne1cd667628cb4ec29c6a6796bb48c1fb">
+    <rdf:rest rdf:nodeID="N186fbaca34fe4887bef37c131bad560a"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/employee">
+    <rdfs:comment xml:lang="en">The role held by a person employed for wages or a salary by an organization, to undertake work for that organization.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">employee</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/formulates-research-questions">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdfs:label xml:lang="en">formulates research questions</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of formulating the questions to be answered and the hypotheses to be tested by the research to be undertaken.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/host-institution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">host institution</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role held by a institution of hosting some initiative, people, or event.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/minor-effort">
+    <rdfs:comment xml:lang="en">The contributor provided a minor effort towards achieving this contribution. </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">contributed minor effort</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ContributionEffort"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/registrar">
+    <rdfs:comment xml:lang="en">The role held by an agent responsible for maintaining official records, for example the records of student enrollment and academic standing held by a college or university, or the records of securities owned by a financial institution.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">registrar</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/ContributionEffort">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment xml:lang="en">Defines the effort expended in making a contribution.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">contribution effort</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/consortium-author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">consortium author</rdfs:label>
+    <rdfs:comment xml:lang="en">The authorship role of an organisation or consortium that has contributed collectively to the work described in the publication and is named in the list of authors, e.g. 'Wellcome Trust Case Control Consortium' or 'Malaria Genomic Epidemiology Network'.  (The members of such a group should be separately listed elsewhere in the document).</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/hasContributionContext">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has contribution context</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.essepuntato.it/2012/04/tvc/withinContext"/>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/scoro/isRelatedToContributionSituation"/>
+    <rdfs:comment xml:lang="en">A property relating a contribution situation to an entity representing the context for that situation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/OrganizationalRole">
+    <rdfs:comment xml:lang="en">A role that an agent might hold with respect to an organization and its administration, particularly within an academic context.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">organizational role</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-advice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of providing advice to facilitate the research, while not actively participating in the work.</rdfs:comment>
+    <rdfs:label xml:lang="en">provides advice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/chief-scientist">
+    <rdfs:label xml:lang="en">chief scientist</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:comment xml:lang="en">A senior scientist who takes a leadership role in an organization or group.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/registration-authority">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role of an agent with responsibility for registering and maintaining international standards, internet domain names, patents, controlled vocabularies and other similar entities required for reliable international cooperatative activities.  For example, the International DOI Foundation (IDF) is the Registration Authority for DOIs.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">registration authority</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/major-effort">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contributor provided a major effort towards achieving this contribution.  (It would be unusual for more than three contributors to be described as providing major effort towards achieving any particular contribution).</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ContributionEffort"/>
+    <rdfs:label xml:lang="en">contributed major effort</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/principal-author">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">principal author</rdfs:label>
+    <rdfs:comment xml:lang="en">The role an author has of being the principal or primary author of the document, who has contributed most to the work described.  
+
+(In some communities, but not all, the principal author is named first in the author list.  Two or more authors can have the role of principal author if they contributed equally to the work.  This role should not be employed in communities in which no primacy of authorship is asserted, but where all authors are deemed to have made an equal contribution to the work.)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/master-student">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/EducationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">master student</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of a person registerd for a master degree at a university.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/co-applicant">
+    <rdfs:comment xml:lang="en">The role a person has of being a co-applicant on the grant application to obtain funding to fund an endeavour such as a research project.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">co-applicant</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/project-manager">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">project manager</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being project manager for a project such as a research project.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N458a00cb799f40cd99bf566f3ff29147">
+    <rdf:rest rdf:nodeID="N188c6c785eb0444c9a8579503f186c2f"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/faculty-member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/EducationalRole"/>
+    <rdfs:comment xml:lang="en">The role of an academic employed to undertake research and teaching within a university department, school or institute.</rdfs:comment>
+    <rdfs:label xml:lang="en">faculty member</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/organizer">
+    <rdfs:label xml:lang="en">organizer</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent who organizes something, such as a conference, a private meeting or a public event.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/financial-controller">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">financial controller</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent of controlling the finances, for example the finances of an organization, a building project or a research project.  This role extends to the control of or the authorisation of expenditure from a budget, and may be undertaken by a computational agent.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/principal-investigator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being the principal investigator for a research investigation.</rdfs:comment>
+    <rdfs:label xml:lang="en">principal investigator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/research-assistant">
+    <rdfs:label xml:lang="en">research assistant</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role a person has of being a research assistant involved in a research investigation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/prepares-supplementary-information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">prepares supplementary information</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of preparing the supplementary information files submitted with the manuscript. </rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/supplier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">supplier</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdfs:comment xml:lang="en">The role held by an agent of providing goods or services in exchange for payment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/funder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by an agent of providing funds, for example for a research project.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdfs:label xml:lang="en">funder</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/isContributionIn">
+    <rdfs:range rdf:resource="http://purl.org/spar/scoro/ContributionSituation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <rdfs:label xml:lang="en">is contribution in</rdfs:label>
+    <rdfs:comment xml:lang="en">The property relating the definition of a specific contribution to the contribution situation of an agent making that contribution.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/spar/scoro/withContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/secures-funding">
+    <rdfs:label xml:lang="en">secures funding</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of securing funding for the research project.  
+
+Note that an individual other than the lead applicant and the co-applicants on a grant application may make contributions to securing funding for a research project, for example by assisting in writing the grant application.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/repository-manager">
+    <rdfs:comment xml:lang="en">The role a person has of being a manager of a repository where entities are given secure long-term storage, typically digital repository for information objects, for example a data repository.</rdfs:comment>
+    <rdfs:label xml:lang="en">repository manager</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/article-guarantor">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of a person who takes responsibility for the integrity of the work as a whole, from the inception of the research investigation to the published research article.</rdfs:comment>
+    <rdfs:label xml:lang="en">article guarantor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/data-user">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being a user or re-user of existing data.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">data user</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/obtains-and-or-prepares-specimens">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">obtains and/or prepared specimens</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of obtaining and/or preparing specimens in a manner requiring research expertise or skill, for example collecting and preparing fossils, or preparing electron microscope specimens for examination.  </rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/contact-person">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role of a person who serves as the primary contact and information provider for third parties wishing to find out more about an organization or an activity.</rdfs:comment>
+    <rdfs:label xml:lang="en">contact person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/creates-software">
+    <rdfs:label xml:lang="en">creates software</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of creating computer software, including software for experimental control, analytical tools, mathematical model and computational simulations for use in the research, or of creating an IT service (e.g. a bioinformatics database or Web service) of use to others.  </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/hasPersonalIdentifier">
+    <dc:description xml:lang="en"> owl:equivalentProperty &lt;http://purl.org/spar/frapo/hasPersonalIdentifier&gt; .</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <dc:description xml:lang="en"> owl:equivalentProperty &lt;http://purl.org/spar/datacite/hasPersonalIdentifier&gt; .</dc:description>
+    <rdfs:comment xml:lang="en">A data property specifying a unique and unambiguous identifier for an individual person within a given context, specified by the object property scoro:usesPersonalIdentifierScheme and an individual member of the class scoro:PersonalIdentifierScheme.</rdfs:comment>
+    <rdfs:label xml:lang="en">has personal identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/interprets-results">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of interpretation of experimental results.</rdfs:comment>
+    <rdfs:label xml:lang="en">interprets results</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/builds-and-or-maintains-instruments">
+    <rdfs:label xml:lang="en">builds and/or maintains instruments</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of building instruments, equipment or scientific apparatus and/or maintaining the same in a workable condition for use in experiments.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/illustrator">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being an illustrator of, or for, some entity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">illustrator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/scholar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">scholar</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of an academic who undertakes scholarly activities, including research investigations.  This role is particularly used to describe endeavours in the arts and humanites that are frequently undertaken without financial support from a particular funded project dedicated to these scholarly activities.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/creates-novel-reagents">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of creating novel physical or chemical compounds, or molecular biology constructs, either for use in the research, or as a research output of use to others.</rdfs:comment>
+    <rdfs:label xml:lang="en">creates novel reagents</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/purchaser">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdfs:label xml:lang="en">purchaser</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent of making purchases of goods or services, the cost of which is typically charged to a particular academic budget, for example a project manager placing an order to purchase equipment funded from a research grant.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/claimant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by a person making a financial claim, for example for refund of travel expenses from a project grant.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdfs:label xml:lang="en">claimant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/registration-agency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">registration agency</rdfs:label>
+    <rdfs:comment xml:lang="en">The role of an agent officially appointed by a Registration Authority that acts to register things. For example, CrossRef is a registration agency for DOIs relating to documents, while DataCite is a registration agency for DOIs relating to datasets, both acting for the Registration Authority for DOIs, namely the International DOI Foundation (IDF).</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/conceives-project">
+    <rdfs:label xml:lang="en">conceives project</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of conceiving the research project in the first place.  
+
+Note that an individual other than the lead applicant and the co-applicants on a grant application may make considerable contributions to conceiving a research project, but may be prevented from being a formal applicant by reason of affiliation or status (e.g. as a non-academic partner, or a research student).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/postgraduate-student">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/EducationalRole"/>
+    <rdfs:comment xml:lang="en">The role of a person registerd for a graduate (masters or doctoral) degree at a university.</rdfs:comment>
+    <rdfs:label xml:lang="en">postgraduate student</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/auditor">
+    <rdfs:label xml:lang="en">auditor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by a person who conducts a formal audit of financial accounts.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/undertakes-modelling">
+    <rdfs:label xml:lang="en">undertakes modelling</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/IntellectualContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of design, implementation and analysis of mathematical models or computer simulations.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/college-fellow">
+    <rdfs:label xml:lang="en">college fellow</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role held by an academic as a senior member of a college.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-patients">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdfs:comment xml:lang="en">The contribution of providing access to medical or veterinary patients, to make possible the research.</rdfs:comment>
+    <rdfs:label xml:lang="en">provides patients</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d52a957b366458f9ba48ded64aeb205">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+    <owl:distinctMembers rdf:nodeID="N2339f25581ca496996ca7be3fd1c7f80"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/owner">
+    <rdfs:label xml:lang="en">owner</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent who is the owner of something with actual or potential financial value, for example a building, a piece of equipment, the copyright of a document, or the intellectual property rights relating to an idea or discovery.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/develops-methodology">
+    <rdfs:label xml:lang="en">develops methodology</rdfs:label>
+    <rdfs:comment xml:lang="en">The contribution of developing experimental methodology that enables research.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N188c6c785eb0444c9a8579503f186c2f">
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdf:rest rdf:nodeID="Ne1cd667628cb4ec29c6a6796bb48c1fb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/non-academic-staff-member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role of a person employed within a university department, school or institute who is not a member of the academic faculty.</rdfs:comment>
+    <rdfs:label xml:lang="en">non-academic staff member</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/employer">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:label xml:lang="en">employer</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by an agent that employs one or more people to undertake work on that agent's behalf.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/stakeholder">
+    <rdfs:label xml:lang="en">stakeholder</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role held by an agent with an interest or concern in something, for example the creation of a new university.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/consultant">
+    <rdfs:comment xml:lang="en">The role a person has of being a consultant who is providing expertise or services.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">consultant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-administrative-support">
+    <rdfs:comment xml:lang="en">The contribution of providing administrative support for the research project.  </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+    <rdfs:label xml:lang="en">provides administrative support</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7946edaa4791446e9f86f537e7655289">
+    <rdf:rest rdf:nodeID="N25f418bef68647ad90adbc7dc2853c4e"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#hasTimeIndexedSetting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/collaborator">
+    <rdfs:label xml:lang="en">collaborator</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role a person, typically from another research group or institution, who collaborates with the team undertaking a research investigation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-service">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of providing a research service, for example a DNA sequencing service or a custom peptide synthesis service.</rdfs:comment>
+    <rdfs:label xml:lang="en">provided service</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/lead-applicant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being the lead applicant on the grant application to obtain funding to fund an endeavour such as a research project.</rdfs:comment>
+    <rdfs:label xml:lang="en">lead applicant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/co-investigator">
+    <rdfs:comment xml:lang="en">The role a person has of being a co-investigator for a research investigation.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">co-investigator</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2339f25581ca496996ca7be3fd1c7f80">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/article-guarantor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/sub-contractor">
+    <rdfs:comment xml:lang="en">The role held by an agent who enters into a contract to take over part of another contractor's obligation to undertake specified work or supply specified services in return for payment.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/FinancialRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">sub-contractor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/partner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdfs:comment xml:lang="en">The role held by a person who is a partner with one or more other people in an organization, project, endeavour, activity or sphere of common interest.</rdfs:comment>
+    <rdfs:label xml:lang="en">partner</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/web-master">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/DataRole"/>
+    <rdfs:comment xml:lang="en">The role of a person responsible for maintaining a web site and its content.</rdfs:comment>
+    <rdfs:label xml:lang="en">web-master</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/senior-author">
+    <rdfs:label xml:lang="en">senior author</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The role an author has of being the senior author of the document. </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/publishes-data">
+    <rdfs:comment xml:lang="en">The contribution of publishing in a public database or data repository data arising from the research.  
+
+Note that this activity is distinct from that of publishing a journal article containing a selection of these data.</rdfs:comment>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/AuthorshipContribution"/>
+    <rdfs:label xml:lang="en">publishes data</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/possessor">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">possessor</rdfs:label>
+    <rdfs:comment xml:lang="en">The role held by an agent as possessor or owner of some entity such as an address or a telephone number.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/provides-software">
+    <rdfs:label xml:lang="en">provides software</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ExperimentalContribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The contribution of providing software to facilitate the research, while not actively participating in the work.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#forEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N44b17df7744441b686a22a1eb60193da">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/OrganizationalContribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/successor">
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/OrganizationalRole"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The relationship held by an entity that succeeds another, for example a new electron microscope that replaces an out-dated one, a research project that follows on from a preceding project, or a faculty member who succeeds a colleague as head of department.</rdfs:comment>
+    <rdfs:label xml:lang="en">successor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/withValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/RoleInTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/project-member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label xml:lang="en">project member</rdfs:label>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+    <rdfs:comment xml:lang="en">The role a person has of being a member of a project such as a research project.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/AuthorshipRole">
+    <rdfs:label xml:lang="en">authorship role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A role that a person might hold as an author of a publication or the creator of a work.  Individual members of this class are used to specify particular roles.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/pro/Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9bbaddf2a24643b5850da0be569a964e">
+    <owl:members rdf:nodeID="Na2288b33db4141fb8f8a314e289e778b"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/IntellectualContribution">
+    <rdfs:comment xml:lang="en">Defines the type or nature of an intellectual contribution made to the research described in a journal article.  Individual members of this class are used to specify particular contributions.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/scoro/Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">intellectual contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/scoro/project-student">
+    <rdfs:comment xml:lang="en">The role a person has of being a project student, namely someone engaged in an undergraduate research project as part of studying for an undergraduate degree at a university, whose research will be presented in an undergraduate research project report in part fulfilment of the requirements of that degree.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.org/spar/scoro/InvestigationRole"/>
+    <rdfs:label xml:lang="en">project student</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2380a750d84400c9c672997ec7131a1">
+    <rdf:rest rdf:nodeID="Nabd8e294dc044c90aaf4e364142baf8f"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/AuthorshipRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.essepuntato.it/2012/04/tvc/ValueInTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N186fbaca34fe4887bef37c131bad560a">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://purl.org/spar/scoro/ProjectRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/pro/Role">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" 
+          "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+
+<html xml:lang="en" version="XHTML+RDFa 1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:biol="http://purl.org/NET/biol/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:ubio="urn:lsid:ubio.org:predicates:"> 
+ 
+<head profile="http://www.w3.org/1999/xhtml/vocab http://purl.org/uF/rel-license/1.0/">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<base href="http://purl.org/NET/biol/ns.html" />
+	<title>Biological Taxonomy Vocabulary 0.2 (Core)</title>
+
+	<style type="text/css">
+	
+		@import url("http://buzzword.org.uk/Styles/spec-ns");
+	
+		i.taxon { font-family: serif; }
+		h1 a[rel~="bookmark"],
+		h2 a[rel~="bookmark"],
+		h3 a[rel~="bookmark"]
+		{
+			font-size: small;
+			color: silver;
+			text-decoration: none;
+			vertical-align: middle;
+			position: relative;
+			left: 0.25em;
+		}
+		table.property-summary,
+		table.property-summary *
+		{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			border-collapse: collapse;
+			border-spacing: 0;
+			table-layout: fixed;
+		}
+		table.property-summary th
+		{
+			vertical-align: top;
+			text-align: left;
+			width: 10em;
+		}
+		table.property-summary td
+		{
+			vertical-align: top;
+			text-align: left;
+		}
+		
+	</style>
+
+</head> 
+ 
+<body typeof="owl:Ontology" about="http://purl.org/NET/biol/ns#">
+
+	<div class="head"> 
+		<p>
+			<a href="http://purl.org/NET/biol/" style="background:transparent"><img height="55" width="95" src="http://buzzword.org.uk/rdf/biol/biol-small" alt="Biol Vocab" style="border:0;background:transparent" /></a>
+		</p> 
+		<h1 property="dc:title">
+			Biological Taxonomy Vocabulary 0.2 (Core)
+			<a rel="bookmark" href="#head">#</a>
+		</h1>
+		<h2>
+			Buzzword.org.uk Namespace
+			<span property="dc:modified" content="2008-10-06">6 October 2008</span>
+		</h2>
+		<dl>
+			<dt>This version:</dt>
+			<dd><a href="http://purl.org/NET/biol/ns-20081006">http://purl.org/NET/biol/ns-20081006</a></dd>
+			<dd>(<a rel="alternate" href="http://purl.org/NET/biol/ns-20081006.rdf" type="application/rdf+xml" title="Biological Taxonomy Vocabulary 0.2 (Core) - RDF Schema">RDF Schema</a>)</dd>
+			<dt>Latest version:</dt>
+			<dd><a href="http://purl.org/NET/biol/ns">http://purl.org/NET/biol/ns</a></dd>
+			<dd>(<a href="http://purl.org/NET/biol/ns.rdf" type="application/rdf+xml" title="Biological Taxonomy Vocabulary 0.2 (Core) - RDF Schema">RDF Schema</a>)</dd>
+			<dt>Previous version:</dt>
+			<dd><a href="http://purl.org/NET/biol/ns-20080513">http://purl.org/NET/biol/ns-20080513</a></dd>
+			<dd>(<a href="http://purl.org/NET/biol/ns-20080513.rdf" type="application/rdf+xml" title="Biological Taxonomy Vocabulary 0.1 (Core) - RDF Schema">RDF Schema</a>)</dd>
+			<dt>Editor:</dt>
+			<dd rel="dc:creator">
+				<address typeof="foaf:Person" style="font-style:normal">
+					<a rel="foaf:page" property="foaf:name" href="http://tobyinkster.co.uk/">Toby Inkster</a>, 
+					<i class="taxon" rel="biol:hasTaxonomy">
+						<span property="biol:kingdom" content="Animalia">
+							<span property="biol:phylum" content="Chordata">
+								<span property="biol:class" content="Mammalia">
+									<span property="biol:order" content="Primates">
+										<span property="biol:family" content="Hominidae">
+											<span property="biol:genus" content="Homo">
+												<span property="biol:species" content="Sapiens">
+													<a property="biol:name" rel="biol:seeAlso" href="http://species.wikimedia.org/wiki/Homo_sapiens">Homo sapiens</a>.
+												</span>
+											</span>
+										</span>
+									</span>
+								</span>
+							</span>
+						</span>
+						<span property="biol:authority" content="Linnaeus, 1758"></span>
+						<span property="dc:date" content="2008-05-08"></span>
+					</i>
+				</address>
+			</dd>
+		</dl>
+		<p class="copyright"><span class="dc:rights">Copyright &copy; 2008 Toby Inkster</span>, <a href="http://creativecommons.org/licenses/by-sa/2.0/uk/" rel="license dc:license" title="Creative Commons Attribution-Share Alike 2.0 (UK: England &amp; Wales) Licence">some rights reserved</a>.</p>
+	</div>
+
+	<hr />
+
+	<div property="dc:description">
+	
+		<h2 id="abstract">
+			Abstract
+			<a rel="bookmark" href="#abstract">#</a>
+		</h2>
+	
+		<p>An RDF vocabulary for the taxonomy of all forms of life. The namespace URI for this vocabulary is <a href="http://purl.org/NET/biol/ns#">http://purl.org/NET/biol/ns#</a>; it is usually given the prefix <b>biol</b>. Specific versions of this vocabulary can be referenced using versioned URIs such as <a href="http://purl.org/NET/biol/ns-20080513#">http://purl.org/NET/biol/ns-20080513#</a>, but future versions aim to be backwards compatible, so it is generally better to use the unversioned URI.</p>
+		
+		<p>This vocabulary should cover most people's taxonomic needs, but for those with more specialist needs, there are detailed vocabularies for botany and zoology. The namespaces and links to RDF schema are below, but no detailed specification document is available yet.</p>
+	
+		<ul>
+			<li><a href="http://purl.org/NET/biol/botany#">http://purl.org/NET/biol/botany#</a>
+			(<a href="http://purl.org/NET/biol/botany.rdf">RDF schema</a>)</li>
+			<li><a href="http://purl.org/NET/biol/zoology#">http://purl.org/NET/biol/zoology#</a>
+			(<a href="http://purl.org/NET/biol/zoology.rdf">RDF schema</a>)</li>
+		</ul>
+		
+		<p>The vocabulary can be easily used in conjunction with FOAF and other RDF vocabularies. <a href="#section_Examples">Examples are given below</a>.</p>
+		
+	</div>
+
+	<div id="toc">
+		<h2>
+			Table of Contents
+			<a rel="bookmark contents" href="#toc">#</a>
+		</h2>
+		<ul class="toc">
+			<li>
+				1. <a rel="bookmark chapter section" href="#section_Classes">Classes</a>
+				<ul class="toc">
+					<li>1.1. <a rel="bookmark subsection" href="#term_Taxonomy">biol:Taxonomy</a></li>
+					<li>1.2. <a rel="bookmark subsection" href="#term_ZooTaxonomy">biol:ZooTaxonomy</a></li>
+					<li>1.3. <a rel="bookmark subsection" href="#term_BotTaxonomy">biol:BotTaxonomy</a></li>
+				</ul>
+			</li>
+			<li>
+				2. <a rel="bookmark chapter section" href="#section_Properties">Properties</a>
+				<ul class="toc">
+					<li>2.1. <a rel="bookmark subsection" href="#term_hasTaxonomy">biol:hasTaxonomy</a></li>
+					<li>2.2. <a rel="bookmark subsection" href="#term_name">biol:name</a></li>
+					<li>2.3. <a rel="bookmark subsection" href="#term_commonName">biol:commonName</a></li>
+					<li>2.4. <a rel="bookmark subsection" href="#term_rank">biol:rank</a></li>
+					<li>2.5. <a rel="bookmark subsection" href="#term_kingdom">biol:kingdom</a></li>
+					<li>2.6. <a rel="bookmark subsection" href="#term_secondLevelClassification">biol:secondLevelClassification</a></li>
+					<li>2.7. <a rel="bookmark subsection" href="#term_phylum">biol:phylum</a></li>
+					<li>2.8. <a rel="bookmark subsection" href="#term_division">biol:division</a></li>
+					<li>2.9. <a rel="bookmark subsection" href="#term_class">biol:class</a></li>
+					<li>2.10. <a rel="bookmark subsection" href="#term_order">biol:order</a></li>
+					<li>2.11. <a rel="bookmark subsection" href="#term_family">biol:family</a></li>
+					<li>2.12. <a rel="bookmark subsection" href="#term_genus">biol:genus</a></li>
+					<li>2.13. <a rel="bookmark subsection" href="#term_species">biol:species</a></li>
+					<li>2.14. <a rel="bookmark subsection" href="#term_seeAlso">biol:seeAlso</a></li>
+					<li>2.15. <a rel="bookmark subsection" href="#term_authority">biol:authority</a></li>
+					<li>2.16. <a rel="bookmark subsection" href="#term_morePrecise">biol:morePrecise</a></li>
+				</ul>
+			</li>
+			<li>
+				3. <a rel="help bookmark chapter section" href="#section_Examples">Examples</a>
+				<ul class="toc">
+					<li>3.1. <a rel="bookmark subsection" href="#example_basic">Basic Example</a></li>
+					<li>3.2. <a rel="bookmark subsection" href="#example_full">Extended Example</a></li>
+					<li>3.3. <a rel="bookmark subsection" href="#example_taxodoc">Document Describing a Taxonomy</a></li>
+					<li>3.4. <a rel="bookmark subsection" href="#example_lifedoc">Document Describing a Life Form</a></li>
+					<li>3.5. <a rel="bookmark subsection" href="#example_simple_rdfa">Simple RDFa Example</a></li>
+					<li>3.6. <a rel="bookmark subsection" href="#example_uri">Using URIs as Identifiers for Taxonomies</a></li>
+					<li>3.7. <a rel="bookmark subsection" href="#example_class">Taxonomies as Classes</a></li>
+					<li>3.8. <a rel="bookmark subsection" href="#example_hierarchy">Hierarchies of Taxonomies</a></li>
+				</ul>
+			</li>
+			<li>
+				A. <a rel="bookmark appendix section" href="#section_References">References</a>
+				<ul class="toc">
+					<li>A.1. <a rel="bookmark subsection" href="#section_References-I">Informative References</a></li>
+				</ul>
+			</li>
+			<li>
+				B. <a rel="bookmark appendix section" href="#section_Changes">Change History</a>
+			</li>	
+			<li>
+				C. <a rel="bookmark appendix section" href="#section_Acknowledgments">Acknowledgments</a>
+			</li>
+		</ul>
+	</div>
+	
+	<hr />
+
+	<h2 id="section_Classes">
+		1. Classes
+		<a rel="bookmark" href="#section_Classes">#</a>
+	</h2>
+	
+	<div id="term_Taxonomy" typeof="rdfs:Class" about="[biol:Taxonomy]">
+		<h3>
+			1.1. biol:<dfn property="rdfs:label" content="Taxonomy">Taxonomy</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_Taxonomy">#</a>
+		</h3>	
+		<table class="property-summary">
+			<tr><th>Sub-class of:</th><td rel="rdfs:subClassOf" resource="[rdfs:Class]"><a href="http://www.w3.org/TR/rdf-schema/#ch_class" rel="rdfs:isDefinedBy">rdfs:Class</a></td></tr>
+		</table>
+		<p property="dc:description">A taxonomy is a classification for something. An animal or plant <em>has</em> a taxonomy; an animal or plant <em>is not</em> a taxonomy. For those familiar with object-oriented programming, think of a taxonomy as being analogous to a class, not an object.</p>
+	</div>
+	
+	<div id="term_ZooTaxonomy" typeof="rdfs:Class" about="[biol:ZooTaxonomy]">
+		<h3>
+			1.2. biol:<dfn property="rdfs:label" content="Zoological Taxonomy">ZooTaxonomy</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_ZooTaxonomy">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-class of:</th><td rel="rdfs:subClassOf" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+		</table>
+		<p property="dc:description">A ZooTaxonomy is a subclass of Taxonomy. It is not necessarily used to describe an animal, but it indicates that certain ambiguous terms, such as "division" should be interpreted the way zoologists use them. Most of the time, it is more appropriate to use Taxonomy instead.</p>
+	</div>
+	
+	<div id="term_BotTaxonomy" about="[biol:BotTaxonomy]" typeof="rdfs:Class">
+		<h3>
+			1.3. biol:<dfn property="rdfs:label" content="Botanical Taxonomy">BotTaxonomy</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_BotTaxonomy">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-class of:</th><td rel="rdfs:subClassOf" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+		</table>
+		<p property="dc:description">A BotTaxonomy is a subclass of Taxonomy. It is not necessarily used to describe a plant. Most of the time, it is more appropriate to use Taxonomy instead.</p>
+	</div>
+	
+	<h2 id="section_Properties">
+		2. Properties
+		<a rel="bookmark" href="#section_Properties">#</a>
+	</h2>
+	
+	<div id="term_hasTaxonomy" about="[biol:hasTaxonomy]" typeof="rdf:Property">
+		<h3>
+			2.1. biol:<dfn property="rdfs:label" content="taxonomy">hasTaxonomy</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_hasTaxonomy">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[rdf:type]"><a href="http://www.w3.org/TR/rdf-schema/#ch_type" rel="rdfs:isDefinedBy">rdf:type</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+		</table>
+		<p property="dc:description">This property provides a relationship between an entity (such as a <a href="http://xmlns.com/foaf/spec/#term_Person">foaf:Person</a>) and a taxonomy. Because biologists don't always agree on how to classify life, a single entity may have multiple taxonomies, each of which may be differentiated between using <a href="#term_authority">biol:authority</a> or dc:date.</p>
+	</div>
+
+	<div id="term_name" about="[biol:name]" typeof="rdf:Property">
+		<h3>
+			2.2. biol:<dfn property="rdfs:label">name</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_name">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">A scientific name; a binomial or trinomial. For example, <i class="taxon">Homo sapiens</i>.</p>
+	</div>
+
+	<div id="term_commonName" about="[biol:commonName]" typeof="rdf:Property">
+		<h3>
+			2.3. biol:<dfn property="rdfs:label" content="common name">commonName</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_commonName">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[rdfs:label]"><a href="http://www.w3.org/TR/rdf-schema/#ch_label" rel="rdfs:isDefinedBy">rdfs:label</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">A non-scientific name. For example, "Human".</p>
+	</div>
+	
+	<div id="term_rank" about="[biol:rank]" typeof="rdf:Property">
+		<h3>
+			2.4. biol:<dfn property="rdfs:label">rank</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_rank">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[ubio:taxonomicGroup]">ubio:taxonomicGroup</td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">An unspecified classification. This should not normally be used.</p>
+	</div>
+	
+	<div id="term_kingdom" about="[biol:kingdom]" typeof="rdf:Property">
+		<h3>
+			2.5. biol:<dfn property="rdfs:label">kingdom</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_kingdom">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The highest-level and least specific level of classification. Example kingdoms are <i class="taxon">Animalia</i> and <i class="taxon">Plantae</i>.</p>
+	</div>
+	
+	<div id="term_secondLevelClassification" about="[biol:secondLevelClassification]" typeof="rdf:Property">
+		<h3>
+			2.6. biol:<dfn property="rdfs:label" content="second level classification">secondLevelClassification</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_secondLevelClassification">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The second highest level of classification. Zoologists call these <i>phyla</i> and botanists call them "divisions". In general, you should pick one of those terms and use it instead.</p>
+	</div>
+	
+	<div id="term_phylum" about="[biol:phylum]" typeof="rdf:Property">
+		<h3>
+			2.7. biol:<dfn property="rdfs:label">phylum</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_phylum">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:secondLevelClassification]"><a href="#term_secondLevelClassification">biol:secondLevelClassification</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The second highest level of classification, as used by zoologists. Note that phylum may be used to describe any form of life&nbsp;&#8212; the use of phylum is not meant to imply that the entity being described is an animal, merely that zoological names of ranks are being used.</p>
+	</div>
+	
+	<div id="term_division" about="[biol:division]" typeof="rdf:Property">
+		<h3>
+			2.8. biol:<dfn property="rdfs:label">division</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_division">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:secondLevelClassification]"><a href="#term_secondLevelClassification">biol:secondLevelClassification</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The second highest level of classification, as used by botanists. Note that division may be used to describe any form of life&nbsp;&#8212; the use of division is not meant to imply that the entity being described is a plant, merely that botanical names of ranks are being used. Zoologists use the term "division" to describe a rank between an "infraclass" and a "cohort". biol:division should not be used for this purpose&nbsp;&#8212; use biol:rank instead.</p>
+	</div>
+		
+	<div id="term_class" about="[biol:class]" typeof="rdf:Property">
+		<h3>
+			2.9. biol:<dfn property="rdfs:label">class</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_class">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The third highest level of classification. For example <i class="taxon">Mammalia</i>.</p>
+	</div>
+	
+	<div id="term_order" about="[biol:order]" typeof="rdf:Property">
+		<h3>
+			2.10. biol:<dfn property="rdfs:label">order</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_order">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The fourth highest level of classification. For example "Primates".</p>
+	</div>
+	
+	<div id="term_family" about="[biol:family]" typeof="rdf:Property">
+		<h3>
+			2.11. biol:<dfn property="rdfs:label">family</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_family">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The fifth highest level of classification. For example <i class="taxon">Hominidae</i>.</p>
+	</div>
+	
+	<div id="term_genus" about="[biol:genus]" typeof="rdf:Property">
+		<h3>
+			2.12. biol:<dfn property="rdfs:label">genus</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_genus">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The sixth highest level of classification. For example <i class="taxon">Homo</i>.</p>
+	</div>
+	
+	<div id="term_species" about="[biol:species]" typeof="rdf:Property">
+		<h3>
+			2.13. biol:<dfn property="rdfs:label">species</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_species">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[biol:rank]"><a href="#term_rank">biol:rank</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The lowest level of classification supported by this vocabulary. For example <i class="taxon">Sapiens</i>. To include information more specific than species, use <a href="#term_rank">biol:rank</a> or <a href="#section_Abstract">a more specialist vocabulary</a>.</p>
+	</div>
+	
+	<div id="term_seeAlso" about="[biol:seeAlso]" typeof="rdf:Property">
+		<h3>
+			2.14. biol:<dfn property="rdfs:label" content="see also">seeAlso</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_seeAlso">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf" resource="[rdfs:seeAlso]"><a href="http://www.w3.org/TR/rdf-schema/#ch_seealso" rel="rdfs:isDefinedBy">rdfs:seeAlso</a></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Resource]"><a href="http://www.w3.org/TR/rdf-schema/#ch_resource" rel="rdfs:isDefinedBy">rdfs:Resource</a></td></tr>
+		</table>
+		<p property="dc:description">A link to another resource further describing this form of life.</p>
+	</div>
+	
+	<div id="term_authority" about="[biol:authority]" typeof="rdf:Property">
+		<h3>
+			2.15. biol:<dfn property="rdfs:label">authority</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_authority">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[rdfs:Literal]"><a href="http://www.w3.org/TR/rdf-schema/#ch_literal" rel="rdfs:isDefinedBy">rdfs:Literal</a></td></tr>
+		</table>
+		<p property="dc:description">The authority who classified this form of life. For example "Linnaeus, 1758".</p>
+	</div>
+
+	<div id="term_morePrecise" about="[biol:morePrecise]" typeof="rdf:Property">
+		<h3>
+			2.16. biol:<dfn property="rdfs:label" content="more precise">morePrecise</dfn>
+			<a rel="bookmark rdfs:isDefinedBy" href="#term_morePrecise">#</a>
+		</h3>
+		<table class="property-summary">
+			<tr><th>Sub-property of:</th><td rel="rdfs:subPropertyOf">the inverse of <span rel="owl:inverseOf" resource="[rdfs:subClassOf]"><a href="http://www.w3.org/TR/rdf-schema/#ch_subclassof" rel="rdfs:isDefinedBy">rdfs:subClassOf</a></span></td></tr>
+			<tr><th>Domain:</th><td rel="rdfs:domain" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+			<tr><th>Range:</th><td rel="rdfs:range" resource="[biol:Taxonomy]"><a href="#term_Taxonomy">biol:Taxonomy</a></td></tr>
+		</table>
+		<p property="dc:description">Connects a taxonomy to a more precise taxonomy. For example, the taxonomy "Mammal" might have a "more precise" property linking to "Primate". <a href="#example_hierarchy">A more complete example.</a></p>
+	</div>
+	
+	<h2 id="section_Examples">
+		3. Examples
+		<a rel="bookmark" href="#section_Examples">#</a>
+	</h2>
+	
+	<h3 id="example_basic">
+		3.1. Basic Example
+		<a rel="bookmark" href="#example_basic">#</a>
+	</h3>
+	
+	<p>A very basic example:</p>
+	
+	<pre>&lt;rdf:RDF xml:lang="en-GB"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:biol="http://purl.org/NET/biol/ns#">
+
+    &lt;foaf:Person rdf:about="http://tobyinkster.co.uk/#i">
+        &lt;foaf:name>Toby Inkster&lt;/foaf:name>
+        &lt;biol:hasTaxonomy rdf:parseType="Resource">
+            &lt;biol:name>Homo sapiens sapiens&lt;/biol:name>
+            &lt;biol:commonName>human&lt;/biol:commonName>
+        &lt;/biol:hasTaxonomy>
+    &lt;/foaf:Person>
+&lt;/rdf:RDF></pre>
+
+	<h3 id="example_full">
+		3.2. Extended Example
+		<a rel="bookmark" href="#example_full">#</a>
+	</h3>
+	
+	<p>A more complicated example, using most of the properties:</p>
+
+	<pre>&lt;rdf:RDF xml:lang="en-GB"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:biol="http://purl.org/NET/biol/ns#">
+
+    &lt;foaf:Person rdf:about="http://tobyinkster.co.uk/#i">
+        &lt;foaf:name>Toby Inkster&lt;/foaf:name>
+        &lt;biol:hasTaxonomy>
+            &lt;biol:Taxonomy>
+			
+                &lt;!-- Scientific (binomial or trinomial) name -->
+                &lt;biol:name>Homo sapiens sapiens&lt;/biol:name>
+
+                &lt;!-- Common name, in whatever language you like -->
+                &lt;biol:commonName>human&lt;/biol:commonName>
+                &lt;biol:commonName xml:lang="la">homo&lt;/biol:commonName>
+                &lt;biol:commonName xml:lang="eu">Gizakia&lt;/biol:commonName>
+
+                &lt;!-- Detailed classification -->
+                &lt;biol:kingdom>Animalia&lt;/biol:kingdom>
+                &lt;biol:phylum>Chordata&lt;/biol:phylum>
+                &lt;biol:class>Mammalia&lt;/biol:class>
+                &lt;biol:order>Primates&lt;/biol:order>
+                &lt;biol:family>Hominidae&lt;/biol:family>
+                &lt;biol:genus>Homo&lt;/biol:genus>
+                &lt;biol:species>Sapiens&lt;/biol:species>
+
+                &lt;!-- Further information on this classification -->
+                &lt;biol:seeAlso
+                  rdf:resource="http://species.wikimedia.org/wiki/Homo_sapiens" />
+
+                &lt;!-- The classifier -->
+                &lt;biol:authority>Linnaeus, 1758&lt;/biol:authority>
+
+                &lt;!-- A date when this taxonomy was thought to be correct. -->
+                &lt;dc:date>2008-05-01&lt;/dc:date>
+
+            &lt;/biol:Taxonomy>
+        &lt;/biol:hasTaxonomy>
+    &lt;/foaf:Person>
+&lt;/rdf:RDF></pre>
+
+	<h3 id="example_taxodoc">
+		3.3. Document Describing a Taxonomy
+		<a rel="bookmark" href="#example_taxodoc">#</a>
+	</h3>
+
+	<p>Here is an RDF description for a document that discusses the biological classification of cats. This should be contrasted against the <a href="#example_lifedoc">next example</a>, of a description for a document that discusses cats (i.e. the creatures, not the classification of them).</p>
+
+	<pre>&lt;rdf:RDF xml:lang="en-GB"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:biol="http://purl.org/NET/biol/ns#">
+
+    &lt;foaf:Document rdf:about="http://example.org/taxonomy/cats">
+        &lt;dc:title>The Taxonomy of Domestic Cats&lt;/dc:title>
+        &lt;dc:subject>
+            &lt;biol:Taxonomy>
+                &lt;biol:name>Felis silvestris catus&lt;/biol:name>
+                &lt;biol:commonName>domestic shorthair&lt;/biol:commonName>
+            &lt;/biol:Taxonomy>
+        &lt;/dc:subject>
+        &lt;dc:abstract>Should domestic cats be classified as a subspecies
+          of the European wildcat, or as a separate species?&lt;/dc:abstract>
+    &lt;/foaf:Document>
+&lt;/rdf:RDF></pre>
+
+	<h3 id="example_lifedoc">
+		3.4. Document Describing a Life Form
+		<a rel="bookmark" href="#example_lifedoc">#</a>
+	</h3>
+
+	<p>Here is an RDF description for a document that discusses cats.</p>
+
+	<pre>&lt;rdf:RDF xml:lang="en-GB"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:biol="http://purl.org/NET/biol/ns#">
+
+    &lt;foaf:Document rdf:about="http://example.org/animals/cats">
+        &lt;dc:title>The Behaviour of Domestic Cats&lt;/dc:title>
+        &lt;dc:subject rdf:parseType="Resource">
+            &lt;biol:hasTaxonomy>
+                &lt;biol:Taxonomy>
+                    &lt;biol:name>Felis silvestris catus&lt;/biol:name>
+                    &lt;biol:commonName>domestic shorthair&lt;/biol:commonName>
+                &lt;/biol:Taxonomy>
+            &lt;/biol:hasTaxonomy>
+        &lt;/dc:subject>
+        &lt;dc:abstract>The cat is a small carnivorous species of crepuscular
+          mammal that is often valued by humans for its companionship and its
+          ability to hunt vermin.&lt;/dc:abstract>
+    &lt;/foaf:Document>
+&lt;/rdf:RDF></pre>
+
+	<h3 id="example_simple_rdfa">
+		3.5. Simple RDFa Example
+		<a rel="bookmark" href="#example_simple_rdfa">#</a>
+	</h3>
+	
+	<p>Here is a simple example in <a href="http://www.w3.org/TR/rdfa-syntax">RDFa</a> using the vocabulary to describe a relationship with a pet cat.</p>
+	
+<pre>&lt;p typeof="foaf:Person"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:biol="http://purl.org/NET/biol/ns#">
+    &lt;span property="foaf:name">Toby Inkster&lt;/span> has a
+    &lt;span rel="foaf:knows">
+        &lt;span rel="biol:hasTaxonomy">
+            &lt;span property="biol:commonName">cat&lt;/span>
+        &lt;/span>
+        called &lt;span property="foaf:name">Mr d'Silva&lt;/span>
+    &lt;/span>.
+&lt;/p></pre>
+
+	<h3 id="example_uri">
+		3.6. Using URIs as Identifiers for Taxonomies
+		<a rel="bookmark" href="#example_uri">#</a>
+	</h3>
+	
+	<p>Well-known URIs may be used to represent taxonomies. The following <a href="http://www.dajobe.org/2004/01/turtle/">Turtle</a> provides similar information to the <a href="#example_simple_rdfa">example above</a> but uses URIs.</p>
+	
+<pre>_:tobyink foaf:name "Toby Inkster" ;
+    biol:hasTaxonomy &lt;http://dbpedia.org/resource/Human> ;
+    foaf:knows _:mrdsilva .
+
+_:mrdsilva foaf:name "Mr d'Silva" ;
+    biol:hasTaxonomy &lt;http://dbpedia.org/resource/Cat> .</pre>
+
+	<h3 id="example_class">
+		3.7. Taxonomies as Classes
+		<a rel="bookmark" href="#example_class">#</a>
+	</h3>
+
+	<p>Taxonomies may be used as RDF classes.</p>
+	
+<pre>_:tobyink a ex:HumanBeing; 
+	foaf:name "Toby Inkster" .
+
+ex:HumanBeing a biol:Taxonomy ;
+	biol:name "Homo sapiens" .</pre>
+
+	<p>Similarly, using an anonymous blank node:</p>
+
+<pre>_:tobyink foaf:name "Toby Inkster" ;
+	a [ biol:name "Homo sapiens" ] .</pre>
+
+	<h3 id="example_hierarchy">
+		3.8. Hierarchies of Taxonomies
+		<a rel="bookmark" href="#example_hierarchy">#</a>
+	</h3>
+	
+	<p>Hierarchies of taxonomies can be easily established using the biol:morePrecise predicate.</p>
+	
+<pre>&lt;rdf:RDF xml:lang="zxx"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:biol="http://purl.org/NET/biol/ns#"
+  xml:base="http://example.org/apes">
+  
+    &lt;biol:Taxonomy rdf:about="#Hominidae">
+    
+        &lt;biol:commonName xml:lang="en">Great Ape&lt;/biol:commonName>
+    
+        &lt;biol:kingdom>Animalia&lt;/biol:kingdom>
+        &lt;biol:phylum>Chordata&lt;/biol:phylum>
+        &lt;biol:class>Mammalia&lt;/biol:class>
+        &lt;biol:order>Primates&lt;/biol:order>
+        &lt;biol:family>Hominidae&lt;/biol:family>
+    
+        &lt;biol:morePrecise>
+            &lt;biol:Taxonomy rdf:about="#Orangutan">
+                &lt;biol:commonName xml:lang="en">Orangutan&lt;/biol:commonName>
+                &lt;biol:genus>Pongo&lt;/biol:genus>
+                &lt;biol:morePrecise>
+                    &lt;biol:Taxonomy rdf:about="#BorneanOrangutan">
+                        &lt;biol:commonName xml:lang="en">Bornean orangutan&lt;/biol:commonName>
+                        &lt;biol:name>Pongo pygmaeus&lt;/biol:name>
+                    &lt;/biol:Taxonomy>
+                &lt;/biol:morePrecise>
+                &lt;biol:morePrecise>
+                    &lt;biol:Taxonomy rdf:about="#SumatranOrangutan">
+                        &lt;biol:commonName xml:lang="en">Sumatran orangutan&lt;/biol:commonName>
+                        &lt;biol:name>Pongo abelii&lt;/biol:name>
+                    &lt;/biol:Taxonomy>
+                &lt;/biol:morePrecise>
+            &lt;/biol:Taxonomy>
+        &lt;/biol:morePrecise>
+    
+        &lt;biol:morePrecise>
+            &lt;biol:Taxonomy rdf:about="#Gorilla">
+                &lt;biol:commonName xml:lang="en">Gorilla&lt;/biol:commonName>
+                &lt;biol:genus>Gorilla&lt;/biol:genus>
+                &lt;biol:morePrecise>
+                    &lt;biol:Taxonomy rdf:about="#GorillaGorilla">
+                        &lt;biol:commonName xml:lang="en">Western gorilla&lt;/biol:commonName>
+                        &lt;biol:name>Gorilla gorilla&lt;/biol:name>
+                    &lt;/biol:Taxonomy>
+                &lt;/biol:morePrecise>
+                &lt;biol:morePrecise>
+                    &lt;biol:Taxonomy rdf:about="#GorillaGraueri">
+                        &lt;biol:commonName xml:lang="en">Eastern gorilla&lt;/biol:commonName>
+                        &lt;biol:name>Gorilla graueri&lt;/biol:name>
+                    &lt;/biol:Taxonomy>
+                &lt;/biol:morePrecise>
+            &lt;/biol:Taxonomy>
+        &lt;/biol:morePrecise>
+    
+        &lt;biol:morePrecise>
+            &lt;biol:Taxonomy rdf:about="#Chimpanzee">
+                &lt;biol:commonName xml:lang="en">Chimpanzee&lt;/biol:commonName>
+                &lt;biol:genus>Pan&lt;/biol:genus>
+                &lt;biol:morePrecise>
+                    &lt;biol:Taxonomy rdf:about="#Chimp">
+                        &lt;biol:commonName xml:lang="en">Common chimpanzee&lt;/biol:commonName>
+                        &lt;biol:name>Pan troglodytes&lt;/biol:name>
+                    &lt;/biol:Taxonomy>
+                &lt;/biol:morePrecise>
+                &lt;biol:morePrecise>
+                    &lt;biol:Taxonomy rdf:about="#Bonobo">
+                        &lt;biol:commonName xml:lang="en">Bonobo&lt;/biol:commonName>
+                        &lt;biol:name>Pan paniscus&lt;/biol:name>
+                    &lt;/biol:Taxonomy>
+                &lt;/biol:morePrecise>
+            &lt;/biol:Taxonomy>
+        &lt;/biol:morePrecise>
+        
+        &lt;biol:morePrecise>
+            &lt;biol:Taxonomy rdf:about="#Human">
+                &lt;biol:commonName xml:lang="en">Human&lt;/biol:commonName>
+                &lt;biol:name>Homo sapiens&lt;/biol:name>
+            &lt;/biol:Taxonomy>
+        &lt;/biol:morePrecise>
+    
+    &lt;/biol:Taxonomy>
+
+&lt;/rdf:RDF></pre>
+
+	<p>These might then be used as:</p>
+	
+	
+<pre>&lt;rdf:RDF xml:lang="en"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:biol="http://purl.org/NET/biol/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:ape="http://example.org/apes#">
+
+    &lt;ape:Human>
+        &lt;foaf:name>Alice Jones&lt;/foaf:name>
+    &lt;/ape:Human>
+
+    &lt;foaf:Person>
+        &lt;foaf:name>Bob Smith&lt;/foaf:name>
+        &lt;biol:hasTaxonomy rdf:resource="http://example.org/apes#Human" />
+    &lt;/foaf:Person>
+
+    &lt;ape:Bonobo>
+        &lt;foaf:name>Bobo&lt;/foaf:name>
+    &lt;/ape:Bonobo>
+
+&lt;/rdf:RDF></pre>
+
+	<h2 id="section_References">
+		A. References
+		<a rel="bookmark" href="#section_References">#</a>
+	</h2>
+	
+	<h3 id="section_References-I">
+		A.1. Informative References
+		<a rel="bookmark" href="#section_References-I">#</a>
+	</h3>
+	<ul rel="dc:bibliographicCitation">
+		<li>
+			<a href="http://en.wikipedia.org/wiki/Taxonomic_rank">
+				<span property="dc:title">Taxonomic rank</span>,
+				<cite property="dc:publisher">Wikipedia</cite>
+			</a>
+		</li>
+		<li>
+			<a href="http://microformats.org/wiki/species">
+				<span property="dc:title">species</span>,
+				<cite property="dc:publisher">microformats.org</cite>
+			</a>
+		</li>
+	</ul>
+
+	<h2 id="section_Changes">
+		B. Changes
+		<a rel="bookmark" href="#section_Changes">#</a>
+	</h2>
+	<ul>
+		<li>2008-10-06: version 0.2; make biol:hasTaxonomy a sub-property of rdf:type and biol:Taxonomy a sub-class of rdfs:Class; made biol:rank a sub-property of ubio:taxonomicGroup (I think this is correct); added biol:morePrecise; add examples that show the use of taxonomies as RDF classes, and show the biol:morePrecise predicate.</li>
+		<li>2008-05-13: range of biol:authority changed to rdfs:Literal to match examples.</li>
+		<li>2008-05-09: changed namespace URI; friendlier labels; added examples.</li>
+		<li>2008-05-08: version 0.1; initial version.</li>
+	</ul>
+
+	<h2 id="section_Acknowledgments">
+		C. Acknowledgments
+		<a rel="bookmark" href="#section_Acknowledgments">#</a>
+	</h2>	
+	<p>Thanks to the members of <a href="http://www.w3.org/2001/sw/interest/">W3C Semantic Web Interest Group</a> and <a href="http://www.w3.org/2001/sw/BestPractices/HTML/">RDF in XHTML Taskforce</a> for their feedback and suggestions, especially to Richard Cyganiak.</p>
+
+	<hr />
+	
+	<table>
+		<tr>
+			<td rel="dc:conformsTo" resource="http://www.w3.org/TR/rdfa-syntax"><a  style="background:transparent" href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml-rdfa-blue" alt="Valid XHTML + RDFa" style="border-width:0" /></a></td>
+			<td><a rel="license" style="background:transparent" href="http://creativecommons.org/licenses/by-sa/2.0/uk/"><img alt="Creative Commons Licence" style="border-width:0;margin-left:1em" src="http://i.creativecommons.org/l/by-sa/2.0/uk/88x31.png"/></a></td>
+		</tr>
+	</table>
+
+</body>
+
+</html>

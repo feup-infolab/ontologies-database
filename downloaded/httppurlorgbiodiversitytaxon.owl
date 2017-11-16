@@ -1,0 +1,689 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+     xmlns="http://purl.org/biodiversity/taxon/"
+     xmlns:eol="http://purl.org/biodiversity/eol/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:dbpedia="http://dbpedia.org/resource/"
+     xmlns:dbpedia_owl="http://dbpedia.org/ontology/"
+     xmlns:uniprot="http://purl.uniprot.org/core/"
+     xmlns:itis="http://rdfdata.eionet.europa.eu/itis/ontology/"
+     xmlns:wo="http://purl.org/ontology/wo/"
+     xmlns:freebase="http://rdf.freebase.com/ns/"
+     xmlns:taxon="http://purl.org/biodiversity/taxon/"
+     xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
+     xmlns:eunis="http://eunis.eea.europa.eu/rdf/species-schema.rdf#"
+     xmlns:gs="http://rdf.geospecies.org/ont/geospecies#"
+     xmlns:bio2rdf="http://bio2rdf.org/"
+     xmlns:biol="http://purl.org/NET/biol/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:voaf="http://labs.mondeca.com/vocab/voaf#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+
+    <owl:Ontology rdf:about="http://purl.org/biodiversity/taxon/">
+     <dcterms:title xml:lang="en">TaxonMap Ontology</dcterms:title>
+     <rdfs:label xml:lang="en">TaxonMap Ontology</rdfs:label>
+     <vann:preferredNamespacePrefix>taxon</vann:preferredNamespacePrefix>
+     <vann:preferredNamespaceUri>http://purl.org/biodiversity/taxon/</vann:preferredNamespaceUri>
+     <dcterms:issued>2012-05-27</dcterms:issued>
+     <dcterms:modified>2013-03-18</dcterms:modified>
+     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.17</owl:versionInfo>
+     <dcterms:description xml:lang="en">Version 0.18 This is the initial vocabulary for Mapping the various taxon classes on the Linked Open Data Cloud</dcterms:description>
+     <rdfs:comment xml:lang="en">Version 0.18 Added those taxon classes I know about, and data type properties for scientific name and authority</rdfs:comment>
+     <dcterms:creator>
+      <foaf:Person rdf:about="http://lod.taxonconcept.org/ontology/people.owl#Peter_J_DeVries"/>
+     </dcterms:creator>
+     <dcterms:publisher>
+      <foaf:Organization rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#TaxonConcept_Knowledge_Base_Project"/>
+     </dcterms:publisher>
+     <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Ontology>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+ 
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+   <!-- Name URI to Name URI mapping-->
+
+   <!-- http://purl.org/biodiversity/taxon/relatedTaxonNameID-->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/relatedTaxonNameID">
+        <rdfs:label>relatedTaxonNameID</rdfs:label>
+        <rdfs:comment>The URI to a URI of a related name</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:range rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+   <!-- http://purl.org/biodiversity/taxon/relatedTaxonNameID_Of-->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/relatedTaxonNameID_Of">
+        <rdfs:label>relatedTaxonNameID_ Of</rdfs:label>
+        <rdfs:comment>The URI to a URI of a related name</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:range rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <owl:inverseOf rdf:resource="http://purl.org/biodiversity/taxon/relatedName"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+   <!-- http://purl.org/biodiversity/taxon/canonicalFormID-->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/canonicalFormID">
+        <rdfs:label>canonicalFormID</rdfs:label>
+        <rdfs:comment>The URI ID for the canonical form of the name i.e. Puma concolor or Felidae, for name to name mapping</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:range rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/biodiversity/taxon/relatedTaxonNameID"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+   <!-- http://purl.org/biodiversity/taxon/canonicalFormID_Of-->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/canonicalFormID_Of">
+        <rdfs:label>canonicalFormID Of</rdfs:label>
+        <rdfs:comment>The URI ID for the scientific name with authorship form of the name i.e. Puma concolor Linnaeus 1758, for name to name mapping</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:range rdf:resource="http://purl.org/biodiversity/taxon/TaxonNameID"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/biodiversity/taxon/relatedTaxonNameID_Of"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- DBpedia Hierarchy -->
+
+    <!-- http://purl.org/biodiversity/taxon/dbKingdom -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbKingdom">
+        <rdfs:label xml:lang="en">dbKingdom</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/dbPhylum -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbPhylum">
+        <rdfs:label xml:lang="en">dbPhylum</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/dbClass -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbClass">
+        <rdfs:label xml:lang="en">dbClass</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/dbOrder -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbOrder">
+        <rdfs:label xml:lang="en">dbOrder</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/dbFamily -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbFamily">
+        <rdfs:label xml:lang="en">dbFamily</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/dbGenus -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbGenus">
+        <rdfs:label xml:lang="en">dbGenus</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/dbSpecies -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/dbSpecies">
+        <rdfs:label xml:lang="en">dbSpecies</rdfs:label>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- Uniprot Hierarchy -->
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotKingdom -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotKingdom">
+        <rdfs:label xml:lang="en">uniprotKingdom</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotPhylum -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotPhylum">
+        <rdfs:label xml:lang="en">uniprotPhylum</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotClass -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotClass">
+        <rdfs:label xml:lang="en">uniprotClass</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotOrder -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotOrder">
+        <rdfs:label xml:lang="en">uniprotOrder</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotFamily -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotFamily">
+        <rdfs:label xml:lang="en">uniprotFamily</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotGenus -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotGenus">
+        <rdfs:label xml:lang="en">uniprotGenus</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/uniprotSpecies -->
+    <owl:ObjectProperty rdf:about="http://purl.org/biodiversity/taxon/uniprotSpecies">
+        <rdfs:label xml:lang="en">uniprotSpecies</rdfs:label>
+        <rdfs:range rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:ObjectProperty>
+
+
+    <!-- http://purl.org/biodiversity/taxon/scientificName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/taxon/scientificName">
+        <rdfs:label>scientificName</rdfs:label>
+        <rdfs:comment>The scientific name without the authority string i.e. Felidae or Puma concolor</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:DatatypeProperty>
+
+    <!-- other forms of scientific name that could be subproperties of a PURL based taxon:scientificName -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/eol/scientificName"/>
+
+    <owl:DatatypeProperty rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#scientificName"/>
+
+    <owl:DatatypeProperty rdf:about="http://purl.uniprot.org/core/scientificName"/>
+
+    <owl:DatatypeProperty rdf:about="http://eunis.eea.europa.eu/rdf/species-schema.rdf#scientificName"/>
+
+    <!--  -->
+
+    <!-- http://purl.org/biodiversity/taxon/authority -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/taxon/authority">
+        <rdfs:label>authority</rdfs:label>
+        <rdfs:comment>The author and year of the species description publication i.e (Baker 1899)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:DatatypeProperty>
+
+   <!-- other forms of authority that could be subproperties of a PURL based taxon:authority -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/eol/authority"/>
+
+    <owl:DatatypeProperty rdf:about="http://lod.taxonconcept.org/ontology/txn.owl#authority"/>
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/NET/biol/ns#authority"/>
+
+    <owl:DatatypeProperty rdf:about="http://eunis.eea.europa.eu/rdf/species-schema.rdf#authority"/>
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/taxon/commonName">
+        <rdfs:label>commonName</rdfs:label>
+        <rdfs:comment>The common name for a taxon i.e. "Wolf"</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- http://purl.org/biodiversity/taxon/monomial -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/taxon/monomial">
+        <rdfs:label>monomial</rdfs:label>
+        <rdfs:comment>a one word scientific name i.e. Felidae, Mammalia, Metazoa</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/biodiversity/taxon/scientificName"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/binomial -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/taxon/binomial">
+        <rdfs:label>binomial</rdfs:label>
+        <rdfs:comment>a scientific name consisting of genus, epithet i.e. Felis silvestris</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/biodiversity/taxon/scientificName"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://purl.org/biodiversity/taxon/trinomial -->
+    <owl:DatatypeProperty rdf:about="http://purl.org/biodiversity/taxon/trinomial">
+        <rdfs:label>trinomial</rdfs:label>
+        <rdfs:comment>a scientific name consisting of genus epithet and subepithet i.e. Felis silvestris lybica</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/biodiversity/taxon/scientificName"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:DatatypeProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Taxon">
+        <rdfs:label>Taxon</rdfs:label>
+        <rdfs:comment>A proposed superclass for all the known LOD classes for a "taxon"</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/ontology/Species"/>
+        <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://rdfdata.eionet.europa.eu/itis/ontology/Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://purl.uniprot.org/core/Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://rdfdata.eionet.europa.eu/itis/ontology/Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/ontology/wo/Species"/>
+        <rdfs:seeAlso rdf:resource="http://rdf.freebase.com/ns/biology.organism_classification"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/biodiversity/taxon/TaxonConcept"/>
+        <rdfs:seeAlso rdf:resource="http://eunis.eea.europa.eu/rdf/species-schema.rdf#SpeciesSynonym"/>
+        <rdfs:seeAlso rdf:resource="http://bio2rdf.org/uniprot_resource:Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://rdf.geospecies.org/ont/geospecies#TaxonConcept"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/biodiversity/eol/Taxon"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/NET/biol/ns#Taxonomy"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/TaxonName">
+        <rdfs:label>TaxonName</rdfs:label>
+        <rdfs:comment>A proposed superclass for all the known LOD classes a taxon name</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- http://purl.org/biodiversity/taxon/TaxonNameID -->
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/TaxonNameID">
+        <rdfs:label>TaxonNameID</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/TaxonRank">
+        <rdfs:label>TaxonRank</rdfs:label>
+        <rdfs:comment>A proposed superclass for all the known LOD classes of a Taxon Rank</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- http://purl.org/biodiversity/taxon/DataObject -->
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/DataObject">
+        <rdfs:label xml:lang="en">DataObject</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/BiologicalOrganism">
+        <rdfs:label>BiologicalOrganism</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Archaea">
+        <rdfs:label>Archaea</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/BiologicalOrganism"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Bacteria">
+        <rdfs:label>Bacteria</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/BiologicalOrganism"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Eukaryote">
+        <rdfs:label>Eukaryote</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <foaf:page rdf:resource="http://eol.org/pages/2908256/overview"/>
+        <foaf:page rdf:resource="http://en.wikipedia.org/wiki/Eukaryote"/>
+        <foaf:page rdf:resource="http://species.wikimedia.org/wiki/Eukaryota"/>
+        <foaf:page rdf:resource="http://tolweb.org/Eukaryotes/3"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/BiologicalOrganism"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Red_algae">
+        <rdfs:label>Red algae</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Eukaryote"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Animal">
+        <rdfs:label>Animal</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <foaf:page rdf:resource="http://eol.org/pages/1/overview"/>
+        <foaf:page rdf:resource="http://en.wikipedia.org/wiki/Animal"/>
+        <foaf:page rdf:resource="http://species.wikimedia.org/wiki/Animalia"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Eukaryote"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Fungus">
+        <rdfs:label>Fungus</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Eukaryote"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Microbial_Eukaryote">
+        <rdfs:label>Microbial Eukaryote</rdfs:label>
+        <rdfs:comment>a polyphyletic group</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Eukaryote"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Chordate">
+        <rdfs:label>Chordate</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Animal"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Cephalochordate">
+        <rdfs:label>Cephalochordate</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Chordate"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Tunicate">
+        <rdfs:label>Tunicate</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Chordate"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Unclassified_Chordate">
+        <rdfs:label>Unclassified Chordate</rdfs:label>
+        <rdfs:comment>a polyphyletic group</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Chordate"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Tetrapod">
+        <rdfs:label>Tetrapod</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Chordate"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Amphibian">
+        <rdfs:label>Amphibian</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Tetrapod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Bird">
+        <rdfs:label>Bird</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Tetrapod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Mammal">
+        <rdfs:label>Mammal</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Tetrapod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/ModernReptile">
+        <rdfs:label>Modern Reptile</rdfs:label>
+        <rdfs:comment>The class of recently extant reptiles including Crocodiles, Turtles, Snakes and Lizards</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Tetrapod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Dinosauria">
+        <rdfs:label>Dinosauria</rdfs:label>
+        <rdfs:comment>Dinosaurs</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Tetrapod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Mollusca">
+        <rdfs:label>Mollusca</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Animal"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- These are all classes in use for some form of "Fish" -->
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Fish">
+        <rdfs:label>Fish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Chordate"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Ray_Fined_fish">
+        <rdfs:label>Ray Fined Fish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Fish"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Cartilaginous_fish">
+        <rdfs:label>Cartilaginous Fish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Fish"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Lobe_Finned_fish">
+        <rdfs:label>Lobe Finned Fish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Fish"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Lungfish">
+        <rdfs:label>Lungfish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Fish"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Jawless_fish">
+        <rdfs:label>Jawless fish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Fish"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Armoured_fish">
+        <rdfs:label>Armoured_fish</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Fish"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- These are all classes in use for some form of Arthropod -->
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Arthropod">
+        <rdfs:label>Arthropod</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Animal"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Arachnid">
+        <rdfs:label>Arachnid</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Arthropod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Crustacean">
+        <rdfs:label>Crustacean</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Arthropod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Insect">
+        <rdfs:label>Insect</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Arthropod"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- These are all classes in use for some form of Plant -->
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Plant">
+        <rdfs:label>Plant</rdfs:label>
+        <rdfs:label>Viridiplantae</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Eukaryote"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/ClubMoss">
+        <rdfs:label>ClubMoss</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Conifer">
+        <rdfs:label>Conifer</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Cycad">
+        <rdfs:label>Cycad</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Fern">
+        <rdfs:label>Fern</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/FloweringPlant">
+        <rdfs:label>FloweringPlant</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Ginkgo">
+        <rdfs:label>Ginkgo</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Gnetophytes">
+        <rdfs:label>Gnetophytes</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/GreenAlga">
+        <rdfs:label>GreenAlga</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Moss">
+        <rdfs:label>Moss</rdfs:label>
+        <rdfs:comment> </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/biodiversity/taxon/Plant"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- http://purl.org/biodiversity/eol/Image -->
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/Image">
+        <rdfs:label>Image</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+    <!-- http://purl.org/biodiversity/taxon/MapImage -->
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/MapImage">
+        <rdfs:label>MapImage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:isDefinedBy rdf:resource="http://lod.taxonconcept.org/ontology/taxon.owl"/>
+    </owl:Class>
+
+
+    <!-- These are all classes in use for some form of "taxon" -->
+
+    <!-- http://rs.tdwg.org/dwc/terms/Taxon -->
+    <owl:Class rdf:about="http://rs.tdwg.org/dwc/terms/Taxon"/>
+
+    <!-- http://dbpedia.org/ontology/Species -->
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Species"/>
+
+    <!-- http://purl.uniprot.org/core/Taxon -->
+    <owl:Class rdf:about="http://purl.uniprot.org/core/Taxon"/>
+
+    <!-- http://rdfdata.eionet.europa.eu/itis/ontology/Taxon -->
+    <owl:Class rdf:about="http://rdfdata.eionet.europa.eu/itis/ontology/Taxon"/>
+
+    <!-- http://purl.org/ontology/wo/Species -->
+    <owl:Class rdf:about="http://purl.org/ontology/wo/Species"/>
+
+    <!-- http://rdf.freebase.com/ns/biology.organism_classification -->
+    <owl:Class rdf:about="http://rdf.freebase.com/ns/biology.organism_classification"/>
+
+    <!-- http://purl.org/biodiversity/taxon/TaxonConcept -->
+    <owl:Class rdf:about="http://purl.org/biodiversity/taxon/TaxonConcept"/>
+
+    <!-- http://eunis.eea.europa.eu/rdf/species-schema.rdf#SpeciesSynonym -->
+    <owl:Class rdf:about="http://eunis.eea.europa.eu/rdf/species-schema.rdf#SpeciesSynonym"/>
+
+    <!-- http://bio2rdf.org/uniprot_resource:Taxon -->
+    <owl:Class rdf:about="http://bio2rdf.org/uniprot_resource:Taxon"/>
+ 
+     <!-- http://rdf.geospecies.org/ont/geospecies#TaxonConcept -->
+    <owl:Class rdf:about="http://rdf.geospecies.org/ont/geospecies#TaxonConcept"/>
+
+     <!-- http://purl.org/biodiversity/eol/Taxon -->
+    <owl:Class rdf:about="http://purl.org/biodiversity/eol/Taxon"/>
+
+     <!-- http://purl.org/NET/biol/ns#Taxonomy -->
+    <owl:Class rdf:about="http://purl.org/NET/biol/ns#Taxonomy"/>
+
+    <!--  -->
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Image"/>
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+
+
+</rdf:RDF>

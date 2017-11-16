@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/ExternalResourceDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N6c0d535cd4fd41068e7536e98ff3c9d4"/>
+    <rdfs:label xml:lang="en">external resource description</rdfs:label>
+    <rdfs:comment xml:lang="en">Information describing an external resource and including a reference to that resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
+    <rdfs:label xml:lang="en">has relation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Dedication">
+    <rdfs:comment xml:lang="en">Text in which the author names the person or people for whom he/she has written the document, or to whose memory it is dedicated.</rdfs:comment>
+    <rdfs:label xml:lang="en">dedication</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Legend">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">legend</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/Caption"/>
+    <rdfs:comment xml:lang="en">Informative text that explicitly explains another item, such as a figure or a table.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Evaluation">
+    <rdfs:label>evaluation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>A consideration of the value, meaning and significance of the results obtained.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Evaluation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Discussion">
+    <rdfs:comment>An interpretation and discussion of the results obtained and an analysis of their significance, in support of conclusions. These conclusions may be part of this discussion or may be included in a separate section of the document.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Discussion"/>
+    <rdfs:label>discussion</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/orb/1.0/Discussion"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Background">
+    <rdfs:label>background</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment>Presentation of information that is essential for understanding the situation or problem that is the subject of the publication. In a journal article, the background is usually part of the Introduction, but may be present as separated section.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Background"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/FutureWork">
+    <rdfs:label xml:lang="en">future work</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">A proposal for new investigation to be undertaken in order to continue and advance the work described in the publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Motivation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment>A description of the justification for undertaking the work described in the publication.</rdfs:comment>
+    <rdfs:label>motivation</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Motivation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5a4b3bee111428694bb2d45a6e2a11e">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="N6502b128a17a4048b9a14d267942934d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+    <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has part</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Prologue">
+    <rdfs:label xml:lang="en">prologue</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">A piece of writing at the beginning of a work of literature or drama, usually used to set the scene or to introduce the work.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e515df212be4a17b7cfaeb1c75345c2">
+    <rdf:rest rdf:nodeID="Nc5a4b3bee111428694bb2d45a6e2a11e"/>
+    <rdf:first rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/Conclusion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Biography">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">Information describing a person and his or her life history and contributions.</rdfs:comment>
+    <rdfs:label xml:lang="en">biography</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/BibliographicReference">
+    <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/orb/1.0/References"/>
+    <rdfs:comment xml:lang="en">A reference, usually contained in a footnote or a bibliographic reference list, that refer to another publication, such as a journal article, a book, a book chapter or a Web site. The inclusion of the bibliographic reference in a publication constitutes the performative act of bibliographic citation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Contribution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Contribution"/>
+    <rdfs:comment>A description of the part that this publication plays in the overall field.</rdfs:comment>
+    <rdfs:label>contribution</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Methods">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label xml:lang="en">methods</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A description in a research paper documenting the specialized methods used in the work described. This description is often combined with a description of the materials used, in a section entitled 'Methods and Materials', 'Experimental' or a related term.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://purl.org/orb/1.0/Methods"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Postscript">
+    <rdfs:comment xml:lang="en">Text added after the signature of a letter, or sometimes after the main body of an essay or book.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label xml:lang="en">postscript</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/SupplementaryInformationDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/ExternalResourceDescription"/>
+    <rdfs:comment xml:lang="en">Information describing supplementary information relating to the document, including references or links to the relevant supplementary information.</rdfs:comment>
+    <rdfs:label xml:lang="en">supplementary information description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/Introduction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/Acknowledgments">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Introduction">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label xml:lang="en">introduction</rdfs:label>
+    <rdfs:comment xml:lang="en">An initial description which states the purpose and goals of the following writing, and, in the case of journal articles, typically includes background information on the research topic and a review of related work in the area.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://purl.org/orb/1.0/Introduction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Discussion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Materials">
+    <rdfs:label xml:lang="en">materials</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A description in a research paper documenting the specialized materials used in the work described. This description is often combined with a description of the methods used, in a section entitled 'Methods and Materials', 'Experimental' or a related term.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/DatasetDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/ExternalResourceDescription"/>
+    <rdfs:comment xml:lang="en">Information describing a dataset held in an external database or repository and including a reference to it, such as a database ID or an accession number.</rdfs:comment>
+    <rdfs:label xml:lang="en">dataset description</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Acknowledgements">
+    <owl:equivalentClass rdf:resource="http://purl.org/orb/1.0/Acknowledgements"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">Usually part of the preface, or a separate section in its own right, often as part of the back matter, it acknowledges those, including funding agencies, who contributed to the undertaking of a research project described in a publication, or to the creation of the work in some way. In scientific articles, the acknowledgements are usually placed as a separated section immediately following the Discussion or Conclusions.</rdfs:comment>
+    <rdfs:label xml:lang="en">acknowledgements</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">is part of</rdfs:label>
+    <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
+    <rdfs:comment xml:lang="en">The Discourse Elements Ontology is an ontology for describing the major rhetorical elements of a document such as a journal article.  It is a subsidiary ontology that is imported into the Document Components Ontology, itself part of SPAR, the Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/.
+</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description xml:lang="en">DEO, The Discourse Elements Ontology, is an ontology written in OWL 2 DL that provides a structured vocabulary for rhetorical elements within documents (e.g. Introduction, Discussion, Acknowledgements, Reference List, Figures, Appendix), enabling these to be described in RDF.  It uses some of the rhetorical block elements from the SALT Rhetorical Ontology  and the Ontology of Rhetorical Blocks.</dc:description>
+    <dc:date>2015-07-03</dc:date>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Shotton</dc:creator>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silvio Peroni</dc:creator>
+    <dc:rights xml:lang="en">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+    <dc:title xml:lang="en">The Discourse Elements Ontology
+     (DEO)</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/AuthorContribution">
+    <rdfs:label xml:lang="en">author contribution</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">A description of the roles played by an author in the publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Epilogue">
+    <rdfs:label xml:lang="en">epilogue</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">A piece of writing at the end of a work of literature or drama, usually used to bring closure to the work.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Data">
+    <rdfs:label xml:lang="en">data</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A textual description of data used or produced in the work which the document describes, or the data themselves.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/Discussion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Scenario">
+    <rdfs:comment>A presentation of a use case or test, based on a real or hypothetical situation, used to help someone think through a complex problem or system.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Scenario"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label>scenario</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/DiscourseElement">
+    <rdfs:label xml:lang="en">discourse element</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment xml:lang="en">An element of a document that carries out a rhetorical function.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Model">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">A description of a model used or produced by the work described in the publication.</rdfs:comment>
+    <rdfs:label xml:lang="en">model</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Results">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">results</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/orb/1.0/Results"/>
+    <rdfs:comment xml:lang="en">The report of the specific findings of an investigation, given without discussion or conclusion being drawn.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Conclusion">
+    <rdfs:comment>A reflection on the preceding text, summarizing the evidence, arguments or premises presented in the document and their logical outcomes. Conclusions are a fundamental feature in academic research publications, and may be included in the Discussion section.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/orb/1.0/Conclusion"/>
+    <rdfs:label>conclusion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <owl:equivalentClass rdf:resource="http://salt.semanticauthoring.org/ontologies/sro#Conclusion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6c0d535cd4fd41068e7536e98ff3c9d4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N3e515df212be4a17b7cfaeb1c75345c2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">reference</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:comment xml:lang="en">A reference to a specific part of the document, or to another publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/RelatedWork">
+    <rdfs:comment xml:lang="en">The authors' critical review of current knowledge by specific reference to others' work, both in terms of substantive findings and theoretical and methodological contributions to a particular topic. This description is often included within the introduction section.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label xml:lang="en">related work</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/ProblemStatement">
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label xml:lang="en">problem statement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dc:description xml:lang="en">A concise description of the issues that needed to be addressed by a work described in the document.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/deo/Caption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Text accompanying another item, such as a picture.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/spar/deo/DiscourseElement"/>
+    <rdfs:label xml:lang="en">caption</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/Results">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Scenario">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Motivation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/References">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6502b128a17a4048b9a14d267942934d">
+    <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+    <owl:someValuesFrom rdf:resource="http://purl.org/spar/deo/Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Conclusion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Evaluation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Background">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://salt.semanticauthoring.org/ontologies/sro#Contribution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/orb/1.0/Methods">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

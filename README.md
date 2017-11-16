@@ -26,7 +26,7 @@ cd ontologies-database
 Then, run the loading script:
 
 ````bash
-./load_ontologies.sh
+./load_ontologies.sh ontologies_list.txt
 ````
 
 Your Virtuoso instance will then be loaded with all the ontologies in the `downloaded/` folder, each in its own graph.
@@ -52,7 +52,7 @@ Ontologies can evolve, so we will periodically run the script and update this re
 
 - Run the updating script. This will attempt to re-download all ontologies in the list, if they are in `.owl` or `.rdf` format. 
     ````bash
-    npm run start
+    npm run
     ````
 
 ## How we built the ontologies_map.txt file

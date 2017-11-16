@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:acco="http://purl.org/acco/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Hotel">
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://purl.org/acco/ns#">
+        <rdfs:label xml:lang="en">Accommodation Ontology</rdfs:label>
+        <owl:versionInfo>V 1.0, Release 2013-03-25</owl:versionInfo>
+        <dcterms:rights xml:lang="en">The Accommodation Ontology ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. 
+In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), 
+as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</dcterms:rights>
+        <dcterms:contributor xml:lang="en">Michael Fried, Birgit Leiter, and Dieter Fensel. Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</dcterms:contributor>
+        <dcterms:title xml:lang="en">ACCO: The Accommodation Ontology for Semantic Web-based E-Commerce</dcterms:title>
+        <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <rdfs:comment xml:lang="en">ACCO: The Accommodation Ontology
+    
+A Web vocabulary for hotels, vacation homes, camping sites, and other accommodation offers for e-commerce.
+
+Vocabulary:    http://purl.org/acco/ns#
+Namespace:     http://purl.org/acco/ns#
+
+The Accommodation Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental. 
+
+See http://purl.org/goodrelations/ for more information.</rdfs:comment>
+        <dcterms:subject xml:lang="en">E-Commerce, E-Business, GoodRelations, Ontology, Tourism, Hotels, Camping, Vacation homes</dcterms:subject>
+        <owl:imports rdf:resource="http://purl.org/goodrelations/v1"/>
+        <dcterms:creator xml:lang="en">Martin Hepp (Hepp Research GmbH)</dcterms:creator>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Hotel (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A hotel is an establishment that provides lodging paid on a short-term basis. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel)</rdfs:comment>
+  </owl:Class>
+  <acco:BedType rdf:about="http://purl.org/acco/ns#King">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">King or Super King bed (acco:BedType)</rdfs:label>
+    <rdfs:comment xml:lang="en">An King or Super King bed. The actual dimension may vary by country, see http://en.wikipedia.org/wiki/Bed_size.</rdfs:comment>
+  </acco:BedType>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#occupancyAdults">
+    <rdfs:label xml:lang="en">occupancy adults (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">The allowed total occupancy of adults (in the sense of fully paying guests) for the accommodation in persons. The exact definition of what constitutes an adult varies across regions and will typically not match the legal definition of being an adult. 
+Typical unit code(s): C62 for person</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#partOf">
+    <rdfs:label xml:lang="en">partOf (0..*)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">A naive parthood relation between two acco:Accommodation instances. Examples: A certain hotel room is part of a certain hotel, a certain house is part of a holiday resort, etc. </rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <acco:BedType rdf:about="http://purl.org/acco/ns#OlympicQueen">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">Olympic Queen bed (acco:BedType)</rdfs:label>
+    <rdfs:comment xml:lang="en">An Olympic Queen bed. The actual dimension may vary by country, see http://en.wikipedia.org/wiki/Bed_size.</rdfs:comment>
+  </acco:BedType>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#unit">
+    <rdfs:label xml:lang="en">unit (0..1)</rdfs:label>
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL356C18">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/acco/ns#AccommodationFeature"/>
+          <rdf:Description rdf:about="http://purl.org/goodrelations/v1#UnitPriceSpecification"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">A textual representation of the unit of measurement, e.g. global identifier, e.g. "m" or "meter". When you have the UN/CEFACT Common Code for the unit available, it is better to use acco:unitCode. This property is for the cases where a standardized unit code is not available from the data source.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#description">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL70C14">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Accommodation"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#AccommodationFeature"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Meal"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Allinclusive"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#DwellingType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CompoundPrice"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <foaf:Document rdf:about="http://ontologies.sti-innsbruck.at/acco/ns.owl">
+    <foaf:primaryTopic rdf:resource="http://purl.org/acco/ns#"/>
+  </foaf:Document>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/depiction">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL56C14">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Accommodation"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#AccommodationFeature"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Meal"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Allinclusive"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#DwellingType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CompoundPrice"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#value">
+    <rdfs:label xml:lang="en">value (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">The point value for the feature unless it is an interval. If possible, use numerical datatypes, e.g. xsd:decimal, xsd:int, or xsd:float. Textual content is also acceptable, though.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#referenceQuantity">
+    <rdfs:label xml:lang="en">reference quantity (0..*)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#UnitPriceSpecification"/>
+    <rdfs:comment xml:lang="en">The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for gr:hasUnitOfMeasurement for the advanced cases where the price does not relate to a standard unit.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValue"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <foaf:Document rdf:about="http://purl.org/acco/ns">
+    <foaf:primaryTopic rdf:resource="http://purl.org/acco/ns#"/>
+  </foaf:Document>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#bed">
+    <rdfs:label xml:lang="en">bed (0..*)</rdfs:label>
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL445C17">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/acco/ns#HotelRoom"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Suite"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#House"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Apartment"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use acco:bed directly with acco:BedType instances. If you want to indicate the quantity of a certain acco:BedType, use an instance of acco:BedDetails. For more detailed information, use acco:feature.</rdfs:comment>
+    <rdfs:range>
+      <owl:Class rdf:nodeID="ub1bL447C16">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedDetails"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#priceComponent">
+    <rdfs:label xml:lang="en">price component (0..*)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#CompoundPrice"/>
+    <rdfs:comment xml:lang="en">This property links to all gr:UnitPriceSpecification nodes that apply in parallel for the acco:CompoundPrice node.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#UnitPriceSpecification"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://purl.org/acco/ns#MeetingRoom">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Meeting Room (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Conference_hall)  </rdfs:comment>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#validThrough">
+    <rdfs:label xml:lang="en">valid from (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">Indicates the beginning of a time interval during which a certain feature is valid or available. For example, a sauna or swimming pool may only be available during certain periods.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#availabilityTimes">
+    <rdfs:label xml:lang="en">availability times (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">Indicates the times of availability of a particular accommodation feature. Example: The sauna is available from 8:00 - 10:00 a.m. on weekdays.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#OpeningHoursSpecification"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#gated">
+    <rdfs:label xml:lang="en">gated (0..1)</rdfs:label>
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL306C17">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Resort"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CampingSite"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">Indicates whether the accommodation is gated, i.e. access is controlled via a fence and some form of gate.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#validFrom">
+    <rdfs:label xml:lang="en">valid from (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">Indicates the beginning of a time interval during which a certain feature is valid or available. For example, a sauna or swimming pool may only be available during certain periods.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/goodrelations/v1#name">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL66C14">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Accommodation"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#AccommodationFeature"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Meal"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Allinclusive"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#DwellingType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CompoundPrice"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Dinner">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Meal"/>
+    <rdfs:label xml:lang="en">Dinner (gr:ProductOrService)</rdfs:label>
+    <rdfs:comment xml:lang="en">A dinner is the main meal of the day, often consumed in the evening of the day.</rdfs:comment>
+  </owl:Class>
+  <acco:BedType rdf:about="http://purl.org/acco/ns#Double">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">Double or full bed (acco:BedType)</rdfs:label>
+    <rdfs:comment xml:lang="en">A double bed. The actual dimension may vary by country, see http://en.wikipedia.org/wiki/Bed_size.</rdfs:comment>
+  </acco:BedType>
+  <acco:BedType rdf:about="http://purl.org/acco/ns#Single">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">Single or twin bed (acco:BedType)</rdfs:label>
+    <rdfs:comment xml:lang="en">A single bed. The actual dimension may vary by country, see http://en.wikipedia.org/wiki/Bed_size.</rdfs:comment>
+  </acco:BedType>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#min">
+    <rdfs:label xml:lang="en">min (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">The lower bound of the value for the feature. It is best to use this property with numerical datatypes, e.g. xsd:decimal, xsd:int, or xsd:float.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#occupancy">
+    <rdfs:label xml:lang="en">occupancy (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">The allowed total occupancy for the accommodation in persons (including infants etc.
+Typical unit code(s): C62 for person</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <foaf:Document rdf:about="http://ontologies.sti-innsbruck.at/acco/ns">
+    <foaf:primaryTopic rdf:resource="http://purl.org/acco/ns#"/>
+  </foaf:Document>
+  <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
+  <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/logo">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL59C14">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Accommodation"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#AccommodationFeature"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Meal"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Allinclusive"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#DwellingType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CompoundPrice"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://schema.org/image">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL62C14">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Accommodation"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#AccommodationFeature"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Meal"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Allinclusive"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#BedType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#DwellingType"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CompoundPrice"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+  <acco:BedType rdf:about="http://purl.org/acco/ns#CaliforniaKing">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">California King or King Long bed (acco:BedType)</rdfs:label>
+    <rdfs:comment xml:lang="en">A California King or King Long bed. The actual dimension may vary by country, see http://en.wikipedia.org/wiki/Bed_size.</rdfs:comment>
+  </acco:BedType>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#typeOfBed">
+    <rdfs:label xml:lang="en">type of bed (1..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#BedDetails"/>
+    <rdfs:comment xml:lang="en">The type of bed to which the acco:BedDetail node refers, i.e. the type of bed available in the quantity indicated by acco:quantity.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/acco/ns#BedType"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#size">
+    <rdfs:label xml:lang="en">size (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">The size of the accommodation, e.g. in square meter or squarefoot.
+Typical unit code(s): MTK for square meter, FTK for square foot, or YDK for square yard </rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#permittedUsage">
+    <rdfs:label xml:lang="en">permitted usage (0..*)</rdfs:label>
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL475C17">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CampingSite"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#CampingPitch"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">The type of objects that you are allowed to put on the camping pitch, e.g. a tent, car, boat, or mobile homre. Use DBpedia URIs whenever possible.</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/acco/ns#DwellingType"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#occupancyMinors">
+    <rdfs:label xml:lang="en">occupancy minors (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">The allowed total occupancy of minors (in the sense of not fully paying guests) for the accommodation in persons. The exact definition of what constitutes a minor varies across regions and will typically not match the legal definition of being a minor. 
+Typical unit code(s): C62 for person</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#numberOfRooms">
+    <rdfs:label xml:lang="en">number of rooms (0..1)</rdfs:label>
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL435C17">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/acco/ns#HotelRoom"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Suite"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#House"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Apartment"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="en">The number of rooms (excluding bathrooms and closets of the acco:Suite, acco:House, or acco:Apartment. 
+Typical unit code(s): C62 for person</rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValue"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#unitCode">
+    <rdfs:label xml:lang="en">unit code (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">The UN/CEFACT Common Code for the unit of measurement, e.g. "MTR" for meter, "HUR" for hours, etc. If you only have a textual representation of the unit of measurement, use acco:unit instead.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#includedFeature">
+    <rdfs:label xml:lang="en">included feature (0..*)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">A feature (e.g. a characteristic or service) of the acco:Accommodation that is included in the offer for the main accommodation, i.e. at no extra costs. </rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#feature">
+        <rdfs:label xml:lang="en">feature (0..*)</rdfs:label>
+        <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+        <rdfs:comment xml:lang="en">A feature (e.g. a characteristic or service) of the acco:Accommodation. This generic property does not make a statement about whether the feature is included in the offer for the main accommodation or available at extra costs. </rdfs:comment>
+        <rdfs:range rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#propertyID">
+    <rdfs:label xml:lang="en">property ID (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">A global identifier, e.g. a URI, a prefixed string, or any other identifier that can be used to refer to a standardized property type.
+
+The following prefixes and values are reserved:
+starRating:HOTREC 
+starRating:DEHOGA
+starRating:WHR
+starRating:Hotelstars
+</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#quantity">
+    <rdfs:label xml:lang="en">quantity (1..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#BedDetails"/>
+    <rdfs:comment xml:lang="en">The quantity of the given bed type available in the acco:HotelRoom, acco:Suite, acco:House, or acco:Apartment.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://schema.org/geo">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="ub1bL48C14">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+          <rdf:Description rdf:about="http://purl.org/acco/ns#Accommodation"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <acco:BedType rdf:about="http://purl.org/acco/ns#Queen">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">Queen King or Wide Double bed (acco:BedType)</rdfs:label>
+    <rdfs:comment xml:lang="en">A Queen King (UK/Ire.) or Wide Double (Japan) bed. The actual dimension may vary by country, see http://en.wikipedia.org/wiki/Bed_size.</rdfs:comment>
+  </acco:BedType>
+  <foaf:Document rdf:about="http://purl.org/acco/ns.owl">
+    <foaf:primaryTopic rdf:resource="http://purl.org/acco/ns#"/>
+  </foaf:Document>
+  <foaf:Document rdf:about="http://ontologies.sti-innsbruck.at/acco/ns.html">
+    <foaf:primaryTopic rdf:resource="http://purl.org/acco/ns#"/>
+  </foaf:Document>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#max">
+    <rdfs:label xml:lang="en">max (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:comment xml:lang="en">The upper bound of the value for the feature. It is best to use this property with numerical datatypes, e.g. xsd:decimal, xsd:int, or xsd:float.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://purl.org/acco/ns#petsAllowed">
+    <rdfs:label xml:lang="en">pets allowed (0..1)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">Indicates whether pets are allowed to enter the accommodation.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Breakfast">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Meal"/>
+    <rdfs:label xml:lang="en">Breakfast (gr:ProductOrService)</rdfs:label>
+    <rdfs:comment xml:lang="en">A breakfast is the first meal taken after rising from a night's sleep, most often eaten in the early morning before undertaking the day's work. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Breakfast)</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://purl.org/acco/ns#optionalFeature">
+    <rdfs:label xml:lang="en">optional feature (0..*)</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:comment xml:lang="en">A feature (e.g. a characteristic or service) of the acco:Accommodation that is generally available but not included in the offer for the main accommodation, i.e. at  extra costs. </rdfs:comment>
+    <rdfs:range rdf:resource="http://purl.org/acco/ns#AccommodationFeature"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/acco/ns#feature"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Lunch">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Meal"/>
+    <rdfs:label xml:lang="en">Lunch (gr:ProductOrService)</rdfs:label>
+    <rdfs:comment xml:lang="en">A luncheon, commonly abbreviated to lunch, is a middle of the day meal. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Lunch)</rdfs:comment>
+  </owl:Class>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
+  <owl:Class rdf:about="http://purl.org/acco/ns#BedType">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#QualitativeValue"/>
+    <rdfs:label xml:lang="en">Bed Type</rdfs:label>
+    <rdfs:comment xml:lang="en">A type of bed. This is used for indicating the bed or beds available in an accommodation. Use DBpedia URIs whenever possible.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Meal">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Product"/>
+    <rdfs:label xml:lang="en">Meal (gr:ProductOrService)</rdfs:label>
+    <rdfs:comment xml:lang="en">A meal in the sense of this vocabulary is some combination of food or beverages.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#BedDetails">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">Bed Details</rdfs:label>
+    <rdfs:comment xml:lang="en">A node holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use acco:bed directly with acco:BedType instances.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Resort">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Resort (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishment operated by a single company. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Resort)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#CampingSite">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Camping Site (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A camping site, campsite, or campground is a place used for overnight stay in the outdoors. In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or parks a camper; a campground may contain many campsites. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Campsite)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+  <owl:Class rdf:about="http://purl.org/acco/ns#DwellingType">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#QualitativeValue"/>
+    <rdfs:label xml:lang="en">Dwelling Type</rdfs:label>
+    <rdfs:comment xml:lang="en">A type of dwelling, e.g. tent, mobile home, etc. for indicating the permitted usage on a campsite. Use DBpedia URIs whenever possible.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/Place"/>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Suite">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Suite (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Suite_(hotel)) </rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Accommodation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#Location"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Product"/>
+    <rdfs:label xml:lang="en">Accommodation (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
+
+Note: For more specific types of accommodations not defined in this ontology, you can easily use any Wikipedia entry from 
+
+    http://en.wikipedia.org/wiki/List_of_human_habitation_forms
+
+and replace the base URI
+
+    http://en.wikipedia.org/wiki/
+
+by
+
+    http://www.productontology.org/id/
+
+For instance, if you want want to describe an igloo (http://en.wikipedia.org/wiki/Igloo) for rent, you can use the local part 'Igloo' as a class identifier as follows:
+
+    http://www.productontology.org/id/Igloo</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#CampingPitch">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Camping Pitch (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A camping pitch is an individual place for overnight stay in the outdoors, typically being part of a larger acco:CampSite.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#HotelRoom">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Hotel Room (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A hotel room is a single room in a hotel.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Apartment">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">Apartment (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Apartment)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#AccommodationFeature">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:label xml:lang="en">Accommodation Feature</rdfs:label>
+    <rdfs:comment xml:lang="en">An accommodation feature is a structured value representing the feature of an accommodation as a property-value pair of varying degrees of formality.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#Allinclusive">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrService"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Product"/>
+    <rdfs:label xml:lang="en">All-inclusive (gr:ProductOrService)</rdfs:label>
+    <rdfs:comment xml:lang="en">All-inclusive in the sense of this vocabulary is a comprehesive set of foods and beverages, and sometimes complementing services, provided throughout the entire day.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#CompoundPrice">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
+    <rdfs:label xml:lang="en">Compound Price</rdfs:label>
+    <rdfs:comment xml:lang="en">A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use gr:name for indicating the dimension (e.g. "electricity" or "final cleaning").</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/acco/ns#House">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/acco/ns#"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/acco/ns#Accommodation"/>
+    <rdfs:label xml:lang="en">House (gr:ProductOrService, gr:Location)</rdfs:label>
+    <rdfs:comment xml:lang="en">A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures. (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/House)</rdfs:comment>
+  </owl:Class>
+</rdf:RDF>
